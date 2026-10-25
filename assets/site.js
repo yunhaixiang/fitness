@@ -3,7 +3,8 @@ weekStart.setHours(0, 0, 0, 0);
 weekStart.setDate(weekStart.getDate() - ((weekStart.getDay() + 6) % 7));
 const weekKey = `${weekStart.getFullYear()}-${String(weekStart.getMonth() + 1).padStart(2, '0')}-${String(weekStart.getDate()).padStart(2, '0')}`;
 document.querySelectorAll('input[type="checkbox"][aria-label]').forEach((box) => {
-  const key = `fitness-check:${weekKey}:${box.getAttribute('aria-label')}`;
+  const label = window.fitnessI18n?.originalAttribute(box, 'aria-label') || box.getAttribute('aria-label');
+  const key = `fitness-check:${weekKey}:${label}`;
   try { box.checked = localStorage.getItem(key) === '1'; } catch (_) { /* storage disabled */ }
   box.addEventListener('change', () => {
     try { localStorage.setItem(key, box.checked ? '1' : '0'); } catch (_) { /* storage disabled */ }
@@ -20,13 +21,15 @@ if (shoppingTable) {
   const rows = [...shoppingTable.querySelectorAll('tbody tr')];
   for (const row of rows) {
     const name = row.cells[0]?.textContent.trim();
+    const originalName = window.fitnessI18n?.original(row.cells[0]?.firstChild) || name;
+    row.dataset.itemKey = originalName;
     const cell = document.createElement('td');
     cell.className = 'check-cell';
-    if (name && name !== '每周合计') {
+    if (name && originalName !== '每周合计') {
       const box = document.createElement('input');
       box.type = 'checkbox';
       box.setAttribute('aria-label', `已购买${name}`);
-      const key = `fitness-shopping:${weekKey}:${name}`;
+      const key = `fitness-shopping:${weekKey}:${originalName}`;
       try { box.checked = localStorage.getItem(key) === '1'; } catch (_) { /* storage disabled */ }
       row.classList.toggle('is-checked', box.checked);
       box.addEventListener('change', () => {
@@ -47,10 +50,11 @@ if (shoppingTable) {
       if (!box) continue;
       box.checked = false;
       row.classList.remove('is-checked');
-      try { localStorage.removeItem(`fitness-shopping:${weekKey}:${row.cells[1].textContent.trim()}`); } catch (_) { /* storage disabled */ }
+      try { localStorage.removeItem(`fitness-shopping:${weekKey}:${row.dataset.itemKey}`); } catch (_) { /* storage disabled */ }
     }
   });
 }
+window.fitnessI18n?.apply();
 
 const mermaidBlocks = [...document.querySelectorAll('pre > code.language-mermaid')];
 if (mermaidBlocks.length) {
@@ -61,7 +65,7 @@ if (mermaidBlocks.length) {
     code.parentElement.replaceWith(diagram);
   }
   import('https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs')
-    .then(({ default: mermaid }) => { mermaid.initialize({ startOnLoad: false, theme: 'neutral', securityLevel: 'strict' }); return mermaid.run({ querySelector: '.mermaid' }); })
+    .then(({ default: mermaid }) => { mermaid.initialize({ startOnLoad: false, theme: 'dark', securityLevel: 'strict', themeVariables: { background: '#1c252e', primaryColor: '#253b40', primaryTextColor: '#e6edf2', primaryBorderColor: '#6b9b9b', lineColor: '#91d8d1', secondaryColor: '#25313b', tertiaryColor: '#1c252e' } }); return mermaid.run({ querySelector: '.mermaid' }); })
     .catch(() => {
       document.querySelectorAll('.mermaid').forEach((el) => { const pre = document.createElement('pre'); pre.textContent = el.textContent; el.replaceWith(pre); });
     });
