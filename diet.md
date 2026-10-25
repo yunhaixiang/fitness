@@ -3,6 +3,7 @@ layout: default
 title: 饮食安排
 description: 每周餐单与放纵餐参考
 permalink: /diet/
+diet: true
 ---
 <nav class="page-links" aria-label="饮食相关页面"><a href="{{ '/shopping/' | relative_url }}">购物清单 →</a><a href="{{ '/cooking/' | relative_url }}">做饭流程 →</a></nav>
 ## 计划表
@@ -14,7 +15,7 @@ permalink: /diet/
 
 
 <div class="table-wrap">
-<table class="plan-table">
+<table class="plan-table" data-diet-view="schedule">
 <thead>
 <tr>
 <th>编号</th>
@@ -165,7 +166,7 @@ permalink: /diet/
 
 
 <div class="table-wrap">
-<table class="plan-table">
+<table class="plan-table" data-diet-view="treats">
 <thead>
 <tr>
 <th>食物</th>
@@ -386,7 +387,7 @@ permalink: /diet/
 以下为可选替代，不计入固定饮食；若额外加吃，仍扣减相应热量赤字。
 
 <div class="table-wrap">
-<table class="plan-table">
+<table class="plan-table" data-diet-view="alternatives">
 <thead>
 <tr>
 <th>想吃／喝</th>
