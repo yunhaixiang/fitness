@@ -1,0 +1,25 @@
+---
+layout: default
+title: 数据记录
+description: 记录实际执行，而不只看计划上的数字。
+permalink: /tracker/
+wide: true
+tracker: true
+---
+<div class="tracker-intro"><p><strong>数据只保存在当前浏览器。</strong>GitHub Pages 不会自动把记录写回仓库，也不会跨设备同步。建议每周导出一次 JSON 备份；更换设备时用“导入备份”合并记录。页面默认显示最近 8 周，旧记录仍保存在浏览器和导出文件里。</p><a href="{{ '/stats/' | relative_url }}">查看计划估计 →</a></div>
+<div class="metrics-strip" id="latest-metrics" aria-live="polite"></div>
+<div class="tracker-toolbar">
+  <div class="tracker-tabs" role="tablist" aria-label="记录类型">
+    <button type="button" role="tab" data-tab="body" aria-selected="true">身体组成</button>
+    <button type="button" role="tab" data-tab="food" aria-selected="false">饮食</button>
+    <button type="button" role="tab" data-tab="strength" aria-selected="false">力量</button>
+    <button type="button" role="tab" data-tab="cardio" aria-selected="false">有氧</button>
+    <button type="button" role="tab" data-tab="sleep" aria-selected="false">睡眠</button>
+  </div>
+  <div class="tracker-actions">
+    <button class="small-button" type="button" id="export-json">导出备份</button>
+    <button class="small-button" type="button" id="import-json">导入备份</button>
+    <input id="import-file" type="file" accept="application/json,.json" hidden>
+  </div>
+</div>
+<div id="tracker-panels"></div>

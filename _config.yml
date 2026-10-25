@@ -1,0 +1,11 @@
+title: Yunhai Fitness
+description: 个人训练、饮食与恢复计划
+lang: zh-CN
+url: https://yunhaixiang.github.io
+baseurl: /fitness
+markdown: kramdown
+kramdown:
+  input: GFM
+permalink: pretty
+exclude:
+  - README.md
