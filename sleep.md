@@ -3,6 +3,7 @@ layout: default
 title: 睡眠与恢复
 description: 作息、温和瑜伽与冥想
 permalink: /sleep/
+visual: true
 ---
 
 <div class="table-wrap">

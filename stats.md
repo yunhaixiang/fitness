@@ -3,6 +3,7 @@ layout: default
 title: 营养与训练统计
 description: 每日营养、每餐营养及每周训练量
 permalink: /stats/
+visual: true
 ---
 
 ## 营养统计

@@ -3,6 +3,7 @@ layout: default
 title: 做饭流程
 description: 半周七餐；各厨具并行
 permalink: /cooking/
+visual: true
 ---
 <nav class="page-links" aria-label="做饭页面分区"><a href="#dependencies">任务依赖图</a><a href="#portions">分盘</a><a href="#cold">冷冻／解冻</a><a href="#rice">电饭煲</a><a href="#oven">烤箱</a><a href="#air-fryer">空气炸锅</a><a href="#pots">煮锅</a><a href="#woks">炒锅</a><a href="#wraps">卷饼</a></nav>
 ## 任务依赖图

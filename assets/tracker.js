@@ -81,7 +81,7 @@
     const listCard = document.createElement('div'); listCard.className = 'tracker-card';
     const listTitle = document.createElement('h2'); listTitle.textContent = '最近 8 周记录';
     const csv = document.createElement('button'); csv.type = 'button'; csv.className = 'small-button'; csv.textContent = '导出此类 CSV'; csv.addEventListener('click', () => exportCsv(name));
-    const list = document.createElement('div'); list.className = 'data-table-wrap'; list.dataset.list = name;
+    const list = document.createElement('div'); list.className = 'record-list'; list.dataset.list = name;
     listCard.append(listTitle, csv, list);
     panel.append(formCard, chartCard, listCard); return panel;
   }
@@ -89,16 +89,22 @@
     const host = document.querySelector(`[data-list="${name}"]`); host.replaceChildren();
     const rows = recent(name);
     if (!rows.length) { const empty = document.createElement('p'); empty.className = 'empty-state'; empty.textContent = '还没有最近 8 周的记录。'; host.append(empty); return; }
-    const table = document.createElement('table'); table.className = 'data-table';
-    const head = document.createElement('thead'), headRow = document.createElement('tr');
-    for (const [, label] of types[name].fields) { const th = document.createElement('th'); th.textContent = label; headRow.append(th); }
-    const last = document.createElement('th'); last.textContent = '操作'; headRow.append(last); head.append(headRow);
-    const body = document.createElement('tbody');
-    for (const row of rows) { const tr = document.createElement('tr'); for (const [key] of types[name].fields) { const td = document.createElement('td'); td.textContent = row[key] ?? '—'; tr.append(td); }
-      const td = document.createElement('td'), button = document.createElement('button'); button.type = 'button'; button.className = 'delete-row'; button.textContent = '删除';
+    const list = document.createElement('div'); list.className = 'record-card-grid';
+    for (const row of rows) { const card = document.createElement('article'); card.className = 'record-card';
+      const head = document.createElement('div'); head.className = 'record-card-head';
+      const date = document.createElement('strong'); date.textContent = row.date;
+      const button = document.createElement('button'); button.type = 'button'; button.className = 'delete-row'; button.textContent = '删除';
       button.addEventListener('click', () => { if (confirm(t('确定删除这条记录？'))) { records[name] = records[name].filter((item) => item.id !== row.id); if (save()) renderAll(); } });
-      td.append(button); tr.append(td); body.append(tr); }
-    table.append(head, body); host.append(table);
+      head.append(date, button); card.append(head);
+      const fields = document.createElement('dl'); fields.className = 'record-card-fields';
+      for (const [key, label] of types[name].fields.slice(1)) {
+        if (row[key] === '' || row[key] == null) continue;
+        const term = document.createElement('dt'); term.textContent = label;
+        const value = document.createElement('dd'); value.textContent = row[key];
+        fields.append(term, value);
+      }
+      card.append(fields); list.append(card); }
+    host.append(list);
   }
   function renderChart(name) {
     const host = document.querySelector(`[data-chart="${name}"]`); if (!host) return;
