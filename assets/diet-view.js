@@ -52,8 +52,6 @@
       grid.append(week);
     }
     mount(schedule, grid);
-    const breakfast = schedule.closest('.table-wrap').previousElementSibling;
-    if (breakfast?.tagName === 'P') breakfast.classList.add('diet-breakfast-note');
     const prep = grid.nextElementSibling;
     if (prep?.tagName === 'P') prep.classList.add('diet-prep-note');
   }

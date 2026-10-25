@@ -220,34 +220,64 @@ visual: true
 </thead>
 <tbody>
 <tr>
-<td>周日—周二早餐（水果盘）</td>
-<td style="text-align: right;">383</td>
-<td style="text-align: right;">13.8</td>
-<td style="text-align: right;">6.2</td>
-<td style="text-align: right;">0.8</td>
-<td style="text-align: right;">85.0</td>
-<td style="text-align: right;">24.3</td>
-<td style="text-align: right;">39.4</td>
+<td>周日—周二早餐（水果盘1/3）</td>
+<td style="text-align: right;">264</td>
+<td style="text-align: right;">12.3</td>
+<td style="text-align: right;">5.7</td>
+<td style="text-align: right;">0.7</td>
+<td style="text-align: right;">55.6</td>
+<td style="text-align: right;">20.6</td>
+<td style="text-align: right;">15.5</td>
 <td style="text-align: right;">0</td>
-<td style="text-align: right;">261</td>
-<td style="text-align: right;">536</td>
-<td style="text-align: right;">7.3</td>
-<td style="text-align: right;">1,211</td>
+<td style="text-align: right;">248</td>
+<td style="text-align: right;">493</td>
+<td style="text-align: right;">6.5</td>
+<td style="text-align: right;">722</td>
 </tr>
 <tr>
-<td>周三—周六早餐（奇异果3个）</td>
-<td style="text-align: right;">325</td>
-<td style="text-align: right;">13.8</td>
-<td style="text-align: right;">6.7</td>
-<td style="text-align: right;">0.7</td>
-<td style="text-align: right;">71.5</td>
-<td style="text-align: right;">26.3</td>
-<td style="text-align: right;">22.0</td>
+<td>周日—周二睡前加餐（水果盘2/3）</td>
+<td style="text-align: right;">119</td>
+<td style="text-align: right;">1.5</td>
+<td style="text-align: right;">0.5</td>
+<td style="text-align: right;">0.1</td>
+<td style="text-align: right;">29.4</td>
+<td style="text-align: right;">3.7</td>
+<td style="text-align: right;">23.9</td>
 <td style="text-align: right;">0</td>
-<td style="text-align: right;">246</td>
-<td style="text-align: right;">562</td>
-<td style="text-align: right;">6.9</td>
-<td style="text-align: right;">1,177</td>
+<td style="text-align: right;">13</td>
+<td style="text-align: right;">43</td>
+<td style="text-align: right;">0.8</td>
+<td style="text-align: right;">489</td>
+</tr>
+<tr>
+<td>周三—周六早餐（奇异果1个）</td>
+<td style="text-align: right;">245</td>
+<td style="text-align: right;">12.3</td>
+<td style="text-align: right;">5.8</td>
+<td style="text-align: right;">0.7</td>
+<td style="text-align: right;">51.1</td>
+<td style="text-align: right;">21.2</td>
+<td style="text-align: right;">9.7</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">243</td>
+<td style="text-align: right;">502</td>
+<td style="text-align: right;">6.4</td>
+<td style="text-align: right;">710</td>
+</tr>
+<tr>
+<td>周三—周六睡前加餐（奇异果2个）</td>
+<td style="text-align: right;">80</td>
+<td style="text-align: right;">1.5</td>
+<td style="text-align: right;">0.9</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">20.4</td>
+<td style="text-align: right;">5.1</td>
+<td style="text-align: right;">12.3</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">60</td>
+<td style="text-align: right;">0.5</td>
+<td style="text-align: right;">467</td>
 </tr>
 <tr>
 <td>周二午／周三晚／周五晚／周日午</td>

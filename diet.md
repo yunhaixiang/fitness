@@ -1,7 +1,7 @@
 ---
 layout: default
 title: 饮食安排
-description: 每周餐单与放纵餐参考
+description: 每周餐单、睡前水果加餐与放纵餐参考
 permalink: /diet/
 diet: true
 ---
@@ -10,7 +10,10 @@ diet: true
 
 
 
-早餐：高纤维谷物早餐40 g + 无糖豆奶约270 g + 一水肌酸 5g + 水果（周日到周二混合水果拼盘，周三到周六每天3个奇异果）
+<div class="diet-fruit-split">
+<p class="diet-breakfast-note">早餐：高纤维谷物早餐40 g + 无糖豆奶约270 g + 一水肌酸 5g + 水果（周日—周二混合水果盘约144 g；周三—周六奇异果1个）。</p>
+<p class="diet-snack-note">睡前水果加餐（23:00）：周日—周二混合水果盘约289 g；周三—周六奇异果2个。</p>
+</div>
 
 
 
