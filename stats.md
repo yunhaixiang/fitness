@@ -17,57 +17,315 @@ permalink: /stats/
 
 消耗构成（估算）：
 
-| 类型 | 每周 kcal（±10%） | 日均 kcal（±10%） |
-|---|---:|---:|
-| 基础代谢 | 12,092.50 ± 1,209.25 | 1,727.50 ± 172.75 |
-| 日常活动等（久坐系数加成） | 2,418.50 ± 241.85 | 345.50 ± 34.55 |
-| 力量训练（净增加） | 450.96 ± 45.10 | 64.42 ± 6.44 |
-| 有氧：HIIT、游泳或跑步机，4次／周（净增加） | 800.00 ± 80.00 | 114.29 ± 11.43 |
-| 步行（估计每周12 km，净增加） | 474.00 ± 47.40 | 67.71 ± 6.77 |
-| 合计 | 16,235.96 ± 1,623.60 | 2,319.42 ± 231.94 |
-{: .table-centered}
+<div class="table-wrap">
+<table class="plan-table">
+<thead>
+<tr>
+<th>类型</th>
+<th style="text-align: right;">每周 kcal（±10%）</th>
+<th style="text-align: right;">日均 kcal（±10%）</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>基础代谢</td>
+<td style="text-align: right;">12,092.50 ± 1,209.25</td>
+<td style="text-align: right;">1,727.50 ± 172.75</td>
+</tr>
+<tr>
+<td>日常活动等（久坐系数加成）</td>
+<td style="text-align: right;">2,418.50 ± 241.85</td>
+<td style="text-align: right;">345.50 ± 34.55</td>
+</tr>
+<tr>
+<td>力量训练（净增加）</td>
+<td style="text-align: right;">450.96 ± 45.10</td>
+<td style="text-align: right;">64.42 ± 6.44</td>
+</tr>
+<tr>
+<td>有氧：HIIT、游泳或跑步机，4次／周（净增加）</td>
+<td style="text-align: right;">800.00 ± 80.00</td>
+<td style="text-align: right;">114.29 ± 11.43</td>
+</tr>
+<tr>
+<td>步行（估计每周12 km，净增加）</td>
+<td style="text-align: right;">474.00 ± 47.40</td>
+<td style="text-align: right;">67.71 ± 6.77</td>
+</tr>
+<tr>
+<td>合计</td>
+<td style="text-align: right;">16,235.96 ± 1,623.60</td>
+<td style="text-align: right;">2,319.42 ± 231.94</td>
+</tr>
+</tbody>
+</table>
+</div>
 
 运动按扣除同期基础消耗后的净增加量计入，避免重复计算；日常加成不代表单独测得的食物热效应。
 
 
 
-| 营养指标 | 每周合计 | 平均每天 | 建议每日范围或目标 |
-|---|---:|---:|---|
-| 热量 | 约12,497 kcal | 约1,785 kcal | 1,800–2,000 kcal |
-| 蛋白质 | 约991 g | 约141.5 g | 130–165 g |
-| 总脂肪 | 约456 g | 约65.1 g | 45–65 g |
-| 饱和脂肪 | 约110.5 g | 约15.8 g | 11.9 g |
-| 饱和脂肪占总热量 | 约8.0% | 约8.0% | ≤6% |
-| 碳水化合物 | 约1,230 g | 约175.7 g | 180–240 g |
-| 膳食纤维 | 约271 g | 约38.8 g | 30–38 g |
-| 总糖 | 约309 g | 约44.1 g | – |
-| 添加糖 | 粗估约30–65 g | 粗估约4–9 g | ≤25 g |
-| 膳食胆固醇 | 约4,751 mg | 约679 mg | – |
-| 钠 | 约12,961 mg | 约1,852 mg | ≤2,300 mg |
-| 钙 | 约7,992 mg | 约1,142 mg | 1,000 mg |
-| 铁 | 约122.8 mg | 约17.5 mg | 8 mg |
-| 钾 | 约34,832 mg | 约4,976 mg | ≥3,400 mg |
-| 维生素D | 粗估约159 µg | 粗估约23 µg | 15 µg |
-| 维生素B12 | 已计约49.0 µg | 已计约7.0 µg | 2.4 µg |
-| 碘 | 粗估800–900 µg | 粗估114–129 µg | 150 µg |
-| Omega-3：ALA | 粗估8–9 g | 粗估1.1–1.3 g | 1.6 g |
-| Omega-3：EPA+DHA | 约15.4 g | 约2.2 g | 250 mg |
-{: .table-centered}
+<div class="table-wrap">
+<table class="plan-table">
+<thead>
+<tr>
+<th>营养指标</th>
+<th style="text-align: right;">每周合计</th>
+<th style="text-align: right;">平均每天</th>
+<th>建议每日范围或目标</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>热量</td>
+<td style="text-align: right;">约12,497 kcal</td>
+<td style="text-align: right;">约1,785 kcal</td>
+<td>1,800–2,000 kcal</td>
+</tr>
+<tr>
+<td>蛋白质</td>
+<td style="text-align: right;">约991 g</td>
+<td style="text-align: right;">约141.5 g</td>
+<td>130–165 g</td>
+</tr>
+<tr>
+<td>总脂肪</td>
+<td style="text-align: right;">约456 g</td>
+<td style="text-align: right;">约65.1 g</td>
+<td>45–65 g</td>
+</tr>
+<tr>
+<td>饱和脂肪</td>
+<td style="text-align: right;">约110.5 g</td>
+<td style="text-align: right;">约15.8 g</td>
+<td>11.9 g</td>
+</tr>
+<tr>
+<td>饱和脂肪占总热量</td>
+<td style="text-align: right;">约8.0%</td>
+<td style="text-align: right;">约8.0%</td>
+<td>≤6%</td>
+</tr>
+<tr>
+<td>碳水化合物</td>
+<td style="text-align: right;">约1,230 g</td>
+<td style="text-align: right;">约175.7 g</td>
+<td>180–240 g</td>
+</tr>
+<tr>
+<td>膳食纤维</td>
+<td style="text-align: right;">约271 g</td>
+<td style="text-align: right;">约38.8 g</td>
+<td>30–38 g</td>
+</tr>
+<tr>
+<td>总糖</td>
+<td style="text-align: right;">约309 g</td>
+<td style="text-align: right;">约44.1 g</td>
+<td>–</td>
+</tr>
+<tr>
+<td>添加糖</td>
+<td style="text-align: right;">粗估约30–65 g</td>
+<td style="text-align: right;">粗估约4–9 g</td>
+<td>≤25 g</td>
+</tr>
+<tr>
+<td>膳食胆固醇</td>
+<td style="text-align: right;">约4,751 mg</td>
+<td style="text-align: right;">约679 mg</td>
+<td>–</td>
+</tr>
+<tr>
+<td>钠</td>
+<td style="text-align: right;">约12,961 mg</td>
+<td style="text-align: right;">约1,852 mg</td>
+<td>≤2,300 mg</td>
+</tr>
+<tr>
+<td>钙</td>
+<td style="text-align: right;">约7,992 mg</td>
+<td style="text-align: right;">约1,142 mg</td>
+<td>1,000 mg</td>
+</tr>
+<tr>
+<td>铁</td>
+<td style="text-align: right;">约122.8 mg</td>
+<td style="text-align: right;">约17.5 mg</td>
+<td>8 mg</td>
+</tr>
+<tr>
+<td>钾</td>
+<td style="text-align: right;">约34,832 mg</td>
+<td style="text-align: right;">约4,976 mg</td>
+<td>≥3,400 mg</td>
+</tr>
+<tr>
+<td>维生素D</td>
+<td style="text-align: right;">粗估约159 µg</td>
+<td style="text-align: right;">粗估约23 µg</td>
+<td>15 µg</td>
+</tr>
+<tr>
+<td>维生素B12</td>
+<td style="text-align: right;">已计约49.0 µg</td>
+<td style="text-align: right;">已计约7.0 µg</td>
+<td>2.4 µg</td>
+</tr>
+<tr>
+<td>碘</td>
+<td style="text-align: right;">粗估800–900 µg</td>
+<td style="text-align: right;">粗估114–129 µg</td>
+<td>150 µg</td>
+</tr>
+<tr>
+<td>Omega-3：ALA</td>
+<td style="text-align: right;">粗估8–9 g</td>
+<td style="text-align: right;">粗估1.1–1.3 g</td>
+<td>1.6 g</td>
+</tr>
+<tr>
+<td>Omega-3：EPA+DHA</td>
+<td style="text-align: right;">约15.4 g</td>
+<td style="text-align: right;">约2.2 g</td>
+<td>250 mg</td>
+</tr>
+</tbody>
+</table>
+</div>
 
 
 
 ### 每餐营养统计
 
-| 餐次 | 热量 kcal | 蛋白质 g | 脂肪 g | 饱和脂肪 g | 碳水 g | 纤维 g | 总糖 g | 胆固醇 mg | 钠 mg | 钙 mg | 铁 mg | 钾 mg |
-| --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
-| 周日—周二早餐（水果盘） | 383 | 13.8 | 6.2 | 0.8 | 85.0 | 24.3 | 39.4 | 0 | 261 | 536 | 7.3 | 1,211 |
-| 周三—周六早餐（奇异果3个） | 325 | 13.8 | 6.7 | 0.7 | 71.5 | 26.3 | 22.0 | 0 | 246 | 562 | 6.9 | 1,177 |
-| 周二午／周三晚／周五晚／周日午 | 666 | 56.7 | 26.8 | 7.7 | 47.9 | 8.2 | 11.7 | 128 | 883 | 216 | 7.0 | 2,983 |
-| 周日晚／周四午 | 685 | 58.7 | 34.4 | 8.3 | 36.0 | 4.7 | 2.5 | 581 | 751 | 120 | 5.4 | 1,142 |
-| 周一午／周二晚／周四晚／周六午 | 669 | 61.8 | 24.5 | 8.2 | 51.7 | 5.0 | 3.8 | 594 | 685 | 121 | 3.5 | 884 |
-| 周一晚／周三午／周五午／周六晚 | 667 | 61.0 | 25.5 | 5.6 | 47.2 | 4.1 | 7.4 | 179 | 686 | 73 | 3.7 | 1,528 |
-| 餐外饮品（日均） | 97 | 8.6 | 4.9 | 0.5 | 4.3 | 2.2 | 1.1 | 0 | 97 | 324 | 1.1 | 378 |
-{: .table-centered}
+<div class="table-wrap">
+<table class="plan-table">
+<thead>
+<tr>
+<th>餐次</th>
+<th style="text-align: right;">热量 kcal</th>
+<th style="text-align: right;">蛋白质 g</th>
+<th style="text-align: right;">脂肪 g</th>
+<th style="text-align: right;">饱和脂肪 g</th>
+<th style="text-align: right;">碳水 g</th>
+<th style="text-align: right;">纤维 g</th>
+<th style="text-align: right;">总糖 g</th>
+<th style="text-align: right;">胆固醇 mg</th>
+<th style="text-align: right;">钠 mg</th>
+<th style="text-align: right;">钙 mg</th>
+<th style="text-align: right;">铁 mg</th>
+<th style="text-align: right;">钾 mg</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>周日—周二早餐（水果盘）</td>
+<td style="text-align: right;">383</td>
+<td style="text-align: right;">13.8</td>
+<td style="text-align: right;">6.2</td>
+<td style="text-align: right;">0.8</td>
+<td style="text-align: right;">85.0</td>
+<td style="text-align: right;">24.3</td>
+<td style="text-align: right;">39.4</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">261</td>
+<td style="text-align: right;">536</td>
+<td style="text-align: right;">7.3</td>
+<td style="text-align: right;">1,211</td>
+</tr>
+<tr>
+<td>周三—周六早餐（奇异果3个）</td>
+<td style="text-align: right;">325</td>
+<td style="text-align: right;">13.8</td>
+<td style="text-align: right;">6.7</td>
+<td style="text-align: right;">0.7</td>
+<td style="text-align: right;">71.5</td>
+<td style="text-align: right;">26.3</td>
+<td style="text-align: right;">22.0</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">246</td>
+<td style="text-align: right;">562</td>
+<td style="text-align: right;">6.9</td>
+<td style="text-align: right;">1,177</td>
+</tr>
+<tr>
+<td>周二午／周三晚／周五晚／周日午</td>
+<td style="text-align: right;">666</td>
+<td style="text-align: right;">56.7</td>
+<td style="text-align: right;">26.8</td>
+<td style="text-align: right;">7.7</td>
+<td style="text-align: right;">47.9</td>
+<td style="text-align: right;">8.2</td>
+<td style="text-align: right;">11.7</td>
+<td style="text-align: right;">128</td>
+<td style="text-align: right;">883</td>
+<td style="text-align: right;">216</td>
+<td style="text-align: right;">7.0</td>
+<td style="text-align: right;">2,983</td>
+</tr>
+<tr>
+<td>周日晚／周四午</td>
+<td style="text-align: right;">685</td>
+<td style="text-align: right;">58.7</td>
+<td style="text-align: right;">34.4</td>
+<td style="text-align: right;">8.3</td>
+<td style="text-align: right;">36.0</td>
+<td style="text-align: right;">4.7</td>
+<td style="text-align: right;">2.5</td>
+<td style="text-align: right;">581</td>
+<td style="text-align: right;">751</td>
+<td style="text-align: right;">120</td>
+<td style="text-align: right;">5.4</td>
+<td style="text-align: right;">1,142</td>
+</tr>
+<tr>
+<td>周一午／周二晚／周四晚／周六午</td>
+<td style="text-align: right;">669</td>
+<td style="text-align: right;">61.8</td>
+<td style="text-align: right;">24.5</td>
+<td style="text-align: right;">8.2</td>
+<td style="text-align: right;">51.7</td>
+<td style="text-align: right;">5.0</td>
+<td style="text-align: right;">3.8</td>
+<td style="text-align: right;">594</td>
+<td style="text-align: right;">685</td>
+<td style="text-align: right;">121</td>
+<td style="text-align: right;">3.5</td>
+<td style="text-align: right;">884</td>
+</tr>
+<tr>
+<td>周一晚／周三午／周五午／周六晚</td>
+<td style="text-align: right;">667</td>
+<td style="text-align: right;">61.0</td>
+<td style="text-align: right;">25.5</td>
+<td style="text-align: right;">5.6</td>
+<td style="text-align: right;">47.2</td>
+<td style="text-align: right;">4.1</td>
+<td style="text-align: right;">7.4</td>
+<td style="text-align: right;">179</td>
+<td style="text-align: right;">686</td>
+<td style="text-align: right;">73</td>
+<td style="text-align: right;">3.7</td>
+<td style="text-align: right;">1,528</td>
+</tr>
+<tr>
+<td>餐外饮品（日均）</td>
+<td style="text-align: right;">97</td>
+<td style="text-align: right;">8.6</td>
+<td style="text-align: right;">4.9</td>
+<td style="text-align: right;">0.5</td>
+<td style="text-align: right;">4.3</td>
+<td style="text-align: right;">2.2</td>
+<td style="text-align: right;">1.1</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">97</td>
+<td style="text-align: right;">324</td>
+<td style="text-align: right;">1.1</td>
+<td style="text-align: right;">378</td>
+</tr>
+</tbody>
+</table>
+</div>
 
 
 
@@ -77,46 +335,228 @@ permalink: /stats/
 
 ### 在家
 
-| 肌群／常用英文 | 主要：动作与组数 | 辅助：动作与组数 | 训练量水平（估计） |
-|---|---|---|---|
-| 胸肌<br>Chest | 俯卧撑8组 | — | 充足 |
-| 肩前侧<br>Front delts | 哑铃肩推4组 | 俯卧撑8组 | 充足 |
-| 肩外侧<br>Side delts | 哑铃侧平举6组 | 哑铃肩推4组 | 基本充足 |
-| 肩后侧<br>Rear delts | 哑铃反向飞鸟2组 | 哑铃划船7组 | 基本充足 |
-| 背阔肌<br>Lats | 双哑铃俯身划船7组、单臂支撑哑铃划船3组 | — | 充足 |
-| 斜方肌<br>Traps | 双哑铃俯身划船7组 | 单臂支撑哑铃划船3组、哑铃肩推4组、哑铃侧平举6组、哑铃反向飞鸟2组 | 基本充足 |
-| 二头肌<br>Biceps | 哑铃弯举2组 | 双哑铃俯身划船7组、单臂支撑哑铃划船3组 | 基本充足 |
-| 三头肌<br>Triceps | — | 俯卧撑8组、哑铃肩推4组 | 基本充足 |
-| 小臂<br>Forearms | — | 双哑铃俯身划船7组、单臂支撑哑铃划船3组、哑铃弯举2组、罗马尼亚硬拉3组、支撑式单腿硬拉3组 | 难判断 |
-| 腹肌<br>Abs | 卷腹6组、反向卷腹6组；合计12组 | 俯卧撑8组、高脚杯深蹲4组、哑铃侧屈每侧6组 | 充足 |
-| 侧腹<br>Obliques | 哑铃侧屈每侧6组 | 卷腹6组、反向卷腹6组 | 基本充足 |
-| 下背<br>Lower back | — | 哑铃划船7组、罗马尼亚硬拉3组、支撑式单腿硬拉3组、高脚杯深蹲4组 | 难判断 |
-| 臀部<br>Glutes | 高脚杯深蹲4组、反向弓步2组、罗马尼亚硬拉3组、支撑式单腿硬拉3组、分腿蹲3组、单腿臀桥2组 | — | 充足 |
-| 大腿前侧<br>Quads | 高脚杯深蹲4组、反向弓步2组、分腿蹲3组 | — | 充足 |
-| 大腿后侧<br>Hamstrings | 罗马尼亚硬拉3组、支撑式单腿硬拉3组、臀桥脚跟走步3组 | 单腿臀桥2组 | 基本充足 |
-| 小腿<br>Calves | 哑铃提踵6组 | — | 基本充足 |
-{: .table-centered}
+<div class="table-wrap">
+<table class="plan-table">
+<thead>
+<tr>
+<th>肌群／常用英文</th>
+<th>主要：动作与组数</th>
+<th>辅助：动作与组数</th>
+<th>训练量水平（估计）</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>胸肌<br>Chest</td>
+<td>俯卧撑8组</td>
+<td>—</td>
+<td>充足</td>
+</tr>
+<tr>
+<td>肩前侧<br>Front delts</td>
+<td>哑铃肩推4组</td>
+<td>俯卧撑8组</td>
+<td>充足</td>
+</tr>
+<tr>
+<td>肩外侧<br>Side delts</td>
+<td>哑铃侧平举6组</td>
+<td>哑铃肩推4组</td>
+<td>基本充足</td>
+</tr>
+<tr>
+<td>肩后侧<br>Rear delts</td>
+<td>哑铃反向飞鸟2组</td>
+<td>哑铃划船7组</td>
+<td>基本充足</td>
+</tr>
+<tr>
+<td>背阔肌<br>Lats</td>
+<td>双哑铃俯身划船7组、单臂支撑哑铃划船3组</td>
+<td>—</td>
+<td>充足</td>
+</tr>
+<tr>
+<td>斜方肌<br>Traps</td>
+<td>双哑铃俯身划船7组</td>
+<td>单臂支撑哑铃划船3组、哑铃肩推4组、哑铃侧平举6组、哑铃反向飞鸟2组</td>
+<td>基本充足</td>
+</tr>
+<tr>
+<td>二头肌<br>Biceps</td>
+<td>哑铃弯举2组</td>
+<td>双哑铃俯身划船7组、单臂支撑哑铃划船3组</td>
+<td>基本充足</td>
+</tr>
+<tr>
+<td>三头肌<br>Triceps</td>
+<td>—</td>
+<td>俯卧撑8组、哑铃肩推4组</td>
+<td>基本充足</td>
+</tr>
+<tr>
+<td>小臂<br>Forearms</td>
+<td>—</td>
+<td>双哑铃俯身划船7组、单臂支撑哑铃划船3组、哑铃弯举2组、罗马尼亚硬拉3组、支撑式单腿硬拉3组</td>
+<td>难判断</td>
+</tr>
+<tr>
+<td>腹肌<br>Abs</td>
+<td>卷腹6组、反向卷腹6组；合计12组</td>
+<td>俯卧撑8组、高脚杯深蹲4组、哑铃侧屈每侧6组</td>
+<td>充足</td>
+</tr>
+<tr>
+<td>侧腹<br>Obliques</td>
+<td>哑铃侧屈每侧6组</td>
+<td>卷腹6组、反向卷腹6组</td>
+<td>基本充足</td>
+</tr>
+<tr>
+<td>下背<br>Lower back</td>
+<td>—</td>
+<td>哑铃划船7组、罗马尼亚硬拉3组、支撑式单腿硬拉3组、高脚杯深蹲4组</td>
+<td>难判断</td>
+</tr>
+<tr>
+<td>臀部<br>Glutes</td>
+<td>高脚杯深蹲4组、反向弓步2组、罗马尼亚硬拉3组、支撑式单腿硬拉3组、分腿蹲3组、单腿臀桥2组</td>
+<td>—</td>
+<td>充足</td>
+</tr>
+<tr>
+<td>大腿前侧<br>Quads</td>
+<td>高脚杯深蹲4组、反向弓步2组、分腿蹲3组</td>
+<td>—</td>
+<td>充足</td>
+</tr>
+<tr>
+<td>大腿后侧<br>Hamstrings</td>
+<td>罗马尼亚硬拉3组、支撑式单腿硬拉3组、臀桥脚跟走步3组</td>
+<td>单腿臀桥2组</td>
+<td>基本充足</td>
+</tr>
+<tr>
+<td>小腿<br>Calves</td>
+<td>哑铃提踵6组</td>
+<td>—</td>
+<td>基本充足</td>
+</tr>
+</tbody>
+</table>
+</div>
 
 ### 健身馆
 
-| 肌群／常用英文 | 主要：动作与组数 | 辅助：动作与组数 | 训练量水平（估计） |
-|---|---|---|---|
-| 胸肌<br>Chest | 史密斯机卧推8组 | — | 充足 |
-| 肩前侧<br>Front delts | 器械肩推4组 | 史密斯机卧推8组 | 充足 |
-| 肩外侧<br>Side delts | 单臂绳索侧平举4组 | 器械肩推4组 | 基本充足 |
-| 肩后侧<br>Rear delts | 器械反向飞鸟2组 | 器械划船7组 | 基本充足 |
-| 背阔肌<br>Lats | 器械划船7组、高位下拉3组 | — | 充足 |
-| 斜方肌<br>Traps | 器械划船7组 | 高位下拉3组、器械肩推4组、单臂绳索侧平举4组、器械反向飞鸟2组 | 基本充足 |
-| 二头肌<br>Biceps | 绳索弯举2组 | 器械划船7组、高位下拉3组 | 基本充足 |
-| 三头肌<br>Triceps | 绳索三头下压2组 | 史密斯机卧推8组、器械肩推4组 | 基本充足 |
-| 小臂<br>Forearms | — | 器械划船7组、高位下拉3组、绳索弯举2组、史密斯机罗马尼亚硬拉3组 | 难判断 |
-| 腹肌<br>Abs | 器械卷腹9组 | 史密斯机深蹲4组、史密斯机罗马尼亚硬拉3组、绳索转体3组 | 基本充足 |
-| 侧腹<br>Obliques | 绳索转体3组 | 器械卷腹9组 | 偏少 |
-| 下背<br>Lower back | — | 史密斯机深蹲4组、史密斯机罗马尼亚硬拉3组 | 难判断 |
-| 臀部<br>Glutes | 史密斯机深蹲4组、坐姿腿举3组、史密斯机反向弓步2组、史密斯机罗马尼亚硬拉3组、史密斯机臀推2组 | — | 充足 |
-| 大腿前侧<br>Quads | 史密斯机深蹲4组、坐姿腿举3组、史密斯机反向弓步2组、器械腿屈伸2组 | — | 充足 |
-| 大腿后侧<br>Hamstrings | 史密斯机罗马尼亚硬拉3组、器械腿弯举5组 | 史密斯机臀推2组 | 基本充足 |
-| 小腿<br>Calves | 史密斯机提踵6组 | — | 基本充足 |
-{: .table-centered}
+<div class="table-wrap">
+<table class="plan-table">
+<thead>
+<tr>
+<th>肌群／常用英文</th>
+<th>主要：动作与组数</th>
+<th>辅助：动作与组数</th>
+<th>训练量水平（估计）</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>胸肌<br>Chest</td>
+<td>史密斯机卧推8组</td>
+<td>—</td>
+<td>充足</td>
+</tr>
+<tr>
+<td>肩前侧<br>Front delts</td>
+<td>器械肩推4组</td>
+<td>史密斯机卧推8组</td>
+<td>充足</td>
+</tr>
+<tr>
+<td>肩外侧<br>Side delts</td>
+<td>单臂绳索侧平举4组</td>
+<td>器械肩推4组</td>
+<td>基本充足</td>
+</tr>
+<tr>
+<td>肩后侧<br>Rear delts</td>
+<td>器械反向飞鸟2组</td>
+<td>器械划船7组</td>
+<td>基本充足</td>
+</tr>
+<tr>
+<td>背阔肌<br>Lats</td>
+<td>器械划船7组、高位下拉3组</td>
+<td>—</td>
+<td>充足</td>
+</tr>
+<tr>
+<td>斜方肌<br>Traps</td>
+<td>器械划船7组</td>
+<td>高位下拉3组、器械肩推4组、单臂绳索侧平举4组、器械反向飞鸟2组</td>
+<td>基本充足</td>
+</tr>
+<tr>
+<td>二头肌<br>Biceps</td>
+<td>绳索弯举2组</td>
+<td>器械划船7组、高位下拉3组</td>
+<td>基本充足</td>
+</tr>
+<tr>
+<td>三头肌<br>Triceps</td>
+<td>绳索三头下压2组</td>
+<td>史密斯机卧推8组、器械肩推4组</td>
+<td>基本充足</td>
+</tr>
+<tr>
+<td>小臂<br>Forearms</td>
+<td>—</td>
+<td>器械划船7组、高位下拉3组、绳索弯举2组、史密斯机罗马尼亚硬拉3组</td>
+<td>难判断</td>
+</tr>
+<tr>
+<td>腹肌<br>Abs</td>
+<td>器械卷腹9组</td>
+<td>史密斯机深蹲4组、史密斯机罗马尼亚硬拉3组、绳索转体3组</td>
+<td>基本充足</td>
+</tr>
+<tr>
+<td>侧腹<br>Obliques</td>
+<td>绳索转体3组</td>
+<td>器械卷腹9组</td>
+<td>偏少</td>
+</tr>
+<tr>
+<td>下背<br>Lower back</td>
+<td>—</td>
+<td>史密斯机深蹲4组、史密斯机罗马尼亚硬拉3组</td>
+<td>难判断</td>
+</tr>
+<tr>
+<td>臀部<br>Glutes</td>
+<td>史密斯机深蹲4组、坐姿腿举3组、史密斯机反向弓步2组、史密斯机罗马尼亚硬拉3组、史密斯机臀推2组</td>
+<td>—</td>
+<td>充足</td>
+</tr>
+<tr>
+<td>大腿前侧<br>Quads</td>
+<td>史密斯机深蹲4组、坐姿腿举3组、史密斯机反向弓步2组、器械腿屈伸2组</td>
+<td>—</td>
+<td>充足</td>
+</tr>
+<tr>
+<td>大腿后侧<br>Hamstrings</td>
+<td>史密斯机罗马尼亚硬拉3组、器械腿弯举5组</td>
+<td>史密斯机臀推2组</td>
+<td>基本充足</td>
+</tr>
+<tr>
+<td>小腿<br>Calves</td>
+<td>史密斯机提踵6组</td>
+<td>—</td>
+<td>基本充足</td>
+</tr>
+</tbody>
+</table>
+</div>
 
 实际身体、饮食、训练和睡眠数据请在[数据记录]({{ '/tracker/' | relative_url }})页面填写。

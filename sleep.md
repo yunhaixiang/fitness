@@ -5,17 +5,50 @@ description: 作息、温和瑜伽与冥想
 permalink: /sleep/
 ---
 
-| 时间 | 安排 |
-| --- | --- |
-| 23:25 | 调暗灯光，停止屏幕使用 |
-| 23:25–23:30 | 洗漱；服用褪黑素 2.5 mg、甘氨酸镁 200 mg |
-| 23:30–23:50 | 温和瑜伽 |
-| 23:50–00:00 | 冥想 |
-| 00:00 | 上床睡觉 |
-| 08:30 | 起床 |
-| 08:30-08:35 | 洗漱 |
-| 08:35-08:40 | 使用 Hume Body Pod |
-{: .table-centered}
+<div class="table-wrap">
+<table class="plan-table">
+<thead>
+<tr>
+<th>时间</th>
+<th>安排</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>23:25</td>
+<td>调暗灯光，停止屏幕使用</td>
+</tr>
+<tr>
+<td>23:25–23:30</td>
+<td>洗漱；服用褪黑素 2.5 mg、甘氨酸镁 200 mg</td>
+</tr>
+<tr>
+<td>23:30–23:50</td>
+<td>温和瑜伽</td>
+</tr>
+<tr>
+<td>23:50–00:00</td>
+<td>冥想</td>
+</tr>
+<tr>
+<td>00:00</td>
+<td>上床睡觉</td>
+</tr>
+<tr>
+<td>08:30</td>
+<td>起床</td>
+</tr>
+<tr>
+<td>08:30-08:35</td>
+<td>洗漱</td>
+</tr>
+<tr>
+<td>08:35-08:40</td>
+<td>使用 Hume Body Pod</td>
+</tr>
+</tbody>
+</table>
+</div>
 
 ## 温和瑜伽
 

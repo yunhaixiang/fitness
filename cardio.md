@@ -11,24 +11,80 @@ permalink: /cardio/
 
 
 
-| 星期 | 力量训练 | 有氧 |
-|---|---|---|
-| 周一 | 上肢推拉与核心 | HIIT／游泳／跑步机（三选一） |
-| 周二 | 下肢、臀部与核心 | HIIT／游泳／跑步机（三选一） |
-| 周三 | 休息 | 休息 |
-| 周四 | 上肢推拉与核心 | HIIT／游泳／跑步机（三选一） |
-| 周五 | 下肢与核心 | HIIT／游泳／跑步机（三选一） |
-| 周六 | 休息 | 休息 |
-| 周日 | 休息 | 休息 |
-{: .table-centered}
+<div class="table-wrap">
+<table class="plan-table">
+<thead>
+<tr>
+<th>星期</th>
+<th>力量训练</th>
+<th>有氧</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>周一</td>
+<td>上肢推拉与核心</td>
+<td>HIIT／游泳／跑步机（三选一）</td>
+</tr>
+<tr>
+<td>周二</td>
+<td>下肢、臀部与核心</td>
+<td>HIIT／游泳／跑步机（三选一）</td>
+</tr>
+<tr>
+<td>周三</td>
+<td>休息</td>
+<td>休息</td>
+</tr>
+<tr>
+<td>周四</td>
+<td>上肢推拉与核心</td>
+<td>HIIT／游泳／跑步机（三选一）</td>
+</tr>
+<tr>
+<td>周五</td>
+<td>下肢与核心</td>
+<td>HIIT／游泳／跑步机（三选一）</td>
+</tr>
+<tr>
+<td>周六</td>
+<td>休息</td>
+<td>休息</td>
+</tr>
+<tr>
+<td>周日</td>
+<td>休息</td>
+<td>休息</td>
+</tr>
+</tbody>
+</table>
+</div>
 
 - 有氧选项一：HIIT。[Juice & Toya — 20 Minute Full Body Cardio HIIT Workout [NO REPEAT]](https://www.youtube.com/watch?v=M0uO8X3_tEA)。
 
-| 跟练版本 | 单次总消耗 kcal | 单次净消耗 kcal |
-|---|---:|---:|
-| 低冲击、简化动作 | 约170–200 | 约130–160 |
-| 完整动作、跟上跳跃和节奏 | 约225–280 | 约185–240 |
-{: .table-centered}
+<div class="table-wrap">
+<table class="plan-table">
+<thead>
+<tr>
+<th>跟练版本</th>
+<th style="text-align: right;">单次总消耗 kcal</th>
+<th style="text-align: right;">单次净消耗 kcal</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>低冲击、简化动作</td>
+<td style="text-align: right;">约170–200</td>
+<td style="text-align: right;">约130–160</td>
+</tr>
+<tr>
+<td>完整动作、跟上跳跃和节奏</td>
+<td style="text-align: right;">约225–280</td>
+<td style="text-align: right;">约185–240</td>
+</tr>
+</tbody>
+</table>
+</div>
 
 
 

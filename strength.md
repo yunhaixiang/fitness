@@ -13,7 +13,7 @@ permalink: /strength/
 
 
 
-<table class="table-centered">
+<div class="table-wrap"><table class="plan-table training-table">
 <thead>
 <tr><th scope="col">星期</th><th scope="col">总时长</th><th scope="col">动作</th><th scope="col">组数 × 次数／时长</th><th scope="col">每组完成</th><th scope="col">训练肌群</th></tr>
 </thead>
@@ -189,7 +189,7 @@ permalink: /strength/
 <td>小腿</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 
 ## 力量训练（在健身馆）
 
@@ -197,7 +197,7 @@ permalink: /strength/
 
 
 
-<table class="table-centered">
+<div class="table-wrap"><table class="plan-table training-table">
 <thead>
 <tr><th scope="col">星期</th><th scope="col">总时长</th><th scope="col">动作</th><th scope="col">组数 × 次数／时长</th><th scope="col">每组完成</th><th scope="col">训练肌群</th></tr>
 </thead>
@@ -373,7 +373,7 @@ permalink: /strength/
 <td>腹肌、侧腹</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 
 
 
