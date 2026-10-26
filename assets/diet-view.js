@@ -44,6 +44,39 @@
       ['iron', '铁', 'Iron', 'mg'],
       ['potassium', '钾', 'Potassium', 'mg']
     ];
+    const addNutrition = (card, meal) => {
+      const nutrientPanel = make('section', 'diet-meal-nutrition');
+      nutrientPanel.setAttribute('aria-label', label('每餐营养估算', 'Estimated meal nutrition'));
+      nutrientPanel.append(make('h5', '', label('每餐营养', 'Meal nutrition')));
+      const metrics = make('dl', 'diet-nutrient-grid');
+      for (const [field, zh, english, unit] of nutrientFields) {
+        const metric = make('div', 'diet-nutrient');
+        metric.append(make('dt', '', label(zh, english)));
+        metric.append(make('dd', '', `${meal[field]} ${unit}`));
+        metrics.append(metric);
+      }
+      nutrientPanel.append(metrics);
+      card.append(nutrientPanel);
+    };
+    const days = [
+      label('周日', 'Sunday'), label('周一', 'Monday'), label('周二', 'Tuesday'),
+      label('周三', 'Wednesday'), label('周四', 'Thursday'), label('周五', 'Friday'),
+      label('周六', 'Saturday')
+    ];
+    const fruitCard = (dayIndex, snack) => {
+      const key = `${dayIndex < 3 ? 'fruit' : 'kiwi'}_${snack ? 'snack' : 'breakfast'}`;
+      const meal = nutrition[key];
+      const card = make('article', `diet-meal-card diet-kind-${snack ? 'snack' : 'breakfast'}`);
+      const top = make('div', 'diet-meal-top');
+      const when = make('div', 'diet-meal-when');
+      when.append(make('span', 'diet-meal-number', snack ? label('夜', 'PM') : label('早', 'AM')));
+      when.append(make('span', '', `${days[dayIndex]}${snack ? ' · 23:00' : ''}`));
+      top.append(when, make('strong', 'diet-meal-kcal', `${meal.kcal} kcal`));
+      card.append(top, make('h4', 'diet-meal-base', snack ? label('睡前水果加餐', 'Bedtime fruit snack') : label('早餐', 'Breakfast')));
+      card.append(make('p', 'diet-fruit-food', en ? meal.foodEn : meal.foodZh));
+      addNutrition(card, meal);
+      return card;
+    };
     for (const [half, halfRows] of [rows.slice(0, 7), rows.slice(7, 14)].entries()) {
       const button = make('button', 'diet-week-tab');
       button.type = 'button';
@@ -60,37 +93,38 @@
       week.setAttribute('aria-labelledby', button.id);
       week.hidden = half !== 0;
       const list = make('div', 'diet-meal-list');
-      for (const [index, row] of halfRows.entries()) {
-        const card = make('article', `diet-meal-card diet-kind-${kinds[index]}`);
-        const top = make('div', 'diet-meal-top');
-        const when = make('div', 'diet-meal-when');
-        when.append(make('span', 'diet-meal-number', String(index + 1).padStart(2, '0')));
-        when.append(make('span', '', `${value(row, 1)} · ${value(row, 2)}`));
-        top.append(when, make('strong', 'diet-meal-kcal', `${value(row, 6)} kcal`));
-        card.append(top, make('h4', 'diet-meal-base', value(row, 3)));
-        const ingredients = make('div', 'diet-meal-ingredients');
-        for (const [column, zh, english] of [[4, '蛋白质', 'Protein'], [5, '蔬菜', 'Vegetables']]) {
-          const line = make('div', 'diet-ingredient');
-          line.append(make('span', '', label(zh, english)), make('strong', '', value(row, column)));
-          ingredients.append(line);
-        }
-        card.append(ingredients);
-        const meal = nutrition[row.dataset.nutritionKey];
-        if (meal) {
-          const nutrientPanel = make('section', 'diet-meal-nutrition');
-          nutrientPanel.setAttribute('aria-label', label('每餐营养估算', 'Estimated meal nutrition'));
-          nutrientPanel.append(make('h5', '', label('每餐营养', 'Meal nutrition')));
-          const metrics = make('dl', 'diet-nutrient-grid');
-          for (const [field, zh, english, unit] of nutrientFields) {
-            const metric = make('div', 'diet-nutrient');
-            metric.append(make('dt', '', label(zh, english)));
-            metric.append(make('dd', '', `${meal[field]} ${unit}`));
-            metrics.append(metric);
+      const groups = [];
+      for (const row of halfRows) {
+        const day = value(row, 1);
+        if (groups.at(-1)?.day !== day) groups.push({ day, rows: [] });
+        groups.at(-1).rows.push(row);
+      }
+      for (const [groupIndex, group] of groups.entries()) {
+        const dayIndex = half * 4 + groupIndex;
+        // The meal schedule reaches the following Sunday; fruit meals cover one
+        // Sunday-to-Saturday week, so they appear exactly seven times each.
+        if (dayIndex < 7) list.append(fruitCard(dayIndex, false));
+        for (const row of group.rows) {
+          const index = halfRows.indexOf(row);
+          const card = make('article', `diet-meal-card diet-kind-${kinds[index]}`);
+          const top = make('div', 'diet-meal-top');
+          const when = make('div', 'diet-meal-when');
+          when.append(make('span', 'diet-meal-number', String(index + 1).padStart(2, '0')));
+          when.append(make('span', '', `${value(row, 1)} · ${value(row, 2)}`));
+          top.append(when, make('strong', 'diet-meal-kcal', `${value(row, 6)} kcal`));
+          card.append(top, make('h4', 'diet-meal-base', value(row, 3)));
+          const ingredients = make('div', 'diet-meal-ingredients');
+          for (const [column, zh, english] of [[4, '蛋白质', 'Protein'], [5, '蔬菜', 'Vegetables']]) {
+            const line = make('div', 'diet-ingredient');
+            line.append(make('span', '', label(zh, english)), make('strong', '', value(row, column)));
+            ingredients.append(line);
           }
-          nutrientPanel.append(metrics);
-          card.append(nutrientPanel);
+          card.append(ingredients);
+          const meal = nutrition[row.dataset.nutritionKey];
+          if (meal) addNutrition(card, meal);
+          list.append(card);
         }
-        list.append(card);
+        if (dayIndex < 7) list.append(fruitCard(dayIndex, true));
       }
       week.append(list);
       grid.append(week);

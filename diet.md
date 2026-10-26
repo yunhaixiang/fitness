@@ -10,10 +10,10 @@ diet: true
 
 
 
-<div class="diet-fruit-split">
-<p class="diet-breakfast-note">早餐：高纤维谷物早餐40 g + 无糖豆奶约270 g + 一水肌酸 5g + 水果（周日—周二混合水果盘约144 g；周三—周六奇异果1个）。</p>
-<p class="diet-snack-note">睡前水果加餐（23:00）：周日—周二混合水果盘约289 g；周三—周六奇异果2个。</p>
-</div>
+<noscript>
+<p>周日—周二早餐：{{ site.data.meal_nutrition.meals.fruit_breakfast.foodZh }}；睡前加餐（23:00）：{{ site.data.meal_nutrition.meals.fruit_snack.foodZh }}。</p>
+<p>周三—周六早餐：{{ site.data.meal_nutrition.meals.kiwi_breakfast.foodZh }}；睡前加餐（23:00）：{{ site.data.meal_nutrition.meals.kiwi_snack.foodZh }}。</p>
+</noscript>
 
 
 

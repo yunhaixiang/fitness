@@ -113,9 +113,6 @@ img{max-width:100%;height:auto}
 .empty-state{color:var(--muted);font-size:13px;padding:15px 0}
 .chart-wrap{height:235px}
 .trend-svg{width:100%;height:100%}
-.diet-fruit-split{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:11px;margin:0 0 22px}
-.diet-breakfast-note,.diet-snack-note{border:1px solid #426863;background:linear-gradient(115deg,#25443f,#203139);border-radius:11px;padding:16px 19px;margin:0!important;font-weight:600}
-.diet-snack-note{border-color:#555378;background:linear-gradient(115deg,#33324c,#252c3c)}
 .diet-prep-note{border-left:3px solid var(--accent);background:var(--soft);padding:10px 14px;margin:20px 0 30px;border-radius:0 8px 8px 0;color:var(--muted);font-size:13px}
 .diet-week-tabs{display:flex;gap:8px;margin:15px 0 16px}
 .diet-week-tab{display:flex;align-items:baseline;justify-content:space-between;gap:14px;min-width:200px;padding:10px 14px;border:1px solid var(--line);border-radius:8px;background:var(--soft);color:var(--muted);text-align:left}
@@ -131,6 +128,7 @@ img{max-width:100%;height:auto}
 .diet-meal-card{--kind:#91d8d1;position:relative;padding:13px 15px 14px 18px;background:#202c35;border:1px solid var(--line);border-radius:10px;overflow:hidden}
 .diet-meal-card::before{content:"";position:absolute;left:0;top:0;bottom:0;width:4px;background:var(--kind)}
 .diet-kind-rice{--kind:#e5bc78}.diet-kind-pasta{--kind:#e5a58b}.diet-kind-potato{--kind:#aca6e4}
+.diet-kind-breakfast{--kind:#9fce9d}.diet-kind-snack{--kind:#c9a5dd}
 .diet-meal-top,.diet-meal-when{display:flex;align-items:center;gap:8px}
 .diet-meal-top{justify-content:space-between;gap:14px}
 .diet-meal-when{font-size:12px;color:var(--muted)}
@@ -141,6 +139,7 @@ img{max-width:100%;height:auto}
 .diet-ingredient{display:grid;grid-template-columns:76px minmax(0,1fr);gap:8px;align-items:baseline;font-size:12px;line-height:1.45}
 .diet-ingredient span{color:var(--muted)}
 .diet-ingredient strong{font-weight:550;color:var(--text)}
+.diet-fruit-food{margin:0!important;color:var(--text);font-size:12px;line-height:1.55!important}
 .diet-meal-nutrition{margin-top:13px;padding-top:11px;border-top:1px solid var(--line)}
 .diet-meal-nutrition h5{margin:0 0 8px;font-size:11px;font-weight:700;letter-spacing:.05em;color:var(--muted)}
 .diet-nutrient-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px 10px;margin:0}
@@ -172,7 +171,7 @@ img{max-width:100%;height:auto}
 .diet-swap-foot span{font-size:11px;color:var(--muted);text-align:right}
 @media(max-width:850px){.header-inner{display:grid;grid-template-columns:1fr auto;gap:6px;padding:10px 16px}.brand{grid-column:1;margin:0}.language-switch{grid-column:2;grid-row:1}.main-nav{grid-column:1/-1}.main-nav a{padding:6px 9px}.page-container{padding:25px 16px 60px}.link-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.tracker-form{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:600px){.page-container{padding:19px 12px 45px}.page-heading h1{font-size:26px}.prose{padding:17px 12px}.prose h2{font-size:19px}.dashboard-head{display:block}.dashboard-head h1{font-size:26px}.primary-link{margin-top:13px}.link-grid{grid-template-columns:1fr}.metrics-strip{grid-template-columns:repeat(2,minmax(0,1fr))}.tracker-intro{display:block}.tracker-intro a{display:block;margin-top:6px}.tracker-card{padding:15px}.tracker-form{gap:9px}.tracker-form .wide-field{grid-column:1/-1}.muscle-figure{width:100%;margin:0 0 18px}.utility-bar input{min-width:0;width:100%}}
-@media(max-width:760px){.diet-meal-list,.diet-treat-grid,.diet-swap-grid,.diet-fruit-split{grid-template-columns:1fr}.diet-week-tabs{display:grid;grid-template-columns:repeat(2,minmax(0,1fr))}.diet-week-tab{min-width:0;flex-direction:column;gap:1px}}
+@media(max-width:760px){.diet-meal-list,.diet-treat-grid,.diet-swap-grid{grid-template-columns:1fr}.diet-week-tabs{display:grid;grid-template-columns:repeat(2,minmax(0,1fr))}.diet-week-tab{min-width:0;flex-direction:column;gap:1px}}
 .table-wrap[hidden],.visual-card[hidden]{display:none!important}
 .visual-card-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:11px;margin:13px 0 25px}
 .visual-card{min-width:0;background:#202c35;border:1px solid var(--line);border-radius:10px;padding:15px 17px}
