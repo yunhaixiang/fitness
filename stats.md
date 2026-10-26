@@ -12,7 +12,7 @@ visual: true
 
 ## 一周营养统计
 
-**热量估计（不含放纵餐）：日均摄入约1,750 kcal、消耗约2,319 ± 232 kcal、赤字约569 ± 232 kcal；对应每周摄入约12,253 kcal、消耗约16,236 ± 1,624 kcal、赤字约3,983 ± 1,624 kcal。按7,700 kcal/kg粗算，理论脂肪等价值约减0.52 ± 0.21 kg／周，不等于实际体重下降量。** [估算局限](https://www.niddk.nih.gov/health-information/professionals/diabetes-discoveries-practice/nih-body-weight-planner)
+**热量估计（不含放纵餐）：日均摄入约1,741 kcal、消耗约2,319 ± 232 kcal、赤字约578 ± 232 kcal；对应每周摄入约12,188 kcal、消耗约16,236 ± 1,624 kcal、赤字约4,048 ± 1,624 kcal。按7,700 kcal/kg粗算，理论脂肪等价值约减0.53 ± 0.21 kg／周，不等于实际体重下降量。** [估算局限](https://www.niddk.nih.gov/health-information/professionals/diabetes-discoveries-practice/nih-body-weight-planner)
 
 
 
@@ -79,50 +79,50 @@ visual: true
 <tbody>
 <tr>
 <td>热量</td>
-<td style="text-align: right;">约12,253 kcal</td>
-<td style="text-align: right;">约1,750 kcal</td>
+<td style="text-align: right;">约12,188 kcal</td>
+<td style="text-align: right;">约1,741 kcal</td>
 <td>1,800–2,000 kcal</td>
 </tr>
 <tr>
 <td>蛋白质</td>
-<td style="text-align: right;">约952 g</td>
-<td style="text-align: right;">约136.0 g</td>
+<td style="text-align: right;">约944 g</td>
+<td style="text-align: right;">约134.8 g</td>
 <td>130–165 g</td>
 </tr>
 <tr>
 <td>总脂肪</td>
-<td style="text-align: right;">约447 g</td>
-<td style="text-align: right;">约63.8 g</td>
+<td style="text-align: right;">约446 g</td>
+<td style="text-align: right;">约63.6 g</td>
 <td>45–65 g</td>
 </tr>
 <tr>
 <td>饱和脂肪</td>
-<td style="text-align: right;">约108.1 g</td>
+<td style="text-align: right;">约107.9 g</td>
 <td style="text-align: right;">约15.4 g</td>
-<td>11.9 g</td>
+<td>约11.6 g</td>
 </tr>
 <tr>
 <td>饱和脂肪占总热量</td>
-<td style="text-align: right;">约7.9%</td>
-<td style="text-align: right;">约7.9%</td>
+<td style="text-align: right;">约8.0%</td>
+<td style="text-align: right;">约8.0%</td>
 <td>≤6%</td>
 </tr>
 <tr>
 <td>碳水化合物</td>
-<td style="text-align: right;">约1,229 g</td>
-<td style="text-align: right;">约175.6 g</td>
+<td style="text-align: right;">约1,219 g</td>
+<td style="text-align: right;">约174.1 g</td>
 <td>180–240 g</td>
 </tr>
 <tr>
 <td>膳食纤维</td>
-<td style="text-align: right;">约270 g</td>
-<td style="text-align: right;">约38.6 g</td>
+<td style="text-align: right;">约264 g</td>
+<td style="text-align: right;">约37.7 g</td>
 <td>30–38 g</td>
 </tr>
 <tr>
 <td>总糖</td>
-<td style="text-align: right;">约308 g</td>
-<td style="text-align: right;">约44.0 g</td>
+<td style="text-align: right;">约307 g</td>
+<td style="text-align: right;">约43.8 g</td>
 <td>–</td>
 </tr>
 <tr>
@@ -139,26 +139,26 @@ visual: true
 </tr>
 <tr>
 <td>钠</td>
-<td style="text-align: right;">约12,831 mg</td>
-<td style="text-align: right;">约1,833 mg</td>
+<td style="text-align: right;">约12,607 mg</td>
+<td style="text-align: right;">约1,801 mg</td>
 <td>≤2,300 mg</td>
 </tr>
 <tr>
 <td>钙</td>
-<td style="text-align: right;">约7,978 mg</td>
-<td style="text-align: right;">约1,140 mg</td>
+<td style="text-align: right;">约7,697 mg</td>
+<td style="text-align: right;">约1,100 mg</td>
 <td>1,000 mg</td>
 </tr>
 <tr>
 <td>铁</td>
-<td style="text-align: right;">约121.2 mg</td>
-<td style="text-align: right;">约17.3 mg</td>
+<td style="text-align: right;">约113.5 mg</td>
+<td style="text-align: right;">约16.2 mg</td>
 <td>8 mg</td>
 </tr>
 <tr>
 <td>钾</td>
-<td style="text-align: right;">约34,216 mg</td>
-<td style="text-align: right;">约4,888 mg</td>
+<td style="text-align: right;">约32,631 mg</td>
+<td style="text-align: right;">约4,662 mg</td>
 <td>≥3,400 mg</td>
 </tr>
 <tr>
