@@ -5,7 +5,6 @@ description: 每周餐单与睡前水果加餐
 permalink: /diet/
 diet: true
 ---
-<nav class="page-links" aria-label="饮食相关页面"><a href="{{ '/treats/' | relative_url }}">放纵餐 →</a><a href="{{ '/shopping/' | relative_url }}">购物清单 →</a><a href="{{ '/cooking/' | relative_url }}">做饭流程 →</a></nav>
 ## 计划表
 
 

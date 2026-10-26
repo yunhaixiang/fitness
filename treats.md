@@ -5,7 +5,6 @@ description: 常见放纵餐的热量与赤字影响
 permalink: /treats/
 diet: true
 ---
-<nav class="page-links" aria-label="放纵餐相关页面"><a href="{{ '/diet/' | relative_url }}">饮食安排 →</a><a href="{{ '/stats/' | relative_url }}">营养 →</a></nav>
 ## 常见放纵餐
 
 

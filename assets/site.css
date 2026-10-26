@@ -37,9 +37,6 @@ img{max-width:100%;height:auto}
 .prose code{font-size:.92em}
 .prose .mermaid{overflow:auto;background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:14px}
 .prose .mermaid svg{min-width:900px}
-.page-links{display:flex;gap:8px;flex-wrap:wrap;margin:0 0 22px;padding-bottom:18px;border-bottom:1px solid var(--line)}
-.page-links a{padding:6px 10px;background:var(--soft);border:1px solid var(--line);border-radius:6px;text-decoration:none;color:var(--text);font-size:13px}
-.page-links a:hover{background:var(--accent-soft);color:var(--accent)}
 .table-wrap{max-width:100%;overflow:auto;border:1px solid var(--line);border-radius:7px;margin:12px 0 22px;background:var(--surface)}
 .plan-table{border-collapse:separate;border-spacing:0;width:100%;min-width:620px;font-size:13px;line-height:1.5}
 .plan-table th,.plan-table td{padding:9px 11px;border-right:1px solid var(--line);border-bottom:1px solid var(--line);vertical-align:top;text-align:left}
@@ -67,8 +64,6 @@ img{max-width:100%;height:auto}
 .dashboard-head{display:flex;justify-content:space-between;align-items:center;gap:20px;padding:8px 0 26px;border-bottom:1px solid var(--line)}
 .dashboard-head h1{font-size:30px;margin:0 0 3px;letter-spacing:-.025em}
 .dashboard-head p{margin:0;color:var(--muted)}
-.primary-link{display:inline-block;background:#347e7c;color:#fff;text-decoration:none;border-radius:7px;padding:9px 14px;font-weight:600;white-space:nowrap}
-.primary-link:hover{background:#418f8c}
 .dashboard-section{margin-top:30px}
 .dashboard-section h2{font-size:17px;margin:0 0 12px}
 .today-heading,.today-panel-heading{display:flex;align-items:baseline;justify-content:space-between;gap:12px}
@@ -79,8 +74,6 @@ img{max-width:100%;height:auto}
 .today-panel{min-width:0;padding:17px 18px;background:var(--surface);border:1px solid var(--line);border-radius:10px}
 .today-panel-heading{margin-bottom:12px}
 .today-panel-heading h3{font-size:15px;margin:0}
-.today-panel-heading a{font-size:12px;text-decoration:none;color:var(--accent);white-space:nowrap}
-.today-panel-heading a:hover{text-decoration:underline}
 .today-meals,.today-exercise-list{display:grid;gap:8px}
 .today-meal{padding:10px 12px;background:var(--soft);border-radius:7px;border-left:3px solid var(--accent)}
 .today-meal[data-meal="breakfast"]{border-left-color:#9fce9d}
@@ -117,7 +110,6 @@ img{max-width:100%;height:auto}
 .dashboard-note{margin:12px 0 0}
 .tracker-intro{background:var(--accent-soft);border:1px solid #3c6164;border-radius:7px;padding:14px 17px;margin-bottom:17px;display:flex;align-items:center;justify-content:space-between;gap:15px}
 .tracker-intro p{margin:0;font-size:13px}
-.tracker-intro a{white-space:nowrap;text-decoration:none;font-size:13px;font-weight:600}
 .metrics-strip{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin-bottom:16px}
 .metric-box,.tracker-card{background:var(--surface);border:1px solid var(--line);border-radius:8px}
 .metric-box{padding:13px 16px}
@@ -197,7 +189,7 @@ img{max-width:100%;height:auto}
 .diet-treat-metric span{font-size:11px;color:var(--muted)}
 .diet-treat-metric strong{font:650 12px/1.5 ui-monospace,SFMono-Regular,Menlo,monospace;color:var(--text)}
 @media(max-width:850px){.header-inner{display:grid;grid-template-columns:1fr auto;gap:6px;padding:10px 16px}.brand{grid-column:1;margin:0}.language-switch{grid-column:2;grid-row:1}.main-nav{grid-column:1/-1}.main-nav a{padding:6px 9px}.page-container{padding:25px 16px 60px}.link-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.tracker-form{grid-template-columns:repeat(2,minmax(0,1fr))}}
-@media(max-width:600px){.link-grid.food-link-grid{grid-template-columns:1fr}.page-container{padding:19px 12px 45px}.page-heading h1{font-size:26px}.prose{padding:17px 12px}.prose h2{font-size:19px}.dashboard-head{display:block}.dashboard-head h1{font-size:26px}.primary-link{margin-top:13px}.link-grid{grid-template-columns:1fr}.metrics-strip{grid-template-columns:repeat(2,minmax(0,1fr))}.tracker-intro{display:block}.tracker-intro a{display:block;margin-top:6px}.tracker-card{padding:15px}.tracker-form{gap:9px}.tracker-form .wide-field{grid-column:1/-1}.utility-bar input{min-width:0;width:100%}}
+@media(max-width:600px){.link-grid.food-link-grid{grid-template-columns:1fr}.page-container{padding:19px 12px 45px}.page-heading h1{font-size:26px}.prose{padding:17px 12px}.prose h2{font-size:19px}.dashboard-head{display:block}.dashboard-head h1{font-size:26px}.link-grid{grid-template-columns:1fr}.metrics-strip{grid-template-columns:repeat(2,minmax(0,1fr))}.tracker-intro{display:block}.tracker-card{padding:15px}.tracker-form{gap:9px}.tracker-form .wide-field{grid-column:1/-1}.utility-bar input{min-width:0;width:100%}}
 @media(max-width:760px){.diet-meal-list,.diet-treat-grid{grid-template-columns:1fr}.weekday-tabs{grid-template-columns:repeat(4,minmax(0,1fr))}}
 .table-wrap[hidden],.visual-card[hidden]{display:none!important}
 .visual-card-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:11px;margin:13px 0 25px}

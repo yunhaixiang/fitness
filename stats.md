@@ -6,9 +6,6 @@ permalink: /stats/
 visual: true
 ---
 
-[查看每周肌群训练量 →]({{ '/volume/' | relative_url }})
-
-
 
 ## 一周营养
 
