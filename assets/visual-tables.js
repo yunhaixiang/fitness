@@ -282,27 +282,15 @@
     document.addEventListener('visibilitychange', () => { if (!document.hidden) selectToday(); });
   }
 
-  if (page === 'cardio' && tables.length === 2) {
+  if (page === 'cardio' && tables.length === 1) {
     const week = el('div', 'visual-week-strip');
     for (const row of tables[0].tBodies[0].rows) {
-      const rest = val(row, 1) === val(row, 2);
+      const rest = row.dataset.cardio === 'rest';
       const card = el('article', `visual-card visual-day-card${rest ? ' is-rest' : ''}`);
-      card.append(el('strong', 'visual-day-name', val(row, 0)), el('span', '', val(row, 1)), el('small', '', val(row, 2)));
+      card.append(el('strong', 'visual-day-name', val(row, 0)), el('span', '', val(row, 1)));
       week.append(card);
     }
     mount(tables[0], week);
-    const options = el('div', 'visual-card-grid');
-    for (const row of tables[1].tBodies[0].rows) {
-      const card = el('article', 'visual-card visual-hiit-card');
-      card.append(el('h3', '', val(row, 0)));
-      for (const [column, zh, english] of [[1, '总消耗', 'Gross burn'], [2, '净消耗', 'Net burn']]) {
-        const metric = el('div', 'visual-hiit-metric');
-        metric.append(el('span', '', tr(zh, english)), el('strong', '', `${val(row, column)} kcal`));
-        card.append(metric);
-      }
-      options.append(card);
-    }
-    mount(tables[1], options);
   }
 
   if (page === 'sleep' && tables[0]) {

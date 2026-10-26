@@ -6,52 +6,43 @@ permalink: /cardio/
 visual: true
 ---
 
-## 每周安排与有氧
-
-
-
-
+## 每周安排
 
 {% include cardio-weekly-table.html %}
 
-- 有氧选项一：HIIT。[Juice & Toya — 20 Minute Full Body Cardio HIIT Workout [NO REPEAT]](https://www.youtube.com/watch?v=M0uO8X3_tEA)。
+## 有氧选择
 
-<div class="table-wrap">
-<table class="plan-table">
-<thead>
-<tr>
-<th>跟练版本</th>
-<th style="text-align: right;">单次总消耗 kcal</th>
-<th style="text-align: right;">单次净消耗 kcal</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>低冲击、简化动作</td>
-<td style="text-align: right;">约170–200</td>
-<td style="text-align: right;">约130–160</td>
-</tr>
-<tr>
-<td>完整动作、跟上跳跃和节奏</td>
-<td style="text-align: right;">约225–280</td>
-<td style="text-align: right;">约185–240</td>
-</tr>
-</tbody>
-</table>
+<div class="cardio-option-grid">
+  <article class="cardio-option-card">
+    <div class="cardio-option-head"><h3>HIIT</h3><span>20 分钟</span></div>
+    <a class="cardio-option-link" href="https://www.youtube.com/watch?v=M0uO8X3_tEA" target="_blank" rel="noopener noreferrer">Juice &amp; Toya 跟练视频 ↗</a>
+    <div class="cardio-variant">
+      <strong>完整动作、跟上跳跃和节奏</strong>
+      <span>总消耗 225–280 kcal</span>
+      <span>净消耗 185–240 kcal</span>
+    </div>
+    <div class="cardio-variant">
+      <strong>低冲击、简化动作</strong>
+      <span>总消耗 170–200 kcal</span>
+      <span>净消耗 130–160 kcal</span>
+    </div>
+  </article>
+  <article class="cardio-option-card">
+    <div class="cardio-option-head"><h3>游泳</h3><span>30–35 分钟</span></div>
+    <p>每个来回自由泳去、蛙泳回；20 个来回，按 25 m 泳池计算共 1,000 m。</p>
+    <ol>
+      <li>热身：3 个来回，轻松游。</li>
+      <li>主训练：2 组 × 7 个来回，组间休息30–60秒。</li>
+      <li>放松：3 个来回，轻松游。</li>
+    </ol>
+  </article>
+  <article class="cardio-option-card">
+    <div class="cardio-option-head"><h3>跑步机</h3><span>30 分钟</span></div>
+    <p>坡度 0%。</p>
+    <ol>
+      <li>热身：5分钟，4–5 km/h（约2.5–3.1 mph）走路。</li>
+      <li>主训练：20分钟，约8 km/h（约5 mph）慢跑。</li>
+      <li>放松：5分钟，逐渐降到3–4 km/h（约1.9–2.5 mph）走路。</li>
+    </ol>
+  </article>
 </div>
-
-
-
-
-
-- 有氧选项二：游泳。每个来回自由泳去、蛙泳回；每次20个来回，按25 m泳池计算共1,000 m，预计约30–35分钟。
-  - 热身：3 个来回，轻松游。
-  - 主训练：2 组 × 7 个来回，组间休息30–60秒。
-  - 放松：3 个来回，轻松游。
-
-
-
-- 有氧选项三：跑步机。约30分钟，坡度0%
-  - 热身：5分钟，4–5 km/h（约2.5–3.1 mph）走路。
-  - 主训练：20分钟，约8 km/h（约5 mph）慢跑。
-  - 放松：5分钟，逐渐降到3–4 km/h（约1.9–2.5 mph）走路。

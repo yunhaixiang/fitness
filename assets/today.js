@@ -55,14 +55,12 @@
   function renderTraining(day) {
     trainingRoot.replaceChildren();
     const cardioRow = cardioTable.tBodies[0].rows[day === 0 ? 6 : day - 1];
-    const summary = cell(cardioRow, 1);
-    const cardio = cell(cardioRow, 2);
+    const cardioActive = cardioRow?.dataset.cardio === 'active';
     if (!trainingDays.includes(day)) {
       trainingRoot.append(element('p', 'today-rest', label('今天休息', 'Rest Day')));
       return;
     }
 
-    trainingRoot.append(element('p', 'today-training-summary', translated(summary)));
     const switcher = element('div', 'today-mode-switch');
     switcher.setAttribute('role', 'group');
     switcher.setAttribute('aria-label', label('训练场地', 'Training Location'));
@@ -95,9 +93,10 @@
       exercises.append(item);
     }
     trainingRoot.append(exercises);
+    if (!cardioActive) return;
     const cardioLine = element('p', 'today-cardio');
     cardioLine.append(element('strong', '', label('有氧', 'Cardio')));
-    const cardioLink = element('a', '', translated(cardio));
+    const cardioLink = element('a', '', label('查看选项', 'View Options'));
     cardioLink.href = document.querySelector('.main-nav a[href$="/cardio/"]')?.href || 'cardio/';
     cardioLine.append(cardioLink);
     trainingRoot.append(cardioLine);
