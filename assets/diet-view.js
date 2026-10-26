@@ -132,7 +132,6 @@
       grid.append(week);
       panels.push(week);
     }
-    const selectionKey = 'fitness-diet-selected-day';
     const activate = (dayIndex) => {
       buttons.forEach((button, index) => {
         const selected = index === dayIndex;
@@ -140,7 +139,6 @@
         button.tabIndex = selected ? 0 : -1;
         panels[index].hidden = !selected;
       });
-      try { localStorage.setItem(selectionKey, JSON.stringify({ date: new Date().toDateString(), day: dayIndex })); } catch (_) { /* storage unavailable */ }
     };
     buttons.forEach((button, index) => {
       button.addEventListener('click', () => activate(index));
@@ -157,22 +155,20 @@
     let selectedDate = new Date().toDateString();
     const selectToday = () => {
       const today = new Date();
-      if (today.toDateString() === selectedDate) return;
       selectedDate = today.toDateString();
       activate(today.getDay());
     };
-    let initialDay = new Date().getDay();
-    try {
-      const saved = JSON.parse(localStorage.getItem(selectionKey));
-      if (saved.date === selectedDate && Number.isInteger(saved.day) && saved.day >= 0 && saved.day < 7) initialDay = saved.day;
-    } catch (_) { /* storage unavailable */ }
-    activate(initialDay);
+    const selectTodayIfDateChanged = () => {
+      if (new Date().toDateString() !== selectedDate) selectToday();
+    };
+    selectToday();
     const scheduleToday = () => {
       const next = new Date();
       next.setHours(24, 0, 0, 100);
-      setTimeout(() => { selectToday(); scheduleToday(); }, next - new Date());
+      setTimeout(() => { selectTodayIfDateChanged(); scheduleToday(); }, next - new Date());
     };
     scheduleToday();
+    window.addEventListener('pageshow', selectToday);
     window.addEventListener('focus', selectToday);
     document.addEventListener('visibilitychange', () => { if (!document.hidden) selectToday(); });
     view.append(tabs, grid);

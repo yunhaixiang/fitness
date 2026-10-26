@@ -129,12 +129,7 @@
     const days = { '一': ['周一', 'Monday'], '二': ['周二', 'Tuesday'], '四': ['周四', 'Thursday'], '五': ['周五', 'Friday'], Mon: ['周一', 'Monday'], Tue: ['周二', 'Tuesday'], Thu: ['周四', 'Thursday'], Fri: ['周五', 'Friday'] };
     const weekdays = [['周日', 'Sunday'], ['周一', 'Monday'], ['周二', 'Tuesday'], ['周三', 'Wednesday'], ['周四', 'Thursday'], ['周五', 'Friday'], ['周六', 'Saturday']];
     const trainingDays = [1, 2, 4, 5];
-    const selectionKey = 'fitness-strength-selected-day';
     let activeDay = new Date().getDay();
-    try {
-      const saved = JSON.parse(localStorage.getItem(selectionKey));
-      if (saved.date === new Date().toDateString() && Number.isInteger(saved.day) && saved.day >= 0 && saved.day < 7) activeDay = saved.day;
-    } catch (_) { /* storage unavailable */ }
     const dayTabs = el('div', 'weekday-tabs strength-day-tabs');
     dayTabs.setAttribute('role', 'group');
     dayTabs.setAttribute('aria-label', tr('选择星期', 'Choose a day'));
@@ -252,7 +247,6 @@
     }
     function showDay(weekday) {
       activeDay = weekday;
-      try { localStorage.setItem(selectionKey, JSON.stringify({ date: new Date().toDateString(), day: weekday })); } catch (_) { /* storage unavailable */ }
       dayButtons.forEach((button, index) => button.setAttribute('aria-pressed', String(index === weekday)));
       for (const panel of panels.values()) {
         for (const day of panel.querySelectorAll('.visual-training-day')) {
@@ -271,16 +265,19 @@
     let selectedDate = new Date().toDateString();
     const selectToday = () => {
       const today = new Date();
-      if (today.toDateString() === selectedDate) return;
       selectedDate = today.toDateString();
       showDay(today.getDay());
+    };
+    const selectTodayIfDateChanged = () => {
+      if (new Date().toDateString() !== selectedDate) selectToday();
     };
     const scheduleToday = () => {
       const next = new Date();
       next.setHours(24, 0, 0, 100);
-      setTimeout(() => { selectToday(); scheduleToday(); }, next - new Date());
+      setTimeout(() => { selectTodayIfDateChanged(); scheduleToday(); }, next - new Date());
     };
     scheduleToday();
+    window.addEventListener('pageshow', selectToday);
     window.addEventListener('focus', selectToday);
     document.addEventListener('visibilitychange', () => { if (!document.hidden) selectToday(); });
   }
