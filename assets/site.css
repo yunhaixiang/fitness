@@ -110,7 +110,7 @@ img{max-width:100%;height:auto}
 .dashboard-note{margin:12px 0 0}
 .tracker-intro{background:var(--accent-soft);border:1px solid #3c6164;border-radius:7px;padding:14px 17px;margin-bottom:17px;display:flex;align-items:center;justify-content:space-between;gap:15px}
 .tracker-intro p{margin:0;font-size:13px}
-.metrics-strip{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin-bottom:16px}
+.metrics-strip{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin-bottom:16px}
 .metric-box,.tracker-card{background:var(--surface);border:1px solid var(--line);border-radius:8px}
 .metric-box{padding:13px 16px}
 .metric-box span{display:block;color:var(--muted);font-size:11px}

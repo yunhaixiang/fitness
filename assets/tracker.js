@@ -22,32 +22,30 @@
     cardio: { name: '有氧训练', description: '记录实际完成量；热量是估计值，不必每次都填。', fields: [
       ['date', '日期', 'date', true], ['activity', '项目', 'select', true, ['HIIT', '游泳', '跑步机', '其他']],
       ['minutes', '时长 min', 'number'], ['distance', '距离 km', 'number'], ['kcal', '估计净消耗 kcal', 'number'], ['note', '备注', 'text']
-    ], chart: [['minutes', '有氧时长 min']] },
-    sleep: { name: '睡眠', description: '日期填起床当天；Oura 数值可选填，优先看长期趋势。', fields: [
-      ['date', '起床日期', 'date', true], ['asleep', '实际入睡', 'time'], ['wake', '起床时间', 'time'],
-      ['hours', '总睡眠 h', 'number'], ['latency', '入睡耗时 min', 'number'], ['efficiency', '睡眠效率 %', 'number'],
-      ['score', '睡眠评分', 'number'], ['rhr', '最低静息心率 bpm', 'number'], ['hrv', '平均 HRV ms', 'number']
-    ], chart: [['hours', '总睡眠 h'], ['score', '睡眠评分']] }
+    ], chart: [['minutes', '有氧时长 min']] }
   };
   const names = Object.keys(types);
   const blank = () => Object.fromEntries(names.map((name) => [name, []]));
   let records = blank();
+  let archivedSleep = [];
+  const storedRecords = () => archivedSleep.length ? { ...records, sleep: archivedSleep } : records;
   let active = 'body';
   const dateString = (d) => `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}-${String(d.getDate()).padStart(2, '0')}`;
   const today = () => dateString(new Date());
   const cutoff = () => { const d = new Date(); d.setHours(0, 0, 0, 0); d.setDate(d.getDate() - DAYS + 1); return dateString(d); };
   let saved = null;
   try { saved = localStorage.getItem(KEY); } catch (_) { /* storage disabled */ }
-  if (saved) { try { const parsed = JSON.parse(saved); for (const name of names) if (Array.isArray(parsed[name])) records[name] = parsed[name]; } catch (_) { /* keep blank */ } }
-  const save = () => { try { localStorage.setItem(KEY, JSON.stringify(records)); return true; } catch (_) { alert(t('浏览器未能保存记录。请检查是否禁用了本地存储，或先导出备份。')); return false; } };
+  if (saved) { try { const parsed = JSON.parse(saved); for (const name of names) if (Array.isArray(parsed[name])) records[name] = parsed[name]; if (Array.isArray(parsed.sleep)) archivedSleep = parsed.sleep; } catch (_) { /* keep blank */ } }
+  const save = () => { try { localStorage.setItem(KEY, JSON.stringify(storedRecords())); return true; } catch (_) { alert(t('浏览器未能保存记录。请检查是否禁用了本地存储，或先导出备份。')); return false; } };
   const latest = (name) => [...records[name]].sort((a, b) => b.date.localeCompare(a.date))[0];
   const recent = (name) => records[name].filter((row) => row.date >= cutoff()).sort((a, b) => b.date.localeCompare(a.date));
   const metric = (label, value) => { const box = document.createElement('div'); box.className = 'metric-box'; const s = document.createElement('span'); s.textContent = label; const strong = document.createElement('strong'); strong.textContent = value || '—'; box.append(s, strong); return box; };
   function renderMetrics() {
     const host = document.querySelector('#latest-metrics'); host.replaceChildren();
-    const body = latest('body'), food = latest('food'), sleep = latest('sleep');
-    host.append(metric('最新体重', body?.weight ? `${body.weight} kg` : '—'), metric('最近体脂率', body?.bf ? `${body.bf}%` : '—'), metric('最近总睡眠', sleep?.hours ? `${sleep.hours} h` : '—'));
-    if (!body && !food && !sleep) host.setAttribute('aria-label', '还没有记录');
+    const body = latest('body');
+    host.append(metric('最新体重', body?.weight ? `${body.weight} kg` : '—'), metric('最近体脂率', body?.bf ? `${body.bf}%` : '—'));
+    if (names.every((name) => records[name].length === 0)) host.setAttribute('aria-label', '还没有记录');
+    else host.removeAttribute('aria-label');
   }
   function fieldControl(field) {
     const [key, label, type, required, options] = field;
@@ -132,8 +130,44 @@
   document.querySelectorAll('[data-tab]').forEach((button) => button.addEventListener('click', () => show(button.dataset.tab)));
   document.querySelectorAll('.tracker-form').forEach((form) => form.addEventListener('submit', (event) => { event.preventDefault(); const name = form.dataset.type; const values = Object.fromEntries(new FormData(form).entries()); records[name].push({ id: crypto.randomUUID(), ...values }); if (save()) { form.reset(); form.querySelector('[name="date"]').value = today(); form.querySelector('.form-feedback').textContent = t('已保存'); renderAll(); } }));
   document.querySelectorAll('.chart-wrap').forEach((host) => host.previousElementSibling.addEventListener('change', () => { renderChart(host.dataset.chart); window.fitnessI18n?.apply(host); }));
-  document.querySelector('#export-json').addEventListener('click', () => download(`fitness-backup-${today()}.json`, JSON.stringify({ version: 1, exportedAt: new Date().toISOString(), records }, null, 2), 'application/json'));
+  document.querySelector('#export-json').addEventListener('click', () => download(`fitness-backup-${today()}.json`, JSON.stringify({ version: 1, exportedAt: new Date().toISOString(), records: storedRecords() }, null, 2), 'application/json'));
   document.querySelector('#import-json').addEventListener('click', () => document.querySelector('#import-file').click());
-  document.querySelector('#import-file').addEventListener('change', async (event) => { const file = event.target.files[0]; if (!file) return; try { const parsed = JSON.parse(await file.text()); if (parsed.version !== 1 || !parsed.records || typeof parsed.records !== 'object') throw new Error('格式不符'); let count = 0; for (const name of names) { const rows = parsed.records[name]; if (!Array.isArray(rows)) continue; const known = new Set(records[name].map((row) => row.id)); for (const row of rows) { if (!row || typeof row !== 'object' || typeof row.date !== 'string') continue; const id = typeof row.id === 'string' ? row.id : crypto.randomUUID(); if (known.has(id)) continue; const clean = { id, date: row.date }; for (const [key] of types[name].fields) if (key !== 'date' && (typeof row[key] === 'string' || typeof row[key] === 'number')) clean[key] = String(row[key]); records[name].push(clean); known.add(id); count++; } } if (save()) { renderAll(); alert(`${t('导入完成，新增')} ${count} ${t('条记录。')}`); } } catch (_) { alert(t('这不是本站导出的有效 JSON 备份。')); } event.target.value = ''; });
+  document.querySelector('#import-file').addEventListener('change', async (event) => {
+    const file = event.target.files[0];
+    if (!file) return;
+    try {
+      const parsed = JSON.parse(await file.text());
+      if (parsed.version !== 1 || !parsed.records || typeof parsed.records !== 'object') throw new Error('格式不符');
+      let count = 0;
+      for (const name of names) {
+        const rows = parsed.records[name];
+        if (!Array.isArray(rows)) continue;
+        const known = new Set(records[name].map((row) => row.id));
+        for (const row of rows) {
+          if (!row || typeof row !== 'object' || typeof row.date !== 'string') continue;
+          const id = typeof row.id === 'string' ? row.id : crypto.randomUUID();
+          if (known.has(id)) continue;
+          const clean = { id, date: row.date };
+          for (const [key] of types[name].fields) if (key !== 'date' && (typeof row[key] === 'string' || typeof row[key] === 'number')) clean[key] = String(row[key]);
+          records[name].push(clean);
+          known.add(id);
+          count++;
+        }
+      }
+      if (Array.isArray(parsed.records.sleep)) {
+        const known = new Set(archivedSleep.map((row) => row.id));
+        for (const row of parsed.records.sleep) {
+          if (!row || typeof row !== 'object' || typeof row.date !== 'string') continue;
+          const id = typeof row.id === 'string' ? row.id : crypto.randomUUID();
+          if (known.has(id)) continue;
+          archivedSleep.push({ ...row, id });
+          known.add(id);
+          count++;
+        }
+      }
+      if (save()) { renderAll(); alert(`${t('导入完成，新增')} ${count} ${t('条记录。')}`); }
+    } catch (_) { alert(t('这不是本站导出的有效 JSON 备份。')); }
+    event.target.value = '';
+  });
   show(active); renderAll();
 })();
