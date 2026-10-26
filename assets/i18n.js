@@ -77,6 +77,7 @@
     '在家与健身馆的动作、组数和肌群': 'Exercises, sets and muscle groups at home and at the gym',
     '力量训练（在家）': 'Strength training (home)', '力量训练（在健身馆）': 'Strength training (gym)',
     '哑铃配重：每只15 lb。': 'Dumbbells: 15 lb each.',
+    '腹直肌；侧腹辅助': 'rectus abdominis; obliques (secondary)',
     '主要健身肌群示意图': 'Major muscle groups',
     '主要健身肌群：正面。AI生成简图，仅示意大致位置。': 'Major muscle groups, front view. AI-generated diagram showing approximate locations only.',
     '主要健身肌群：背面。AI生成简图，仅示意大致位置。': 'Major muscle groups, back view. AI-generated diagram showing approximate locations only.',
@@ -379,7 +380,7 @@
       .replace(/(\d+(?:\.\d+)?)\s*(g|kg|mL|L)\s*\/\s*桶/g, '$1 $2 / carton')
       .replaceAll('（', ' (').replaceAll('）', ')').replaceAll('、', ', ')
       .replaceAll('＋', ' + ').replaceAll('；', '; ').replaceAll('／', '/')
-      .replace(/([A-Za-z])(?=\d)/g, '$1 ')
+      .replace(/([A-Za-z])(?=\d)/g, '$1 ').replace(/(\d)min\b/g, '$1 min')
       .replace(/\b1 (packs|bags|cans|bottles|pieces|slices|cups|cartons|trays|cases)\b/g, (_, unit) => `1 ${unit.slice(0, -1)}`);
     return result;
   }
@@ -415,15 +416,7 @@
         if (hasChinese.test(originals[attr])) element.setAttribute(attr, translate(originals[attr]));
       }
     }
-    // Exercise names already have an English line; keep that as the linked label.
-    for (const link of root.querySelectorAll('.training-table td a')) {
-      if (link.nextSibling?.nodeName !== 'BR' || !link.nextSibling.nextSibling) continue;
-      const english = link.nextSibling.nextSibling;
-      if (english.nodeType !== Node.TEXT_NODE || hasChinese.test(english.textContent)) continue;
-      link.textContent = english.textContent.trim();
-      link.nextSibling.remove();
-      english.remove();
-    }
+
   }
 
   document.documentElement.lang = language === 'en' ? 'en' : 'zh-CN';

@@ -123,8 +123,30 @@
   }
 
   if (page === 'strength' && tables.length === 2) {
+    const root = document.querySelector('#strength-root');
+    if (!root) return;
     const days = { '一': ['周一', 'Monday'], '二': ['周二', 'Tuesday'], '四': ['周四', 'Thursday'], '五': ['周五', 'Friday'] };
-    for (const table of tables) {
+    const modes = [['home', '在家', 'Home'], ['gym', '健身馆', 'Gym']];
+    const toolbar = el('div', 'volume-switch strength-switch');
+    toolbar.setAttribute('role', 'group');
+    toolbar.setAttribute('aria-label', tr('训练场地', 'Training location'));
+    const buttons = new Map();
+    const panels = new Map();
+    for (const [mode, zh, english] of modes) {
+      const button = el('button', 'volume-switch-button', tr(zh, english));
+      button.type = 'button';
+      button.addEventListener('click', () => show(mode));
+      buttons.set(mode, button);
+      toolbar.append(button);
+    }
+    root.append(toolbar);
+    const note = document.querySelector('#home-dumbbell-note');
+    for (const [index, [mode]] of modes.entries()) {
+      const table = tables[index];
+      const panel = el('section', 'strength-mode-panel');
+      panel.id = `strength-${mode}`;
+      panel.setAttribute('aria-label', tr(modes[index][1], modes[index][2]));
+      if (mode === 'home' && note) panel.append(note);
       const stack = el('div', 'visual-training-stack');
       for (const body of table.tBodies) {
         const first = body.rows[0];
@@ -140,16 +162,32 @@
         const boxes = [];
         for (const row of body.rows) {
           const offset = row === first ? 2 : 0;
+          const action = row.cells[offset].querySelector('a');
+          const label = action?.textContent.trim() || val(row, offset);
           const card = el('article', 'visual-card visual-exercise-card');
+          const media = el('a', 'visual-exercise-media');
+          media.href = action?.href || '#';
+          media.target = '_blank';
+          media.rel = 'noopener noreferrer';
+          media.setAttribute('aria-label', `${tr('观看动作示范：', 'Watch demonstration: ')}${label}`);
+          const video = new URL(media.href, location.href).searchParams.get('v');
+          if (video) media.innerHTML = window.fitnessExerciseArt?.(video) || '';
+          media.append(el('span', 'visual-exercise-play', '▶'));
+          const content = el('div', 'visual-exercise-content');
           const name = el('h4', 'visual-exercise-name');
-          copy(name, row.cells[offset]);
+          const nameLink = el('a', '', label);
+          nameLink.href = media.href;
+          nameLink.target = '_blank';
+          nameLink.rel = 'noopener noreferrer';
+          name.append(nameLink);
           const dose = el('strong', 'visual-exercise-dose', val(row, offset + 1));
           const sets = el('div', 'visual-set-list');
-          for (const label of [...row.cells[offset + 2].querySelectorAll('label')]) {
-            boxes.push(label.querySelector('input'));
-            sets.append(label);
+          for (const setLabel of [...row.cells[offset + 2].querySelectorAll('label')]) {
+            boxes.push(setLabel.querySelector('input'));
+            sets.append(setLabel);
           }
-          card.append(name, dose, el('p', 'visual-exercise-muscles', val(row, offset + 3)), sets);
+          content.append(name, dose, el('p', 'visual-exercise-muscles', val(row, offset + 3)), sets);
+          card.append(media, content);
           list.append(card);
         }
         const refresh = () => {
@@ -161,8 +199,23 @@
         day.append(list);
         stack.append(day);
       }
-      mount(table, stack);
+      panel.append(stack);
+      panels.set(mode, panel);
+      root.append(panel);
     }
+    function show(mode) {
+      for (const [name, button] of buttons) button.setAttribute('aria-pressed', String(name === mode));
+      for (const [name, panel] of panels) panel.hidden = name !== mode;
+      try { localStorage.setItem('yunhai-fitness-volume-mode', mode); } catch (_) { /* storage unavailable */ }
+    }
+    for (const table of tables) {
+      const wrap = table.closest('.table-wrap');
+      if (wrap.previousElementSibling?.tagName === 'H2') wrap.previousElementSibling.hidden = true;
+      wrap.hidden = true;
+    }
+    let initial = 'home';
+    try { if (localStorage.getItem('yunhai-fitness-volume-mode') === 'gym') initial = 'gym'; } catch (_) { /* storage unavailable */ }
+    show(initial);
   }
 
   if (page === 'cardio' && tables.length === 2) {
