@@ -32,7 +32,6 @@
     '购物清单 →': 'Shopping list →', '做饭流程 →': 'Cooking workflow →', '计划表': 'Meal schedule',
     '早餐：高纤维谷物早餐40 g + 无糖豆奶约270 g + 一水肌酸 5g + 水果（周日—周二混合水果盘约144 g；周三—周六奇异果1个）。': 'Breakfast: 40 g high-fibre cereal + about 270 g unsweetened soy milk + 5 g creatine monohydrate + fruit (about 144 g mixed fruit Sunday–Tuesday; one kiwi Wednesday–Saturday).',
     '睡前水果加餐（23:00）：周日—周二混合水果盘约289 g；周三—周六奇异果2个。': 'Bedtime fruit snack (23:00): about 289 g mixed fruit Sunday–Tuesday; two kiwis Wednesday–Saturday.',
-    '滚动备餐：周日午餐饭后做上1–上7；周三晚餐饭后做下1–下7。周二中午记得拿出冻肉到冷藏解冻。': 'Rolling meal prep: cook meals 1–7 for the first half after Sunday lunch, and meals 1–7 for the second half after Wednesday dinner. Move frozen meat to the refrigerator on Tuesday at noon.',
     '鸡大腿肉2块＋水煮蛋2个': '2 chicken thighs + 2 boiled eggs',
     '鸡肉末炒蛋2个': 'ground chicken + 2 scrambled eggs',
     '鸡大腿肉1块＋三文鱼1块': '1 chicken thigh + 1 salmon portion',
