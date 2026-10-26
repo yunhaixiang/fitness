@@ -15,17 +15,10 @@ visual: true
 <div class="cardio-option-grid">
   <article class="cardio-option-card">
     <div class="cardio-option-head"><h3>HIIT</h3><span>20 分钟</span></div>
-    <a class="cardio-option-link" href="https://www.youtube.com/watch?v=M0uO8X3_tEA" target="_blank" rel="noopener noreferrer">Juice &amp; Toya 跟练视频 ↗</a>
-    <div class="cardio-variant">
-      <strong>完整动作、跟上跳跃和节奏</strong>
-      <span>总消耗 225–280 kcal</span>
-      <span>净消耗 185–240 kcal</span>
-    </div>
-    <div class="cardio-variant">
-      <strong>低冲击、简化动作</strong>
-      <span>总消耗 170–200 kcal</span>
-      <span>净消耗 130–160 kcal</span>
-    </div>
+    <a class="cardio-video-link" href="https://www.youtube.com/watch?v=M0uO8X3_tEA" target="_blank" rel="noopener noreferrer">
+      <span class="cardio-video-image"><img src="https://i.ytimg.com/vi/M0uO8X3_tEA/hqdefault.jpg" alt="" loading="lazy"><span class="cardio-video-play" aria-hidden="true">▶</span></span>
+      <span class="cardio-video-label">Juice &amp; Toya 跟练视频 ↗</span>
+    </a>
   </article>
   <article class="cardio-option-card">
     <div class="cardio-option-head"><h3>游泳</h3><span>30–35 分钟</span></div>
