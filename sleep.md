@@ -17,7 +17,7 @@ visual: true
 <tbody>
 <tr>
 <td>23:00</td>
-<td>睡前水果加餐</td>
+<td>加餐</td>
 </tr>
 <tr>
 <td>23:25</td>

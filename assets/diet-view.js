@@ -86,8 +86,19 @@
       when.append(make('span', 'diet-meal-number', snack ? label('夜', 'PM') : label('早', 'AM')));
       when.append(make('span', '', `${days[dayIndex]}${snack ? ' · 23:00' : ''}`));
       top.append(when, make('strong', 'diet-meal-kcal', `${meal.kcal} kcal`));
-      card.append(top, make('h4', 'diet-meal-title', snack ? label('睡前加餐', 'Bedtime Snack') : label('早餐', 'Breakfast')));
-      addIngredients(card, [['食物', 'Food', en ? meal.foodEn : meal.foodZh]]);
+      card.append(top, make('h4', 'diet-meal-title', snack ? label('加餐', 'Snack') : label('早餐', 'Breakfast')));
+      const food = en ? meal.foodEn : meal.foodZh;
+      if (snack) {
+        addIngredients(card, [['水果', 'Fruit', food]]);
+      } else {
+        const separator = en ? ' + ' : '＋';
+        const parts = food.split(separator);
+        addIngredients(card, parts.length === 4 ? [
+          ['主食', 'Staple', [parts[1], parts[0]].join(separator)],
+          ['水果', 'Fruit', parts[3]],
+          ['补剂', 'Supplement', parts[2]]
+        ] : [['食物', 'Food', food]]);
+      }
       addNutrition(card, meal);
       return card;
     };
