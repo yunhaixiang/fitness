@@ -14,6 +14,29 @@ hide_hero: true
   <a class="primary-link" href="{{ '/tracker/' | relative_url }}">记录今天的数据 →</a>
 </div>
 
+<section class="dashboard-section today-section" aria-labelledby="today-heading">
+  <div class="today-heading">
+    <h2 id="today-heading">今日</h2>
+    <time id="today-date"></time>
+  </div>
+  <div class="today-grid">
+    <section class="today-panel" aria-labelledby="today-food-heading">
+      <div class="today-panel-heading"><h3 id="today-food-heading">饮食</h3><a href="{{ '/diet/' | relative_url }}">查看饮食 →</a></div>
+      <div id="today-meals" class="today-meals"></div>
+    </section>
+    <section class="today-panel" aria-labelledby="today-training-heading">
+      <div class="today-panel-heading"><h3 id="today-training-heading">锻炼</h3><a href="{{ '/strength/' | relative_url }}">查看力量 →</a></div>
+      <div id="today-training"></div>
+    </section>
+  </div>
+  <noscript><p>启用 JavaScript 后显示今日安排；完整计划可在饮食、力量和有氧页面查看。</p></noscript>
+</section>
+
+<template id="today-diet-source">{% include diet-schedule.html %}</template>
+<template id="today-strength-source">{% include strength-home-table.html %}{% include strength-gym-table.html %}</template>
+<template id="today-cardio-source">{% include cardio-weekly-table.html %}</template>
+<script type="application/json" id="today-nutrition-data">{{ site.data.meal_nutrition.meals | jsonify }}</script>
+
 <section class="dashboard-section" aria-labelledby="food-heading">
   <h2 id="food-heading">吃饭与备餐</h2>
   <div class="link-grid food-link-grid">

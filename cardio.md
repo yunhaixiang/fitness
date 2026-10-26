@@ -12,54 +12,7 @@ visual: true
 
 
 
-<div class="table-wrap">
-<table class="plan-table">
-<thead>
-<tr>
-<th>星期</th>
-<th>力量训练</th>
-<th>有氧</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>周一</td>
-<td>上肢推拉与核心</td>
-<td>HIIT／游泳／跑步机（三选一）</td>
-</tr>
-<tr>
-<td>周二</td>
-<td>下肢、臀部与核心</td>
-<td>HIIT／游泳／跑步机（三选一）</td>
-</tr>
-<tr>
-<td>周三</td>
-<td>休息</td>
-<td>休息</td>
-</tr>
-<tr>
-<td>周四</td>
-<td>上肢推拉与核心</td>
-<td>HIIT／游泳／跑步机（三选一）</td>
-</tr>
-<tr>
-<td>周五</td>
-<td>下肢与核心</td>
-<td>HIIT／游泳／跑步机（三选一）</td>
-</tr>
-<tr>
-<td>周六</td>
-<td>休息</td>
-<td>休息</td>
-</tr>
-<tr>
-<td>周日</td>
-<td>休息</td>
-<td>休息</td>
-</tr>
-</tbody>
-</table>
-</div>
+{% include cardio-weekly-table.html %}
 
 - 有氧选项一：HIIT。[Juice & Toya — 20 Minute Full Body Cardio HIIT Workout [NO REPEAT]](https://www.youtube.com/watch?v=M0uO8X3_tEA)。
 

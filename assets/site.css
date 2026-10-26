@@ -71,6 +71,43 @@ img{max-width:100%;height:auto}
 .primary-link:hover{background:#418f8c}
 .dashboard-section{margin-top:30px}
 .dashboard-section h2{font-size:17px;margin:0 0 12px}
+.today-heading,.today-panel-heading{display:flex;align-items:baseline;justify-content:space-between;gap:12px}
+.today-heading{margin-bottom:12px}
+.today-heading h2{margin:0}
+.today-heading time{font-size:12px;color:var(--muted)}
+.today-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.today-panel{min-width:0;padding:17px 18px;background:var(--surface);border:1px solid var(--line);border-radius:10px}
+.today-panel-heading{margin-bottom:12px}
+.today-panel-heading h3{font-size:15px;margin:0}
+.today-panel-heading a{font-size:12px;text-decoration:none;color:var(--accent);white-space:nowrap}
+.today-panel-heading a:hover{text-decoration:underline}
+.today-meals,.today-exercise-list{display:grid;gap:8px}
+.today-meal{padding:10px 12px;background:var(--soft);border-radius:7px;border-left:3px solid var(--accent)}
+.today-meal[data-meal="breakfast"]{border-left-color:#9fce9d}
+.today-meal[data-meal="lunch"]{border-left-color:#e5bc78}
+.today-meal[data-meal="dinner"]{border-left-color:#e5a58b}
+.today-meal[data-meal="snack"]{border-left-color:#c9a5dd}
+.today-meal-top{display:flex;align-items:baseline;justify-content:space-between;gap:10px}
+.today-meal-top span{font-size:12px;font-weight:700}
+.today-meal-top strong{font:650 12px/1.4 ui-monospace,SFMono-Regular,Menlo,monospace;white-space:nowrap}
+.today-meal p{font-size:12px;line-height:1.45;color:var(--muted);margin:5px 0 0}
+.today-training-summary{font-size:14px;font-weight:700;margin:2px 0 10px}
+.today-mode-switch{display:flex;gap:6px;margin:0 0 10px}
+.today-mode-switch button{padding:5px 12px;border:1px solid var(--line);border-radius:6px;background:var(--soft);color:var(--muted);font-family:inherit;font-size:12px;font-weight:600;line-height:1.4;cursor:pointer}
+.today-mode-switch button[aria-pressed="true"]{background:var(--accent-soft);border-color:#62938e;color:var(--accent)}
+.today-exercise-list{list-style:none;padding:0;margin:0}
+.today-exercise-list li{display:flex;align-items:baseline;justify-content:space-between;gap:10px;padding:7px 0;border-bottom:1px solid var(--line);font-size:12px}
+.today-exercise-list li:last-child{border-bottom:0}
+.today-exercise-list a{text-decoration:none}
+.today-exercise-list a:hover{text-decoration:underline}
+.today-exercise-list span{color:var(--muted);white-space:nowrap;text-align:right}
+.today-cardio{margin:11px 0 0;padding-top:10px;border-top:1px solid var(--line);font-size:12px;line-height:1.5}
+.today-cardio strong{margin-right:6px}
+.today-cardio a{text-decoration:none;color:var(--accent)}
+.today-cardio a:hover{text-decoration:underline}
+.today-rest{padding:18px 12px;background:var(--soft);border-radius:7px;text-align:center;color:var(--muted);font-size:13px}
+@media(max-width:850px){.today-grid{grid-template-columns:1fr}}
+
 .link-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}
 .link-grid.food-link-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
 .link-grid a{display:flex;flex-direction:column;gap:4px;padding:17px 18px;background:var(--surface);border:1px solid var(--line);border-radius:8px;text-decoration:none;color:var(--text)}

@@ -2,18 +2,18 @@
 
 独立的饮食、训练、睡眠和数据记录网站。原来 `yhmath` 博客中健身计划的**可见内容**已经迁入本仓库，今后只在这里维护：
 
-- `diet.md`：每周餐单
+- `diet.md`：饮食页面；每周餐单表在 `_includes/diet-schedule.html`
 - `treats.md`：常见放纵餐的热量与赤字影响
 - `shopping.md`：独立购物清单
 - `cooking.md`：独立做饭流程
-- `strength.md`：在家与健身馆力量训练
-- `cardio.md`：每周安排与有氧选项
+- `strength.md`：力量页面；动作表在 `_includes/strength-home-table.html` 和 `_includes/strength-gym-table.html`
+- `cardio.md`：有氧页面；每周安排表在 `_includes/cardio-weekly-table.html`
 - `sleep.md`：作息与睡前流程
 - `stats.md`：营养和热量估计
 - `volume.md`：在家与健身馆的每周肌群图和训练组数
 - `tracker.html`：实际记录入口
 
-网页使用 GitHub Pages 的 Jekyll 构建，不需要单独的数据库或 npm 构建。改动上述文件后提交、推送即可更新网站。
+首页“今日”按本地日期读取上述餐单和训练表。网页使用 GitHub Pages 的 Jekyll 构建，不需要单独的数据库或 npm 构建。改动上述文件后提交、推送即可更新网站。
 
 网站默认使用低眩光暗色主题。页眉的“中文 / EN”可切换整站文字，语言选择保存在当前浏览器；切换不会改动饮食数据、购物勾选或训练记录。中文内容仍是计划的维护原稿，英文文本集中在 `assets/i18n.js`。
 

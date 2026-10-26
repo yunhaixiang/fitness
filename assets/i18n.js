@@ -12,6 +12,8 @@
     '快速打开计划、备餐和记录。': 'Quick access to my plan, meal prep and records.',
     '按需要打开，不必从长文里寻找。': 'Open what I need without searching through one long document.',
     '记录今天的数据 →': 'Log today’s data →', '吃饭与备餐': 'Food & meal prep',
+    '今日': 'Today', '锻炼': 'Training', '查看饮食 →': 'View Meals →', '查看力量 →': 'View Strength →',
+    '启用 JavaScript 后显示今日安排；完整计划可在饮食、力量和有氧页面查看。': 'Enable JavaScript to see today’s plan. The full schedules are on the Diet, Strength and Cardio pages.',
     '饮食安排': 'Meal plan', '本周 14 餐、早餐与睡前水果加餐': '14 Meals This Week, Breakfast and a Bedtime Fruit Snack',
     '购物清单': 'Shopping list', '按周购买、按需补货；可搜索和勾选': 'Weekly groceries, restocks, search and checkboxes',
     '做饭流程': 'Cooking workflow', '半周七餐、厨具线程、分盘表': 'Seven meals per batch, parallel cooking and portioning',
