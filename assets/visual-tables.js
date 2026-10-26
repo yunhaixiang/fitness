@@ -318,23 +318,48 @@
     mount(tables[0], timeline);
   }
 
-  if (page === 'stats' && tables.length === 3) {
-    const energy = el('div', 'visual-energy');
+  if (page === 'stats' && tables.length === 2) {
     const energyRows = [...tables[0].tBodies[0].rows];
-    const total = number(val(energyRows.at(-1), 1));
-    const energyGrid = el('div', 'visual-card-grid');
-    for (const row of energyRows) {
-      const card = el('article', 'visual-card visual-energy-card');
-      card.append(el('h3', '', val(row, 0)), el('strong', 'visual-metric-large', `${val(row, 2)} kcal`), el('small', '', `${tr('每周', 'Weekly')} ${val(row, 1)} kcal`));
-      const bar = el('div', 'visual-progress-track');
-      const fill = el('span', 'visual-progress-fill');
-      fill.style.width = `${Math.min(100, total ? number(val(row, 1)) / total * 100 : 0)}%`;
-      bar.append(fill);
-      card.append(bar);
-      energyGrid.append(card);
+    const breakdown = energyRows.slice(0, -1);
+    const totalRow = energyRows.at(-1);
+    const total = breakdown.reduce((sum, row) => sum + number(val(row, 1)), 0);
+    const colors = ['#91d8d1', '#e5bc78', '#aca6e4', '#e5a58b', '#83b5d8'];
+    const chart = el('figure', 'visual-expenditure');
+    const plot = el('div', 'visual-expenditure-plot');
+    const pie = el('div', 'visual-expenditure-pie');
+    pie.setAttribute('role', 'img');
+    const legend = el('ul', 'visual-expenditure-legend');
+    const stops = [];
+    const descriptions = [];
+    let position = 0;
+    for (const [index, row] of breakdown.entries()) {
+      const name = val(row, 0);
+      const share = total ? number(val(row, 1)) / total * 100 : 0;
+      const end = index === breakdown.length - 1 ? 100 : position + share;
+      const color = colors[index % colors.length];
+      stops.push(`${color} ${position.toFixed(3)}% ${end.toFixed(3)}%`);
+      position = end;
+      const percentage = `${share.toFixed(1)}%`;
+      descriptions.push(`${name} ${percentage}`);
+      const item = el('li', 'visual-expenditure-item');
+      const nameLine = el('div', 'visual-expenditure-name');
+      const swatch = el('span', 'visual-expenditure-swatch');
+      swatch.style.backgroundColor = color;
+      swatch.setAttribute('aria-hidden', 'true');
+      nameLine.append(swatch, el('span', '', name));
+      item.append(nameLine, el('strong', 'visual-expenditure-percent', percentage));
+      const values = el('div', 'visual-expenditure-values');
+      values.append(el('span', '', `${tr('日均', 'Daily')} ${val(row, 2)} kcal`), el('span', '', `${tr('每周', 'Weekly')} ${val(row, 1)} kcal`));
+      item.append(values);
+      legend.append(item);
     }
-    energy.append(energyGrid);
-    mount(tables[0], energy);
+    pie.style.background = `conic-gradient(${stops.join(', ')})`;
+    pie.setAttribute('aria-label', descriptions.join('；'));
+    const totalLabel = el('div', 'visual-expenditure-total');
+    totalLabel.append(el('span', '', tr('合计日均消耗', 'Total Daily Expenditure')), el('strong', '', `${val(totalRow, 2)} kcal`), el('small', '', `${tr('每周', 'Weekly')} ${val(totalRow, 1)} kcal`));
+    plot.append(pie, totalLabel);
+    chart.append(plot, legend);
+    mount(tables[0], chart);
 
     const nutrients = el('div', 'visual-card-grid visual-nutrient-grid');
     for (const row of tables[1].tBodies[0].rows) {
@@ -346,37 +371,6 @@
       nutrients.append(card);
     }
     mount(tables[1], nutrients);
-
-    const mealTable = tables[2];
-    const headers = [...mealTable.tHead.rows[0].cells].map((cell) => cell.textContent.trim());
-    const meals = el('div', 'visual-card-grid visual-meal-nutrition-grid');
-    for (const row of mealTable.tBodies[0].rows) {
-      const card = el('article', 'visual-card visual-meal-nutrition-card');
-      card.append(el('h3', '', val(row, 0)), el('strong', 'visual-metric-large', `${val(row, 1)} kcal`));
-      const macro = el('div', 'visual-macro-labels');
-      for (const column of [2, 3, 5]) macro.append(el('span', '', `${headers[column]} ${val(row, column)}`));
-      card.append(macro);
-      const amounts = [number(val(row, 2)) * 4, number(val(row, 3)) * 9, number(val(row, 5)) * 4];
-      const sum = amounts.reduce((a, b) => a + b, 0) || 1;
-      const bar = el('div', 'visual-macro-bar');
-      for (const [index, amount] of amounts.entries()) {
-        const segment = el('span', `visual-macro-${index}`);
-        segment.style.width = `${amount / sum * 100}%`;
-        bar.append(segment);
-      }
-      card.append(bar);
-      const details = el('details', 'visual-more');
-      details.append(el('summary', '', tr('全部营养', 'All Nutrients')));
-      const extra = el('dl', 'visual-detail-list');
-      for (let column = 4; column < row.cells.length; column++) {
-        if (column === 5) continue;
-        extra.append(el('dt', '', titleCase(headers[column])), el('dd', '', val(row, column)));
-      }
-      details.append(extra);
-      card.append(details);
-      meals.append(card);
-    }
-    mount(mealTable, meals);
   }
   if (page === 'volume' && tables.length === 2) {
     const root = document.querySelector('#volume-root');

@@ -1,7 +1,7 @@
 ---
 layout: default
 title: 营养
-description: 每日营养与每餐营养
+description: 每日营养与消耗构成
 permalink: /stats/
 visual: true
 ---
@@ -31,7 +31,7 @@ visual: true
 
 
 
-消耗构成（估算）：
+## 消耗构成（估算）
 
 <div class="table-wrap">
 <table class="plan-table">
@@ -206,52 +206,6 @@ visual: true
 <td style="text-align: right;">约2.2 g</td>
 <td>250 mg</td>
 </tr>
-</tbody>
-</table>
-</div>
-
-
-
-## 每餐营养统计
-
-<div class="table-wrap">
-<table class="plan-table">
-<thead>
-<tr>
-<th>餐次</th>
-<th style="text-align: right;">热量 kcal</th>
-<th style="text-align: right;">蛋白质 g</th>
-<th style="text-align: right;">脂肪 g</th>
-<th style="text-align: right;">饱和脂肪 g</th>
-<th style="text-align: right;">碳水 g</th>
-<th style="text-align: right;">纤维 g</th>
-<th style="text-align: right;">总糖 g</th>
-<th style="text-align: right;">胆固醇 mg</th>
-<th style="text-align: right;">钠 mg</th>
-<th style="text-align: right;">钙 mg</th>
-<th style="text-align: right;">铁 mg</th>
-<th style="text-align: right;">钾 mg</th>
-</tr>
-</thead>
-<tbody>
-{% for key in site.data.meal_nutrition.order %}
-{% assign meal = site.data.meal_nutrition.meals[key] %}
-<tr>
-<td>{{ meal.label }}</td>
-<td style="text-align: right;">{{ meal.kcal }}</td>
-<td style="text-align: right;">{{ meal.protein }}</td>
-<td style="text-align: right;">{{ meal.fat }}</td>
-<td style="text-align: right;">{{ meal.saturatedFat }}</td>
-<td style="text-align: right;">{{ meal.carbs }}</td>
-<td style="text-align: right;">{{ meal.fibre }}</td>
-<td style="text-align: right;">{{ meal.sugar }}</td>
-<td style="text-align: right;">{{ meal.cholesterol }}</td>
-<td style="text-align: right;">{{ meal.sodium }}</td>
-<td style="text-align: right;">{{ meal.calcium }}</td>
-<td style="text-align: right;">{{ meal.iron }}</td>
-<td style="text-align: right;">{{ meal.potassium }}</td>
-</tr>
-{% endfor %}
 </tbody>
 </table>
 </div>
