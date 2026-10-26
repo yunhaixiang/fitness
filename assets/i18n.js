@@ -382,6 +382,7 @@
     for (const key of keys) if (result.includes(key)) result = result.replaceAll(key, translations[key]);
     for (const key of termKeys) if (result.includes(key)) result = result.replaceAll(key, terms[key]);
     result = result.replace(/最少\s*(\d+)/g, 'at least $1')
+      .replace(/(?<!\d)1\s*组/g, '1 set')
       .replace(/(\d+)\s*组/g, '$1 sets').replace(/(\d+)\s*次/g, '$1 reps')
       .replace(/(\d+)\s*分钟/g, '$1 min').replace(/(\d+)\s*茶匙/g, '$1 tsp')
       .replace(/(\d+)\s*盒/g, '$1 packs').replace(/(\d+)\s*袋/g, '$1 bags')
