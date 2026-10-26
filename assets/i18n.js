@@ -418,9 +418,10 @@
       if (node.parentElement?.closest('script,style,svg')) continue;
       if (!originalText.has(node)) originalText.set(node, node.textContent);
       const source = originalText.get(node);
-      const translated = hasChinese.test(source)
+      const itemEnglish = node.parentElement?.getAttribute('data-en');
+      const translated = itemEnglish ?? (hasChinese.test(source)
         ? (node.parentElement?.matches('code.language-mermaid') ? translateMermaid(source) : translate(source))
-        : source;
+        : source);
       const isLabel = node.parentElement?.matches('th,label,button,.brand,.main-nav a,.training-table td > a')
         || node.parentElement?.closest('h1,h2,h3,h4,h5,h6');
       if (translated !== source || isLabel) node.textContent = isLabel ? titleCase(translated) : translated;
