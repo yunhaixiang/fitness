@@ -3,10 +3,11 @@
 
   const en = window.fitnessI18n?.language === 'en';
   const tr = (zh, english) => en ? english : zh;
+  const sentenceCase = (value) => en ? value.replace(/^(\s*)([a-z])/, (_, space, letter) => space + letter.toUpperCase()) : value;
   const el = (tag, className, content) => {
     const node = document.createElement(tag);
     if (className) node.className = className;
-    if (content !== undefined) node.textContent = content;
+    if (content !== undefined) node.textContent = /^h[1-6]$/.test(tag) ? sentenceCase(content) : content;
     return node;
   };
   const val = (row, index) => row.cells[index]?.textContent.trim() || '';
@@ -125,7 +126,7 @@
   if (page === 'strength' && tables.length === 2) {
     const root = document.querySelector('#strength-root');
     if (!root) return;
-    const days = { '一': ['周一', 'Monday'], '二': ['周二', 'Tuesday'], '四': ['周四', 'Thursday'], '五': ['周五', 'Friday'] };
+    const days = { '一': ['周一', 'Monday'], '二': ['周二', 'Tuesday'], '四': ['周四', 'Thursday'], '五': ['周五', 'Friday'], Mon: ['周一', 'Monday'], Tue: ['周二', 'Tuesday'], Thu: ['周四', 'Thursday'], Fri: ['周五', 'Friday'] };
     const modes = [['home', '在家', 'Home'], ['gym', '健身馆', 'Gym']];
     const toolbar = el('div', 'volume-switch strength-switch');
     toolbar.setAttribute('role', 'group');
@@ -163,7 +164,7 @@
         for (const row of body.rows) {
           const offset = row === first ? 2 : 0;
           const action = row.cells[offset].querySelector('a');
-          const label = action?.textContent.trim() || val(row, offset);
+          const label = sentenceCase(action?.textContent.trim() || val(row, offset));
           const card = el('article', 'visual-card visual-exercise-card');
           const media = el('a', 'visual-exercise-media');
           media.href = action?.href || '#';
@@ -195,6 +196,7 @@
           progress.textContent = `${done}/${boxes.length} ${tr('组', 'sets')}`;
         };
         for (const box of boxes) box.addEventListener('change', refresh);
+        document.addEventListener('fitness:training-day-reset', refresh);
         refresh();
         day.append(list);
         stack.append(day);

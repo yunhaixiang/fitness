@@ -3,10 +3,11 @@
 
   const en = window.fitnessI18n?.language === 'en';
   const label = (zh, english) => en ? english : zh;
+  const sentenceCase = (value) => en ? value.replace(/^(\s*)([a-z])/, (_, space, letter) => space + letter.toUpperCase()) : value;
   const make = (tag, className, value) => {
     const node = document.createElement(tag);
     if (className) node.className = className;
-    if (value !== undefined) node.textContent = value;
+    if (value !== undefined) node.textContent = /^h[1-6]$/.test(tag) ? sentenceCase(value) : value;
     return node;
   };
   const value = (row, index) => row.cells[index]?.textContent.trim() || '';

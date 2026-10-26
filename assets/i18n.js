@@ -352,6 +352,7 @@
   const originalText = new WeakMap();
   const originalAttributes = new WeakMap();
   const hasChinese = /[\u3400-\u9fff]/;
+  const sentenceCase = (value) => value.replace(/^(\s*)([a-z])/, (_, space, letter) => space + letter.toUpperCase());
 
   function translate(source) {
     if (!hasChinese.test(source)) return source;
@@ -404,8 +405,12 @@
       if (node.parentElement?.closest('script,style,svg')) continue;
       if (!originalText.has(node)) originalText.set(node, node.textContent);
       const source = originalText.get(node);
-      if (hasChinese.test(source)) node.textContent = node.parentElement?.matches('code.language-mermaid')
-        ? translateMermaid(source) : translate(source);
+      if (hasChinese.test(source)) {
+        const translated = node.parentElement?.matches('code.language-mermaid')
+          ? translateMermaid(source) : translate(source);
+        node.textContent = node.parentElement?.matches('h1,h2,h3,h4,h5,h6,th,.training-table td > a')
+          ? sentenceCase(translated) : translated;
+      }
     }
     for (const element of root.querySelectorAll('[aria-label],[placeholder],[title],img[alt]')) {
       if (!originalAttributes.has(element)) originalAttributes.set(element, {});

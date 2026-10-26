@@ -2,14 +2,50 @@ const weekStart = new Date();
 weekStart.setHours(0, 0, 0, 0);
 weekStart.setDate(weekStart.getDate() - ((weekStart.getDay() + 6) % 7));
 const weekKey = `${weekStart.getFullYear()}-${String(weekStart.getMonth() + 1).padStart(2, '0')}-${String(weekStart.getDate()).padStart(2, '0')}`;
-document.querySelectorAll('input[type="checkbox"][aria-label]').forEach((box) => {
-  const label = window.fitnessI18n?.originalAttribute(box, 'aria-label') || box.getAttribute('aria-label');
-  const key = `fitness-check:${weekKey}:${label}`;
-  try { box.checked = localStorage.getItem(key) === '1'; } catch (_) { /* storage disabled */ }
-  box.addEventListener('change', () => {
-    try { localStorage.setItem(key, box.checked ? '1' : '0'); } catch (_) { /* storage disabled */ }
-  });
-});
+const trainingBoxes = [...document.querySelectorAll('.training-table input[type="checkbox"][aria-label]')];
+const localDay = () => {
+  const date = new Date();
+  return `${date.getFullYear()}-${String(date.getMonth() + 1).padStart(2, '0')}-${String(date.getDate()).padStart(2, '0')}`;
+};
+let trainingDay = localDay();
+const clearPreviousTrainingChecks = () => {
+  try {
+    if (localStorage.getItem('fitness-check-date') === trainingDay) return;
+    for (const key of Object.keys(localStorage)) {
+      if (key.startsWith('fitness-check:')) localStorage.removeItem(key);
+    }
+    localStorage.setItem('fitness-check-date', trainingDay);
+  } catch (_) { /* storage disabled */ }
+};
+const syncTrainingDay = () => {
+  const today = localDay();
+  if (today === trainingDay) return;
+  trainingDay = today;
+  clearPreviousTrainingChecks();
+  for (const box of trainingBoxes) box.checked = false;
+  document.dispatchEvent(new Event('fitness:training-day-reset'));
+};
+if (trainingBoxes.length) {
+  clearPreviousTrainingChecks();
+  for (const box of trainingBoxes) {
+    const label = window.fitnessI18n?.originalAttribute(box, 'aria-label') || box.getAttribute('aria-label');
+    try { box.checked = localStorage.getItem(`fitness-check:${trainingDay}:${label}`) === '1'; } catch (_) { /* storage disabled */ }
+    box.addEventListener('change', () => {
+      const checked = box.checked;
+      syncTrainingDay();
+      box.checked = checked;
+      try { localStorage.setItem(`fitness-check:${trainingDay}:${label}`, checked ? '1' : '0'); } catch (_) { /* storage disabled */ }
+    });
+  }
+  const scheduleDayReset = () => {
+    const next = new Date();
+    next.setHours(24, 0, 0, 100);
+    setTimeout(() => { syncTrainingDay(); scheduleDayReset(); }, next - new Date());
+  };
+  scheduleDayReset();
+  window.addEventListener('focus', syncTrainingDay);
+  document.addEventListener('visibilitychange', () => { if (!document.hidden) syncTrainingDay(); });
+}
 
 const shoppingTable = document.querySelector('.shopping-table');
 if (shoppingTable) {
