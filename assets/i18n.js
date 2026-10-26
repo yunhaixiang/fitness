@@ -230,7 +230,7 @@
     '日均摄入占消耗约75%，赤字约25%': 'Average intake is about 75% of expenditure, with a 25% deficit',
     '能量概览 · 不含放纵餐': 'Energy Overview · Excluding Treat Meals',
     '日均摄入': 'Daily Intake', '日均消耗': 'Daily Expenditure', '日均赤字': 'Daily Deficit',
-    '每周赤字': 'Weekly Deficit', '理论脂肪等价值': 'Theoretical Fat-Energy Equivalent',
+    '每周赤字': 'Weekly Deficit', '每周赤字等价脂肪': 'Weekly Deficit as Fat Equivalent',
     'kcal／天': 'kcal/day', 'kg／周': 'kg/week',
   };
 

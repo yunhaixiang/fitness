@@ -311,6 +311,5 @@ img{max-width:100%;height:auto}
 .nutrition-key-row small{font-size:11px;font-weight:500;color:var(--muted)}
 .nutrition-key-intake strong{color:#91d8d1}
 .nutrition-key-deficit strong{color:#e5bc78}
-.nutrition-key-week-start{margin-top:7px;border-top-color:#67817f}
 @media(max-width:760px){.nutrition-overview-main{grid-template-columns:1fr;gap:20px}}
 @media(max-width:420px){.nutrition-overview{padding:17px}.nutrition-key-row strong{font-size:17px}}

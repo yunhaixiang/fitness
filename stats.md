@@ -26,8 +26,8 @@ visual: true
       <div class="nutrition-key-row nutrition-key-intake"><span>日均摄入</span><strong>1,741 <small>kcal／天</small></strong></div>
       <div class="nutrition-key-row nutrition-key-burn"><span>日均消耗</span><strong>2,319 <small>± 232 kcal／天</small></strong></div>
       <div class="nutrition-key-row nutrition-key-deficit"><span>日均赤字</span><strong>578 <small>± 232 kcal／天</small></strong></div>
-      <div class="nutrition-key-row nutrition-key-week-start"><span>每周赤字</span><strong>4,048 <small>± 1,624 kcal</small></strong></div>
-      <div class="nutrition-key-row"><span>理论脂肪等价值</span><strong>0.53 <small>± 0.21 kg／周</small></strong></div>
+      <div class="nutrition-key-row"><span>每周赤字</span><strong>4,048 <small>± 1,624 kcal</small></strong></div>
+      <div class="nutrition-key-row"><span>每周赤字等价脂肪</span><strong>0.53 <small>± 0.21 kg／周</small></strong></div>
     </div>
   </div>
 </figure>
