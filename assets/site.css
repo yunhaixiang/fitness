@@ -114,13 +114,11 @@ img{max-width:100%;height:auto}
 .chart-wrap{height:235px}
 .trend-svg{width:100%;height:100%}
 .diet-prep-note{border-left:3px solid var(--accent);background:var(--soft);padding:10px 14px;margin:20px 0 30px;border-radius:0 8px 8px 0;color:var(--muted);font-size:13px}
-.diet-week-tabs{display:flex;gap:8px;margin:15px 0 16px}
-.diet-week-tab{display:flex;align-items:baseline;justify-content:space-between;gap:14px;min-width:200px;padding:10px 14px;border:1px solid var(--line);border-radius:8px;background:var(--soft);color:var(--muted);text-align:left}
-.diet-week-tab strong{font-size:14px}
-.diet-week-tab span{font-size:11px}
-.diet-week-tab[aria-selected=true]{background:var(--accent-soft);border-color:#62938e;color:var(--accent)}
-.diet-week-tab:hover{border-color:#62938e}
-.diet-week-tab:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.weekday-tabs{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:7px;margin:15px 0 16px}
+.weekday-tab{min-width:0;padding:10px 4px;border:1px solid var(--line);border-radius:8px;background:var(--soft);color:var(--muted);font-family:inherit;font-size:12px;font-weight:650;line-height:1.25;text-align:center;cursor:pointer}
+.weekday-tab[aria-selected=true],.weekday-tab[aria-pressed=true]{background:var(--accent-soft);border-color:#62938e;color:var(--accent)}
+.weekday-tab:hover{border-color:#62938e}
+.weekday-tab:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
 .diet-week-grid{margin:0 0 20px}
 .diet-week{min-width:0}
 .diet-week[hidden]{display:none}
@@ -171,7 +169,7 @@ img{max-width:100%;height:auto}
 .diet-swap-foot span{font-size:11px;color:var(--muted);text-align:right}
 @media(max-width:850px){.header-inner{display:grid;grid-template-columns:1fr auto;gap:6px;padding:10px 16px}.brand{grid-column:1;margin:0}.language-switch{grid-column:2;grid-row:1}.main-nav{grid-column:1/-1}.main-nav a{padding:6px 9px}.page-container{padding:25px 16px 60px}.link-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.tracker-form{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:600px){.page-container{padding:19px 12px 45px}.page-heading h1{font-size:26px}.prose{padding:17px 12px}.prose h2{font-size:19px}.dashboard-head{display:block}.dashboard-head h1{font-size:26px}.primary-link{margin-top:13px}.link-grid{grid-template-columns:1fr}.metrics-strip{grid-template-columns:repeat(2,minmax(0,1fr))}.tracker-intro{display:block}.tracker-intro a{display:block;margin-top:6px}.tracker-card{padding:15px}.tracker-form{gap:9px}.tracker-form .wide-field{grid-column:1/-1}.muscle-figure{width:100%;margin:0 0 18px}.utility-bar input{min-width:0;width:100%}}
-@media(max-width:760px){.diet-meal-list,.diet-treat-grid,.diet-swap-grid{grid-template-columns:1fr}.diet-week-tabs{display:grid;grid-template-columns:repeat(2,minmax(0,1fr))}.diet-week-tab{min-width:0;flex-direction:column;gap:1px}}
+@media(max-width:760px){.diet-meal-list,.diet-treat-grid,.diet-swap-grid{grid-template-columns:1fr}.weekday-tabs{grid-template-columns:repeat(4,minmax(0,1fr))}}
 .table-wrap[hidden],.visual-card[hidden]{display:none!important}
 .visual-card-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:11px;margin:13px 0 25px}
 .visual-card{min-width:0;background:#202c35;border:1px solid var(--line);border-radius:10px;padding:15px 17px}
@@ -200,6 +198,10 @@ img{max-width:100%;height:auto}
 .visual-season-tag span{color:var(--muted)}
 .visual-season-tag strong{color:var(--text)}
 .visual-training-stack{display:grid;gap:22px;margin:16px 0 30px}
+.visual-training-day[hidden]{display:none!important}
+.visual-rest-day{border:1px solid var(--line);border-radius:10px;padding:20px;background:var(--soft)}
+.visual-rest-day h3{margin:0 0 6px!important;font-size:18px!important}
+.visual-rest-day p{margin:0!important;color:var(--muted);font-size:13px}
 .visual-training-head{display:flex;align-items:baseline;gap:14px;border-bottom:1px solid var(--line);padding-bottom:9px;margin-bottom:10px}
 .visual-training-head h3{margin:0!important;font-size:18px!important}
 .visual-training-duration,.visual-training-progress{font-size:12px;color:var(--muted)}
@@ -210,9 +212,9 @@ img{max-width:100%;height:auto}
 .strength-switch{margin-bottom:4px}
 .visual-exercise-card{display:grid;grid-template-columns:142px minmax(0,1fr);align-items:start;gap:14px;padding:10px!important}
 .visual-exercise-media{position:relative;display:block;aspect-ratio:16/9;overflow:hidden;border:1px solid #3b5860;border-radius:7px;background:linear-gradient(135deg,#1b353d,#354550)}
-.visual-exercise-media .exercise-art{display:block;width:100%;height:100%;transition:transform .2s,filter .2s}
-.visual-exercise-media:hover .exercise-art,.visual-exercise-media:focus-visible .exercise-art{transform:scale(1.04);filter:brightness(1.13)}
-.visual-exercise-media:focus-visible img{filter:grayscale(.1) saturate(.85) brightness(.95);transform:scale(1.035)}
+.visual-exercise-thumbnail{display:block;width:100%;height:100%;object-fit:cover;filter:grayscale(.25) saturate(.65) brightness(.77);transition:transform .2s,filter .2s}
+.visual-exercise-thumbnail[hidden]{display:none}
+.visual-exercise-media:hover .visual-exercise-thumbnail,.visual-exercise-media:focus-visible .visual-exercise-thumbnail{transform:scale(1.04);filter:grayscale(.1) saturate(.85) brightness(.95)}
 .visual-exercise-media:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
 .visual-exercise-play{position:absolute;right:6px;bottom:6px;display:grid;place-items:center;width:24px;height:24px;border-radius:50%;background:#173e46dd;color:#dbf4ef;font-size:10px;box-shadow:0 1px 5px #0008}
 .visual-exercise-content{min-width:0;padding:3px 3px 3px 0}

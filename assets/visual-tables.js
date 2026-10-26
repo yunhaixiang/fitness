@@ -127,6 +127,25 @@
     const root = document.querySelector('#strength-root');
     if (!root) return;
     const days = { '一': ['周一', 'Monday'], '二': ['周二', 'Tuesday'], '四': ['周四', 'Thursday'], '五': ['周五', 'Friday'], Mon: ['周一', 'Monday'], Tue: ['周二', 'Tuesday'], Thu: ['周四', 'Thursday'], Fri: ['周五', 'Friday'] };
+    const weekdays = [['周日', 'Sunday'], ['周一', 'Monday'], ['周二', 'Tuesday'], ['周三', 'Wednesday'], ['周四', 'Thursday'], ['周五', 'Friday'], ['周六', 'Saturday']];
+    const trainingDays = [1, 2, 4, 5];
+    const selectionKey = 'fitness-strength-selected-day';
+    let activeDay = new Date().getDay();
+    try {
+      const saved = JSON.parse(localStorage.getItem(selectionKey));
+      if (saved.date === new Date().toDateString() && Number.isInteger(saved.day) && saved.day >= 0 && saved.day < 7) activeDay = saved.day;
+    } catch (_) { /* storage unavailable */ }
+    const dayTabs = el('div', 'weekday-tabs strength-day-tabs');
+    dayTabs.setAttribute('role', 'group');
+    dayTabs.setAttribute('aria-label', tr('选择星期', 'Choose a day'));
+    const dayButtons = weekdays.map(([zh, english], index) => {
+      const button = el('button', 'weekday-tab', tr(zh, english));
+      button.type = 'button';
+      button.addEventListener('click', () => showDay(index));
+      dayTabs.append(button);
+      return button;
+    });
+    root.append(dayTabs);
     const modes = [['home', '在家', 'Home'], ['gym', '健身馆', 'Gym']];
     const toolbar = el('div', 'volume-switch strength-switch');
     toolbar.setAttribute('role', 'group');
@@ -149,11 +168,13 @@
       panel.setAttribute('aria-label', tr(modes[index][1], modes[index][2]));
       if (mode === 'home' && note) panel.append(note);
       const stack = el('div', 'visual-training-stack');
-      for (const body of table.tBodies) {
+      const sections = new Map();
+      for (const [bodyIndex, body] of [...table.tBodies].entries()) {
         const first = body.rows[0];
         if (!first) continue;
         const key = val(first, 0);
         const day = el('section', 'visual-training-day');
+        day.dataset.weekday = trainingDays[bodyIndex];
         const head = el('div', 'visual-training-head');
         const title = el('h3', '', tr(...(days[key] || [key, key])));
         const progress = el('span', 'visual-training-progress');
@@ -172,7 +193,15 @@
           media.rel = 'noopener noreferrer';
           media.setAttribute('aria-label', `${tr('观看动作示范：', 'Watch demonstration: ')}${label}`);
           const video = new URL(media.href, location.href).searchParams.get('v');
-          if (video) media.innerHTML = window.fitnessExerciseArt?.(video) || '';
+          if (video && /^[A-Za-z0-9_-]{11}$/.test(video)) {
+            const preview = el('img', 'visual-exercise-thumbnail');
+            preview.src = `https://i.ytimg.com/vi/${video}/mqdefault.jpg`;
+            preview.alt = '';
+            preview.loading = 'lazy';
+            preview.decoding = 'async';
+            preview.addEventListener('error', () => { preview.hidden = true; });
+            media.append(preview);
+          }
           media.append(el('span', 'visual-exercise-play', '▶'));
           const content = el('div', 'visual-exercise-content');
           const name = el('h4', 'visual-exercise-name');
@@ -199,7 +228,17 @@
         document.addEventListener('fitness:training-day-reset', refresh);
         refresh();
         day.append(list);
-        stack.append(day);
+        sections.set(trainingDays[bodyIndex], day);
+      }
+      for (let weekday = 0; weekday < 7; weekday++) {
+        if (sections.has(weekday)) {
+          stack.append(sections.get(weekday));
+          continue;
+        }
+        const rest = el('section', 'visual-training-day visual-rest-day');
+        rest.dataset.weekday = weekday;
+        rest.append(el('h3', '', tr(...weekdays[weekday])), el('p', '', tr('今天没有安排力量训练。', 'No strength training scheduled today.')));
+        stack.append(rest);
       }
       panel.append(stack);
       panels.set(mode, panel);
@@ -209,6 +248,17 @@
       for (const [name, button] of buttons) button.setAttribute('aria-pressed', String(name === mode));
       for (const [name, panel] of panels) panel.hidden = name !== mode;
       try { localStorage.setItem('yunhai-fitness-volume-mode', mode); } catch (_) { /* storage unavailable */ }
+      showDay(activeDay);
+    }
+    function showDay(weekday) {
+      activeDay = weekday;
+      try { localStorage.setItem(selectionKey, JSON.stringify({ date: new Date().toDateString(), day: weekday })); } catch (_) { /* storage unavailable */ }
+      dayButtons.forEach((button, index) => button.setAttribute('aria-pressed', String(index === weekday)));
+      for (const panel of panels.values()) {
+        for (const day of panel.querySelectorAll('.visual-training-day')) {
+          day.hidden = Number(day.dataset.weekday) !== weekday;
+        }
+      }
     }
     for (const table of tables) {
       const wrap = table.closest('.table-wrap');
@@ -218,6 +268,21 @@
     let initial = 'home';
     try { if (localStorage.getItem('yunhai-fitness-volume-mode') === 'gym') initial = 'gym'; } catch (_) { /* storage unavailable */ }
     show(initial);
+    let selectedDate = new Date().toDateString();
+    const selectToday = () => {
+      const today = new Date();
+      if (today.toDateString() === selectedDate) return;
+      selectedDate = today.toDateString();
+      showDay(today.getDay());
+    };
+    const scheduleToday = () => {
+      const next = new Date();
+      next.setHours(24, 0, 0, 100);
+      setTimeout(() => { selectToday(); scheduleToday(); }, next - new Date());
+    };
+    scheduleToday();
+    window.addEventListener('focus', selectToday);
+    document.addEventListener('visibilitychange', () => { if (!document.hidden) selectToday(); });
   }
 
   if (page === 'cardio' && tables.length === 2) {

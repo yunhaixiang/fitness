@@ -25,9 +25,9 @@
     const rows = [...schedule.tBodies[0].rows];
     const nutrition = JSON.parse(document.getElementById('diet-nutrition-data').textContent);
     const view = make('div', 'diet-schedule-view');
-    const tabs = make('div', 'diet-week-tabs');
+    const tabs = make('div', 'weekday-tabs diet-day-tabs');
     tabs.setAttribute('role', 'tablist');
-    tabs.setAttribute('aria-label', label('选择半周', 'Choose half-week'));
+    tabs.setAttribute('aria-label', label('选择星期', 'Choose a day'));
     const grid = make('div', 'diet-week-grid');
     const kinds = ['wrap', 'rice', 'pasta', 'potato', 'rice', 'pasta', 'potato'];
     const buttons = [];
@@ -78,66 +78,58 @@
       addNutrition(card, meal);
       return card;
     };
-    for (const [half, halfRows] of [rows.slice(0, 7), rows.slice(7, 14)].entries()) {
-      const button = make('button', 'diet-week-tab');
+    for (let dayIndex = 0; dayIndex < 7; dayIndex++) {
+      const dayRows = rows.filter((row) => value(row, 1) === days[dayIndex])
+        .sort((a, b) => Number(value(a, 2) === label('晚餐', 'Dinner')) - Number(value(b, 2) === label('晚餐', 'Dinner')));
+      const button = make('button', 'weekday-tab');
       button.type = 'button';
-      button.id = `diet-week-tab-${half}`;
+      button.id = `diet-day-tab-${dayIndex}`;
       button.setAttribute('role', 'tab');
-      button.setAttribute('aria-controls', `diet-week-panel-${half}`);
-      button.append(make('strong', '', half ? label('后半周', 'Second half') : label('前半周', 'First half')));
-      button.append(make('span', '', `${value(halfRows[0], 1)} → ${value(halfRows.at(-1), 1)}`));
+      button.setAttribute('aria-controls', `diet-day-panel-${dayIndex}`);
+      button.textContent = days[dayIndex];
       tabs.append(button);
       buttons.push(button);
       const week = make('section', 'diet-week');
-      week.id = `diet-week-panel-${half}`;
+      week.id = `diet-day-panel-${dayIndex}`;
       week.setAttribute('role', 'tabpanel');
       week.setAttribute('aria-labelledby', button.id);
-      week.hidden = half !== 0;
+      week.hidden = true;
       const list = make('div', 'diet-meal-list');
-      const groups = [];
-      for (const row of halfRows) {
-        const day = value(row, 1);
-        if (groups.at(-1)?.day !== day) groups.push({ day, rows: [] });
-        groups.at(-1).rows.push(row);
-      }
-      for (const [groupIndex, group] of groups.entries()) {
-        const dayIndex = half * 4 + groupIndex;
-        // The meal schedule reaches the following Sunday; fruit meals cover one
-        // Sunday-to-Saturday week, so they appear exactly seven times each.
-        if (dayIndex < 7) list.append(fruitCard(dayIndex, false));
-        for (const row of group.rows) {
-          const index = halfRows.indexOf(row);
-          const card = make('article', `diet-meal-card diet-kind-${kinds[index]}`);
-          const top = make('div', 'diet-meal-top');
-          const when = make('div', 'diet-meal-when');
-          when.append(make('span', 'diet-meal-number', String(index + 1).padStart(2, '0')));
-          when.append(make('span', '', `${value(row, 1)} · ${value(row, 2)}`));
-          top.append(when, make('strong', 'diet-meal-kcal', `${value(row, 6)} kcal`));
-          card.append(top, make('h4', 'diet-meal-base', value(row, 3)));
-          const ingredients = make('div', 'diet-meal-ingredients');
-          for (const [column, zh, english] of [[4, '蛋白质', 'Protein'], [5, '蔬菜', 'Vegetables']]) {
-            const line = make('div', 'diet-ingredient');
-            line.append(make('span', '', label(zh, english)), make('strong', '', value(row, column)));
-            ingredients.append(line);
-          }
-          card.append(ingredients);
-          const meal = nutrition[row.dataset.nutritionKey];
-          if (meal) addNutrition(card, meal);
-          list.append(card);
+      list.append(fruitCard(dayIndex, false));
+      for (const row of dayRows) {
+        const index = rows.indexOf(row);
+        const card = make('article', `diet-meal-card diet-kind-${kinds[index % 7]}`);
+        const top = make('div', 'diet-meal-top');
+        const when = make('div', 'diet-meal-when');
+        when.append(make('span', 'diet-meal-number', value(row, 0)));
+        when.append(make('span', '', `${value(row, 1)} · ${value(row, 2)}`));
+        top.append(when, make('strong', 'diet-meal-kcal', `${value(row, 6)} kcal`));
+        card.append(top, make('h4', 'diet-meal-base', value(row, 3)));
+        const ingredients = make('div', 'diet-meal-ingredients');
+        for (const [column, zh, english] of [[4, '蛋白质', 'Protein'], [5, '蔬菜', 'Vegetables']]) {
+          const line = make('div', 'diet-ingredient');
+          line.append(make('span', '', label(zh, english)), make('strong', '', value(row, column)));
+          ingredients.append(line);
         }
-        if (dayIndex < 7) list.append(fruitCard(dayIndex, true));
+        card.append(ingredients);
+        const meal = nutrition[row.dataset.nutritionKey];
+        if (meal) addNutrition(card, meal);
+        list.append(card);
       }
+      list.append(fruitCard(dayIndex, true));
       week.append(list);
       grid.append(week);
       panels.push(week);
     }
-    const activate = (half) => {
+    const selectionKey = 'fitness-diet-selected-day';
+    const activate = (dayIndex) => {
       buttons.forEach((button, index) => {
-        const selected = index === half;
+        const selected = index === dayIndex;
         button.setAttribute('aria-selected', String(selected));
         button.tabIndex = selected ? 0 : -1;
         panels[index].hidden = !selected;
       });
+      try { localStorage.setItem(selectionKey, JSON.stringify({ date: new Date().toDateString(), day: dayIndex })); } catch (_) { /* storage unavailable */ }
     };
     buttons.forEach((button, index) => {
       button.addEventListener('click', () => activate(index));
@@ -151,7 +143,27 @@
         buttons[next].focus();
       });
     });
-    activate(0);
+    let selectedDate = new Date().toDateString();
+    const selectToday = () => {
+      const today = new Date();
+      if (today.toDateString() === selectedDate) return;
+      selectedDate = today.toDateString();
+      activate(today.getDay());
+    };
+    let initialDay = new Date().getDay();
+    try {
+      const saved = JSON.parse(localStorage.getItem(selectionKey));
+      if (saved.date === selectedDate && Number.isInteger(saved.day) && saved.day >= 0 && saved.day < 7) initialDay = saved.day;
+    } catch (_) { /* storage unavailable */ }
+    activate(initialDay);
+    const scheduleToday = () => {
+      const next = new Date();
+      next.setHours(24, 0, 0, 100);
+      setTimeout(() => { selectToday(); scheduleToday(); }, next - new Date());
+    };
+    scheduleToday();
+    window.addEventListener('focus', selectToday);
+    document.addEventListener('visibilitychange', () => { if (!document.hidden) selectToday(); });
     view.append(tabs, grid);
     mount(schedule, view);
     const prep = view.nextElementSibling;
