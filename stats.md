@@ -1,6 +1,6 @@
 ---
 layout: default
-title: 营养统计
+title: 营养
 description: 每日营养与每餐营养
 permalink: /stats/
 visual: true
@@ -10,9 +10,32 @@ visual: true
 
 
 
-## 一周营养统计
+## 一周营养
 
-**热量估计（不含放纵餐）：日均摄入约1,741 kcal、消耗约2,319 ± 232 kcal、赤字约578 ± 232 kcal；对应每周摄入约12,188 kcal、消耗约16,236 ± 1,624 kcal、赤字约4,048 ± 1,624 kcal。按7,700 kcal/kg粗算，理论脂肪等价值约减0.53 ± 0.21 kg／周，不等于实际体重下降量。** [估算局限](https://www.niddk.nih.gov/health-information/professionals/diabetes-discoveries-practice/nih-body-weight-planner)
+<figure class="nutrition-overview" aria-label="每日能量与每周赤字估计">
+  <div class="nutrition-overview-main">
+    <div class="nutrition-ring" aria-label="日均摄入占消耗约75%，赤字约25%">
+      <div class="nutrition-ring-center">
+        <span>日均赤字</span>
+        <strong>578 <small>kcal／天</small></strong>
+        <span>± 232 kcal</span>
+      </div>
+    </div>
+    <div class="nutrition-overview-key">
+      <p class="nutrition-overview-eyebrow">每日能量 · 不含放纵餐</p>
+      <div class="nutrition-key-row nutrition-key-intake"><span>日均摄入</span><strong>1,741 <small>kcal／天</small></strong></div>
+      <div class="nutrition-key-row nutrition-key-burn"><span>日均消耗</span><strong>2,319 <small>± 232 kcal／天</small></strong></div>
+      <div class="nutrition-key-row nutrition-key-deficit"><span>日均赤字</span><strong>578 <small>± 232 kcal／天</small></strong></div>
+    </div>
+  </div>
+  <div class="nutrition-week-grid">
+    <div><span>每周摄入</span><strong>12,188 <small>kcal</small></strong></div>
+    <div><span>每周消耗</span><strong>16,236 <small>± 1,624 kcal</small></strong></div>
+    <div><span>每周赤字</span><strong>4,048 <small>± 1,624 kcal</small></strong></div>
+    <div><span>理论脂肪等价值</span><strong>0.53 <small>± 0.21 kg／周</small></strong></div>
+  </div>
+  <figcaption>按 7,700 kcal/kg 粗算的理论能量等值，不代表实际体重下降量。<a href="https://www.niddk.nih.gov/health-information/professionals/diabetes-discoveries-practice/nih-body-weight-planner">估算局限</a></figcaption>
+</figure>
 
 
 
