@@ -352,7 +352,17 @@
   const originalText = new WeakMap();
   const originalAttributes = new WeakMap();
   const hasChinese = /[\u3400-\u9fff]/;
-  const sentenceCase = (value) => value.replace(/^(\s*)([a-z])/, (_, space, letter) => space + letter.toUpperCase());
+  const minorWords = new Set(['a', 'an', 'and', 'as', 'at', 'by', 'for', 'from', 'in', 'of', 'on', 'or', 'per', 'the', 'to', 'vs', 'with']);
+  const units = new Set(['g', 'kg', 'kcal', 'mg', 'mcg', 'ml', 'lb', 'bpm', 'ms']);
+  function titleCase(value) {
+    return value.replace(/[A-Za-z]+(?:['’\-][A-Za-z]+)*/g, (word, offset) => {
+      const lower = word.toLowerCase();
+      if (units.has(lower) || /[a-z][A-Z]/.test(word) || (word.length > 1 && word === word.toUpperCase())) return word;
+      const prefix = value.slice(0, offset).trimEnd();
+      if (minorWords.has(lower) && /[A-Za-z]/.test(prefix) && !/[:+·/–—]\s*$/.test(prefix)) return lower;
+      return (word[0].toUpperCase() + word.slice(1)).replace(/-([a-z])/g, (_, letter) => `-${letter.toUpperCase()}`);
+    }).replace(/\bBb\.Q\b/g, 'bb.q').replace(/\bBubly\b/g, 'bubly');
+  }
 
   function translate(source) {
     if (!hasChinese.test(source)) return source;
@@ -405,12 +415,12 @@
       if (node.parentElement?.closest('script,style,svg')) continue;
       if (!originalText.has(node)) originalText.set(node, node.textContent);
       const source = originalText.get(node);
-      if (hasChinese.test(source)) {
-        const translated = node.parentElement?.matches('code.language-mermaid')
-          ? translateMermaid(source) : translate(source);
-        node.textContent = node.parentElement?.matches('h1,h2,h3,h4,h5,h6,th,.training-table td > a')
-          ? sentenceCase(translated) : translated;
-      }
+      const translated = hasChinese.test(source)
+        ? (node.parentElement?.matches('code.language-mermaid') ? translateMermaid(source) : translate(source))
+        : source;
+      const isLabel = node.parentElement?.matches('th,label,button,.brand,.main-nav a,.training-table td > a')
+        || node.parentElement?.closest('h1,h2,h3,h4,h5,h6');
+      if (translated !== source || isLabel) node.textContent = isLabel ? titleCase(translated) : translated;
     }
     for (const element of root.querySelectorAll('[aria-label],[placeholder],[title],img[alt]')) {
       if (!originalAttributes.has(element)) originalAttributes.set(element, {});
@@ -418,7 +428,10 @@
       for (const attr of ['aria-label', 'placeholder', 'title', 'alt']) {
         if (!element.hasAttribute(attr)) continue;
         if (!(attr in originals)) originals[attr] = element.getAttribute(attr);
-        if (hasChinese.test(originals[attr])) element.setAttribute(attr, translate(originals[attr]));
+        if (hasChinese.test(originals[attr])) {
+          const translated = translate(originals[attr]);
+          element.setAttribute(attr, attr === 'aria-label' || attr === 'placeholder' ? titleCase(translated) : translated);
+        }
       }
     }
 
@@ -426,7 +439,7 @@
 
   document.documentElement.lang = language === 'en' ? 'en' : 'zh-CN';
   if (language === 'en') {
-    document.title = translate(document.title.replace(' · Yunhai Fitness', '')) + ' · Yunhai Fitness';
+    document.title = titleCase(translate(document.title.replace(' · Yunhai Fitness', ''))) + ' · Yunhai Fitness';
     const meta = document.querySelector('meta[name="description"]');
     if (meta) meta.content = translate(meta.content);
     apply();
@@ -439,5 +452,5 @@
       location.reload();
     });
   }
-  window.fitnessI18n = { language, apply, translate, original(node) { return originalText.get(node) ?? node.textContent; }, originalAttribute(element, attr) { return originalAttributes.get(element)?.[attr] ?? element.getAttribute(attr); } };
+  window.fitnessI18n = { language, apply, translate, titleCase, original(node) { return originalText.get(node) ?? node.textContent; }, originalAttribute(element, attr) { return originalAttributes.get(element)?.[attr] ?? element.getAttribute(attr); } };
 })();

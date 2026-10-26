@@ -3,11 +3,11 @@
 
   const en = window.fitnessI18n?.language === 'en';
   const tr = (zh, english) => en ? english : zh;
-  const sentenceCase = (value) => en ? value.replace(/^(\s*)([a-z])/, (_, space, letter) => space + letter.toUpperCase()) : value;
+  const titleCase = (value) => en ? window.fitnessI18n.titleCase(value) : value;
   const el = (tag, className, content) => {
     const node = document.createElement(tag);
     if (className) node.className = className;
-    if (content !== undefined) node.textContent = /^h[1-6]$/.test(tag) ? sentenceCase(content) : content;
+    if (content !== undefined) node.textContent = /^h[1-6]$/.test(tag) ? titleCase(content) : content;
     return node;
   };
   const val = (row, index) => row.cells[index]?.textContent.trim() || '';
@@ -30,7 +30,7 @@
     const shell = el('div', 'visual-shopping');
     const overview = el('div', 'visual-shopping-overview');
     const count = el('strong', 'visual-shopping-count');
-    const countLabel = el('span', '', tr('项已买', 'items bought'));
+    const countLabel = el('span', '', tr('项已买', 'Items Bought'));
     const track = el('div', 'visual-progress-track');
     const fill = el('span', 'visual-progress-fill');
     track.append(fill);
@@ -51,12 +51,12 @@
       const cardBox = box.cloneNode(true);
       cardBox.checked = box.checked;
       const check = el('label', 'visual-shopping-check');
-      check.append(cardBox, el('span', '', val(row, 1)));
+      check.append(cardBox, el('span', '', titleCase(val(row, 1))));
       top.append(check, el('strong', 'visual-price', val(row, 4)));
       card.append(top);
       const product = el('div', 'visual-shopping-product');
       copy(product, row.cells[2]);
-      card.append(product, el('span', 'visual-badge', val(row, 3)));
+      card.append(product, el('span', 'visual-badge', titleCase(val(row, 3))));
       const updateCard = () => {
         cardBox.checked = box.checked;
         card.classList.toggle('is-checked', box.checked);
@@ -78,7 +78,7 @@
     section(tr('每周购买', 'Weekly groceries'), weekly);
     section(tr('按需补货', 'Restock as needed'), restock);
     const total = rows.at(-1);
-    if (total && !total.querySelector('input')) shell.append(el('p', 'visual-shopping-total', `${val(total, 1)} · ${val(total, 4)}`));
+    if (total && !total.querySelector('input')) shell.append(el('p', 'visual-shopping-total', titleCase(`${val(total, 1)} · ${val(total, 4)}`)));
     mount(table, shell);
     document.querySelector('#shopping-search')?.addEventListener('input', () => {
       for (const [row, card] of cards) card.hidden = row.hidden;
@@ -113,7 +113,7 @@
         for (let column = 1; column < row.cells.length; column++) {
           if (!val(row, column) || val(row, column) === '—') continue;
           const tag = el('div', 'visual-season-tag');
-          tag.append(el('span', '', names[column]), el('strong', '', val(row, column)));
+          tag.append(el('span', '', titleCase(names[column])), el('strong', '', val(row, column)));
           tags.append(tag);
         }
         card.append(tags);
@@ -185,7 +185,7 @@
         for (const row of body.rows) {
           const offset = row === first ? 2 : 0;
           const action = row.cells[offset].querySelector('a');
-          const label = sentenceCase(action?.textContent.trim() || val(row, offset));
+          const label = titleCase(action?.textContent.trim() || val(row, offset));
           const card = el('article', 'visual-card visual-exercise-card');
           const media = el('a', 'visual-exercise-media');
           media.href = action?.href || '#';
@@ -216,7 +216,7 @@
             boxes.push(setLabel.querySelector('input'));
             sets.append(setLabel);
           }
-          content.append(name, dose, el('p', 'visual-exercise-muscles', val(row, offset + 3)), sets);
+          content.append(name, dose, el('p', 'visual-exercise-muscles', titleCase(val(row, offset + 3))), sets);
           card.append(media, content);
           list.append(card);
         }
@@ -366,11 +366,11 @@
       }
       card.append(bar);
       const details = el('details', 'visual-more');
-      details.append(el('summary', '', tr('全部营养', 'All nutrients')));
+      details.append(el('summary', '', tr('全部营养', 'All Nutrients')));
       const extra = el('dl', 'visual-detail-list');
       for (let column = 4; column < row.cells.length; column++) {
         if (column === 5) continue;
-        extra.append(el('dt', '', headers[column]), el('dd', '', val(row, column)));
+        extra.append(el('dt', '', titleCase(headers[column])), el('dd', '', val(row, column)));
       }
       details.append(extra);
       card.append(details);
@@ -426,7 +426,7 @@
     }
     const maps = el('div', 'volume-photo-grid');
     const details = el('details', 'volume-details');
-    const detailsTitle = el('summary', '', tr('查看全部动作与辅助刺激', 'See all exercises and secondary work'));
+    const detailsTitle = el('summary', '', tr('查看全部动作与辅助刺激', 'See All Exercises and Secondary Work'));
     const detailGrid = el('div', 'visual-card-grid volume-detail-grid');
     details.append(detailsTitle, detailGrid);
     root.append(toolbar, maps, details);

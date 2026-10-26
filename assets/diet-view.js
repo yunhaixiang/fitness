@@ -3,16 +3,20 @@
 
   const en = window.fitnessI18n?.language === 'en';
   const label = (zh, english) => en ? english : zh;
-  const sentenceCase = (value) => en ? value.replace(/^(\s*)([a-z])/, (_, space, letter) => space + letter.toUpperCase()) : value;
+  const titleCase = (value) => en ? window.fitnessI18n.titleCase(value) : value;
   const make = (tag, className, value) => {
     const node = document.createElement(tag);
     if (className) node.className = className;
-    if (value !== undefined) node.textContent = /^h[1-6]$/.test(tag) ? sentenceCase(value) : value;
+    if (value !== undefined) node.textContent = /^h[1-6]$/.test(tag) ? titleCase(value) : value;
     return node;
   };
   const value = (row, index) => row.cells[index]?.textContent.trim() || '';
   const putContent = (target, cell) => {
     for (const child of cell.childNodes) target.append(child.cloneNode(true));
+    if (en) {
+      const walker = document.createTreeWalker(target, NodeFilter.SHOW_TEXT);
+      while (walker.nextNode()) walker.currentNode.textContent = titleCase(walker.currentNode.textContent);
+    }
   };
   const mount = (table, view) => {
     const source = table.closest('.table-wrap');
@@ -108,7 +112,7 @@
         const ingredients = make('div', 'diet-meal-ingredients');
         for (const [column, zh, english] of [[4, '蛋白质', 'Protein'], [5, '蔬菜', 'Vegetables']]) {
           const line = make('div', 'diet-ingredient');
-          line.append(make('span', '', label(zh, english)), make('strong', '', value(row, column)));
+          line.append(make('span', '', label(zh, english)), make('strong', '', titleCase(value(row, column))));
           ingredients.append(line);
         }
         card.append(ingredients);
@@ -181,7 +185,7 @@
       amount.append(make('strong', '', value(row, 2)), make('span', '', 'kcal'));
       card.append(title, make('p', 'diet-treat-portion', value(row, 1)), amount);
       const impact = make('div', 'diet-treat-impact');
-      impact.append(make('span', '', label('占每周参考赤字', 'Share of reference weekly deficit')),
+      impact.append(make('span', '', titleCase(label('占每周参考赤字', 'Share of reference weekly deficit'))),
         make('strong', '', value(row, 3)));
       card.append(impact);
       const track = make('div', 'diet-impact-track');
@@ -194,7 +198,7 @@
       const remaining = make('div', 'diet-treat-remaining');
       for (const [column, zh, english] of [[4, '剩余每周赤字', 'Weekly deficit left'], [5, '剩余日均赤字', 'Daily average left']]) {
         const metric = make('div', 'diet-treat-metric');
-        metric.append(make('span', '', label(zh, english)), make('strong', '', `${value(row, column)} kcal`));
+        metric.append(make('span', '', titleCase(label(zh, english))), make('strong', '', `${value(row, column)} kcal`));
         remaining.append(metric);
       }
       card.append(remaining);
@@ -208,7 +212,7 @@
     const grid = make('div', 'diet-swap-grid');
     for (const row of alternatives.tBodies[0].rows) {
       const card = make('article', 'diet-swap-card');
-      card.append(make('span', 'diet-swap-craving', value(row, 0)));
+      card.append(make('span', 'diet-swap-craving', titleCase(value(row, 0))));
       const replacement = make('h4', 'diet-swap-replacement');
       putContent(replacement, row.cells[1]);
       card.append(replacement, make('p', 'diet-swap-portion', value(row, 2)));
