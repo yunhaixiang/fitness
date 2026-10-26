@@ -225,7 +225,15 @@
     '哑铃肩推': 'dumbbell shoulder press', '哑铃划船': 'dumbbell row', '每侧': 'per side',
     '有氧：HIIT、游泳或跑步机，4次／周（净增加）': 'Cardio: HIIT, swimming or treadmill, 4 times/week (net increase)',
     '步行（估计每周12 km，净增加）': 'Walking (estimated 12 km/week, net increase)',
-    '净增加': 'net increase'
+    '净增加': 'net increase',
+    '每日能量与每周赤字估计': 'Daily energy and estimated weekly deficit',
+    '日均摄入占消耗约75%，赤字约25%': 'Average intake is about 75% of expenditure, with a 25% deficit',
+    '每日能量 · 不含放纵餐': 'Daily Energy · Excluding Treat Meals',
+    '日均摄入': 'Daily Intake', '日均消耗': 'Daily Expenditure', '日均赤字': 'Daily Deficit',
+    '每周摄入': 'Weekly Intake', '每周消耗': 'Weekly Expenditure', '每周赤字': 'Weekly Deficit',
+    '理论脂肪等价值': 'Theoretical Fat-Energy Equivalent',
+    'kcal／天': 'kcal/day', 'kg／周': 'kg/week',
+    '按 7,700 kcal/kg 粗算的理论能量等值，不代表实际体重下降量。': 'A rough energy equivalent using 7,700 kcal/kg; this is not a prediction of actual weight loss.',
   };
 
   const terms = {
@@ -243,14 +251,6 @@
     '维生素B12': 'Vitamin B12', '维生素D': 'Vitamin D', '膳食胆固醇': 'Dietary cholesterol',
     '碳水化合物': 'Carbohydrates', '膳食纤维': 'Dietary fibre', '饱和脂肪': 'Saturated fat',
     '总脂肪': 'Total fat', '添加糖': 'Added sugar', '总糖': 'Total sugars',
-    '每日能量与每周赤字估计': 'Daily energy and estimated weekly deficit',
-    '日均摄入占消耗约75%，赤字约25%': 'Average intake is about 75% of expenditure, with a 25% deficit',
-    '每日能量 · 不含放纵餐': 'Daily Energy · Excluding Treat Meals',
-    '日均摄入': 'Daily Intake', '日均消耗': 'Daily Expenditure', '日均赤字': 'Daily Deficit',
-    '每周摄入': 'Weekly Intake', '每周消耗': 'Weekly Expenditure', '每周赤字': 'Weekly Deficit',
-    '理论脂肪等价值': 'Theoretical Fat-Energy Equivalent',
-    'kcal／天': 'kcal/day', 'kg／周': 'kg/week',
-    '按 7,700 kcal/kg 粗算的理论能量等值，不代表实际体重下降量。': 'A rough energy equivalent using 7,700 kcal/kg; this is not a prediction of actual weight loss.',
     '营养指标': 'Nutrient', '热量估计': 'Calorie estimate', '消耗构成（估算）': 'Estimated expenditure breakdown',
     '每周 kcal（±10%）': 'Weekly kcal (±10%)', '日均 kcal（±10%）': 'Daily kcal (±10%)',
     '餐外饮品（日均）': 'Drinks outside meals (daily avg.)',

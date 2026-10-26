@@ -34,7 +34,7 @@ visual: true
     <div><span>每周赤字</span><strong>4,048 <small>± 1,624 kcal</small></strong></div>
     <div><span>理论脂肪等价值</span><strong>0.53 <small>± 0.21 kg／周</small></strong></div>
   </div>
-  <figcaption>按 7,700 kcal/kg 粗算的理论能量等值，不代表实际体重下降量。<a href="https://www.niddk.nih.gov/health-information/professionals/diabetes-discoveries-practice/nih-body-weight-planner">估算局限</a></figcaption>
+  <figcaption>按 7,700 kcal/kg 粗算的理论能量等值，不代表实际体重下降量。 <a href="https://www.niddk.nih.gov/health-information/professionals/diabetes-discoveries-practice/nih-body-weight-planner">估算局限</a></figcaption>
 </figure>
 
 
