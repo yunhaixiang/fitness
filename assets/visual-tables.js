@@ -354,9 +354,9 @@
       legend.append(item);
     }
     pie.style.background = `conic-gradient(${stops.join(', ')})`;
-    pie.setAttribute('aria-label', descriptions.join('；'));
+    pie.setAttribute('aria-label', descriptions.join(window.fitnessI18n?.language === 'en' ? '; ' : '；'));
     const totalLabel = el('div', 'visual-expenditure-total');
-    totalLabel.append(el('span', '', tr('合计日均消耗', 'Total Daily Expenditure')), el('strong', '', `${val(totalRow, 2)} kcal`), el('small', '', `${tr('每周', 'Weekly')} ${val(totalRow, 1)} kcal`));
+    totalLabel.append(el('span', '', tr('合计日均消耗', 'Total Daily Calories Burned')), el('strong', '', `${val(totalRow, 2)} kcal`), el('small', '', `${tr('每周', 'Weekly')} ${val(totalRow, 1)} kcal`));
     plot.append(pie, totalLabel);
     chart.append(plot, legend);
     mount(tables[0], chart);
@@ -373,9 +373,12 @@
       const track = el('div', 'visual-nutrient-track');
       track.setAttribute('aria-hidden', 'true');
       const comparison = el('span', 'visual-nutrient-comparison');
+      const hasNumericGoal = /\d/.test(recommendation);
       if (recommendation === '–') {
         card.classList.add('is-unset');
         comparison.textContent = tr('无可比较的每日目标', 'No daily goal to compare');
+      } else if (!hasNumericGoal) {
+        card.classList.add('is-unset');
       } else {
         const goal = metric(recommendation);
         const kind = recommendation.startsWith('≤') ? 'maximum' : recommendation.startsWith('≥') ? 'minimum' : goal.low !== goal.high ? 'range' : 'reference';
@@ -434,7 +437,7 @@
           comparison.textContent = tr(kind === 'reference' ? '包含参考值' : '与建议范围重叠', kind === 'reference' ? 'Includes reference' : 'Overlaps recommended range');
         }
       }
-      bottom.append(track, comparison);
+      if (recommendation === '–' || hasNumericGoal) bottom.append(track, comparison);
       card.append(bottom);
       nutrients.append(card);
     }

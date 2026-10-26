@@ -197,7 +197,7 @@
       amount.append(make('strong', '', value(row, 2)), make('span', '', 'kcal'));
       card.append(title, make('p', 'diet-treat-portion', value(row, 1)), amount);
       const impact = make('div', 'diet-treat-impact');
-      impact.append(make('span', '', titleCase(label('占每周参考赤字', 'Share of reference weekly deficit'))),
+      impact.append(make('span', '', titleCase(label('占每周参考赤字', 'Share of weekly deficit'))),
         make('strong', '', value(row, 3)));
       card.append(impact);
       const track = make('div', 'diet-impact-track');
@@ -208,7 +208,7 @@
       track.append(fill);
       card.append(track);
       const remaining = make('div', 'diet-treat-remaining');
-      for (const [column, zh, english] of [[4, '剩余每周赤字', 'Weekly deficit left'], [5, '剩余日均赤字', 'Daily average left']]) {
+      for (const [column, zh, english] of [[4, '剩余每周赤字', 'Weekly deficit left'], [5, '剩余日均赤字', 'Average daily deficit left']]) {
         const metric = make('div', 'diet-treat-metric');
         metric.append(make('span', '', titleCase(label(zh, english))), make('strong', '', `${value(row, column)} kcal`));
         remaining.append(metric);

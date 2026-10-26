@@ -128,7 +128,7 @@ visual: true
 <tr>
 <td>总糖</td>
 <td style="text-align: right;">43.8 g</td>
-<td>–</td>
+<td>无单独上限；重点控制添加糖</td>
 </tr>
 <tr>
 <td>添加糖</td>
@@ -138,7 +138,7 @@ visual: true
 <tr>
 <td>膳食胆固醇</td>
 <td style="text-align: right;">652 mg</td>
-<td>–</td>
+<td>尽量少；优先控制饱和脂肪</td>
 </tr>
 <tr>
 <td>钠</td>

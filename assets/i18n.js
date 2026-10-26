@@ -7,7 +7,7 @@
   // Longer entries take precedence. This keeps the plan's numbers and product links intact.
   const translations = {
     '总览': 'Overview', '饮食': 'Diet', '购物': 'Shopping', '做饭': 'Cooking', '力量': 'Strength',
-    '有氧': 'Cardio', '睡眠': 'Sleep', '统计': 'Stats', '营养统计': 'Nutrition', '营养': 'Nutrition', '训练量': 'Volume', '记录': 'Log',
+    '有氧': 'Cardio', '睡眠': 'Sleep', '统计': 'Stats', '营养统计': 'Nutrition', '营养': 'Nutrition', '训练量': 'Training Volume', '记录': 'Log',
     '跳到内容': 'Skip to content', '我的健身计划': 'My fitness plan', '主导航': 'Main navigation',
     '快速打开计划、备餐和记录。': 'Quick access to my plan, meal prep and records.',
     '按需要打开，不必从长文里寻找。': 'Open what I need without searching through one long document.',
@@ -22,11 +22,11 @@
     'HIIT、游泳和跑步机选项': 'HIIT, swimming and treadmill options',
     '晚间安排、瑜伽和冥想': 'Evening routine, yoga and meditation',
     '数据': 'Data', '计划统计': 'Plan statistics', '热量、营养和每周训练量估计': 'Calories, nutrition and estimated weekly training volume',
-    '摄入、消耗构成和营养指标': 'Intake, Expenditure Breakdown and Nutrients',
+    '摄入、消耗构成和营养指标': 'Calories Eaten, Calories Burned and Nutrients',
     '训练量统计': 'Training volume', '在家与健身馆的肌群图和每周组数': 'Muscle maps and weekly sets for home and gym',
     '在家与健身馆的每周肌群训练组数': 'Weekly sets per muscle group at home and in the gym',
     '图中数字是每周主要训练组数；辅助动作另列，不折算为主要组数。点击肌群可查看具体动作。': 'The numbers show weekly primary sets. Secondary work is listed separately and is not counted as equivalent primary sets. Select a muscle group to see the exercises.',
-    '每日营养与消耗构成': 'Daily Nutrition and Expenditure Breakdown',
+    '每日营养与消耗构成': 'Daily Nutrition and Calories Burned',
     '实际记录': 'Actual records', '身体、饮食、力量和有氧趋势': 'Body, Diet, Strength and Cardio Trends',
     '实际记录只保存在当前浏览器，请定期在记录页导出备份。': 'Records are saved in this browser only. Export backups regularly from the Log page.',
     '每周餐单与加餐': 'Weekly Meals and a Snack',
@@ -39,12 +39,12 @@
     'BBQ排骨1/4盒，三文鱼1块': '¼ box of BBQ ribs, 1 salmon portion',
     '菠菜，蘑菇': 'spinach, mushrooms',
     '豌豆，胡萝卜': 'peas, carrots',
-    '放纵餐': 'Treat Meals', '常见放纵餐': 'Common Treat Meals',
-    '常见放纵餐的热量与赤字影响': 'Calories and Deficit Impact of Common Treat Meals',
-    '常见食物的热量与赤字影响': 'Calories and Deficit Impact of Common Foods',
-    '占参考赤字3,983 kcal（额外加吃）': 'Share of 3,983 kcal reference deficit (extra food)',
-    '剩余每周赤字（kcal，额外加吃）': 'Remaining weekly deficit (kcal)',
-    '剩余日均赤字（kcal）': 'Remaining average daily deficit (kcal)',
+    '放纵餐': 'Cheat Meals', '常见放纵餐': 'Common Cheat Meals',
+    '常见放纵餐的热量与赤字影响': 'Cheat Meal Calories and Their Effect on Your Deficit',
+    '常见食物的热量与赤字影响': 'Cheat Meal Calories and Their Effect on Your Deficit',
+    '占参考赤字4,048 kcal（额外加吃）': 'Share of Weekly Calorie Deficit (if added)',
+    '剩余每周赤字（kcal，额外加吃）': 'Weekly Deficit Left (kcal)',
+    '剩余日均赤字（kcal）': 'Daily Deficit Left (kcal)',
     '每周购买与按需补货': 'Weekly purchases and occasional restocks',
     '查找食材': 'Find an item', '搜索食材或商品': 'Search ingredients or products',
     '清空本周勾选': 'Clear this week’s checks', '已买': 'Bought',
@@ -69,7 +69,7 @@
     '意面：烧水煮干面90 g，煮约8分钟。': 'Pasta: bring water to a boil and cook 90 g dry pasta for about 8 minutes.',
     '蘑菇：取1盒227 g，大火加油、调味，炒约7分钟至熟；均分到第1、4、7盘。': 'Mushrooms: cook one 227 g pack over high heat with oil and seasoning for about 7 minutes; split evenly between meals 1, 4 and 7.',
     '番茄，意面：用番茄意面酱半瓶，小火加油、调味，煮2–3分钟；拌入意面煮约3分钟至热透；均分到第3、6盘。': 'Tomato pasta: heat half a bottle of tomato pasta sauce with oil and seasonings over low heat for 2–3 minutes; add pasta and cook about 3 more minutes. Split between meals 3 and 6.',
-    '菠菜：取2盒共284 g，大火加油、调味，炒约7分钟至熟；均分到第4、7盘。': 'Spinach: cook two packs (284 g) over high heat with oil and seasoning for about 7 minutes; split between meals 4 and 7.',
+    '菠菜：取1盒142 g，大火加油、调味，炒约7分钟至熟；均分到第4、7盘。': 'Spinach: cook one 142 g pack over high heat with oil and seasoning for about 7 minutes; split between meals 4 and 7.',
     '鸡肉末，豌豆，胡萝卜，炒蛋：炒完菠菜后擦干锅；中火加1/2茶匙油，放入鸡肉末1盒，铺开稍定型后炒散至中心74°C；加入沥干的豌豆胡萝卜罐头1罐炒热；将肉菜拨到锅边，转中小火在空处再加1/2茶匙油，倒入4个打散的鸡蛋和调味，炒至凝固后拌匀；均分到第2、5盘。': 'Ground chicken, peas, carrots and scrambled eggs: wipe the wok dry after the spinach. Add ½ tsp oil over medium heat, spread out one pack of ground chicken, let it set briefly, then break it up and cook to 74°C. Add one drained can of peas and carrots and heat through. Push the meat and vegetables aside, lower to medium-low, add another ½ tsp oil, then four beaten eggs and seasoning. Cook until set, combine and divide between meals 2 and 5.',
     '全麦卷饼皮抹 Hellmann’s Mild Chipotle 蛋黄酱1茶匙（约5 mL）。': 'Spread 1 tsp (about 5 mL) Hellmann’s Mild Chipotle mayonnaise on the whole-wheat tortilla.',
     '将掰碎的鸡大腿肉、水煮蛋和蘑菇放入大号卷饼皮，卷好放第1盘。': 'Put the shredded chicken thighs, broken-up boiled eggs and mushrooms into the large tortilla; roll and put in meal 1.',
@@ -81,7 +81,7 @@
     '每周安排与有氧': 'Weekly training schedule & cardio',
     '每周安排': 'Weekly plan', '有氧选择': 'Cardio options',
     'Juice & Toya 跟练视频 ↗': 'Juice & Toya workout video ↗',
-    '总消耗': 'Gross burn', '净消耗': 'Net burn',
+    '总消耗': 'Total Calories Burned', '净消耗': 'Net Calories Burned',
     '每个来回自由泳去、蛙泳回；20 个来回，按 25 m 泳池计算共 1,000 m。': 'Swim freestyle out and breaststroke back for each lap. Twenty laps in a 25 m pool total 1,000 m.',
     '坡度 0%。': '0% incline.',
     '有氧选项一：HIIT。': 'Cardio option 1: HIIT.',
@@ -112,7 +112,7 @@
     '营养与训练统计': 'Nutrition & training statistics',
     '每日营养、每餐营养及每周训练量': 'Daily nutrition, meal nutrition and weekly training volume',
     '一周营养统计': 'Weekly Nutrition', '一周营养': 'Weekly Nutrition', '每日营养': 'Daily Nutrition',
-    '运动按扣除同期基础消耗后的净增加量计入，避免重复计算；日常加成不代表单独测得的食物热效应。': 'Exercise is counted as net expenditure above resting energy use to avoid double counting. The daily activity allowance is not a separately measured thermic effect of food.',
+    '运动按扣除同期基础消耗后的净增加量计入，避免重复计算；日常加成不代表单独测得的食物热效应。': 'Exercise is counted as additional calories burned beyond resting energy use to avoid double counting. The daily activity allowance is not a separately measured thermic effect of food.',
     '页面填写。': 'page.',
     '数据记录': 'Data log', '记录实际执行，而不只看计划上的数字。': 'Track what I actually did, not just the planned numbers.',
     '数据只保存在当前浏览器。': 'Data is saved in this browser only. ',
@@ -143,7 +143,7 @@
     '钠 mg': 'Sodium mg', '钙 mg': 'Calcium mg', '铁 mg': 'Iron mg', '钾 mg': 'Potassium mg',
     '估算局限': 'Estimate limitations', '骨骼肌 kg': 'Skeletal muscle kg',
     '每餐营养统计': 'Nutrition per meal',
-    '力量训练（净增加）': 'Strength training (net increase)',
+    '力量训练（净增加）': 'Strength training (above rest)',
     '酱蒜无骨炸鸡（bb.q Chicken Soy Garlic Chicken）': 'Soy garlic boneless fried chicken (bb.q Chicken)',
     '凯撒鸡肉卷（6IXTY WINGS Chicken Caesar Wrap）': 'Chicken Caesar wrap (6IXTY WINGS)',
     '炸鸡汉堡（Burger Burger Johnny Cash Chicken）': 'Fried chicken sandwich (Burger Burger Johnny Cash Chicken)',
@@ -167,14 +167,14 @@
     '薯条（DQ Fries）': 'Fries (DQ)', '炸洋葱圈（DQ Onion Rings）': 'Onion rings (DQ)',
     '香草冰淇淋（DQ Vanilla Cone）': 'Vanilla cone (DQ)',
     '普通雪碧': 'Regular Sprite', '普通可口可乐': 'Regular Coca-Cola',
-    '1整份，1.2 lb': 'One full serving, 1.2 lb', '1,156，菜单标注': '1,156, listed on menu',
+    '1整份，1.2 lb': 'One full serving, 1.2 lb', '1,156，菜单标注': '1,156',
     '1个，默认普通薯条': 'One wrap plus regular fries',
     '1整套，含米饭、饺子、yam配菜、汤及沙拉': 'One full combo with rice, dumplings, yam side, soup and salad',
     '1个Regular，含蒜酱及OzPotle酱': 'One regular wrap with garlic sauce and OzPotle sauce',
     '1整份，1 lb带骨': 'One full serving, 1 lb bone-in',
-    '1份约312 g': 'One serving, about 312 g',
+    '1份，340 g（12 oz）': 'One serving, 340 g (12 oz)',
     '1个，不含薯条和饮料': 'One sandwich, without fries or drink',
-    '1份约168 g，不含米饭': 'One serving, about 168 g, without rice',
+    '1份，176 g（6.2 oz），不含米饭': 'One serving, 176 g (6.2 oz), without rice',
     '2块鸡大腿，不含配餐和蘸酱': 'Two thigh pieces, without sides or dipping sauce',
     '1杯Grande，473 mL，标准配方': 'One Grande (473 mL), standard recipe',
     '3条，不含蘸酱': 'Three strips, without dipping sauce',
@@ -190,7 +190,7 @@
     '1迷你袋31 g': 'One mini bag, 31 g',
     '2片，不加抹酱': 'Two pieces, without spread',
     '1支50 mL': 'One 50 mL bar', '1支60 mL': 'One 60 mL bar',
-    '1份': 'One serving',
+    '1杯Small': 'One small cup', '1瓶500 mL': 'One 500 mL bottle', '1罐355 mL': 'One 355 mL can', '1份': 'One serving',
     '已购买': 'Bought: ',
     '8块装；每盒约0.51–0.76 kg，营养按635 g估算': 'Eight pieces per pack; about 0.51–0.76 kg, with nutrition estimated at 635 g',
     '约$11.42（按实际重量计价）': 'about $11.42 (final price by weight)',
@@ -219,21 +219,21 @@
     '站姿哑铃肩推': 'standing dumbbell shoulder press',
     '单臂支撑哑铃划船': 'supported single-arm dumbbell row',
     '哑铃肩推': 'dumbbell shoulder press', '哑铃划船': 'dumbbell row', '每侧': 'per side',
-    '有氧：HIIT、游泳或跑步机，4次／周（净增加）': 'Cardio: HIIT, swimming or treadmill, 4 times/week (net increase)',
-    '步行（估计每周12 km，净增加）': 'Walking (estimated 12 km/week, net increase)',
+    '有氧：HIIT、游泳或跑步机，4次／周（净增加）': 'Cardio: HIIT, swimming or treadmill, four times a week (above rest)',
+    '步行（估计每周12 km，净增加）': 'Walking (12 km a week, above rest)',
     '净增加': 'net increase',
     '每日能量与每周赤字估计': 'Daily energy and estimated weekly deficit',
-    '日均摄入占消耗约75%，赤字约25%': 'Average intake is about 75% of expenditure, with a 25% deficit',
-    '能量概览 · 不含放纵餐': 'Energy Overview · Excluding Treat Meals',
-    '日均摄入': 'Daily Intake', '日均消耗': 'Daily Expenditure', '日均赤字': 'Daily Deficit',
-    '每周赤字': 'Weekly Deficit', '每周赤字等价脂肪': 'Weekly Deficit as Fat Equivalent',
+    '日均摄入占消耗75%，赤字25%': 'Daily calories eaten account for 75% of calories burned; the planned deficit is 25%', '每日能量与每周赤字': 'Daily Calories and Weekly Deficit',
+    '能量概览 · 不含放纵餐': 'Energy Overview · Excluding Cheat Meals',
+    '日均摄入': 'Daily Calories Eaten', '日均消耗': 'Daily Calories Burned', '日均赤字': 'Daily Calorie Deficit',
+    '每周赤字': 'Weekly Deficit', '每周赤字等价脂肪': 'Fat Equivalent of Weekly Deficit',
     'kcal／天': 'kcal/day', 'kg／周': 'kg/week',
   };
 
   const terms = {
     '预热': 'Preheat',
     '鸡肉末，豌豆，胡萝卜，炒蛋': 'ground chicken, peas, carrots, scrambled eggs',
-    '日常活动等（久坐系数加成）': 'Daily activity (sedentary multiplier)',
+    '日常活动等（久坐系数加成）': 'Everyday activity and other energy use',
     '有氧：HIIT、游泳或跑步机，4次／周（净增加）': 'Cardio: HIIT, swimming or treadmill, 4 times/week (net)',
     '步行（估计每周12 km，净增加）': 'Walking (about 12 km/week, net)',
     '力量训练（净增加）': 'Strength training (net)',
@@ -247,7 +247,9 @@
     '维生素B12': 'Vitamin B12', '维生素D': 'Vitamin D', '膳食胆固醇': 'Dietary cholesterol',
     '碳水化合物': 'Carbohydrates', '膳食纤维': 'Dietary fibre', '饱和脂肪': 'Saturated fat',
     '总脂肪': 'Total fat', '添加糖': 'Added sugar', '总糖': 'Total sugars',
-    '营养指标': 'Nutrient', '热量估计': 'Calorie estimate', '消耗构成（估算）': 'Estimated expenditure breakdown',
+    '无单独上限；重点控制添加糖': 'No separate limit; focus on added sugar',
+    '尽量少；优先控制饱和脂肪': 'Keep low; prioritize saturated fat',
+    '营养指标': 'Nutrient', '热量估计': 'Calorie estimate', '消耗构成（估算）': 'Where Your Calories Are Burned',
     '每周 kcal': 'Weekly kcal', '日均 kcal': 'Daily kcal',
     '餐外饮品（日均）': 'Drinks outside meals (daily avg.)',
     '周日—周二早餐（水果盘1/3）': 'Sunday–Tuesday breakfast (⅓ of daily fruit tray serving)',
@@ -326,7 +328,7 @@
     '绳索转体': 'cable rotation', '坐姿腿举': 'seated leg press',
     '坐姿器械腿屈伸': 'seated leg extension', '器械腿屈伸': 'leg extension',
     '史密斯机臀推': 'Smith-machine hip thrust',
-    '类型': 'Type', '基础代谢': 'Resting metabolic rate', '合计': 'Total',
+    '类型': 'Type', '基础代谢': 'Basal Metabolic Rate', '合计': 'Total',
     '钠': 'Sodium', '钙': 'Calcium', '铁': 'Iron', '钾': 'Potassium', '碘': 'Iodine',
     '纤维': 'Fibre', '脂肪': 'Fat', '胆固醇': 'Cholesterol',
     '在家': 'Home', '健身馆': 'Gym', '休息': 'Rest', '训练': 'Training', '上肢推拉与核心': 'Upper-body push/pull & core',
@@ -341,7 +343,7 @@
     '脂肪量': 'Fat mass', '骨骼肌量': 'Skeletal muscle', '内脏脂肪（App 数值）': 'Visceral fat (app value)',
     '体水分': 'Body water', '备注': 'Notes', '场地': 'Location', '每组次数': 'Reps per set',
     '单只哑铃／器械负重': 'Weight per dumbbell / machine load', '项目': 'Activity',
-    '时长': 'Duration', '距离': 'Distance', '估计净消耗': 'Estimated net expenditure',
+    '时长': 'Duration', '距离': 'Distance', '估计净消耗': 'Estimated Net Calories Burned',
     '实际入睡': 'Fell asleep', '起床时间': 'Wake time', '总睡眠': 'Total sleep',
     '入睡耗时': 'Sleep latency', '睡眠效率': 'Sleep efficiency', '睡眠评分': 'Sleep score',
     '最低静息心率': 'Lowest resting heart rate', '平均 HRV': 'Average HRV',
@@ -356,7 +358,7 @@
   const originalAttributes = new WeakMap();
   const hasChinese = /[\u3400-\u9fff]/;
   const minorWords = new Set(['a', 'an', 'and', 'as', 'at', 'by', 'for', 'from', 'in', 'of', 'on', 'or', 'per', 'the', 'to', 'vs', 'with']);
-  const units = new Set(['g', 'kg', 'kcal', 'mg', 'mcg', 'ml', 'lb', 'bpm', 'ms']);
+  const units = new Set(['g', 'kg', 'kcal', 'mg', 'mcg', 'ml', 'lb', 'bpm', 'ms', 'cm']);
   function titleCase(value) {
     return value.replace(/[A-Za-z]+(?:['’\-][A-Za-z]+)*/g, (word, offset) => {
       const lower = word.toLowerCase();
@@ -368,7 +370,7 @@
   }
 
   function translate(source) {
-    if (!hasChinese.test(source)) return source;
+    if (!hasChinese.test(source)) return source.replace(/(?<=\d)、(?=\d)/g, ', ');
     const checked = source.trim().match(/^(健身馆)?周([一二四五])(.+)第(\d+)组(（左右）)?$/);
     if (checked) {
       const days = { 一: 'Monday', 二: 'Tuesday', 四: 'Thursday', 五: 'Friday' };
@@ -421,7 +423,7 @@
       const itemEnglish = node.parentElement?.getAttribute('data-en');
       const translated = itemEnglish ?? (hasChinese.test(source)
         ? (node.parentElement?.matches('code.language-mermaid') ? translateMermaid(source) : translate(source))
-        : source);
+        : translate(source));
       const isLabel = node.parentElement?.matches('th,label,button,.brand,.main-nav a,.training-table td > a')
         || node.parentElement?.closest('h1,h2,h3,h4,h5,h6');
       if (translated !== source || isLabel) node.textContent = isLabel ? titleCase(translated) : translated;

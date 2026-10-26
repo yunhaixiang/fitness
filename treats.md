@@ -22,202 +22,202 @@ diet: true
 </thead>
 <tbody>
 <tr>
-<td><a href="https://www.bbqchickenca.com/" data-en="Soy Garlic Boneless Fried Chicken (bb.q Chicken)">酱蒜无骨炸鸡</a></td>
-<td>1整份，1.2 lb</td>
-<td style="text-align: right;">1,156，菜单标注</td>
-<td style="text-align: right;">约29%</td>
-<td style="text-align: right;">2,892.44</td>
-<td style="text-align: right;">413.21</td>
-</tr>
-<tr>
-<td><a href="https://6ixtywings.com/menu_items/chicken-caesar-wrap/" data-en="Chicken Caesar Wrap (6IXTY WINGS)">凯撒鸡肉卷</a></td>
-<td>1个，默认普通薯条</td>
-<td style="text-align: right;">估1,100–1,500</td>
-<td style="text-align: right;">约27–37%</td>
-<td style="text-align: right;">2,548.44–2,948.44</td>
-<td style="text-align: right;">364.06–421.21</td>
-</tr>
-<tr>
-<td><a href="https://order.online/store/burger-burger-25113744" data-en="Johnny Cash Chicken Sandwich (Burger Burger)">约翰尼·卡什炸鸡汉堡</a></td>
-<td>1个</td>
-<td style="text-align: right;">估750–1,050</td>
-<td style="text-align: right;">约19–26%</td>
-<td style="text-align: right;">2,998.44–3,298.44</td>
-<td style="text-align: right;">428.35–471.21</td>
-</tr>
-<tr>
 <td><a href="https://www.ubereats.com/ca/store/ozen-sushi/yCgRS0Q7S_Wlx8Flww4rWQ" data-en="Chicken Katsu Combo (Ozen Sushi)">炸鸡排套餐</a></td>
 <td>1整套，含米饭、饺子、yam配菜、汤及沙拉</td>
-<td style="text-align: right;">估1,100–1,600</td>
-<td style="text-align: right;">约27–40%</td>
+<td style="text-align: right;">≈1,100–1,600</td>
+<td style="text-align: right;">≈27–40%</td>
 <td style="text-align: right;">2,448.44–2,948.44</td>
 <td style="text-align: right;">349.78–421.21</td>
 </tr>
 <tr>
+<td><a href="https://6ixtywings.com/menu_items/chicken-caesar-wrap/" data-en="Chicken Caesar Wrap (6IXTY WINGS)">凯撒鸡肉卷</a></td>
+<td>1个，默认普通薯条</td>
+<td style="text-align: right;">≈1,100–1,500</td>
+<td style="text-align: right;">≈27–37%</td>
+<td style="text-align: right;">2,548.44–2,948.44</td>
+<td style="text-align: right;">364.06–421.21</td>
+</tr>
+<tr>
+<td><a href="https://www.bbqchickenca.com/" data-en="Soy Garlic Boneless Fried Chicken (bb.q Chicken)">酱蒜无骨炸鸡</a></td>
+<td>1整份，1.2 lb</td>
+<td style="text-align: right;">1,156</td>
+<td style="text-align: right;">≈29%</td>
+<td style="text-align: right;">2,892.44</td>
+<td style="text-align: right;">413.21</td>
+</tr>
+<tr>
+<td><a href="https://order.online/store/burger-burger-25113744" data-en="Johnny Cash Chicken Sandwich (Burger Burger)">约翰尼·卡什炸鸡汉堡</a></td>
+<td data-en="One sandwich">1个</td>
+<td style="text-align: right;">≈750–1,050</td>
+<td style="text-align: right;">≈19–26%</td>
+<td style="text-align: right;">2,998.44–3,298.44</td>
+<td style="text-align: right;">428.35–471.21</td>
+</tr>
+<tr>
 <td><a href="https://osmows.com/nutrition-calculator" data-en="Crispy Chicken Shawarma Wrap (Osmow’s)">脆鸡沙威玛卷</a></td>
 <td>1个Regular，含蒜酱及OzPotle酱</td>
-<td style="text-align: right;">估750–1,050</td>
-<td style="text-align: right;">约19–26%</td>
+<td style="text-align: right;">≈750–1,050</td>
+<td style="text-align: right;">≈19–26%</td>
 <td style="text-align: right;">2,998.44–3,298.44</td>
 <td style="text-align: right;">428.35–471.21</td>
 </tr>
 <tr>
 <td data-en="Sweet Roasted Chicken Wings (Mr. Panda BBQ)">新奥尔良烤翅</td>
 <td>1整份，1 lb带骨</td>
-<td style="text-align: right;">估650–950</td>
-<td style="text-align: right;">约16–23%</td>
+<td style="text-align: right;">≈650–950</td>
+<td style="text-align: right;">≈16–23%</td>
 <td style="text-align: right;">3,098.44–3,398.44</td>
 <td style="text-align: right;">442.63–485.49</td>
 </tr>
 <tr>
 <td><a href="https://www.pizzapizza.ca/about-us/nutrition/large-pizza/" data-en="Pepperoni Pizza (Pizza Pizza, Large)">意式辣香肠披萨</a></td>
 <td>3片</td>
-<td style="text-align: right;">约750</td>
-<td style="text-align: right;">约19%</td>
+<td style="text-align: right;">750</td>
+<td style="text-align: right;">≈19%</td>
 <td style="text-align: right;">3,298.44</td>
 <td style="text-align: right;">471.21</td>
 </tr>
 <tr>
 <td><a href="https://www.dairyqueen.com/en-ca/nutrition/food-treats/" data-en="OREO Cookie Blizzard (DQ)">奥利奥暴风雪冰淇淋</a></td>
 <td>1杯Small</td>
-<td style="text-align: right;">约670</td>
-<td style="text-align: right;">约17%</td>
+<td style="text-align: right;">670</td>
+<td style="text-align: right;">≈17%</td>
 <td style="text-align: right;">3,378.44</td>
 <td style="text-align: right;">482.63</td>
 </tr>
 <tr>
 <td><a href="https://www.pandaexpress.com/nutritioninformation" data-en="Fried Rice (Panda Express, US Reference)">炒饭</a></td>
-<td>1份约312 g</td>
-<td style="text-align: right;">约620</td>
-<td style="text-align: right;">约15%</td>
-<td style="text-align: right;">3,428.44</td>
-<td style="text-align: right;">489.78</td>
+<td>1份，340 g（12 oz）</td>
+<td style="text-align: right;">610</td>
+<td style="text-align: right;">≈15%</td>
+<td style="text-align: right;">3,438.44</td>
+<td style="text-align: right;">491.21</td>
 </tr>
 <tr>
 <td><a href="https://www.pizzapizza.ca/about-us/nutrition/poutine/" data-en="Classic Poutine (Pizza Pizza)">肉汁奶酪薯条</a></td>
 <td>1份</td>
-<td style="text-align: right;">约600</td>
-<td style="text-align: right;">约15%</td>
+<td style="text-align: right;">600</td>
+<td style="text-align: right;">≈15%</td>
 <td style="text-align: right;">3,448.44</td>
 <td style="text-align: right;">492.63</td>
 </tr>
 <tr>
-<td><a href="https://rippedrestaurants.com/ca/chains/mcdonalds/big-mac" data-en="Big Mac (McDonald’s Canada)">巨无霸汉堡</a></td>
+<td><a href="https://www.mcdonalds.com/ca/en-ca/product/big-mac-sandwich.html" data-en="Big Mac (McDonald’s Canada)">巨无霸汉堡</a></td>
 <td>1个，不含薯条和饮料</td>
-<td style="text-align: right;">约570</td>
-<td style="text-align: right;">约14%</td>
+<td style="text-align: right;">≈570</td>
+<td style="text-align: right;">≈14%</td>
 <td style="text-align: right;">3,478.44</td>
 <td style="text-align: right;">496.92</td>
 </tr>
 <tr>
+<td><a href="https://www.pandaexpress.com/nutritioninformation" data-en="Orange Chicken (Panda Express, US Reference)">陈皮鸡</a></td>
+<td>1份，176 g（6.2 oz），不含米饭</td>
+<td style="text-align: right;">560</td>
+<td style="text-align: right;">≈14%</td>
+<td style="text-align: right;">3,488.44</td>
+<td style="text-align: right;">498.35</td>
+</tr>
+<tr>
 <td><a href="https://assets.ctfassets.net/a2mgcrjjefyo/3AUi2N7aacNo4rjQ1jE3di/4de20ade3ee68d86901ad9d97230accf/KFC_Website_Nutritional_Information__W4_2024_.pdf" data-en="Famous Chicken Sandwich (KFC)">肯德基招牌炸鸡汉堡</a></td>
 <td>1个，不含薯条和饮料</td>
-<td style="text-align: right;">约540</td>
-<td style="text-align: right;">约13%</td>
+<td style="text-align: right;">540</td>
+<td style="text-align: right;">≈13%</td>
 <td style="text-align: right;">3,508.44</td>
 <td style="text-align: right;">501.21</td>
 </tr>
 <tr>
 <td><a href="https://www.dairyqueen.com/en-ca/nutrition/food-treats/" data-en="Chocolate Shake (DQ)">巧克力奶昔</a></td>
 <td>1杯Small</td>
-<td style="text-align: right;">约530</td>
-<td style="text-align: right;">约13%</td>
+<td style="text-align: right;">530</td>
+<td style="text-align: right;">≈13%</td>
 <td style="text-align: right;">3,518.44</td>
 <td style="text-align: right;">502.63</td>
 </tr>
 <tr>
-<td><a href="https://www.pandaexpress.com/nutritioninformation" data-en="Orange Chicken (Panda Express, US Reference)">陈皮鸡</a></td>
-<td>1份约168 g，不含米饭</td>
-<td style="text-align: right;">约510</td>
-<td style="text-align: right;">约13%</td>
-<td style="text-align: right;">3,538.44</td>
-<td style="text-align: right;">505.49</td>
-</tr>
-<tr>
 <td><a href="https://www.pizzapizza.ca/about-us/nutrition/desserts/" data-en="Two-Bite Brownies (Pizza Pizza)">迷你布朗尼</a></td>
 <td>6个</td>
-<td style="text-align: right;">约480</td>
-<td style="text-align: right;">约12%</td>
+<td style="text-align: right;">480</td>
+<td style="text-align: right;">≈12%</td>
 <td style="text-align: right;">3,568.44</td>
 <td style="text-align: right;">509.78</td>
 </tr>
 <tr>
 <td><a href="https://assets.ctfassets.net/a2mgcrjjefyo/3AUi2N7aacNo4rjQ1jE3di/4de20ade3ee68d86901ad9d97230accf/KFC_Website_Nutritional_Information__W4_2024_.pdf" data-en="Original Recipe Fried Chicken (KFC)">肯德基原味炸鸡</a></td>
 <td>2块鸡大腿，不含配餐和蘸酱</td>
-<td style="text-align: right;">约440</td>
-<td style="text-align: right;">约11%</td>
+<td style="text-align: right;">440</td>
+<td style="text-align: right;">≈11%</td>
 <td style="text-align: right;">3,608.44</td>
 <td style="text-align: right;">515.49</td>
 </tr>
 <tr>
 <td><a href="https://www.tastyrewards.com/en-ca/brands/lays/products/wavy-laysr-original-potato-chips" data-en="Original Wavy Potato Chips (Wavy Lay’s)">原味波浪薯片</a></td>
 <td>75 g</td>
-<td style="text-align: right;">约420</td>
-<td style="text-align: right;">约10%</td>
+<td style="text-align: right;">≈420</td>
+<td style="text-align: right;">≈10%</td>
 <td style="text-align: right;">3,628.44</td>
 <td style="text-align: right;">518.35</td>
 </tr>
 <tr>
 <td><a href="https://fr.starbucks.ca/menu/product/424/iced" data-en="Caramel Frappuccino (Starbucks)">焦糖星冰乐</a></td>
 <td>1杯Grande，473 mL，标准配方</td>
-<td style="text-align: right;">约380</td>
-<td style="text-align: right;">约9%</td>
+<td style="text-align: right;">380</td>
+<td style="text-align: right;">≈9%</td>
 <td style="text-align: right;">3,668.44</td>
 <td style="text-align: right;">524.06</td>
 </tr>
 <tr>
 <td><a href="https://www.dairyqueen.com/en-ca/nutrition/food-treats/" data-en="Ranch Crispy Chicken Wrap (DQ)">牧场酱脆鸡卷</a></td>
-<td>1个</td>
-<td style="text-align: right;">约340</td>
-<td style="text-align: right;">约8%</td>
+<td data-en="One wrap">1个</td>
+<td style="text-align: right;">340</td>
+<td style="text-align: right;">≈8%</td>
 <td style="text-align: right;">3,708.44</td>
 <td style="text-align: right;">529.78</td>
 </tr>
 <tr>
 <td><a href="https://www.dairyqueen.com/en-ca/nutrition/food-treats/" data-en="Chicken Strips (DQ)">炸鸡柳</a></td>
 <td>3条，不含蘸酱</td>
-<td style="text-align: right;">约320</td>
-<td style="text-align: right;">约8%</td>
+<td style="text-align: right;">320</td>
+<td style="text-align: right;">≈8%</td>
 <td style="text-align: right;">3,728.44</td>
 <td style="text-align: right;">532.63</td>
 </tr>
 <tr>
 <td><a href="https://www.dairyqueen.com/en-ca/nutrition/food-treats/" data-en="Fries (DQ)">薯条</a></td>
 <td>1份Regular，不含蘸酱</td>
-<td style="text-align: right;">约280</td>
-<td style="text-align: right;">约7%</td>
+<td style="text-align: right;">280</td>
+<td style="text-align: right;">≈7%</td>
 <td style="text-align: right;">3,768.44</td>
 <td style="text-align: right;">538.35</td>
 </tr>
 <tr>
 <td><a href="https://www.dairyqueen.com/en-ca/nutrition/food-treats/" data-en="Onion Rings (DQ)">炸洋葱圈</a></td>
 <td>1份Regular，不含蘸酱</td>
-<td style="text-align: right;">约260</td>
-<td style="text-align: right;">约6%</td>
+<td style="text-align: right;">260</td>
+<td style="text-align: right;">≈6%</td>
 <td style="text-align: right;">3,788.44</td>
 <td style="text-align: right;">541.21</td>
 </tr>
 <tr>
 <td><a href="https://www.dairyqueen.com/en-ca/nutrition/food-treats/" data-en="Vanilla Cone (DQ)">香草冰淇淋</a></td>
 <td>1个Small甜筒，不加脆皮和配料</td>
-<td style="text-align: right;">约230</td>
-<td style="text-align: right;">约6%</td>
+<td style="text-align: right;">230</td>
+<td style="text-align: right;">≈6%</td>
 <td style="text-align: right;">3,818.44</td>
 <td style="text-align: right;">545.49</td>
 </tr>
 <tr>
 <td><a href="https://www.coca-cola.com/ca/en/brands/sprite/products">普通雪碧</a></td>
 <td>1瓶500 mL</td>
-<td style="text-align: right;">约200</td>
-<td style="text-align: right;">约5%</td>
+<td style="text-align: right;">200</td>
+<td style="text-align: right;">≈5%</td>
 <td style="text-align: right;">3,848.44</td>
 <td style="text-align: right;">549.78</td>
 </tr>
 <tr>
-<td><a href="https://www.repertoirealimentsquebecois.gouv.qc.ca/Produit/Index/8203394">普通可口可乐</a></td>
+<td><a href="https://www.coca-cola.com/ca/en/brands/coca-cola/products/coca-cola-original-taste">普通可口可乐</a></td>
 <td>1罐355 mL</td>
-<td style="text-align: right;">约140</td>
-<td style="text-align: right;">约3%</td>
+<td style="text-align: right;">140</td>
+<td style="text-align: right;">≈3%</td>
 <td style="text-align: right;">3,908.44</td>
 <td style="text-align: right;">558.35</td>
 </tr>
