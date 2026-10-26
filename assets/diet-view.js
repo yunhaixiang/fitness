@@ -90,7 +90,7 @@
       if (snack) {
         addIngredients(card, [['水果', 'Fruit', food]]);
       } else {
-        const separator = en ? ' + ' : '＋';
+        const separator = en ? ', ' : '，';
         const parts = food.split(separator);
         addIngredients(card, parts.length === 4 ? [
           ['主食', 'Staple', [parts[1], parts[0]].join(separator)],

@@ -31,7 +31,7 @@ diet: true
 </tr>
 <tr>
 <td><a href="https://6ixtywings.com/menu_items/chicken-caesar-wrap/">凯撒鸡肉卷（6IXTY WINGS Chicken Caesar Wrap）</a></td>
-<td>1个＋默认普通薯条</td>
+<td>1个，默认普通薯条</td>
 <td style="text-align: right;">估1,100–1,500</td>
 <td style="text-align: right;">约27–37%</td>
 <td style="text-align: right;">2,548.44–2,948.44</td>

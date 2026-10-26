@@ -31,14 +31,14 @@
     '实际记录只保存在当前浏览器，请定期在记录页导出备份。': 'Records are saved in this browser only. Export backups regularly from the Log page.',
     '每周餐单与加餐': 'Weekly Meals and a Snack',
     '计划表': 'Meal schedule',
-    '早餐：高纤维谷物早餐40 g + 无糖豆奶约270 g + 一水肌酸 5g + 水果（周日—周二混合水果盘约144 g；周三—周六奇异果1个）。': 'Breakfast: 40 g high-fibre cereal + about 270 g unsweetened soy milk + 5 g creatine monohydrate + fruit (about 144 g mixed fruit Sunday–Tuesday; one kiwi Wednesday–Saturday).',
+    '早餐：高纤维谷物早餐40 g，无糖豆奶约270 g，一水肌酸 5g，水果（周日—周二混合水果盘约144 g；周三—周六奇异果1个）。': 'Breakfast: 40 g high-fibre cereal, about 270 g unsweetened soy milk, 5 g creatine monohydrate, fruit (about 144 g mixed fruit Sunday–Tuesday; one kiwi Wednesday–Saturday).',
     '睡前水果加餐（23:00）：周日—周二混合水果盘约289 g；周三—周六奇异果2个。': 'Bedtime fruit snack (23:00): about 289 g mixed fruit Sunday–Tuesday; two kiwis Wednesday–Saturday.',
-    '鸡大腿肉2块＋水煮蛋2个': '2 chicken thighs + 2 boiled eggs',
-    '鸡肉末炒蛋2个': 'ground chicken + 2 scrambled eggs',
-    '鸡大腿肉1块＋三文鱼1块': '1 chicken thigh + 1 salmon portion',
-    'BBQ排骨1/4盒＋三文鱼1块': '¼ box of BBQ ribs + 1 salmon portion',
-    '菠菜+蘑菇': 'spinach + mushrooms',
-    '豌豆+胡萝卜': 'peas + carrots',
+    '鸡大腿肉2块，水煮蛋2个': '2 chicken thighs, 2 boiled eggs',
+    '鸡肉末炒蛋2个': 'ground chicken, 2 scrambled eggs',
+    '鸡大腿肉1块，三文鱼1块': '1 chicken thigh, 1 salmon portion',
+    'BBQ排骨1/4盒，三文鱼1块': '¼ box of BBQ ribs, 1 salmon portion',
+    '菠菜，蘑菇': 'spinach, mushrooms',
+    '豌豆，胡萝卜': 'peas, carrots',
     '放纵餐': 'Treat Meals', '常见放纵餐': 'Common Treat Meals',
     '常见放纵餐的热量与赤字影响': 'Calories and Deficit Impact of Common Treat Meals',
     '常见食物的热量与赤字影响': 'Calories and Deficit Impact of Common Foods',
@@ -68,9 +68,9 @@
     '水煮蛋：烧水煮鸡蛋2个，水开后煮约8分钟；掰碎后放第1盘。': 'Boiled eggs: bring water to a boil and cook two eggs for about 8 minutes; break up and add to meal 1.',
     '意面：烧水煮干面90 g，煮约8分钟。': 'Pasta: bring water to a boil and cook 90 g dry pasta for about 8 minutes.',
     '蘑菇：取1盒227 g，大火加油、调味，炒约7分钟至熟；均分到第1、4、7盘。': 'Mushrooms: cook one 227 g pack over high heat with oil and seasoning for about 7 minutes; split evenly between meals 1, 4 and 7.',
-    '番茄+意面：用番茄意面酱半瓶，小火加油、调味，煮2–3分钟；拌入意面煮约3分钟至热透；均分到第3、6盘。': 'Tomato pasta: heat half a bottle of tomato pasta sauce with oil and seasonings over low heat for 2–3 minutes; add pasta and cook about 3 more minutes. Split between meals 3 and 6.',
+    '番茄，意面：用番茄意面酱半瓶，小火加油、调味，煮2–3分钟；拌入意面煮约3分钟至热透；均分到第3、6盘。': 'Tomato pasta: heat half a bottle of tomato pasta sauce with oil and seasonings over low heat for 2–3 minutes; add pasta and cook about 3 more minutes. Split between meals 3 and 6.',
     '菠菜：取2盒共284 g，大火加油、调味，炒约7分钟至熟；均分到第4、7盘。': 'Spinach: cook two packs (284 g) over high heat with oil and seasoning for about 7 minutes; split between meals 4 and 7.',
-    '鸡肉末+豌豆+胡萝卜+炒蛋：炒完菠菜后擦干锅；中火加1/2茶匙油，放入鸡肉末1盒，铺开稍定型后炒散至中心74°C；加入沥干的豌豆+胡萝卜1罐炒热；将肉菜拨到锅边，转中小火在空处再加1/2茶匙油，倒入4个打散的鸡蛋和调味，炒至凝固后拌匀；均分到第2、5盘。': 'Ground chicken, peas, carrots and scrambled eggs: wipe the wok dry after the spinach. Add ½ tsp oil over medium heat, spread out one pack of ground chicken, let it set briefly, then break it up and cook to 74°C. Add one drained can of peas and carrots and heat through. Push the meat and vegetables aside, lower to medium-low, add another ½ tsp oil, then four beaten eggs and seasoning. Cook until set, combine and divide between meals 2 and 5.',
+    '鸡肉末，豌豆，胡萝卜，炒蛋：炒完菠菜后擦干锅；中火加1/2茶匙油，放入鸡肉末1盒，铺开稍定型后炒散至中心74°C；加入沥干的豌豆胡萝卜罐头1罐炒热；将肉菜拨到锅边，转中小火在空处再加1/2茶匙油，倒入4个打散的鸡蛋和调味，炒至凝固后拌匀；均分到第2、5盘。': 'Ground chicken, peas, carrots and scrambled eggs: wipe the wok dry after the spinach. Add ½ tsp oil over medium heat, spread out one pack of ground chicken, let it set briefly, then break it up and cook to 74°C. Add one drained can of peas and carrots and heat through. Push the meat and vegetables aside, lower to medium-low, add another ½ tsp oil, then four beaten eggs and seasoning. Cook until set, combine and divide between meals 2 and 5.',
     '全麦卷饼皮抹 Hellmann’s Mild Chipotle 蛋黄酱1茶匙（约5 mL）。': 'Spread 1 tsp (about 5 mL) Hellmann’s Mild Chipotle mayonnaise on the whole-wheat tortilla.',
     '将掰碎的鸡大腿肉、水煮蛋和蘑菇放入大号卷饼皮，卷好放第1盘。': 'Put the shredded chicken thighs, broken-up boiled eggs and mushrooms into the large tortilla; roll and put in meal 1.',
     '在家与健身馆的动作、组数和肌群': 'Exercises, sets and muscle groups at home and at the gym',
@@ -165,7 +165,7 @@
     '香草冰淇淋（DQ Vanilla Cone）': 'Vanilla cone (DQ)',
     '普通雪碧': 'Regular Sprite', '普通可口可乐': 'Regular Coca-Cola',
     '1整份，1.2 lb': 'One full serving, 1.2 lb', '1,156，菜单标注': '1,156, listed on menu',
-    '1个＋默认普通薯条': 'One wrap plus regular fries',
+    '1个，默认普通薯条': 'One wrap plus regular fries',
     '1整套，含米饭、饺子、yam配菜、汤及沙拉': 'One full combo with rice, dumplings, yam side, soup and salad',
     '1个Regular，含蒜酱及OzPotle酱': 'One regular wrap with garlic sauce and OzPotle sauce',
     '1整份，1 lb带骨': 'One full serving, 1 lb bone-in',
@@ -229,7 +229,7 @@
 
   const terms = {
     '预热': 'Preheat',
-    '鸡肉末+豌豆+胡萝卜+炒蛋': 'ground chicken + peas + carrots + scrambled eggs',
+    '鸡肉末，豌豆，胡萝卜，炒蛋': 'ground chicken, peas, carrots, scrambled eggs',
     '日常活动等（久坐系数加成）': 'Daily activity (sedentary multiplier)',
     '有氧：HIIT、游泳或跑步机，4次／周（净增加）': 'Cardio: HIIT, swimming or treadmill, 4 times/week (net)',
     '步行（估计每周12 km，净增加）': 'Walking (about 12 km/week, net)',
@@ -239,6 +239,8 @@
     '每周合计': 'Weekly total', '平均每天': 'Daily average', '建议每日范围或目标': 'Suggested daily range or goal',
     '训练量水平（估计）': 'Volume (estimate)', '主要：动作与组数': 'Primary: exercises and sets',
     '辅助：动作与组数': 'Secondary: exercises and sets', '肌群／常用英文': 'Muscle group / common English name',
+    'Omega-3：EPA，DHA（合计）': 'Omega-3: EPA, DHA (combined)',
+    '番茄，意面': 'tomato, pasta',
     '维生素B12': 'Vitamin B12', '维生素D': 'Vitamin D', '膳食胆固醇': 'Dietary cholesterol',
     '碳水化合物': 'Carbohydrates', '膳食纤维': 'Dietary fibre', '饱和脂肪': 'Saturated fat',
     '总脂肪': 'Total fat', '添加糖': 'Added sugar', '总糖': 'Total sugars',
@@ -260,7 +262,7 @@
     '白米饭': 'white rice', '白米': 'white rice', '意面': 'pasta', '番茄': 'tomato',
     '烤土豆': 'roasted potatoes', '土豆': 'potatoes', '全麦卷饼皮': 'whole-wheat tortillas', '卷饼皮': 'tortilla',
     '蘑菇': 'mushrooms', '嫩菠菜': 'baby spinach', '菠菜': 'spinach',
-    '豌豆+胡萝卜': 'peas + carrots', '豌豆': 'peas', '胡萝卜': 'carrots',
+    '豌豆，胡萝卜': 'peas, carrots', '豌豆': 'peas', '胡萝卜': 'carrots',
     '番茄意面酱': 'tomato pasta sauce', '新鲜混合水果盘': 'fresh mixed-fruit tray',
     '完整奇异果': 'whole kiwis', '奇异果': 'kiwis', '高纤维谷物早餐': 'high-fibre cereal',
     '无糖豆奶': 'unsweetened soy milk', 'Fresca无糖汽水': 'Fresca zero-sugar soda',
@@ -387,8 +389,8 @@
       .replace(/(\d+(?:\.\d+)?)\s*(g|kg|mL|L)\s*\/\s*瓶/g, '$1 $2 / bottle')
       .replace(/(\d+(?:\.\d+)?)\s*(g|kg|mL|L)\s*\/\s*罐/g, '$1 $2 / can')
       .replace(/(\d+(?:\.\d+)?)\s*(g|kg|mL|L)\s*\/\s*桶/g, '$1 $2 / carton')
-      .replaceAll('（', ' (').replaceAll('）', ')').replaceAll('、', ', ')
-      .replaceAll('＋', ' + ').replaceAll('；', '; ').replaceAll('／', '/')
+      .replaceAll('（', ' (').replaceAll('）', ')').replaceAll('、', ', ').replaceAll('，', ', ')
+      .replaceAll('＋', ', ').replaceAll('；', '; ').replaceAll('／', '/')
       .replace(/([A-Za-z])(?=\d)/g, '$1 ').replace(/(\d)min\b/g, '$1 min')
       .replace(/\b1 (packs|bags|cans|bottles|pieces|slices|cups|cartons|trays|cases)\b/g, (_, unit) => `1 ${unit.slice(0, -1)}`);
     return result;

@@ -201,7 +201,7 @@ visual: true
 <td>1.6 g</td>
 </tr>
 <tr>
-<td>Omega-3：EPA+DHA</td>
+<td>Omega-3：EPA，DHA（合计）</td>
 <td style="text-align: right;">15.4 ± 1.5 g</td>
 <td style="text-align: right;">2.2 ± 0.2 g</td>
 <td>250 mg</td>

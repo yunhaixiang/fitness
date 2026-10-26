@@ -66,7 +66,7 @@ visual: true
 <td style="text-align: right;">约$2.74</td>
 </tr>
 <tr>
-<td>豌豆+胡萝卜</td>
+<td>豌豆，胡萝卜</td>
 <td><a href="https://www.walmart.ca/en/ip/Great-Value-Peas-and-Carrots-398-mL/5YDQIJZT1APQ">Great Value Peas and Carrots</a><br>398 mL / 罐</td>
 <td style="text-align: right;">2罐 / 周</td>
 <td style="text-align: right;">约$2.74</td>
