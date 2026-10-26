@@ -68,6 +68,15 @@
       label('周三', 'Wednesday'), label('周四', 'Thursday'), label('周五', 'Friday'),
       label('周六', 'Saturday')
     ];
+    const addIngredients = (card, entries) => {
+      const ingredients = make('div', 'diet-meal-ingredients');
+      for (const [zh, english, content] of entries) {
+        const line = make('div', 'diet-ingredient');
+        line.append(make('span', '', label(zh, english)), make('strong', '', titleCase(content)));
+        ingredients.append(line);
+      }
+      card.append(ingredients);
+    };
     const fruitCard = (dayIndex, snack) => {
       const key = `${dayIndex < 3 ? 'fruit' : 'kiwi'}_${snack ? 'snack' : 'breakfast'}`;
       const meal = nutrition[key];
@@ -77,8 +86,8 @@
       when.append(make('span', 'diet-meal-number', snack ? label('夜', 'PM') : label('早', 'AM')));
       when.append(make('span', '', `${days[dayIndex]}${snack ? ' · 23:00' : ''}`));
       top.append(when, make('strong', 'diet-meal-kcal', `${meal.kcal} kcal`));
-      card.append(top, make('h4', 'diet-meal-base', snack ? label('睡前水果加餐', 'Bedtime fruit snack') : label('早餐', 'Breakfast')));
-      card.append(make('p', 'diet-fruit-food', en ? meal.foodEn : meal.foodZh));
+      card.append(top, make('h4', 'diet-meal-title', snack ? label('睡前加餐', 'Bedtime Snack') : label('早餐', 'Breakfast')));
+      addIngredients(card, [['食物', 'Food', en ? meal.foodEn : meal.foodZh]]);
       addNutrition(card, meal);
       return card;
     };
@@ -106,16 +115,14 @@
         const top = make('div', 'diet-meal-top');
         const when = make('div', 'diet-meal-when');
         when.append(make('span', 'diet-meal-number', value(row, 0)));
-        when.append(make('span', '', `${value(row, 1)} · ${value(row, 2)}`));
+        when.append(make('span', '', value(row, 1)));
         top.append(when, make('strong', 'diet-meal-kcal', `${value(row, 6)} kcal`));
-        card.append(top, make('h4', 'diet-meal-base', value(row, 3)));
-        const ingredients = make('div', 'diet-meal-ingredients');
-        for (const [column, zh, english] of [[4, '蛋白质', 'Protein'], [5, '蔬菜', 'Vegetables']]) {
-          const line = make('div', 'diet-ingredient');
-          line.append(make('span', '', label(zh, english)), make('strong', '', titleCase(value(row, column))));
-          ingredients.append(line);
-        }
-        card.append(ingredients);
+        card.append(top, make('h4', 'diet-meal-title', value(row, 2)));
+        addIngredients(card, [
+          ['主食', 'Starch', value(row, 3)],
+          ['蛋白质', 'Protein', value(row, 4)],
+          ['蔬菜', 'Vegetables', value(row, 5)]
+        ]);
         const meal = nutrition[row.dataset.nutritionKey];
         if (meal) addNutrition(card, meal);
         list.append(card);
