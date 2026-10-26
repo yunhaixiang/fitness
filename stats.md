@@ -219,141 +219,24 @@ visual: true
 </tr>
 </thead>
 <tbody>
+{% for key in site.data.meal_nutrition.order %}
+{% assign meal = site.data.meal_nutrition.meals[key] %}
 <tr>
-<td>周日—周二早餐（水果盘1/3）</td>
-<td style="text-align: right;">264</td>
-<td style="text-align: right;">12.3</td>
-<td style="text-align: right;">5.7</td>
-<td style="text-align: right;">0.7</td>
-<td style="text-align: right;">55.6</td>
-<td style="text-align: right;">20.6</td>
-<td style="text-align: right;">15.5</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: right;">248</td>
-<td style="text-align: right;">493</td>
-<td style="text-align: right;">6.5</td>
-<td style="text-align: right;">722</td>
+<td>{{ meal.label }}</td>
+<td style="text-align: right;">{{ meal.kcal }}</td>
+<td style="text-align: right;">{{ meal.protein }}</td>
+<td style="text-align: right;">{{ meal.fat }}</td>
+<td style="text-align: right;">{{ meal.saturatedFat }}</td>
+<td style="text-align: right;">{{ meal.carbs }}</td>
+<td style="text-align: right;">{{ meal.fibre }}</td>
+<td style="text-align: right;">{{ meal.sugar }}</td>
+<td style="text-align: right;">{{ meal.cholesterol }}</td>
+<td style="text-align: right;">{{ meal.sodium }}</td>
+<td style="text-align: right;">{{ meal.calcium }}</td>
+<td style="text-align: right;">{{ meal.iron }}</td>
+<td style="text-align: right;">{{ meal.potassium }}</td>
 </tr>
-<tr>
-<td>周日—周二睡前加餐（水果盘2/3）</td>
-<td style="text-align: right;">119</td>
-<td style="text-align: right;">1.5</td>
-<td style="text-align: right;">0.5</td>
-<td style="text-align: right;">0.1</td>
-<td style="text-align: right;">29.4</td>
-<td style="text-align: right;">3.7</td>
-<td style="text-align: right;">23.9</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: right;">13</td>
-<td style="text-align: right;">43</td>
-<td style="text-align: right;">0.8</td>
-<td style="text-align: right;">489</td>
-</tr>
-<tr>
-<td>周三—周六早餐（奇异果1个）</td>
-<td style="text-align: right;">245</td>
-<td style="text-align: right;">12.3</td>
-<td style="text-align: right;">5.8</td>
-<td style="text-align: right;">0.7</td>
-<td style="text-align: right;">51.1</td>
-<td style="text-align: right;">21.2</td>
-<td style="text-align: right;">9.7</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: right;">243</td>
-<td style="text-align: right;">502</td>
-<td style="text-align: right;">6.4</td>
-<td style="text-align: right;">710</td>
-</tr>
-<tr>
-<td>周三—周六睡前加餐（奇异果2个）</td>
-<td style="text-align: right;">80</td>
-<td style="text-align: right;">1.5</td>
-<td style="text-align: right;">0.9</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: right;">20.4</td>
-<td style="text-align: right;">5.1</td>
-<td style="text-align: right;">12.3</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: right;">3</td>
-<td style="text-align: right;">60</td>
-<td style="text-align: right;">0.5</td>
-<td style="text-align: right;">467</td>
-</tr>
-<tr>
-<td>周二午／周三晚／周五晚／周日午</td>
-<td style="text-align: right;">663</td>
-<td style="text-align: right;">56.3</td>
-<td style="text-align: right;">26.8</td>
-<td style="text-align: right;">7.7</td>
-<td style="text-align: right;">47.4</td>
-<td style="text-align: right;">8.0</td>
-<td style="text-align: right;">11.4</td>
-<td style="text-align: right;">128</td>
-<td style="text-align: right;">883</td>
-<td style="text-align: right;">216</td>
-<td style="text-align: right;">7.0</td>
-<td style="text-align: right;">2,933</td>
-</tr>
-<tr>
-<td>周日晚／周四午</td>
-<td style="text-align: right;">627</td>
-<td style="text-align: right;">49.0</td>
-<td style="text-align: right;">32.1</td>
-<td style="text-align: right;">7.7</td>
-<td style="text-align: right;">36.3</td>
-<td style="text-align: right;">4.5</td>
-<td style="text-align: right;">2.8</td>
-<td style="text-align: right;">535</td>
-<td style="text-align: right;">728</td>
-<td style="text-align: right;">117</td>
-<td style="text-align: right;">5.0</td>
-<td style="text-align: right;">1,066</td>
-</tr>
-<tr>
-<td>周一午／周二晚／周四晚／周六午</td>
-<td style="text-align: right;">669</td>
-<td style="text-align: right;">61.8</td>
-<td style="text-align: right;">24.5</td>
-<td style="text-align: right;">8.2</td>
-<td style="text-align: right;">51.7</td>
-<td style="text-align: right;">5.0</td>
-<td style="text-align: right;">3.8</td>
-<td style="text-align: right;">594</td>
-<td style="text-align: right;">685</td>
-<td style="text-align: right;">121</td>
-<td style="text-align: right;">3.5</td>
-<td style="text-align: right;">884</td>
-</tr>
-<tr>
-<td>周一晚／周三午／周五午／周六晚</td>
-<td style="text-align: right;">638</td>
-<td style="text-align: right;">56.4</td>
-<td style="text-align: right;">24.3</td>
-<td style="text-align: right;">5.3</td>
-<td style="text-align: right;">47.2</td>
-<td style="text-align: right;">4.1</td>
-<td style="text-align: right;">7.4</td>
-<td style="text-align: right;">156</td>
-<td style="text-align: right;">665</td>
-<td style="text-align: right;">71</td>
-<td style="text-align: right;">3.5</td>
-<td style="text-align: right;">1,462</td>
-</tr>
-<tr>
-<td>餐外饮品（日均）</td>
-<td style="text-align: right;">97</td>
-<td style="text-align: right;">8.6</td>
-<td style="text-align: right;">4.9</td>
-<td style="text-align: right;">0.5</td>
-<td style="text-align: right;">4.3</td>
-<td style="text-align: right;">2.2</td>
-<td style="text-align: right;">1.1</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: right;">97</td>
-<td style="text-align: right;">324</td>
-<td style="text-align: right;">1.1</td>
-<td style="text-align: right;">378</td>
-</tr>
+{% endfor %}
 </tbody>
 </table>
 </div>

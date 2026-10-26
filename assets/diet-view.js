@@ -22,14 +22,43 @@
   const schedule = document.querySelector('[data-diet-view="schedule"]');
   if (schedule) {
     const rows = [...schedule.tBodies[0].rows];
+    const nutrition = JSON.parse(document.getElementById('diet-nutrition-data').textContent);
+    const view = make('div', 'diet-schedule-view');
+    const tabs = make('div', 'diet-week-tabs');
+    tabs.setAttribute('role', 'tablist');
+    tabs.setAttribute('aria-label', label('选择半周', 'Choose half-week'));
     const grid = make('div', 'diet-week-grid');
     const kinds = ['wrap', 'rice', 'pasta', 'potato', 'rice', 'pasta', 'potato'];
+    const buttons = [];
+    const panels = [];
+    const nutrientFields = [
+      ['protein', '蛋白质', 'Protein', 'g'],
+      ['carbs', '碳水', 'Carbs', 'g'],
+      ['fat', '脂肪', 'Fat', 'g'],
+      ['saturatedFat', '饱和脂肪', 'Saturated fat', 'g'],
+      ['fibre', '纤维', 'Fibre', 'g'],
+      ['sugar', '总糖', 'Sugar', 'g'],
+      ['cholesterol', '胆固醇', 'Cholesterol', 'mg'],
+      ['sodium', '钠', 'Sodium', 'mg'],
+      ['calcium', '钙', 'Calcium', 'mg'],
+      ['iron', '铁', 'Iron', 'mg'],
+      ['potassium', '钾', 'Potassium', 'mg']
+    ];
     for (const [half, halfRows] of [rows.slice(0, 7), rows.slice(7, 14)].entries()) {
+      const button = make('button', 'diet-week-tab');
+      button.type = 'button';
+      button.id = `diet-week-tab-${half}`;
+      button.setAttribute('role', 'tab');
+      button.setAttribute('aria-controls', `diet-week-panel-${half}`);
+      button.append(make('strong', '', half ? label('后半周', 'Second half') : label('前半周', 'First half')));
+      button.append(make('span', '', `${value(halfRows[0], 1)} → ${value(halfRows.at(-1), 1)}`));
+      tabs.append(button);
+      buttons.push(button);
       const week = make('section', 'diet-week');
-      const heading = make('div', 'diet-week-heading');
-      heading.append(make('h3', '', half ? label('后半周', 'Second half') : label('前半周', 'First half')));
-      heading.append(make('span', 'diet-week-range', `${value(halfRows[0], 1)} → ${value(halfRows.at(-1), 1)}`));
-      week.append(heading);
+      week.id = `diet-week-panel-${half}`;
+      week.setAttribute('role', 'tabpanel');
+      week.setAttribute('aria-labelledby', button.id);
+      week.hidden = half !== 0;
       const list = make('div', 'diet-meal-list');
       for (const [index, row] of halfRows.entries()) {
         const card = make('article', `diet-meal-card diet-kind-${kinds[index]}`);
@@ -46,13 +75,51 @@
           ingredients.append(line);
         }
         card.append(ingredients);
+        const meal = nutrition[row.dataset.nutritionKey];
+        if (meal) {
+          const nutrientPanel = make('section', 'diet-meal-nutrition');
+          nutrientPanel.setAttribute('aria-label', label('每餐营养估算', 'Estimated meal nutrition'));
+          nutrientPanel.append(make('h5', '', label('每餐营养', 'Meal nutrition')));
+          const metrics = make('dl', 'diet-nutrient-grid');
+          for (const [field, zh, english, unit] of nutrientFields) {
+            const metric = make('div', 'diet-nutrient');
+            metric.append(make('dt', '', label(zh, english)));
+            metric.append(make('dd', '', `${meal[field]} ${unit}`));
+            metrics.append(metric);
+          }
+          nutrientPanel.append(metrics);
+          card.append(nutrientPanel);
+        }
         list.append(card);
       }
       week.append(list);
       grid.append(week);
+      panels.push(week);
     }
-    mount(schedule, grid);
-    const prep = grid.nextElementSibling;
+    const activate = (half) => {
+      buttons.forEach((button, index) => {
+        const selected = index === half;
+        button.setAttribute('aria-selected', String(selected));
+        button.tabIndex = selected ? 0 : -1;
+        panels[index].hidden = !selected;
+      });
+    };
+    buttons.forEach((button, index) => {
+      button.addEventListener('click', () => activate(index));
+      button.addEventListener('keydown', (event) => {
+        const next = event.key === 'ArrowRight' ? (index + 1) % buttons.length
+          : event.key === 'ArrowLeft' ? (index + buttons.length - 1) % buttons.length
+          : event.key === 'Home' ? 0 : event.key === 'End' ? buttons.length - 1 : null;
+        if (next === null) return;
+        event.preventDefault();
+        activate(next);
+        buttons[next].focus();
+      });
+    });
+    activate(0);
+    view.append(tabs, grid);
+    mount(schedule, view);
+    const prep = view.nextElementSibling;
     if (prep?.tagName === 'P') prep.classList.add('diet-prep-note');
   }
 

@@ -1,0 +1,14 @@
+{
+  "order": ["fruit_breakfast", "fruit_snack", "kiwi_breakfast", "kiwi_snack", "potato", "wrap", "rice", "pasta", "drinks"],
+  "meals": {
+    "fruit_breakfast": {"label": "周日—周二早餐（水果盘1/3）", "kcal": "264", "protein": "12.3", "fat": "5.7", "saturatedFat": "0.7", "carbs": "55.6", "fibre": "20.6", "sugar": "15.5", "cholesterol": "0", "sodium": "248", "calcium": "493", "iron": "6.5", "potassium": "722"},
+    "fruit_snack": {"label": "周日—周二睡前加餐（水果盘2/3）", "kcal": "119", "protein": "1.5", "fat": "0.5", "saturatedFat": "0.1", "carbs": "29.4", "fibre": "3.7", "sugar": "23.9", "cholesterol": "0", "sodium": "13", "calcium": "43", "iron": "0.8", "potassium": "489"},
+    "kiwi_breakfast": {"label": "周三—周六早餐（奇异果1个）", "kcal": "245", "protein": "12.3", "fat": "5.8", "saturatedFat": "0.7", "carbs": "51.1", "fibre": "21.2", "sugar": "9.7", "cholesterol": "0", "sodium": "243", "calcium": "502", "iron": "6.4", "potassium": "710"},
+    "kiwi_snack": {"label": "周三—周六睡前加餐（奇异果2个）", "kcal": "80", "protein": "1.5", "fat": "0.9", "saturatedFat": "0", "carbs": "20.4", "fibre": "5.1", "sugar": "12.3", "cholesterol": "0", "sodium": "3", "calcium": "60", "iron": "0.5", "potassium": "467"},
+    "potato": {"label": "周二午／周三晚／周五晚／周日午", "kcal": "663", "protein": "56.3", "fat": "26.8", "saturatedFat": "7.7", "carbs": "47.4", "fibre": "8.0", "sugar": "11.4", "cholesterol": "128", "sodium": "883", "calcium": "216", "iron": "7.0", "potassium": "2,933"},
+    "wrap": {"label": "周日晚／周四午", "kcal": "627", "protein": "49.0", "fat": "32.1", "saturatedFat": "7.7", "carbs": "36.3", "fibre": "4.5", "sugar": "2.8", "cholesterol": "535", "sodium": "728", "calcium": "117", "iron": "5.0", "potassium": "1,066"},
+    "rice": {"label": "周一午／周二晚／周四晚／周六午", "kcal": "669", "protein": "61.8", "fat": "24.5", "saturatedFat": "8.2", "carbs": "51.7", "fibre": "5.0", "sugar": "3.8", "cholesterol": "594", "sodium": "685", "calcium": "121", "iron": "3.5", "potassium": "884"},
+    "pasta": {"label": "周一晚／周三午／周五午／周六晚", "kcal": "638", "protein": "56.4", "fat": "24.3", "saturatedFat": "5.3", "carbs": "47.2", "fibre": "4.1", "sugar": "7.4", "cholesterol": "156", "sodium": "665", "calcium": "71", "iron": "3.5", "potassium": "1,462"},
+    "drinks": {"label": "餐外饮品（日均）", "kcal": "97", "protein": "8.6", "fat": "4.9", "saturatedFat": "0.5", "carbs": "4.3", "fibre": "2.2", "sugar": "1.1", "cholesterol": "0", "sodium": "97", "calcium": "324", "iron": "1.1", "potassium": "378"}
+  }
+}
