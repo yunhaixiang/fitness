@@ -360,3 +360,10 @@ img{max-width:100%;height:auto}
 .cardio-option-card ol{margin:0!important;padding-left:20px!important;font-size:12px;line-height:1.65}
 .cardio-option-card li{padding-left:1px;margin:0 0 5px}
 @media(max-width:900px){.cardio-option-grid{grid-template-columns:1fr}}
+
+/* Show each card collection as one vertical list at every screen width. */
+.today-grid,.link-grid,.link-grid.food-link-grid,.metrics-strip,
+.diet-meal-list,.diet-treat-grid,.visual-card-grid,.visual-training-list,
+.visual-nutrient-grid,.visual-week-strip,.record-card-grid,.volume-detail-grid,
+.cardio-option-grid{grid-template-columns:minmax(0,1fr)}
+.cardio-video-image{max-width:440px}
