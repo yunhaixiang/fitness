@@ -9,6 +9,8 @@ wide: true
 
 <p class="volume-intro">图中数字是每周主要训练组数；辅助动作另列，不折算为主要组数。点击肌群可查看具体动作。</p>
 
+<div id="volume-root"></div>
+
 ## 在家
 
 <div class="table-wrap">

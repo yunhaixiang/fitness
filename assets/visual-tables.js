@@ -259,6 +259,8 @@
     mount(mealTable, meals);
   }
   if (page === 'volume' && tables.length === 2) {
+    const root = document.querySelector('#volume-root');
+    if (!root) return;
     const names = {
       chest: '胸肌', 'front-delts': '肩前侧', 'side-delts': '肩外侧',
       'rear-delts': '肩后侧', lats: '背阔肌', traps: '斜方肌', biceps: '二头肌',
@@ -266,39 +268,17 @@
       'lower-back': '下背', glutes: '臀部', quads: '大腿前侧',
       hamstrings: '大腿后侧', calves: '小腿'
     };
-    const sides = [
-      { side: 'front', left: ['chest', 'biceps', 'forearms', 'quads'], right: ['front-delts', 'side-delts', 'abs', 'obliques'] },
-      { side: 'back', left: ['rear-delts', 'lats', 'glutes', 'calves'], right: ['traps', 'triceps', 'lower-back', 'hamstrings'] }
-    ];
-    const shapes = {
-      front: `
-        <path data-muscle="chest" d="M65 94 Q84 82 108 95 L108 131 Q84 140 67 125 Z M112 95 Q136 82 155 94 L153 125 Q136 140 112 131 Z"/>
-        <path data-muscle="front-delts" d="M64 81 Q76 75 87 81 L77 101 Q67 103 62 96 Z M156 81 Q144 75 133 81 L143 101 Q153 103 158 96 Z"/>
-        <path data-muscle="side-delts" d="M53 90 Q58 81 65 80 L67 105 L56 113 Z M167 90 Q162 81 155 80 L153 105 L164 113 Z"/>
-        <path data-muscle="biceps" d="M55 120 L67 117 L68 157 L56 160 Z M165 120 L153 117 L152 157 L164 160 Z"/>
-        <path data-muscle="forearms" d="M55 167 L68 164 L61 215 L47 211 Z M165 167 L152 164 L159 215 L173 211 Z"/>
-        <path data-muscle="abs" d="M96 137 L124 137 L126 208 Q110 215 94 208 Z"/>
-        <path data-muscle="obliques" d="M76 142 L94 139 L92 203 L81 197 Z M144 142 L126 139 L128 203 L139 197 Z"/>
-        <path data-muscle="quads" d="M78 244 Q91 236 103 246 L101 331 Q89 348 77 331 Z M142 244 Q129 236 117 246 L119 331 Q131 348 143 331 Z"/>`,
-      back: `
-        <path data-muscle="traps" d="M98 63 L110 74 L122 63 L148 90 L127 111 L110 103 L93 111 L72 90 Z"/>
-        <path data-muscle="rear-delts" d="M59 88 Q70 79 83 82 L79 113 L56 112 Z M161 88 Q150 79 137 82 L141 113 L164 112 Z"/>
-        <path data-muscle="lats" d="M78 116 L105 111 L102 196 L82 188 Z M142 116 L115 111 L118 196 L138 188 Z"/>
-        <path data-muscle="triceps" d="M56 119 L70 115 L65 161 L53 160 Z M164 119 L150 115 L155 161 L167 160 Z"/>
-        <path data-muscle="lower-back" d="M103 175 L117 175 L128 222 L110 226 L92 222 Z"/>
-        <path data-muscle="glutes" d="M80 228 Q94 222 109 230 L108 270 Q91 279 77 263 Z M140 228 Q126 222 111 230 L112 270 Q129 279 143 263 Z"/>
-        <path data-muscle="hamstrings" d="M79 278 Q94 270 104 279 L100 353 L80 355 Z M141 278 Q126 270 116 279 L120 353 L140 355 Z"/>
-        <path data-muscle="calves" d="M84 370 Q95 362 101 373 L98 435 L88 444 Z M136 370 Q125 362 119 373 L122 435 L132 444 Z"/>`
-    };
-    const svg = (side) => {
-      const host = el('div', 'volume-body');
-      host.innerHTML = `<svg viewBox="0 0 220 480" role="img" aria-label="${tr(side === 'front' ? '正面肌群示意图' : '背面肌群示意图', side === 'front' ? 'Front muscle map' : 'Back muscle map')}" xmlns="http://www.w3.org/2000/svg">
-        <ellipse class="volume-silhouette" cx="110" cy="35" rx="21" ry="27"/>
-        <path class="volume-silhouette" d="M99 58 L99 66 Q67 71 54 87 L52 147 L42 214 Q42 226 50 230 L60 229 L72 166 L76 111 L79 211 Q74 230 77 245 L78 355 L86 452 L100 455 L108 355 L110 261 L112 355 L120 455 L134 452 L142 355 L143 245 Q146 230 141 211 L144 111 L148 166 L160 229 L170 230 Q178 226 178 214 L168 147 L166 87 Q153 71 121 66 L121 58 Z"/>
-        <g class="volume-muscles">${shapes[side]}</g>
-        <path class="volume-midline" d="M110 76 L110 221 M110 274 L110 353"/>
-      </svg>`;
-      return host;
+    const positions = {
+      front: {
+        chest: [14, 22.7], 'front-delts': [73, 16.5], 'side-delts': [82, 26.4],
+        biceps: [5, 34.5], forearms: [5, 48.8], abs: [82, 39.7],
+        obliques: [83, 48.8], quads: [7, 68.5]
+      },
+      back: {
+        'rear-delts': [8, 22.8], traps: [75, 18.7], lats: [8, 37.7],
+        triceps: [83, 33.5], 'lower-back': [83, 48.4], glutes: [8, 59.4],
+        hamstrings: [80, 69.3], calves: [9, 82.3]
+      }
     };
     const primarySets = (row) => {
       const node = row.cells[1].firstChild;
@@ -306,29 +286,47 @@
       return [...source.split('；')[0].matchAll(/(\d+)\s*组/g)].reduce((sum, match) => sum + Number(match[1]), 0);
     };
     const muscleKey = (row) => row.cells[0].lastChild.textContent.trim().toLowerCase().replaceAll(' ', '-');
-    const unit = (count, key) => `${count} ${tr('组', 'sets')}${key === 'obliques' && count === 6 ? tr('／侧', '/side') : ''}`;
+    const englishName = (row) => row.cells[0].lastChild.textContent.trim();
+    const dose = (count, key) => `${count} ${tr('组', 'sets')}${key === 'obliques' && count === 6 ? tr('／侧', '/side') : ''}`;
+    const data = {
+      home: [...tables[0].tBodies[0].rows],
+      gym: [...tables[1].tBodies[0].rows]
+    };
+    const siteRoot = document.querySelector('.brand')?.href || location.origin + '/';
+    const toolbar = el('div', 'volume-switch');
+    toolbar.setAttribute('role', 'group');
+    toolbar.setAttribute('aria-label', tr('训练场地', 'Training location'));
+    const buttons = new Map();
+    for (const [mode, zh, english] of [['home', '在家', 'Home'], ['gym', '健身馆', 'Gym']]) {
+      const button = el('button', 'volume-switch-button', tr(zh, english));
+      button.type = 'button';
+      button.addEventListener('click', () => show(mode));
+      buttons.set(mode, button);
+      toolbar.append(button);
+    }
+    const maps = el('div', 'volume-photo-grid');
+    const details = el('details', 'volume-details');
+    const detailsTitle = el('summary', '', tr('查看全部动作与辅助刺激', 'See all exercises and secondary work'));
+    const detailGrid = el('div', 'visual-card-grid volume-detail-grid');
+    details.append(detailsTitle, detailGrid);
+    root.append(toolbar, maps, details);
 
-    for (const table of tables) {
-      const byMuscle = new Map([...table.tBodies[0].rows].map((row) => [muscleKey(row), row]));
-      const shell = el('div', 'volume-view');
-      const maps = el('div', 'volume-map-grid');
-      const details = el('details', 'volume-details');
-      const detailSummary = el('summary', '', tr('查看全部动作与辅助刺激', 'See all exercises and secondary work'));
-      const detailGrid = el('div', 'visual-card-grid volume-detail-grid');
-      details.append(detailSummary, detailGrid);
+    function show(mode) {
+      for (const [name, button] of buttons) button.setAttribute('aria-pressed', String(name === mode));
+      try { localStorage.setItem('yunhai-fitness-volume-mode', mode); } catch (_) { /* storage unavailable */ }
+      maps.replaceChildren();
+      detailGrid.replaceChildren();
+      details.open = false;
       const cards = new Map();
-
-      for (const row of table.tBodies[0].rows) {
+      const rows = data[mode];
+      for (const row of rows) {
         const key = muscleKey(row);
         const card = el('article', 'visual-card visual-volume-card');
-        card.id = `${table === tables[0] ? 'home' : 'gym'}-${key}`;
+        card.id = `volume-${mode}-${key}`;
         card.tabIndex = -1;
         const top = el('div', 'visual-card-top');
-        const name = el('h3');
-        name.textContent = tr(names[key] || key, row.cells[0].lastChild.textContent.trim());
-        top.append(name, el('span', 'visual-badge', val(row, 3)));
-        card.append(top);
-        card.append(el('strong', 'volume-card-dose', unit(primarySets(row), key)));
+        top.append(el('h3', '', tr(names[key] || key, englishName(row))), el('span', 'visual-badge', val(row, 3)));
+        card.append(top, el('strong', 'volume-card-dose', dose(primarySets(row), key)));
         for (const [column, zh, english] of [[1, '主要', 'Primary'], [2, '辅助', 'Secondary']]) {
           const line = el('div', 'visual-volume-line');
           line.append(el('span', '', tr(zh, english)), el('strong', '', val(row, column)));
@@ -337,40 +335,45 @@
         cards.set(key, card);
         detailGrid.append(card);
       }
-
-      for (const config of sides) {
-        const figure = el('figure', 'volume-map');
-        const heading = el('figcaption', 'volume-map-title', tr(config.side === 'front' ? '正面' : '背面', config.side === 'front' ? 'Front' : 'Back'));
-        const diagram = svg(config.side);
-        const pins = (keys, className) => {
-          const list = el('div', `volume-pins ${className}`);
-          for (const key of keys) {
-            const row = byMuscle.get(key);
-            if (!row) continue;
-            const count = primarySets(row);
-            const pin = el('button', 'volume-pin');
-            pin.type = 'button';
-            pin.setAttribute('aria-label', `${tr(names[key], row.cells[0].lastChild.textContent.trim())}: ${unit(count, key)}. ${tr('查看动作', 'View exercises')}`);
-            pin.append(el('span', 'volume-pin-name', tr(names[key], row.cells[0].lastChild.textContent.trim())), el('strong', 'volume-pin-count', unit(count, key)));
-            if (count === 0) pin.classList.add('is-indirect');
-            pin.addEventListener('click', () => {
-              details.open = true;
-              const card = cards.get(key);
-              card.scrollIntoView({ behavior: 'smooth', block: 'center' });
-              card.focus({ preventScroll: true });
-            });
-            list.append(pin);
-            const region = diagram.querySelector(`[data-muscle="${key}"]`);
-            if (region) region.style.opacity = String(0.28 + Math.min(count / 17, 1) * 0.68);
-          }
-          return list;
-        };
-        figure.append(heading, pins(config.left, 'volume-pins-left'), diagram, pins(config.right, 'volume-pins-right'));
+      for (const side of ['front', 'back']) {
+        const figure = el('figure', 'volume-photo');
+        const image = el('img');
+        image.src = new URL(`assets/images/fitness-muscles-${side}.png`, siteRoot).href;
+        image.alt = tr(side === 'front' ? '主要肌群正面图' : '主要肌群背面图', side === 'front' ? 'Front muscle diagram' : 'Back muscle diagram');
+        image.width = 1024;
+        image.height = 1536;
+        figure.append(image);
+        for (const row of rows) {
+          const key = muscleKey(row);
+          const position = positions[side][key];
+          if (!position) continue;
+          const count = primarySets(row);
+          const badge = el('button', 'volume-photo-badge', dose(count, key));
+          badge.type = 'button';
+          badge.style.left = `${position[0]}%`;
+          badge.style.top = `${position[1]}%`;
+          badge.setAttribute('aria-label', `${tr(names[key], englishName(row))}: ${dose(count, key)}. ${tr('查看动作', 'View exercises')}`);
+          if (count === 0) badge.classList.add('is-indirect');
+          badge.addEventListener('click', () => {
+            details.open = true;
+            const card = cards.get(key);
+            card.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            card.focus({ preventScroll: true });
+          });
+          figure.append(badge);
+        }
         maps.append(figure);
       }
-      shell.append(maps, details);
-      mount(table, shell);
     }
+
+    for (const table of tables) {
+      const wrap = table.closest('.table-wrap');
+      if (wrap.previousElementSibling?.tagName === 'H2') wrap.previousElementSibling.hidden = true;
+      wrap.hidden = true;
+    }
+    let initial = 'home';
+    try { if (localStorage.getItem('yunhai-fitness-volume-mode') === 'gym') initial = 'gym'; } catch (_) { /* storage unavailable */ }
+    show(initial);
   }
 
 })();
