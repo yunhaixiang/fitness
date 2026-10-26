@@ -379,17 +379,3 @@ strength: true
 </tr>
 </tbody>
 </table></div>
-
-
-
-## 主要健身肌群示意图
-
-<figure class="muscle-figure">
-  <img src="{{ '/assets/images/fitness-muscles-front.png' | relative_url }}" alt="主要健身肌群正面简图：胸肌 Chest、肩前侧 Front delts、肩外侧 Side delts、二头肌 Biceps、小臂 Forearms、腹肌 Abs、侧腹 Obliques、大腿前侧 Quads。">
-  <figcaption>主要健身肌群：正面。AI生成简图，仅示意大致位置。</figcaption>
-</figure>
-
-<figure class="muscle-figure">
-  <img src="{{ '/assets/images/fitness-muscles-back.png' | relative_url }}" alt="主要健身肌群背面简图：肩后侧 Rear delts、斜方肌 Traps、背阔肌 Lats、三头肌 Triceps、下背 Lower back、臀部 Glutes、大腿后侧 Hamstrings、小腿 Calves。">
-  <figcaption>主要健身肌群：背面。AI生成简图，仅示意大致位置。</figcaption>
-</figure>
