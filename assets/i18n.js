@@ -228,12 +228,10 @@
     '净增加': 'net increase',
     '每日能量与每周赤字估计': 'Daily energy and estimated weekly deficit',
     '日均摄入占消耗约75%，赤字约25%': 'Average intake is about 75% of expenditure, with a 25% deficit',
-    '每日能量 · 不含放纵餐': 'Daily Energy · Excluding Treat Meals',
+    '能量概览 · 不含放纵餐': 'Energy Overview · Excluding Treat Meals',
     '日均摄入': 'Daily Intake', '日均消耗': 'Daily Expenditure', '日均赤字': 'Daily Deficit',
-    '每周摄入': 'Weekly Intake', '每周消耗': 'Weekly Expenditure', '每周赤字': 'Weekly Deficit',
-    '理论脂肪等价值': 'Theoretical Fat-Energy Equivalent',
+    '每周赤字': 'Weekly Deficit', '理论脂肪等价值': 'Theoretical Fat-Energy Equivalent',
     'kcal／天': 'kcal/day', 'kg／周': 'kg/week',
-    '按 7,700 kcal/kg 粗算的理论能量等值，不代表实际体重下降量。': 'A rough energy equivalent using 7,700 kcal/kg; this is not a prediction of actual weight loss.',
   };
 
   const terms = {
