@@ -207,20 +207,4 @@
     mount(treats, grid);
   }
 
-  const alternatives = document.querySelector('[data-diet-view="alternatives"]');
-  if (alternatives) {
-    const grid = make('div', 'diet-swap-grid');
-    for (const row of alternatives.tBodies[0].rows) {
-      const card = make('article', 'diet-swap-card');
-      card.append(make('span', 'diet-swap-craving', titleCase(value(row, 0))));
-      const replacement = make('h4', 'diet-swap-replacement');
-      putContent(replacement, row.cells[1]);
-      card.append(replacement, make('p', 'diet-swap-portion', value(row, 2)));
-      const foot = make('div', 'diet-swap-foot');
-      foot.append(make('strong', '', `${value(row, 3)} kcal`), make('span', '', `${value(row, 4)} ${label('每周赤字', 'of weekly deficit')}`));
-      card.append(foot);
-      grid.append(card);
-    }
-    mount(alternatives, grid);
-  }
 })();
