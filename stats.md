@@ -12,7 +12,7 @@ visual: true
 
 ### 一周营养统计
 
-**热量估计（不含放纵餐）：日均摄入约1,785 kcal、消耗约2,319 ± 232 kcal、赤字约534 ± 232 kcal；对应每周摄入约12,497 kcal、消耗约16,236 ± 1,624 kcal、赤字约3,739 ± 1,624 kcal。按7,700 kcal/kg粗算，理论脂肪等价值约减0.49 ± 0.21 kg／周，不等于实际体重下降量。** [估算局限](https://www.niddk.nih.gov/health-information/professionals/diabetes-discoveries-practice/nih-body-weight-planner)
+**热量估计（不含放纵餐）：日均摄入约1,750 kcal、消耗约2,319 ± 232 kcal、赤字约569 ± 232 kcal；对应每周摄入约12,253 kcal、消耗约16,236 ± 1,624 kcal、赤字约3,983 ± 1,624 kcal。按7,700 kcal/kg粗算，理论脂肪等价值约减0.52 ± 0.21 kg／周，不等于实际体重下降量。** [估算局限](https://www.niddk.nih.gov/health-information/professionals/diabetes-discoveries-practice/nih-body-weight-planner)
 
 
 
@@ -79,50 +79,50 @@ visual: true
 <tbody>
 <tr>
 <td>热量</td>
-<td style="text-align: right;">约12,497 kcal</td>
-<td style="text-align: right;">约1,785 kcal</td>
+<td style="text-align: right;">约12,253 kcal</td>
+<td style="text-align: right;">约1,750 kcal</td>
 <td>1,800–2,000 kcal</td>
 </tr>
 <tr>
 <td>蛋白质</td>
-<td style="text-align: right;">约991 g</td>
-<td style="text-align: right;">约141.5 g</td>
+<td style="text-align: right;">约952 g</td>
+<td style="text-align: right;">约136.0 g</td>
 <td>130–165 g</td>
 </tr>
 <tr>
 <td>总脂肪</td>
-<td style="text-align: right;">约456 g</td>
-<td style="text-align: right;">约65.1 g</td>
+<td style="text-align: right;">约447 g</td>
+<td style="text-align: right;">约63.8 g</td>
 <td>45–65 g</td>
 </tr>
 <tr>
 <td>饱和脂肪</td>
-<td style="text-align: right;">约110.5 g</td>
-<td style="text-align: right;">约15.8 g</td>
+<td style="text-align: right;">约108.1 g</td>
+<td style="text-align: right;">约15.4 g</td>
 <td>11.9 g</td>
 </tr>
 <tr>
 <td>饱和脂肪占总热量</td>
-<td style="text-align: right;">约8.0%</td>
-<td style="text-align: right;">约8.0%</td>
+<td style="text-align: right;">约7.9%</td>
+<td style="text-align: right;">约7.9%</td>
 <td>≤6%</td>
 </tr>
 <tr>
 <td>碳水化合物</td>
-<td style="text-align: right;">约1,230 g</td>
-<td style="text-align: right;">约175.7 g</td>
+<td style="text-align: right;">约1,229 g</td>
+<td style="text-align: right;">约175.6 g</td>
 <td>180–240 g</td>
 </tr>
 <tr>
 <td>膳食纤维</td>
-<td style="text-align: right;">约271 g</td>
-<td style="text-align: right;">约38.8 g</td>
+<td style="text-align: right;">约270 g</td>
+<td style="text-align: right;">约38.6 g</td>
 <td>30–38 g</td>
 </tr>
 <tr>
 <td>总糖</td>
-<td style="text-align: right;">约309 g</td>
-<td style="text-align: right;">约44.1 g</td>
+<td style="text-align: right;">约308 g</td>
+<td style="text-align: right;">约44.0 g</td>
 <td>–</td>
 </tr>
 <tr>
@@ -133,32 +133,32 @@ visual: true
 </tr>
 <tr>
 <td>膳食胆固醇</td>
-<td style="text-align: right;">约4,751 mg</td>
-<td style="text-align: right;">约679 mg</td>
+<td style="text-align: right;">约4,567 mg</td>
+<td style="text-align: right;">约652 mg</td>
 <td>–</td>
 </tr>
 <tr>
 <td>钠</td>
-<td style="text-align: right;">约12,961 mg</td>
-<td style="text-align: right;">约1,852 mg</td>
+<td style="text-align: right;">约12,831 mg</td>
+<td style="text-align: right;">约1,833 mg</td>
 <td>≤2,300 mg</td>
 </tr>
 <tr>
 <td>钙</td>
-<td style="text-align: right;">约7,992 mg</td>
-<td style="text-align: right;">约1,142 mg</td>
+<td style="text-align: right;">约7,978 mg</td>
+<td style="text-align: right;">约1,140 mg</td>
 <td>1,000 mg</td>
 </tr>
 <tr>
 <td>铁</td>
-<td style="text-align: right;">约122.8 mg</td>
-<td style="text-align: right;">约17.5 mg</td>
+<td style="text-align: right;">约121.2 mg</td>
+<td style="text-align: right;">约17.3 mg</td>
 <td>8 mg</td>
 </tr>
 <tr>
 <td>钾</td>
-<td style="text-align: right;">约34,832 mg</td>
-<td style="text-align: right;">约4,976 mg</td>
+<td style="text-align: right;">约34,216 mg</td>
+<td style="text-align: right;">约4,888 mg</td>
 <td>≥3,400 mg</td>
 </tr>
 <tr>
@@ -281,33 +281,33 @@ visual: true
 </tr>
 <tr>
 <td>周二午／周三晚／周五晚／周日午</td>
-<td style="text-align: right;">666</td>
-<td style="text-align: right;">56.7</td>
+<td style="text-align: right;">663</td>
+<td style="text-align: right;">56.3</td>
 <td style="text-align: right;">26.8</td>
 <td style="text-align: right;">7.7</td>
-<td style="text-align: right;">47.9</td>
-<td style="text-align: right;">8.2</td>
-<td style="text-align: right;">11.7</td>
+<td style="text-align: right;">47.4</td>
+<td style="text-align: right;">8.0</td>
+<td style="text-align: right;">11.4</td>
 <td style="text-align: right;">128</td>
 <td style="text-align: right;">883</td>
 <td style="text-align: right;">216</td>
 <td style="text-align: right;">7.0</td>
-<td style="text-align: right;">2,983</td>
+<td style="text-align: right;">2,933</td>
 </tr>
 <tr>
 <td>周日晚／周四午</td>
-<td style="text-align: right;">685</td>
-<td style="text-align: right;">58.7</td>
-<td style="text-align: right;">34.4</td>
-<td style="text-align: right;">8.3</td>
-<td style="text-align: right;">36.0</td>
-<td style="text-align: right;">4.7</td>
-<td style="text-align: right;">2.5</td>
-<td style="text-align: right;">581</td>
-<td style="text-align: right;">751</td>
-<td style="text-align: right;">120</td>
-<td style="text-align: right;">5.4</td>
-<td style="text-align: right;">1,142</td>
+<td style="text-align: right;">627</td>
+<td style="text-align: right;">49.0</td>
+<td style="text-align: right;">32.1</td>
+<td style="text-align: right;">7.7</td>
+<td style="text-align: right;">36.3</td>
+<td style="text-align: right;">4.5</td>
+<td style="text-align: right;">2.8</td>
+<td style="text-align: right;">535</td>
+<td style="text-align: right;">728</td>
+<td style="text-align: right;">117</td>
+<td style="text-align: right;">5.0</td>
+<td style="text-align: right;">1,066</td>
 </tr>
 <tr>
 <td>周一午／周二晚／周四晚／周六午</td>
@@ -326,18 +326,18 @@ visual: true
 </tr>
 <tr>
 <td>周一晚／周三午／周五午／周六晚</td>
-<td style="text-align: right;">667</td>
-<td style="text-align: right;">61.0</td>
-<td style="text-align: right;">25.5</td>
-<td style="text-align: right;">5.6</td>
+<td style="text-align: right;">638</td>
+<td style="text-align: right;">56.4</td>
+<td style="text-align: right;">24.3</td>
+<td style="text-align: right;">5.3</td>
 <td style="text-align: right;">47.2</td>
 <td style="text-align: right;">4.1</td>
 <td style="text-align: right;">7.4</td>
-<td style="text-align: right;">179</td>
-<td style="text-align: right;">686</td>
-<td style="text-align: right;">73</td>
-<td style="text-align: right;">3.7</td>
-<td style="text-align: right;">1,528</td>
+<td style="text-align: right;">156</td>
+<td style="text-align: right;">665</td>
+<td style="text-align: right;">71</td>
+<td style="text-align: right;">3.5</td>
+<td style="text-align: right;">1,462</td>
 </tr>
 <tr>
 <td>餐外饮品（日均）</td>

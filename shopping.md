@@ -19,9 +19,9 @@ visual: true
 <tbody>
 <tr>
 <td>去骨去皮鸡大腿肉</td>
-<td><a href="https://www.walmart.ca/en/ip/maple-leaf-boneless-skinless-chicken-thighs-value-pack/6000197999724">Maple Leaf Boneless Skinless Chicken Thighs Value Pack</a><br>8块装；按830 g / 盒估算</td>
+<td><a href="https://www.walmart.ca/en/ip/mina-halal-boneless-skinless-chicken-thighs/6000201049805">Mina Halal Boneless Skinless Chicken Thighs</a><br>8块装；每盒约0.51–0.76 kg，营养按635 g估算</td>
 <td style="text-align: right;">1盒 / 周</td>
-<td style="text-align: right;">约$14.88</td>
+<td style="text-align: right;">约$11.42（按实际重量计价）</td>
 </tr>
 <tr>
 <td>BBQ熟猪背排骨</td>
@@ -72,12 +72,6 @@ visual: true
 <td style="text-align: right;">约$2.74</td>
 </tr>
 <tr>
-<td>冷冻去壳毛豆</td>
-<td><a href="https://www.walmart.ca/en/ip/Natures-Classic-Young-Edamame-Shelled-Soybean/6000197072340">Nature’s Classic Young Edamame Shelled Soybean</a><br>454 g / 盒（2袋×227 g）</td>
-<td style="text-align: right;">按需补</td>
-<td style="text-align: right;">约$0.19</td>
-</tr>
-<tr>
 <td>蘑菇</td>
 <td><a href="https://www.walmart.ca/en/ip/mushrooms-sliced-cremini-your-fresh-market/6000196148725">Your Fresh Market Sliced Cremini Mushrooms</a><br>227 g / 盒</td>
 <td style="text-align: right;">2盒 / 周</td>
@@ -123,7 +117,7 @@ visual: true
 <td>Chipotle蛋黄酱</td>
 <td><a href="https://www.walmart.ca/en/ip/Hellmann-s-Chipotle-Mayonnaise-Mild-Dressing-340ml/5NDTYWNJRQ1Y">Hellmann’s Mild Chipotle Mayonnaise</a><br>340 mL / 瓶</td>
 <td style="text-align: right;">按需补</td>
-<td style="text-align: right;">约$0.06</td>
+<td style="text-align: right;">约$0.12</td>
 </tr>
 <tr>
 <td>白米</td>
@@ -207,7 +201,7 @@ visual: true
 <td>每周合计</td>
 <td>—</td>
 <td style="text-align: right;">—</td>
-<td style="text-align: right;">约$173</td>
+<td style="text-align: right;">约$169</td>
 </tr>
 </tbody>
 </table>

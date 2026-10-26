@@ -31,13 +31,12 @@
     '鸡肉末炒蛋2个': 'ground chicken + 2 scrambled eggs',
     '鸡大腿肉1块＋三文鱼1块': '1 chicken thigh + 1 salmon portion',
     'BBQ排骨1/4盒＋三文鱼1块': '¼ box of BBQ ribs + 1 salmon portion',
-    '蘑菇+毛豆': 'mushrooms + edamame',
     '菠菜+蘑菇': 'spinach + mushrooms',
     '豌豆+胡萝卜': 'peas + carrots',
     '放纵餐': 'Treat meals', '常见放纵餐': 'Common treat meals',
     '以下为可选替代，不计入固定饮食；若额外加吃，仍扣减相应热量赤字。': 'These are optional substitutes, not part of the fixed plan. If eaten in addition, subtract their calories from the deficit.',
     '零卡或低卡放纵餐替代品': 'Zero- or low-calorie alternatives',
-    '占参考赤字3,739 kcal（额外加吃）': 'Share of 3,739 kcal reference deficit (extra food)',
+    '占参考赤字3,983 kcal（额外加吃）': 'Share of 3,983 kcal reference deficit (extra food)',
     '剩余每周赤字（kcal，额外加吃）': 'Remaining weekly deficit (kcal)',
     '剩余日均赤字（kcal）': 'Remaining average daily deficit (kcal)',
     '想吃／喝': 'Craving', '替代品': 'Alternative',
@@ -63,13 +62,12 @@
     '三文鱼：取2盒共4块，擦干、调味，400°F烤8分钟至熟透；第3、4、6、7盘各放1块。': 'Salmon: use two boxes (four portions), pat dry, season and air-fry at 400°F for 8 minutes until cooked through; put one each in meals 3, 4, 6 and 7.',
     '水煮蛋：烧水煮鸡蛋2个，水开后煮约8分钟；掰碎后放第1盘。': 'Boiled eggs: bring water to a boil and cook two eggs for about 8 minutes; break up and add to meal 1.',
     '意面：烧水煮干面90 g，煮约8分钟。': 'Pasta: bring water to a boil and cook 90 g dry pasta for about 8 minutes.',
-    '蘑菇：取1盒227 g，大火加油、调味，炒约7分钟至熟；1/5放第1盘，其余4/5均分到第4、7盘。': 'Mushrooms: cook one 227 g pack over high heat with oil and seasoning for about 7 minutes; put one-fifth in meal 1 and split the remaining four-fifths between meals 4 and 7.',
+    '蘑菇：取1盒227 g，大火加油、调味，炒约7分钟至熟；均分到第1、4、7盘。': 'Mushrooms: cook one 227 g pack over high heat with oil and seasoning for about 7 minutes; split evenly between meals 1, 4 and 7.',
     '番茄+意面：用番茄意面酱半瓶，小火加油、调味，煮2–3分钟；拌入意面煮约3分钟至热透；均分到第3、6盘。': 'Tomato pasta: heat half a bottle of tomato pasta sauce with oil and seasonings over low heat for 2–3 minutes; add pasta and cook about 3 more minutes. Split between meals 3 and 6.',
     '菠菜：取2盒共284 g，大火加油、调味，炒约7分钟至熟；均分到第4、7盘。': 'Spinach: cook two packs (284 g) over high heat with oil and seasoning for about 7 minutes; split between meals 4 and 7.',
     '鸡肉末+豌豆+胡萝卜+炒蛋：炒完菠菜后擦干锅；中火加1/2茶匙油，放入鸡肉末1盒，铺开稍定型后炒散至中心74°C；加入沥干的豌豆+胡萝卜1罐炒热；将肉菜拨到锅边，转中小火在空处再加1/2茶匙油，倒入4个打散的鸡蛋和调味，炒至凝固后拌匀；均分到第2、5盘。': 'Ground chicken, peas, carrots and scrambled eggs: wipe the wok dry after the spinach. Add ½ tsp oil over medium heat, spread out one pack of ground chicken, let it set briefly, then break it up and cook to 74°C. Add one drained can of peas and carrots and heat through. Push the meat and vegetables aside, lower to medium-low, add another ½ tsp oil, then four beaten eggs and seasoning. Cook until set, combine and divide between meals 2 and 5.',
-    '全麦卷饼皮抹 Hellmann’s Mild Chipotle 蛋黄酱1/2茶匙（约2.5 mL）。': 'Spread ½ tsp (about 2.5 mL) Hellmann’s Mild Chipotle mayonnaise on the whole-wheat tortilla.',
-    '冷冻去壳毛豆10 g微波加热至热透，稍放凉。': 'Microwave 10 g frozen shelled edamame until hot; cool briefly.',
-    '将毛豆、掰碎的鸡大腿肉、水煮蛋和蘑菇放入大号卷饼皮，卷好放第1盘。': 'Put the edamame, shredded chicken thighs, broken-up boiled eggs and mushrooms into the large tortilla; roll and put in meal 1.',
+    '全麦卷饼皮抹 Hellmann’s Mild Chipotle 蛋黄酱1茶匙（约5 mL）。': 'Spread 1 tsp (about 5 mL) Hellmann’s Mild Chipotle mayonnaise on the whole-wheat tortilla.',
+    '将掰碎的鸡大腿肉、水煮蛋和蘑菇放入大号卷饼皮，卷好放第1盘。': 'Put the shredded chicken thighs, broken-up boiled eggs and mushrooms into the large tortilla; roll and put in meal 1.',
     '在家与健身馆的动作、组数和肌群': 'Exercises, sets and muscle groups at home and at the gym',
     '力量训练（在家）': 'Strength training (home)', '力量训练（在健身馆）': 'Strength training (gym)',
     '哑铃配重：每只15 lb。': 'Dumbbells: 15 lb each.',
@@ -108,7 +106,7 @@
     '营养与训练统计': 'Nutrition & training statistics',
     '每日营养、每餐营养及每周训练量': 'Daily nutrition, meal nutrition and weekly training volume',
     '营养统计': 'Nutrition statistics', '一周营养统计': 'Weekly nutrition',
-    '热量估计（不含放纵餐）：日均摄入约1,785 kcal、消耗约2,319 ± 232 kcal、赤字约534 ± 232 kcal；对应每周摄入约12,497 kcal、消耗约16,236 ± 1,624 kcal、赤字约3,739 ± 1,624 kcal。按7,700 kcal/kg粗算，理论脂肪等价值约减0.49 ± 0.21 kg／周，不等于实际体重下降量。': 'Calorie estimate (excluding treat meals): average intake about 1,785 kcal/day; expenditure about 2,319 ± 232 kcal/day; deficit about 534 ± 232 kcal/day. Weekly intake about 12,497 kcal, expenditure about 16,236 ± 1,624 kcal and deficit about 3,739 ± 1,624 kcal. Using 7,700 kcal/kg, the theoretical fat-energy equivalent is about 0.49 ± 0.21 kg/week, not the actual weight-loss prediction.',
+    '热量估计（不含放纵餐）：日均摄入约1,750 kcal、消耗约2,319 ± 232 kcal、赤字约569 ± 232 kcal；对应每周摄入约12,253 kcal、消耗约16,236 ± 1,624 kcal、赤字约3,983 ± 1,624 kcal。按7,700 kcal/kg粗算，理论脂肪等价值约减0.52 ± 0.21 kg／周，不等于实际体重下降量。': 'Calorie estimate (excluding treat meals): average intake about 1,750 kcal/day; expenditure about 2,319 ± 232 kcal/day; deficit about 569 ± 232 kcal/day. Weekly intake about 12,253 kcal, expenditure about 16,236 ± 1,624 kcal and deficit about 3,983 ± 1,624 kcal. Using 7,700 kcal/kg, the theoretical fat-energy equivalent is about 0.52 ± 0.21 kg/week, not the actual weight-loss prediction.',
     '运动按扣除同期基础消耗后的净增加量计入，避免重复计算；日常加成不代表单独测得的食物热效应。': 'Exercise is counted as net expenditure above resting energy use to avoid double counting. The daily activity allowance is not a separately measured thermic effect of food.',
     '实际身体、饮食、训练和睡眠数据请在': 'Enter actual body, diet, training and sleep data on the',
     '页面填写。': 'page.',
@@ -192,7 +190,8 @@
     '1支50 mL': 'One 50 mL bar', '1支60 mL': 'One 60 mL bar',
     '1份': 'One serving',
     '已购买': 'Bought: ',
-    '8块装；按830 g / 盒估算': 'Eight-piece pack; estimated at 830 g per pack',
+    '8块装；每盒约0.51–0.76 kg，营养按635 g估算': 'Eight pieces per pack; about 0.51–0.76 kg, with nutrition estimated at 635 g',
+    '约$11.42（按实际重量计价）': 'about $11.42 (final price by weight)',
     '12个 / 盒': '12 eggs per pack', '2桶 / 周': '2 cartons / week',
     '12罐×355 mL / 箱': '12 cans × 355 mL / case', '1箱 / 周': '1 case / week',
     '1.3 kg / 盘': '1.3 kg / tray', '1盘 / 周': '1 tray / week',
@@ -209,12 +208,12 @@
     '本次食材就绪': 'Ingredients ready', '预热': 'Preheat', '整颗烤土豆': 'Whole roasted potatoes',
     '煮锅一：烧水': 'Saucepan 1: boil water', '煮锅二：烧水': 'Saucepan 2: boil water',
     '小炒锅：蘑菇': 'Small wok: mushrooms', '大炒锅：菠菜': 'Large wok: spinach',
-    '抹酱、装馅、卷起': 'Spread sauce, fill and roll', '毛豆微波加热': 'Microwave edamame',
+    '抹酱、装馅、卷起': 'Spread sauce, fill and roll',
     '收尾：分盘、入冰箱、清洗': 'Finish: portion, refrigerate and clean',
     '煮锅一': 'Saucepan 1', '煮锅二': 'Saucepan 2', '小炒锅': 'Small wok', '大炒锅': 'Large wok',
     '1放2个': 'Two in meal 1', '3、4、6、7各1块': 'One each in meals 3, 4, 6 and 7',
     '1放2块；3、6各1块': 'Two in meal 1; one each in meals 3 and 6',
-    '毛豆（卷饼馅）': 'Edamame (wrap filling)',
+    '1、4、7各1/3': 'One-third each in meals 1, 4 and 7',
     '站姿哑铃肩推': 'standing dumbbell shoulder press',
     '单臂支撑哑铃划船': 'supported single-arm dumbbell row',
     '哑铃肩推': 'dumbbell shoulder press', '哑铃划船': 'dumbbell row', '每侧': 'per side',
@@ -256,11 +255,11 @@
     '白米饭': 'white rice', '白米': 'white rice', '意面': 'pasta', '番茄': 'tomato',
     '烤土豆': 'roasted potatoes', '土豆': 'potatoes', '全麦卷饼皮': 'whole-wheat tortillas', '卷饼皮': 'tortilla',
     '蘑菇': 'mushrooms', '嫩菠菜': 'baby spinach', '菠菜': 'spinach',
-    '豌豆+胡萝卜': 'peas + carrots', '豌豆': 'peas', '胡萝卜': 'carrots', '毛豆': 'edamame',
+    '豌豆+胡萝卜': 'peas + carrots', '豌豆': 'peas', '胡萝卜': 'carrots',
     '番茄意面酱': 'tomato pasta sauce', '新鲜混合水果盘': 'fresh mixed-fruit tray',
     '完整奇异果': 'whole kiwis', '奇异果': 'kiwis', '高纤维谷物早餐': 'high-fibre cereal',
     '无糖豆奶': 'unsweetened soy milk', 'Fresca无糖汽水': 'Fresca zero-sugar soda',
-    'Chipotle蛋黄酱': 'chipotle mayonnaise', '冷冻去壳毛豆': 'frozen shelled edamame',
+    'Chipotle蛋黄酱': 'chipotle mayonnaise',
     '黑胡椒': 'black pepper', '蒜粉': 'garlic powder', '洋葱粉': 'onion powder',
     '红椒粉': 'paprika', '干牛至叶': 'dried oregano', '意式混合香草': 'Italian herb blend',
     '橄榄油': 'olive oil', '减盐酱油': 'reduced-sodium soy sauce', '酱油': 'soy sauce',
@@ -379,6 +378,16 @@
     return result;
   }
 
+  function translateMermaid(source) {
+    return source.split('\n').map((line) => line
+      .replace(/\[([^\]\n]+)\]|\{([^}\n]+)\}/g, (match, box, decision) => {
+        const label = box ?? decision;
+        const translated = translate(label).replaceAll('"', '&quot;');
+        return box === undefined ? `{\"${translated}\"}` : `[\"${translated}\"]`;
+      })
+      .replace(/\|([^|\n]+)\|/g, (match, label) => `|${translate(label)}|`)).join('\n');
+  }
+
   function apply(root = document.body) {
     if (language !== 'en') return;
     const walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT);
@@ -388,7 +397,8 @@
       if (node.parentElement?.closest('script,style,svg')) continue;
       if (!originalText.has(node)) originalText.set(node, node.textContent);
       const source = originalText.get(node);
-      if (hasChinese.test(source)) node.textContent = translate(source);
+      if (hasChinese.test(source)) node.textContent = node.parentElement?.matches('code.language-mermaid')
+        ? translateMermaid(source) : translate(source);
     }
     for (const element of root.querySelectorAll('[aria-label],[placeholder],[title],img[alt]')) {
       if (!originalAttributes.has(element)) originalAttributes.set(element, {});
