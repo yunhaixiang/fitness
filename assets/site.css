@@ -227,7 +227,7 @@ img{max-width:100%;height:auto}
 .visual-training-progress{margin-left:auto;color:var(--accent);font-weight:700}
 .visual-training-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
 .strength-mode-panel[hidden]{display:none!important}
-.strength-mode-panel #home-dumbbell-note{margin:0 0 14px;color:var(--muted);font-size:13px}
+.strength-mode-panel #gym-weight-note{margin:0 0 14px;color:var(--muted);font-size:13px}
 .strength-switch{margin-bottom:4px}
 .visual-exercise-card{display:grid;grid-template-columns:142px minmax(0,1fr);align-items:start;gap:14px;padding:10px!important}
 .visual-exercise-media{position:relative;display:block;aspect-ratio:16/9;overflow:hidden;border:1px solid #3b5860;border-radius:7px;background:linear-gradient(135deg,#1b353d,#354550)}
@@ -244,6 +244,7 @@ img{max-width:100%;height:auto}
 .visual-exercise-name a{text-decoration:none}
 .visual-exercise-name{color:var(--accent)}
 .visual-exercise-dose{display:block;font-size:13px}
+.visual-exercise-weight{display:block;margin-top:3px;color:var(--accent);font-size:12px}
 .visual-exercise-muscles{font-size:11px;color:var(--muted);margin:6px 0 10px!important}
 .visual-set-list{display:flex;flex-wrap:wrap;gap:7px}
 .visual-set-list label{display:flex;align-items:center;gap:5px;background:#2b3b44;border:1px solid var(--line);border-radius:6px;padding:4px 8px;font-size:12px;cursor:pointer}

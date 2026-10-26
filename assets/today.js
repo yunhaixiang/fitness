@@ -89,7 +89,12 @@
         name.target = '_blank';
         name.rel = 'noopener noreferrer';
       }
-      item.append(name, element('span', '', translated(cell(row, offset + 1))));
+      const kind = action?.dataset.weightKind;
+      const suffix = kind === 'bodyweight' ? label('（自重）', ' (bodyweight)')
+        : kind === 'each' ? label('／只', ' per dumbbell')
+        : kind === 'plates' ? label('（加片总重）', ' (total plates)') : '';
+      const weight = `${label('配重：', 'Weight: ')}${action?.dataset.weight} lbs${suffix}`;
+      item.append(name, element('span', '', `${translated(cell(row, offset + 1))} · ${weight}`));
       exercises.append(item);
     }
     trainingRoot.append(exercises);

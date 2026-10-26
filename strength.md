@@ -12,7 +12,6 @@ strength: true
 
 ## 力量训练（在家）
 
-<p id="home-dumbbell-note">哑铃配重：每只15 lb。</p>
 
 
 
@@ -21,6 +20,8 @@ strength: true
 {% include strength-home-table.html %}
 
 ## 力量训练（在健身馆）
+
+<p id="gym-weight-note">配重为试练起点；史密斯机数字是加片总重量。首次使用按动作稳定程度调整。</p>
 
 
 

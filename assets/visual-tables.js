@@ -155,13 +155,13 @@
       toolbar.append(button);
     }
     root.append(toolbar);
-    const note = document.querySelector('#home-dumbbell-note');
+    const gymWeightNote = document.querySelector('#gym-weight-note');
     for (const [index, [mode]] of modes.entries()) {
       const table = tables[index];
       const panel = el('section', 'strength-mode-panel');
       panel.id = `strength-${mode}`;
       panel.setAttribute('aria-label', tr(modes[index][1], modes[index][2]));
-      if (mode === 'home' && note) panel.append(note);
+      if (mode === 'gym' && gymWeightNote) panel.append(gymWeightNote);
       const stack = el('div', 'visual-training-stack');
       const sections = new Map();
       for (const [bodyIndex, body] of [...table.tBodies].entries()) {
@@ -206,12 +206,18 @@
           nameLink.rel = 'noopener noreferrer';
           name.append(nameLink);
           const dose = el('strong', 'visual-exercise-dose', val(row, offset + 1));
+          const weight = action?.dataset.weight;
+          const kind = action?.dataset.weightKind;
+          const suffix = kind === 'bodyweight' ? tr('（自重）', ' (bodyweight)')
+            : kind === 'each' ? tr('／只', ' per dumbbell')
+            : kind === 'plates' ? tr('（加片总重）', ' (total plates)') : '';
+          const weightLine = el('span', 'visual-exercise-weight', `${tr('配重：', 'Weight: ')}${weight} lbs${suffix}`);
           const sets = el('div', 'visual-set-list');
           for (const setLabel of [...row.cells[offset + 2].querySelectorAll('label')]) {
             boxes.push(setLabel.querySelector('input'));
             sets.append(setLabel);
           }
-          content.append(name, dose, el('p', 'visual-exercise-muscles', titleCase(val(row, offset + 3))), sets);
+          content.append(name, dose, weightLine, el('p', 'visual-exercise-muscles', titleCase(val(row, offset + 3))), sets);
           card.append(media, content);
           list.append(card);
         }
