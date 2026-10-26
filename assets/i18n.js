@@ -7,7 +7,7 @@
   // Longer entries take precedence. This keeps the plan's numbers and product links intact.
   const translations = {
     '总览': 'Overview', '饮食': 'Diet', '购物': 'Shopping', '做饭': 'Cooking', '力量': 'Strength',
-    '有氧': 'Cardio', '睡眠': 'Sleep', '统计': 'Stats', '记录': 'Log',
+    '有氧': 'Cardio', '睡眠': 'Sleep', '统计': 'Stats', '营养统计': 'Nutrition', '训练量': 'Volume', '记录': 'Log',
     '跳到内容': 'Skip to content', '我的健身计划': 'My fitness plan', '主导航': 'Main navigation',
     '快速打开计划、备餐和记录。': 'Quick access to my plan, meal prep and records.',
     '按需要打开，不必从长文里寻找。': 'Open what I need without searching through one long document.',
@@ -20,6 +20,12 @@
     'HIIT、游泳和跑步机选项': 'HIIT, swimming and treadmill options',
     '晚间安排、瑜伽和冥想': 'Evening routine, yoga and meditation',
     '数据': 'Data', '计划统计': 'Plan statistics', '热量、营养和每周训练量估计': 'Calories, nutrition and estimated weekly training volume',
+    '摄入、消耗和每餐营养': 'Intake, expenditure and nutrition per meal',
+    '训练量统计': 'Training volume', '在家与健身馆的肌群图和每周组数': 'Muscle maps and weekly sets for home and gym',
+    '在家与健身馆的每周肌群训练组数': 'Weekly sets per muscle group at home and in the gym',
+    '图中数字是每周主要训练组数；辅助动作另列，不折算为主要组数。点击肌群可查看具体动作。': 'The numbers show weekly primary sets. Secondary work is listed separately and is not counted as equivalent primary sets. Select a muscle group to see the exercises.',
+    '查看每周肌群训练量 →': 'View weekly muscle volume →',
+    '每日营养与每餐营养': 'Daily nutrition and nutrition per meal',
     '实际记录': 'Actual records', '身体、饮食、训练、有氧与睡眠趋势': 'Body, diet, training, cardio and sleep trends',
     '实际记录只保存在当前浏览器，请定期在记录页导出备份。': 'Records are saved in this browser only. Export backups regularly from the Log page.',
     '每周餐单、睡前水果加餐与放纵餐参考': 'Weekly meals, bedtime fruit snack and treat-meal reference',

@@ -8,7 +8,8 @@
 - `strength.md`：在家与健身馆力量训练
 - `cardio.md`：每周安排与有氧选项
 - `sleep.md`：作息与睡前流程
-- `stats.md`：计划中的营养和训练量估计
+- `stats.md`：营养和热量估计
+- `volume.md`：在家与健身馆的每周肌群图和训练组数
 - `tracker.html`：实际记录入口
 
 网页使用 GitHub Pages 的 Jekyll 构建，不需要单独的数据库或 npm 构建。改动上述文件后提交、推送即可更新网站。
