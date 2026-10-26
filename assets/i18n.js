@@ -76,7 +76,6 @@
     '在家与健身馆的动作、组数和肌群': 'Exercises, sets and muscle groups at home and at the gym',
     '力量训练（在家）': 'Strength training (home)', '力量训练（在健身馆）': 'Strength training (gym)',
     '配重为试练起点；史密斯机数字是加片总重量。首次使用按动作稳定程度调整。': 'Weights are starting points for a trial session. Smith machine values are the total weight of added plates. Adjust them so you can perform each movement with control.',
-    '最少': 'at least',
     '腹直肌；侧腹辅助': 'rectus abdominis; obliques (secondary)',
     '有氧与每周安排': 'Cardio & weekly schedule', 'HIIT、游泳与跑步机三选一': 'Choose HIIT, swimming or treadmill',
     '每周安排与有氧': 'Weekly training schedule & cardio',
@@ -382,7 +381,8 @@
     let result = source;
     for (const key of keys) if (result.includes(key)) result = result.replaceAll(key, translations[key]);
     for (const key of termKeys) if (result.includes(key)) result = result.replaceAll(key, terms[key]);
-    result = result.replace(/(\d+)\s*组/g, '$1 sets').replace(/(\d+)\s*次/g, '$1 reps')
+    result = result.replace(/最少\s*(\d+)/g, 'at least $1')
+      .replace(/(\d+)\s*组/g, '$1 sets').replace(/(\d+)\s*次/g, '$1 reps')
       .replace(/(\d+)\s*分钟/g, '$1 min').replace(/(\d+)\s*茶匙/g, '$1 tsp')
       .replace(/(\d+)\s*盒/g, '$1 packs').replace(/(\d+)\s*袋/g, '$1 bags')
       .replace(/(\d+)\s*罐/g, '$1 cans').replace(/(\d+)\s*瓶/g, '$1 bottles')
