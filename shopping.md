@@ -79,9 +79,9 @@ visual: true
 </tr>
 <tr>
 <td>嫩菠菜</td>
-<td><a href="https://www.walmart.ca/en/ip/baby-spinach-142g/1Z471AOSG7GL">Your Fresh Market Baby Spinach</a><br>142 g / 盒</td>
-<td style="text-align: right;">2盒 / 周</td>
-<td style="text-align: right;">$6.88</td>
+<td><a href="https://www.walmart.ca/en/ip/your-fresh-market-spinach/6000206422106">Your Fresh Market Spinach</a><br>227 g / 袋</td>
+<td style="text-align: right;">2袋 / 周</td>
+<td style="text-align: right;">约$4.76</td>
 </tr>
 <tr>
 <td>番茄意面酱</td>
@@ -201,7 +201,7 @@ visual: true
 <td>每周合计</td>
 <td>—</td>
 <td style="text-align: right;">—</td>
-<td style="text-align: right;">约$162</td>
+<td style="text-align: right;">约$160</td>
 </tr>
 </tbody>
 </table>

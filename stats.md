@@ -14,16 +14,16 @@ visual: true
     <div class="nutrition-ring" aria-label="日均摄入占消耗75%，赤字25%">
       <div class="nutrition-ring-center">
         <span>日均赤字</span>
-        <strong>578 <small>kcal／天</small></strong>
+        <strong>572 <small>kcal／天</small></strong>
       </div>
     </div>
     <div class="nutrition-overview-key">
       <p class="nutrition-overview-eyebrow">能量概览 · 不含放纵餐</p>
-      <div class="nutrition-key-row nutrition-key-intake"><span>日均摄入</span><strong>1,741 <small>kcal／天</small></strong></div>
+      <div class="nutrition-key-row nutrition-key-intake"><span>日均摄入</span><strong>1,747 <small>kcal／天</small></strong></div>
       <div class="nutrition-key-row nutrition-key-burn"><span>日均消耗</span><strong>2,319 <small>kcal／天</small></strong></div>
-      <div class="nutrition-key-row nutrition-key-deficit"><span>日均赤字</span><strong>578 <small>kcal／天</small></strong></div>
-      <div class="nutrition-key-row"><span>每周赤字</span><strong>4,048 <small>kcal</small></strong></div>
-      <div class="nutrition-key-row"><span>每周赤字等价脂肪</span><strong>0.53 <small>kg／周</small></strong></div>
+      <div class="nutrition-key-row nutrition-key-deficit"><span>日均赤字</span><strong>572 <small>kcal／天</small></strong></div>
+      <div class="nutrition-key-row"><span>每周赤字</span><strong>4,009 <small>kcal</small></strong></div>
+      <div class="nutrition-key-row"><span>每周赤字等价脂肪</span><strong>0.52 <small>kg／周</small></strong></div>
     </div>
   </div>
 </figure>
@@ -92,17 +92,17 @@ visual: true
 <tbody>
 <tr>
 <td>热量</td>
-<td style="text-align: right;">1,741 kcal</td>
+<td style="text-align: right;">1,747 kcal</td>
 <td>1,800–2,000 kcal</td>
 </tr>
 <tr>
 <td>蛋白质</td>
-<td style="text-align: right;">134.8 g</td>
+<td style="text-align: right;">135.5 g</td>
 <td>130–165 g</td>
 </tr>
 <tr>
 <td>总脂肪</td>
-<td style="text-align: right;">63.6 g</td>
+<td style="text-align: right;">63.7 g</td>
 <td>45–65 g</td>
 </tr>
 <tr>
@@ -112,22 +112,22 @@ visual: true
 </tr>
 <tr>
 <td>饱和脂肪占总热量</td>
-<td style="text-align: right;">8.0%</td>
+<td style="text-align: right;">7.9%</td>
 <td>≤6%</td>
 </tr>
 <tr>
 <td>碳水化合物</td>
-<td style="text-align: right;">174.1 g</td>
+<td style="text-align: right;">175.0 g</td>
 <td>180–240 g</td>
 </tr>
 <tr>
 <td>膳食纤维</td>
-<td style="text-align: right;">37.7 g</td>
+<td style="text-align: right;">38.2 g</td>
 <td>30–38 g</td>
 </tr>
 <tr>
 <td>总糖</td>
-<td style="text-align: right;">43.8 g</td>
+<td style="text-align: right;">43.9 g</td>
 <td>无单独上限；重点控制添加糖</td>
 </tr>
 <tr>
@@ -142,22 +142,22 @@ visual: true
 </tr>
 <tr>
 <td>钠</td>
-<td style="text-align: right;">1,801 mg</td>
+<td style="text-align: right;">1,820 mg</td>
 <td>≤2,300 mg</td>
 </tr>
 <tr>
 <td>钙</td>
-<td style="text-align: right;">1,100 mg</td>
+<td style="text-align: right;">1,124 mg</td>
 <td>1,000 mg</td>
 </tr>
 <tr>
 <td>铁</td>
-<td style="text-align: right;">16.2 mg</td>
+<td style="text-align: right;">16.9 mg</td>
 <td>8 mg</td>
 </tr>
 <tr>
 <td>钾</td>
-<td style="text-align: right;">4,662 mg</td>
+<td style="text-align: right;">4,798 mg</td>
 <td>≥3,400 mg</td>
 </tr>
 <tr>
