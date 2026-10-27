@@ -130,7 +130,10 @@
         addIngredients(card, [
           ['主食', 'Starch', value(row, 3)],
           ['蛋白质', 'Protein', value(row, 4)],
-          ['蔬菜', 'Vegetables', value(row, 5)]
+          ['蔬菜', 'Vegetables', value(row, 5)],
+          ['饮料', 'Drink', dayIndex === 6
+            ? label('无糖豆奶 355 mL', '355 mL unsweetened soy milk')
+            : label('Fresca 1罐（355 mL）', '1 can of Fresca (355 mL)')]
         ]);
         const meal = nutrition[row.dataset.nutritionKey];
         if (meal) addNutrition(card, meal);

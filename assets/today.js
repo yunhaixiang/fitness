@@ -46,7 +46,9 @@
     for (const [kind, zh, english] of [['lunch', '午餐', 'Lunch'], ['dinner', '晚餐', 'Dinner']]) {
       const row = rows.find((item) => cell(item, 2) === zh);
       if (!row) continue;
-      const food = [3, 4, 5].map((index) => translated(cell(row, index))).filter(Boolean).join(' · ');
+      const drink = day === 6 ? label('无糖豆奶 355 mL', '355 mL unsweetened soy milk')
+        : label('Fresca 1罐（355 mL）', '1 can of Fresca (355 mL)');
+      const food = [...[3, 4, 5].map((index) => translated(cell(row, index))).filter(Boolean), drink].join(' · ');
       addMeal(kind, label(zh, english), food, cell(row, 6));
     }
     addMeal('snack', label('加餐', 'Snack'), en ? snack.foodEn : snack.foodZh, snack.kcal);

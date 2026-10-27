@@ -12,6 +12,7 @@ diet: true
 <noscript>
 <p>周日—周二早餐：{{ site.data.meal_nutrition.meals.fruit_breakfast.foodZh }}；加餐（23:00）：{{ site.data.meal_nutrition.meals.fruit_snack.foodZh }}。</p>
 <p>周三—周六早餐：{{ site.data.meal_nutrition.meals.kiwi_breakfast.foodZh }}；加餐（23:00）：{{ site.data.meal_nutrition.meals.kiwi_snack.foodZh }}。</p>
+<p>午晚餐饮料：周日—周五每餐 Fresca 1罐（355 mL）；周六午晚餐每餐无糖豆奶 355 mL。</p>
 </noscript>
 
 

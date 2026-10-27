@@ -9,6 +9,8 @@
     "wrap": {"label": "周日晚／周四午", "kcal": "627", "protein": "49.0", "fat": "32.1", "saturatedFat": "7.7", "carbs": "36.3", "fibre": "4.5", "sugar": "2.8", "cholesterol": "535", "sodium": "728", "calcium": "117", "iron": "5.0", "potassium": "1,066"},
     "rice": {"label": "周一午／周二晚／周四晚／周六午", "kcal": "669", "protein": "61.8", "fat": "24.5", "saturatedFat": "8.2", "carbs": "51.7", "fibre": "5.0", "sugar": "3.8", "cholesterol": "594", "sodium": "685", "calcium": "121", "iron": "3.5", "potassium": "884"},
     "pasta": {"label": "周一晚／周三午／周五午／周六晚", "kcal": "638", "protein": "56.4", "fat": "24.3", "saturatedFat": "5.3", "carbs": "47.2", "fibre": "4.1", "sugar": "7.4", "cholesterol": "156", "sodium": "665", "calcium": "71", "iron": "3.5", "potassium": "1,462"},
-    "drinks": {"label": "餐外饮品（日均）", "kcal": "97", "protein": "8.6", "fat": "4.9", "saturatedFat": "0.5", "carbs": "4.3", "fibre": "2.2", "sugar": "1.1", "cholesterol": "0", "sodium": "97", "calcium": "324", "iron": "1.1", "potassium": "378"}
+    "rice_soy": {"label": "周六午餐（含豆奶）", "kcal": "797", "protein": "73.2", "fat": "30.9", "saturatedFat": "8.9", "carbs": "57.4", "fibre": "7.8", "sugar": "5.2", "cholesterol": "594", "sodium": "813", "calcium": "547", "iron": "4.9", "potassium": "1,381"},
+    "pasta_soy": {"label": "周六晚餐（含豆奶）", "kcal": "766", "protein": "67.8", "fat": "30.7", "saturatedFat": "6.0", "carbs": "52.9", "fibre": "6.9", "sugar": "8.8", "cholesterol": "156", "sodium": "793", "calcium": "497", "iron": "4.9", "potassium": "1,959"},
+    "drinks": {"label": "其余餐外豆奶（日均）", "kcal": "61", "protein": "5.4", "fat": "3.0", "saturatedFat": "0.3", "carbs": "2.7", "fibre": "1.3", "sugar": "0.7", "cholesterol": "0", "sodium": "61", "calcium": "202", "iron": "0.7", "potassium": "236"}
   }
 }
