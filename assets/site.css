@@ -250,7 +250,7 @@ img{max-width:100%;height:auto}
 .visual-set-list label{display:flex;align-items:center;gap:5px;background:#2b3b44;border:1px solid var(--line);border-radius:6px;padding:4px 8px;font-size:12px;cursor:pointer}
 .visual-set-list label:has(input:checked){background:#294a48;color:var(--accent);border-color:#4c807b}
 .visual-set-list input{accent-color:var(--accent)}
-.visual-week-strip{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:8px;margin:13px 0 25px}
+.visual-week-strip{display:grid;grid-template-columns:repeat(7,minmax(100px,1fr));gap:8px;margin:13px 0 25px;overflow-x:auto}
 .visual-day-card{padding:12px;display:flex;flex-direction:column;gap:7px;border-top:3px solid var(--accent)}
 .visual-day-card.is-rest{border-top-color:#6e7b85;opacity:.7}
 .visual-day-name{font-size:14px;color:var(--accent)}
@@ -301,8 +301,7 @@ img{max-width:100%;height:auto}
 .record-card-fields{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:5px 12px;margin:0;font-size:12px}
 .record-card-fields dt{color:var(--muted)}
 .record-card-fields dd{margin:0;text-align:right;font-weight:650;overflow-wrap:anywhere}
-@media(max-width:1000px){.visual-week-strip{grid-template-columns:repeat(4,minmax(0,1fr))}}
-@media(max-width:760px){.visual-card-grid,.visual-training-list,.record-card-grid{grid-template-columns:1fr}.visual-nutrient-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.visual-week-strip{grid-template-columns:repeat(2,minmax(0,1fr))}.visual-timeline-item{grid-template-columns:100px minmax(0,1fr)}}
+@media(max-width:760px){.visual-card-grid,.visual-training-list,.record-card-grid{grid-template-columns:1fr}.visual-nutrient-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.visual-timeline-item{grid-template-columns:100px minmax(0,1fr)}}
 @media(max-width:440px){.visual-nutrient-grid{grid-template-columns:1fr}}
 
 .volume-intro{margin:0 0 17px;color:var(--muted);font-size:13px}
@@ -365,6 +364,6 @@ img{max-width:100%;height:auto}
 /* Show each card collection as one vertical list at every screen width. */
 .today-grid,.link-grid,.link-grid.food-link-grid,.metrics-strip,
 .diet-meal-list,.diet-treat-grid,.visual-card-grid,.visual-training-list,
-.visual-nutrient-grid,.visual-week-strip,.record-card-grid,.volume-detail-grid,
+.visual-nutrient-grid,.record-card-grid,.volume-detail-grid,
 .cardio-option-grid{grid-template-columns:minmax(0,1fr)}
 .cardio-video-image{max-width:440px}
