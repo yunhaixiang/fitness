@@ -83,7 +83,7 @@
       const card = make('article', `diet-meal-card diet-kind-${snack ? 'snack' : 'breakfast'}`);
       const top = make('div', 'diet-meal-top');
       const when = make('div', 'diet-meal-when');
-      when.append(make('span', '', `${days[dayIndex]}${snack ? ' · 23:00' : ''}`));
+      when.append(make('span', '', days[dayIndex]));
       top.append(when, make('strong', 'diet-meal-kcal', `${meal.kcal} kcal`));
       card.append(top, make('h4', 'diet-meal-title', snack ? label('加餐', 'Snack') : label('早餐', 'Breakfast')));
       const food = en ? meal.foodEn : meal.foodZh;

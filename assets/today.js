@@ -49,7 +49,7 @@
       const food = [3, 4, 5].map((index) => translated(cell(row, index))).filter(Boolean).join(' · ');
       addMeal(kind, label(zh, english), food, cell(row, 6));
     }
-    addMeal('snack', label('加餐 · 23:00', 'Snack · 23:00'), en ? snack.foodEn : snack.foodZh, snack.kcal);
+    addMeal('snack', label('加餐', 'Snack'), en ? snack.foodEn : snack.foodZh, snack.kcal);
   }
 
   function renderTraining(day) {
