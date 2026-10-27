@@ -20,7 +20,7 @@
       ['sets', '组数', 'number'], ['reps', '每组次数', 'text'], ['weightLb', '单只哑铃／器械负重 lb', 'number'], ['note', '备注', 'text']
     ] },
     cardio: { name: '有氧训练', description: '记录实际完成量；热量是估计值，不必每次都填。', fields: [
-      ['date', '日期', 'date', true], ['activity', '项目', 'select', true, ['HIIT', '游泳', '跑步机', '其他']],
+      ['date', '日期', 'date', true], ['activity', '项目', 'select', true, ['HIIT', '游泳', '跑步机', '健身馆自行车', '其他']],
       ['minutes', '时长 min', 'number'], ['distance', '距离 km', 'number'], ['kcal', '估计净消耗 kcal', 'number'], ['note', '备注', 'text']
     ], chart: [['minutes', '有氧时长 min']] }
   };

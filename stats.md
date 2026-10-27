@@ -58,7 +58,7 @@ visual: true
 <td style="text-align: right;">64.42</td>
 </tr>
 <tr>
-<td>有氧：HIIT、游泳或跑步机，4次／周（净增加）</td>
+<td>有氧：HIIT、游泳、跑步机或健身馆自行车，4次／周（净增加）</td>
 <td style="text-align: right;">800.00</td>
 <td style="text-align: right;">114.29</td>
 </tr>
