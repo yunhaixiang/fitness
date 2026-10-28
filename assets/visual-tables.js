@@ -461,14 +461,14 @@
     };
     const positions = {
       front: {
-        chest: [14, 22.7], 'front-delts': [73, 16.5], 'side-delts': [82, 26.4],
-        biceps: [5, 34.5], forearms: [5, 48.8], abs: [82, 39.7],
-        obliques: [83, 48.8], quads: [7, 68.5]
+        chest: ['left', 25], 'front-delts': ['right', 16], 'side-delts': ['right', 28],
+        biceps: ['left', 36], forearms: ['left', 49], abs: ['right', 42],
+        obliques: ['right', 53], quads: ['left', 69]
       },
       back: {
-        'rear-delts': [8, 22.8], traps: [75, 18.7], lats: [8, 37.7],
-        triceps: [83, 33.5], 'lower-back': [83, 48.4], glutes: [8, 59.4],
-        hamstrings: [80, 69.3], calves: [9, 82.3]
+        'rear-delts': ['left', 22], traps: ['right', 17], lats: ['left', 38],
+        triceps: ['right', 34], 'lower-back': ['right', 49], glutes: ['left', 59],
+        hamstrings: ['right', 69], calves: ['left', 82]
       }
     };
     const primarySource = (row) => {
@@ -559,8 +559,8 @@
       for (const side of ['front', 'back']) {
         const figure = el('figure', 'volume-photo');
         const image = el('img');
-        image.src = new URL(`assets/images/fitness-muscles-${side}-transparent.webp`, siteRoot).href;
-        image.alt = tr(side === 'front' ? '主要肌群正面图' : '主要肌群背面图', side === 'front' ? 'Front muscle diagram' : 'Back muscle diagram');
+        image.src = new URL(`assets/images/fitness-anatomy-${side}.webp`, siteRoot).href;
+        image.alt = tr(side === 'front' ? '正面肌群示意图' : '背面肌群示意图', side === 'front' ? 'Front muscle diagram' : 'Back muscle diagram');
         image.width = 1024;
         image.height = 1536;
         figure.append(image);
@@ -569,10 +569,13 @@
           const position = positions[side][key];
           if (!position) continue;
           const count = primaryReps(row, mode);
-          const badge = el('button', 'volume-photo-badge', count ? String(count) : '—');
+          const badge = el('button', 'volume-photo-badge');
           badge.type = 'button';
-          badge.style.left = `${position[0]}%`;
+          badge.classList.add(`is-${position[0]}`);
+          badge.style[position[0]] = '0';
           badge.style.top = `${position[1]}%`;
+          badge.append(el('span', 'volume-photo-name', tr(names[key], englishName(row))),
+            el('span', 'volume-photo-value', count ? dose(count, key) : tr('仅辅助', 'Indirect')));
           badge.setAttribute('aria-label', `${tr(names[key], englishName(row))}: ${count ? dose(count, key) : tr('仅辅助刺激', 'Secondary Work Only')}. ${tr('查看动作', 'View exercises')}`);
           if (count === 0) badge.classList.add('is-indirect');
           badge.addEventListener('click', () => {

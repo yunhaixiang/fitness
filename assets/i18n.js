@@ -25,7 +25,7 @@
     '摄入、消耗构成和营养指标': 'Calories Eaten, Calories Burned and Nutrients',
     '训练量统计': 'Training volume', '在家与健身馆的肌群图和每周组数': 'Muscle maps and weekly sets for home and gym',
     '在家与健身馆的肌群训练量和动作明细': 'Weekly Muscle Training Volume and Exercises at Home and at the Gym',
-    '训练量按每组最低次数计算：主要动作的组数 × 最低次数，左右侧动作按每侧计算。辅助刺激单独列出。点击图上的数字可定位到下方肌群卡片。': 'Training volume is the number of primary sets multiplied by the minimum reps per set. For one-sided exercises, reps are counted per side. Secondary work is listed separately. Select a number on the diagram to jump to that muscle group.',
+    '训练量按每组最低次数计算：主要动作的组数 × 最低次数，左右侧动作按每侧计算。辅助刺激单独列出。点击图上的肌群标签可定位到下方卡片。': 'Training volume is the number of primary sets multiplied by the minimum reps per set. For one-sided exercises, reps are counted per side. Secondary work is listed separately. Select a muscle label on the diagram to jump to its card.',
     '每日营养与消耗构成': 'Daily Nutrition and Calories Burned',
     '实际记录': 'Actual records', '身体、饮食、力量和有氧趋势': 'Body, Diet, Strength and Cardio Trends',
     '实际记录只保存在当前浏览器，请定期在记录页导出备份。': 'Records are saved in this browser only. Export backups regularly from the Log page.',
