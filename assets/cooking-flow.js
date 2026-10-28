@@ -216,4 +216,23 @@
     source.hidden = true;
     source.after(grid);
   }
+
+  const page = root.closest('.prose');
+  if (page) {
+    const sectionGroups = {
+      dependencies: 'finish', portions: 'finish', cold: 'cold', rice: 'rice',
+      oven: 'oven', 'air-fryer': 'air', 'pot-one': 'pots', 'pot-two': 'pots',
+      'small-wok': 'small-wok', 'large-wok': 'large-wok', wraps: 'wrap'
+    };
+    let section = null;
+    for (const child of [...page.children]) {
+      if (child.tagName === 'H2') {
+        section = create('section', `cooking-section-card cooking-flow-card-${sectionGroups[child.id] || 'finish'}`);
+        section.setAttribute('aria-labelledby', child.id);
+        page.insertBefore(section, child);
+      }
+      if (section) section.append(child);
+    }
+    page.classList.add('cooking-page-enhanced');
+  }
 })();

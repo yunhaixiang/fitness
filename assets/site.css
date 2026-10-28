@@ -505,3 +505,11 @@ html[data-theme=light] .theme-icon-moon{display:block}
 .volume-photo-connector.is-active .volume-photo-leader-line{stroke:var(--accent)}
 .nutrition-ring{background:conic-gradient(var(--accent) 0 75.1%,var(--gold) 75.1% 100%)}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.link-grid a,.visual-exercise-thumbnail{transition:none}}
+
+.prose.cooking-page-enhanced{display:grid;gap:18px;padding:0;border:0;background:none;box-shadow:none}
+.cooking-section-card{min-width:0;padding:20px 22px;border:1px solid var(--line);border-top:3px solid var(--thread-accent,var(--accent));border-radius:13px;background:linear-gradient(155deg,var(--card),var(--surface));box-shadow:var(--shadow)}
+.prose .cooking-section-card>h2{margin:0 0 16px;padding:0 0 10px;border-bottom:1px solid var(--line);border-image:none;color:var(--thread-accent,var(--accent));font-size:20px}
+.cooking-section-card>.cooking-flow{margin:0}
+.cooking-section-card>.cooking-detail-grid:last-child,.cooking-section-card>.visual-card-grid:last-child{margin-bottom:0}
+.cooking-section-card>.table-wrap:last-child{margin-bottom:0}
+@media(max-width:600px){.cooking-section-card{padding:16px 14px}.prose .cooking-section-card>h2{font-size:18px}}

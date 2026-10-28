@@ -56,7 +56,7 @@
     '半周七餐；各厨具并行': 'Seven meals per half-week; appliances run in parallel',
     '任务依赖图': 'Task dependency diagram', '厨具并行流程': 'Parallel cooking workflow', '分盘表': 'Portioning table', '分盘': 'Portioning',
     '冷冻／解冻线程': 'Freeze / thaw', '电饭煲线程': 'Rice cooker', '烤箱线程': 'Oven',
-    '空气炸锅线程': 'Air fryer', '煮锅线程': 'Saucepans', '小锅／大锅线程': 'Saucepan and Wok', '卷饼线程': 'Wrap assembly',
+    '空气炸锅线程': 'Air fryer', '煮锅一线程': 'Saucepan 1', '煮锅二线程': 'Saucepan 2', '小锅线程': 'Saucepan', '大锅线程': 'Wok', '卷饼线程': 'Wrap assembly',
     '冷冻／解冻': 'Freeze / thaw', '电饭煲': 'Rice cooker', '烤箱': 'Oven', '空气炸锅': 'Air fryer',
     '煮锅': 'Saucepans', '小锅／大锅': 'Saucepan and Wok', '卷饼': 'Wraps', '分到第几盘': 'Meal numbers',
     '前半周：冷冻后半周的鸡腿肉、鸡肉末、三文鱼和半盒排骨。': 'First half: freeze the chicken thighs, ground chicken, salmon and half-box of ribs reserved for the second half.',

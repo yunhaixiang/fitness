@@ -94,7 +94,7 @@
     refresh();
   }
 
-  if (page === 'cooking' && tables.length === 4) {
+  if (page === 'cooking' && tables.length === 5) {
     const portions = el('div', 'visual-card-grid');
     for (const row of tables[0].tBodies[0].rows) {
       const card = el('article', 'visual-card visual-portion-card');
