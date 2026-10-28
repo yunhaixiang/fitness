@@ -395,3 +395,66 @@ img{max-width:100%;height:auto}
 .diet-meal-list,.visual-training-list,.record-card-grid{grid-template-columns:minmax(0,1fr)}
 @media(max-width:760px){.visual-card-grid.visual-nutrient-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 .cardio-video-image{max-width:440px}
+
+/* Cooking workflow: select a task to reveal its direct dependencies. */
+.cooking-flow{margin:14px 0 28px}
+.cooking-flow-intro{margin:0 0 13px!important;color:var(--muted);font-size:13px}
+.cooking-flow-phases{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:9px;margin-bottom:13px}
+.cooking-flow-phase{position:relative;display:flex;align-items:center;justify-content:center;min-height:38px;padding:6px 12px;border:1px solid var(--line);border-radius:8px;background:#1b2932;color:var(--muted);font-size:12px;font-weight:700;text-align:center}
+.cooking-flow-phase-2{color:#e5bc78;border-color:#76644d;background:#332d28}
+.cooking-flow-phase-3{color:var(--accent);border-color:#557178;background:#203438}
+.cooking-flow-phase:not(:last-child)::after{content:"→";position:absolute;right:-10px;z-index:1;color:var(--muted);font-size:16px}
+.cooking-flow-detail{position:sticky;top:72px;z-index:7;max-height:38vh;overflow:auto;min-height:73px;margin:0 0 14px;padding:13px 16px;border:1px solid #557178;border-radius:10px;background:linear-gradient(125deg,#22343b,#1b2932);box-shadow:0 8px 20px #0004}
+.cooking-flow-prompt{margin:7px 0!important;color:var(--muted);font-size:13px}
+.cooking-flow-detail-top{display:flex;align-items:baseline;justify-content:space-between;gap:12px;margin-bottom:11px}
+.cooking-flow-detail-top strong{font-size:15px}
+.cooking-flow-detail-top a{font-size:12px;font-weight:700;white-space:nowrap;text-decoration:none}
+.cooking-flow-detail-top a:hover{text-decoration:underline}
+.cooking-flow-relations{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+.cooking-flow-relation{min-width:0}
+.cooking-flow-relation-label{display:block;margin-bottom:6px;color:var(--muted);font-size:11px;font-weight:700}
+.cooking-flow-chip-list{display:flex;align-items:center;flex-wrap:wrap;gap:5px}
+.cooking-flow-chip{padding:4px 8px;border:1px solid #547078;border-radius:6px;background:#273b42;color:var(--text);font-size:11px;line-height:1.4}
+.cooking-flow-chip:hover,.cooking-flow-chip:focus-visible{border-color:var(--accent);background:#315156;outline:none}
+.cooking-flow-empty,.cooking-flow-join{color:var(--muted);font-size:11px}
+.cooking-flow-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.cooking-flow-card{--thread-accent:#91d8d1;--thread-tint:#243c3e;min-width:0;padding:15px;border:1px solid var(--line);border-top:3px solid var(--thread-accent);border-radius:10px;background:#202c35;transition:border-color .15s,box-shadow .15s}
+.cooking-flow-card-cold{--thread-accent:#9ac6e2;--thread-tint:#263945}
+.cooking-flow-card-rice{--thread-accent:#e1c889;--thread-tint:#3b372d}
+.cooking-flow-card-oven{--thread-accent:#edae92;--thread-tint:#3e302e}
+.cooking-flow-card-oven{grid-column:1/-1}
+.cooking-flow-card-air{--thread-accent:#b8d4a0;--thread-tint:#2d3d31}
+.cooking-flow-card-pots{--thread-accent:#b1c8e4;--thread-tint:#2c3946}
+.cooking-flow-card-small-wok{--thread-accent:#9fceb4;--thread-tint:#2b3e35}
+.cooking-flow-card-large-wok{--thread-accent:#d5b0d8;--thread-tint:#3d3240}
+.cooking-flow-card-wrap{--thread-accent:#e3c49c;--thread-tint:#3e362d}
+.cooking-flow-card-finish{--thread-accent:#91d8d1}
+.cooking-flow-card.has-selection{border-color:var(--thread-accent);box-shadow:0 0 0 1px var(--thread-accent)}
+.cooking-flow-card.has-link{border-color:#67817e}
+.cooking-flow-card-head{display:flex;align-items:center;gap:11px;margin-bottom:13px}
+.cooking-flow-icon{flex:none;display:grid;place-items:center;width:39px;height:39px;border-radius:9px;background:var(--thread-tint);color:var(--thread-accent)}
+.cooking-flow-icon svg{width:23px;height:23px}
+.cooking-flow-card-heading{min-width:0}
+.cooking-flow-card-heading h3{margin:0!important;font-size:16px!important;line-height:1.35;color:var(--thread-accent)}
+.cooking-flow-card-heading p{margin:2px 0 0!important;color:var(--muted);font-size:11px;line-height:1.35}
+.cooking-flow-steps{display:grid;gap:6px}
+.cooking-flow-branches{display:grid;gap:6px;min-width:0}
+.cooking-flow-branches-two{grid-template-columns:repeat(2,minmax(0,1fr))}
+.cooking-flow-branches-three{grid-template-columns:repeat(3,minmax(0,1fr))}
+.cooking-flow-branch-label{display:block;color:var(--muted);font-size:10px;font-weight:700;text-align:center;line-height:1.3}
+.cooking-flow-pot-branch{display:grid;align-content:start;gap:6px;min-width:0}
+.cooking-flow-pot-label{color:var(--thread-accent);font-size:11px;font-weight:700}
+.cooking-flow-card-finish .cooking-flow-step{max-width:440px}
+.cooking-flow-step{display:flex;align-items:center;gap:9px;width:100%;min-height:52px;padding:8px 10px;border:1px solid #3e4d55;border-radius:7px;background:#1a252e;color:var(--text);text-align:left;transition:border-color .15s,background .15s}
+.cooking-flow-step:hover,.cooking-flow-step:focus-visible{border-color:var(--thread-accent);outline:none}
+.cooking-flow-step[aria-pressed=true]{border-color:var(--thread-accent);background:var(--thread-tint)}
+.cooking-flow-step.is-before{border-color:#d8bd7b;background:#39352c}
+.cooking-flow-step.is-after{border-color:#8bbdb0;background:#293c39}
+.cooking-flow-step-index{flex:none;width:24px;color:var(--thread-accent);font:650 11px/1.4 ui-monospace,SFMono-Regular,Menlo,monospace}
+.cooking-flow-step-copy{display:grid;gap:1px;min-width:0}
+.cooking-flow-step-copy strong{font-size:13px;line-height:1.3;font-weight:700}
+.cooking-flow-step-copy small{color:var(--muted);font-size:12px;line-height:1.35}
+.cooking-flow-step-arrow{margin-left:auto;color:var(--thread-accent);font-size:13px}
+@media(max-width:720px){.cooking-flow-grid{grid-template-columns:minmax(0,1fr)}.cooking-flow-relations{grid-template-columns:minmax(0,1fr)}.cooking-flow-detail-top{align-items:flex-start}.cooking-flow-card-oven{grid-column:auto}}
+@media(max-width:480px){.cooking-flow-branches-three{grid-template-columns:minmax(0,1fr)}}
+@media(max-width:430px){.cooking-flow-phase{font-size:10px;padding:5px 6px}.cooking-flow-card{padding:12px}.cooking-flow-detail{padding:12px}}

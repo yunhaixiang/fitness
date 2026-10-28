@@ -43,6 +43,7 @@
   {% if page.diet %}<script src="{{ '/assets/diet-view.js' | relative_url }}?v={{ site.time | date: '%s' }}" defer></script>{% endif %}
   {% if page.url == '/' %}<script src="{{ '/assets/today.js' | relative_url }}?v={{ site.time | date: '%s' }}" defer></script>{% endif %}
   {% if page.visual %}<script src="{{ '/assets/visual-tables.js' | relative_url }}?v={{ site.time | date: '%s' }}" defer></script>{% endif %}
+  {% if page.cooking %}<script src="{{ '/assets/cooking-flow.js' | relative_url }}?v={{ site.time | date: '%s' }}" defer></script>{% endif %}
   {% if page.strength %}<script src="{{ '/assets/strength-volume.js' | relative_url }}?v={{ site.time | date: '%s' }}" defer></script>{% endif %}
   {% if page.tracker %}<script src="{{ '/assets/tracker.js' | relative_url }}" defer></script>{% endif %}
 </body>
