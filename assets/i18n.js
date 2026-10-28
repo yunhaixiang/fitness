@@ -82,7 +82,7 @@
     '将掰碎的鸡大腿肉、水煮蛋和蘑菇放入大号卷饼皮，卷好放第1盘。': 'Put the shredded chicken thighs, broken-up boiled eggs and mushrooms into the large tortilla; roll and put in meal 1.',
     '在家与健身馆的动作、组数和肌群': 'Exercises, sets and muscle groups at home and at the gym',
     '力量训练（在家）': 'Strength training (home)', '力量训练（在健身馆）': 'Strength training (gym)',
-    '配重为试练起点；史密斯机数字是加片总重量。首次使用按动作稳定程度调整。': 'Weights are starting points for a trial session. Smith machine values are the total weight of added plates. Adjust them so you can perform each movement with control.',
+    '配重是训练量对照值；首次先用较轻重量试做，能稳定完成最少次数再逐步加重。史密斯机数字为两侧加片总重，杆重依机型。': 'These loads are targets for comparing planned volume. Start lighter, then add weight once you can complete the minimum reps with control. Smith machine values show total added plates; bar weight varies by machine.',
     '腹直肌；侧腹辅助': 'rectus abdominis; obliques (secondary)',
     '有氧与每周安排': 'Cardio & weekly schedule', 'HIIT、游泳、跑步机或健身馆自行车四选一': 'Choose HIIT, Swimming, Treadmill or Stationary Bike',
     '每周安排与有氧': 'Weekly training schedule & cardio',
