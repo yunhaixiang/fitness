@@ -32,10 +32,10 @@
     { id: 'eggs', label: ['水煮蛋', 'Boiled Eggs'], note: ['水开后约8分钟', 'About 8 min after boiling'], group: 'pots', before: ['egg-water'], link: '#cook-eggs' },
     { id: 'pasta-water', label: ['煮锅二：烧水', 'Pot 2: Boil Water'], note: ['', ''], group: 'pots', before: [], link: '#cook-pasta' },
     { id: 'pasta', label: ['意面', 'Pasta'], note: ['约8分钟', 'About 8 min'], group: 'pots', before: ['pasta-water'], link: '#cook-pasta' },
-    { id: 'mushroom', label: ['蘑菇', 'Mushrooms'], note: ['小炒锅 · 约7分钟', 'Small Wok · about 7 min'], group: 'small-wok', before: [], link: '#cook-mushroom' },
-    { id: 'spinach', label: ['菠菜', 'Spinach'], note: ['小炒锅 · 约7分钟', 'Small Wok · about 7 min'], group: 'small-wok', before: ['mushroom'], link: '#cook-spinach' },
-    { id: 'tomato', label: ['番茄意面', 'Tomato Pasta'], note: ['小炒锅 · 酱汁与意面', 'Small Wok · sauce and pasta'], group: 'small-wok', before: ['spinach', 'pasta'], link: '#cook-tomato' },
-    { id: 'ground', label: ['鸡肉末与炒蛋', 'Ground Chicken and Eggs'], note: ['大炒锅 · 豌豆与胡萝卜', 'Large Wok · peas and carrots'], group: 'large-wok', before: ['ready'], link: '#cook-ground' },
+    { id: 'mushroom', label: ['蘑菇', 'Mushrooms'], note: ['小锅 · 约7分钟', 'Saucepan · about 7 min'], group: 'small-wok', before: [], link: '#cook-mushroom' },
+    { id: 'spinach', label: ['菠菜', 'Spinach'], note: ['小锅 · 约7分钟', 'Saucepan · about 7 min'], group: 'small-wok', before: ['mushroom'], link: '#cook-spinach' },
+    { id: 'tomato', label: ['番茄意面', 'Tomato Pasta'], note: ['小锅 · 酱汁与意面', 'Saucepan · sauce and pasta'], group: 'small-wok', before: ['spinach', 'pasta'], link: '#cook-tomato' },
+    { id: 'ground', label: ['鸡肉末与炒蛋', 'Ground Chicken and Eggs'], note: ['大锅 · 豌豆与胡萝卜', 'Wok · peas and carrots'], group: 'large-wok', before: ['ready'], link: '#cook-ground' },
     { id: 'wrap', label: ['抹酱、装馅、卷饼', 'Sauce, Fill and Roll Wrap'], note: ['鸡腿肉、水煮蛋、蘑菇', 'Chicken, boiled eggs, mushrooms'], group: 'wrap', before: ['chicken', 'eggs', 'mushroom'], link: '#cook-wrap' },
     { id: 'finish', label: ['分盘、入冰箱、清洗', 'Portion, Refrigerate and Clean'], note: ['所有餐食完成后', 'When every component is ready'], group: 'finish', before: ['rice', 'chicken', 'potato', 'ribs', 'salmon', 'mushroom', 'spinach', 'tomato', 'ground', 'wrap'], link: '#portions' }
   ];
@@ -45,8 +45,8 @@
     { id: 'oven', icon: 'oven', title: ['烤箱', 'Oven'], hint: ['预热后处理三种食材', 'Three foods after preheating'] },
     { id: 'air', icon: 'air', title: ['空气炸锅', 'Air Fryer'], hint: ['预热后烤三文鱼', 'Salmon after preheating'] },
     { id: 'pots', icon: 'pot', title: ['煮锅一、煮锅二', 'Saucepans 1 and 2'], hint: ['鸡蛋与意面并行', 'Eggs and pasta in parallel'] },
-    { id: 'small-wok', icon: 'wok', title: ['小炒锅', 'Small Wok'], hint: ['蘑菇 → 菠菜 → 番茄意面', 'Mushrooms → spinach → tomato pasta'] },
-    { id: 'large-wok', icon: 'wok', title: ['大炒锅', 'Large Wok'], hint: ['鸡肉末、蔬菜、炒蛋', 'Ground chicken, vegetables and eggs'] },
+    { id: 'small-wok', icon: 'pot', title: ['小锅', 'Saucepan'], hint: ['蘑菇 → 菠菜 → 番茄意面', 'Mushrooms → spinach → tomato pasta'] },
+    { id: 'large-wok', icon: 'wok', title: ['大锅', 'Wok'], hint: ['鸡肉末、蔬菜、炒蛋', 'Ground chicken, vegetables and eggs'] },
     { id: 'wrap', icon: 'wrap', title: ['卷饼', 'Wrap'], hint: ['等待鸡腿肉、鸡蛋和蘑菇', 'Wait for chicken, eggs and mushrooms'] },
     { id: 'finish', icon: 'finish', title: ['收尾', 'Finish'], hint: ['全部完成后分盘', 'Portion after everything is ready'] }
   ];
@@ -196,7 +196,7 @@
     while (source && source.tagName !== 'OL' && !/^H[1-3]$/.test(source.tagName)) source = source.nextElementSibling;
     if (!source || source.tagName !== 'OL' || source.children.length !== steps.length) continue;
     const grid = create('div', 'cooking-detail-grid');
-    const iconName = group === 'pots' ? 'pot' : group.endsWith('wok') ? 'wok' : group;
+    const iconName = group === 'pots' || group === 'small-wok' ? 'pot' : group.endsWith('wok') ? 'wok' : group;
     for (const [index, entry] of steps.entries()) {
       const node = typeof entry === 'string' ? byId.get(entry) : entry;
       const card = create('article', `cooking-detail-card cooking-flow-card-${group}`);
