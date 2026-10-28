@@ -28,6 +28,8 @@
     const rows = [...table.tBodies[0].rows];
     const items = rows.filter((row) => row.querySelector('input[type="checkbox"]'));
     const shell = el('div', 'visual-shopping');
+    const total = rows.at(-1);
+    if (total && !total.querySelector('input')) shell.append(el('p', 'visual-shopping-total', titleCase(`${val(total, 1)} · ${val(total, 4)}`)));
     const overview = el('div', 'visual-shopping-overview');
     const count = el('strong', 'visual-shopping-count');
     const countLabel = el('span', '', tr('项已买', 'Items Bought'));
@@ -77,8 +79,6 @@
     };
     section(tr('每周购买', 'Weekly groceries'), weekly);
     section(tr('按需补货', 'Restock as needed'), restock);
-    const total = rows.at(-1);
-    if (total && !total.querySelector('input')) shell.append(el('p', 'visual-shopping-total', titleCase(`${val(total, 1)} · ${val(total, 4)}`)));
     mount(table, shell);
     document.querySelector('#shopping-search')?.addEventListener('input', () => {
       for (const [row, card] of cards) card.hidden = row.hidden;

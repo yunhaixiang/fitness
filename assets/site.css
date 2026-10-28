@@ -232,7 +232,7 @@ html[data-theme=light] .theme-icon-moon{display:block}
 .visual-shopping-product{font-size:12px;color:var(--muted);margin:8px 0;line-height:1.55}
 .visual-shopping-product a{color:var(--accent)}
 .visual-price{white-space:nowrap;color:var(--accent);font:700 15px/1.35 ui-monospace,SFMono-Regular,Menlo,monospace}
-.visual-shopping-total{border-top:1px solid var(--line);padding:12px 2px;margin:0!important;font-weight:700}
+.visual-shopping-total{border:1px solid var(--line);border-radius:10px;padding:14px 17px;margin:12px 0 10px!important;background:var(--card);font-weight:700}
 .visual-portion-card h3{color:var(--accent)}
 .visual-portion-card p{font:650 14px/1.45 ui-monospace,SFMono-Regular,Menlo,monospace;margin:0!important}
 .visual-season-list{display:flex;flex-wrap:wrap;gap:7px}
