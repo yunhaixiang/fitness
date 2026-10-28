@@ -291,9 +291,9 @@ img{max-width:100%;height:auto}
 .visual-nutrient-card.is-unset .visual-nutrient-track{opacity:.4}
 .visual-nutrient-card.is-unset .visual-nutrient-comparison{color:var(--muted)}
 .visual-volume-card h3 br{display:none}
-.visual-volume-line{display:grid;grid-template-columns:45px minmax(0,1fr);gap:8px;margin-top:6px;font-size:12px}
+.visual-volume-line{display:grid;grid-template-columns:76px minmax(0,1fr);gap:12px;margin-top:6px;font-size:12px;line-height:1.45}
 .visual-volume-line span{color:var(--muted)}
-.visual-volume-line strong{font-weight:550}
+.visual-volume-line strong{min-width:0;font-weight:550;overflow-wrap:anywhere}
 .record-card-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin-top:13px}
 .record-card{min-width:0;background:#202c35;border:1px solid var(--line);border-radius:9px;padding:13px 15px}
 .record-card-head{display:flex;justify-content:space-between;gap:12px;align-items:baseline;border-bottom:1px solid var(--line);padding-bottom:7px;margin-bottom:9px}
@@ -321,11 +321,11 @@ img{max-width:100%;height:auto}
 .volume-photo-badge.is-indirect{background:#576573;border-color:#576573}
 .volume-details{margin-top:15px}
 .volume-details-title{font-size:16px;line-height:1.35;margin:0 0 10px}
-.volume-detail-grid{margin:0;grid-template-columns:minmax(0,1fr)}
+.volume-detail-grid{margin:0;grid-template-columns:repeat(2,minmax(0,1fr))}
 .volume-card-dose{display:block;color:var(--accent);font:700 17px/1.2 ui-monospace,SFMono-Regular,Menlo,monospace;margin:0 0 3px}
 .volume-card-sets{display:block;margin:0 0 10px;color:var(--muted);font-size:11px}
 .visual-volume-card:focus{outline:2px solid var(--accent);outline-offset:2px}
-@media(max-width:760px){.volume-photo-grid{grid-template-columns:1fr;gap:12px}.volume-photo{width:min(100%,386px)}}
+@media(max-width:760px){.volume-photo-grid,.volume-detail-grid{grid-template-columns:1fr}.volume-photo-grid{gap:12px}.volume-photo{width:min(100%,386px)}}
 @media(max-width:520px){.volume-photo-badge{padding:4px 5px}.volume-photo-name{font-size:10px}.volume-photo-value{font-size:9px}.volume-switch{display:flex}.volume-switch-button{flex:1;min-width:0}}
 
 /* Nutrition overview */
@@ -365,10 +365,7 @@ img{max-width:100%;height:auto}
 .cardio-option-card li{padding-left:1px;margin:0 0 5px}
 @media(max-width:900px){.cardio-option-grid{grid-template-columns:none;grid-auto-flow:column;grid-auto-columns:minmax(240px,min(75vw,320px));overflow-x:auto;scroll-snap-type:x proximity;padding-bottom:6px}.cardio-option-card{scroll-snap-align:start}}
 
-/* Keep the other card collections as single-column lists. */
-.link-grid,.link-grid.food-link-grid,.metrics-strip,
-.diet-meal-list,.diet-treat-grid,.visual-card-grid,.visual-training-list,
-.record-card-grid,.volume-detail-grid{grid-template-columns:minmax(0,1fr)}
-.visual-card-grid.visual-nutrient-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
+/* Keep meal, exercise, and log sequences in reading order. */
+.diet-meal-list,.visual-training-list,.record-card-grid{grid-template-columns:minmax(0,1fr)}
 @media(max-width:760px){.visual-card-grid.visual-nutrient-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 .cardio-video-image{max-width:440px}
