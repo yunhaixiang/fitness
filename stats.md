@@ -78,7 +78,7 @@ visual: true
 
 运动按扣除同期基础消耗后的净增加量计入，避免重复计算；日常加成不代表单独测得的食物热效应。
 
-
+## 营养明细
 
 <div class="table-wrap">
 <table class="plan-table">
