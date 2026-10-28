@@ -27,16 +27,16 @@
     ['glutes', '臀部', 'Glutes'], ['quads', '大腿前侧', 'Quads'],
     ['hamstrings', '大腿后侧', 'Hamstrings'], ['calves', '小腿', 'Calves']
   ];
-  const positions = {
+  const labelSides = {
     front: {
-      chest: ['left', 25], 'front-delts': ['right', 16], 'side-delts': ['right', 28],
-      biceps: ['left', 36], forearms: ['left', 49], abs: ['right', 42],
-      obliques: ['right', 53], quads: ['left', 69]
+      chest: 'left', 'front-delts': 'right', 'side-delts': 'right',
+      biceps: 'left', forearms: 'left', abs: 'right',
+      obliques: 'right', quads: 'left'
     },
     back: {
-      'rear-delts': ['left', 22], traps: ['right', 17], lats: ['left', 38],
-      triceps: ['right', 34], 'lower-back': ['right', 49], glutes: ['left', 59],
-      hamstrings: ['right', 69], calves: ['left', 82]
+      'rear-delts': 'left', traps: 'right', lats: 'left',
+      triceps: 'right', 'lower-back': 'right', glutes: 'left',
+      hamstrings: 'right', calves: 'left'
     }
   };
   const musclePoints = {
@@ -195,13 +195,12 @@
       figure.append(image, leaders);
       const connectors = [];
       for (const [key, zh, english] of muscles) {
-        const position = positions[side][key];
-        if (!position) continue;
+        const edge = labelSides[side][key];
+        if (!edge) continue;
         const item = data[mode][key];
-        const badge = text('button', `volume-photo-badge is-${position[0]}`, '');
+        const badge = text('button', `volume-photo-badge is-${edge}`, '');
         badge.type = 'button';
-        badge.style[position[0]] = '0';
-        badge.style.top = `${position[1]}%`;
+        badge.style[edge] = '0';
         badge.append(text('span', 'volume-photo-name', tr(zh, english)));
         for (const [short, value, kind] of [[tr('主要', 'Primary'), item.primary, 'primary'], [tr('辅助', 'Secondary'), item.secondary, 'secondary'], [tr('合计', 'Total'), item.primary + item.secondary, 'total']]) {
           const line = text('span', `volume-photo-value is-${kind}`, '');
@@ -215,8 +214,8 @@
           card.focus({ preventScroll: true });
         });
         const connector = svgElement('g', 'volume-photo-connector');
-        const outline = svgElement('line', 'volume-photo-leader-outline');
-        const line = svgElement('line', 'volume-photo-leader-line');
+        const outline = svgElement('path', 'volume-photo-leader-outline');
+        const line = svgElement('path', 'volume-photo-leader-line');
         const halo = svgElement('circle', 'volume-photo-dot-halo');
         const dot = svgElement('circle', 'volume-photo-dot');
         halo.setAttribute('r', '6.5');
@@ -226,7 +225,7 @@
         for (const [event, active] of [['pointerenter', true], ['pointerleave', false], ['focus', true], ['blur', false]]) {
           badge.addEventListener(event, () => connector.classList.toggle('is-active', active));
         }
-        connectors.push({ badge, edge: position[0], point: musclePoints[side][key], outline, line, halo, dot });
+        connectors.push({ badge, edge, point: musclePoints[side][key], outline, line, halo, dot });
         figure.append(badge);
       }
       const update = () => {
@@ -234,17 +233,50 @@
         const imageRect = image.getBoundingClientRect();
         if (!figureRect.width || !imageRect.width) return;
         leaders.setAttribute('viewBox', `0 0 ${figureRect.width} ${figureRect.height}`);
+        for (const edge of ['left', 'right']) {
+          const entries = connectors.filter((item) => item.edge === edge)
+            .sort((a, b) => a.point[1] - b.point[1]);
+          const blocks = [];
+          let offset = 0;
+          entries.forEach((entry, index) => {
+            entry.height = entry.badge.getBoundingClientRect().height;
+            entry.dotY = imageRect.top - figureRect.top + entry.point[1] / 1536 * imageRect.height;
+            if (index) offset += (entries[index - 1].height + entry.height) / 2 + 8;
+            entry.offset = offset;
+            blocks.push({ start: index, end: index, sum: entry.dotY - offset, count: 1 });
+            while (blocks.length > 1) {
+              const last = blocks[blocks.length - 1];
+              const previous = blocks[blocks.length - 2];
+              if (previous.sum / previous.count <= last.sum / last.count) break;
+              previous.end = last.end;
+              previous.sum += last.sum;
+              previous.count += last.count;
+              blocks.pop();
+            }
+          });
+          for (const block of blocks) {
+            const base = block.sum / block.count;
+            for (let index = block.start; index <= block.end; index++) {
+              entries[index].center = base + entries[index].offset;
+            }
+          }
+          if (entries.length) {
+            const first = entries[0];
+            const last = entries[entries.length - 1];
+            const shift = Math.max(first.height / 2 - first.center, 0)
+              - Math.max(last.center + last.height / 2 - figureRect.height, 0);
+            for (const entry of entries) entry.badge.style.top = `${entry.center + shift - entry.height / 2}px`;
+          }
+        }
         for (const { badge, edge, point, outline, line, halo, dot } of connectors) {
           const badgeRect = badge.getBoundingClientRect();
           const x1 = imageRect.left - figureRect.left + point[0] / 1024 * imageRect.width;
           const y1 = imageRect.top - figureRect.top + point[1] / 1536 * imageRect.height;
           const x2 = (edge === 'left' ? badgeRect.right : badgeRect.left) - figureRect.left;
           const y2 = badgeRect.top - figureRect.top + badgeRect.height / 2;
+          const elbowX = x1 + (x2 - x1) * .68;
           for (const stroke of [outline, line]) {
-            stroke.setAttribute('x1', x1);
-            stroke.setAttribute('y1', y1);
-            stroke.setAttribute('x2', x2);
-            stroke.setAttribute('y2', y2);
+            stroke.setAttribute('d', `M ${x1} ${y1} L ${elbowX} ${y2} H ${x2}`);
           }
           for (const circle of [halo, dot]) {
             circle.setAttribute('cx', x1);

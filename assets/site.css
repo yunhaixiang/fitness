@@ -319,8 +319,8 @@ img{max-width:100%;height:auto}
 .volume-photo{position:relative;min-width:0;max-width:386px;margin:0 auto;overflow:visible;background:transparent;border:0}
 .volume-photo img{display:block;width:100%;height:auto}
 .volume-photo-leaders{position:absolute;inset:0;z-index:0;width:100%;height:100%;overflow:visible;pointer-events:none}
-.volume-photo-leader-outline{stroke:#071619;stroke-width:3.5;stroke-linecap:round;opacity:.9}
-.volume-photo-leader-line{stroke:#8bdcd2;stroke-width:1.5;stroke-linecap:round;opacity:.85}
+.volume-photo-leader-outline{fill:none;stroke:#071619;stroke-width:3.5;stroke-linecap:round;stroke-linejoin:round;opacity:.9}
+.volume-photo-leader-line{fill:none;stroke:#8bdcd2;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round;opacity:.85}
 .volume-photo-dot-halo{fill:#071619;opacity:.95}
 .volume-photo-dot{fill:#9ee8df;stroke:#e8fffb;stroke-width:.8}
 .volume-photo-connector.is-active .volume-photo-leader-line{stroke:#c9fff5;stroke-width:2.5;opacity:1}
