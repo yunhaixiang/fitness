@@ -62,7 +62,7 @@ visual: true
 <tr>
 <td>Fuze无糖冰茶</td>
 <td><a href="https://www.walmart.ca/en/ip/Fuze-Iced-Tea-Zero-Sugar-Lemon-Bottle/39X12Q1LJGX0">Fuze Iced Tea Zero Sugar Lemon</a><br>500 mL / 瓶</td>
-<td style="text-align: right;">1瓶 / 周（最后两顿各250 mL）</td>
+<td style="text-align: right;">1瓶 / 周</td>
 <td style="text-align: right;">$2.77</td>
 </tr>
 <tr>

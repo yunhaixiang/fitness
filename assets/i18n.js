@@ -268,7 +268,7 @@
     '无糖豆奶': 'unsweetened soy milk', 'Fresca无糖汽水': 'Fresca zero-sugar soda',
     'Fuze无糖冰茶': 'Fuze zero-sugar iced tea',
     '2桶 / 周（每天早餐和加餐各270 mL）': '2 cartons / week (270 mL with breakfast and 270 mL with the snack each day)',
-    '1瓶 / 周（最后两顿各250 mL）': '1 bottle / week (250 mL with each of the final two meals)',
+    '1瓶 / 周': '1 bottle / week',
     'Chipotle蛋黄酱': 'chipotle mayonnaise',
     '黑胡椒': 'black pepper', '蒜粉': 'garlic powder', '洋葱粉': 'onion powder',
     '红椒粉': 'paprika', '干牛至叶': 'dried oregano', '意式混合香草': 'Italian herb blend',
