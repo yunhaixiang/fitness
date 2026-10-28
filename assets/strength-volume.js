@@ -39,6 +39,18 @@
       hamstrings: ['right', 69], calves: ['left', 82]
     }
   };
+  const musclePoints = {
+    front: {
+      chest: [420, 355], 'front-delts': [660, 317], 'side-delts': [704, 355],
+      biceps: [320, 468], forearms: [261, 610], abs: [548, 520],
+      obliques: [609, 568], quads: [424, 925]
+    },
+    back: {
+      'rear-delts': [341, 345], traps: [570, 288], lats: [421, 459],
+      triceps: [708, 464], 'lower-back': [557, 555], glutes: [428, 739],
+      hamstrings: [584, 922], calves: [394, 1172]
+    }
+  };
   // An exercise contributes its full calculated load to every listed muscle.
   // These per-muscle totals are not additive across muscle groups.
   const movements = {
@@ -85,6 +97,11 @@
     const element = document.createElement(tag);
     if (className) element.className = className;
     element.textContent = value;
+    return element;
+  };
+  const svgElement = (tag, className) => {
+    const element = document.createElementNS('http://www.w3.org/2000/svg', tag);
+    element.setAttribute('class', className);
     return element;
   };
   const data = {};
@@ -135,9 +152,14 @@
   root.append(detailsSection);
 
   const siteRoot = document.querySelector('.brand')?.href || location.origin + '/';
+  let leaderObserver;
+  let updateLeaders = () => {};
+  window.addEventListener('resize', () => updateLeaders());
   function show(mode) {
+    leaderObserver?.disconnect();
     maps.replaceChildren();
     details.replaceChildren();
+    const leaderUpdates = [];
     const cards = new Map();
     for (const [key, zh, english] of muscles) {
       const item = data[mode][key];
@@ -168,7 +190,10 @@
       image.alt = tr(side === 'front' ? '正面肌群示意图' : '背面肌群示意图', side === 'front' ? 'Front Muscle Diagram' : 'Back Muscle Diagram');
       image.width = 1024;
       image.height = 1536;
-      figure.append(image);
+      const leaders = svgElement('svg', 'volume-photo-leaders');
+      leaders.setAttribute('aria-hidden', 'true');
+      figure.append(image, leaders);
+      const connectors = [];
       for (const [key, zh, english] of muscles) {
         const position = positions[side][key];
         if (!position) continue;
@@ -189,10 +214,54 @@
           card.scrollIntoView({ behavior: 'smooth', block: 'center' });
           card.focus({ preventScroll: true });
         });
+        const connector = svgElement('g', 'volume-photo-connector');
+        const outline = svgElement('line', 'volume-photo-leader-outline');
+        const line = svgElement('line', 'volume-photo-leader-line');
+        const halo = svgElement('circle', 'volume-photo-dot-halo');
+        const dot = svgElement('circle', 'volume-photo-dot');
+        halo.setAttribute('r', '6.5');
+        dot.setAttribute('r', '3.5');
+        connector.append(outline, line, halo, dot);
+        leaders.append(connector);
+        for (const [event, active] of [['pointerenter', true], ['pointerleave', false], ['focus', true], ['blur', false]]) {
+          badge.addEventListener(event, () => connector.classList.toggle('is-active', active));
+        }
+        connectors.push({ badge, edge: position[0], point: musclePoints[side][key], outline, line, halo, dot });
         figure.append(badge);
       }
+      const update = () => {
+        const figureRect = figure.getBoundingClientRect();
+        const imageRect = image.getBoundingClientRect();
+        if (!figureRect.width || !imageRect.width) return;
+        leaders.setAttribute('viewBox', `0 0 ${figureRect.width} ${figureRect.height}`);
+        for (const { badge, edge, point, outline, line, halo, dot } of connectors) {
+          const badgeRect = badge.getBoundingClientRect();
+          const x1 = imageRect.left - figureRect.left + point[0] / 1024 * imageRect.width;
+          const y1 = imageRect.top - figureRect.top + point[1] / 1536 * imageRect.height;
+          const x2 = (edge === 'left' ? badgeRect.right : badgeRect.left) - figureRect.left;
+          const y2 = badgeRect.top - figureRect.top + badgeRect.height / 2;
+          for (const stroke of [outline, line]) {
+            stroke.setAttribute('x1', x1);
+            stroke.setAttribute('y1', y1);
+            stroke.setAttribute('x2', x2);
+            stroke.setAttribute('y2', y2);
+          }
+          for (const circle of [halo, dot]) {
+            circle.setAttribute('cx', x1);
+            circle.setAttribute('cy', y1);
+          }
+        }
+      };
+      image.addEventListener('load', update);
+      leaderUpdates.push(update);
       maps.append(figure);
     }
+    updateLeaders = () => leaderUpdates.forEach((update) => update());
+    if (typeof ResizeObserver !== 'undefined') {
+      leaderObserver = new ResizeObserver(updateLeaders);
+      for (const figure of maps.children) leaderObserver.observe(figure);
+    }
+    requestAnimationFrame(updateLeaders);
   }
   const buttons = [...toolbar.querySelectorAll('.volume-switch-button')];
   buttons.forEach((button, index) => button.addEventListener('click', () => show(index === 0 ? 'home' : 'gym')));
