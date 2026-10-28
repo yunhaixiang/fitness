@@ -1,7 +1,7 @@
 ---
 layout: default
 title: 力量训练
-description: 在家与健身馆的动作、组数和肌群
+description: 在家与健身馆的肌群训练量、动作与组数
 permalink: /strength/
 visual: true
 wide: true

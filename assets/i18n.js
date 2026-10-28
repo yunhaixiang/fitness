@@ -19,6 +19,8 @@
     '做饭流程': 'Cooking workflow', '半周七餐、厨具线程、分盘表': 'Seven meals per batch, parallel cooking and portioning',
     '训练与恢复': 'Training & recovery', '力量训练': 'Strength training',
     '在家与健身馆动作、组数和视频': 'Home and gym exercises, sets and videos',
+    '肌群训练量、动作、组数和视频': 'Muscle group training volume, exercises, sets and videos',
+    '在家与健身馆的肌群训练量、动作与组数': 'Training volume, exercises and sets at home and in the gym',
     'HIIT、游泳、跑步机和健身馆自行车选项': 'HIIT, Swimming, Treadmill and Stationary Bike Options',
     '晚间安排、瑜伽和冥想': 'Evening routine, yoga and meditation',
     '数据': 'Data', '计划统计': 'Plan statistics', '热量、营养和每周训练量估计': 'Calories, nutrition and estimated weekly training volume',

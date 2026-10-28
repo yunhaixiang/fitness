@@ -6,10 +6,9 @@
 - `treats.md`：常见放纵餐的热量与赤字影响
 - `shopping.md`：独立购物清单
 - `cooking.md`：独立做饭流程
-- `strength.md`：力量页面；动作表在 `_includes/strength-home-table.html` 和 `_includes/strength-gym-table.html`
+- `strength.md`：力量与肌群训练量页面；动作表在 `_includes/strength-home-table.html` 和 `_includes/strength-gym-table.html`
 - `cardio.md`：有氧页面；每周安排表在 `_includes/cardio-weekly-table.html`
 - `stats.md`：营养和热量估计
-- `volume.md`：在家与健身馆的每周肌群图和训练组数
 - `tracker.html`：实际记录入口
 
 首页“今日”按本地日期读取上述餐单和训练表。网页使用 GitHub Pages 的 Jekyll 构建，不需要单独的数据库或 npm 构建。改动上述文件后提交、推送即可更新网站。

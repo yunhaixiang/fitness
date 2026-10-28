@@ -102,7 +102,7 @@ img{max-width:100%;height:auto}
 @media(max-width:700px){.today-grid{grid-template-columns:none;grid-auto-flow:column;grid-auto-columns:minmax(280px,min(85vw,440px));overflow-x:auto;scroll-snap-type:x proximity;padding-bottom:6px}.today-panel{scroll-snap-align:start}}
 
 .link-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}
-.link-grid.food-link-grid,.link-grid.training-link-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+.link-grid.food-link-grid,.link-grid.training-link-grid,.link-grid.data-link-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
 .link-grid a{display:flex;flex-direction:column;gap:4px;padding:17px 18px;background:var(--surface);border:1px solid var(--line);border-radius:8px;text-decoration:none;color:var(--text)}
 .link-grid a:hover{border-color:#6a9296;background:#24343d}
 .link-grid strong{font-size:15px}
@@ -187,7 +187,7 @@ img{max-width:100%;height:auto}
 .diet-treat-metric span{font-size:11px;color:var(--muted)}
 .diet-treat-metric strong{font:650 12px/1.5 ui-monospace,SFMono-Regular,Menlo,monospace;color:var(--text)}
 @media(max-width:850px){.header-inner{display:grid;grid-template-columns:1fr auto;gap:6px;padding:10px 16px}.brand{grid-column:1;margin:0}.language-switch{grid-column:2;grid-row:1}.main-nav{grid-column:1/-1}.main-nav a{padding:6px 9px}.page-container{padding:25px 16px 60px}.link-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.tracker-form{grid-template-columns:repeat(2,minmax(0,1fr))}}
-@media(max-width:600px){.link-grid.food-link-grid,.link-grid.training-link-grid{grid-template-columns:1fr}.page-container{padding:19px 12px 45px}.page-heading h1{font-size:26px}.prose{padding:17px 12px}.prose h2{font-size:19px}.dashboard-head{display:block}.dashboard-head h1{font-size:26px}.link-grid{grid-template-columns:1fr}.metrics-strip{grid-template-columns:repeat(2,minmax(0,1fr))}.tracker-intro{display:block}.tracker-card{padding:15px}.tracker-form{gap:9px}.tracker-form .wide-field{grid-column:1/-1}.utility-bar input{min-width:0;width:100%}}
+@media(max-width:600px){.link-grid.food-link-grid,.link-grid.training-link-grid,.link-grid.data-link-grid{grid-template-columns:1fr}.page-container{padding:19px 12px 45px}.page-heading h1{font-size:26px}.prose{padding:17px 12px}.prose h2{font-size:19px}.dashboard-head{display:block}.dashboard-head h1{font-size:26px}.link-grid{grid-template-columns:1fr}.metrics-strip{grid-template-columns:repeat(2,minmax(0,1fr))}.tracker-intro{display:block}.tracker-card{padding:15px}.tracker-form{gap:9px}.tracker-form .wide-field{grid-column:1/-1}.utility-bar input{min-width:0;width:100%}}
 @media(max-width:760px){.diet-meal-list,.diet-treat-grid{grid-template-columns:1fr}.weekday-tabs{grid-template-columns:repeat(4,minmax(0,1fr))}}
 .table-wrap[hidden],.visual-card[hidden]{display:none!important}
 .visual-card-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:11px;margin:13px 0 25px}
@@ -321,6 +321,27 @@ img{max-width:100%;height:auto}
 .visual-volume-card:focus{outline:2px solid var(--accent);outline-offset:2px}
 @media(max-width:760px){.volume-photo-grid,.volume-detail-grid{grid-template-columns:1fr}.volume-photo-grid{gap:12px}.volume-photo{width:min(100%,386px)}}
 @media(max-width:520px){.volume-photo-badge{padding:4px 5px}.volume-photo-name{font-size:10px}.volume-photo-value{font-size:9px}.volume-switch{display:flex}.volume-switch-button{flex:1;min-width:0}}
+
+/* Planned weight-volume overview on the Strength page. */
+.strength-volume{margin:0 0 25px}
+.strength-volume .volume-training-title{margin:0 0 10px;font-size:19px}
+.strength-volume .volume-intro{max-width:940px;line-height:1.6}
+.strength-volume .volume-photo-grid{max-width:960px;gap:18px}
+.strength-volume .volume-photo{max-width:465px}
+.strength-volume .volume-photo-badge,.strength-volume .volume-photo-badge.is-right{width:144px;max-width:40%;align-items:stretch;text-align:left;gap:2px;padding:5px 7px}
+.strength-volume .volume-photo-name{font-size:10px;line-height:1.1}
+.strength-volume .volume-photo-value{display:flex;align-items:baseline;justify-content:space-between;gap:4px;white-space:nowrap;font:700 9px/1.15 ui-monospace,SFMono-Regular,Menlo,monospace}
+.strength-volume .volume-photo-value span{color:#b8c7cc}
+.strength-volume .volume-photo-value strong{color:var(--accent);font-weight:700}
+.strength-volume .volume-photo-value.is-total{margin-top:1px;padding-top:2px;border-top:1px solid #ffffff32}
+.strength-volume .volume-details-title{margin:5px 0 11px}
+.muscle-volume-metrics{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:7px;margin:4px 0 14px}
+.muscle-volume-metric{min-width:0;padding:8px 9px;border-radius:6px;background:#2a3942}
+.muscle-volume-metric span{display:block;color:var(--muted);font-size:11px}
+.muscle-volume-metric strong{display:block;margin-top:3px;color:var(--accent);font:700 13px/1.3 ui-monospace,SFMono-Regular,Menlo,monospace;overflow-wrap:anywhere}
+.strength-volume .visual-volume-line{grid-template-columns:110px minmax(0,1fr)}
+@media(max-width:760px){.strength-volume .volume-photo{width:min(100%,430px)}}
+@media(max-width:520px){.strength-volume .volume-photo-badge,.strength-volume .volume-photo-badge.is-right{width:132px;max-width:40%;padding:4px 5px}.strength-volume .volume-photo-name{font-size:9px}.strength-volume .volume-photo-value{font-size:8px}.strength-volume .visual-volume-line{grid-template-columns:1fr;gap:2px}.muscle-volume-metric strong{font-size:11px}}
 
 /* Nutrition overview */
 .nutrition-overview{margin:12px 0 30px;padding:22px;border:1px solid #486068;border-radius:14px;background:linear-gradient(145deg,#21333b,#1b2831 70%)}
