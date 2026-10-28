@@ -302,7 +302,7 @@ img{max-width:100%;height:auto}
 .record-card-fields dt{color:var(--muted)}
 .record-card-fields dd{margin:0;text-align:right;font-weight:650;overflow-wrap:anywhere}
 @media(max-width:760px){.visual-card-grid,.visual-training-list,.record-card-grid{grid-template-columns:1fr}.visual-nutrient-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.visual-timeline-item{grid-template-columns:100px minmax(0,1fr)}}
-@media(max-width:440px){.visual-nutrient-grid{grid-template-columns:1fr}}
+@media(max-width:440px){.visual-nutrient-card{padding:12px}}
 
 .volume-intro{margin:0 0 17px;color:var(--muted);font-size:13px}
 .volume-switch{display:inline-flex;gap:3px;padding:4px;margin:0 0 16px;background:var(--soft);border:1px solid var(--line);border-radius:9px}
@@ -344,7 +344,7 @@ img{max-width:100%;height:auto}
 @media(max-width:760px){.nutrition-overview-main{grid-template-columns:1fr;gap:20px}}
 @media(max-width:420px){.nutrition-overview{padding:17px}.nutrition-key-row strong{font-size:17px}}
 
-.cardio-option-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin:16px 0 26px}
+.cardio-option-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin:16px 0 26px}
 .cardio-option-card{min-width:0;background:#202c35;border:1px solid var(--line);border-radius:10px;padding:16px 18px;border-top:3px solid var(--accent)}
 .cardio-option-head{display:flex;align-items:baseline;justify-content:space-between;gap:12px;margin-bottom:10px}
 .cardio-option-head h3{font-size:17px!important;line-height:1.3!important;margin:0!important;padding:0!important;border:0!important;color:var(--accent)}
@@ -359,11 +359,12 @@ img{max-width:100%;height:auto}
 .cardio-video-link:focus-visible{outline:2px solid var(--accent);outline-offset:4px;border-radius:8px}
 .cardio-option-card ol{margin:0!important;padding-left:20px!important;font-size:12px;line-height:1.65}
 .cardio-option-card li{padding-left:1px;margin:0 0 5px}
-@media(max-width:900px){.cardio-option-grid{grid-template-columns:1fr}}
+@media(max-width:900px){.cardio-option-grid{grid-template-columns:none;grid-auto-flow:column;grid-auto-columns:minmax(240px,min(75vw,320px));overflow-x:auto;scroll-snap-type:x proximity;padding-bottom:6px}.cardio-option-card{scroll-snap-align:start}}
 
-/* Show each card collection as one vertical list at every screen width. */
+/* Keep the other card collections as single-column lists. */
 .today-grid,.link-grid,.link-grid.food-link-grid,.metrics-strip,
 .diet-meal-list,.diet-treat-grid,.visual-card-grid,.visual-training-list,
-.visual-nutrient-grid,.record-card-grid,.volume-detail-grid,
-.cardio-option-grid{grid-template-columns:minmax(0,1fr)}
+.record-card-grid,.volume-detail-grid{grid-template-columns:minmax(0,1fr)}
+.visual-card-grid.visual-nutrient-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
+@media(max-width:760px){.visual-card-grid.visual-nutrient-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 .cardio-video-image{max-width:440px}
