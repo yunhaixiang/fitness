@@ -346,7 +346,7 @@ img{max-width:100%;height:auto}
 .strength-volume .volume-intro{max-width:940px;line-height:1.6}
 .strength-volume .volume-photo-grid{max-width:960px;gap:18px}
 .strength-volume .volume-photo{max-width:465px}
-.strength-volume .volume-photo-badge,.strength-volume .volume-photo-badge.is-right{width:144px;max-width:40%;align-items:stretch;text-align:left;gap:2px;padding:5px 7px}
+.strength-volume .volume-photo-badge,.strength-volume .volume-photo-badge.is-right{width:120px;max-width:40%;align-items:stretch;text-align:left;gap:2px;padding:5px 7px}
 .strength-volume .volume-photo-name{font-size:10px;line-height:1.1}
 .strength-volume .volume-photo-value{display:flex;align-items:baseline;justify-content:space-between;gap:4px;white-space:nowrap;font:700 9px/1.15 ui-monospace,SFMono-Regular,Menlo,monospace}
 .strength-volume .volume-photo-value span{color:#b8c7cc}
@@ -359,7 +359,7 @@ img{max-width:100%;height:auto}
 .muscle-volume-metric strong{display:block;margin-top:3px;color:var(--accent);font:700 13px/1.3 ui-monospace,SFMono-Regular,Menlo,monospace;overflow-wrap:anywhere}
 .strength-volume .visual-volume-line{grid-template-columns:110px minmax(0,1fr)}
 @media(max-width:760px){.strength-volume .volume-photo{width:min(100%,430px)}}
-@media(max-width:520px){.strength-volume .volume-photo-badge,.strength-volume .volume-photo-badge.is-right{width:132px;max-width:40%;padding:4px 5px}.strength-volume .volume-photo-name{font-size:9px}.strength-volume .volume-photo-value{font-size:8px}.strength-volume .visual-volume-line{grid-template-columns:1fr;gap:2px}.muscle-volume-metric strong{font-size:11px}}
+@media(max-width:520px){.strength-volume .volume-photo-badge,.strength-volume .volume-photo-badge.is-right{width:112px;max-width:40%;padding:4px 5px}.strength-volume .volume-photo-name{font-size:9px}.strength-volume .volume-photo-value{font-size:8px}.strength-volume .visual-volume-line{grid-template-columns:1fr;gap:2px}.muscle-volume-metric strong{font-size:11px}}
 
 /* Nutrition overview */
 .nutrition-overview{margin:12px 0 30px;padding:22px;border:1px solid #486068;border-radius:14px;background:linear-gradient(145deg,#21333b,#1b2831 70%)}

@@ -42,7 +42,7 @@
   const musclePoints = {
     front: {
       chest: [420, 355], 'front-delts': [660, 317], 'side-delts': [704, 355],
-      biceps: [320, 468], forearms: [261, 610], abs: [548, 520],
+      biceps: [320, 468], forearms: [295, 610], abs: [548, 520],
       obliques: [609, 568], quads: [424, 925]
     },
     back: {
