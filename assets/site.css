@@ -527,3 +527,51 @@ html[data-theme=light] .theme-icon-moon{display:block}
 @media(max-width:600px){.content-section-card,.dashboard-section,.visual-training-day.content-section-card{padding:16px 14px}.prose .content-section-card>h2,.content-section-card>.visual-section-label,.dashboard-section>h2,.dashboard-section>.today-heading,.dashboard-section>.today-heading h2{font-size:18px!important}}
 
 .diet-cheat-section .diet-treat-grid:last-child{margin-bottom:0}
+
+/* Guided cooking session. */
+.cooking-guide{display:grid;gap:16px;min-width:0}
+.cooking-guide-toolbar{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.cooking-guide-half{display:inline-flex;gap:3px;padding:4px;border:1px solid var(--line);border-radius:9px;background:var(--inset)}
+.cooking-guide-half button{min-height:36px;padding:6px 14px;border:0;border-radius:6px;background:transparent;color:var(--muted);font-size:13px;font-weight:700}
+.cooking-guide-half button[aria-pressed=true]{background:var(--accent-soft);color:var(--accent)}
+.cooking-guide-reset,.cooking-guide-minor{min-height:36px;padding:6px 11px;border:1px solid var(--line-strong);border-radius:7px;background:var(--raised);color:var(--text);font-size:12px;font-weight:650}
+.cooking-guide-reset:hover,.cooking-guide-minor:hover{border-color:var(--accent);background:var(--hover)}
+.cooking-guide-progress{display:grid;grid-template-columns:auto minmax(90px,1fr) auto;align-items:center;gap:12px;color:var(--muted);font-size:12px}
+.cooking-guide-progress strong{color:var(--text);white-space:nowrap}
+.cooking-guide-progress progress{width:100%;height:9px;appearance:none;border:0;border-radius:20px;background:var(--track);overflow:hidden}
+.cooking-guide-progress progress::-webkit-progress-bar{background:var(--track)}
+.cooking-guide-progress progress::-webkit-progress-value{background:var(--accent);border-radius:20px}
+.cooking-guide-progress progress::-moz-progress-bar{background:var(--accent);border-radius:20px}
+.cooking-guide-elapsed{white-space:nowrap}
+.cooking-guide-preflight{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:13px 15px;border:1px solid var(--gold);border-radius:10px;background:color-mix(in srgb,var(--gold) 9%,var(--card))}
+.cooking-guide-preflight.is-ready{border-color:var(--line);background:var(--raised)}
+.cooking-guide-preflight strong{display:block;color:var(--text);font-size:13px}
+.cooking-guide-preflight p{margin:2px 0 0!important;color:var(--muted);font-size:12px;line-height:1.45!important}
+.cooking-guide-primary{min-height:37px;padding:7px 13px;border:1px solid var(--accent-border);border-radius:7px;background:var(--accent);color:var(--bg);font-size:12px;font-weight:800;white-space:nowrap}
+html[data-theme=light] .cooking-guide-primary{color:#fff}
+.cooking-guide-primary:hover{filter:brightness(1.08)}
+.cooking-guide-eyebrow{display:block;margin-bottom:8px;color:var(--accent);font-size:11px;font-weight:800;letter-spacing:.04em}
+.cooking-guide-recommendation{padding:15px;border:1px solid var(--accent-border);border-radius:11px;background:linear-gradient(120deg,var(--feature-start),var(--feature-end))}
+.cooking-guide-recommendation>p{margin:0!important;color:var(--muted);font-size:13px}
+.cooking-guide-group>h3{margin:0 0 10px!important;font-size:15px!important}
+.cooking-guide-task-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}
+.cooking-guide-task{min-width:0;padding:12px 14px;border:1px solid var(--line);border-radius:9px;background:var(--card)}
+.cooking-guide-task-recommended{border-color:var(--accent-border);background:var(--surface)}
+.cooking-guide-task-running{border-color:var(--gold)}
+.cooking-guide-task-top{display:flex;align-items:center;justify-content:space-between;gap:10px}
+.cooking-guide-task-title{display:grid;gap:2px;min-width:0}
+.cooking-guide-task-title strong{font-size:15px;line-height:1.3;overflow-wrap:anywhere}
+.cooking-guide-task-title small{color:var(--muted);font-size:11px}
+.cooking-guide-instruction{margin:9px 0 10px!important;color:var(--muted);font-size:12px;line-height:1.55!important}
+.cooking-guide-timer{flex:none;color:var(--gold);font:750 21px/1 ui-monospace,SFMono-Regular,Menlo,monospace;white-space:nowrap}
+.cooking-guide-timer.is-due{color:var(--danger);font-size:14px}
+.cooking-guide-actions{display:flex;align-items:center;gap:7px;flex-wrap:wrap}
+.cooking-guide-link{margin-left:auto;color:var(--accent);font-size:11px;font-weight:700;text-decoration:none;white-space:nowrap}
+.cooking-guide-link:hover{text-decoration:underline}
+.cooking-guide-completed{padding:8px 12px;border:1px solid var(--line);border-radius:8px;background:var(--inset);color:var(--muted);font-size:12px}
+.cooking-guide-completed summary{cursor:pointer;color:var(--text);font-weight:700}
+.cooking-guide-completed p{margin:7px 0 0!important;line-height:1.5!important}
+.cooking-flow-step.is-guide-running{box-shadow:inset 3px 0 0 var(--gold)}
+.cooking-flow-step.is-guide-done{opacity:.63;box-shadow:inset 3px 0 0 var(--accent)}
+.cooking-guide button:focus-visible,.cooking-guide a:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+@media(max-width:760px){.cooking-guide-task-list{grid-template-columns:minmax(0,1fr)}.cooking-guide-progress{grid-template-columns:auto minmax(70px,1fr)}.cooking-guide-elapsed{grid-column:1/-1}.cooking-guide-preflight{align-items:flex-start;flex-direction:column}}

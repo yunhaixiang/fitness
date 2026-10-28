@@ -6,6 +6,11 @@ permalink: /cooking/
 visual: true
 cooking: true
 ---
+## 跟做模式
+{: #guided-cooking }
+
+<div id="cooking-guide" class="cooking-guide"></div>
+
 ## 任务依赖图
 {: #dependencies }
 

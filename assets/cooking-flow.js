@@ -51,6 +51,8 @@
     { id: 'finish', icon: 'finish', title: ['收尾', 'Finish'], hint: ['全部完成后分盘', 'Portion after everything is ready'] }
   ];
 
+  window.fitnessCookingFlow = { nodes, groups };
+
   const byId = new Map(nodes.map((node) => [node.id, node]));
   const next = new Map(nodes.map((node) => [node.id, nodes.filter((other) => other.before.includes(node.id)).map((other) => other.id)]));
   const create = (tag, className, content) => {

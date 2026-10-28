@@ -54,6 +54,7 @@
     '清空本周勾选': 'Clear this week’s checks', '已买': 'Bought',
     '购买频率': 'Purchase frequency', '每周价格（CAD）': 'Weekly price (CAD)',
     '半周七餐；各厨具并行': 'Seven meals per half-week; appliances run in parallel',
+    '跟做模式': 'Guided Cooking',
     '任务依赖图': 'Task dependency diagram', '厨具并行流程': 'Parallel cooking workflow', '分盘表': 'Portioning table', '分盘': 'Portioning',
     '冷冻／解冻线程': 'Freeze / thaw', '电饭煲线程': 'Rice cooker', '烤箱线程': 'Oven',
     '空气炸锅线程': 'Air fryer', '煮锅一线程': 'Pot 1', '煮锅二线程': 'Pot 2', '小锅线程': 'Saucepan', '大锅线程': 'Wok', '卷饼线程': 'Wrap assembly',
