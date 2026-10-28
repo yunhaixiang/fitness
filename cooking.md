@@ -11,7 +11,7 @@ cooking: true
 
 <div id="cooking-guide" class="cooking-guide"></div>
 
-## 任务依赖图
+## 任务依赖
 {: #dependencies }
 
 
