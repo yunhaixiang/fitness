@@ -128,8 +128,11 @@
   section.append(text('h2', 'volume-training-title', tr('肌群训练量', 'Training Volume by Muscle Group')));
   const maps = text('div', 'volume-photo-grid', '');
   const details = text('div', 'visual-card-grid volume-detail-grid', '');
-  section.append(maps, text('h3', 'volume-details-title', tr('肌群明细', 'Muscle Group Details')), details);
+  const detailsSection = text('section', 'strength-volume strength-volume-details', '');
+  detailsSection.append(text('h3', 'volume-details-title', tr('肌群明细', 'Muscle Group Details')), details);
+  section.append(maps);
   root.prepend(toolbar, section);
+  root.append(detailsSection);
 
   const siteRoot = document.querySelector('.brand')?.href || location.origin + '/';
   function show(mode) {
