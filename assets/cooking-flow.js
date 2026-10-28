@@ -44,7 +44,7 @@
     { id: 'rice', icon: 'rice', title: ['电饭煲', 'Rice Cooker'], hint: ['可先启动', 'Start early'] },
     { id: 'oven', icon: 'oven', title: ['烤箱', 'Oven'], hint: ['预热后处理三种食材', 'Three foods after preheating'] },
     { id: 'air', icon: 'air', title: ['空气炸锅', 'Air Fryer'], hint: ['预热后烤三文鱼', 'Salmon after preheating'] },
-    { id: 'pots', icon: 'pot', title: ['煮锅一、煮锅二', 'Saucepans 1 and 2'], hint: ['鸡蛋与意面并行', 'Eggs and pasta in parallel'] },
+    { id: 'pots', icon: 'pot', title: ['煮锅一、煮锅二', 'Pots 1 and 2'], hint: ['鸡蛋与意面并行', 'Eggs and pasta in parallel'] },
     { id: 'small-wok', icon: 'pot', title: ['小锅', 'Saucepan'], hint: ['蘑菇 → 菠菜 → 番茄意面', 'Mushrooms → spinach → tomato pasta'] },
     { id: 'large-wok', icon: 'wok', title: ['大锅', 'Wok'], hint: ['鸡肉末、蔬菜、炒蛋', 'Ground chicken, vegetables and eggs'] },
     { id: 'wrap', icon: 'wrap', title: ['卷饼', 'Wrap'], hint: ['等待鸡腿肉、鸡蛋和蘑菇', 'Wait for chicken, eggs and mushrooms'] },
