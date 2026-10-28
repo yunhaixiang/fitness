@@ -1,6 +1,6 @@
 ---
 layout: default
-title: 饮食安排
+title: 饮食
 description: 每周餐单与加餐
 permalink: /diet/
 diet: true

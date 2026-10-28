@@ -1,6 +1,6 @@
 ---
 layout: default
-title: 购物清单
+title: 购物
 description: 每周购买与按需补货
 permalink: /shopping/
 visual: true

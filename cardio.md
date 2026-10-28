@@ -1,6 +1,6 @@
 ---
 layout: default
-title: 有氧与每周安排
+title: 有氧
 description: HIIT、游泳、跑步机或健身馆自行车四选一
 permalink: /cardio/
 visual: true

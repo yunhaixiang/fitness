@@ -1,6 +1,6 @@
 ---
 layout: default
-title: 做饭流程
+title: 做饭
 description: 半周七餐；各厨具并行
 permalink: /cooking/
 visual: true
