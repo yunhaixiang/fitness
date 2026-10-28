@@ -575,3 +575,5 @@ html[data-theme=light] .cooking-guide-primary{color:#fff}
 .cooking-flow-step.is-guide-done{opacity:.63;box-shadow:inset 3px 0 0 var(--accent)}
 .cooking-guide button:focus-visible,.cooking-guide a:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
 @media(max-width:760px){.cooking-guide-task-list{grid-template-columns:minmax(0,1fr)}.cooking-guide-progress{grid-template-columns:auto minmax(70px,1fr)}.cooking-guide-elapsed{grid-column:1/-1}.cooking-guide-preflight{align-items:flex-start;flex-direction:column}}
+.cooking-guide-task-title .cooking-guide-attention{color:var(--gold);font-weight:700}
+.cooking-guide-wait-note{margin:0 0 8px!important;color:var(--muted);font-size:12px;line-height:1.45!important}

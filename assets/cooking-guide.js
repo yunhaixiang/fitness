@@ -66,9 +66,15 @@
   };
   const remainingSeconds = (run) => (run.startedAt + run.minutes * 60000 - Date.now()) / 1000;
   const dependenciesDone = (task) => task.before.every((id) => id === 'ready' ? batch().ready : done(id));
+  const activeTasks = () => tasks.filter((task) => running(task.id));
+  const nextPassive = () => activeTasks().filter((task) => !handsOn.has(task.id))
+    .sort((a, b) => remainingSeconds(batch().running[a.id]) - remainingSeconds(batch().running[b.id]))[0];
   const available = () => {
-    const busyWithHandsOn = [...handsOn].some(running);
-    return tasks.filter((task) => !done(task.id) && !running(task.id) && dependenciesDone(task) && !busyWithHandsOn);
+    if ([...handsOn].some(running)) return [];
+    const upcoming = nextPassive();
+    const secondsUntilAttention = upcoming ? remainingSeconds(batch().running[upcoming.id]) : Infinity;
+    return tasks.filter((task) => !done(task.id) && !running(task.id) && dependenciesDone(task)
+      && secondsUntilAttention > (handsOn.has(task.id) ? taskMinutes[task.id] * 60 + 120 : 120));
   };
   const pathMemo = new Map();
   const pathLength = (id) => {
@@ -157,6 +163,7 @@
     const title = make('div', 'cooking-guide-task-title');
     title.append(make('strong', '', task.label[en ? 1 : 0]));
     title.append(make('small', '', `${appliance(task.id)} · ${t('计时', 'Timer')} ${batch().running[task.id]?.minutes || taskMinutes[task.id]} ${t('分钟', 'min')}`));
+    if (handsOn.has(task.id)) title.append(make('small', 'cooking-guide-attention', t('需在场操作', 'Stay with this task')));
     top.append(title);
     if (variant === 'running') {
       const time = make('time', 'cooking-guide-timer');
@@ -222,27 +229,36 @@
     root.append(preflight);
 
     const readyTasks = rankedAvailable();
-    const activeTasks = tasks.filter((task) => running(task.id));
-    const recommendation = readyTasks[0];
+    const active = activeTasks().sort((a, b) => remainingSeconds(record.running[a.id]) - remainingSeconds(record.running[b.id]));
+    const imminent = active.find((task) => remainingSeconds(record.running[task.id]) <= 120);
+    const attended = active.find((task) => handsOn.has(task.id));
+    const focus = imminent || attended || (!readyTasks.length && active[0]);
     const recommended = make('div', 'cooking-guide-recommendation');
-    recommended.append(make('span', 'cooking-guide-eyebrow', t('推荐下一步', 'Recommended Next')));
-    if (recommendation) {
-      recommended.append(taskCard(recommendation, 'recommended'));
+    recommended.append(make('span', 'cooking-guide-eyebrow', focus
+      ? imminent
+        ? remainingSeconds(record.running[imminent.id]) <= 0 ? t('计时已到，请确认', 'Timer Finished — Check Now') : t('即将到点', 'Almost Done')
+        : attended ? t('当前需要操作', 'Hands-On Now') : t('等待计时', 'Waiting on Timer')
+      : t('推荐下一步', 'Recommended Next')));
+    if (focus) {
+      if (!imminent && !attended && !readyTasks.length && tasks.some((task) => handsOn.has(task.id) && !done(task.id) && !running(task.id) && dependenciesDone(task))) {
+        recommended.append(make('p', 'cooking-guide-wait-note', t('下一项需要全程照看；先等这项计时结束。', 'The next task needs your full attention. Wait for this timer first.')));
+      }
+      recommended.append(taskCard(focus, 'running'));
+    } else if (readyTasks[0]) {
+      recommended.append(taskCard(readyTasks[0], 'recommended'));
     } else {
       recommended.append(make('p', '', record.done.length === tasks.length
         ? t('本批已完成。', 'This batch is complete.')
-        : activeTasks.length
-          ? t('当前任务正在计时；完成后会推荐下一步。', 'Timers are running. Finish a task to unlock the next step.')
-          : t('先确认食材，或完成正在等待的前置任务。', 'Check the ingredients or finish the prerequisite steps.')));
+        : t('先确认食材，或完成正在等待的前置任务。', 'Check the ingredients or finish the prerequisite steps.')));
     }
     root.append(recommended);
 
-    if (activeTasks.length) {
+    const otherActive = active.filter((task) => task.id !== focus?.id);
+    if (otherActive.length) {
       const section = make('section', 'cooking-guide-group');
       section.append(make('h3', '', t('进行中', 'In Progress')));
       const list = make('div', 'cooking-guide-task-list');
-      activeTasks.sort((a, b) => remainingSeconds(record.running[a.id]) - remainingSeconds(record.running[b.id]));
-      activeTasks.forEach((task) => list.append(taskCard(task, 'running')));
+      otherActive.forEach((task) => list.append(taskCard(task, 'running')));
       section.append(list);
       root.append(section);
     }
@@ -266,8 +282,15 @@
       buttonInFlow?.classList.toggle('is-guide-done', done(task.id));
       buttonInFlow?.classList.toggle('is-guide-running', running(task.id));
     }
+    scheduleKey = scheduleState();
     tick();
   };
+  const scheduleState = () => {
+    const active = activeTasks().sort((a, b) => remainingSeconds(batch().running[a.id]) - remainingSeconds(batch().running[b.id]));
+    const imminent = active.find((task) => remainingSeconds(batch().running[task.id]) <= 120);
+    return `${available().map((task) => task.id).join(',')}|${imminent?.id || ''}|${active.find((task) => handsOn.has(task.id))?.id || ''}`;
+  };
+  let scheduleKey = '';
   const tick = () => {
     let changed = false;
     for (const [id, run] of Object.entries(batch().running)) {
@@ -285,6 +308,7 @@
     if (elapsed) elapsed.textContent = batch().startedAt
       ? `${t('本批用时', 'Elapsed')}: ${format(((batch().finishedAt || Date.now()) - batch().startedAt) / 1000)}`
       : t('开始任务后计时', 'Time starts with the first task');
+    if (scheduleState() !== scheduleKey) render();
   };
   render();
   window.setInterval(tick, 1000);
