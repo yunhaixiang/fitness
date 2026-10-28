@@ -471,14 +471,38 @@
         hamstrings: [80, 69.3], calves: [9, 82.3]
       }
     };
-    const primarySets = (row) => {
+    const primarySource = (row) => {
       const node = row.cells[1].firstChild;
-      const source = node ? (window.fitnessI18n?.original(node) || node.textContent) : '';
-      return [...source.split('；')[0].matchAll(/(\d+)\s*组/g)].reduce((sum, match) => sum + Number(match[1]), 0);
+      return node ? (window.fitnessI18n?.original(node) || node.textContent) : '';
+    };
+    const primarySets = (row) => [...primarySource(row).split('；')[0].matchAll(/(\d+)\s*组/g)]
+      .reduce((sum, match) => sum + Number(match[1]), 0);
+    const minimumReps = {
+      home: {
+        '俯卧撑': 8, '哑铃肩推': 6, '哑铃侧平举': 6, '哑铃反向飞鸟': 6,
+        '双哑铃俯身划船': 10, '单臂支撑哑铃划船': 8, '哑铃弯举': 8,
+        '卷腹': 10, '反向卷腹': 10, '哑铃侧屈每侧': 10,
+        '高脚杯深蹲': 10, '反向弓步': 8, '罗马尼亚硬拉': 10,
+        '支撑式单腿硬拉': 10, '分腿蹲': 8, '单腿臀桥': 10,
+        '臀桥脚跟走步': 6, '哑铃提踵': 12
+      },
+      gym: {
+        '史密斯机卧推': 8, '器械肩推': 8, '单臂绳索侧平举': 12,
+        '器械反向飞鸟': 12, '器械划船': 10, '高位下拉': 10,
+        '绳索弯举': 10, '绳索三头下压': 10, '器械卷腹': 10,
+        '绳索转体': 10, '史密斯机深蹲': 8, '坐姿腿举': 10,
+        '史密斯机反向弓步': 8, '史密斯机罗马尼亚硬拉': 8,
+        '史密斯机臀推': 10, '器械腿屈伸': 10, '器械腿弯举': 10,
+        '史密斯机提踵': 12
+      }
+    };
+    const primaryReps = (row, mode) => {
+      const actions = [...primarySource(row).split('；')[0].matchAll(/([^、；]+?)(\d+)\s*组/g)];
+      return actions.reduce((sum, [, action, sets]) => sum + Number(sets) * minimumReps[mode][action.trim()], 0);
     };
     const muscleKey = (row) => row.cells[0].lastChild.textContent.trim().toLowerCase().replaceAll(' ', '-');
     const englishName = (row) => row.cells[0].lastChild.textContent.trim();
-    const dose = (count, key) => `${count} ${tr('组', 'sets')}${key === 'obliques' && count === 6 ? tr('／侧', '/side') : ''}`;
+    const dose = (count, key) => `${count} ${tr('次', 'reps')}${key === 'obliques' && count ? tr('／侧', '/side') : ''}`;
     const data = {
       home: [...tables[0].tBodies[0].rows],
       gym: [...tables[1].tBodies[0].rows]
@@ -496,18 +520,18 @@
       toolbar.append(button);
     }
     const maps = el('div', 'volume-photo-grid');
-    const details = el('details', 'volume-details');
-    const detailsTitle = el('summary', '', tr('查看全部动作与辅助刺激', 'See All Exercises and Secondary Work'));
+    const title = el('h2', 'volume-training-title', tr('训练量 · 每周最低次数', 'Training Volume · Minimum Weekly Reps'));
+    const details = el('section', 'volume-details');
+    const detailsTitle = el('h2', 'volume-details-title', tr('各肌群动作与辅助刺激', 'Exercises and Secondary Work by Muscle Group'));
     const detailGrid = el('div', 'visual-card-grid volume-detail-grid');
     details.append(detailsTitle, detailGrid);
-    root.append(toolbar, maps, details);
+    root.append(toolbar, title, maps, details);
 
     function show(mode) {
       for (const [name, button] of buttons) button.setAttribute('aria-pressed', String(name === mode));
       try { localStorage.setItem('yunhai-fitness-volume-mode', mode); } catch (_) { /* storage unavailable */ }
       maps.replaceChildren();
       detailGrid.replaceChildren();
-      details.open = false;
       const cards = new Map();
       const rows = data[mode];
       for (const row of rows) {
@@ -517,7 +541,10 @@
         card.tabIndex = -1;
         const top = el('div', 'visual-card-top');
         top.append(el('h3', '', tr(names[key] || key, englishName(row))), el('span', 'visual-badge', val(row, 3)));
-        card.append(top, el('strong', 'volume-card-dose', dose(primarySets(row), key)));
+        const reps = primaryReps(row, mode);
+        const total = reps ? dose(reps, key) : tr('仅辅助刺激', 'Secondary Work Only');
+        card.append(top, el('strong', 'volume-card-dose', total));
+        if (reps) card.append(el('span', 'volume-card-sets', `${primarySets(row)} ${tr('组主要动作', 'primary sets')}`));
         for (const [column, zh, english] of [[1, '主要', 'Primary'], [2, '辅助', 'Secondary']]) {
           const line = el('div', 'visual-volume-line');
           line.append(el('span', '', tr(zh, english)), el('strong', '', val(row, column)));
@@ -529,7 +556,7 @@
       for (const side of ['front', 'back']) {
         const figure = el('figure', 'volume-photo');
         const image = el('img');
-        image.src = new URL(`assets/images/fitness-muscles-${side}.png`, siteRoot).href;
+        image.src = new URL(`assets/images/fitness-muscles-${side}-transparent.webp`, siteRoot).href;
         image.alt = tr(side === 'front' ? '主要肌群正面图' : '主要肌群背面图', side === 'front' ? 'Front muscle diagram' : 'Back muscle diagram');
         image.width = 1024;
         image.height = 1536;
@@ -538,15 +565,14 @@
           const key = muscleKey(row);
           const position = positions[side][key];
           if (!position) continue;
-          const count = primarySets(row);
-          const badge = el('button', 'volume-photo-badge', dose(count, key));
+          const count = primaryReps(row, mode);
+          const badge = el('button', 'volume-photo-badge', count ? String(count) : '—');
           badge.type = 'button';
           badge.style.left = `${position[0]}%`;
           badge.style.top = `${position[1]}%`;
-          badge.setAttribute('aria-label', `${tr(names[key], englishName(row))}: ${dose(count, key)}. ${tr('查看动作', 'View exercises')}`);
+          badge.setAttribute('aria-label', `${tr(names[key], englishName(row))}: ${count ? dose(count, key) : tr('仅辅助刺激', 'Secondary Work Only')}. ${tr('查看动作', 'View exercises')}`);
           if (count === 0) badge.classList.add('is-indirect');
           badge.addEventListener('click', () => {
-            details.open = true;
             const card = cards.get(key);
             card.scrollIntoView({ behavior: 'smooth', block: 'center' });
             card.focus({ preventScroll: true });

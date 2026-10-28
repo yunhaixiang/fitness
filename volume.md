@@ -1,13 +1,13 @@
 ---
 layout: default
 title: 训练量统计
-description: 在家与健身馆的每周肌群训练组数
+description: 在家与健身馆的肌群训练量和动作明细
 permalink: /volume/
 visual: true
 wide: true
 ---
 
-<p class="volume-intro">图中数字是每周主要训练组数；辅助动作另列，不折算为主要组数。点击肌群可查看具体动作。</p>
+<p class="volume-intro">训练量按每组最低次数计算：主要动作的组数 × 最低次数，左右侧动作按每侧计算。辅助刺激单独列出。点击图上的数字可定位到下方肌群卡片。</p>
 
 <div id="volume-root"></div>
 
