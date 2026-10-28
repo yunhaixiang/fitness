@@ -126,10 +126,6 @@
   const section = text('section', 'strength-volume', '');
   section.id = 'muscle-volume';
   section.append(text('h2', 'volume-training-title', tr('肌群训练量', 'Training Volume by Muscle Group')));
-  section.append(text('p', 'volume-intro', tr(
-    `每周计划量 = 组数 × 最低次数 × 负重。图中主、辅、总分别表示主要、辅助、合计。自重动作按 ${bodyWeightKg} kg 体重估算；俯卧撑取体重的 64%，卷腹与反向卷腹取 30%，臀桥脚跟走步取 50%。双哑铃计两只，单侧动作计左右两侧；史密斯机暂按杠重 20 lb 加配重。每个动作的完整训练量分别计入主要和辅助肌群，因此各肌群之间不能相加，这些数值也不等于肌肉实际受力。`,
-    `Planned weekly volume = sets × minimum reps × load. P, S, and T mean primary, secondary, and total. Bodyweight estimates use ${bodyWeightKg} kg: 64% for push-ups, 30% for crunches and reverse crunches, and 50% for hamstring walkouts. Both dumbbells and both sides are counted; Smith machine load includes an assumed 20 lb bar. Each exercise's full volume is credited to its primary and secondary muscles, so figures across muscle groups cannot be added together and do not represent actual muscle force.`
-  )));
   const maps = text('div', 'volume-photo-grid', '');
   const details = text('div', 'visual-card-grid volume-detail-grid', '');
   section.append(maps, text('h3', 'volume-details-title', tr('肌群明细', 'Muscle Group Details')), details);
@@ -179,7 +175,7 @@
         badge.style[position[0]] = '0';
         badge.style.top = `${position[1]}%`;
         badge.append(text('span', 'volume-photo-name', tr(zh, english)));
-        for (const [short, value, kind] of [[tr('主', 'P'), item.primary, 'primary'], [tr('辅', 'S'), item.secondary, 'secondary'], [tr('总', 'T'), item.primary + item.secondary, 'total']]) {
+        for (const [short, value, kind] of [[tr('主要', 'Primary'), item.primary, 'primary'], [tr('辅助', 'Secondary'), item.secondary, 'secondary'], [tr('合计', 'Total'), item.primary + item.secondary, 'total']]) {
           const line = text('span', `volume-photo-value is-${kind}`, '');
           line.append(text('span', '', short), text('strong', '', format(value)));
           badge.append(line);
