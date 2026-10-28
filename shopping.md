@@ -50,7 +50,7 @@ visual: true
 <tr>
 <td>无糖豆奶</td>
 <td><a href="https://www.walmart.ca/en/ip/Silk-Soy-Milk-Alternative-Unsweetened-Dairy-Free-of-protein/6000190182706">Silk Soy Milk Alternative Unsweetened</a><br>1.89 L / 桶</td>
-<td style="text-align: right;">2桶 / 周（1桶均分早餐；另1桶分给最后两餐和每天加餐）</td>
+<td style="text-align: right;">2桶 / 周（每天早餐和加餐各270 mL）</td>
 <td style="text-align: right;">$9.96</td>
 </tr>
 <tr>
@@ -58,6 +58,12 @@ visual: true
 <td><a href="https://www.walmart.ca/en/ip/Fresca-Citrus-Soda-Pop-Fridge-Pack-Cans-355-mL-12-pack/10277189">Fresca Citrus Soda</a><br>12罐×355 mL / 箱</td>
 <td style="text-align: right;">1箱 / 周（其余12顿午晚餐各1罐）</td>
 <td style="text-align: right;">$8.28</td>
+</tr>
+<tr>
+<td>Fuze无糖冰茶</td>
+<td><a href="https://www.walmart.ca/en/ip/Fuze-Iced-Tea-Zero-Sugar-Lemon-Bottle/39X12Q1LJGX0">Fuze Iced Tea Zero Sugar Lemon</a><br>500 mL / 瓶</td>
+<td style="text-align: right;">1瓶 / 周（最后两顿各250 mL）</td>
+<td style="text-align: right;">$2.77</td>
 </tr>
 <tr>
 <td>土豆</td>
@@ -201,7 +207,7 @@ visual: true
 <td>每周合计</td>
 <td>—</td>
 <td style="text-align: right;">—</td>
-<td style="text-align: right;">约$160</td>
+<td style="text-align: right;">约$163</td>
 </tr>
 </tbody>
 </table>
