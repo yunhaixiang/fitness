@@ -1,6 +1,6 @@
 # Fitness
 
-独立的饮食、训练、睡眠和数据记录网站。原来 `yhmath` 博客中健身计划的**可见内容**已经迁入本仓库，今后只在这里维护：
+独立的饮食、训练和数据记录网站。原来 `yhmath` 博客中健身计划的**可见内容**已经迁入本仓库，今后只在这里维护：
 
 - `diet.md`：饮食页面；每周餐单表在 `_includes/diet-schedule.html`
 - `treats.md`：常见放纵餐的热量与赤字影响
@@ -8,7 +8,6 @@
 - `cooking.md`：独立做饭流程
 - `strength.md`：力量页面；动作表在 `_includes/strength-home-table.html` 和 `_includes/strength-gym-table.html`
 - `cardio.md`：有氧页面；每周安排表在 `_includes/cardio-weekly-table.html`
-- `sleep.md`：作息与睡前流程
 - `stats.md`：营养和热量估计
 - `volume.md`：在家与健身馆的每周肌群图和训练组数
 - `tracker.html`：实际记录入口

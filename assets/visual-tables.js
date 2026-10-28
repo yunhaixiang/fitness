@@ -299,16 +299,6 @@
     mount(tables[0], week);
   }
 
-  if (page === 'sleep' && tables[0]) {
-    const timeline = el('ol', 'visual-timeline');
-    for (const row of tables[0].tBodies[0].rows) {
-      const item = el('li', 'visual-timeline-item');
-      item.append(el('time', '', val(row, 0)), el('strong', '', val(row, 1)));
-      timeline.append(item);
-    }
-    mount(tables[0], timeline);
-  }
-
   if (page === 'stats' && tables.length === 2) {
     const metric = (text) => {
       const values = [...text.matchAll(/[\d,]+(?:\.\d+)?/g)].map(([value]) => Number(value.replaceAll(',', '')));
