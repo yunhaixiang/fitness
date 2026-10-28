@@ -56,7 +56,7 @@ visual: true
 <tr>
 <td>Fresca无糖汽水</td>
 <td><a href="https://www.walmart.ca/en/ip/Fresca-Citrus-Soda-Pop-Fridge-Pack-Cans-355-mL-12-pack/10277189">Fresca Citrus Soda</a><br>12罐×355 mL / 箱</td>
-<td style="text-align: right;">1箱 / 周（其余12顿午晚餐各1罐）</td>
+<td style="text-align: right;">1箱 / 周</td>
 <td style="text-align: right;">$8.28</td>
 </tr>
 <tr>

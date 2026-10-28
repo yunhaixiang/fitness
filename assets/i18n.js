@@ -247,7 +247,6 @@
     '营养指标': 'Nutrient', '热量估计': 'Calorie estimate', '消耗构成（估算）': 'Where Your Calories Are Burned',
     '每周 kcal': 'Weekly kcal', '日均 kcal': 'Daily kcal',
     '2桶 / 周（1桶均分早餐；另1桶分给最后两餐和每天加餐）': '2 cartons/week (one split across breakfasts; the other split between the final two meals and daily snacks)',
-    '1箱 / 周（其余12顿午晚餐各1罐）': '1 case/week (1 can with each of the other 12 lunches and dinners)',
     '周日—周二早餐（水果盘1/3）': 'Sunday–Tuesday breakfast (⅓ of daily fruit tray serving)',
     '周日—周二睡前加餐（水果盘2/3）': 'Sunday–Tuesday bedtime snack (⅔ of daily fruit tray serving)',
     '周三—周六早餐（奇异果1个）': 'Wednesday–Saturday breakfast (1 kiwi)',
