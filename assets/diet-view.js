@@ -195,9 +195,7 @@
 
   const treats = document.querySelector('[data-diet-view="treats"]');
   if (treats) {
-    const section = document.querySelector('#cheat-meals');
-    const toggle = section?.querySelector('.diet-cheat-toggle');
-    const content = section?.querySelector('#cheat-meal-content');
+    const section = document.querySelector('.diet-cheat-section');
     const weeklyDeficit = Number(section?.dataset.weeklyDeficit) || 4009;
     const fmt = new Intl.NumberFormat(en ? 'en-CA' : 'zh-CN', { maximumFractionDigits: 0 });
     const nutrientFmt = new Intl.NumberFormat(en ? 'en-CA' : 'zh-CN', { maximumFractionDigits: 1 });
@@ -252,15 +250,6 @@
       grid.append(card);
     }
     mount(treats, grid);
-    const setOpen = (open) => {
-      content.hidden = !open;
-      toggle.setAttribute('aria-expanded', String(open));
-    };
-    toggle.addEventListener('click', () => setOpen(content.hidden));
-    if (location.hash === '#cheat-meals') setOpen(true);
-    window.addEventListener('hashchange', () => {
-      if (location.hash === '#cheat-meals') setOpen(true);
-    });
   }
 
 })();

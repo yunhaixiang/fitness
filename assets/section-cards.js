@@ -16,17 +16,6 @@
       if (card) card.append(node);
     }
     content.classList.add('section-card-page');
-
-    if (page === 'diet') {
-      const cheat = content.querySelector('.diet-cheat-section');
-      const scheduleCard = content.querySelector('.content-section-card');
-      if (cheat && scheduleCard) {
-        const cheatCard = document.createElement('section');
-        cheatCard.className = 'content-section-card diet-cheat-card';
-        scheduleCard.after(cheatCard);
-        cheatCard.append(cheat);
-      }
-    }
   }
 
   if (content && page === 'shopping') {
