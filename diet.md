@@ -7,6 +7,12 @@ diet: true
 ---
 ## 计划表
 
+<section class="diet-cooking-card" aria-label="做饭时间">
+  <h3>做饭时间</h3>
+  <div class="diet-cooking-slot"><strong>周日午餐后</strong><span>准备上1–上7</span></div>
+  <div class="diet-cooking-slot"><strong>周三晚餐后</strong><span>准备下1–下7</span></div>
+</section>
+
 <noscript>
 <p>周日—周二早餐：{{ site.data.meal_nutrition.meals.fruit_breakfast.foodZh }}；加餐（23:00）：{{ site.data.meal_nutrition.meals.fruit_snack.foodZh }}。</p>
 <p>周三—周六早餐：{{ site.data.meal_nutrition.meals.kiwi_breakfast.foodZh }}；加餐（23:00）：{{ site.data.meal_nutrition.meals.kiwi_snack.foodZh }}。</p>
