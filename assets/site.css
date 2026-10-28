@@ -99,7 +99,7 @@ img{max-width:100%;height:auto}
 .today-cardio a{text-decoration:none;color:var(--accent)}
 .today-cardio a:hover{text-decoration:underline}
 .today-rest{padding:18px 12px;background:var(--soft);border-radius:7px;text-align:center;color:var(--muted);font-size:13px}
-@media(max-width:850px){.today-grid{grid-template-columns:1fr}}
+@media(max-width:700px){.today-grid{grid-template-columns:none;grid-auto-flow:column;grid-auto-columns:minmax(280px,min(85vw,440px));overflow-x:auto;scroll-snap-type:x proximity;padding-bottom:6px}.today-panel{scroll-snap-align:start}}
 
 .link-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}
 .link-grid.food-link-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
@@ -362,7 +362,7 @@ img{max-width:100%;height:auto}
 @media(max-width:900px){.cardio-option-grid{grid-template-columns:none;grid-auto-flow:column;grid-auto-columns:minmax(240px,min(75vw,320px));overflow-x:auto;scroll-snap-type:x proximity;padding-bottom:6px}.cardio-option-card{scroll-snap-align:start}}
 
 /* Keep the other card collections as single-column lists. */
-.today-grid,.link-grid,.link-grid.food-link-grid,.metrics-strip,
+.link-grid,.link-grid.food-link-grid,.metrics-strip,
 .diet-meal-list,.diet-treat-grid,.visual-card-grid,.visual-training-list,
 .record-card-grid,.volume-detail-grid{grid-template-columns:minmax(0,1fr)}
 .visual-card-grid.visual-nutrient-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
