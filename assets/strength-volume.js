@@ -186,7 +186,7 @@
     for (const side of ['front', 'back']) {
       const figure = text('figure', 'volume-photo', '');
       const image = document.createElement('img');
-      image.src = new URL(`assets/images/fitness-anatomy-${side}.webp`, siteRoot).href;
+      image.src = new URL(side === 'back' ? 'assets/images/fitness-anatomy-back-v2.png' : 'assets/images/fitness-anatomy-front.webp', siteRoot).href;
       image.alt = tr(side === 'front' ? '正面肌群示意图' : '背面肌群示意图', side === 'front' ? 'Front Muscle Diagram' : 'Back Muscle Diagram');
       image.width = 1024;
       image.height = 1536;
@@ -200,7 +200,7 @@
         const item = data[mode][key];
         const badge = text('button', `volume-photo-badge is-${edge}`, '');
         badge.type = 'button';
-        badge.style[edge] = '0';
+        badge.style[edge] = 'var(--volume-label-offset)';
         badge.append(text('span', 'volume-photo-name', tr(zh, english)));
         for (const [short, value, kind] of [[tr('主要', 'Primary'), item.primary, 'primary'], [tr('辅助', 'Secondary'), item.secondary, 'secondary'], [tr('合计', 'Total'), item.primary + item.secondary, 'total']]) {
           const line = text('span', `volume-photo-value is-${kind}`, '');
