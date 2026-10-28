@@ -3,7 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#141a21">
+  <meta name="theme-color" content="#171a16">
+  <script>try{if(localStorage.getItem('fitness-theme')==='light')document.documentElement.dataset.theme='light'}catch(_){}</script>
   <meta name="description" content="{{ page.description | default: site.description | escape }}">
   <title>{{ page.title | default: site.title | escape }} · {{ site.title }}</title>
   <link rel="stylesheet" href="{{ '/assets/site.css' | relative_url }}?v={{ site.time | date: '%s' }}">
@@ -23,9 +24,16 @@
         <a href="{{ '/stats/' | relative_url }}"{% if page.url == '/stats/' %} aria-current="page"{% endif %}>营养</a>
         <a href="{{ '/tracker/' | relative_url }}"{% if page.url == '/tracker/' %} aria-current="page"{% endif %}>记录</a>
       </nav>
-      <div class="language-switch" role="group" aria-label="语言 / Language">
-        <button type="button" data-language="zh" aria-pressed="true">中文</button>
-        <button type="button" data-language="en" aria-pressed="false">EN</button>
+      <div class="header-controls">
+        <button class="theme-toggle" type="button" aria-label="切换为亮色模式" aria-pressed="false">
+          <svg class="theme-icon theme-icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M4.93 4.93l1.42 1.42m11.3 11.3 1.42 1.42M2 12h2m16 0h2M4.93 19.07l1.42-1.42m11.3-11.3 1.42-1.42"/></svg>
+          <svg class="theme-icon theme-icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" aria-hidden="true"><path d="M20.5 14.4A8.7 8.7 0 0 1 9.6 3.5 8.8 8.8 0 1 0 20.5 14.4Z"/></svg>
+          <span class="theme-toggle-text">亮色</span>
+        </button>
+        <div class="language-switch" role="group" aria-label="语言 / Language">
+          <button type="button" data-language="zh" aria-pressed="true">中文</button>
+          <button type="button" data-language="en" aria-pressed="false">EN</button>
+        </div>
       </div>
     </div>
   </header>
@@ -40,6 +48,7 @@
   </main>
   <script src="{{ '/assets/i18n.js' | relative_url }}?v={{ site.time | date: '%s' }}" defer></script>
   <script src="{{ '/assets/site.js' | relative_url }}?v={{ site.time | date: '%s' }}" defer></script>
+  <script src="{{ '/assets/theme.js' | relative_url }}?v={{ site.time | date: '%s' }}" defer></script>
   {% if page.diet %}<script src="{{ '/assets/diet-view.js' | relative_url }}?v={{ site.time | date: '%s' }}" defer></script>{% endif %}
   {% if page.url == '/' %}<script src="{{ '/assets/today.js' | relative_url }}?v={{ site.time | date: '%s' }}" defer></script>{% endif %}
   {% if page.visual %}<script src="{{ '/assets/visual-tables.js' | relative_url }}?v={{ site.time | date: '%s' }}" defer></script>{% endif %}

@@ -319,7 +319,7 @@
     const breakdown = energyRows.slice(0, -1);
     const totalRow = energyRows.at(-1);
     const total = breakdown.reduce((sum, row) => sum + number(val(row, 1)), 0);
-    const colors = ['#91d8d1', '#e5bc78', '#aca6e4', '#e5a58b', '#83b5d8'];
+    const colors = ['var(--chart-1)', 'var(--chart-2)', 'var(--chart-3)', 'var(--chart-4)', 'var(--chart-5)'];
     const chart = el('figure', 'visual-expenditure');
     const plot = el('div', 'visual-expenditure-plot');
     const pie = el('div', 'visual-expenditure-pie');
