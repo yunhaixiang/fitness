@@ -481,7 +481,7 @@
       home: {
         '俯卧撑': 8, '哑铃肩推': 6, '哑铃侧平举': 6, '哑铃反向飞鸟': 6,
         '双哑铃俯身划船': 10, '单臂支撑哑铃划船': 8, '哑铃弯举': 8,
-        '卷腹': 10, '反向卷腹': 10, '哑铃侧屈每侧': 10,
+        '卷腹': 10, '反向卷腹': 10, '哑铃侧屈': 10,
         '高脚杯深蹲': 10, '反向弓步': 8, '罗马尼亚硬拉': 10,
         '支撑式单腿硬拉': 10, '分腿蹲': 8, '单腿臀桥': 10,
         '臀桥脚跟走步': 6, '哑铃提踵': 12
@@ -544,7 +544,10 @@
         const reps = primaryReps(row, mode);
         const total = reps ? dose(reps, key) : tr('仅辅助刺激', 'Secondary Work Only');
         card.append(top, el('strong', 'volume-card-dose', total));
-        if (reps) card.append(el('span', 'volume-card-sets', `${primarySets(row)} ${tr('组主要动作', 'primary sets')}`));
+        if (reps) {
+          const sets = primarySets(row);
+          card.append(el('span', 'volume-card-sets', `${sets} ${tr('组主要动作', sets === 1 ? 'primary set' : 'primary sets')}`));
+        }
         for (const [column, zh, english] of [[1, '主要', 'Primary'], [2, '辅助', 'Secondary']]) {
           const line = el('div', 'visual-volume-line');
           line.append(el('span', '', tr(zh, english)), el('strong', '', val(row, column)));
