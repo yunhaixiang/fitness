@@ -3,7 +3,7 @@
 独立的饮食、训练和数据记录网站。原来 `yhmath` 博客中健身计划的**可见内容**已经迁入本仓库，今后只在这里维护：
 
 - `diet.md`：饮食页面；每周餐单表在 `_includes/diet-schedule.html`
-- `treats.md`：常见放纵餐的热量与赤字影响
+- `treats.md`：旧放纵餐链接跳转；常见放纵餐现位于 `diet.md`
 - `shopping.md`：独立购物清单
 - `cooking.md`：独立做饭流程
 - `strength.md`：力量与肌群训练量页面；动作表在 `_includes/strength-home-table.html` 和 `_includes/strength-gym-table.html`

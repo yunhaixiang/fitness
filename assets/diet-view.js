@@ -195,6 +195,13 @@
 
   const treats = document.querySelector('[data-diet-view="treats"]');
   if (treats) {
+    const section = document.querySelector('#cheat-meals');
+    const toggle = section?.querySelector('.diet-cheat-toggle');
+    const content = section?.querySelector('#cheat-meal-content');
+    const weeklyDeficit = Number(section?.dataset.weeklyDeficit) || 4009;
+    const fmt = new Intl.NumberFormat(en ? 'en-CA' : 'zh-CN', { maximumFractionDigits: 0 });
+    const nutrientFmt = new Intl.NumberFormat(en ? 'en-CA' : 'zh-CN', { maximumFractionDigits: 1 });
+    const range = (low, high, suffix = '') => `${fmt.format(low)}${high !== low ? `–${fmt.format(high)}` : ''}${suffix}`;
     const grid = make('div', 'diet-treat-grid');
     for (const row of treats.tBodies[0].rows) {
       const card = make('article', 'diet-treat-card');
@@ -203,27 +210,57 @@
       const amount = make('div', 'diet-treat-amount');
       amount.append(make('strong', '', value(row, 2)), make('span', '', 'kcal'));
       card.append(title, make('p', 'diet-treat-portion', value(row, 1)), amount);
+
+      const nutrients = make('dl', 'diet-treat-nutrients');
+      for (const [key, zh, english, unit] of [
+        ['protein', '蛋白质', 'Protein', 'g'],
+        ['carbs', '碳水', 'Carbs', 'g'],
+        ['fat', '总脂肪', 'Total Fat', 'g'],
+        ['saturatedFat', '饱和脂肪', 'Saturated Fat', 'g'],
+        ['sugar', '总糖', 'Sugar', 'g'],
+        ['sodium', '钠', 'Sodium', 'mg']
+      ]) {
+        const metric = make('div', 'diet-treat-nutrient');
+        const estimate = row.dataset[key].replace(/\d+(?:\.\d+)?/g, (number) => nutrientFmt.format(Number(number)));
+        metric.append(make('dt', '', label(zh, english)), make('dd', '', `≈${estimate} ${unit}`));
+        nutrients.append(metric);
+      }
+      card.append(nutrients);
+
+      const calories = [...value(row, 2).replaceAll(',', '').matchAll(/\d+(?:\.\d+)?/g)].map((match) => Number(match[0]));
+      const [low, high = low] = calories;
       const impact = make('div', 'diet-treat-impact');
-      impact.append(make('span', '', titleCase(label('占每周参考赤字', 'Share of weekly deficit'))),
-        make('strong', '', value(row, 3)));
+      impact.append(make('span', '', label('占每周赤字', 'Share of weekly deficit')),
+        make('strong', '', range(Math.round(low / weeklyDeficit * 100), Math.round(high / weeklyDeficit * 100), '%')));
       card.append(impact);
       const track = make('div', 'diet-impact-track');
       track.setAttribute('aria-hidden', 'true');
       const fill = make('span', 'diet-impact-fill');
-      const percents = [...value(row, 3).matchAll(/\d+(?:\.\d+)?(?=%)/g)].map((match) => Number(match[0]));
-      fill.style.width = `${Math.min(100, Math.max(0, ...percents))}%`;
+      fill.style.width = `${Math.min(100, high / weeklyDeficit * 100)}%`;
       track.append(fill);
       card.append(track);
       const remaining = make('div', 'diet-treat-remaining');
-      for (const [column, zh, english] of [[4, '剩余每周赤字', 'Weekly deficit left'], [5, '剩余日均赤字', 'Average daily deficit left']]) {
+      for (const [zh, english, lowValue, highValue, suffix] of [
+        ['剩余每周赤字', 'Weekly deficit left', weeklyDeficit - high, weeklyDeficit - low, ' kcal'],
+        ['剩余日均赤字', 'Average daily deficit left', Math.round((weeklyDeficit - high) / 7), Math.round((weeklyDeficit - low) / 7), ' kcal']
+      ]) {
         const metric = make('div', 'diet-treat-metric');
-        metric.append(make('span', '', titleCase(label(zh, english))), make('strong', '', `${value(row, column)} kcal`));
+        metric.append(make('span', '', label(zh, english)), make('strong', '', range(lowValue, highValue, suffix)));
         remaining.append(metric);
       }
       card.append(remaining);
       grid.append(card);
     }
     mount(treats, grid);
+    const setOpen = (open) => {
+      content.hidden = !open;
+      toggle.setAttribute('aria-expanded', String(open));
+    };
+    toggle.addEventListener('click', () => setOpen(content.hidden));
+    if (location.hash === '#cheat-meals') setOpen(true);
+    window.addEventListener('hashchange', () => {
+      if (location.hash === '#cheat-meals') setOpen(true);
+    });
   }
 
 })();

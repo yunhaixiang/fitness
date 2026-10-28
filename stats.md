@@ -22,7 +22,7 @@ visual: true
       <div class="nutrition-key-row nutrition-key-intake"><span>日均摄入</span><strong>1,747 <small>kcal／天</small></strong></div>
       <div class="nutrition-key-row nutrition-key-burn"><span>日均消耗</span><strong>2,319 <small>kcal／天</small></strong></div>
       <div class="nutrition-key-row nutrition-key-deficit"><span>日均赤字</span><strong>572 <small>kcal／天</small></strong></div>
-      <div class="nutrition-key-row"><span>每周赤字</span><strong>4,009 <small>kcal</small></strong></div>
+      <div class="nutrition-key-row"><span>每周赤字</span><strong>{{ site.data.plan_metrics.weekly_deficit_display }} <small>kcal</small></strong></div>
       <div class="nutrition-key-row"><span>每周赤字等价脂肪</span><strong>0.52 <small>kg／周</small></strong></div>
     </div>
   </div>

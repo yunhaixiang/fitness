@@ -42,6 +42,8 @@
     '菠菜，蘑菇': 'spinach, mushrooms',
     '豌豆，胡萝卜': 'peas, carrots',
     '放纵餐': 'Cheat Meals', '常见放纵餐': 'Common Cheat Meals',
+    '按在原计划外加吃一次计算；营养数据为参考估算。': 'Assumes one extra item on top of the meal plan; nutrient values are approximate.',
+    '在饮食安排中查看常见放纵餐': 'View common cheat meals in Diet',
     '常见放纵餐的热量与赤字影响': 'Cheat Meal Calories and Their Effect on Your Deficit',
     '常见食物的热量与赤字影响': 'Cheat Meal Calories and Their Effect on Your Deficit',
     '占参考赤字4,009 kcal（额外加吃）': 'Share of Weekly Calorie Deficit (if added)',

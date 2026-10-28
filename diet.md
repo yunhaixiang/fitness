@@ -7,6 +7,14 @@ diet: true
 ---
 ## 计划表
 
+<section class="diet-cheat-section" id="cheat-meals" data-weekly-deficit="{{ site.data.plan_metrics.weekly_deficit }}">
+  <button type="button" class="diet-cheat-toggle" aria-expanded="false" aria-controls="cheat-meal-content">常见放纵餐</button>
+  <div id="cheat-meal-content" hidden>
+    <p class="diet-cheat-note">按在原计划外加吃一次计算；营养数据为参考估算。</p>
+    {% include cheat-meal-table.html %}
+  </div>
+</section>
+
 
 
 <noscript>
