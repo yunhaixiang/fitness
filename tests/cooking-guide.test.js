@@ -37,3 +37,42 @@ test('untimed tasks are not turned into timers', () => {
   context.adjust('rice', 1);
   assert.equal(record.running.rice.minutes, undefined);
 });
+
+test('completion alarm repeats until extended or completed, and re-arms at the new deadline', () => {
+  let clock = now, sounds = 0, stops = 0;
+  const state = { batches: { first: { running: { rice: { startedAt: now - 60000, minutes: 1 } }, done: [] },
+    second: { running: {}, done: [] } } };
+  const context = { Date: { now: () => clock }, state, batch: () => state.batches.first,
+    byId: new Map([['rice', {}]]), tasks: [{ id: 'rice' }],
+    running: id => Boolean(state.batches.first.running[id]), save: () => {},
+    playAlert: () => { sounds++; return true; }, stopAlert: () => { stops++; },
+    render: () => context.updateAlarm() };
+  const alarmSource = source.slice(source.indexOf("  let completionAlarmKey ="), source.indexOf('  const taskCard ='));
+  const completeSource = source.slice(source.indexOf('  const complete ='), source.indexOf('  const adjust ='));
+  vm.runInNewContext(remainingSource + alarmSource + adjustSource + completeSource +
+    'this.updateAlarm = updateCompletionAlarm; this.adjust = adjust; this.complete = complete;', context);
+  context.updateAlarm(); assert.equal(sounds, 1);
+  clock += 4999; context.updateAlarm(); assert.equal(sounds, 1);
+  clock++; context.updateAlarm(); assert.equal(sounds, 2);
+  context.adjust('rice', 1); assert.equal(stops, 1);
+  clock += 59000; context.updateAlarm(); assert.equal(sounds, 2);
+  clock += 1000; context.updateAlarm(); assert.equal(sounds, 3);
+  context.complete('rice'); assert.equal(stops, 2);
+  clock += 5000; context.updateAlarm(); assert.equal(sounds, 3);
+});
+
+test('overdue timers in either batch share a reminder and untimed boiling stays silent', () => {
+  let sounds = 0;
+  const expired = { startedAt: now - 60000, minutes: 1, alerted: true };
+  const state = { batches: { first: { running: { rice: expired } }, second: { running: { salmon: expired, water: { startedAt: 0 } } } } };
+  const context = { Date: { now: () => now }, state,
+    byId: new Map([['rice', {}], ['salmon', {}], ['water', { manual: true }]]),
+    playAlert: () => { sounds++; return true; }, stopAlert: () => {} };
+  const alarmSource = source.slice(source.indexOf("  let completionAlarmKey ="), source.indexOf('  const taskCard ='));
+  vm.runInNewContext(remainingSource + alarmSource + 'this.updateAlarm = updateCompletionAlarm;', context);
+  context.updateAlarm(); assert.equal(sounds, 1);
+  delete state.batches.first.running.rice;
+  context.updateAlarm(); assert.equal(sounds, 2);
+  delete state.batches.second.running.salmon;
+  context.updateAlarm(); assert.equal(sounds, 2);
+});

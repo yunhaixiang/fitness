@@ -79,7 +79,7 @@
   const button = (label, className, action) => {
     const element = make('button', className, label);
     element.type = 'button';
-    element.addEventListener('click', action);
+    element.addEventListener('click', () => { enableSound(); action(); });
     return element;
   };
   const format = (seconds) => {
@@ -187,25 +187,60 @@
     save();
     render();
   };
-  const playAlert = () => {
+  let audioContext;
+  const sounding = new Set();
+  const enableSound = () => {
     try {
       const Context = window.AudioContext || window.webkitAudioContext;
-      if (Context) {
-        const context = new Context();
-        const oscillator = context.createOscillator();
-        const gain = context.createGain();
-        oscillator.type = 'sine';
-        oscillator.frequency.value = 680;
-        gain.gain.setValueAtTime(0.0001, context.currentTime);
-        gain.gain.exponentialRampToValueAtTime(0.12, context.currentTime + 0.02);
-        gain.gain.exponentialRampToValueAtTime(0.0001, context.currentTime + 0.35);
-        oscillator.connect(gain).connect(context.destination);
-        oscillator.start();
-        oscillator.stop(context.currentTime + 0.36);
-        oscillator.onended = () => context.close();
-      }
-      navigator.vibrate?.(150);
+      if (!Context) return;
+      audioContext ||= new Context();
+      if (audioContext.state !== 'running') audioContext.resume().then(() => tick()).catch(() => {});
     } catch (_) { /* visual timer still works */ }
+  };
+  const stopAlert = () => {
+    for (const oscillator of sounding) {
+      try { oscillator.stop(); } catch (_) { /* already ended */ }
+    }
+    sounding.clear();
+  };
+  const playAlert = () => {
+    try {
+      if (!audioContext || audioContext.state !== 'running') return false;
+      const oscillator = audioContext.createOscillator();
+      const gain = audioContext.createGain();
+      oscillator.type = 'sine';
+      oscillator.frequency.value = 680;
+      gain.gain.setValueAtTime(0.0001, audioContext.currentTime);
+      gain.gain.exponentialRampToValueAtTime(0.12, audioContext.currentTime + 0.02);
+      gain.gain.exponentialRampToValueAtTime(0.0001, audioContext.currentTime + 0.35);
+      oscillator.connect(gain).connect(audioContext.destination);
+      sounding.add(oscillator);
+      oscillator.start();
+      oscillator.stop(audioContext.currentTime + 0.36);
+      oscillator.onended = () => { sounding.delete(oscillator); oscillator.disconnect(); gain.disconnect(); };
+      navigator.vibrate?.(150);
+      return true;
+    } catch (_) { return false; }
+  };
+  let completionAlarmKey = '';
+  let lastCompletionSound = -Infinity;
+  const updateCompletionAlarm = () => {
+    // Keep an overdue batch audible even when viewing the other half-week.
+    const overdue = Object.entries(state.batches).flatMap(([half, record]) =>
+      Object.entries(record.running).filter(([id, run]) =>
+        !byId.get(id)?.manual && remainingSeconds(run) <= 0
+      ).map(([id]) => `${half}:${id}`)
+    ).sort().join('|');
+    if (!overdue) {
+      if (completionAlarmKey) stopAlert();
+      completionAlarmKey = '';
+      lastCompletionSound = -Infinity;
+      return;
+    }
+    if (overdue !== completionAlarmKey || Date.now() - lastCompletionSound >= 5000) {
+      if (playAlert()) lastCompletionSound = Date.now();
+    }
+    completionAlarmKey = overdue;
   };
   const taskCard = (task, variant) => {
     const card = make('article', `cooking-guide-task cooking-guide-task-${variant}`);
@@ -397,7 +432,7 @@
         time.classList.toggle('is-due', remaining <= 0);
         time.setAttribute('aria-label', remaining <= 0 ? t('计时结束，请检查并确认完成', 'Timer finished. Check and mark done.') : '');
       }
-      if (remaining <= 0 && !run.alerted) { run.alerted = true; changed = true; playAlert(); }
+      if (remaining <= 0 && !run.alerted) { run.alerted = true; changed = true; }
       if (inActiveTail(id) && !run.tailAlerted) { run.tailAlerted = true; changed = true; playAlert(); }
       const stirTime = root.querySelector(`[data-stir-id="${id}"]`);
       if (stirTime) {
@@ -407,6 +442,7 @@
         if (seconds <= 0 && remaining > 0 && !run.stirAlerted) { run.stirAlerted = true; changed = true; playAlert(); }
       }
     }
+    updateCompletionAlarm();
     if (changed) save();
     const elapsed = root.querySelector('[data-elapsed]');
     if (elapsed) elapsed.textContent = batch().startedAt
