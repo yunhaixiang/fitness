@@ -17,6 +17,7 @@
     tomato: 6, ground: 15, wrap: 6, finish: 15
   };
   const tasks = plan.nodes.filter((node) => node.manual || Object.hasOwn(taskMinutes, node.id));
+  const startEarly = ['egg-water', 'pasta-water', 'oven-heat', 'air-heat', 'prep-rice', 'rice'];
   const byId = new Map(tasks.map((node) => [node.id, node]));
   const successors = new Map(tasks.map((node) => [node.id, tasks.filter((other) => other.before.includes(node.id)).map((other) => other.id)]));
   const validIds = new Set(tasks.map((task) => task.id));
@@ -102,7 +103,6 @@
   };
   const rankedAvailable = (schedulePlan) => {
     pathMemo.clear();
-    const startEarly = ['egg-water', 'pasta-water', 'oven-heat', 'air-heat', 'prep-rice', 'rice'];
     return available().sort((a, b) => {
       const aPriority = startEarly.indexOf(a.id);
       const bPriority = startEarly.indexOf(b.id);
@@ -305,7 +305,7 @@
           ? imminent.seconds <= 0 ? t('该翻炒了', 'Stir Now') : t('即将翻炒', 'Stir Soon')
           : imminent.seconds <= 0 ? t('计时已到，请确认', 'Timer Finished — Check Now') : t('即将到点', 'Almost Done')
         : activeNow ? t('当前需翻炒', 'Stir Now') : focus.manual ? t('等待水沸', 'Waiting for Boil') : t('等待计时', 'Waiting on Timer')
-      : schedulePlan && readyTasks[0] && schedulePlan.starts[readyTasks[0].id] > 0
+      : schedulePlan && readyTasks[0] && !startEarly.includes(readyTasks[0].id) && schedulePlan.starts[readyTasks[0].id] > 0
         ? t(`建议 ${schedulePlan.starts[readyTasks[0].id]} 分钟后开始`, `Start in ${schedulePlan.starts[readyTasks[0].id]} min`)
         : t('推荐下一步', 'Recommended Next')));
     if (focus) {
