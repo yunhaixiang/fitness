@@ -54,7 +54,7 @@
   // An exercise contributes its full calculated load to every listed muscle.
   // These per-muscle totals are not additive across muscle groups.
   const movements = {
-    '俯卧撑': { primary: ['chest'], secondary: ['front-delts', 'triceps', 'abs'], bodyFactor: .64 },
+    '中立握哑铃地板卧推': { primary: ['chest'], secondary: ['front-delts', 'triceps'] },
     '卷腹': { primary: ['abs'], secondary: ['obliques'], bodyFactor: .30 },
     '反向卷腹': { primary: ['abs'], secondary: ['obliques'], bodyFactor: .30 },
     '站姿哑铃肩推': { primary: ['front-delts'], secondary: ['side-delts', 'triceps', 'traps'] },

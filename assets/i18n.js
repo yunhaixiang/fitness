@@ -318,7 +318,7 @@
     '臀部': 'glutes', '大腿前侧': 'quads', '大腿后侧': 'hamstrings', '小腿': 'calves',
     '辅助': 'secondary', '主要': 'primary', '稳定': 'stability',
     '充足': 'adequate', '基本充足': 'mostly adequate', '难判断': 'hard to judge', '偏少': 'on the low side',
-    '俯卧撑': 'push-ups', '卷腹': 'crunches', '反向卷腹': 'reverse crunches',
+    '中立握哑铃地板卧推': 'Neutral-Grip Dumbbell Floor Press', '卷腹': 'crunches', '反向卷腹': 'reverse crunches',
     '每侧': 'per side',
     '站姿哑铃肩推': 'standing dumbbell shoulder press', '双哑铃俯身划船': 'dumbbell bent-over row',
     '哑铃侧平举': 'dumbbell lateral raise', '哑铃反向飞鸟': 'dumbbell reverse fly',
