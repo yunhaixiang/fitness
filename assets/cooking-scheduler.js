@@ -11,11 +11,11 @@
   const resource = (task) => {
     if (task.id === 'egg-water' || task.id === 'eggs') return 'pot-1';
     if (task.id === 'pasta-water' || task.id === 'pasta') return 'pot-2';
-    return ({ 'small-wok': 'saucepan', 'large-wok': 'wok', wrap: 'counter', finish: 'counter' })[task.group] || task.group;
+    return ({ 'small-wok': 'saucepan', 'large-wok': 'wok', prep: 'counter', wrap: 'counter', finish: 'counter' })[task.group] || task.group;
   };
   const demand = (task) => task.id === 'oven-heat' ? 3 : 1;
   const attentionOffsets = (task, minutes, stirEvery) => {
-    if (continuous.has(task.id)) return Array.from({ length: minutes }, (_, index) => index);
+    if (continuous.has(task.id) || task.group === 'prep') return Array.from({ length: minutes }, (_, index) => index);
     const slots = new Set([0, minutes - 1]);
     const tail = Math.max(1, minutes - (activeTail[task.id] || 0));
     if (pans.has(task.id)) for (let minute = stirEvery; minute < tail; minute += stirEvery) slots.add(minute);
@@ -27,8 +27,20 @@
     if (!ready) return null;
     const byId = new Map(tasks.map((task) => [task.id, task]));
     const finished = new Set(done);
-    const active = Object.entries(running).filter(([id]) => byId.has(id));
-    const pending = tasks.filter((task) => !finished.has(task.id) && !running[task.id]);
+    // Boiling is confirmed by the cook. Until then, omit its dependent chain
+    // from the estimate while still scheduling independent preparation.
+    const blocked = new Set(tasks.filter((task) => task.manual && !finished.has(task.id)).map((task) => task.id));
+    let changed;
+    do {
+      changed = false;
+      for (const task of tasks) if (!finished.has(task.id) && !blocked.has(task.id) && task.before.some((id) => blocked.has(id))) {
+        blocked.add(task.id);
+        changed = true;
+      }
+    } while (changed);
+    const planned = tasks.filter((task) => !task.manual && !blocked.has(task.id));
+    const active = Object.entries(running).filter(([id]) => planned.some((task) => task.id === id));
+    const pending = planned.filter((task) => !finished.has(task.id) && !running[task.id]);
     const minuteLength = (id) => Math.max(1, Math.ceil(minutes[id] || 1));
     const base = {
       starts: {}, ends: Object.fromEntries([...finished].map((id) => [id, 0])),
@@ -70,7 +82,7 @@
         memo.set(id, end);
         return end;
       };
-      return Math.max(state.maxEnd, ...tasks.map((task) => endOf(task.id)));
+      return Math.max(state.maxEnd, ...planned.map((task) => endOf(task.id)));
     };
     const place = (state, task) => {
       const length = minuteLength(task.id);
@@ -136,7 +148,7 @@
     }
     if (!solutions.length) return null;
     const best = solutions.sort((a, b) => a.maxEnd - b.maxEnd || rank(a, b))[0];
-    return { starts: best.starts, ends: best.ends, minutes: best.maxEnd,
+    return { starts: best.starts, ends: best.ends, minutes: best.maxEnd, partial: blocked.size > 0,
       order: Object.keys(best.starts).sort((a, b) => best.starts[a] - best.starts[b] || best.ends[b] - best.ends[a]) };
   }
 

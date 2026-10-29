@@ -439,6 +439,7 @@ html[data-theme=light] .theme-icon-moon{display:block}
 .cooking-flow-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
 .cooking-flow-card{--thread-accent:var(--accent);--thread-tint:color-mix(in srgb,var(--thread-accent) 15%,var(--card));min-width:0;padding:15px;border:1px solid var(--line);border-top:3px solid var(--thread-accent);border-radius:10px;background:var(--card);transition:border-color .15s,box-shadow .15s}
 .cooking-flow-card-cold{--thread-accent:var(--cool);--thread-tint:color-mix(in srgb,var(--thread-accent) 15%,var(--card))}
+.cooking-flow-card-prep{--thread-accent:var(--gold);--thread-tint:color-mix(in srgb,var(--thread-accent) 15%,var(--card));grid-column:1/-1}
 .cooking-flow-card-rice{--thread-accent:var(--gold);--thread-tint:color-mix(in srgb,var(--thread-accent) 15%,var(--card))}
 .cooking-flow-card-oven{--thread-accent:var(--peach);--thread-tint:color-mix(in srgb,var(--thread-accent) 15%,var(--card))}
 .cooking-flow-card-oven{grid-column:1/-1}
@@ -577,6 +578,7 @@ html[data-theme=light] .cooking-guide-primary{color:#fff}
 .cooking-guide-stir.is-due{color:var(--danger)}
 .cooking-guide-timer{flex:none;color:var(--gold);font:750 21px/1 ui-monospace,SFMono-Regular,Menlo,monospace;white-space:nowrap}
 .cooking-guide-timer.is-due{color:var(--danger);font-size:14px}
+.cooking-guide-manual{flex:none;color:var(--gold);font-size:12px;font-weight:700}
 .cooking-guide-actions{display:flex;align-items:center;gap:7px;flex-wrap:wrap}
 .cooking-guide-link{margin-left:auto;color:var(--accent);font-size:11px;font-weight:700;text-decoration:none;white-space:nowrap}
 .cooking-guide-link:hover{text-decoration:underline}

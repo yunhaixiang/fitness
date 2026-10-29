@@ -9,23 +9,25 @@
   const t = (zh, english) => en ? english : zh;
   const key = 'fitness-cooking-guide-v1';
   const taskMinutes = {
+    'prep-rice': 3, 'prep-oven': 10, 'prep-salmon': 4,
+    'prep-pots': 2, 'prep-veg': 4, 'prep-ground': 4,
     rice: 50, 'oven-heat': 15, chicken: 27, potato: 30, ribs: 18,
-    'air-heat': 4, salmon: 8, 'egg-water': 8, eggs: 8,
-    'pasta-water': 8, pasta: 8, mushroom: 7, spinach: 7,
+    'air-heat': 4, salmon: 8, eggs: 8,
+    pasta: 8, mushroom: 7, spinach: 7,
     tomato: 6, ground: 15, wrap: 6, finish: 15
   };
-  const tasks = plan.nodes.filter((node) => Object.hasOwn(taskMinutes, node.id));
+  const tasks = plan.nodes.filter((node) => node.manual || Object.hasOwn(taskMinutes, node.id));
   const byId = new Map(tasks.map((node) => [node.id, node]));
   const successors = new Map(tasks.map((node) => [node.id, tasks.filter((other) => other.before.includes(node.id)).map((other) => other.id)]));
   const validIds = new Set(tasks.map((task) => task.id));
   const pans = window.fitnessCookingScheduler?.pans || new Set();
   const activeTail = window.fitnessCookingScheduler?.activeTail || {};
   const emptyBatch = () => ({ ready: false, done: [], running: {}, startedAt: null, finishedAt: null });
-  const initialState = () => ({ version: 1, selected: 'first', stirEvery: 3, batches: { first: emptyBatch(), second: emptyBatch() } });
+  const initialState = () => ({ version: 2, selected: 'first', stirEvery: 3, batches: { first: emptyBatch(), second: emptyBatch() } });
   const readState = () => {
     try {
       const saved = JSON.parse(localStorage.getItem(key));
-      if (saved?.version !== 1 || !saved.batches) return initialState();
+      if (![1, 2].includes(saved?.version) || !saved.batches) return initialState();
       const state = initialState();
       state.selected = saved.selected === 'second' ? 'second' : 'first';
       if (Number.isInteger(saved.stirEvery) && saved.stirEvery >= 2 && saved.stirEvery <= 5) state.stirEvery = saved.stirEvery;
@@ -35,11 +37,22 @@
           ready: record.ready === true,
           done: Array.isArray(record.done) ? record.done.filter((id) => validIds.has(id)) : [],
           running: Object.fromEntries(Object.entries(record.running || {}).filter(([id, run]) =>
-            validIds.has(id) && Number.isFinite(run?.startedAt) && Number.isFinite(run?.minutes) && run.minutes >= 1 && run.minutes <= 180
+            validIds.has(id) && Number.isFinite(run?.startedAt) && (byId.get(id)?.manual ||
+              (Number.isFinite(run?.minutes) && run.minutes >= 1 && run.minutes <= 180))
           )),
           startedAt: Number.isFinite(record.startedAt) ? record.startedAt : null,
           finishedAt: Number.isFinite(record.finishedAt) ? record.finishedAt : null
         };
+        if (saved.version === 1) {
+          const previous = state.batches[half];
+          for (const [prep, foods] of Object.entries({
+            'prep-rice': ['rice'], 'prep-oven': ['chicken', 'potato', 'ribs'],
+            'prep-salmon': ['salmon'], 'prep-pots': ['eggs', 'pasta'],
+            'prep-veg': ['mushroom', 'spinach', 'tomato'], 'prep-ground': ['ground']
+          })) {
+            if (foods.some((id) => previous.done.includes(id) || previous.running[id])) previous.done.push(prep);
+          }
+        }
       }
       return state;
     } catch (_) { return initialState(); }
@@ -66,7 +79,8 @@
     const n = Math.abs(Math.ceil(seconds));
     return `${sign}${String(Math.floor(n / 60)).padStart(2, '0')}:${String(n % 60).padStart(2, '0')}`;
   };
-  const remainingSeconds = (run) => (run.startedAt + run.minutes * 60000 - Date.now()) / 1000;
+  const remainingSeconds = (run) => Number.isFinite(run.minutes)
+    ? (run.startedAt + run.minutes * 60000 - Date.now()) / 1000 : Infinity;
   const stirSeconds = (run) => ((run.stirredAt || run.startedAt) + state.stirEvery * 60000 - Date.now()) / 1000;
   const inActiveTail = (id) => running(id) && activeTail[id] && remainingSeconds(batch().running[id]) > 0
     && remainingSeconds(batch().running[id]) <= activeTail[id] * 60;
@@ -81,16 +95,23 @@
     if (done(id)) return 0;
     if (pathMemo.has(id)) return pathMemo.get(id);
     const run = batch().running[id];
-    const minutes = run ? Math.max(0, remainingSeconds(run) / 60) : taskMinutes[id];
+    const minutes = run ? (byId.get(id).manual ? 0 : Math.max(0, remainingSeconds(run) / 60)) : (taskMinutes[id] || 0);
     const length = minutes + Math.max(0, ...successors.get(id).map(pathLength));
     pathMemo.set(id, length);
     return length;
   };
   const rankedAvailable = (schedulePlan) => {
     pathMemo.clear();
-    return available().sort((a, b) => schedulePlan
-      ? schedulePlan.starts[a.id] - schedulePlan.starts[b.id] || pathLength(b.id) - pathLength(a.id)
-      : pathLength(b.id) - pathLength(a.id));
+    const startEarly = ['egg-water', 'pasta-water', 'oven-heat', 'air-heat', 'prep-rice', 'rice'];
+    return available().sort((a, b) => {
+      const aPriority = startEarly.indexOf(a.id);
+      const bPriority = startEarly.indexOf(b.id);
+      if (aPriority !== bPriority && (aPriority >= 0 || bPriority >= 0))
+        return (aPriority < 0 ? Infinity : aPriority) - (bPriority < 0 ? Infinity : bPriority);
+      return schedulePlan
+        ? (schedulePlan.starts[a.id] ?? Infinity) - (schedulePlan.starts[b.id] ?? Infinity) || pathLength(b.id) - pathLength(a.id)
+        : pathLength(b.id) - pathLength(a.id);
+    });
   };
   const optimize = () => window.fitnessCookingScheduler?.schedule({
     tasks, minutes: taskMinutes, done: batch().done, running: batch().running,
@@ -122,7 +143,7 @@
     const now = Date.now();
     record.startedAt ||= now;
     record.finishedAt = null;
-    record.running[id] = { startedAt: now, minutes: taskMinutes[id], alerted: false };
+    record.running[id] = task.manual ? { startedAt: now } : { startedAt: now, minutes: taskMinutes[id], alerted: false };
     save();
     render();
   };
@@ -176,12 +197,16 @@
     const top = make('div', 'cooking-guide-task-top');
     const title = make('div', 'cooking-guide-task-title');
     title.append(make('strong', '', task.label[en ? 1 : 0]));
-    title.append(make('small', '', `${appliance(task.id)} · ${t('计时', 'Timer')} ${batch().running[task.id]?.minutes || taskMinutes[task.id]} ${t('分钟', 'min')}`));
+    title.append(make('small', '', task.manual
+      ? `${appliance(task.id)} · ${t('不计时，水沸后确认', 'No Timer — Confirm at a Boil')}`
+      : `${appliance(task.id)} · ${t('计时', 'Timer')} ${batch().running[task.id]?.minutes || taskMinutes[task.id]} ${t('分钟', 'min')}`));
     top.append(title);
-    if (variant === 'running') {
+    if (variant === 'running' && !task.manual) {
       const time = make('time', 'cooking-guide-timer');
       time.dataset.timerId = task.id;
       top.append(time);
+    } else if (variant === 'running') {
+      top.append(make('span', 'cooking-guide-manual', t('等待水沸', 'Waiting for Boil')));
     }
     card.append(top);
     const detail = instructions(task.id);
@@ -196,11 +221,13 @@
     const actions = make('div', 'cooking-guide-actions');
     if (variant === 'running') {
       if (pans.has(task.id)) actions.append(button(t('已翻炒', 'Stirred'), 'cooking-guide-minor', () => stirred(task.id)));
-      actions.append(button(t('−1 分', '−1 min'), 'cooking-guide-minor', () => adjust(task.id, -1)));
-      actions.append(button(t('+1 分', '+1 min'), 'cooking-guide-minor', () => adjust(task.id, 1)));
-      actions.append(button(t('确认完成', 'Mark Done'), 'cooking-guide-primary', () => complete(task.id)));
+      if (!task.manual) {
+        actions.append(button(t('−1 分', '−1 min'), 'cooking-guide-minor', () => adjust(task.id, -1)));
+        actions.append(button(t('+1 分', '+1 min'), 'cooking-guide-minor', () => adjust(task.id, 1)));
+      }
+      actions.append(button(task.manual ? t('确认已沸腾', 'Water Is Boiling') : t('确认完成', 'Mark Done'), 'cooking-guide-primary', () => complete(task.id)));
     } else {
-      actions.append(button(t('开始计时', 'Start Timer'), 'cooking-guide-primary', () => start(task.id)));
+      actions.append(button(task.manual ? t('开始烧水', 'Start Boiling Water') : t('开始计时', 'Start Timer'), 'cooking-guide-primary', () => start(task.id)));
     }
     actions.append(linkTo(task.id));
     card.append(actions);
@@ -246,23 +273,23 @@
 
     const preflight = make('div', `cooking-guide-preflight${record.ready ? ' is-ready' : ''}`);
     const preflightText = make('div', '');
-    preflightText.append(make('strong', '', record.ready ? t('食材已就绪', 'Ingredients Ready') : t('先确认食材', 'Check Ingredients')));
+    preflightText.append(make('strong', '', record.ready ? t('本批食材已确认', 'Ingredients Confirmed') : t('先确认本批食材', 'Check This Batch’s Ingredients')));
     preflightText.append(make('p', '', state.selected === 'first'
-      ? t('本批食材备好；留给后半周的肉和半盒排骨冷冻。', 'Prepare this batch; freeze the meat and half-box of ribs for the second half.')
+      ? t('确认本批食材可用；留给后半周的肉和半盒排骨冷冻。', 'Check that this batch is available; freeze the meat and half-box of ribs for the second half.')
       : t('提前约36小时把冷冻的肉和半盒排骨移入冷藏解冻。', 'Move the frozen meat and half-box of ribs to the fridge about 36 hours ahead.')));
     preflight.append(preflightText);
-    if (!record.ready) preflight.append(button(t('食材已就绪', 'Ingredients Ready'), 'cooking-guide-primary', () => { record.ready = true; save(); render(); }));
+    if (!record.ready) preflight.append(button(t('确认食材', 'Confirm Ingredients'), 'cooking-guide-primary', () => { record.ready = true; save(); render(); }));
     root.append(preflight);
 
     const schedulePlan = optimize();
-    if (schedulePlan && record.done.length < tasks.length) {
+    if (schedulePlan && !schedulePlan.partial && record.done.length < tasks.length) {
       const forecast = make('div', 'cooking-guide-forecast');
       forecast.append(make('strong', '', t(`排程预计剩余 ${schedulePlan.minutes} 分钟`, `Scheduled Time Remaining: ${schedulePlan.minutes} min`)));
       root.append(forecast);
     }
     const readyTasks = rankedAvailable(schedulePlan);
     const active = activeTasks().sort((a, b) => remainingSeconds(record.running[a.id]) - remainingSeconds(record.running[b.id]));
-    const attention = active.flatMap((task) => {
+    const attention = active.filter((task) => !task.manual).flatMap((task) => {
       const run = record.running[task.id];
       const items = [{ task, seconds: remainingSeconds(run), type: 'done' }];
       if (hasStir(task.id)) items.push({ task, seconds: stirSeconds(run), type: 'stir' });
@@ -277,7 +304,7 @@
         ? imminent.type === 'stir'
           ? imminent.seconds <= 0 ? t('该翻炒了', 'Stir Now') : t('即将翻炒', 'Stir Soon')
           : imminent.seconds <= 0 ? t('计时已到，请确认', 'Timer Finished — Check Now') : t('即将到点', 'Almost Done')
-        : activeNow ? t('当前需翻炒', 'Stir Now') : t('等待计时', 'Waiting on Timer')
+        : activeNow ? t('当前需翻炒', 'Stir Now') : focus.manual ? t('等待水沸', 'Waiting for Boil') : t('等待计时', 'Waiting on Timer')
       : schedulePlan && readyTasks[0] && schedulePlan.starts[readyTasks[0].id] > 0
         ? t(`建议 ${schedulePlan.starts[readyTasks[0].id]} 分钟后开始`, `Start in ${schedulePlan.starts[readyTasks[0].id]} min`)
         : t('推荐下一步', 'Recommended Next')));
@@ -335,6 +362,7 @@
   const tick = () => {
     let changed = false;
     for (const [id, run] of Object.entries(batch().running)) {
+      if (byId.get(id)?.manual) continue;
       const remaining = remainingSeconds(run);
       const time = root.querySelector(`[data-timer-id="${id}"]`);
       if (time) {

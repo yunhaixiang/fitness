@@ -13,6 +13,7 @@
     pot: '<path d="M4 10h16v7a4 4 0 0 1-4 4H8a4 4 0 0 1-4-4zM2 10h20M8 7V5m4 2V3m4 4V5"/>',
     wok: '<path d="M3 10h18a9 9 0 0 1-18 0zM1 10h22M9 19l-1 2m7-2 1 2"/>',
     wrap: '<path d="M5 4h14l-2 15H7L5 4zM7 7l5 8 5-8M10 19v2h4v-2"/>',
+    prep: '<path d="M4 4h16v16H4zM8 8h8M8 12h8M8 16h5"/>',
     finish: '<circle cx="12" cy="12" r="9"/><path d="m8 12 3 3 5-6"/>'
   };
   const svg = (name) => `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${icons[name]}</svg>`;
@@ -21,26 +22,33 @@
     { id: 'cold-first', label: ['前半周：冷冻留用', 'First Half: Freeze Later Portions'], note: ['冷冻后半周的肉和半盒排骨', 'Freeze meat and half the ribs for later'], group: 'cold', before: [], link: '#cook-cold-first' },
     { id: 'cold-second', label: ['后半周：冷藏解冻', 'Second Half: Thaw in Fridge'], note: ['提前约36小时', 'About 36 hours ahead'], group: 'cold', before: [], link: '#cook-cold-second' },
     { id: 'ready', label: ['当批食材就绪', 'Ingredients Ready'], note: ['按本次备餐选择一条路径', 'Choose the path for this batch'], group: 'cold', before: ['cold-first', 'cold-second'], either: true, link: '#cold' },
-    { id: 'rice', label: ['白米饭', 'White Rice'], note: ['电饭煲 · 约50分钟', 'Rice cooker · about 50 min'], group: 'rice', before: [], link: '#cook-rice' },
-    { id: 'oven-heat', label: ['预热烤箱', 'Preheat Oven'], note: ['400°F · 15分钟', '400°F · 15 min'], group: 'oven', before: [], link: '#cook-oven-heat' },
-    { id: 'chicken', label: ['鸡大腿肉', 'Chicken Thighs'], note: ['400°F · 27分钟', '400°F · 27 min'], group: 'oven', before: ['ready', 'oven-heat'], link: '#cook-chicken' },
-    { id: 'potato', label: ['整颗烤土豆', 'Whole Roasted Potatoes'], note: ['400°F · 约30分钟', '400°F · about 30 min'], group: 'oven', before: ['oven-heat'], link: '#cook-potato' },
-    { id: 'ribs', label: ['BBQ排骨', 'BBQ Ribs'], note: ['400°F · 15–20分钟', '400°F · 15–20 min'], group: 'oven', before: ['ready', 'oven-heat'], link: '#cook-ribs' },
-    { id: 'air-heat', label: ['预热空气炸锅', 'Preheat Air Fryer'], note: ['400°F · 4分钟', '400°F · 4 min'], group: 'air', before: [], link: '#cook-air-heat' },
-    { id: 'salmon', label: ['三文鱼', 'Salmon'], note: ['400°F · 8分钟', '400°F · 8 min'], group: 'air', before: ['ready', 'air-heat'], link: '#cook-salmon' },
-    { id: 'egg-water', label: ['煮锅一：烧水', 'Pot 1: Boil Water'], note: ['', ''], group: 'pots', before: [], link: '#cook-eggs' },
-    { id: 'eggs', label: ['水煮蛋', 'Boiled Eggs'], note: ['水开后约8分钟', 'About 8 min after boiling'], group: 'pots', before: ['egg-water'], link: '#cook-eggs' },
-    { id: 'pasta-water', label: ['煮锅二：烧水', 'Pot 2: Boil Water'], note: ['', ''], group: 'pots', before: [], link: '#cook-pasta' },
-    { id: 'pasta', label: ['意面', 'Pasta'], note: ['约8分钟', 'About 8 min'], group: 'pots', before: ['pasta-water'], link: '#cook-pasta' },
-    { id: 'mushroom', label: ['蘑菇', 'Mushrooms'], note: ['小锅 · 约7分钟', 'Saucepan · about 7 min'], group: 'small-wok', before: [], link: '#cook-mushroom' },
+    { id: 'prep-rice', label: ['备白米', 'Prepare Rice'], note: ['淘洗、加水', 'Rinse and add water'], group: 'prep', before: ['ready'], link: '#cook-prep-rice' },
+    { id: 'prep-oven', label: ['备鸡腿、土豆、排骨', 'Prepare Chicken, Potatoes and Ribs'], note: ['擦干、调味、包锡纸', 'Dry, season and wrap'], group: 'prep', before: ['ready'], link: '#cook-prep-oven' },
+    { id: 'prep-salmon', label: ['备三文鱼', 'Prepare Salmon'], note: ['擦干、调味', 'Dry and season'], group: 'prep', before: ['ready'], link: '#cook-prep-salmon' },
+    { id: 'prep-pots', label: ['备鸡蛋、意面', 'Prepare Eggs and Pasta'], note: ['量取食材', 'Measure ingredients'], group: 'prep', before: ['ready'], link: '#cook-prep-pots' },
+    { id: 'prep-veg', label: ['备小锅食材', 'Prepare Saucepan Ingredients'], note: ['蘑菇、菠菜、番茄酱', 'Mushrooms, spinach, tomato sauce'], group: 'prep', before: ['ready'], link: '#cook-prep-veg' },
+    { id: 'prep-ground', label: ['备鸡肉末炒蛋', 'Prepare Ground Chicken and Eggs'], note: ['沥干蔬菜、打蛋、备调味', 'Drain vegetables, beat eggs, season'], group: 'prep', before: ['ready'], link: '#cook-prep-ground' },
+    { id: 'rice', label: ['白米饭', 'White Rice'], note: ['电饭煲 · 约50分钟', 'Rice cooker · about 50 min'], group: 'rice', before: ['prep-rice'], link: '#cook-rice' },
+    { id: 'oven-heat', label: ['预热烤箱', 'Preheat Oven'], note: ['400°F · 15分钟', '400°F · 15 min'], group: 'oven', before: ['ready'], link: '#cook-oven-heat' },
+    { id: 'chicken', label: ['鸡大腿肉', 'Chicken Thighs'], note: ['400°F · 27分钟', '400°F · 27 min'], group: 'oven', before: ['prep-oven', 'oven-heat'], link: '#cook-chicken' },
+    { id: 'potato', label: ['整颗烤土豆', 'Whole Roasted Potatoes'], note: ['400°F · 约30分钟', '400°F · about 30 min'], group: 'oven', before: ['prep-oven', 'oven-heat'], link: '#cook-potato' },
+    { id: 'ribs', label: ['BBQ排骨', 'BBQ Ribs'], note: ['400°F · 15–20分钟', '400°F · 15–20 min'], group: 'oven', before: ['prep-oven', 'oven-heat'], link: '#cook-ribs' },
+    { id: 'air-heat', label: ['预热空气炸锅', 'Preheat Air Fryer'], note: ['400°F · 4分钟', '400°F · 4 min'], group: 'air', before: ['ready'], link: '#cook-air-heat' },
+    { id: 'salmon', label: ['三文鱼', 'Salmon'], note: ['400°F · 8分钟', '400°F · 8 min'], group: 'air', before: ['prep-salmon', 'air-heat'], link: '#cook-salmon' },
+    { id: 'egg-water', label: ['煮锅一：烧水', 'Pot 1: Boil Water'], note: ['水沸后确认', 'Confirm when boiling'], group: 'pots', before: ['ready'], manual: true, link: '#cook-eggs' },
+    { id: 'eggs', label: ['水煮蛋', 'Boiled Eggs'], note: ['水开后约8分钟', 'About 8 min after boiling'], group: 'pots', before: ['egg-water', 'prep-pots'], link: '#cook-eggs' },
+    { id: 'pasta-water', label: ['煮锅二：烧水', 'Pot 2: Boil Water'], note: ['水沸后确认', 'Confirm when boiling'], group: 'pots', before: ['ready'], manual: true, link: '#cook-pasta' },
+    { id: 'pasta', label: ['意面', 'Pasta'], note: ['约8分钟', 'About 8 min'], group: 'pots', before: ['pasta-water', 'prep-pots'], link: '#cook-pasta' },
+    { id: 'mushroom', label: ['蘑菇', 'Mushrooms'], note: ['小锅 · 约7分钟', 'Saucepan · about 7 min'], group: 'small-wok', before: ['prep-veg'], link: '#cook-mushroom' },
     { id: 'spinach', label: ['菠菜', 'Spinach'], note: ['小锅 · 约7分钟', 'Saucepan · about 7 min'], group: 'small-wok', before: ['mushroom'], link: '#cook-spinach' },
     { id: 'tomato', label: ['番茄意面', 'Tomato Pasta'], note: ['小锅 · 酱汁与意面', 'Saucepan · sauce and pasta'], group: 'small-wok', before: ['spinach', 'pasta'], link: '#cook-tomato' },
-    { id: 'ground', label: ['鸡肉末与炒蛋', 'Ground Chicken and Eggs'], note: ['大锅 · 豌豆与胡萝卜', 'Wok · peas and carrots'], group: 'large-wok', before: ['ready'], link: '#cook-ground' },
+    { id: 'ground', label: ['鸡肉末与炒蛋', 'Ground Chicken and Eggs'], note: ['大锅 · 豌豆与胡萝卜', 'Wok · peas and carrots'], group: 'large-wok', before: ['prep-ground'], link: '#cook-ground' },
     { id: 'wrap', label: ['抹酱、装馅、卷饼', 'Sauce, Fill and Roll Wrap'], note: ['鸡腿肉、水煮蛋、蘑菇', 'Chicken, boiled eggs, mushrooms'], group: 'wrap', before: ['chicken', 'eggs', 'mushroom'], link: '#cook-wrap' },
     { id: 'finish', label: ['分盘、入冰箱、清洗', 'Portion, Refrigerate and Clean'], note: ['所有餐食完成后', 'When every component is ready'], group: 'finish', before: ['rice', 'chicken', 'potato', 'ribs', 'salmon', 'mushroom', 'spinach', 'tomato', 'ground', 'wrap'], link: '#portions' }
   ];
   const groups = [
     { id: 'cold', icon: 'cold', title: ['冷冻／解冻', 'Freeze / Thaw'], hint: ['两种备餐情况，择一', 'Choose the path for this batch'] },
+    { id: 'prep', icon: 'prep', title: ['备料与调味', 'Ingredient Prep'], hint: ['可与预热、烧水并行', 'Can run during preheating and boiling'], },
     { id: 'rice', icon: 'rice', title: ['电饭煲', 'Rice Cooker'], hint: ['可先启动', 'Start early'] },
     { id: 'oven', icon: 'oven', title: ['烤箱', 'Oven'], hint: ['预热后处理三种食材', 'Three foods after preheating'] },
     { id: 'air', icon: 'air', title: ['空气炸锅', 'Air Fryer'], hint: ['预热后烤三文鱼', 'Salmon after preheating'] },
@@ -64,7 +72,7 @@
   root.replaceChildren();
   const intro = create('p', 'cooking-flow-intro', t('点选步骤，查看前置任务与后续任务。', 'Select a step to see what comes before and after it.'));
   const phases = create('div', 'cooking-flow-phases');
-  for (const [index, text] of [t('备料', 'Prepare'), t('并行烹调', 'Cook in Parallel'), t('分盘收尾', 'Portion and Finish')].entries()) {
+  for (const [index, text] of [t('启动加热与备料', 'Start Heating and Prep'), t('并行烹调', 'Cook in Parallel'), t('分盘收尾', 'Portion and Finish')].entries()) {
     phases.append(create('span', `cooking-flow-phase cooking-flow-phase-${index + 1}`, text));
   }
   const detail = create('section', 'cooking-flow-detail');
@@ -123,6 +131,10 @@
         branches.append(branch);
       }
       list.append(branches);
+    } else if (group.id === 'prep') {
+      const choices = create('div', 'cooking-flow-branches cooking-flow-branches-two');
+      members.forEach((node, index) => choices.append(step(node, index)));
+      list.append(choices);
     } else {
       members.forEach((node, index) => list.append(step(node, index)));
     }
@@ -180,6 +192,7 @@
 
   const instructionSections = [
     ['cold', 'cold', ['cold-first', 'cold-second']],
+    ['prep', 'prep', ['prep-rice', 'prep-oven', 'prep-salmon', 'prep-pots', 'prep-veg', 'prep-ground']],
     ['rice', 'rice', ['rice']],
     ['oven', 'oven', ['oven-heat', 'chicken', 'potato', 'ribs']],
     ['air-fryer', 'air', ['air-heat', 'salmon']],
@@ -222,7 +235,7 @@
   const page = root.closest('.prose');
   if (page) {
     const sectionGroups = {
-      dependencies: 'finish', portions: 'finish', cold: 'cold', rice: 'rice',
+      dependencies: 'finish', portions: 'finish', cold: 'cold', prep: 'prep', rice: 'rice',
       oven: 'oven', 'air-fryer': 'air', 'pot-one': 'pots', 'pot-two': 'pots',
       'small-wok': 'small-wok', 'large-wok': 'large-wok', wraps: 'wrap'
     };
