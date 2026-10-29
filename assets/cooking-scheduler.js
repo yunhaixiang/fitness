@@ -57,7 +57,7 @@
       const machine = base.machines[resource(task)];
       for (let time = 0; time < Math.min(remaining, horizon); time++) machine[time] += demand(task);
       const tail = activeTail[id] || 0;
-      if (continuous.has(id) || (tail && remaining <= tail)) {
+      if (continuous.has(id) || task.group === 'prep' || (tail && remaining <= tail)) {
         for (let time = 0; time < Math.min(remaining, horizon); time++) base.human[time]++;
       } else {
         for (let time = Math.max(0, remaining - Math.max(1, tail)); time < remaining && time < horizon; time++) base.human[time]++;

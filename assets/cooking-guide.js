@@ -9,8 +9,7 @@
   const t = (zh, english) => en ? english : zh;
   const key = 'fitness-cooking-guide-v1';
   const taskMinutes = {
-    'prep-rice': 3, 'prep-oven': 10, 'prep-salmon': 4,
-    'prep-pots': 2, 'prep-veg': 4, 'prep-ground': 4,
+    'prep-rice': 3, 'prep-chicken': 4, 'prep-potato': 3, 'prep-ribs': 3, 'prep-salmon': 4, 'prep-eggs': 1, 'prep-pasta': 1, 'prep-mushroom': 2, 'prep-spinach': 1, 'prep-tomato': 1, 'prep-meat': 1, 'prep-beaten-eggs': 2, 'prep-peas-carrots': 1,
     rice: 50, 'oven-heat': 15, chicken: 27, potato: 30, ribs: 18,
     'air-heat': 4, salmon: 8, eggs: 8,
     pasta: 8, mushroom: 7, spinach: 7,
@@ -24,11 +23,11 @@
   const pans = window.fitnessCookingScheduler?.pans || new Set();
   const activeTail = window.fitnessCookingScheduler?.activeTail || {};
   const emptyBatch = () => ({ ready: false, done: [], running: {}, startedAt: null, finishedAt: null });
-  const initialState = () => ({ version: 2, selected: 'first', stirEvery: 3, batches: { first: emptyBatch(), second: emptyBatch() } });
+  const initialState = () => ({ version: 3, selected: 'first', stirEvery: 3, batches: { first: emptyBatch(), second: emptyBatch() } });
   const readState = () => {
     try {
       const saved = JSON.parse(localStorage.getItem(key));
-      if (![1, 2].includes(saved?.version) || !saved.batches) return initialState();
+      if (![1, 2, 3].includes(saved?.version) || !saved.batches) return initialState();
       const state = initialState();
       state.selected = saved.selected === 'second' ? 'second' : 'first';
       if (Number.isInteger(saved.stirEvery) && saved.stirEvery >= 2 && saved.stirEvery <= 5) state.stirEvery = saved.stirEvery;
@@ -44,15 +43,23 @@
           startedAt: Number.isFinite(record.startedAt) ? record.startedAt : null,
           finishedAt: Number.isFinite(record.finishedAt) ? record.finishedAt : null
         };
-        if (saved.version === 1) {
+        if (saved.version < 3) {
           const previous = state.batches[half];
-          for (const [prep, foods] of Object.entries({
-            'prep-rice': ['rice'], 'prep-oven': ['chicken', 'potato', 'ribs'],
-            'prep-salmon': ['salmon'], 'prep-pots': ['eggs', 'pasta'],
-            'prep-veg': ['mushroom', 'spinach', 'tomato'], 'prep-ground': ['ground']
-          })) {
-            if (foods.some((id) => previous.done.includes(id) || previous.running[id])) previous.done.push(prep);
+          const legacyGroups = {
+            'prep-oven': ['prep-chicken', 'prep-potato', 'prep-ribs'],
+            'prep-pots': ['prep-eggs', 'prep-pasta'],
+            'prep-veg': ['prep-mushroom', 'prep-spinach', 'prep-tomato'],
+            'prep-ground': ['prep-meat', 'prep-beaten-eggs', 'prep-peas-carrots']
+          };
+          for (const [old, children] of Object.entries(legacyGroups)) {
+            if (record.done?.includes(old)) previous.done.push(...children);
           }
+          // Cooking already underway proves its own ingredients were prepared.
+          for (const food of tasks.filter((task) => previous.done.includes(task.id) || previous.running[task.id])) {
+            previous.done.push(...food.before.filter((id) => id.startsWith('prep-')));
+          }
+          previous.done = [...new Set(previous.done)];
+          if (previous.done.length < tasks.length) previous.finishedAt = null;
         }
       }
       return state;
