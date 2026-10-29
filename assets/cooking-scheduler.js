@@ -108,6 +108,13 @@
         for (let time = start; time < start + length; time++) next.machines[machineName][time] += load;
         for (const offset of offsets) next.human[start + offset]++;
         next.score = bound(next);
+        // Reserve preheating and loading as one sequence: the fryer cannot hold heat indefinitely.
+        const follow = task.id === 'air-heat' && pending.find((item) => item.id === 'salmon');
+        if (follow && next.ends.salmon === undefined) {
+          const paired = place(next, follow);
+          if (!paired || paired.starts.salmon !== next.ends['air-heat']) continue;
+          return paired;
+        }
         return next;
       }
       return null;
@@ -137,9 +144,12 @@
       let beam = [root];
       for (let depth = 1; depth < pending.length; depth++) {
         const next = [];
-        for (const state of beam) for (const task of eligible(state)) {
-          const result = place(state, task);
-          if (result) next.push(result);
+        for (const state of beam) {
+          if (pending.every((task) => state.ends[task.id] !== undefined)) { next.push(state); continue; }
+          for (const task of eligible(state)) {
+            const result = place(state, task);
+            if (result) next.push(result);
+          }
         }
         if (!next.length) { beam = []; break; }
         beam = trim(next);

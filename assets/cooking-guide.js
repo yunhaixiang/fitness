@@ -17,7 +17,7 @@
     tomato: 6, ground: 15, wrap: 6, finish: 15
   };
   const tasks = plan.nodes.filter((node) => node.manual || Object.hasOwn(taskMinutes, node.id));
-  const startEarly = ['egg-water', 'pasta-water', 'oven-heat', 'air-heat', 'prep-rice', 'rice'];
+  const startEarly = ['egg-water', 'pasta-water', 'oven-heat', 'prep-rice', 'rice'];
   const byId = new Map(tasks.map((node) => [node.id, node]));
   const successors = new Map(tasks.map((node) => [node.id, tasks.filter((other) => other.before.includes(node.id)).map((other) => other.id)]));
   const validIds = new Set(tasks.map((task) => task.id));
@@ -104,6 +104,7 @@
   const rankedAvailable = (schedulePlan) => {
     pathMemo.clear();
     return available().sort((a, b) => {
+      if (done('air-heat') && (a.id === 'salmon' || b.id === 'salmon')) return a.id === 'salmon' ? -1 : 1;
       const aPriority = startEarly.indexOf(a.id);
       const bPriority = startEarly.indexOf(b.id);
       if (aPriority !== bPriority && (aPriority >= 0 || bPriority >= 0))
@@ -209,7 +210,9 @@
       top.append(make('span', 'cooking-guide-manual', t('等待水沸', 'Waiting for Boil')));
     }
     card.append(top);
-    const detail = instructions(task.id);
+    const detail = task.id === 'salmon' && variant !== 'running'
+      ? t('预热已完成，现在放入三文鱼并开始烹调；若锅已放凉，先重新预热。', 'Preheating is complete. Load the salmon and start cooking now. If the fryer has cooled, preheat again.')
+      : instructions(task.id);
     if (detail) card.append(make('p', 'cooking-guide-instruction', detail));
     if (variant === 'running' && inActiveTail(task.id)) {
       card.append(make('span', 'cooking-guide-stir', t('持续翻炒', 'Stir Continuously')));
@@ -228,6 +231,12 @@
       actions.append(button(task.manual ? t('确认已沸腾', 'Water Is Boiling') : t('确认完成', 'Mark Done'), 'cooking-guide-primary', () => complete(task.id)));
     } else {
       actions.append(button(task.manual ? t('开始烧水', 'Start Boiling Water') : t('开始计时', 'Start Timer'), 'cooking-guide-primary', () => start(task.id)));
+    }
+    if (task.id === 'salmon' && variant !== 'running') {
+      actions.append(button(t('重新预热', 'Preheat Again'), 'cooking-guide-minor', () => {
+        batch().done = batch().done.filter((id) => id !== 'air-heat');
+        start('air-heat');
+      }));
     }
     actions.append(linkTo(task.id));
     card.append(actions);
@@ -297,7 +306,10 @@
     }).filter((item) => item.seconds <= 120).sort((a, b) => a.seconds - b.seconds);
     const imminent = attention[0];
     const activeNow = active.find((task) => inActiveTail(task.id));
-    const focus = imminent?.task || activeNow || (!readyTasks.length && active[0]);
+    const hotSalmon = readyTasks[0]?.id === 'salmon' && done('air-heat');
+    const focus = hotSalmon
+      ? activeNow || (imminent?.seconds <= 0 ? imminent.task : null)
+      : imminent?.task || activeNow || (!readyTasks.length && active[0]);
     const recommended = make('div', 'cooking-guide-recommendation');
     recommended.append(make('span', 'cooking-guide-eyebrow', focus
       ? imminent
@@ -305,6 +317,7 @@
           ? imminent.seconds <= 0 ? t('该翻炒了', 'Stir Now') : t('即将翻炒', 'Stir Soon')
           : imminent.seconds <= 0 ? t('计时已到，请确认', 'Timer Finished — Check Now') : t('即将到点', 'Almost Done')
         : activeNow ? t('当前需翻炒', 'Stir Now') : focus.manual ? t('等待水沸', 'Waiting for Boil') : t('等待计时', 'Waiting on Timer')
+      : hotSalmon ? t('预热已好，立即入锅', 'Preheated — Load Salmon Now')
       : schedulePlan && readyTasks[0] && !startEarly.includes(readyTasks[0].id) && schedulePlan.starts[readyTasks[0].id] > 0
         ? t(`建议 ${schedulePlan.starts[readyTasks[0].id]} 分钟后开始`, `Start in ${schedulePlan.starts[readyTasks[0].id]} min`)
         : t('推荐下一步', 'Recommended Next')));

@@ -88,3 +88,21 @@ test('boiling has no predicted duration and releases the pot only when confirmed
   assert.ok(Number.isFinite(boiled.starts.eggs));
   assert.ok(boiled.starts.eggs >= boiled.ends['prep-pots']);
 });
+
+test('air fryer preheats after salmon prep and cooking starts without a cooling gap', () => {
+  const tasks = [
+    { id: 'prep-salmon', group: 'prep', before: [] },
+    { id: 'air-heat', group: 'air', before: ['prep-salmon'] },
+    { id: 'salmon', group: 'air', before: ['prep-salmon', 'air-heat'] },
+    { id: 'ground', group: 'large-wok', before: [] }
+  ];
+  const now = 1000000;
+  for (const running of [{}, { ground: { startedAt: now, minutes: 15 } }]) {
+    const result = schedule({ tasks, minutes: { 'prep-salmon': 4, 'air-heat': 4, salmon: 8, ground: 15 },
+      done: [], running, ready: true, now });
+    assert.ok(result);
+    assert.ok(result.starts['air-heat'] >= result.ends['prep-salmon']);
+    assert.equal(result.starts.salmon, result.ends['air-heat']);
+    if (running.ground) assert.ok(result.starts.salmon < 11 || result.starts.salmon >= 15);
+  }
+});
