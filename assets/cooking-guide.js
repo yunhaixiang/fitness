@@ -166,8 +166,15 @@
   };
   const adjust = (id, amount) => {
     const run = batch().running[id];
-    if (!run) return;
-    run.minutes = Math.max(1, Math.min(180, run.minutes + amount));
+    if (!run || !Number.isFinite(run.minutes)) return;
+    if (amount > 0 && remainingSeconds(run) <= 0) {
+      // An overdue timer gets a fresh interval instead of extending a past deadline.
+      run.startedAt = Date.now();
+      run.minutes = amount;
+      run.tailAlerted = false;
+    } else {
+      run.minutes = Math.max(1, Math.min(180, run.minutes + amount));
+    }
     run.alerted = false;
     save();
     render();
