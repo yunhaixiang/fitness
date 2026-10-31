@@ -26,7 +26,8 @@
   if (page === 'shopping' && tables[0]) {
     const table = tables[0];
     const rows = [...table.tBodies[0].rows];
-    const items = rows.filter((row) => row.querySelector('input[type="checkbox"]'));
+    const items = rows.filter((row) => row.dataset.itemKey && row.dataset.itemKey !== '每周合计');
+    const checkableItems = items.filter((row) => row.querySelector('input[type="checkbox"]'));
     const shell = el('div', 'visual-shopping');
     const total = rows.at(-1);
     if (total && !total.querySelector('input')) shell.append(el('p', 'visual-shopping-total', titleCase(`${val(total, 1)} · ${val(total, 4)}`)));
@@ -42,36 +43,41 @@
     const restock = el('div', 'visual-card-grid');
     const cards = new Map();
     const refresh = () => {
-      const done = items.filter((row) => row.querySelector('input').checked).length;
-      count.textContent = `${done} / ${items.length}`;
-      fill.style.width = `${items.length ? 100 * done / items.length : 0}%`;
+      const done = checkableItems.filter((row) => row.querySelector('input').checked).length;
+      count.textContent = `${done} / ${checkableItems.length}`;
+      fill.style.width = `${checkableItems.length ? 100 * done / checkableItems.length : 0}%`;
     };
     for (const row of items) {
       const card = el('article', 'visual-card visual-shopping-card');
       const top = el('div', 'visual-card-top');
       const box = row.querySelector('input[type="checkbox"]');
-      const cardBox = box.cloneNode(true);
-      cardBox.checked = box.checked;
-      const check = el('label', 'visual-shopping-check');
-      check.append(cardBox, el('span', '', titleCase(val(row, 1))));
+      const cardBox = box?.cloneNode(true);
+      const check = el(box ? 'label' : 'div', 'visual-shopping-check');
+      if (cardBox) {
+        cardBox.checked = box.checked;
+        check.append(cardBox);
+      }
+      check.append(el('span', '', titleCase(val(row, 1))));
       top.append(check, el('strong', 'visual-price', val(row, 4)));
       card.append(top);
       const product = el('div', 'visual-shopping-product');
       copy(product, row.cells[2]);
       card.append(product, el('span', 'visual-badge', titleCase(val(row, 3))));
-      const updateCard = () => {
-        cardBox.checked = box.checked;
-        card.classList.toggle('is-checked', box.checked);
-        refresh();
-      };
-      box.addEventListener('change', updateCard);
-      cardBox.addEventListener('change', () => {
-        box.checked = cardBox.checked;
-        box.dispatchEvent(new Event('change', { bubbles: true }));
-      });
-      updateCard();
+      if (box) {
+        const updateCard = () => {
+          cardBox.checked = box.checked;
+          card.classList.toggle('is-checked', box.checked);
+          refresh();
+        };
+        box.addEventListener('change', updateCard);
+        cardBox.addEventListener('change', () => {
+          box.checked = cardBox.checked;
+          box.dispatchEvent(new Event('change', { bubbles: true }));
+        });
+        updateCard();
+      }
       cards.set(row, card);
-      (val(row, 3).includes('按需') || val(row, 3).toLowerCase().includes('as needed') ? restock : weekly).append(card);
+      (row.dataset.restock === 'true' ? restock : weekly).append(card);
     }
     const section = (title, grid) => {
       if (!grid.children.length) return;
@@ -85,7 +91,9 @@
     });
     document.querySelector('#shopping-reset')?.addEventListener('click', () => {
       for (const [row, card] of cards) {
-        const checked = row.querySelector('input').checked;
+        const box = row.querySelector('input');
+        if (!box) continue;
+        const checked = box.checked;
         card.querySelector('input').checked = checked;
         card.classList.toggle('is-checked', checked);
       }

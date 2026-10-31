@@ -59,9 +59,11 @@ if (shoppingTable) {
     const name = row.cells[0]?.textContent.trim();
     const originalName = window.fitnessI18n?.original(row.cells[0]?.firstChild) || name;
     row.dataset.itemKey = originalName;
+    const frequency = row.cells[2]?.textContent.trim() || "";
+    row.dataset.restock = String(/按需|as needed/i.test(frequency));
     const cell = document.createElement('td');
     cell.className = 'check-cell';
-    if (name && originalName !== '每周合计') {
+    if (name && originalName !== '每周合计' && row.dataset.restock !== 'true') {
       const box = document.createElement('input');
       box.type = 'checkbox';
       box.setAttribute('aria-label', `已购买${name}`);
