@@ -9,7 +9,7 @@
   <title>{{ page.title | default: site.title | escape }} · {{ site.title }}</title>
   <link rel="stylesheet" href="{{ '/assets/site.css' | relative_url }}?v={{ site.time | date: '%s' }}">
 </head>
-<body>
+<body data-baseurl="{{ site.baseurl }}">
   <a class="skip-link" href="#main">跳到内容</a>
   <header class="site-header">
     <div class="header-inner">
@@ -45,16 +45,18 @@
     {% endunless %}
     <div class="{% if page.wide %}wide-content{% else %}prose{% endif %}">{{ content }}</div>
   </main>
+  <script type="application/json" id="meal-plan-catalog">{{ site.data.meal_plans | jsonify }}</script>
+  <script src="{{ '/assets/meal-plans.js' | relative_url }}?v={{ site.time | date: '%s' }}" defer></script>
   <script src="{{ '/assets/i18n.js' | relative_url }}?v={{ site.time | date: '%s' }}" defer></script>
   <script src="{{ '/assets/site.js' | relative_url }}?v={{ site.time | date: '%s' }}" defer></script>
   <script src="{{ '/assets/theme.js' | relative_url }}?v={{ site.time | date: '%s' }}" defer></script>
-  {% if page.diet or page.url == '/' %}<script src="{{ '/assets/meal-activities.js' | relative_url }}?v={{ site.time | date: '%s' }}" defer></script>{% endif %}
+  {% if page.diet or page.overview or page.url == '/' %}<script src="{{ page.meal_activities_script | default: '/assets/meal-activities.js' | relative_url }}?v={{ site.time | date: '%s' }}" defer></script>{% endif %}
   {% if page.diet %}<script src="{{ '/assets/diet-view.js' | relative_url }}?v={{ site.time | date: '%s' }}" defer></script>{% endif %}
-  {% if page.url == '/' %}<script src="{{ '/assets/today.js' | relative_url }}?v={{ site.time | date: '%s' }}" defer></script>{% endif %}
+  {% if page.overview or page.url == '/' %}<script src="{{ '/assets/today.js' | relative_url }}?v={{ site.time | date: '%s' }}" defer></script>{% endif %}
   {% if page.visual %}<script src="{{ '/assets/visual-tables.js' | relative_url }}?v={{ site.time | date: '%s' }}" defer></script>{% endif %}
-  {% if page.cooking %}<script src="{{ '/assets/cooking-flow.js' | relative_url }}?v={{ site.time | date: '%s' }}" defer></script>
+  {% if page.cooking %}<script src="{{ page.cooking_flow_script | default: '/assets/cooking-flow.js' | relative_url }}?v={{ site.time | date: '%s' }}" defer></script>
   <script src="{{ '/assets/cooking-scheduler.js' | relative_url }}?v={{ site.time | date: '%s' }}" defer></script>
-  <script src="{{ '/assets/cooking-guide.js' | relative_url }}?v={{ site.time | date: '%s' }}" defer></script>{% endif %}
+  <script src="{{ page.cooking_guide_script | default: '/assets/cooking-guide.js' | relative_url }}?v={{ site.time | date: '%s' }}" defer></script>{% endif %}
   {% if page.strength %}<script src="{{ '/assets/strength-volume.js' | relative_url }}?v={{ site.time | date: '%s' }}" defer></script>{% endif %}
   {% if page.tracker %}<script src="{{ '/assets/tracker.js' | relative_url }}" defer></script>{% endif %}
   <script src="{{ '/assets/section-cards.js' | relative_url }}?v={{ site.time | date: '%s' }}" defer></script>

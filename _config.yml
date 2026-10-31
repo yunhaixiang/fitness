@@ -9,3 +9,5 @@ kramdown:
 permalink: pretty
 exclude:
   - README.md
+  - scripts
+  - tests

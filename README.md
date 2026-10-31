@@ -30,3 +30,17 @@
 ## 本地预览
 
 如果已安装 Jekyll，在仓库目录运行 `jekyll serve --baseurl /fitness`；打开显示的本地地址并加上 `/fitness/`。如只改内容，也可以先在 GitHub 上预览 Markdown，但完整网页样式需通过 Jekyll 或 GitHub Pages 查看。
+
+## 多套周饮食计划
+
+`_data/meal_plans.json` 登记所有可选计划的中英文名称、简介和五个页面地址。当前页面是 `plan-1`。选择器出现在总览、饮食、营养、购物、做饭页面；选择保存在本机，也通过链接里的 `plan` 参数传递。力量、有氧和身体记录继续共用。原计划的购物勾选和做饭进度保持不变，其他计划按 ID 单独保存。
+
+创建下一套计划：
+
+```sh
+python3 scripts/create-meal-plan.py plan-2 --name-zh '周计划 2' --name-en 'Weekly Plan 2'
+```
+
+此命令从当前计划创建独立副本：页面在 `plans/plan-2/`，营养与赤字数据在 `_data/meal_plan_content/plan-2/`，餐序在 `_includes/meal-plans/plan-2/`，做饭任务、跟做配置、购物及做饭时间在 `assets/meal-plans/plan-2/`。修改这些副本并核对饮食、购物、营养、做饭的一致性后再发布。新计划自动出现在选择器里，不要仅增加一个指向原页面的选项。ID 用于保存进度，发布后不要随意更改。默认计划的数据仍在原文件，继续按原方式维护。
+
+验证：`node --test tests/meal-plans.test.js`。测试使用临时第二套计划，不会向正式餐单添加虚构菜单。

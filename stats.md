@@ -11,7 +11,7 @@ visual: true
 
 <figure class="nutrition-overview" aria-label="每日能量与每周赤字">
   <div class="nutrition-overview-main">
-    <div class="nutrition-ring" aria-label="日均摄入占消耗76%，赤字24%">
+    <div class="nutrition-ring" style="--intake-share:75.9%" aria-label="日均摄入占消耗76%，赤字24%">
       <div class="nutrition-ring-center">
         <span>日均赤字</span>
         <strong>559 <small>kcal／天</small></strong>

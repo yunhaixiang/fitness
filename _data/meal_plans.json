@@ -1,0 +1,23 @@
+{
+  "default": "plan-1",
+  "plans": [
+    {
+      "id": "plan-1",
+      "name": {
+        "zh": "周计划 1",
+        "en": "Weekly Plan 1"
+      },
+      "summary": {
+        "zh": "鸡腿、三文鱼、鸡肉末、排骨",
+        "en": "Chicken Thighs, Salmon, Ground Chicken and Ribs"
+      },
+      "pages": {
+        "overview": "/",
+        "diet": "/diet/",
+        "stats": "/stats/",
+        "shopping": "/shopping/",
+        "cooking": "/cooking/"
+      }
+    }
+  ]
+}

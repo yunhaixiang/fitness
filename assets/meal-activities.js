@@ -42,7 +42,7 @@
       card.append(heading, make('p', 'meal-activity-detail', `${compact ? time + ' · ' : ''}${event.detail[language]}`));
       const link = make('a', 'meal-activity-link', event.kind === 'cooking'
         ? ['开始做饭', 'Start Cooking'][language] : ['查看购物清单', 'View Shopping List'][language]);
-      link.href = document.querySelector(`.main-nav a[href$="/${event.kind}/"]`)?.href
+      link.href = window.fitnessMealPlan?.urlFor(event.kind) || document.querySelector(`.main-nav a[href$="/${event.kind}/"]`)?.href
         || new URL(`${event.kind}/`, document.querySelector('.brand')?.href || location.origin + '/').href;
       card.append(link);
       container.append(card);
