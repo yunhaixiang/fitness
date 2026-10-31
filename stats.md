@@ -11,19 +11,19 @@ visual: true
 
 <figure class="nutrition-overview" aria-label="每日能量与每周赤字">
   <div class="nutrition-overview-main">
-    <div class="nutrition-ring" aria-label="日均摄入占消耗77%，赤字23%">
+    <div class="nutrition-ring" aria-label="日均摄入占消耗78%，赤字22%">
       <div class="nutrition-ring-center">
         <span>日均赤字</span>
-        <strong>523 <small>kcal／天</small></strong>
+        <strong>519 <small>kcal／天</small></strong>
       </div>
     </div>
     <div class="nutrition-overview-key">
       <p class="nutrition-overview-eyebrow">能量概览 · 不含放纵餐</p>
-      <div class="nutrition-key-row nutrition-key-intake"><span>日均摄入</span><strong>1,797 <small>kcal／天</small></strong></div>
+      <div class="nutrition-key-row nutrition-key-intake"><span>日均摄入</span><strong>1,801 <small>kcal／天</small></strong></div>
       <div class="nutrition-key-row nutrition-key-burn"><span>日均消耗</span><strong>2,319 <small>kcal／天</small></strong></div>
-      <div class="nutrition-key-row nutrition-key-deficit"><span>日均赤字</span><strong>523 <small>kcal／天</small></strong></div>
+      <div class="nutrition-key-row nutrition-key-deficit"><span>日均赤字</span><strong>519 <small>kcal／天</small></strong></div>
       <div class="nutrition-key-row"><span>每周赤字</span><strong>{{ site.data.plan_metrics.weekly_deficit_display }} <small>kcal</small></strong></div>
-      <div class="nutrition-key-row"><span>每周赤字等价脂肪</span><strong>0.48 <small>kg／周</small></strong></div>
+      <div class="nutrition-key-row"><span>每周赤字等价脂肪</span><strong>0.47 <small>kg／周</small></strong></div>
     </div>
   </div>
 </figure>
@@ -92,17 +92,17 @@ visual: true
 <tbody>
 <tr>
 <td>热量</td>
-<td style="text-align: right;">1,797 kcal</td>
+<td style="text-align: right;">1,801 kcal</td>
 <td>1,800–2,000 kcal</td>
 </tr>
 <tr>
 <td>蛋白质</td>
-<td style="text-align: right;">143.5 g</td>
+<td style="text-align: right;">144.0 g</td>
 <td>130–165 g</td>
 </tr>
 <tr>
 <td>总脂肪</td>
-<td style="text-align: right;">65.8 g</td>
+<td style="text-align: right;">65.9 g</td>
 <td>45–65 g</td>
 </tr>
 <tr>
@@ -117,17 +117,17 @@ visual: true
 </tr>
 <tr>
 <td>碳水化合物</td>
-<td style="text-align: right;">175.0 g</td>
+<td style="text-align: right;">175.6 g</td>
 <td>180–240 g</td>
 </tr>
 <tr>
 <td>膳食纤维</td>
-<td style="text-align: right;">38.2 g</td>
+<td style="text-align: right;">38.6 g</td>
 <td>30–38 g</td>
 </tr>
 <tr>
 <td>总糖</td>
-<td style="text-align: right;">43.9 g</td>
+<td style="text-align: right;">44.0 g</td>
 <td>无单独上限；重点控制添加糖</td>
 </tr>
 <tr>
@@ -142,22 +142,22 @@ visual: true
 </tr>
 <tr>
 <td>钠</td>
-<td style="text-align: right;">1,856 mg</td>
+<td style="text-align: right;">1,869 mg</td>
 <td>≤2,300 mg</td>
 </tr>
 <tr>
 <td>钙</td>
-<td style="text-align: right;">1,127 mg</td>
+<td style="text-align: right;">1,143 mg</td>
 <td>1,000 mg</td>
 </tr>
 <tr>
 <td>铁</td>
-<td style="text-align: right;">17.2 mg</td>
+<td style="text-align: right;">17.6 mg</td>
 <td>8 mg</td>
 </tr>
 <tr>
 <td>钾</td>
-<td style="text-align: right;">4,912 mg</td>
+<td style="text-align: right;">5,003 mg</td>
 <td>≥3,400 mg</td>
 </tr>
 <tr>
@@ -193,3 +193,5 @@ visual: true
 Existing nutrient basis retained by scaling the isolated thigh-only pasta delta
 from commit 36acfeb (830 → 635 g/week); rounded historical values are estimates.
 Weekly added energy: 350.97 kcal. Other food quantities and expenditure unchanged. -->
+
+<!-- Spinach: 454 → 568 g/week; four portions of 142 g. Raw-spinach reference per 100 g: 23 kcal, protein 2.86 g, fat 0.39 g, saturated fat 0.063 g, carbs 3.63 g, fibre 2.2 g, sugar 0.42 g, sodium 79 mg, calcium 99 mg, iron 2.71 mg, potassium 558 mg. Weekly energy increase 26.22 kcal. -->
