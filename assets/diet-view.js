@@ -198,7 +198,7 @@
   const treats = document.querySelector('[data-diet-view="treats"]');
   if (treats) {
     const section = document.querySelector('.diet-cheat-section');
-    const weeklyDeficit = Number(section?.dataset.weeklyDeficit) || 4009;
+    const weeklyDeficit = Number(section?.dataset.weeklyDeficit) || 3658;
     const fmt = new Intl.NumberFormat(en ? 'en-CA' : 'zh-CN', { maximumFractionDigits: 0 });
     const nutrientFmt = new Intl.NumberFormat(en ? 'en-CA' : 'zh-CN', { maximumFractionDigits: 1 });
     const range = (low, high, suffix = '') => `${fmt.format(low)}${high !== low ? `–${fmt.format(high)}` : ''}${suffix}`;

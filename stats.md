@@ -11,19 +11,19 @@ visual: true
 
 <figure class="nutrition-overview" aria-label="每日能量与每周赤字">
   <div class="nutrition-overview-main">
-    <div class="nutrition-ring" aria-label="日均摄入占消耗75%，赤字25%">
+    <div class="nutrition-ring" aria-label="日均摄入占消耗77%，赤字23%">
       <div class="nutrition-ring-center">
         <span>日均赤字</span>
-        <strong>572 <small>kcal／天</small></strong>
+        <strong>523 <small>kcal／天</small></strong>
       </div>
     </div>
     <div class="nutrition-overview-key">
       <p class="nutrition-overview-eyebrow">能量概览 · 不含放纵餐</p>
-      <div class="nutrition-key-row nutrition-key-intake"><span>日均摄入</span><strong>1,747 <small>kcal／天</small></strong></div>
+      <div class="nutrition-key-row nutrition-key-intake"><span>日均摄入</span><strong>1,797 <small>kcal／天</small></strong></div>
       <div class="nutrition-key-row nutrition-key-burn"><span>日均消耗</span><strong>2,319 <small>kcal／天</small></strong></div>
-      <div class="nutrition-key-row nutrition-key-deficit"><span>日均赤字</span><strong>572 <small>kcal／天</small></strong></div>
+      <div class="nutrition-key-row nutrition-key-deficit"><span>日均赤字</span><strong>523 <small>kcal／天</small></strong></div>
       <div class="nutrition-key-row"><span>每周赤字</span><strong>{{ site.data.plan_metrics.weekly_deficit_display }} <small>kcal</small></strong></div>
-      <div class="nutrition-key-row"><span>每周赤字等价脂肪</span><strong>0.52 <small>kg／周</small></strong></div>
+      <div class="nutrition-key-row"><span>每周赤字等价脂肪</span><strong>0.48 <small>kg／周</small></strong></div>
     </div>
   </div>
 </figure>
@@ -92,27 +92,27 @@ visual: true
 <tbody>
 <tr>
 <td>热量</td>
-<td style="text-align: right;">1,747 kcal</td>
+<td style="text-align: right;">1,797 kcal</td>
 <td>1,800–2,000 kcal</td>
 </tr>
 <tr>
 <td>蛋白质</td>
-<td style="text-align: right;">135.5 g</td>
+<td style="text-align: right;">143.5 g</td>
 <td>130–165 g</td>
 </tr>
 <tr>
 <td>总脂肪</td>
-<td style="text-align: right;">63.7 g</td>
+<td style="text-align: right;">65.8 g</td>
 <td>45–65 g</td>
 </tr>
 <tr>
 <td>饱和脂肪</td>
-<td style="text-align: right;">15.4 g</td>
-<td>≤11.6 g</td>
+<td style="text-align: right;">15.9 g</td>
+<td>≤12.0 g</td>
 </tr>
 <tr>
 <td>饱和脂肪占总热量</td>
-<td style="text-align: right;">7.9%</td>
+<td style="text-align: right;">8.0%</td>
 <td>≤6%</td>
 </tr>
 <tr>
@@ -137,27 +137,27 @@ visual: true
 </tr>
 <tr>
 <td>膳食胆固醇</td>
-<td style="text-align: right;">652 mg</td>
+<td style="text-align: right;">692 mg</td>
 <td>尽量少；优先控制饱和脂肪</td>
 </tr>
 <tr>
 <td>钠</td>
-<td style="text-align: right;">1,820 mg</td>
+<td style="text-align: right;">1,856 mg</td>
 <td>≤2,300 mg</td>
 </tr>
 <tr>
 <td>钙</td>
-<td style="text-align: right;">1,124 mg</td>
+<td style="text-align: right;">1,127 mg</td>
 <td>1,000 mg</td>
 </tr>
 <tr>
 <td>铁</td>
-<td style="text-align: right;">16.9 mg</td>
+<td style="text-align: right;">17.2 mg</td>
 <td>8 mg</td>
 </tr>
 <tr>
 <td>钾</td>
-<td style="text-align: right;">4,798 mg</td>
+<td style="text-align: right;">4,912 mg</td>
 <td>≥3,400 mg</td>
 </tr>
 <tr>
@@ -188,3 +188,8 @@ visual: true
 </tbody>
 </table>
 </div>
+
+<!-- Chicken thigh weight correction: 635 → 930 g/week, 8 pieces.
+Existing nutrient basis retained by scaling the isolated thigh-only pasta delta
+from commit 36acfeb (830 → 635 g/week); rounded historical values are estimates.
+Weekly added energy: 350.97 kcal. Other food quantities and expenditure unchanged. -->

@@ -19,9 +19,9 @@ visual: true
 <tbody>
 <tr>
 <td>去骨去皮鸡大腿肉</td>
-<td><a href="https://www.walmart.ca/en/ip/mina-halal-boneless-skinless-chicken-thighs/6000201049805">Mina Halal Boneless Skinless Chicken Thighs</a><br>8块装；每盒约0.51–0.76 kg，营养按635 g估算</td>
+<td><a href="https://www.walmart.ca/en/ip/mina-halal-boneless-skinless-chicken-thighs/6000201049805">Mina Halal Boneless Skinless Chicken Thighs</a><br>8块装；每盒0.93 kg，平均每块约116 g</td>
 <td style="text-align: right;">1盒 / 周</td>
-<td style="text-align: right;">约$11.42（按实际重量计价）</td>
+<td style="text-align: right;">约$16.73（按实际重量计价）</td>
 </tr>
 <tr>
 <td>BBQ熟猪背排骨</td>
@@ -207,7 +207,7 @@ visual: true
 <td>每周合计</td>
 <td>—</td>
 <td style="text-align: right;">—</td>
-<td style="text-align: right;">约$163</td>
+<td style="text-align: right;">约$168</td>
 </tr>
 </tbody>
 </table>
