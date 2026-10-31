@@ -50,7 +50,7 @@ visual: true
 <tr>
 <td>无糖豆奶</td>
 <td><a href="https://www.walmart.ca/en/ip/Silk-Soy-Milk-Alternative-Unsweetened-Dairy-Free-of-protein/6000190182706">Silk Soy Milk Alternative Unsweetened</a><br>1.89 L / 桶</td>
-<td style="text-align: right;">2桶 / 周（每天早餐和加餐各270 mL）</td>
+<td style="text-align: right;">2桶 / 周（1桶用于早餐，1桶作为餐外饮品）</td>
 <td style="text-align: right;">$9.96</td>
 </tr>
 <tr>

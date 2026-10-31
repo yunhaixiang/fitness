@@ -77,22 +77,18 @@
       }
       card.append(ingredients);
     };
-    const fruitCard = (dayIndex, snack) => {
-      const key = `${dayIndex < 3 ? 'fruit' : 'kiwi'}_${snack ? 'snack' : 'breakfast'}`;
+    const dailyCard = (dayIndex, beverage) => {
+      const key = beverage ? 'outside_drink' : `${dayIndex < 3 ? 'fruit' : 'kiwi'}_breakfast`;
       const meal = nutrition[key];
-      const card = make('article', `diet-meal-card diet-kind-${snack ? 'snack' : 'breakfast'}`);
+      const card = make('article', `diet-meal-card diet-kind-${beverage ? 'beverage' : 'breakfast'}`);
       const top = make('div', 'diet-meal-top');
       const when = make('div', 'diet-meal-when');
       when.append(make('span', '', days[dayIndex]));
       top.append(when, make('strong', 'diet-meal-kcal', `${meal.kcal} kcal`));
-      card.append(top, make('h4', 'diet-meal-title', snack ? label('加餐', 'Snack') : label('早餐', 'Breakfast')));
+      card.append(top, make('h4', 'diet-meal-title', beverage ? label('餐外饮品', 'Between-Meal Drinks') : label('早餐', 'Breakfast')));
       const food = en ? meal.foodEn : meal.foodZh;
-      if (snack) {
-        const [fruit, drink] = food.split(en ? ', ' : '，');
-        addIngredients(card, [
-          ['水果', 'Fruit', fruit],
-          ['饮料', 'Drink', drink]
-        ]);
+      if (beverage) {
+        addIngredients(card, [['饮料', 'Drink', food]]);
       } else {
         const separator = en ? ', ' : '，';
         const parts = food.split(separator);
@@ -122,7 +118,7 @@
       week.setAttribute('aria-labelledby', button.id);
       week.hidden = true;
       const list = make('div', 'diet-meal-list');
-      list.append(fruitCard(dayIndex, false));
+      list.append(dailyCard(dayIndex, false));
       for (const row of dayRows) {
         const index = rows.indexOf(row);
         const card = make('article', `diet-meal-card diet-kind-${kinds[index % 7]}`);
@@ -145,7 +141,7 @@
         const mealKind = value(row, 2) === label('午餐', 'Lunch') ? 'lunch' : 'dinner';
         window.fitnessMealActivities.append(list, dayIndex, mealKind);
       }
-      list.append(fruitCard(dayIndex, true));
+      list.append(dailyCard(dayIndex, true));
       week.append(list);
       grid.append(week);
       panels.push(week);

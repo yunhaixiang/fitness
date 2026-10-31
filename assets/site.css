@@ -89,7 +89,7 @@ html[data-theme=light] .theme-icon-moon{display:block}
 .today-meal[data-meal="breakfast"]{border-left-color:var(--green)}
 .today-meal[data-meal="lunch"]{border-left-color:var(--gold)}
 .today-meal[data-meal="dinner"]{border-left-color:var(--peach)}
-.today-meal[data-meal="snack"]{border-left-color:var(--violet)}
+.today-meal[data-meal="beverage"]{border-left-color:var(--violet)}
 .today-meal-top{display:flex;align-items:baseline;justify-content:space-between;gap:10px}
 .today-meal-top span{font-size:12px;font-weight:700}
 .today-meal-top strong{font:650 12px/1.4 ui-monospace,SFMono-Regular,Menlo,monospace;white-space:nowrap}
@@ -163,7 +163,7 @@ html[data-theme=light] .theme-icon-moon{display:block}
 .diet-meal-card{--kind:var(--accent);position:relative;padding:13px 15px 14px 18px;background:var(--card);border:1px solid var(--line);border-radius:10px;overflow:hidden}
 .diet-meal-card::before{content:"";position:absolute;left:0;top:0;bottom:0;width:4px;background:var(--kind)}
 .diet-kind-rice{--kind:var(--gold)}.diet-kind-pasta{--kind:var(--peach)}.diet-kind-potato{--kind:var(--violet)}
-.diet-kind-breakfast{--kind:var(--green)}.diet-kind-snack{--kind:var(--violet)}
+.diet-kind-breakfast{--kind:var(--green)}.diet-kind-beverage{--kind:var(--violet)}
 .diet-meal-top,.diet-meal-when{display:flex;align-items:center;gap:8px}
 .diet-meal-top{justify-content:space-between;gap:14px}
 .diet-meal-when{font-size:12px;color:var(--muted)}
