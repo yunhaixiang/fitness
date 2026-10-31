@@ -13,7 +13,7 @@ diet: true
 <p>周日午餐后做饭，准备上1–上7；周三晚餐后做饭，准备下1–下7；周六下午购物。</p>
 <p>周日—周二早餐：{{ site.data.meal_nutrition.meals.fruit_breakfast.foodZh }}；加餐（23:00）：{{ site.data.meal_nutrition.meals.fruit_snack.foodZh }}。</p>
 <p>周三—周六早餐：{{ site.data.meal_nutrition.meals.kiwi_breakfast.foodZh }}；加餐（23:00）：{{ site.data.meal_nutrition.meals.kiwi_snack.foodZh }}。</p>
-<p>午晚餐饮料：上1—下5每餐 Fresca 1罐（355 mL）；最后两餐（下6、下7）每餐 Fuze Tea 无糖冰茶 250 mL。</p>
+<p>午晚餐饮料：前两餐（上1、上2）每餐 Fuze Tea 无糖冰茶 250 mL；其余12餐每餐 Fresca 1罐（355 mL）。</p>
 </noscript>
 
 
