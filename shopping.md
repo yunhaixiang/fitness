@@ -97,15 +97,15 @@ visual: true
 </tr>
 <tr>
 <td>新鲜混合水果盘</td>
-<td><a href="https://www.walmart.ca/en/ip/extra-large-party-fruit-tray-your-fresh-market/6000205351497">Your Fresh Market Extra Large Party Fruit Tray</a><br>1.3 kg / 盘</td>
+<td><a href="https://www.walmart.ca/en/ip/your-fresh-market-large-party-fruit-tray/6000205351477">Your Fresh Market Large Party Fruit Tray</a><br>1 kg / 盘</td>
 <td style="text-align: right;">1盘 / 周</td>
-<td style="text-align: right;">约$15.97</td>
+<td style="text-align: right;">约$11.97</td>
 </tr>
 <tr>
 <td>完整奇异果</td>
 <td><a href="https://www.walmart.ca/en/ip/kiwi/6000196794990">Zespri Kiwi</a><br>单颗售卖</td>
-<td style="text-align: right;">12个 / 周</td>
-<td style="text-align: right;">约$11.64</td>
+<td style="text-align: right;">8个 / 周</td>
+<td style="text-align: right;">约$7.76</td>
 </tr>
 <tr>
 <td>意面</td>
@@ -207,7 +207,7 @@ visual: true
 <td>每周合计</td>
 <td>—</td>
 <td style="text-align: right;">—</td>
-<td style="text-align: right;">约$163（未计菠菜）</td>
+<td style="text-align: right;">约$155（未计菠菜）</td>
 </tr>
 </tbody>
 </table>
