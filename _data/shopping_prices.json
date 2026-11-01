@@ -1,0 +1,287 @@
+{
+  "checked_on": "2026-10-31",
+  "currency": "CAD",
+  "scope": "Walmart Canada public prices. Eggs confirmed at London White Oaks Mall; spinach price supplied by user. Weighed meat costs use planned weights. Weekly total excludes as-needed restocks, tax and delivery.",
+  "weekly_total_cad": "153.01",
+  "items": [
+    {
+      "item": "去骨去皮鸡大腿肉",
+      "price_cad": "18.00",
+      "basis": "kg",
+      "source_url": "https://www.walmart.ca/en/c/kp/boneless-chicken-thighs",
+      "source_type": "walmart_public",
+      "weekly_quantity": "0.93",
+      "weekly_cost_cad": "16.74",
+      "product_url": "https://www.walmart.ca/en/ip/mina-halal-boneless-skinless-chicken-thighs/6000201049805"
+    },
+    {
+      "item": "BBQ熟猪背排骨",
+      "price_cad": "12.97",
+      "basis": "package",
+      "source_url": "https://www.walmart.ca/en/browse/grocery/meat-seafood-alternatives/fresh-kebabs-marinated-meats/10019_6000194327357_6000209526308",
+      "source_type": "walmart_public",
+      "weekly_quantity": "1",
+      "weekly_cost_cad": "12.97",
+      "product_url": "https://www.walmart.ca/en/ip/swiss-chalet-smoky-bbq-pork-back-ribs-600g/6000197977827"
+    },
+    {
+      "item": "三文鱼",
+      "price_cad": "34.00",
+      "basis": "kg",
+      "source_url": "https://www.walmart.ca/en/c/kp/salmon-fillets",
+      "source_type": "walmart_public",
+      "weekly_quantity": "1.28",
+      "weekly_cost_cad": "43.52",
+      "product_url": "https://www.walmart.ca/en/ip/Your-Fresh-Market-Coho-Salmon-Portions/6000208252814"
+    },
+    {
+      "item": "特瘦鸡肉末",
+      "price_cad": "7.98",
+      "basis": "package",
+      "source_url": "https://www.walmart.ca/en/shop/grocery/canadian-chicken/6000201261883",
+      "source_type": "walmart_public",
+      "weekly_quantity": "2",
+      "weekly_cost_cad": "15.96",
+      "product_url": "https://www.walmart.ca/en/ip/Prime-Extra-Lean-Ground-Chicken-Raised-Without-Antibiotics-454-g/10243782"
+    },
+    {
+      "item": "鸡蛋",
+      "price_cad": "3.93",
+      "basis": "package",
+      "source_url": "https://www.walmart.ca/en/ip/Great-Value-Large-Eggs/10052944",
+      "source_type": "walmart_london_live",
+      "weekly_quantity": "1",
+      "weekly_cost_cad": "3.93",
+      "product_url": "https://www.walmart.ca/en/ip/Great-Value-Large-Eggs/10052944"
+    },
+    {
+      "item": "无糖豆奶",
+      "price_cad": "4.98",
+      "basis": "package",
+      "source_url": "https://www.walmart.ca/en/ip/Silk-Soy-Milk-Alternative-Unsweetened-Dairy-Free-of-protein/6000190182706",
+      "source_type": "walmart_public",
+      "weekly_quantity": "2",
+      "weekly_cost_cad": "9.96",
+      "product_url": "https://www.walmart.ca/en/ip/Silk-Soy-Milk-Alternative-Unsweetened-Dairy-Free-of-protein/6000190182706"
+    },
+    {
+      "item": "Fresca无糖汽水",
+      "price_cad": "6.94",
+      "basis": "package",
+      "source_url": "https://www.walmart.ca/en/browse/grocery/bulk-grocery-foods/bulk-drinks/bulk-soft-drinks/10019_6000209303740_6000209303835_6000209303836",
+      "source_type": "walmart_public",
+      "weekly_quantity": "1",
+      "weekly_cost_cad": "6.94",
+      "product_url": "https://www.walmart.ca/en/ip/Fresca-Citrus-Soda-Pop-Fridge-Pack-Cans-355-mL-12-pack/10277189",
+      "price_type": "sale"
+    },
+    {
+      "item": "Fuze无糖冰茶",
+      "price_cad": "2.77",
+      "basis": "package",
+      "source_url": "https://www.walmart.ca/en/ip/Fuze-Iced-Tea-Zero-Sugar-Lemon-Bottle/39X12Q1LJGX0",
+      "source_type": "walmart_public",
+      "weekly_quantity": "1",
+      "weekly_cost_cad": "2.77",
+      "product_url": "https://www.walmart.ca/en/ip/Fuze-Iced-Tea-Zero-Sugar-Lemon-Bottle/39X12Q1LJGX0"
+    },
+    {
+      "item": "土豆",
+      "price_cad": "2.98",
+      "basis": "package",
+      "source_url": "https://www.walmart.ca/en/c/kp/yellow-potatoes",
+      "source_type": "walmart_public",
+      "weekly_quantity": "1",
+      "weekly_cost_cad": "2.98",
+      "product_url": "https://www.walmart.ca/en/ip/the-little-potato-company-fresh-little-potatoes-15lb-little-yellows/6000201597418"
+    },
+    {
+      "item": "豌豆，胡萝卜",
+      "price_cad": "1.37",
+      "basis": "package",
+      "source_url": "https://www.walmart.ca/en/ip/Great-Value-Peas-and-Carrots-398-mL/5YDQIJZT1APQ",
+      "source_type": "walmart_public",
+      "weekly_quantity": "2",
+      "weekly_cost_cad": "2.74",
+      "product_url": "https://www.walmart.ca/en/ip/Great-Value-Peas-and-Carrots-398-mL/5YDQIJZT1APQ"
+    },
+    {
+      "item": "蘑菇",
+      "price_cad": "2.44",
+      "basis": "package",
+      "source_url": "https://www.walmart.ca/en/browse/grocery/fruits-vegetables/fresh-vegetables/mushrooms/10019_6000194327370_6000194327412_6000202948249",
+      "source_type": "walmart_public",
+      "weekly_quantity": "2",
+      "weekly_cost_cad": "4.88",
+      "product_url": "https://www.walmart.ca/en/ip/mushrooms-sliced-cremini-your-fresh-market/6000196148725"
+    },
+    {
+      "item": "菠菜",
+      "price_cad": "3.61",
+      "basis": "package",
+      "source_url": "https://www.instacart.ca/store/products/347630-popeye-spinach-10-oz",
+      "source_type": "user_provided",
+      "weekly_quantity": "2",
+      "weekly_cost_cad": "7.22",
+      "product_url": "https://www.instacart.ca/store/products/347630-popeye-spinach-10-oz"
+    },
+    {
+      "item": "番茄意面酱",
+      "price_cad": "2.67",
+      "basis": "package",
+      "source_url": "https://www.walmart.ca/en/ip/Catelli-Garden-Select-Tomato-Basil-Pasta-Sauce-600-mL-Jar/3B5Q7OZH5XF7",
+      "source_type": "walmart_public",
+      "weekly_quantity": "1",
+      "weekly_cost_cad": "2.67",
+      "product_url": "https://www.walmart.ca/en/ip/Catelli-Garden-Select-Tomato-Basil-Pasta-Sauce-600-mL-Jar/3B5Q7OZH5XF7"
+    },
+    {
+      "item": "新鲜混合水果盘",
+      "price_cad": "11.97",
+      "basis": "package",
+      "source_url": "https://www.walmart.ca/en/shop/bbq-fruit-%26-desserts/3063959515893",
+      "source_type": "walmart_public",
+      "weekly_quantity": "1",
+      "weekly_cost_cad": "11.97",
+      "product_url": "https://www.walmart.ca/en/ip/your-fresh-market-large-party-fruit-tray/6000205351477"
+    },
+    {
+      "item": "完整奇异果",
+      "price_cad": "0.97",
+      "basis": "each",
+      "source_url": "https://www.walmart.ca/en/ip/kiwi/6000196794990",
+      "source_type": "walmart_public",
+      "weekly_quantity": "8",
+      "weekly_cost_cad": "7.76",
+      "product_url": "https://www.walmart.ca/en/ip/kiwi/6000196794990"
+    },
+    {
+      "item": "意面",
+      "price_cad": "1.27",
+      "basis": "package",
+      "source_url": "https://www.walmart.ca/en/ip/PRIMO-SPAGHETTI/1YCQ0A4KHLLW",
+      "source_type": "walmart_public",
+      "product_url": "https://www.walmart.ca/en/ip/PRIMO-SPAGHETTI/1YCQ0A4KHLLW"
+    },
+    {
+      "item": "全麦卷饼皮",
+      "price_cad": "4.32",
+      "basis": "package",
+      "source_url": "https://www.walmart.ca/en/browse/grocery/bread-bakery/10019_6000194327359_6000194396755_6000204017333",
+      "source_type": "walmart_public",
+      "product_url": "https://www.walmart.ca/en/ip/Dempster-s-100-Whole-Wheat-Large-Tortillas/6000191270091"
+    },
+    {
+      "item": "Chipotle蛋黄酱",
+      "price_cad": "5.47",
+      "basis": "package",
+      "source_url": "https://www.walmart.ca/en/c/brand/hellmann-s",
+      "source_type": "walmart_public",
+      "product_url": "https://www.walmart.ca/en/ip/Hellmann-s-Chipotle-Mayonnaise-Mild-Dressing-340ml/5NDTYWNJRQ1Y"
+    },
+    {
+      "item": "白米",
+      "price_cad": "3.47",
+      "basis": "package",
+      "source_url": "https://www.walmart.ca/en/ip/Great-Value-Long-Grain-White-Rice/4UD9P76BEQB4",
+      "source_type": "walmart_public",
+      "product_url": "https://www.walmart.ca/en/ip/Great-Value-Long-Grain-White-Rice/4UD9P76BEQB4"
+    },
+    {
+      "item": "高纤维谷物早餐",
+      "price_cad": "5.47",
+      "basis": "package",
+      "source_url": "https://www.walmart.ca/en/cp/diabetes-friendly-diet/6000207260877",
+      "source_type": "walmart_public",
+      "product_url": "https://www.walmart.ca/en/ip/Fibre-One-Breakfast-Cereal-Crunchy-Original-High-Fibre-and-Whole-Grains-587-g/1OUNWA7P5WCS"
+    },
+    {
+      "item": "黑胡椒",
+      "price_cad": "2.47",
+      "basis": "package",
+      "source_url": "https://www.walmart.ca/en/browse/grocery/spices-seasonings/10019_6000194326346_6000209233642",
+      "source_type": "walmart_public",
+      "product_url": "https://www.walmart.ca/en/ip/Great-Value-Ground-Black-Pepper/10302291"
+    },
+    {
+      "item": "蒜粉",
+      "price_cad": "3.97",
+      "basis": "package",
+      "source_url": "https://www.walmart.ca/en/ip/Great-Value-Garlic-Powder/10303864",
+      "source_type": "walmart_public",
+      "product_url": "https://www.walmart.ca/en/ip/Great-Value-Garlic-Powder/10303864"
+    },
+    {
+      "item": "洋葱粉",
+      "price_cad": "2.47",
+      "basis": "package",
+      "source_url": "https://www.walmart.ca/en/c/kp/onion-powder",
+      "source_type": "walmart_public",
+      "product_url": "https://www.walmart.ca/en/ip/Great-Value-Onion-Powder/10303684"
+    },
+    {
+      "item": "红椒粉",
+      "price_cad": "2.47",
+      "basis": "package",
+      "source_url": "https://www.walmart.ca/en/shop/grocery/seasonings-marinades/5957567896309",
+      "source_type": "walmart_public",
+      "product_url": "https://www.walmart.ca/en/ip/Great-Value-Paprika/10303778"
+    },
+    {
+      "item": "干牛至叶",
+      "price_cad": "2.47",
+      "basis": "package",
+      "source_url": "https://www.walmart.ca/en/browse/grocery/ingredient-wise/pantry-food/10019_6000209674008_6000209674088",
+      "source_type": "walmart_public",
+      "product_url": "https://www.walmart.ca/en/ip/Great-Value-Oregano-Leaves/6000202666145"
+    },
+    {
+      "item": "意式混合香草",
+      "price_cad": "2.47",
+      "basis": "package",
+      "source_url": "https://www.walmart.ca/en/browse/grocery/spices-seasonings/10019_6000194326346_6000209233642",
+      "source_type": "walmart_public",
+      "product_url": "https://www.walmart.ca/en/ip/Great-Value-Italian-Seasoning/10302881"
+    },
+    {
+      "item": "盐",
+      "price_cad": "1.63",
+      "basis": "package",
+      "source_url": "https://www.walmart.ca/en/c/kp/iodized-salt",
+      "source_type": "walmart_public",
+      "product_url": "https://www.walmart.ca/en/ip/windsor-table-salt/10210128"
+    },
+    {
+      "item": "橄榄油",
+      "price_cad": "10.97",
+      "basis": "package",
+      "source_url": "https://www.walmart.ca/en/browse/grocery/pantry-food/oils-vinegars/olive-oils/10019-6000194326346_6000194328508_6000195493131",
+      "source_type": "walmart_public",
+      "product_url": "https://www.walmart.ca/en/ip/seort/6000203408497"
+    },
+    {
+      "item": "减盐酱油",
+      "price_cad": "2.23",
+      "basis": "package",
+      "source_url": "https://www.walmart.ca/en/c/kp/soy-sauce",
+      "source_type": "walmart_public",
+      "product_url": "https://www.walmart.ca/en/ip/Great-Value-Reduced-Sodium-Soya-Sauce/6000187053934"
+    },
+    {
+      "item": "鸡粉",
+      "price_cad": "4.84",
+      "basis": "package",
+      "source_url": "https://www.walmart.ca/en/ip/Knorr-Chicken-Instant-Stock-Mix/10303650",
+      "source_type": "walmart_public",
+      "product_url": "https://www.walmart.ca/en/ip/Knorr-Chicken-Instant-Stock-Mix/10303650"
+    },
+    {
+      "item": "一水肌酸",
+      "price_cad": "32.97",
+      "basis": "package",
+      "source_url": "https://www.walmart.ca/en/browse/creatine-monohydrate/6000199008297_6000199014560_6000202330677_6000206265161",
+      "source_type": "walmart_public",
+      "product_url": "https://www.walmart.ca/fr/ip/leanfit-sport-creatine-monohydrate-en-poudre-non-aromatis-300-g-5-g-de-cratine-par-portion-certification-informed-choice-cratine-micronise-et-de-quali/6000208594600"
+    }
+  ]
+}

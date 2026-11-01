@@ -31,6 +31,7 @@
     const shell = el('div', 'visual-shopping');
     const total = rows.at(-1);
     if (total && !total.querySelector('input')) shell.append(el('p', 'visual-shopping-total', titleCase(`${val(total, 1)} · ${val(total, 4)}`)));
+    shell.append(el('p', 'shopping-price-note', tr('2026-10-31 · Walmart公开标价；菠菜为提供的价格。合计按计划重量，不含按需补货、税费及配送。', 'Oct 31, 2026 · Walmart public prices; spinach price supplied by you. Total uses planned weights and excludes restocks, tax and delivery.')));
     const overview = el('div', 'visual-shopping-overview');
     const count = el('strong', 'visual-shopping-count');
     const countLabel = el('span', '', tr('项已买', 'Items Bought'));
@@ -58,11 +59,15 @@
         check.append(cardBox);
       }
       check.append(el('span', '', titleCase(val(row, 1))));
-      top.append(check, el('strong', 'visual-price', val(row, 4)));
+      const price = el('strong', 'visual-price');
+      copy(price, row.cells[4]);
+      price.title = tr('商品单价（CAD）', 'Unit Price (CAD)');
+      top.append(check, price);
       card.append(top);
       const product = el('div', 'visual-shopping-product');
       copy(product, row.cells[2]);
       card.append(product, el('span', 'visual-badge', titleCase(val(row, 3))));
+      if (row.dataset.weeklyCost) card.append(el('span', 'visual-badge', tr('每周金额', 'Weekly Cost') + ` · $${row.dataset.weeklyCost}`));
       if (box) {
         const updateCard = () => {
           cardBox.checked = box.checked;
