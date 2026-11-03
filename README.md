@@ -44,3 +44,9 @@ python3 scripts/create-meal-plan.py plan-2 --name-zh '周计划 2' --name-en 'We
 此命令从当前计划创建独立副本：页面在 `plans/plan-2/`，营养与赤字数据在 `_data/meal_plan_content/plan-2/`，餐序在 `_includes/meal-plans/plan-2/`，做饭任务、跟做配置、购物及做饭时间在 `assets/meal-plans/plan-2/`。修改这些副本并核对饮食、购物、营养、做饭的一致性后再发布。新计划自动出现在选择器里，不要仅增加一个指向原页面的选项。ID 用于保存进度，发布后不要随意更改。默认计划的数据仍在原文件，继续按原方式维护。
 
 验证：`node --test tests/meal-plans.test.js`。测试使用临时第二套计划，不会向正式餐单添加虚构菜单。
+
+### 有氧计划
+
+`_data/cardio_plans.json` 独立保存有氧计划、四种替代选项及中英文说明。`default` 指定新访客的计划；个人选择保存在 `fitness-cardio-plan`，不改变饮食计划。新计划按 77.4 kg、完整 30 分钟 HIIT 估算净消耗 300 kcal；各替代选项的 MET 推算与来源保留在数据文件中。此值是规划估计，不是个人实测。
+
+`_data/plan_metrics.yml` 的 `reference_cardio_weekly` 标明静态营养预算包含的有氧消耗。切换时只加减有氧差额，营养概览、消耗图、放纵餐赤字和今日安排一起更新。新增饮食计划会复制各自的基准预算；修改饮食热量时同时更新该计划的 `intake_daily`、`weekly_deficit_precise` 和显示值。

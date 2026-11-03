@@ -103,7 +103,10 @@
     trainingRoot.append(exercises);
     if (!cardioActive) return;
     const cardioLine = element('p', 'today-cardio');
-    cardioLine.append(element('strong', '', label('有氧', 'Cardio')));
+    const plan = window.fitnessCardioPlan;
+    cardioLine.append(element('strong', '', plan
+      ? `${plan.name[en ? 'en' : 'zh']} · ≈${plan.netKcal} kcal`
+      : label('有氧', 'Cardio')));
     const cardioLink = element('a', '', label('查看选项', 'View Options'));
     cardioLink.href = document.querySelector('.main-nav a[href$="/cardio/"]')?.href || 'cardio/';
     cardioLine.append(cardioLink);

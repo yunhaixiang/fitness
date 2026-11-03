@@ -48,6 +48,8 @@
   <script type="application/json" id="meal-plan-catalog">{{ site.data.meal_plans | jsonify }}</script>
   <script src="{{ '/assets/meal-plans.js' | relative_url }}?v={{ site.time | date: '%s' }}" defer></script>
   <script src="{{ '/assets/i18n.js' | relative_url }}?v={{ site.time | date: '%s' }}" defer></script>
+  <script type="application/json" id="cardio-plan-catalog">{{ site.data.cardio_plans | jsonify }}</script>
+  <script src="{{ '/assets/cardio-plans.js' | relative_url }}?v={{ site.time | date: '%s' }}" defer></script>
   <script src="{{ '/assets/site.js' | relative_url }}?v={{ site.time | date: '%s' }}" defer></script>
   <script src="{{ '/assets/theme.js' | relative_url }}?v={{ site.time | date: '%s' }}" defer></script>
   {% if page.diet or page.overview or page.url == '/' %}<script src="{{ page.meal_activities_script | default: '/assets/meal-activities.js' | relative_url }}?v={{ site.time | date: '%s' }}" defer></script>{% endif %}

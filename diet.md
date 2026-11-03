@@ -28,3 +28,5 @@ diet: true
   <p class="diet-cheat-note">按在原计划外加吃一次计算；营养数据为参考估算。</p>
   {% include cheat-meal-table.html %}
 </section>
+
+<script type="application/json" id="cardio-energy-baseline">{{ site.data.plan_metrics | jsonify }}</script>

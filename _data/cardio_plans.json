@@ -1,0 +1,245 @@
+{
+  "default": "cardio-2",
+  "sessionsPerWeek": 4,
+  "weightKg": 77.4,
+  "plans": [
+    {
+      "id": "cardio-1",
+      "name": {
+        "zh": "有氧计划 1",
+        "en": "Cardio Plan 1"
+      },
+      "netKcal": 200,
+      "options": [
+        {
+          "id": "hiit",
+          "name": {
+            "zh": "HIIT",
+            "en": "HIIT"
+          },
+          "duration": {
+            "zh": "20 分钟",
+            "en": "20 min"
+          },
+          "description": {
+            "zh": "",
+            "en": ""
+          },
+          "steps": [],
+          "video": "M0uO8X3_tEA"
+        },
+        {
+          "id": "swim",
+          "name": {
+            "zh": "游泳",
+            "en": "Swimming"
+          },
+          "duration": {
+            "zh": "30–35 分钟",
+            "en": "30–35 min"
+          },
+          "description": {
+            "zh": "自由泳去、蛙泳回；25 m 泳池，20 个来回，共 1,000 m。",
+            "en": "Freestyle out, breaststroke back; 20 round trips in a 25 m pool, 1,000 m total."
+          },
+          "steps": [
+            {
+              "zh": "热身：3 个来回，轻松游。",
+              "en": "Warm-up: 3 easy round trips."
+            },
+            {
+              "zh": "主训练：2 组 × 7 个来回，组间休息 30–60 秒。",
+              "en": "Main set: 2 × 7 round trips, with 30–60 seconds of rest between sets."
+            },
+            {
+              "zh": "放松：3 个来回，轻松游。",
+              "en": "Cool-down: 3 easy round trips."
+            }
+          ]
+        },
+        {
+          "id": "treadmill",
+          "name": {
+            "zh": "跑步机",
+            "en": "Treadmill"
+          },
+          "duration": {
+            "zh": "30 分钟",
+            "en": "30 min"
+          },
+          "description": {
+            "zh": "坡度 0%。",
+            "en": "Incline: 0%."
+          },
+          "steps": [
+            {
+              "zh": "热身：5 分钟，4–5 km/h 走路。",
+              "en": "Warm-up: walk for 5 min at 4–5 km/h."
+            },
+            {
+              "zh": "主训练：20 分钟，8 km/h 慢跑。",
+              "en": "Main set: jog for 20 min at 8 km/h."
+            },
+            {
+              "zh": "放松：5 分钟，3–4 km/h 走路。",
+              "en": "Cool-down: walk for 5 min at 3–4 km/h."
+            }
+          ]
+        },
+        {
+          "id": "bike",
+          "name": {
+            "zh": "健身馆自行车",
+            "en": "Stationary Bike"
+          },
+          "duration": {
+            "zh": "35 分钟",
+            "en": "35 min"
+          },
+          "description": {
+            "zh": "固定自行车。",
+            "en": "Use a stationary bike."
+          },
+          "steps": [
+            {
+              "zh": "热身：5 分钟，50 W。",
+              "en": "Warm-up: 5 min at 50 W."
+            },
+            {
+              "zh": "主训练：25 分钟，90–100 W。",
+              "en": "Main set: 25 min at 90–100 W."
+            },
+            {
+              "zh": "放松：5 分钟，50 W。",
+              "en": "Cool-down: 5 min at 50 W."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cardio-2",
+      "name": {
+        "zh": "有氧计划 2",
+        "en": "Cardio Plan 2"
+      },
+      "netKcal": 300,
+      "options": [
+        {
+          "id": "hiit",
+          "name": {
+            "zh": "HIIT",
+            "en": "HIIT"
+          },
+          "duration": {
+            "zh": "30 分钟跟练",
+            "en": "30 min workout"
+          },
+          "description": {
+            "zh": "从头完整跟练；视频总长 34:42，包含开场和收尾。",
+            "en": "Follow the workout from the beginning. The full video is 34:42 including the introduction and outro."
+          },
+          "steps": [],
+          "video": "tgm_QjUiwlk"
+        },
+        {
+          "id": "swim",
+          "name": {
+            "zh": "游泳",
+            "en": "Swimming"
+          },
+          "duration": {
+            "zh": "50 分钟",
+            "en": "50 min"
+          },
+          "description": {
+            "zh": "自由泳去、蛙泳回；25 m 泳池，30 个来回，共 1,500 m。",
+            "en": "Freestyle out, breaststroke back; 30 round trips in a 25 m pool, 1,500 m total."
+          },
+          "steps": [
+            {
+              "zh": "热身：3 个来回，轻松游。",
+              "en": "Warm-up: 3 easy round trips."
+            },
+            {
+              "zh": "主训练：3 组 × 8 个来回，组间休息 1 分钟。",
+              "en": "Main set: 3 × 8 round trips, with 1 min of rest between sets."
+            },
+            {
+              "zh": "放松：3 个来回；实际游动时间合计 48 分钟。",
+              "en": "Cool-down: 3 easy round trips; aim for 48 min of swimming in total."
+            }
+          ]
+        },
+        {
+          "id": "treadmill",
+          "name": {
+            "zh": "跑步机",
+            "en": "Treadmill"
+          },
+          "duration": {
+            "zh": "37 分钟",
+            "en": "37 min"
+          },
+          "description": {
+            "zh": "坡度 0%。",
+            "en": "Incline: 0%."
+          },
+          "steps": [
+            {
+              "zh": "热身：5 分钟，4–5 km/h 走路。",
+              "en": "Warm-up: walk for 5 min at 4–5 km/h."
+            },
+            {
+              "zh": "主训练：27 分钟，8 km/h 慢跑。",
+              "en": "Main set: jog for 27 min at 8 km/h."
+            },
+            {
+              "zh": "放松：5 分钟，3–4 km/h 走路。",
+              "en": "Cool-down: walk for 5 min at 3–4 km/h."
+            }
+          ]
+        },
+        {
+          "id": "bike",
+          "name": {
+            "zh": "健身馆自行车",
+            "en": "Stationary Bike"
+          },
+          "duration": {
+            "zh": "48 分钟",
+            "en": "48 min"
+          },
+          "description": {
+            "zh": "固定自行车；以功率为准。",
+            "en": "Use a stationary bike and follow the wattage targets."
+          },
+          "steps": [
+            {
+              "zh": "热身：5 分钟，50 W。",
+              "en": "Warm-up: 5 min at 50 W."
+            },
+            {
+              "zh": "主训练：38 分钟，90–100 W。",
+              "en": "Main set: 38 min at 90–100 W."
+            },
+            {
+              "zh": "放松：5 分钟，50 W。",
+              "en": "Cool-down: 5 min at 50 W."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "estimation": {
+    "note": "Planning estimates, not measured individual calorie expenditure. Net kcal = (MET - 1) × 3.5 × 77.4 / 200 × minutes. New HIIT assumes session-average 8.4 MET over the named 30-minute workout including interval rests; no extra credit for the video intro/outro. Swimming uses a recreational freestyle/breaststroke blend of 5.55 MET, 48 min moving and 2 min rest at 1.5 MET. Treadmill: 27 min at 8.5 MET, 5 min at 3.5 MET and 5 min at 2.8 MET. Bike: 38 min at 6 MET plus 10 min at 4 MET. Rounded planning target 300 kcal for all four. Original plan retains its previous 200 kcal planning allowance.",
+    "sources": [
+      "https://www.youtube.com/watch?v=tgm_QjUiwlk",
+      "https://pacompendium.com/conditioning-exercise/",
+      "https://pacompendium.com/running/",
+      "https://pacompendium.com/water-activities/",
+      "https://pacompendium.com/bicycling/"
+    ]
+  }
+}
