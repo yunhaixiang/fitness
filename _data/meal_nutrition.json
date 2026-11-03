@@ -7,6 +7,6 @@
     "potato": {"label": "周二午／周三晚／周五晚／周日午", "kcal": "664", "protein": "56.3", "fat": "26.8", "saturatedFat": "7.7", "carbs": "47.3", "fibre": "7.9", "sugar": "11.4", "cholesterol": "128", "sodium": "884", "calcium": "216", "iron": "7.1", "potassium": "2,933"},
     "wrap": {"label": "周日晚／周四午", "kcal": "715", "protein": "62.9", "fat": "35.7", "saturatedFat": "8.6", "carbs": "36.3", "fibre": "4.5", "sugar": "2.8", "cholesterol": "605", "sodium": "792", "calcium": "123", "iron": "5.6", "potassium": "1,266"},
     "rice": {"label": "周一午／周二晚／周四晚／周六午", "kcal": "669", "protein": "61.8", "fat": "24.5", "saturatedFat": "8.2", "carbs": "51.7", "fibre": "5.0", "sugar": "3.8", "cholesterol": "594", "sodium": "685", "calcium": "121", "iron": "3.5", "potassium": "884"},
-    "pasta": {"label": "周一晚／周三午／周五午／周六晚", "kcal": "682", "protein": "63.4", "fat": "26.1", "saturatedFat": "5.8", "carbs": "47.2", "fibre": "4.1", "sugar": "7.4", "cholesterol": "191", "sodium": "697", "calcium": "74", "iron": "3.8", "potassium": "1,562"}
+    "pasta": {"label": "周一晚／周三午／周五午／周六晚", "kcal": "619", "protein": "46.2", "fat": "20.2", "saturatedFat": "3.3", "carbs": "64.1", "fibre": "4.1", "sugar": "7.4", "cholesterol": "159", "sodium": "816", "calcium": "75", "iron": "4.0", "potassium": "1,099"}
   }
 }

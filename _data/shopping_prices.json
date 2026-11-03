@@ -2,7 +2,7 @@
   "checked_on": "2026-10-31",
   "currency": "CAD",
   "scope": "Walmart Canada public prices. Eggs confirmed at London White Oaks Mall; spinach price supplied by user. Weighed meat costs use planned weights. Weekly total excludes as-needed restocks, tax and delivery.",
-  "weekly_total_cad": "153.01",
+  "weekly_total_cad": "143.99",
   "items": [
     {
       "item": "去骨去皮鸡大腿肉",
@@ -30,9 +30,21 @@
       "basis": "kg",
       "source_url": "https://www.walmart.ca/en/c/kp/salmon-fillets",
       "source_type": "walmart_public",
-      "weekly_quantity": "1.28",
-      "weekly_cost_cad": "43.52",
+      "weekly_quantity": "0.64",
+      "weekly_cost_cad": "21.76",
       "product_url": "https://www.walmart.ca/en/ip/Your-Fresh-Market-Coho-Salmon-Portions/6000208252814"
+    },
+    {
+      "item": "裹粉黑线鳕",
+      "price_cad": "12.74",
+      "basis": "package",
+      "source_url": "https://www.walmart.ca/en/ip/High-Liner-Pan-Sear-Selects-Traditional-Haddock/6000196031340",
+      "source_type": "walmart_public",
+      "weekly_quantity": "1",
+      "weekly_cost_cad": "12.74",
+      "product_url": "https://www.walmart.ca/en/ip/High-Liner-Pan-Sear-Selects-Traditional-Haddock/6000196031340",
+      "price_type": "sale",
+      "checked_on": "2026-11-02"
     },
     {
       "item": "特瘦鸡肉末",

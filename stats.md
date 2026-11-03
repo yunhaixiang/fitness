@@ -11,19 +11,19 @@ visual: true
 
 <figure class="nutrition-overview" aria-label="每日能量与每周赤字">
   <div class="nutrition-overview-main">
-    <div class="nutrition-ring" style="--intake-share:75.9%" aria-label="日均摄入占消耗76%，赤字24%">
+    <div class="nutrition-ring" style="--intake-share:74.3%" aria-label="日均摄入占消耗74%，赤字26%">
       <div class="nutrition-ring-center">
         <span>日均赤字</span>
-        <strong>559 <small>kcal／天</small></strong>
+        <strong>595 <small>kcal／天</small></strong>
       </div>
     </div>
     <div class="nutrition-overview-key">
       <p class="nutrition-overview-eyebrow">能量概览 · 不含放纵餐</p>
-      <div class="nutrition-key-row nutrition-key-intake"><span>日均摄入</span><strong>1,760 <small>kcal／天</small></strong></div>
+      <div class="nutrition-key-row nutrition-key-intake"><span>日均摄入</span><strong>1,724 <small>kcal／天</small></strong></div>
       <div class="nutrition-key-row nutrition-key-burn"><span>日均消耗</span><strong>2,319 <small>kcal／天</small></strong></div>
-      <div class="nutrition-key-row nutrition-key-deficit"><span>日均赤字</span><strong>559 <small>kcal／天</small></strong></div>
+      <div class="nutrition-key-row nutrition-key-deficit"><span>日均赤字</span><strong>595 <small>kcal／天</small></strong></div>
       <div class="nutrition-key-row"><span>每周赤字</span><strong>{{ site.data.plan_metrics.weekly_deficit_display }} <small>kcal</small></strong></div>
-      <div class="nutrition-key-row"><span>每周赤字等价脂肪</span><strong>0.51 <small>kg／周</small></strong></div>
+      <div class="nutrition-key-row"><span>每周赤字等价脂肪</span><strong>0.54 <small>kg／周</small></strong></div>
     </div>
   </div>
 </figure>
@@ -92,32 +92,32 @@ visual: true
 <tbody>
 <tr>
 <td>热量</td>
-<td style="text-align: right;">1,760 kcal</td>
+<td style="text-align: right;">1,724 kcal</td>
 <td>1,800–2,000 kcal</td>
 </tr>
 <tr>
 <td>蛋白质</td>
-<td style="text-align: right;">143.3 g</td>
+<td style="text-align: right;">133.5 g</td>
 <td>130–165 g</td>
 </tr>
 <tr>
 <td>总脂肪</td>
-<td style="text-align: right;">65.6 g</td>
+<td style="text-align: right;">61.2 g</td>
 <td>45–65 g</td>
 </tr>
 <tr>
 <td>饱和脂肪</td>
-<td style="text-align: right;">15.9 g</td>
-<td>≤11.7 g</td>
+<td style="text-align: right;">14.5 g</td>
+<td>≤11.5 g</td>
 </tr>
 <tr>
 <td>饱和脂肪占总热量</td>
-<td style="text-align: right;">8.1%</td>
+<td style="text-align: right;">7.6%</td>
 <td>≤6%</td>
 </tr>
 <tr>
 <td>碳水化合物</td>
-<td style="text-align: right;">165.4 g</td>
+<td style="text-align: right;">175.0 g</td>
 <td>180–240 g</td>
 </tr>
 <tr>
@@ -137,12 +137,12 @@ visual: true
 </tr>
 <tr>
 <td>膳食胆固醇</td>
-<td style="text-align: right;">692 mg</td>
+<td style="text-align: right;">674 mg</td>
 <td>尽量少；优先控制饱和脂肪</td>
 </tr>
 <tr>
 <td>钠</td>
-<td style="text-align: right;">1,866 mg</td>
+<td style="text-align: right;">1,934 mg</td>
 <td>≤2,300 mg</td>
 </tr>
 <tr>
@@ -152,37 +152,37 @@ visual: true
 </tr>
 <tr>
 <td>铁</td>
-<td style="text-align: right;">17.3 mg</td>
+<td style="text-align: right;">17.4 mg</td>
 <td>8 mg</td>
 </tr>
 <tr>
 <td>钾</td>
-<td style="text-align: right;">4,797 mg</td>
+<td style="text-align: right;">4,532 mg</td>
 <td>≥3,400 mg</td>
 </tr>
 <tr>
 <td>维生素D</td>
-<td style="text-align: right;">23 µg</td>
+<td style="text-align: right;">15 µg</td>
 <td>15 µg</td>
 </tr>
 <tr>
 <td>维生素B12</td>
-<td style="text-align: right;">7.0 µg</td>
+<td style="text-align: right;">5.5 µg</td>
 <td>2.4 µg</td>
 </tr>
 <tr>
 <td>碘</td>
-<td style="text-align: right;">114–129 µg</td>
+<td style="text-align: right;">218–233 µg</td>
 <td>150 µg</td>
 </tr>
 <tr>
 <td>Omega-3：ALA</td>
-<td style="text-align: right;">1.1–1.3 g</td>
+<td style="text-align: right;">1.4–1.6 g</td>
 <td>1.6 g</td>
 </tr>
 <tr>
 <td>Omega-3：EPA，DHA（合计）</td>
-<td style="text-align: right;">2.2 g</td>
+<td style="text-align: right;">1.2 g</td>
 <td>250 mg</td>
 </tr>
 </tbody>
@@ -194,6 +194,23 @@ Existing nutrient basis retained by scaling the isolated thigh-only pasta delta
 from commit 36acfeb (830 → 635 g/week); rounded historical values are estimates.
 Weekly added energy: 350.97 kcal. Other food quantities and expenditure unchanged. -->
 
-<!-- Spinach: 454 → 568 g/week; four portions of 142 g. Raw-spinach reference per 100 g: 23 kcal, protein 2.86 g, fat 0.39 g, saturated fat 0.063 g, carbs 3.63 g, fibre 2.2 g, sugar 0.42 g, sodium 79 mg, calcium 99 mg, iron 2.71 mg, potassium 558 mg. Weekly energy increase 26.22 kcal. -->
+<!-- Spinach: 454 → 568 g/week; four portions of 142 g. Raw-spinach reference per 100 g: 23 kcal, protein 2.86 g, fat 0.39 g, saturated fat 0.063 g, carbs 3.63 g, fibre 1.2 g, sugar 0.42 g, sodium 79 mg, calcium 99 mg, iron 2.71 mg, potassium 558 mg. Weekly energy increase 26.22 kcal. -->
 
 <!-- Fruit quantities: tray 1,300 → 1,000 g/week; green kiwis 12 → 8/week. Existing fruit-only values retained from 6dc9773. Fruit tray split 1/3 breakfast, 2/3 snack over three days; kiwi one at breakfast and one at snack over four days. Weekly energy decrease 283.58 kcal. -->
+
+<!-- 2026-11-02: Four pasta meals replace 160 g raw coho salmon each with
+125 g High Liner Pan-Sear Selects Traditional Haddock (one 500 g / 4-fillet box).
+Label per 126 g: 200 kcal, P17/C17/F7/sat0.5 g, cholesterol50/sodium270/Ca20/Fe0.75 mg;
+https://www.highliner.com/products/undefined/pan-sear-selects-traditional-haddock
+Coho reference per 100 g: 160 kcal, P21.27/F7.67/sat1.816 g, cholesterol51/sodium47/Ca12/Fe0.34/K450 mg.
+Salmon seasonings halved; remove per replaced meal 1/8 tsp olive oil (0.5625 g,
+4.9725 kcal, 0.078 g saturated fat) and 1/32 tsp salt (73.75 mg sodium).
+Trace spice changes below reference precision are not included.
+Unlabelled haddock micronutrients estimated using 90 g fish per fillet:
+K257 mg, B12 1.65 mcg, D0.45 mcg, iodine204 mcg, EPA+DHA0.15 g.
+These are ingredient-proxy estimates, not product measurements. Iodine is particularly variable.
+Coho D proxy 9 mcg/100 g, B12 2.67 mcg/100 g, iodine14 mcg/100 g,
+EPA+DHA1.206 g/100 g. ALA addition roughly0.54 g/fillet inferred from the
+0.7 g total omega-3 label minus estimated marine omega-3; not a direct ALA assay.
+Daily values apply substitution deltas to existing rounded plan totals.
+-->

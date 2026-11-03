@@ -42,6 +42,7 @@
     { id: 'ribs', label: ['BBQ排骨', 'BBQ Ribs'], note: ['400°F · 15–20分钟', '400°F · 15–20 min'], group: 'oven', before: ['prep-ribs', 'oven-heat'], link: '#cook-ribs' },
     { id: 'air-heat', label: ['预热空气炸锅', 'Preheat Air Fryer'], note: ['400°F · 4分钟', '400°F · 4 min'], group: 'air', before: ['prep-salmon'], link: '#cook-air-heat' },
     { id: 'salmon', label: ['三文鱼', 'Salmon'], note: ['400°F · 8分钟', '400°F · 8 min'], group: 'air', before: ['prep-salmon', 'air-heat'], link: '#cook-salmon' },
+    { id: 'haddock', label: ['裹粉黑线鳕', 'Breaded Haddock'], note: ['冷冻入锅 · 400°F · 18–20分钟', 'Cook from frozen · 400°F · 18–20 min'], group: 'air', before: ['salmon'], link: '#cook-haddock' },
     { id: 'egg-water', label: ['煮锅一：烧水', 'Pot 1: Boil Water'], note: ['水沸后确认', 'Confirm when boiling'], group: 'pots', before: ['ready'], manual: true, link: '#cook-eggs' },
     { id: 'eggs', label: ['水煮蛋', 'Boiled Eggs'], note: ['水开后约8分钟', 'About 8 min after boiling'], group: 'pots', before: ['egg-water', 'prep-eggs'], link: '#cook-eggs' },
     { id: 'pasta-water', label: ['煮锅二：烧水', 'Pot 2: Boil Water'], note: ['水沸后确认', 'Confirm when boiling'], group: 'pots', before: ['ready'], manual: true, link: '#cook-pasta' },
@@ -51,7 +52,7 @@
     { id: 'tomato', label: ['番茄意面', 'Tomato Pasta'], note: ['小锅 · 酱汁与意面', 'Saucepan · sauce and pasta'], group: 'small-wok', before: ['spinach', 'pasta', 'prep-tomato'], link: '#cook-tomato' },
     { id: 'ground', label: ['鸡肉末与炒蛋', 'Ground Chicken and Eggs'], note: ['大锅 · 豌豆与胡萝卜', 'Wok · peas and carrots'], group: 'large-wok', before: ['prep-meat', 'prep-beaten-eggs', 'prep-peas-carrots'], link: '#cook-ground' },
     { id: 'wrap', label: ['抹酱、装馅、卷饼', 'Sauce, Fill and Roll Wrap'], note: ['鸡腿肉、水煮蛋、蘑菇', 'Chicken, boiled eggs, mushrooms'], group: 'wrap', before: ['chicken', 'eggs', 'mushroom'], link: '#cook-wrap' },
-    { id: 'finish', label: ['分盘、入冰箱、清洗', 'Portion, Refrigerate and Clean'], note: ['所有餐食完成后', 'When every component is ready'], group: 'finish', before: ['rice', 'chicken', 'potato', 'ribs', 'salmon', 'mushroom', 'spinach', 'tomato', 'ground', 'wrap'], link: '#portions' }
+    { id: 'finish', label: ['分盘、入冰箱、清洗', 'Portion, Refrigerate and Clean'], note: ['所有餐食完成后', 'When every component is ready'], group: 'finish', before: ['rice', 'chicken', 'potato', 'ribs', 'salmon', 'haddock', 'mushroom', 'spinach', 'tomato', 'ground', 'wrap'], link: '#portions' }
   ];
   const groups = [
     { id: 'cold', icon: 'cold', title: ['冷冻／解冻', 'Freeze / Thaw'], hint: ['两种备餐情况，择一', 'Choose the path for this batch'] },
@@ -202,7 +203,7 @@
     ['prep', 'prep', ['prep-rice', 'prep-chicken', 'prep-potato', 'prep-ribs', 'prep-salmon', 'prep-eggs', 'prep-pasta', 'prep-mushroom', 'prep-spinach', 'prep-tomato', 'prep-meat', 'prep-beaten-eggs', 'prep-peas-carrots']],
     ['rice', 'rice', ['rice']],
     ['oven', 'oven', ['oven-heat', 'chicken', 'potato', 'ribs']],
-    ['air-fryer', 'air', ['air-heat', 'salmon']],
+    ['air-fryer', 'air', ['air-heat', 'salmon', 'haddock']],
     ['pot-one', 'pots', ['eggs']],
     ['pot-two', 'pots', ['pasta']],
     ['small-wok', 'small-wok', ['mushroom', 'spinach', 'tomato']],

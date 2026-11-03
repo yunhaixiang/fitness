@@ -158,3 +158,23 @@ test('saved grouped preparation expands without clearing cooking progress', () =
   assert.ok(!result.batches.first.done.includes('prep-oven'));
   assert.equal(result.batches.first.running.chicken.startedAt, 1000000);
 });
+
+
+test('breaded haddock waits for the air fryer and portioning waits for both fish', () => {
+  const fs = require('node:fs'), vm = require('node:vm');
+  const flow = fs.readFileSync(require.resolve('../assets/cooking-flow.js'), 'utf8');
+  const guide = fs.readFileSync(require.resolve('../assets/cooking-guide.js'), 'utf8');
+  const nodes = vm.runInNewContext(flow.match(/const nodes = (\[[\s\S]*?\n  \]);/)[1]);
+  const minutes = vm.runInNewContext('(' + guide.match(/const taskMinutes = ({[\s\S]*?\n  });/)[1] + ')');
+  const tasks = nodes.filter(n => n.manual || Object.hasOwn(minutes, n.id));
+  const done = tasks.filter(t => !['air-heat', 'salmon', 'haddock', 'finish'].includes(t.id)).map(t => t.id);
+  const result = schedule({ tasks, minutes, done, running: {}, ready: true });
+  assert.ok(result);
+  assert.equal(result.starts.salmon, result.ends['air-heat']);
+  assert.ok(result.starts.haddock >= result.ends.salmon);
+  assert.equal(result.ends.haddock - result.starts.haddock, 20);
+  assert.ok(result.starts.finish >= result.ends.haddock);
+  const replanned = schedule({ tasks, minutes, done: [...done, 'air-heat', 'salmon'], running: {}, ready: true });
+  assert.equal(replanned.starts.haddock, 0);
+  assert.ok(replanned.starts.finish >= replanned.ends.haddock);
+});

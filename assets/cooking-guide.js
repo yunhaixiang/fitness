@@ -11,7 +11,7 @@
   const taskMinutes = {
     'prep-rice': 3, 'prep-chicken': 4, 'prep-potato': 3, 'prep-ribs': 3, 'prep-salmon': 4, 'prep-eggs': 1, 'prep-pasta': 1, 'prep-mushroom': 2, 'prep-spinach': 1, 'prep-tomato': 1, 'prep-meat': 1, 'prep-beaten-eggs': 2, 'prep-peas-carrots': 1,
     rice: 50, 'oven-heat': 15, chicken: 27, potato: 30, ribs: 18,
-    'air-heat': 4, salmon: 8, eggs: 8,
+    'air-heat': 4, salmon: 8, haddock: 20, eggs: 8,
     pasta: 8, mushroom: 7, spinach: 7,
     tomato: 6, ground: 15, wrap: 6, finish: 15
   };

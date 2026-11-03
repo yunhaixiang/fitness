@@ -29,11 +29,17 @@ visual: true
 <td style="text-align: right;">1盒 / 周</td>
 <td style="text-align: right;"><a href="https://www.walmart.ca/en/ip/swiss-chalet-smoky-bbq-pork-back-ribs-600g/6000197977827">$12.97</a></td>
 </tr>
-<tr data-price-id="3" data-weekly-cost="43.52">
+<tr data-price-id="3" data-weekly-cost="21.76">
 <td>三文鱼</td>
 <td><a href="https://www.walmart.ca/en/ip/Your-Fresh-Market-Coho-Salmon-Portions/6000208252814">Your Fresh Market Coho Salmon Portions</a><br>每盒2块，按320 g / 盒计算</td>
-<td style="text-align: right;">4盒（8块）/ 周</td>
+<td style="text-align: right;">2盒（4块）/ 周</td>
 <td style="text-align: right;"><a href="https://www.walmart.ca/en/ip/Your-Fresh-Market-Coho-Salmon-Portions/6000208252814">$34.00 / kg</a></td>
+</tr>
+<tr data-price-id="32" data-weekly-cost="12.74">
+<td>裹粉黑线鳕</td>
+<td><a href="https://www.walmart.ca/en/ip/High-Liner-Pan-Sear-Selects-Traditional-Haddock/6000196031340">High Liner Pan-Sear Selects Traditional Haddock</a><br>500 g / 盒，4片</td>
+<td style="text-align: right;">1盒 / 周</td>
+<td style="text-align: right;"><a href="https://www.walmart.ca/en/ip/High-Liner-Pan-Sear-Selects-Traditional-Haddock/6000196031340">$12.74</a></td>
 </tr>
 <tr data-price-id="4" data-weekly-cost="15.96">
 <td>特瘦鸡肉末</td>
