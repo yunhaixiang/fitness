@@ -6,10 +6,12 @@ permalink: /cooking/
 visual: true
 cooking: true
 ---
+{% comment %}
 ## 跟做模式
 {: #guided-cooking }
 
 <div id="cooking-guide" class="cooking-guide"></div>
+{% endcomment %}
 
 ## 任务依赖
 {: #dependencies }
