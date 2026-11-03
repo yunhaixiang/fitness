@@ -224,3 +224,13 @@ Weekly increase70.588 kcal; use previous unrounded energy intake1724.2515 kcal/d
 weekly deficit4166.2392 kcal. Previous total fat62.2343 g/day was inadvertently
 rendered61.2 by an omega-3 text replacement; corrected before adding pasta's0.0336 g/day.
 Unlabelled micronutrients retain previous estimates. -->
+
+<!-- 2026-11-02 mushroom redistribution only: per half-week, 227 g crimini
+with 1/4 tsp olive oil, 1/4 tsp pepper, 1/2 tsp garlic powder and 1/2 tsp onion
+powder moves from three equal portions (wrap, potato, potato) to four equal
+portions (pasta, potato, pasta, potato). Approximate full batch 70 kcal.
+Nutrient deltas per meal: wrap -1/3 batch; each potato -1/12; each pasta +1/4.
+Raw crimini reference per100 g:22 kcal,P2.5,F0.1,sat0.014,C4.3,fibre0.6,sugar1.72 g;
+Na6,Ca18,Fe0.4,K448 mg. Generic spice/oil estimates included.
+Weekly ingredient quantities, daily totals and energy deficit unchanged.
+Displayed rounded meal values may differ slightly when summed. -->
