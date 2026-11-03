@@ -47,9 +47,9 @@
     { id: 'pasta-water', label: ['煮锅二：烧水', 'Pot 2: Boil Water'], note: ['水沸后确认', 'Confirm when boiling'], group: 'pots', before: ['ready'], manual: true, link: '#cook-pasta' },
     { id: 'pasta', label: ['意面', 'Pasta'], note: ['约8分钟', 'About 8 min'], group: 'pots', before: ['pasta-water', 'prep-pasta'], link: '#cook-pasta' },
     { id: 'mushroom', label: ['蘑菇', 'Mushrooms'], note: ['小锅 · 约7分钟', 'Saucepan · about 7 min'], group: 'small-wok', before: ['prep-mushroom'], link: '#cook-mushroom' },
-    { id: 'spinach', label: ['菠菜', 'Spinach'], note: ['小锅 · 约7分钟', 'Saucepan · about 7 min'], group: 'small-wok', before: ['mushroom', 'prep-spinach'], link: '#cook-spinach' },
-    { id: 'tomato', label: ['番茄意面', 'Tomato Pasta'], note: ['小锅 · 酱汁与意面', 'Saucepan · sauce and pasta'], group: 'small-wok', before: ['spinach', 'pasta', 'prep-tomato'], link: '#cook-tomato' },
-    { id: 'ground', label: ['鸡肉末与蔬菜', 'Ground Chicken and Vegetables'], note: ['大锅 · 豌豆与胡萝卜', 'Wok · peas and carrots'], group: 'large-wok', before: ['prep-meat', 'prep-peas-carrots'], link: '#cook-ground' },
+    { id: 'spinach', label: ['菠菜', 'Spinach'], note: ['大锅 · 约7分钟', 'Wok · about 7 min'], group: 'large-wok', before: ['prep-spinach'], link: '#cook-spinach' },
+    { id: 'tomato', label: ['番茄意面', 'Tomato Pasta'], note: ['小锅 · 酱汁与意面', 'Saucepan · sauce and pasta'], group: 'small-wok', before: ['mushroom', 'pasta', 'prep-tomato'], link: '#cook-tomato' },
+    { id: 'ground', label: ['鸡肉末与蔬菜', 'Ground Chicken and Vegetables'], note: ['大锅 · 豌豆与胡萝卜', 'Wok · peas and carrots'], group: 'large-wok', before: ['spinach', 'prep-meat', 'prep-peas-carrots'], link: '#cook-ground' },
     { id: 'wrap', label: ['抹酱、装馅、卷饼', 'Sauce, Fill and Roll Wrap'], note: ['鸡腿肉、水煮蛋', 'Chicken, boiled eggs'], group: 'wrap', before: ['chicken', 'eggs'], link: '#cook-wrap' },
     { id: 'finish', label: ['分盘、入冰箱、清洗', 'Portion, Refrigerate and Clean'], note: ['所有餐食完成后', 'When every component is ready'], group: 'finish', before: ['rice', 'chicken', 'potato', 'ribs', 'salmon', 'haddock', 'mushroom', 'spinach', 'tomato', 'ground', 'wrap'], link: '#portions' }
   ];
@@ -60,8 +60,8 @@
     { id: 'oven', icon: 'oven', title: ['烤箱', 'Oven'], hint: ['预热后处理三种食材', 'Three foods after preheating'] },
     { id: 'air', icon: 'air', title: ['空气炸锅', 'Air Fryer'], hint: ['备好三文鱼再预热，随后入锅', 'Prepare salmon, preheat, then cook immediately'] },
     { id: 'pots', icon: 'pot', title: ['煮锅一、煮锅二', 'Pots 1 and 2'], hint: ['鸡蛋与意面并行', 'Eggs and pasta in parallel'] },
-    { id: 'small-wok', icon: 'pot', title: ['小锅', 'Saucepan'], hint: ['蘑菇 → 菠菜 → 番茄意面', 'Mushrooms → spinach → tomato pasta'] },
-    { id: 'large-wok', icon: 'wok', title: ['大锅', 'Wok'], hint: ['鸡肉末、豌豆、胡萝卜', 'Ground chicken, peas and carrots'] },
+    { id: 'small-wok', icon: 'pot', title: ['小锅', 'Saucepan'], hint: ['蘑菇 → 番茄意面', 'Mushrooms → tomato pasta'] },
+    { id: 'large-wok', icon: 'wok', title: ['大锅', 'Wok'], hint: ['菠菜 → 鸡肉末、豌豆、胡萝卜', 'Spinach → ground chicken, peas and carrots'] },
     { id: 'wrap', icon: 'wrap', title: ['卷饼', 'Wrap'], hint: ['等待鸡腿肉和鸡蛋', 'Wait for chicken and eggs'] },
     { id: 'finish', icon: 'finish', title: ['收尾', 'Finish'], hint: ['全部完成后分盘', 'Portion after everything is ready'] }
   ];
@@ -205,8 +205,8 @@
     ['air-fryer', 'air', ['air-heat', 'salmon', 'haddock']],
     ['pot-one', 'pots', ['eggs']],
     ['pot-two', 'pots', ['pasta']],
-    ['small-wok', 'small-wok', ['mushroom', 'spinach', 'tomato']],
-    ['large-wok', 'large-wok', ['ground']],
+    ['small-wok', 'small-wok', ['mushroom', 'tomato']],
+    ['large-wok', 'large-wok', ['spinach', 'ground']],
     ['wraps', 'wrap', [
       { id: 'wrap-sauce', label: ['抹酱', 'Spread Sauce'] },
       { id: 'wrap', label: ['装馅、卷饼', 'Fill and Roll'] }
