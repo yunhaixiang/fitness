@@ -33,7 +33,6 @@
     { id: 'prep-spinach', label: ['备菠菜', 'Prepare Spinach'], note: ['备食材、调味料', 'Set out ingredients and seasonings'], group: 'prep', before: ['ready'], link: '#cook-prep-spinach' },
     { id: 'prep-tomato', label: ['备番茄酱', 'Prepare Tomato Sauce'], note: ['量酱、备调味料', 'Measure sauce and seasonings'], group: 'prep', before: ['ready'], link: '#cook-prep-tomato' },
     { id: 'prep-meat', label: ['备鸡肉末', 'Prepare Ground Chicken'], note: ['备肉、调味料', 'Set out meat and seasonings'], group: 'prep', before: ['ready'], link: '#cook-prep-meat' },
-    { id: 'prep-beaten-eggs', label: ['备炒蛋', 'Prepare Eggs for Scrambling'], note: ['打散鸡蛋', 'Beat eggs'], group: 'prep', before: ['ready'], link: '#cook-prep-beaten-eggs' },
     { id: 'prep-peas-carrots', label: ['备豌豆和胡萝卜', 'Prepare Peas and Carrots'], note: ['沥干罐头', 'Drain the can'], group: 'prep', before: ['ready'], link: '#cook-prep-peas-carrots' },
     { id: 'rice', label: ['白米饭', 'White Rice'], note: ['电饭煲 · 约50分钟', 'Rice cooker · about 50 min'], group: 'rice', before: ['prep-rice'], link: '#cook-rice' },
     { id: 'oven-heat', label: ['预热烤箱', 'Preheat Oven'], note: ['400°F · 15分钟', '400°F · 15 min'], group: 'oven', before: ['ready'], link: '#cook-oven-heat' },
@@ -50,7 +49,7 @@
     { id: 'mushroom', label: ['蘑菇', 'Mushrooms'], note: ['小锅 · 约7分钟', 'Saucepan · about 7 min'], group: 'small-wok', before: ['prep-mushroom'], link: '#cook-mushroom' },
     { id: 'spinach', label: ['菠菜', 'Spinach'], note: ['小锅 · 约7分钟', 'Saucepan · about 7 min'], group: 'small-wok', before: ['mushroom', 'prep-spinach'], link: '#cook-spinach' },
     { id: 'tomato', label: ['番茄意面', 'Tomato Pasta'], note: ['小锅 · 酱汁与意面', 'Saucepan · sauce and pasta'], group: 'small-wok', before: ['spinach', 'pasta', 'prep-tomato'], link: '#cook-tomato' },
-    { id: 'ground', label: ['鸡肉末与炒蛋', 'Ground Chicken and Eggs'], note: ['大锅 · 豌豆与胡萝卜', 'Wok · peas and carrots'], group: 'large-wok', before: ['prep-meat', 'prep-beaten-eggs', 'prep-peas-carrots'], link: '#cook-ground' },
+    { id: 'ground', label: ['鸡肉末与蔬菜', 'Ground Chicken and Vegetables'], note: ['大锅 · 豌豆与胡萝卜', 'Wok · peas and carrots'], group: 'large-wok', before: ['prep-meat', 'prep-peas-carrots'], link: '#cook-ground' },
     { id: 'wrap', label: ['抹酱、装馅、卷饼', 'Sauce, Fill and Roll Wrap'], note: ['鸡腿肉、水煮蛋', 'Chicken, boiled eggs'], group: 'wrap', before: ['chicken', 'eggs'], link: '#cook-wrap' },
     { id: 'finish', label: ['分盘、入冰箱、清洗', 'Portion, Refrigerate and Clean'], note: ['所有餐食完成后', 'When every component is ready'], group: 'finish', before: ['rice', 'chicken', 'potato', 'ribs', 'salmon', 'haddock', 'mushroom', 'spinach', 'tomato', 'ground', 'wrap'], link: '#portions' }
   ];
@@ -62,7 +61,7 @@
     { id: 'air', icon: 'air', title: ['空气炸锅', 'Air Fryer'], hint: ['备好三文鱼再预热，随后入锅', 'Prepare salmon, preheat, then cook immediately'] },
     { id: 'pots', icon: 'pot', title: ['煮锅一、煮锅二', 'Pots 1 and 2'], hint: ['鸡蛋与意面并行', 'Eggs and pasta in parallel'] },
     { id: 'small-wok', icon: 'pot', title: ['小锅', 'Saucepan'], hint: ['蘑菇 → 菠菜 → 番茄意面', 'Mushrooms → spinach → tomato pasta'] },
-    { id: 'large-wok', icon: 'wok', title: ['大锅', 'Wok'], hint: ['鸡肉末、蔬菜、炒蛋', 'Ground chicken, vegetables and eggs'] },
+    { id: 'large-wok', icon: 'wok', title: ['大锅', 'Wok'], hint: ['鸡肉末、豌豆、胡萝卜', 'Ground chicken, peas and carrots'] },
     { id: 'wrap', icon: 'wrap', title: ['卷饼', 'Wrap'], hint: ['等待鸡腿肉和鸡蛋', 'Wait for chicken and eggs'] },
     { id: 'finish', icon: 'finish', title: ['收尾', 'Finish'], hint: ['全部完成后分盘', 'Portion after everything is ready'] }
   ];
@@ -200,7 +199,7 @@
 
   const instructionSections = [
     ['cold', 'cold', ['cold-first', 'cold-second']],
-    ['prep', 'prep', ['prep-rice', 'prep-chicken', 'prep-potato', 'prep-ribs', 'prep-salmon', 'prep-eggs', 'prep-pasta', 'prep-mushroom', 'prep-spinach', 'prep-tomato', 'prep-meat', 'prep-beaten-eggs', 'prep-peas-carrots']],
+    ['prep', 'prep', ['prep-rice', 'prep-chicken', 'prep-potato', 'prep-ribs', 'prep-salmon', 'prep-eggs', 'prep-pasta', 'prep-mushroom', 'prep-spinach', 'prep-tomato', 'prep-meat', 'prep-peas-carrots']],
     ['rice', 'rice', ['rice']],
     ['oven', 'oven', ['oven-heat', 'chicken', 'potato', 'ribs']],
     ['air-fryer', 'air', ['air-heat', 'salmon', 'haddock']],

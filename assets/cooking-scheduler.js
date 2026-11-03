@@ -6,7 +6,7 @@
   const beamWidth = 24;
   const pans = new Set(['mushroom', 'spinach', 'tomato', 'ground']);
   const continuous = new Set(['wrap', 'finish']);
-  const activeTail = { tomato: 3, ground: 4 };
+  const activeTail = { tomato: 3 };
   const capacity = { rice: 1, oven: 3, air: 1, 'pot-1': 1, 'pot-2': 1, saucepan: 1, wok: 1, counter: 1 };
   const resource = (task) => {
     if (task.id === 'egg-water' || task.id === 'eggs') return 'pot-1';

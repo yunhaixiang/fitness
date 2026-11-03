@@ -9,11 +9,11 @@
   const t = (zh, english) => en ? english : zh;
   const key = window.fitnessMealPlan?.storageKey('fitness-cooking-guide-v1') || 'fitness-cooking-guide-v1';
   const taskMinutes = {
-    'prep-rice': 3, 'prep-chicken': 4, 'prep-potato': 3, 'prep-ribs': 3, 'prep-salmon': 4, 'prep-eggs': 1, 'prep-pasta': 1, 'prep-mushroom': 2, 'prep-spinach': 1, 'prep-tomato': 1, 'prep-meat': 1, 'prep-beaten-eggs': 2, 'prep-peas-carrots': 1,
+    'prep-rice': 3, 'prep-chicken': 4, 'prep-potato': 3, 'prep-ribs': 3, 'prep-salmon': 4, 'prep-eggs': 1, 'prep-pasta': 1, 'prep-mushroom': 2, 'prep-spinach': 1, 'prep-tomato': 1, 'prep-meat': 1, 'prep-peas-carrots': 1,
     rice: 50, 'oven-heat': 15, chicken: 27, potato: 30, ribs: 18,
     'air-heat': 4, salmon: 8, haddock: 20, eggs: 8,
     pasta: 8, mushroom: 7, spinach: 7,
-    tomato: 6, ground: 15, wrap: 6, finish: 15
+    tomato: 6, ground: 11, wrap: 6, finish: 15
   };
   const tasks = plan.nodes.filter((node) => node.manual || Object.hasOwn(taskMinutes, node.id));
   const startEarly = ['egg-water', 'pasta-water', 'oven-heat', 'prep-rice', 'rice'];
@@ -49,7 +49,7 @@
             'prep-oven': ['prep-chicken', 'prep-potato', 'prep-ribs'],
             'prep-pots': ['prep-eggs', 'prep-pasta'],
             'prep-veg': ['prep-mushroom', 'prep-spinach', 'prep-tomato'],
-            'prep-ground': ['prep-meat', 'prep-beaten-eggs', 'prep-peas-carrots']
+            'prep-ground': ['prep-meat', 'prep-peas-carrots']
           };
           for (const [old, children] of Object.entries(legacyGroups)) {
             if (record.done?.includes(old)) previous.done.push(...children);

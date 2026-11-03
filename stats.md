@@ -11,19 +11,19 @@ visual: true
 
 <figure class="nutrition-overview" aria-label="每日能量与每周赤字">
   <div class="nutrition-overview-main">
-    <div class="nutrition-ring" style="--intake-share:74.8%" aria-label="日均摄入占消耗75%，赤字25%">
+    <div class="nutrition-ring" style="--intake-share:74.5%" aria-label="日均摄入占消耗75%，赤字25%">
       <div class="nutrition-ring-center">
         <span>日均赤字</span>
-        <strong>585 <small>kcal／天</small></strong>
+        <strong>591 <small>kcal／天</small></strong>
       </div>
     </div>
     <div class="nutrition-overview-key">
       <p class="nutrition-overview-eyebrow">能量概览 · 不含放纵餐</p>
-      <div class="nutrition-key-row nutrition-key-intake"><span>日均摄入</span><strong>1,734 <small>kcal／天</small></strong></div>
+      <div class="nutrition-key-row nutrition-key-intake"><span>日均摄入</span><strong>1,729 <small>kcal／天</small></strong></div>
       <div class="nutrition-key-row nutrition-key-burn"><span>日均消耗</span><strong>2,319 <small>kcal／天</small></strong></div>
-      <div class="nutrition-key-row nutrition-key-deficit"><span>日均赤字</span><strong>585 <small>kcal／天</small></strong></div>
+      <div class="nutrition-key-row nutrition-key-deficit"><span>日均赤字</span><strong>591 <small>kcal／天</small></strong></div>
       <div class="nutrition-key-row"><span>每周赤字</span><strong>{{ site.data.plan_metrics.weekly_deficit_display }} <small>kcal</small></strong></div>
-      <div class="nutrition-key-row"><span>每周赤字等价脂肪</span><strong>0.53 <small>kg／周</small></strong></div>
+      <div class="nutrition-key-row"><span>每周赤字等价脂肪</span><strong>0.54 <small>kg／周</small></strong></div>
     </div>
   </div>
 </figure>
@@ -92,7 +92,7 @@ visual: true
 <tbody>
 <tr>
 <td>热量</td>
-<td style="text-align: right;">1,734 kcal</td>
+<td style="text-align: right;">1,729 kcal</td>
 <td>1,800–2,000 kcal</td>
 </tr>
 <tr>
@@ -102,12 +102,12 @@ visual: true
 </tr>
 <tr>
 <td>总脂肪</td>
-<td style="text-align: right;">62.3 g</td>
+<td style="text-align: right;">61.6 g</td>
 <td>45–65 g</td>
 </tr>
 <tr>
 <td>饱和脂肪</td>
-<td style="text-align: right;">14.5 g</td>
+<td style="text-align: right;">14.4 g</td>
 <td>≤11.5 g</td>
 </tr>
 <tr>
@@ -234,3 +234,12 @@ Raw crimini reference per100 g:22 kcal,P2.5,F0.1,sat0.014,C4.3,fibre0.6,sugar1.7
 Na6,Ca18,Fe0.4,K448 mg. Generic spice/oil estimates included.
 Weekly ingredient quantities, daily totals and energy deficit unchanged.
 Displayed rounded meal values may differ slightly when summed. -->
+
+<!-- 2026-11-02: All 12 weekly eggs are boiled; six per batch, two each in
+meals1/2/5. Rice meals retain the same two eggs and protein contribution.
+Remove 1/2 tsp olive oil per batch (the former egg-stage oil), 1 tsp/week:
+4.5 g fat, 39.78 kcal, 0.621 g saturated fat weekly. Per rice meal:
+-9.945 kcal, -1.125 g fat, -0.15525 g saturated fat.
+Previous unrounded daily intake1734.3356 ->1728.6528 kcal;
+weekly deficit4095.65097 ->4135.43097 kcal. Remaining wok oil1/2 tsp/batch.
+-->

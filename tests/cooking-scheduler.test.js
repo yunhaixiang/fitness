@@ -15,7 +15,7 @@ test('two pans can heat together while their active work is staggered', () => {
   assert.ok(result);
   assert.ok(result.starts.ground < result.ends.mushroom);
   assert.equal(result.starts.finish, Math.max(result.ends.mushroom, result.ends.ground));
-  assert.equal(result.minutes, 12);
+  assert.equal(result.minutes, 9);
 });
 
 test('replanning reserves the next hands-on stir of an active pan', () => {
@@ -32,7 +32,7 @@ test('replanning reserves the next hands-on stir of an active pan', () => {
   assert.ok(result.starts.finish >= result.ends.rice);
 });
 
-test('the final egg stage reserves continuous attention', () => {
+test('ground chicken without an egg stage leaves gaps between stirs', () => {
   const now = 1000000;
   const tasks = [
     { id: 'ground', group: 'large-wok', before: [] },
@@ -41,7 +41,7 @@ test('the final egg stage reserves continuous attention', () => {
   const result = schedule({ tasks, minutes: { ground: 15, rice: 50 }, done: [],
     running: { ground: { startedAt: now - 720000, minutes: 15 } },
     ready: true, now });
-  assert.ok(result.starts.rice >= 3);
+  assert.ok(result.starts.rice < 3);
 });
 
 test('completed prerequisites release the next task on replanning', () => {
@@ -154,7 +154,8 @@ test('saved grouped preparation expands without clearing cooking progress', () =
   assert.equal(result.version, 3);
   assert.ok(result.batches.first.done.includes('prep-chicken'));
   assert.ok(result.batches.first.done.includes('prep-potato'));
-  assert.ok(result.batches.first.done.includes('prep-beaten-eggs'));
+  assert.ok(!result.batches.first.done.includes('prep-beaten-eggs'));
+  assert.ok(result.batches.first.done.includes('prep-peas-carrots'));
   assert.ok(!result.batches.first.done.includes('prep-oven'));
   assert.equal(result.batches.first.running.chicken.startedAt, 1000000);
 });
