@@ -266,6 +266,7 @@ html[data-theme=light] .theme-icon-moon{display:block}
 .visual-set-list{display:flex;flex-wrap:wrap;gap:7px}
 .visual-set-list label{display:flex;align-items:center;gap:5px;background:var(--chip);border:1px solid var(--line);border-radius:6px;padding:4px 8px;font-size:12px;cursor:pointer}
 .visual-set-list label:has(input:checked){background:var(--accent-soft);color:var(--accent);border-color:var(--accent-border)}
+.visual-exercise-card:has(.visual-set-list input[type=checkbox]:checked):not(:has(.visual-set-list input[type=checkbox]:not(:checked))){opacity:.5}
 .visual-set-list input{accent-color:var(--accent)}
 .visual-week-strip{display:grid;grid-template-columns:repeat(7,minmax(100px,1fr));gap:8px;margin:13px 0 25px;overflow-x:auto}
 .visual-day-card{padding:12px;display:flex;flex-direction:column;gap:7px;border-top:3px solid var(--accent)}
