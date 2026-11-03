@@ -78,7 +78,7 @@
     "排骨：取已解冻的半盒排骨，淋包装内酱汁，用锡纸包好。": "Ribs: pour the included sauce over half the thawed box of ribs and wrap in foil.",
     "三文鱼：取1盒共2块，擦干，按空气炸锅调味表调味。": "Salmon: pat dry two portions from one box and season as listed for the air fryer.",
     "水煮蛋：取鸡蛋2个，备在煮锅一旁。": "Eggs for boiling: set two eggs beside Pot 1.",
-    "意面：称干意面90 g，备在煮锅二旁。": "Pasta: weigh 90 g dry pasta and set it beside Pot 2.",
+    "意面：称干意面100 g，备在煮锅二旁。": "Pasta: weigh 100 g dry pasta and set it beside Pot 2.",
     "蘑菇：备好1盒227 g及调味料。": "Mushrooms: set out one 227 g pack and its seasonings.",
     "菠菜：备好1袋284 g及调味料。": "Spinach: set out one 284 g bag and its seasonings.",
     "番茄酱：备好番茄意面酱半瓶及调味料。": "Tomato sauce: set out half a bottle of tomato pasta sauce and its seasonings.",

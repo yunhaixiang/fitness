@@ -11,19 +11,19 @@ visual: true
 
 <figure class="nutrition-overview" aria-label="每日能量与每周赤字">
   <div class="nutrition-overview-main">
-    <div class="nutrition-ring" style="--intake-share:74.3%" aria-label="日均摄入占消耗74%，赤字26%">
+    <div class="nutrition-ring" style="--intake-share:74.8%" aria-label="日均摄入占消耗75%，赤字25%">
       <div class="nutrition-ring-center">
         <span>日均赤字</span>
-        <strong>595 <small>kcal／天</small></strong>
+        <strong>585 <small>kcal／天</small></strong>
       </div>
     </div>
     <div class="nutrition-overview-key">
       <p class="nutrition-overview-eyebrow">能量概览 · 不含放纵餐</p>
-      <div class="nutrition-key-row nutrition-key-intake"><span>日均摄入</span><strong>1,724 <small>kcal／天</small></strong></div>
+      <div class="nutrition-key-row nutrition-key-intake"><span>日均摄入</span><strong>1,734 <small>kcal／天</small></strong></div>
       <div class="nutrition-key-row nutrition-key-burn"><span>日均消耗</span><strong>2,319 <small>kcal／天</small></strong></div>
-      <div class="nutrition-key-row nutrition-key-deficit"><span>日均赤字</span><strong>595 <small>kcal／天</small></strong></div>
+      <div class="nutrition-key-row nutrition-key-deficit"><span>日均赤字</span><strong>585 <small>kcal／天</small></strong></div>
       <div class="nutrition-key-row"><span>每周赤字</span><strong>{{ site.data.plan_metrics.weekly_deficit_display }} <small>kcal</small></strong></div>
-      <div class="nutrition-key-row"><span>每周赤字等价脂肪</span><strong>0.54 <small>kg／周</small></strong></div>
+      <div class="nutrition-key-row"><span>每周赤字等价脂肪</span><strong>0.53 <small>kg／周</small></strong></div>
     </div>
   </div>
 </figure>
@@ -92,17 +92,17 @@ visual: true
 <tbody>
 <tr>
 <td>热量</td>
-<td style="text-align: right;">1,724 kcal</td>
+<td style="text-align: right;">1,734 kcal</td>
 <td>1,800–2,000 kcal</td>
 </tr>
 <tr>
 <td>蛋白质</td>
-<td style="text-align: right;">133.5 g</td>
+<td style="text-align: right;">133.8 g</td>
 <td>130–165 g</td>
 </tr>
 <tr>
 <td>总脂肪</td>
-<td style="text-align: right;">61.2 g</td>
+<td style="text-align: right;">62.3 g</td>
 <td>45–65 g</td>
 </tr>
 <tr>
@@ -112,17 +112,17 @@ visual: true
 </tr>
 <tr>
 <td>饱和脂肪占总热量</td>
-<td style="text-align: right;">7.6%</td>
+<td style="text-align: right;">7.5%</td>
 <td>≤6%</td>
 </tr>
 <tr>
 <td>碳水化合物</td>
-<td style="text-align: right;">175.0 g</td>
+<td style="text-align: right;">177.1 g</td>
 <td>180–240 g</td>
 </tr>
 <tr>
 <td>膳食纤维</td>
-<td style="text-align: right;">36.6 g</td>
+<td style="text-align: right;">36.7 g</td>
 <td>30–38 g</td>
 </tr>
 <tr>
@@ -147,12 +147,12 @@ visual: true
 </tr>
 <tr>
 <td>钙</td>
-<td style="text-align: right;">1,119 mg</td>
+<td style="text-align: right;">1,120 mg</td>
 <td>1,000 mg</td>
 </tr>
 <tr>
 <td>铁</td>
-<td style="text-align: right;">17.4 mg</td>
+<td style="text-align: right;">17.5 mg</td>
 <td>8 mg</td>
 </tr>
 <tr>
@@ -194,7 +194,7 @@ Existing nutrient basis retained by scaling the isolated thigh-only pasta delta
 from commit 36acfeb (830 → 635 g/week); rounded historical values are estimates.
 Weekly added energy: 350.97 kcal. Other food quantities and expenditure unchanged. -->
 
-<!-- Spinach: 454 → 568 g/week; four portions of 142 g. Raw-spinach reference per 100 g: 23 kcal, protein 2.86 g, fat 0.39 g, saturated fat 0.063 g, carbs 3.63 g, fibre 1.2 g, sugar 0.42 g, sodium 79 mg, calcium 99 mg, iron 2.71 mg, potassium 558 mg. Weekly energy increase 26.22 kcal. -->
+<!-- Spinach: 454 → 568 g/week; four portions of 142 g. Raw-spinach reference per 100 g: 23 kcal, protein 2.86 g, fat 0.39 g, saturated fat 0.063 g, carbs 3.63 g, fibre 2.2 g, sugar 0.42 g, sodium 79 mg, calcium 99 mg, iron 2.71 mg, potassium 558 mg. Weekly energy increase 26.22 kcal. -->
 
 <!-- Fruit quantities: tray 1,300 → 1,000 g/week; green kiwis 12 → 8/week. Existing fruit-only values retained from 6dc9773. Fruit tray split 1/3 breakfast, 2/3 snack over three days; kiwi one at breakfast and one at snack over four days. Weekly energy decrease 283.58 kcal. -->
 
@@ -214,3 +214,13 @@ EPA+DHA1.206 g/100 g. ALA addition roughly0.54 g/fillet inferred from the
 0.7 g total omega-3 label minus estimated marine omega-3; not a direct ALA assay.
 Daily values apply substitution deltas to existing rounded plan totals.
 -->
+
+<!-- 2026-11-02: Dry Primo Spaghetti 45 -> 50 g per pasta meal, four meals/week;
+100 g per half-week batch, 200 g/week. Official label per 85 g: 300 kcal,
+protein10/fat1/carbohydrate63/fibre3/sugar1 g, saturated fat0/sodium0/cholesterol0.
+https://www.primofoods.com/primo/products.php?catid=23&id=40
+Calcium2% and iron20% use legacy Canadian DVs 1100 mg and14 mg: 22/2.8 mg.
+Weekly increase70.588 kcal; use previous unrounded energy intake1724.2515 kcal/day,
+weekly deficit4166.2392 kcal. Previous total fat62.2343 g/day was inadvertently
+rendered61.2 by an omega-3 text replacement; corrected before adding pasta's0.0336 g/day.
+Unlabelled micronutrients retain previous estimates. -->
