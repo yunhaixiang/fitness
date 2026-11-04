@@ -21,7 +21,10 @@ test('reference plan and alternate budgets do not double count exercise', () => 
  const different = energy(baseline, {netKcal: 300}, catalog.sessionsPerWeek);
  assert.equal(different.weeklyBurn - current.weeklyBurn, 400);
  assert.equal(different.weeklyDeficit - current.weeklyDeficit, 400);
- assert.deepEqual(energy(baseline, catalog.plans[0], 4), current);
+ const old = energy(baseline, catalog.plans[0], 4);
+ assert.equal(old.weeklyCardio, 720);
+ assert.equal(current.weeklyDeficit-old.weeklyDeficit, 80);
+ assert.equal(Math.round(old.dailyDeficit), 579);
 });
 test('all plans offer four alternatives and the new video starts at the beginning', () => {
  for (const plan of catalog.plans) {
@@ -55,5 +58,30 @@ test('steady-state alternatives match the net target and card durations', () => 
   assert.ok(Math.abs(kcal-catalog.plans[1].netKcal)<catalog.plans[1].netKcal*0.05);
   const minutes=audit.segments.reduce((n,s)=>n+s.minutes,0);
   assert.equal(catalog.plans[1].options.find(o=>o.id===id).duration.en, `${minutes} min`);
+ }
+});
+
+test('original video audit counts 20 work bouts and one midpoint break', () => {
+ const h = catalog.estimation.originalHiit;
+ const active = h.segments.filter(s=>s.exercises);
+ assert.deepEqual(active.flatMap(s=>s.exercises).sort((a,b)=>a-b),Array.from({length:20},(_,i)=>i+1));
+ assert.equal(h.exercises.length,20);
+ assert.equal(active.reduce((sum,s)=>sum+s.seconds,0),20*50);
+ for(const s of active) assert.equal(s.seconds,s.exercises.length*50);
+ assert.equal(h.segments.find(s=>s.id==='interval-recovery').seconds,18*10+60);
+ const seconds=h.segments.reduce((sum,s)=>sum+s.seconds,0);
+ assert.equal(seconds,1590);
+ const computed=net(h.segments.map(s=>({minutes:s.seconds/60,met:s.met})));
+ assert.ok(Math.abs(computed-h.centralNetKcal)<1e-6);
+ assert.equal(Math.round(computed/10)*10,catalog.plans[0].netKcal);
+ assert.ok(Math.abs(h.centralGrossKcal-computed-seconds/60*3.5*catalog.weightKg/200)<1e-6);
+});
+test('original-plan alternatives follow the revised 180 kcal budget', () => {
+ for(const [id,audit] of Object.entries(catalog.estimation.originalAlternatives)) {
+  const kcal=net(audit.segments);
+  assert.ok(Math.abs(kcal-audit.netKcal)<1e-6);
+  assert.ok(Math.abs(kcal-catalog.plans[0].netKcal)<catalog.plans[0].netKcal*0.05);
+  const minutes=audit.segments.reduce((n,s)=>n+s.minutes,0);
+  assert.equal(catalog.plans[0].options.find(o=>o.id===id).duration.en,`${minutes} min`);
  }
 });
