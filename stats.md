@@ -11,19 +11,19 @@ visual: true
 
 <figure class="nutrition-overview" aria-label="每日能量与每周赤字">
   <div class="nutrition-overview-main">
-    <div class="nutrition-ring" style="--intake-share:72.7%" aria-label="日均摄入占消耗73%，赤字27%">
+    <div class="nutrition-ring" style="--intake-share:74.5%" aria-label="日均摄入占消耗75%，赤字25%">
       <div class="nutrition-ring-center">
         <span>日均赤字</span>
-        <strong data-energy="dailyDeficit">648 <small>kcal／天</small></strong>
+        <strong data-energy="dailyDeficit">591 <small>kcal／天</small></strong>
       </div>
     </div>
     <div class="nutrition-overview-key">
       <p class="nutrition-overview-eyebrow">能量概览 · 不含放纵餐</p>
       <div class="nutrition-key-row nutrition-key-intake"><span>日均摄入</span><strong>1,729 <small>kcal／天</small></strong></div>
-      <div class="nutrition-key-row nutrition-key-burn"><span>日均消耗</span><strong data-energy="dailyBurn">2,377 <small>kcal／天</small></strong></div>
-      <div class="nutrition-key-row nutrition-key-deficit"><span>日均赤字</span><strong data-energy="dailyDeficit">648 <small>kcal／天</small></strong></div>
+      <div class="nutrition-key-row nutrition-key-burn"><span>日均消耗</span><strong data-energy="dailyBurn">2,319 <small>kcal／天</small></strong></div>
+      <div class="nutrition-key-row nutrition-key-deficit"><span>日均赤字</span><strong data-energy="dailyDeficit">591 <small>kcal／天</small></strong></div>
       <div class="nutrition-key-row"><span>每周赤字</span><strong data-energy="weeklyDeficit">{{ site.data.plan_metrics.weekly_deficit_display }} <small>kcal</small></strong></div>
-      <div class="nutrition-key-row"><span>每周赤字等价脂肪</span><strong data-energy="fatEquivalent">0.59 <small>kg／周</small></strong></div>
+      <div class="nutrition-key-row"><span>每周赤字等价脂肪</span><strong data-energy="fatEquivalent">0.54 <small>kg／周</small></strong></div>
     </div>
   </div>
 </figure>
@@ -59,8 +59,8 @@ visual: true
 </tr>
 <tr data-energy-row="cardio">
 <td>有氧：HIIT、游泳、跑步机或健身馆自行车，4次／周（净增加）</td>
-<td style="text-align: right;">1,200.00</td>
-<td style="text-align: right;">171.43</td>
+<td style="text-align: right;">800.00</td>
+<td style="text-align: right;">114.29</td>
 </tr>
 <tr>
 <td>步行（估计每周12 km，净增加）</td>
@@ -69,8 +69,8 @@ visual: true
 </tr>
 <tr data-energy-row="total">
 <td>合计</td>
-<td style="text-align: right;">16,635.96</td>
-<td style="text-align: right;">2,376.57</td>
+<td style="text-align: right;">16,235.96</td>
+<td style="text-align: right;">2,319.42</td>
 </tr>
 </tbody>
 </table>

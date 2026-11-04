@@ -123,7 +123,7 @@
         "zh": "有氧计划 2",
         "en": "Cardio Plan 2"
       },
-      "netKcal": 300,
+      "netKcal": 200,
       "options": [
         {
           "id": "hiit",
@@ -136,8 +136,8 @@
             "en": "30 min workout"
           },
           "description": {
-            "zh": "从头完整跟练；视频总长 34:42，包含开场和收尾。",
-            "en": "Follow the workout from the beginning. The full video is 34:42 including the introduction and outro."
+            "zh": "完整跟练，含热身与放松；主训练 40 × 25 秒，组间休息另计。视频总长 34:42。",
+            "en": "Follow the full warm-up, workout and cool-down: 40 × 25 seconds of work, plus interval rests. Full video: 34:42."
           },
           "steps": [],
           "video": "tgm_QjUiwlk"
@@ -149,12 +149,12 @@
             "en": "Swimming"
           },
           "duration": {
-            "zh": "50 分钟",
-            "en": "50 min"
+            "zh": "36 分钟",
+            "en": "36 min"
           },
           "description": {
-            "zh": "自由泳去、蛙泳回；25 m 泳池，30 个来回，共 1,500 m。",
-            "en": "Freestyle out, breaststroke back; 30 round trips in a 25 m pool, 1,500 m total."
+            "zh": "自由泳去、蛙泳回；25 m 泳池，22 个来回，共 1,100 m；实际游动约 34 分钟。",
+            "en": "Freestyle out, breaststroke back; 22 round trips in a 25 m pool, 1,100 m total. Aim for about 34 min of swimming."
           },
           "steps": [
             {
@@ -162,12 +162,12 @@
               "en": "Warm-up: 3 easy round trips."
             },
             {
-              "zh": "主训练：3 组 × 8 个来回，组间休息 1 分钟。",
-              "en": "Main set: 3 × 8 round trips, with 1 min of rest between sets."
+              "zh": "主训练：2 组 × 8 个来回，组间休息 2 分钟。",
+              "en": "Main set: 2 × 8 round trips, with 2 min of rest between sets."
             },
             {
-              "zh": "放松：3 个来回；实际游动时间合计 48 分钟。",
-              "en": "Cool-down: 3 easy round trips; aim for 48 min of swimming in total."
+              "zh": "放松：3 个来回，轻松游。",
+              "en": "Cool-down: 3 easy round trips."
             }
           ]
         },
@@ -178,8 +178,8 @@
             "en": "Treadmill"
           },
           "duration": {
-            "zh": "37 分钟",
-            "en": "37 min"
+            "zh": "27 分钟",
+            "en": "27 min"
           },
           "description": {
             "zh": "坡度 0%。",
@@ -191,8 +191,8 @@
               "en": "Warm-up: walk for 5 min at 4–5 km/h."
             },
             {
-              "zh": "主训练：27 分钟，8 km/h 慢跑。",
-              "en": "Main set: jog for 27 min at 8 km/h."
+              "zh": "主训练：17 分钟，8 km/h 慢跑。",
+              "en": "Main set: jog for 17 min at 8 km/h."
             },
             {
               "zh": "放松：5 分钟，3–4 km/h 走路。",
@@ -207,8 +207,8 @@
             "en": "Stationary Bike"
           },
           "duration": {
-            "zh": "48 分钟",
-            "en": "48 min"
+            "zh": "34 分钟",
+            "en": "34 min"
           },
           "description": {
             "zh": "固定自行车；以功率为准。",
@@ -220,8 +220,8 @@
               "en": "Warm-up: 5 min at 50 W."
             },
             {
-              "zh": "主训练：38 分钟，90–100 W。",
-              "en": "Main set: 38 min at 90–100 W."
+              "zh": "主训练：24 分钟，90–100 W。",
+              "en": "Main set: 24 min at 90–100 W."
             },
             {
               "zh": "放松：5 分钟，50 W。",
@@ -233,7 +233,273 @@
     }
   ],
   "estimation": {
-    "note": "Planning estimates, not measured individual calorie expenditure. Net kcal = (MET - 1) × 3.5 × 77.4 / 200 × minutes. New HIIT assumes session-average 8.4 MET over the named 30-minute workout including interval rests; no extra credit for the video intro/outro. Swimming uses a recreational freestyle/breaststroke blend of 5.55 MET, 48 min moving and 2 min rest at 1.5 MET. Treadmill: 27 min at 8.5 MET, 5 min at 3.5 MET and 5 min at 2.8 MET. Bike: 38 min at 6 MET plus 10 min at 4 MET. Rounded planning target 300 kcal for all four. Original plan retains its previous 200 kcal planning allowance.",
+    "reviewedOn": "2026-11-03",
+    "note": "Net kcal = sum((MET - 1) × 3.5 × 77.4 / 200 × minutes). Segment timing was reviewed against public video storyboard frames sampled every 10 seconds and visible countdowns; phase boundaries are approximate. The video is 34:42, but modelled exercise plus recovery is about 32:15. Intro/outro receive no exercise credit. Twenty pairs contain 25 s work + 10 s pause + 25 s variation, with nineteen 20 s between-pair rests: 1,000 s working and 580 s recovery. Warm-up and cool-down are about 150 s each, with another 55 s of transitions. This corrects the former unsupported 8.4 MET average over 30 minutes.",
+    "methodLimits": "Compendium activities provide anchors, not measurements of these exact video moves. Category MET values and recovery MET are modelling assumptions. Central effort represents mainly the higher-impact version with occasional modifications; no measured modification fraction is available. Short-interval oxygen uptake does not instantly track movement, so 3 MET during recovery (scenario 2–4) is an explicit uncertain allowance, not a published measurement of this video. No separate post-workout afterburn is added. Greater timing detail does not establish greater individual accuracy. The 150–250 net kcal range is a rounded scenario range, not a confidence interval or guaranteed bounds. Original plan retains its previous 200 kcal allowance; that video was not re-audited.",
+    "hiit": {
+      "videoSeconds": 2082,
+      "workBouts": 40,
+      "workSecondsPerBout": 25,
+      "segments": [
+        {
+          "id": "jumping-running",
+          "seconds": 500,
+          "met": 9.5,
+          "metLow": 8,
+          "metHigh": 11,
+          "pairs": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            9,
+            10,
+            11,
+            13,
+            14
+          ]
+        },
+        {
+          "id": "standing-strength-boxing",
+          "seconds": 200,
+          "met": 6.5,
+          "metLow": 5,
+          "metHigh": 8,
+          "pairs": [
+            6,
+            7,
+            8,
+            12
+          ]
+        },
+        {
+          "id": "dynamic-floor",
+          "seconds": 150,
+          "met": 7.5,
+          "metLow": 6,
+          "metHigh": 10,
+          "pairs": [
+            15,
+            17,
+            20
+          ]
+        },
+        {
+          "id": "supine-core",
+          "seconds": 150,
+          "met": 4.5,
+          "metLow": 3.8,
+          "metHigh": 6,
+          "pairs": [
+            16,
+            18,
+            19
+          ]
+        },
+        {
+          "id": "warm-up",
+          "seconds": 150,
+          "met": 3.5,
+          "metLow": 3,
+          "metHigh": 4
+        },
+        {
+          "id": "interval-recovery",
+          "seconds": 580,
+          "met": 3,
+          "metLow": 2,
+          "metHigh": 4
+        },
+        {
+          "id": "transitions",
+          "seconds": 55,
+          "met": 2,
+          "metLow": 1.5,
+          "metHigh": 2.5
+        },
+        {
+          "id": "cool-down",
+          "seconds": 150,
+          "met": 2.3,
+          "metLow": 2,
+          "metHigh": 2.8
+        }
+      ],
+      "exercisePairs": [
+        {
+          "pair": 1,
+          "description": "Side jacks / jumping jacks",
+          "workSeconds": 50
+        },
+        {
+          "pair": 2,
+          "description": "High knees / variation",
+          "workSeconds": 50
+        },
+        {
+          "pair": 3,
+          "description": "Lateral high knees / lateral floor-touch variation",
+          "workSeconds": 50
+        },
+        {
+          "pair": 4,
+          "description": "Scissor jumps / jumping-lunge variation",
+          "workSeconds": 50
+        },
+        {
+          "pair": 5,
+          "description": "Plyo drop squats / jump variation",
+          "workSeconds": 50
+        },
+        {
+          "pair": 6,
+          "description": "Jab + hook / variation",
+          "workSeconds": 50
+        },
+        {
+          "pair": 7,
+          "description": "Split squat runner / opposite side",
+          "workSeconds": 50
+        },
+        {
+          "pair": 8,
+          "description": "Power slams / variation",
+          "workSeconds": 50
+        },
+        {
+          "pair": 9,
+          "description": "Euro step / variation",
+          "workSeconds": 50
+        },
+        {
+          "pair": 10,
+          "description": "Single-leg jump rope / opposite side",
+          "workSeconds": 50
+        },
+        {
+          "pair": 11,
+          "description": "Heel kicks / power skips",
+          "workSeconds": 50
+        },
+        {
+          "pair": 12,
+          "description": "Wood chop / opposite side",
+          "workSeconds": 50
+        },
+        {
+          "pair": 13,
+          "description": "Carioca / quick feet + side steps",
+          "workSeconds": 50
+        },
+        {
+          "pair": 14,
+          "description": "Plyo side lunge / opposite side",
+          "workSeconds": 50
+        },
+        {
+          "pair": 15,
+          "description": "Blast-off push-ups / variation",
+          "workSeconds": 50
+        },
+        {
+          "pair": 16,
+          "description": "V-sit toe touches / lying toe touches",
+          "workSeconds": 50
+        },
+        {
+          "pair": 17,
+          "description": "Single-leg climber / opposite side",
+          "workSeconds": 50
+        },
+        {
+          "pair": 18,
+          "description": "Forward bicycle / reverse variation",
+          "workSeconds": 50
+        },
+        {
+          "pair": 19,
+          "description": "Flat sit-ups/crunches / leg-raise variation",
+          "workSeconds": 50
+        },
+        {
+          "pair": 20,
+          "description": "Plank walks / burpee plank walk",
+          "workSeconds": 50
+        }
+      ],
+      "centralNetKcal": 194.935125,
+      "centralGrossKcal": 238.61775,
+      "scenarioNetKcal": [
+        150,
+        250
+      ],
+      "planningNetKcal": 200
+    },
+    "anchors": {
+      "jumping-running": "Conditioning 02006 (8 MET vigorous high-impact aerobics), 02068 (11 MET skipping), 02214 (11 MET vigorous HIIT): interpolate 9.5 for the mixed movement category.",
+      "standing-strength-boxing": "Conditioning 02057 (6.5 MET high-intensity bodyweight exercise); includes unweighted slams, lunges, chops and boxing.",
+      "dynamic-floor": "Conditioning 02020 (7.5 MET vigorous calisthenics).",
+      "supine-core": "Conditioning 02022 (3.8 MET moderate calisthenics), 02057 (6.5 MET high-intensity bodyweight exercise); interpolate 4.5.",
+      "warm-up": "Conditioning 02030 (3.5 MET light/moderate calisthenics).",
+      "cool-down": "Conditioning 02101 (2.3 MET mild stretching)."
+    },
+    "alternatives": {
+      "swim": {
+        "segments": [
+          {
+            "minutes": 9,
+            "met": 4.8
+          },
+          {
+            "minutes": 25,
+            "met": 5.55
+          },
+          {
+            "minutes": 2,
+            "met": 1.5
+          }
+        ],
+        "netKcal": 201.752775,
+        "note": "Easy warm-up/cool-down 9 min at assumed 4.8 MET, main swimming 25 min at the average of recreational freestyle 5.8 and breaststroke 5.3 MET, 2 min resting at assumed 1.5 MET. Distance is an approximate pacing guide; 34 min moving is the model basis, not a calorie guarantee for 22 laps."
+      },
+      "treadmill": {
+        "segments": [
+          {
+            "minutes": 5,
+            "met": 3.5
+          },
+          {
+            "minutes": 17,
+            "met": 8.5
+          },
+          {
+            "minutes": 5,
+            "met": 2.8
+          }
+        ],
+        "netKcal": 201.8205,
+        "note": "Running 12030, 5.0–5.2 mph, 8.5 MET. Warm-up and cool-down walking use 3.5 and 2.8 MET planning values."
+      },
+      "bike": {
+        "segments": [
+          {
+            "minutes": 5,
+            "met": 4
+          },
+          {
+            "minutes": 24,
+            "met": 6
+          },
+          {
+            "minutes": 5,
+            "met": 4
+          }
+        ],
+        "netKcal": 203.175,
+        "note": "Stationary cycling 01214 (50 W, 4 MET) and 01220 (90–100 W, 6 MET)."
+      }
+    },
     "sources": [
       "https://www.youtube.com/watch?v=tgm_QjUiwlk",
       "https://pacompendium.com/conditioning-exercise/",

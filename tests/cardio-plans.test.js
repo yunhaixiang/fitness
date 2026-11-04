@@ -2,24 +2,26 @@ const test = require('node:test');
 const assert = require('node:assert/strict');
 const { resolve, energy } = require('../assets/cardio-plans.js');
 const catalog = require('../_data/cardio_plans.json');
-const baseline = { reference_cardio_weekly: 1200, weekly_burn: 16635.96, weekly_deficit_precise: 4535.43097, intake_daily: 1728.65 };
+const fs = require('node:fs');
+const path = require('node:path');
+const baseline = Object.fromEntries(fs.readFileSync(path.join(__dirname, '../_data/plan_metrics.yml'), 'utf8').split('\n').filter(line => /^[a-z_]+: [\d.]+$/.test(line)).map(line => { const [k,v] = line.split(': '); return [k, Number(v)]; }));
 test('new plan is default; saved and explicit choices remain independent of meal-plan IDs', () => {
  assert.equal(resolve(catalog).id, 'cardio-2');
  assert.equal(resolve(catalog, 'cardio-1').id, 'cardio-1');
  assert.equal(resolve(catalog, 'cardio-2', 'cardio-1').id, 'cardio-1');
  assert.equal(resolve(catalog, 'plan-1', 'removed').id, 'cardio-2');
 });
-test('switching plans changes only exercise energy, without double counting', () => {
- const original = energy(baseline, catalog.plans[0], catalog.sessionsPerWeek);
- const next = energy(baseline, catalog.plans[1], catalog.sessionsPerWeek);
- assert.equal(original.weeklyCardio, 800);
- assert.equal(next.weeklyCardio, 1200);
- assert.equal(next.weeklyBurn - original.weeklyBurn, 400);
- assert.equal(next.weeklyDeficit - original.weeklyDeficit, 400);
- assert.equal(Math.round(original.dailyDeficit), 591);
- assert.equal(Math.round(next.dailyDeficit), 648);
- assert.equal(next.fatEquivalent.toFixed(2), '0.59');
- assert.deepEqual(energy(baseline, catalog.plans[0], 4), original);
+test('reference plan and alternate budgets do not double count exercise', () => {
+ const current = energy(baseline, catalog.plans[1], catalog.sessionsPerWeek);
+ assert.equal(current.weeklyCardio, 800);
+ assert.equal(current.weeklyBurn, baseline.weekly_burn);
+ assert.equal(current.weeklyDeficit, baseline.weekly_deficit_precise);
+ assert.equal(Math.round(current.dailyDeficit), 591);
+ assert.equal(current.fatEquivalent.toFixed(2), '0.54');
+ const different = energy(baseline, {netKcal: 300}, catalog.sessionsPerWeek);
+ assert.equal(different.weeklyBurn - current.weeklyBurn, 400);
+ assert.equal(different.weeklyDeficit - current.weeklyDeficit, 400);
+ assert.deepEqual(energy(baseline, catalog.plans[0], 4), current);
 });
 test('all plans offer four alternatives and the new video starts at the beginning', () => {
  for (const plan of catalog.plans) {
@@ -31,9 +33,27 @@ test('all plans offer four alternatives and the new video starts at the beginnin
  }
  assert.equal(catalog.plans[1].options[0].video, 'tgm_QjUiwlk');
 });
-test('new steady-state alternatives are within 5% of the common net calorie target', () => {
- const net = parts => parts.reduce((total, [min, met]) => total + (met-1)*3.5*catalog.weightKg/200*min, 0);
- for (const parts of [[[48,5.55],[2,1.5]], [[27,8.5],[5,3.5],[5,2.8]], [[38,6],[10,4]]]) {
-  assert.ok(Math.abs(net(parts)-catalog.plans[1].netKcal) < 15);
+const net = parts => parts.reduce((sum, {minutes, met}) => sum + (met-1)*3.5*catalog.weightKg/200*minutes, 0);
+test('audited video accounts for every work pair once and all interval recovery', () => {
+ const h = catalog.estimation.hiit;
+ const active = h.segments.filter(s => s.pairs);
+ assert.deepEqual(active.flatMap(s=>s.pairs).sort((a,b)=>a-b), Array.from({length:20}, (_,i)=>i+1));
+ assert.equal(h.exercisePairs.length, 20);
+ assert.equal(active.reduce((n,s)=>n+s.seconds,0), h.workBouts*h.workSecondsPerBout);
+ for(const s of active) assert.equal(s.seconds, s.pairs.length*50);
+ assert.equal(h.segments.find(s=>s.id==='interval-recovery').seconds,20*10+19*20);
+ assert.equal(h.segments.reduce((n,s)=>n+s.seconds,0),1935);
+ const computed = net(h.segments.map(s=>({minutes:s.seconds/60,met:s.met})));
+ assert.ok(Math.abs(computed-h.centralNetKcal)<1e-6);
+ assert.equal(Math.round(computed/25)*25, catalog.plans[1].netKcal);
+ assert.ok(Math.abs(h.centralGrossKcal-computed-1935/60*3.5*catalog.weightKg/200)<1e-6);
+});
+test('steady-state alternatives match the net target and card durations', () => {
+ for (const [id, audit] of Object.entries(catalog.estimation.alternatives)) {
+  const kcal=net(audit.segments);
+  assert.ok(Math.abs(kcal-audit.netKcal)<1e-6);
+  assert.ok(Math.abs(kcal-catalog.plans[1].netKcal)<catalog.plans[1].netKcal*0.05);
+  const minutes=audit.segments.reduce((n,s)=>n+s.minutes,0);
+  assert.equal(catalog.plans[1].options.find(o=>o.id===id).duration.en, `${minutes} min`);
  }
 });

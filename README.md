@@ -47,6 +47,6 @@ python3 scripts/create-meal-plan.py plan-2 --name-zh '周计划 2' --name-en 'We
 
 ### 有氧计划
 
-`_data/cardio_plans.json` 独立保存有氧计划、四种替代选项及中英文说明。`default` 指定新访客的计划；个人选择保存在 `fitness-cardio-plan`，不改变饮食计划。新计划按 77.4 kg、完整 30 分钟 HIIT 估算净消耗 300 kcal；各替代选项的 MET 推算与来源保留在数据文件中。此值是规划估计，不是个人实测。
+`_data/cardio_plans.json` 独立保存有氧计划、四种替代选项及中英文说明。`default` 指定新访客的计划；个人选择保存在 `fitness-cardio-plan`，不改变饮食计划。新计划按 77.4 kg，将视频中的 40 × 25 秒动作、休息、热身及放松分别估算，采用净消耗 200 kcal／次（情景范围 150–250 kcal）。逐组动作、分类 MET 假设、恢复期假设及三个替代选项的推算与来源保留在数据文件中。此值是规划估计，不是个人实测。
 
 `_data/plan_metrics.yml` 的 `reference_cardio_weekly` 标明静态营养预算包含的有氧消耗。切换时只加减有氧差额，营养概览、消耗图、放纵餐赤字和今日安排一起更新。新增饮食计划会复制各自的基准预算；修改饮食热量时同时更新该计划的 `intake_daily`、`weekly_deficit_precise` 和显示值。
