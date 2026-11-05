@@ -37,7 +37,7 @@
     { id: 'rice', label: ['白米饭', 'White Rice'], note: ['电饭煲 · 约50分钟', 'Rice cooker · about 50 min'], group: 'rice', before: ['prep-rice'], link: '#cook-rice' },
     { id: 'oven-heat', label: ['预热烤箱', 'Preheat Oven'], note: ['400°F · 15分钟', '400°F · 15 min'], group: 'oven', before: ['ready'], link: '#cook-oven-heat' },
     { id: 'chicken', label: ['鸡大腿肉', 'Chicken Thighs'], note: ['400°F · 27分钟', '400°F · 27 min'], group: 'oven', before: ['prep-chicken', 'oven-heat'], link: '#cook-chicken' },
-    { id: 'potato', label: ['整颗烤土豆', 'Whole Roasted Potatoes'], note: ['400°F · 约35分钟', '400°F · about 35 min'], group: 'oven', before: ['prep-potato', 'oven-heat'], link: '#cook-potato' },
+    { id: 'potato', label: ['整颗烤土豆', 'Whole Roasted Potatoes'], note: ['400°F · 约40分钟', '400°F · about 40 min'], group: 'oven', before: ['prep-potato', 'oven-heat'], link: '#cook-potato' },
     { id: 'ribs', label: ['BBQ排骨', 'BBQ Ribs'], note: ['400°F · 15–20分钟', '400°F · 15–20 min'], group: 'oven', before: ['prep-ribs', 'oven-heat'], link: '#cook-ribs' },
     { id: 'air-heat', label: ['预热空气炸锅', 'Preheat Air Fryer'], note: ['400°F · 4分钟', '400°F · 4 min'], group: 'air', before: ['prep-salmon'], link: '#cook-air-heat' },
     { id: 'salmon', label: ['三文鱼', 'Salmon'], note: ['400°F · 8分钟', '400°F · 8 min'], group: 'air', before: ['prep-salmon', 'air-heat'], link: '#cook-salmon' },

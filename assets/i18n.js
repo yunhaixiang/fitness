@@ -90,7 +90,7 @@
     '调味表：橄榄油短喷约30喷＝1茶匙；粉状调味料约30下＝1茶匙': 'Seasoning table: about 30 short olive-oil sprays = 1 tsp; about 30 shakes of dry seasoning = 1 tsp.',
     '烤箱400°F预热，需15分钟。': 'Preheat oven to 400°F for 15 minutes.',
     '鸡大腿肉：400°F烤27分钟；第1盘的2块掰碎，第3、6盘各放1块。': 'Chicken thighs: roast at 400°F for 27 minutes. Shred two for meal 1; put one each in meals 3 and 6.',
-    '烤土豆：铺在烤盘上，400°F烤约35分钟至叉子能轻松刺入；均分到第4、7盘。': 'Roasted potatoes: spread on a baking sheet and roast at 400°F for about 35 minutes until fork-tender; split evenly between meals 4 and 7.',
+    '烤土豆：铺在烤盘上，400°F烤约40分钟至叉子能轻松刺入；均分到第4、7盘。': 'Roasted potatoes: spread on a baking sheet and roast at 400°F for about 40 minutes until fork-tender; split evenly between meals 4 and 7.',
     'BBQ排骨：400°F烤15–20分钟，确认中心达74°C；第4、7盘各放1/4盒。': 'BBQ ribs: heat at 400°F for 15–20 minutes. Confirm the centre reaches 74°C; put one-quarter box each in meals 4 and 7.',
     '三文鱼备好后，空气炸锅400°F预热4分钟，结束后立即放入三文鱼。': 'Once the salmon is prepared, preheat the air fryer to 400°F for 4 minutes, then immediately load the salmon.',
     '三文鱼：400°F烤8分钟至熟透；第4、7盘各放1块。': 'Salmon: air-fry at 400°F for 8 minutes until cooked through; put one portion each in meals 4 and 7.',
