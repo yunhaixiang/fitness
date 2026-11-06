@@ -85,9 +85,9 @@
     select.value = plan.id;
     control.append(label, select);
     const detail = el('div', 'meal-plan-detail');
-    detail.append(el('p', 'meal-plan-summary', tr(`每次四选一 · 净消耗 ≈${plan.netKcal} kcal · 每周 ${catalog.sessionsPerWeek} 次`,
+    detail.append(el('p', 'meal-plan-summary', tr(`每次 ${plan.options.length} 选一 · 净消耗 ≈${plan.netKcal} kcal · 每周 ${catalog.sessionsPerWeek} 次`,
       `Choose one per session · ≈${plan.netKcal} net kcal · ${catalog.sessionsPerWeek} sessions/week`)),
-      el('span', 'meal-plan-count', tr(`${catalog.plans.length} 套计划`, `${catalog.plans.length} Plans`)));
+      el('span', 'meal-plan-count', tr(`${catalog.plans.length} 套计划`, `${catalog.plans.length} ${catalog.plans.length === 1 ? 'Plan' : 'Plans'}`)));
     switcher.append(control, detail);
     document.querySelector('.page-heading')?.after(switcher);
     select.addEventListener('change', () => {

@@ -1,5 +1,5 @@
 {
-  "default": "cardio-2",
+  "default": "cardio-1",
   "sessionsPerWeek": 4,
   "weightKg": 77.4,
   "plans": [
@@ -14,8 +14,8 @@
         {
           "id": "hiit",
           "name": {
-            "zh": "HIIT",
-            "en": "HIIT"
+            "zh": "HIIT · 20 分钟",
+            "en": "HIIT · 20 min"
           },
           "duration": {
             "zh": "20 分钟",
@@ -27,6 +27,23 @@
           },
           "steps": [],
           "video": "M0uO8X3_tEA"
+        },
+        {
+          "id": "hiit-30",
+          "name": {
+            "zh": "HIIT · 30 分钟",
+            "en": "HIIT · 30 min"
+          },
+          "duration": {
+            "zh": "30 分钟跟练",
+            "en": "30 min workout"
+          },
+          "description": {
+            "zh": "完整跟练，含热身与放松；主训练 40 × 25 秒，组间休息另计。视频总长 34:42。",
+            "en": "Follow the full warm-up, workout and cool-down: 40 × 25 seconds of work, plus interval rests. Full video: 34:42."
+          },
+          "steps": [],
+          "video": "tgm_QjUiwlk"
         },
         {
           "id": "swim",
@@ -108,120 +125,6 @@
             {
               "zh": "主训练：21 分钟，90–100 W。",
               "en": "Main set: 21 min at 90–100 W."
-            },
-            {
-              "zh": "放松：5 分钟，50 W。",
-              "en": "Cool-down: 5 min at 50 W."
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "cardio-2",
-      "name": {
-        "zh": "有氧计划 2",
-        "en": "Cardio Plan 2"
-      },
-      "netKcal": 200,
-      "options": [
-        {
-          "id": "hiit",
-          "name": {
-            "zh": "HIIT",
-            "en": "HIIT"
-          },
-          "duration": {
-            "zh": "30 分钟跟练",
-            "en": "30 min workout"
-          },
-          "description": {
-            "zh": "完整跟练，含热身与放松；主训练 40 × 25 秒，组间休息另计。视频总长 34:42。",
-            "en": "Follow the full warm-up, workout and cool-down: 40 × 25 seconds of work, plus interval rests. Full video: 34:42."
-          },
-          "steps": [],
-          "video": "tgm_QjUiwlk"
-        },
-        {
-          "id": "swim",
-          "name": {
-            "zh": "游泳",
-            "en": "Swimming"
-          },
-          "duration": {
-            "zh": "36 分钟",
-            "en": "36 min"
-          },
-          "description": {
-            "zh": "自由泳去、蛙泳回；25 m 泳池，22 个来回，共 1,100 m；实际游动约 34 分钟。",
-            "en": "Freestyle out, breaststroke back; 22 round trips in a 25 m pool, 1,100 m total. Aim for about 34 min of swimming."
-          },
-          "steps": [
-            {
-              "zh": "热身：3 个来回，轻松游。",
-              "en": "Warm-up: 3 easy round trips."
-            },
-            {
-              "zh": "主训练：2 组 × 8 个来回，组间休息 2 分钟。",
-              "en": "Main set: 2 × 8 round trips, with 2 min of rest between sets."
-            },
-            {
-              "zh": "放松：3 个来回，轻松游。",
-              "en": "Cool-down: 3 easy round trips."
-            }
-          ]
-        },
-        {
-          "id": "treadmill",
-          "name": {
-            "zh": "跑步机",
-            "en": "Treadmill"
-          },
-          "duration": {
-            "zh": "27 分钟",
-            "en": "27 min"
-          },
-          "description": {
-            "zh": "坡度 0%。",
-            "en": "Incline: 0%."
-          },
-          "steps": [
-            {
-              "zh": "热身：5 分钟，4–5 km/h 走路。",
-              "en": "Warm-up: walk for 5 min at 4–5 km/h."
-            },
-            {
-              "zh": "主训练：17 分钟，8 km/h 慢跑。",
-              "en": "Main set: jog for 17 min at 8 km/h."
-            },
-            {
-              "zh": "放松：5 分钟，3–4 km/h 走路。",
-              "en": "Cool-down: walk for 5 min at 3–4 km/h."
-            }
-          ]
-        },
-        {
-          "id": "bike",
-          "name": {
-            "zh": "健身馆自行车",
-            "en": "Stationary Bike"
-          },
-          "duration": {
-            "zh": "34 分钟",
-            "en": "34 min"
-          },
-          "description": {
-            "zh": "固定自行车；以功率为准。",
-            "en": "Use a stationary bike and follow the wattage targets."
-          },
-          "steps": [
-            {
-              "zh": "热身：5 分钟，50 W。",
-              "en": "Warm-up: 5 min at 50 W."
-            },
-            {
-              "zh": "主训练：24 分钟，90–100 W。",
-              "en": "Main set: 24 min at 90–100 W."
             },
             {
               "zh": "放松：5 分钟，50 W。",
@@ -443,62 +346,6 @@
       "supine-core": "Conditioning 02022 (3.8 MET moderate calisthenics), 02057 (6.5 MET high-intensity bodyweight exercise); interpolate 4.5.",
       "warm-up": "Conditioning 02030 (3.5 MET light/moderate calisthenics).",
       "cool-down": "Conditioning 02101 (2.3 MET mild stretching)."
-    },
-    "alternatives": {
-      "swim": {
-        "segments": [
-          {
-            "minutes": 9,
-            "met": 4.8
-          },
-          {
-            "minutes": 25,
-            "met": 5.55
-          },
-          {
-            "minutes": 2,
-            "met": 1.5
-          }
-        ],
-        "netKcal": 201.752775,
-        "note": "Easy warm-up/cool-down 9 min at assumed 4.8 MET, main swimming 25 min at the average of recreational freestyle 5.8 and breaststroke 5.3 MET, 2 min resting at assumed 1.5 MET. Distance is an approximate pacing guide; 34 min moving is the model basis, not a calorie guarantee for 22 laps."
-      },
-      "treadmill": {
-        "segments": [
-          {
-            "minutes": 5,
-            "met": 3.5
-          },
-          {
-            "minutes": 17,
-            "met": 8.5
-          },
-          {
-            "minutes": 5,
-            "met": 2.8
-          }
-        ],
-        "netKcal": 201.8205,
-        "note": "Running 12030, 5.0–5.2 mph, 8.5 MET. Warm-up and cool-down walking use 3.5 and 2.8 MET planning values."
-      },
-      "bike": {
-        "segments": [
-          {
-            "minutes": 5,
-            "met": 4
-          },
-          {
-            "minutes": 24,
-            "met": 6
-          },
-          {
-            "minutes": 5,
-            "met": 4
-          }
-        ],
-        "netKcal": 203.175,
-        "note": "Stationary cycling 01214 (50 W, 4 MET) and 01220 (90–100 W, 6 MET)."
-      }
     },
     "sources": [
       "https://www.youtube.com/watch?v=M0uO8X3_tEA",

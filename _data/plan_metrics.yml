@@ -1,7 +1,7 @@
-weekly_deficit: 4135
-weekly_deficit_display: "4,135"
-# Reference budget: Cardio Plan 2, 4 × 200 net kcal; segmented HIIT audit in cardio_plans.json.
-reference_cardio_weekly: 800
-weekly_burn: 16235.96
-weekly_deficit_precise: 4135.43097
+weekly_deficit: 4055
+weekly_deficit_display: "4,055"
+# Reference budget: Cardio Plan 1, 4 × 180 net kcal; segmented HIIT audit in cardio_plans.json.
+reference_cardio_weekly: 720
+weekly_burn: 16155.96
+weekly_deficit_precise: 4055.43097
 intake_daily: 1728.65
