@@ -5,31 +5,35 @@ const catalog = require('../_data/cardio_plans.json');
 const fs = require('node:fs');
 const path = require('node:path');
 const baseline = Object.fromEntries(fs.readFileSync(path.join(__dirname, '../_data/plan_metrics.yml'), 'utf8').split('\n').filter(line => /^[a-z_]+: [\d.]+$/.test(line)).map(line => { const [k,v] = line.split(': '); return [k, Number(v)]; }));
-test('merged plan resolves stale saved choices and links', () => {
- assert.equal(catalog.plans.length, 1);
- assert.equal(resolve(catalog).id, 'cardio-1');
- assert.equal(resolve(catalog, 'cardio-2').id, 'cardio-1');
- assert.equal(resolve(catalog, 'cardio-2', 'cardio-2').id, 'cardio-1');
- assert.equal(resolve(catalog, 'plan-1', 'removed').id, 'cardio-1');
+test('two plans default to plan 2 while preserving subsequent explicit choices', () => {
+ assert.equal(catalog.plans.length, 2);
+ assert.equal(resolve(catalog).id, 'cardio-2');
+ assert.equal(resolve(catalog, 'cardio-1').id, 'cardio-1');
+ assert.equal(resolve(catalog, 'cardio-1', 'cardio-2').id, 'cardio-2');
+ assert.equal(resolve(catalog, 'removed').id, 'cardio-2');
 });
-test('merged budget uses original plan without double counting exercise', () => {
- const current = energy(baseline, catalog.plans[0], catalog.sessionsPerWeek);
- assert.equal(current.weeklyCardio, 720);
+test('200 and 300 kcal budgets update deficits without double counting', () => {
+ const current = energy(baseline, catalog.plans[1], catalog.sessionsPerWeek);
+ const other = energy(baseline, catalog.plans[0], catalog.sessionsPerWeek);
+ assert.equal(current.weeklyCardio, 1200);
+ assert.equal(other.weeklyCardio, 800);
  assert.equal(current.weeklyBurn, baseline.weekly_burn);
  assert.equal(current.weeklyDeficit, baseline.weekly_deficit_precise);
- assert.equal(Math.round(current.dailyDeficit), 579);
- assert.equal(current.fatEquivalent.toFixed(2), '0.53');
- const different = energy(baseline, {netKcal: 300}, catalog.sessionsPerWeek);
- assert.equal(different.weeklyBurn - current.weeklyBurn, 480);
- assert.ok(Math.abs(different.weeklyDeficit - current.weeklyDeficit - 480) < 1e-8);
+ assert.equal(Math.round(current.dailyDeficit), 648);
+ assert.equal(Math.round(other.dailyDeficit), 591);
+ assert.equal(current.fatEquivalent.toFixed(2), '0.59');
+ assert.ok(Math.abs(current.weeklyDeficit - other.weeklyDeficit - 400) < 1e-8);
 });
-test('one plan retains both videos and only the original three alternatives', () => {
- const plan = catalog.plans[0];
- assert.deepEqual(plan.options.map(o=>o.id), ['hiit','hiit-30','swim','treadmill','bike']);
- assert.deepEqual(plan.options.filter(o=>o.video).map(o=>o.video), ['M0uO8X3_tEA','tgm_QjUiwlk']);
- for (const option of plan.options) for (const lang of ['zh','en']) {
-  assert.ok(option.name[lang]); assert.ok(option.duration[lang]);
-  for (const step of option.steps) assert.ok(step[lang]);
+test('each plan has its own HIIT and three matching alternatives', () => {
+ assert.deepEqual(catalog.plans.map(p=>p.netKcal), [200,300]);
+ assert.deepEqual(catalog.plans.map(p=>p.options[0].video), ['M0uO8X3_tEA','tgm_QjUiwlk']);
+ for(const plan of catalog.plans) {
+  assert.deepEqual(plan.options.map(o=>o.id), ['hiit','swim','treadmill','bike']);
+  for(const lang of ['zh','en']) assert.ok(plan.name[lang].includes(String(plan.netKcal)));
+  for (const option of plan.options) for (const lang of ['zh','en']) {
+   assert.ok(option.name[lang]); assert.ok(option.duration[lang]);
+   for (const step of option.steps) assert.ok(step[lang]);
+  }
  }
 });
 const net = parts => parts.reduce((sum, {minutes, met}) => sum + (met-1)*3.5*catalog.weightKg/200*minutes, 0);
@@ -59,15 +63,18 @@ test('original video audit counts 20 work bouts and one midpoint break', () => {
  assert.equal(seconds,1590);
  const computed=net(h.segments.map(s=>({minutes:s.seconds/60,met:s.met})));
  assert.ok(Math.abs(computed-h.centralNetKcal)<1e-6);
- assert.equal(Math.round(computed/10)*10,catalog.plans[0].netKcal);
+ assert.equal(Math.round(computed/10)*10,h.planningNetKcal);
  assert.ok(Math.abs(h.centralGrossKcal-computed-seconds/60*3.5*catalog.weightKg/200)<1e-6);
 });
-test('original-plan alternatives follow the revised 180 kcal budget', () => {
- for(const [id,audit] of Object.entries(catalog.estimation.originalAlternatives)) {
-  const kcal=net(audit.segments);
-  assert.ok(Math.abs(kcal-audit.netKcal)<1e-6);
-  assert.ok(Math.abs(kcal-catalog.plans[0].netKcal)<catalog.plans[0].netKcal*0.05);
-  const minutes=audit.segments.reduce((n,s)=>n+s.minutes,0);
-  assert.equal(catalog.plans[0].options.find(o=>o.id===id).duration.en,`${minutes} min`);
+test('both sets of alternatives match their planning target and displayed duration', () => {
+ for(const [index, audits] of [catalog.estimation.alternatives, catalog.estimation.plan2Alternatives].entries()) {
+  const plan = catalog.plans[index];
+  for(const [id,audit] of Object.entries(audits)) {
+   const kcal=net(audit.segments);
+   assert.ok(Math.abs(kcal-audit.netKcal)<1e-6);
+   assert.ok(Math.abs(kcal-plan.netKcal)<plan.netKcal*0.05);
+   const minutes=audit.segments.reduce((n,s)=>n+s.minutes,0);
+   assert.equal(plan.options.find(o=>o.id===id).duration.en,`${minutes} min`);
+  }
  }
 });

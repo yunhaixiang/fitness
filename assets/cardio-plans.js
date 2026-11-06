@@ -22,11 +22,17 @@
   const catalog = JSON.parse(source.textContent);
   const key = 'fitness-cardio-plan';
   let saved;
-  try { saved = localStorage.getItem(key); } catch (_) { /* URL/default remains available */ }
+  try {
+    saved = localStorage.getItem(key);
+    if (catalog.selectionRevision && localStorage.getItem(key + '-revision') !== catalog.selectionRevision) saved = null;
+  } catch (_) { /* URL/default remains available */ }
   const requested = new URL(location.href).searchParams.get('cardio-plan');
   const plan = resolve(catalog, saved, requested);
   if (!plan) return;
-  try { localStorage.setItem(key, plan.id); } catch (_) { /* storage unavailable */ }
+  try {
+    localStorage.setItem(key, plan.id);
+    if (catalog.selectionRevision) localStorage.setItem(key + '-revision', catalog.selectionRevision);
+  } catch (_) { /* storage unavailable */ }
   window.fitnessCardioPlan = plan;
   const en = window.fitnessI18n?.language === 'en';
   const lang = en ? 'en' : 'zh';

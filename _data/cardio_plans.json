@@ -1,21 +1,21 @@
 {
-  "default": "cardio-1",
+  "default": "cardio-2",
   "sessionsPerWeek": 4,
   "weightKg": 77.4,
   "plans": [
     {
       "id": "cardio-1",
       "name": {
-        "zh": "有氧计划 1",
-        "en": "Cardio Plan 1"
+        "zh": "有氧计划 1 · 约 200 kcal",
+        "en": "Cardio Plan 1 · ≈200 kcal"
       },
-      "netKcal": 180,
+      "netKcal": 200,
       "options": [
         {
           "id": "hiit",
           "name": {
-            "zh": "HIIT · 20 分钟",
-            "en": "HIIT · 20 min"
+            "zh": "HIIT",
+            "en": "HIIT"
           },
           "duration": {
             "zh": "20 分钟",
@@ -29,10 +29,107 @@
           "video": "M0uO8X3_tEA"
         },
         {
-          "id": "hiit-30",
+          "id": "swim",
           "name": {
-            "zh": "HIIT · 30 分钟",
-            "en": "HIIT · 30 min"
+            "zh": "游泳",
+            "en": "Swimming"
+          },
+          "duration": {
+            "zh": "36 分钟",
+            "en": "36 min"
+          },
+          "description": {
+            "zh": "自由泳去、蛙泳回；25 m 泳池，22 个来回，共 1,100 m；实际游动约 34 分钟。",
+            "en": "Freestyle out, breaststroke back; 22 round trips in a 25 m pool, 1,100 m total. Aim for about 34 min of swimming."
+          },
+          "steps": [
+            {
+              "zh": "热身：3 个来回，轻松游。",
+              "en": "Warm-up: 3 easy round trips."
+            },
+            {
+              "zh": "主训练：2 组 × 8 个来回，组间休息 2 分钟。",
+              "en": "Main set: 2 × 8 round trips, with 2 min of rest between sets."
+            },
+            {
+              "zh": "放松：3 个来回，轻松游。",
+              "en": "Cool-down: 3 easy round trips."
+            }
+          ]
+        },
+        {
+          "id": "treadmill",
+          "name": {
+            "zh": "跑步机",
+            "en": "Treadmill"
+          },
+          "duration": {
+            "zh": "27 分钟",
+            "en": "27 min"
+          },
+          "description": {
+            "zh": "坡度 0%。",
+            "en": "Incline: 0%."
+          },
+          "steps": [
+            {
+              "zh": "热身：5 分钟，4–5 km/h 走路。",
+              "en": "Warm-up: walk for 5 min at 4–5 km/h."
+            },
+            {
+              "zh": "主训练：17 分钟，8 km/h 慢跑。",
+              "en": "Main set: jog for 17 min at 8 km/h."
+            },
+            {
+              "zh": "放松：5 分钟，3–4 km/h 走路。",
+              "en": "Cool-down: walk for 5 min at 3–4 km/h."
+            }
+          ]
+        },
+        {
+          "id": "bike",
+          "name": {
+            "zh": "健身馆自行车",
+            "en": "Stationary Bike"
+          },
+          "duration": {
+            "zh": "34 分钟",
+            "en": "34 min"
+          },
+          "description": {
+            "zh": "固定自行车；以功率为准。",
+            "en": "Use a stationary bike and follow the wattage targets."
+          },
+          "steps": [
+            {
+              "zh": "热身：5 分钟，50 W。",
+              "en": "Warm-up: 5 min at 50 W."
+            },
+            {
+              "zh": "主训练：24 分钟，90–100 W。",
+              "en": "Main set: 24 min at 90–100 W."
+            },
+            {
+              "zh": "放松：5 分钟，50 W。",
+              "en": "Cool-down: 5 min at 50 W."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cardio-2",
+      "name": {
+        "zh": "有氧计划 2 · 约 300 kcal",
+        "en": "Cardio Plan 2 · ≈300 kcal"
+      },
+      "netKcal": 300,
+      "options": [
+        {
+          "id": "hiit",
+          "name": {
+            "zh": "HIIT",
+            "en": "HIIT"
           },
           "duration": {
             "zh": "30 分钟跟练",
@@ -52,12 +149,12 @@
             "en": "Swimming"
           },
           "duration": {
-            "zh": "31 分钟",
-            "en": "31 min"
+            "zh": "52 分钟",
+            "en": "52 min"
           },
           "description": {
-            "zh": "自由泳去、蛙泳回；25 m 泳池，20 个来回，共 1,000 m；实际游动约 30 分钟。",
-            "en": "Freestyle out, breaststroke back; 20 round trips in a 25 m pool, 1,000 m total. Aim for about 30 min of swimming."
+            "zh": "自由泳去、蛙泳回；25 m 泳池，32 个来回，共 1,600 m；实际游动约 50 分钟。",
+            "en": "Freestyle out, breaststroke back; 32 round trips in a 25 m pool, 1,600 m total. Aim for about 50 min of swimming."
           },
           "steps": [
             {
@@ -65,8 +162,8 @@
               "en": "Warm-up: 3 easy round trips."
             },
             {
-              "zh": "主训练：2 组 × 7 个来回，组间休息 1 分钟。",
-              "en": "Main set: 2 × 7 round trips, with 1 min of rest between sets."
+              "zh": "主训练：2 组 × 13 个来回，组间休息 2 分钟。",
+              "en": "Main set: 2 × 13 round trips, with 2 min of rest between sets."
             },
             {
               "zh": "放松：3 个来回，轻松游。",
@@ -81,8 +178,8 @@
             "en": "Treadmill"
           },
           "duration": {
-            "zh": "25 分钟",
-            "en": "25 min"
+            "zh": "37 分钟",
+            "en": "37 min"
           },
           "description": {
             "zh": "坡度 0%。",
@@ -94,8 +191,8 @@
               "en": "Warm-up: walk for 5 min at 4–5 km/h."
             },
             {
-              "zh": "主训练：15 分钟，8 km/h 慢跑。",
-              "en": "Main set: jog for 15 min at 8 km/h."
+              "zh": "主训练：27 分钟，8 km/h 慢跑。",
+              "en": "Main set: jog for 27 min at 8 km/h."
             },
             {
               "zh": "放松：5 分钟，3–4 km/h 走路。",
@@ -110,12 +207,12 @@
             "en": "Stationary Bike"
           },
           "duration": {
-            "zh": "31 分钟",
-            "en": "31 min"
+            "zh": "48 分钟",
+            "en": "48 min"
           },
           "description": {
-            "zh": "固定自行车。",
-            "en": "Use a stationary bike."
+            "zh": "固定自行车；以功率为准。",
+            "en": "Use a stationary bike and follow the wattage targets."
           },
           "steps": [
             {
@@ -123,8 +220,8 @@
               "en": "Warm-up: 5 min at 50 W."
             },
             {
-              "zh": "主训练：21 分钟，90–100 W。",
-              "en": "Main set: 21 min at 90–100 W."
+              "zh": "主训练：38 分钟，90–100 W。",
+              "en": "Main set: 38 min at 90–100 W."
             },
             {
               "zh": "放松：5 分钟，50 W。",
@@ -558,24 +655,24 @@
       ],
       "planningNetKcal": 180
     },
-    "originalAlternatives": {
+    "alternatives": {
       "swim": {
         "segments": [
           {
-            "minutes": 8,
+            "minutes": 9,
             "met": 4.8
           },
           {
-            "minutes": 22,
+            "minutes": 25,
             "met": 5.55
           },
           {
-            "minutes": 1,
+            "minutes": 2,
             "met": 1.5
           }
         ],
-        "netKcal": 177.4395,
-        "note": "Easy swimming 8 min, recreational freestyle/breaststroke 22 min, one minute resting. Distance is a pacing guide, not a fixed calorie cost."
+        "netKcal": 201.752775,
+        "note": "Easy warm-up/cool-down 9 min at assumed 4.8 MET, main swimming 25 min at the average of recreational freestyle 5.8 and breaststroke 5.3 MET, 2 min resting at assumed 1.5 MET. Distance is an approximate pacing guide; 34 min moving is the model basis, not a calorie guarantee for 22 laps."
       },
       "treadmill": {
         "segments": [
@@ -584,7 +681,7 @@
             "met": 3.5
           },
           {
-            "minutes": 15,
+            "minutes": 17,
             "met": 8.5
           },
           {
@@ -592,7 +689,8 @@
             "met": 2.8
           }
         ],
-        "netKcal": 181.503
+        "netKcal": 201.8205,
+        "note": "Running 12030, 5.0–5.2 mph, 8.5 MET. Warm-up and cool-down walking use 3.5 and 2.8 MET planning values."
       },
       "bike": {
         "segments": [
@@ -601,7 +699,7 @@
             "met": 4
           },
           {
-            "minutes": 21,
+            "minutes": 24,
             "met": 6
           },
           {
@@ -609,8 +707,72 @@
             "met": 4
           }
         ],
-        "netKcal": 182.8575
+        "netKcal": 203.175,
+        "note": "Stationary cycling 01214 (50 W, 4 MET) and 01220 (90–100 W, 6 MET)."
       }
+    },
+    "plan2Alternatives": {
+      "swim": {
+        "segments": [
+          {
+            "minutes": 9,
+            "met": 4.8
+          },
+          {
+            "minutes": 41,
+            "met": 5.55
+          },
+          {
+            "minutes": 2,
+            "met": 1.5
+          }
+        ],
+        "netKcal": 300.36037500000003,
+        "note": "9 min easy swimming, 41 min main swimming, 2 min rest. Distance is an approximate pacing guide."
+      },
+      "treadmill": {
+        "segments": [
+          {
+            "minutes": 5,
+            "met": 3.5
+          },
+          {
+            "minutes": 27,
+            "met": 8.5
+          },
+          {
+            "minutes": 5,
+            "met": 2.8
+          }
+        ],
+        "netKcal": 303.4080000000001,
+        "note": "Running 12030, 5.0–5.2 mph, 8.5 MET. Warm-up and cool-down walking use 3.5 and 2.8 MET planning values."
+      },
+      "bike": {
+        "segments": [
+          {
+            "minutes": 5,
+            "met": 4
+          },
+          {
+            "minutes": 38,
+            "met": 6
+          },
+          {
+            "minutes": 5,
+            "met": 4
+          }
+        ],
+        "netKcal": 297.99,
+        "note": "Stationary cycling 01214 (50 W, 4 MET) and 01220 (90–100 W, 6 MET)."
+      }
+    },
+    "planningOverride": {
+      "date": "2026-11-05",
+      "plan1NetKcal": 200,
+      "plan2NetKcal": 300,
+      "note": "User-selected planning estimates. Plan 1 rounded to 200. Plan 2 uses the discussed rough 300 net kcal scenario based on presenter-reported calories, not an individual measurement. Presenter weight, device accuracy and total-versus-active calorie convention were not verified. Prior segmented HIIT estimates remain unchanged below; they do not establish the new 300 kcal assumption."
     }
-  }
+  },
+  "selectionRevision": "two-plans-200-300"
 }

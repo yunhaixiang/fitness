@@ -108,7 +108,7 @@
     '力量训练（在家）': 'Strength training (home)', '力量训练（在健身馆）': 'Strength training (gym)',
     '配重是训练量对照值；首次先用较轻重量试做，能稳定完成最少次数再逐步加重。史密斯机数字为两侧加片总重，杆重依机型。': 'These loads are targets for comparing planned volume. Start lighter, then add weight once you can complete the minimum reps with control. Smith machine values show total added plates; bar weight varies by machine.',
     '腹直肌；侧腹辅助': 'rectus abdominis; obliques (secondary)',
-    '有氧与每周安排': 'Cardio & weekly schedule', '两种 HIIT、游泳、跑步机或健身馆自行车五选一': 'Choose Either HIIT Workout, Swimming, Treadmill or Stationary Bike',
+    '有氧与每周安排': 'Cardio & weekly schedule', 'HIIT、游泳、跑步机或健身馆自行车四选一': 'Choose HIIT, Swimming, Treadmill or Stationary Bike',
     '每周安排与有氧': 'Weekly training schedule & cardio',
     '每周安排': 'Weekly plan', '有氧选择': 'Cardio options',
     'Juice & Toya 跟练视频 ↗': 'Juice & Toya workout video ↗',
