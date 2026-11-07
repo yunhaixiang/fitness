@@ -98,7 +98,7 @@ visual: true
 <tr>
 <td>蛋白质</td>
 <td style="text-align: right;">133.8 g</td>
-<td>130–165 g</td>
+<td>120–140 g</td>
 </tr>
 <tr>
 <td>总脂肪</td>
