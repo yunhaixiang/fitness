@@ -47,7 +47,7 @@ cooking: true
 
 <h2 id="rice" data-en="Rice Cooker">电饭煲线程</h2>
 <ol>
-<li data-en="Rinse and drain 35 g dry rice. Use equal volumes of rice and water: about 44 mL water. Place in the rice cooker.">干米35 g淘洗沥干；米和水按体积1:1，加水约44 mL，放入电饭煲。</li>
+<li data-en="Rinse and drain 44 g dry rice. Use equal volumes of rice and water: about 55 mL water. Place in the rice cooker.">干米44 g淘洗沥干；米和水按体积1:1，加水约55 mL，放入电饭煲。</li>
 <li data-en="Use White Rice mode, about 50 minutes.">启动White Rice白米模式，约50分钟。</li>
 </ol>
 
@@ -99,7 +99,7 @@ cooking: true
 
 <h2 id="pot-two" data-en="Pot 2">煮锅二线程</h2>
 <ol>
-<li data-en="Soak 45 g dry rice noodles in hot water for 10–15 minutes until pliable, then drain.">称干扁米粉45 g，用热水浸泡10–15分钟至柔软，沥干。</li>
+<li data-en="Soak 46 g dry rice noodles in hot water for 10–15 minutes until pliable, then drain.">称干扁米粉46 g，用热水浸泡10–15分钟至柔软，沥干。</li>
 <li data-en="Bring water to a boil in Pot 2 before adding spaghetti.">煮锅二烧水，水沸后下意面。</li>
 <li data-en="Add 60 g dry spaghetti and cook for about 8 minutes, following the pack. Drain and reserve a little pasta water.">下干意面60 g，按包装时间煮约8分钟，沥干，留少量面水用于拌酱。</li>
 <li data-en="After removing the spaghetti, refill with fresh water and bring to a boil.">意面出锅后换清水烧开。</li>
@@ -139,7 +139,7 @@ cooking: true
 
 <h2 id="wraps" data-en="Wrap and Sandwich">卷饼与三明治线程</h2>
 <ol>
-<li data-en="Drain and rinse the chickpeas; use a quarter can and lightly mash with ¾ tsp Chipotle mayonnaise (3.75 mL; about 7.5 cm squeezed length at a strand diameter of 0.8 cm). Wash, deseed and slice half an orange bell pepper. Fill 1 large tortilla with the chickpeas, meal 1’s shredded chicken, crumbled boiled egg and pepper; roll and place in meal 1.">鹰嘴豆沥干冲洗，取¼罐，轻压碎后拌Chipotle蛋黄酱¾茶匙（3.75 mL；酱条直径约0.8 cm时，挤约7.5 cm长）。半个橙甜椒洗净去籽切细条，大号卷饼皮1片放入鹰嘴豆、第1盘的鸡腿肉、掰碎水煮蛋和橙甜椒，卷好放第1盘。</li>
-<li data-en="Open and drain 1 whole can of tuna (about 110 g drained), then mix with 1¼ tsp Chipotle mayonnaise (6.25 mL; about 12.5 cm squeezed length at a strand diameter of 0.8 cm). Wash and slice 1 Roma tomato. Fill 2 slices of whole-wheat bread with the tuna, meal 4’s chicken, fried egg and tomato; place in meal 4.">金枪鱼1整罐沥干（约110 g），拌Chipotle蛋黄酱1¼茶匙（6.25 mL；酱条直径约0.8 cm时，挤约12.5 cm长）。罗马番茄1个洗净切片；全麦面包2片夹入金枪鱼、第4盘的鸡腿肉、煎蛋和番茄，放第4盘。</li>
+<li data-en="Drain and rinse the chickpeas; use a quarter can and lightly mash with 2½ tsp Chipotle mayonnaise (12.5 mL; about 25 cm squeezed length at a strand diameter of 0.8 cm). Wash, deseed and slice half an orange bell pepper. Fill 1 large tortilla with the chickpeas, meal 1’s shredded chicken, crumbled boiled egg and pepper; roll and place in meal 1.">鹰嘴豆沥干冲洗，取¼罐，轻压碎后拌Chipotle蛋黄酱2½茶匙（12.5 mL；酱条直径约0.8 cm时，挤约25 cm长）。半个橙甜椒洗净去籽切细条，大号卷饼皮1片放入鹰嘴豆、第1盘的鸡腿肉、掰碎水煮蛋和橙甜椒，卷好放第1盘。</li>
+<li data-en="Open and drain 1 whole can of tuna (about 110 g drained), then mix with 3 tsp Chipotle mayonnaise (15 mL; about 30 cm squeezed length at a strand diameter of 0.8 cm). Wash and slice 1 Roma tomato. Fill 2 slices of whole-wheat bread with the tuna, meal 4’s chicken, fried egg and tomato; place in meal 4.">金枪鱼1整罐沥干（约110 g），拌Chipotle蛋黄酱3茶匙（15 mL；酱条直径约0.8 cm时，挤约30 cm长）。罗马番茄1个洗净切片；全麦面包2片夹入金枪鱼、第4盘的鸡腿肉、煎蛋和番茄，放第4盘。</li>
 </ol>
 <!-- Cook to the product package directions where they differ. Rice noodle method: Erawan retailer directions (hot-water soak 10–15 min, boil 30–60 sec). Shrimp is an olive-oil/panko adaptation; oven times vary with size and loading. -->
