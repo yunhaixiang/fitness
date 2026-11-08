@@ -201,11 +201,12 @@ visual: true
 <tr data-price-id="41" data-weekly-cost="0.39" data-purchase-group="restock"><td data-en="Rice Noodles">扁米粉</td><td><a href="https://www.walmart.ca/en/ip/Erawan-Rice-Stick/6000199121439">Erawan Rice Stick</a><br><span data-en="454 g">454 g</span></td><td data-en="1 Pack / About 5 Weeks">1包 / 约5周</td><td><a href="https://www.walmart.ca/en/ip/Erawan-Rice-Stick/6000199121439">$1.97</a></td></tr>
 <tr data-price-id="42" data-weekly-cost="0.52" data-purchase-group="restock"><td data-en="Panko Breadcrumbs">面包糠</td><td><a href="https://www.walmart.ca/en/ip/Great-Value-Panko-Japanese-Style-Bread-Crumbs/6000197072643">Great Value Panko Japanese Style Bread Crumbs</a><br><span data-en="227 g">227 g</span></td><td data-en="1 Pack / About 5.7 Weeks">1包 / 约5.7周</td><td><a href="https://www.walmart.ca/en/ip/Great-Value-Panko-Japanese-Style-Bread-Crumbs/6000197072643">$2.97</a></td></tr>
 <tr data-price-id="43" data-weekly-cost="1.55" data-purchase-group="restock"><td data-en="Curry Roux">咖喱块</td><td><a href="https://www.walmart.ca/en/ip/S-B-Golden-curry-sauce-mix-medium-hot/6000198034558">S&amp;B Golden Curry Sauce Mix Medium Hot</a><br><span data-en="92 g">92 g</span></td><td data-en="1 Box / About 2.6 Weeks">1盒 / 约2.6周</td><td><a href="https://www.walmart.ca/en/ip/S-B-Golden-curry-sauce-mix-medium-hot/6000198034558">$3.97</a></td></tr>
+<tr data-price-id="45" data-weekly-cost="1.48" data-purchase-group="weekly"><td data-en="Chickpeas">鹰嘴豆</td><td><a href="https://www.walmart.ca/en/ip/Great-Value-Chick-Peas/10275238">Great Value Chick Peas</a><br>540 mL</td><td data-en="1 Can / Week">1罐 / 周</td><td><a href="https://www.walmart.ca/en/ip/Great-Value-Chick-Peas/10275238">$1.48</a></td></tr>
 <tr>
 <td>每周合计</td>
 <td>—</td>
 <td style="text-align: right;">—</td>
-<td style="text-align: right;">$135.99</td>
+<td style="text-align: right;">$137.47</td>
 </tr>
 </tbody>
 </table>

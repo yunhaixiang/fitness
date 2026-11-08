@@ -77,16 +77,16 @@
       "label": "potato"
     },
     "wrap": {
-      "kcal": "649",
-      "protein": "55.5",
-      "carbs": "33.6",
-      "fat": "32.9",
-      "saturatedFat": "7.6",
-      "fibre": "4.6",
-      "sugar": "4.9",
-      "sodium": "863",
-      "cholesterol": "385",
-      "epaDha": "0.32",
+      "kcal": "835",
+      "protein": "56.5",
+      "carbs": "71.9",
+      "fat": "36.6",
+      "saturatedFat": "7.8",
+      "fibre": "15.5",
+      "sugar": "11.7",
+      "sodium": "1186",
+      "cholesterol": "355",
+      "epaDha": "0.12",
       "label": "wrap"
     },
     "rice": {
@@ -116,16 +116,16 @@
       "label": "pasta"
     },
     "bread": {
-      "kcal": "646",
-      "protein": "57.8",
+      "kcal": "696",
+      "protein": "68.8",
       "carbs": "36.6",
-      "fat": "30.8",
-      "saturatedFat": "7.1",
+      "fat": "31.8",
+      "saturatedFat": "7.4",
       "fibre": "6.4",
       "sugar": "6.8",
-      "sodium": "841",
-      "cholesterol": "384",
-      "epaDha": "0.32",
+      "sodium": "926",
+      "cholesterol": "414",
+      "epaDha": "0.52",
       "label": "bread"
     },
     "dumpling": {
