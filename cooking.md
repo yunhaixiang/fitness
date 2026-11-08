@@ -99,11 +99,10 @@ cooking: true
 
 <h2 id="pot-two" data-en="Pot 2">煮锅二线程</h2>
 <ol>
-<li data-en="Soak 46 g dry rice noodles in hot water for 10–15 minutes until pliable, then drain.">称干扁米粉46 g，用热水浸泡10–15分钟至柔软，沥干。</li>
 <li data-en="Bring water to a boil in Pot 2 before adding spaghetti.">煮锅二烧水，水沸后下意面。</li>
 <li data-en="Add 60 g dry spaghetti and cook for about 8 minutes, following the pack. Drain and reserve a little pasta water.">下干意面60 g，按包装时间煮约8分钟，沥干，留少量面水用于拌酱。</li>
 <li data-en="After removing the spaghetti, refill with fresh water and bring to a boil.">意面出锅后换清水烧开。</li>
-<li data-en="Boil the soaked noodles for 30–60 seconds, just until almost tender. Drain for the curry saucepan.">泡软的扁米粉入沸水30–60秒，刚软即捞出沥干，交给小锅拌咖喱。</li>
+<li data-en="Add 46 g dry rice noodles directly to boiling water and cook for 6–8 minutes. Check at 6 minutes; drain once there is no hard centre and the noodles are still springy. Transfer to the saucepan for the curry.">干扁米粉46 g直接下沸水煮6–8分钟；第6分钟检查，无硬芯且仍有弹性时捞出沥干，交给小锅拌咖喱。</li>
 </ol>
 
 <h2 id="small-wok" data-en="Saucepan">小锅线程</h2>
@@ -142,4 +141,4 @@ cooking: true
 <li data-en="Drain and rinse the chickpeas; use a quarter can and lightly mash with 2½ tsp Chipotle mayonnaise (12.5 mL; about 25 cm squeezed length at a strand diameter of 0.8 cm). Wash, deseed and slice half an orange bell pepper. Fill 1 large tortilla with the chickpeas, meal 1’s shredded chicken, crumbled boiled egg and pepper; roll and place in meal 1.">鹰嘴豆沥干冲洗，取¼罐，轻压碎后拌Chipotle蛋黄酱2½茶匙（12.5 mL；酱条直径约0.8 cm时，挤约25 cm长）。半个橙甜椒洗净去籽切细条，大号卷饼皮1片放入鹰嘴豆、第1盘的鸡腿肉、掰碎水煮蛋和橙甜椒，卷好放第1盘。</li>
 <li data-en="Open and drain 1 whole can of tuna (about 110 g drained), then mix with 3 tsp Chipotle mayonnaise (15 mL; about 30 cm squeezed length at a strand diameter of 0.8 cm). Wash and slice 1 Roma tomato. Fill 2 slices of whole-wheat bread with the tuna, meal 5’s chicken, fried egg and tomato; place in meal 5.">金枪鱼1整罐沥干（约110 g），拌Chipotle蛋黄酱3茶匙（15 mL；酱条直径约0.8 cm时，挤约30 cm长）。罗马番茄1个洗净切片；全麦面包2片夹入金枪鱼、第5盘的鸡腿肉、煎蛋和番茄，放第5盘。</li>
 </ol>
-<!-- Cook to the product package directions where they differ. Rice noodle method: Erawan retailer directions (hot-water soak 10–15 min, boil 30–60 sec). Shrimp is an olive-oil/panko adaptation; oven times vary with size and loading. -->
+<!-- Cook to the product package directions where they differ. Rice noodle method: Erawan Walmart directions, boil dry noodles directly for 6–8 minutes, https://www.walmart.ca/en/ip/Erawan-Rice-Stick/6000199121439 . The timer starts with a 6-minute check; extend as needed. Shrimp is an olive-oil/panko adaptation; oven times vary with size and loading. -->
