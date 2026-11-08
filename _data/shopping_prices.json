@@ -2,7 +2,7 @@
   "checked_on": "2026-10-31",
   "currency": "CAD",
   "scope": "Walmart Canada public prices; individual checked_on retained. Popeye spinach price supplied by user. Weekly subtotal averages routine purchase cycles. Bread assumes two slices total 70 g; weighed produce billed by actual weight. Excludes as-needed seasonings, tax and delivery. Not a London store live stock guarantee.",
-  "weekly_total_cad": "134.28",
+  "weekly_total_cad": "133.54",
   "items": [
     {
       "item": "去骨去皮鸡大腿肉",
@@ -442,17 +442,17 @@
       "purchase_frequency_en": "1 Box / About 2.6 Weeks"
     },
     {
-      "item": "玉米",
-      "price_cad": "1.37",
-      "basis": "package",
-      "weekly_quantity": "1",
-      "weekly_cost_cad": "1.37",
+      "item": "红薯",
+      "price_cad": "2.10",
+      "basis": "kg",
+      "weekly_quantity": "0.3",
+      "weekly_cost_cad": "0.63",
       "source_type": "walmart_public",
-      "source_url": "https://www.walmart.ca/en/ip/Great-Value-Whole-Kernel-Corn/10275085",
-      "product_url": "https://www.walmart.ca/en/ip/Great-Value-Whole-Kernel-Corn/10275085",
+      "source_url": "https://www.walmart.ca/en/ip/Sweet-Potato-Sold-in-singles-0-28-0-57-KG/6000190025746",
+      "product_url": "https://www.walmart.ca/en/ip/Sweet-Potato-Sold-in-singles-0-28-0-57-KG/6000190025746",
       "checked_on": "2026-11-07",
-      "purchase_frequency_zh": "1罐 / 周",
-      "purchase_frequency_en": "1 Can / Week"
+      "purchase_frequency_zh": "每周1个小红薯，约300 g；食用270 g",
+      "purchase_frequency_en": "1 Small Sweet Potato / Week, About 300 g; 270 g Edible"
     }
   ],
   "updated_on": "2026-11-07"

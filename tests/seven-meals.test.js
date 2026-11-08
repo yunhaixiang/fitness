@@ -24,12 +24,12 @@ test('weekly meat, eggs, grains and portions match whole-package purchase cycles
  close(weekly('shrimp')*100,340); close(weekly('salmon')*100,320);
  close(weekly('ball')*85,907/3); close(weekly('dumpling')*92,454/2);
  close(weekly('egg'),12); close(weekly('potato')*100,300);
+ close(weekly('sweetpotato')*100,270);
  close(weekly('rice')*100,104); close(weekly('pasta')*85,100);
  close(weekly('noodle')*100,92); close(weekly('sauce')*125,300);
  close(weekly('chickpea')*100,340); close(weekly('spinach')*100,284);
  close(weekly('mushroom')*100,227); close(weekly('pc')*100,520);
- close(weekly('oil'),8.5); // 4.25 tsp each half-week, including all three fried eggs
- close(weekly('corn')*125,341);
+ close(weekly('oil'),9); // 4.5 tsp each half-week, including all three fried eggs
 });
 test('daily intake and deficit use the same meal data as the cards',()=>{
  const daily=(basis.mealKeys.reduce((s,k)=>s+2*Number(nutrition[k].kcal),0)+3*Number(nutrition.fruit_breakfast.kcal)+4*Number(nutrition.kiwi_breakfast.kcal)+7*Number(nutrition.outside_drink.kcal))/7;
