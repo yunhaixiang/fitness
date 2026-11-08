@@ -85,7 +85,7 @@ cooking: true
 <li data-en="Once the salmon is prepared, start preheating at 400°F for 4 minutes. Work on other short tasks meanwhile.">三文鱼备好后，启动400°F预热4分钟；期间可做其他短任务。</li>
 <li data-en="Confirm preheating is complete, then load the salmon promptly.">确认空气炸锅预热完成，随即放入三文鱼。</li>
 <li data-en="Air-fry at 400°F for about 8–10 minutes, to 70°C in the centre. Place the whole fillet in meal 6.">400°F烤约8–10分钟至中心70°C，整块放第6盘。</li>
-<li data-en="After the salmon, air-fry 1 frozen breaded haddock fillet at 400°F for 18–20 minutes until cooked through. Do not thaw or add oil. Place in meal 2.">三文鱼出锅后，取冷冻裹粉黑线鳕1片，无需解冻或加油，400°F烤18–20分钟至熟透，放第2盘。</li>
+<li data-en="After the salmon, air-fry 1 frozen breaded haddock fillet at 400°F for 14–16 minutes until cooked through, arranged in a single layer. Do not thaw or add oil. Place in meal 2.">三文鱼出锅后，取冷冻裹粉黑线鳕1片，无需解冻或加油，单层摆放，400°F烤14–16分钟至熟透，放第2盘。</li>
 </ol>
 
 <h2 id="pot-one" data-en="Pot 1">煮锅一线程</h2>
