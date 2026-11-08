@@ -64,7 +64,7 @@ if (shoppingTable) {
     row.dataset.restock = String(/按需|as needed/i.test(frequency));
     const cell = document.createElement('td');
     cell.className = 'check-cell';
-    if (name && originalName !== '每周合计' && row.dataset.restock !== 'true') {
+    if (name && originalName !== '每周合计') {
       const box = document.createElement('input');
       box.type = 'checkbox';
       box.setAttribute('aria-label', `已购买${name}`);
