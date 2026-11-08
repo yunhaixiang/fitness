@@ -50,3 +50,7 @@ python3 scripts/create-meal-plan.py plan-2 --name-zh '周计划 2' --name-en 'We
 `_data/cardio_plans.json` 保存两个有氧计划：计划 1 为 20 分钟 HIIT，约 200 kcal；计划 2 为 30 分钟 HIIT，约 300 kcal。各有对应的游泳、跑步机和自行车选项，每周四次。默认选中计划 2；`selectionRevision` 在此次恢复时一次性重置旧选择，随后保留用户选择。300 kcal 是用户采用的粗略规划情景，不是实测；原有逐动作估算保留在 `estimation.originalHiit` 和 `estimation.hiit`，新的预算依据写在 `planningOverride`，两套替代运动分别在 `alternatives` 和 `plan2Alternatives`。
 
 `_data/plan_metrics.yml` 的 `reference_cardio_weekly` 标明静态营养预算包含的有氧消耗。切换时只加减有氧差额，营养概览、消耗图、放纵餐赤字和今日安排一起更新。新增饮食计划会复制各自的基准预算；修改饮食热量时同时更新该计划的 `intake_daily`、`weekly_deficit_precise` 和显示值。
+
+## 七餐饮食计划的计算依据
+
+`_data/nutrition_basis.json` 保存七餐的食材系数、标签参考和假设；`_data/meal_nutrition.json` 是卡片数值。日均值按七餐各两次、混合水果早餐三次、奇异果早餐四次及餐外豆奶七次计算。每半周鸡蛋为三煮三煎，鸡腿四块分为1½、1½、1块；牛肉丸和虾各分两份。购物按购买周期折算；生重、干重与排骨含骨包装重量不混用。没有核实的新计划微量营养数据不沿用旧计划总数。

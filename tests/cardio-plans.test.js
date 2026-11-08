@@ -19,9 +19,9 @@ test('200 and 300 kcal budgets update deficits without double counting', () => {
  assert.equal(other.weeklyCardio, 800);
  assert.equal(current.weeklyBurn, baseline.weekly_burn);
  assert.equal(current.weeklyDeficit, baseline.weekly_deficit_precise);
- assert.equal(Math.round(current.dailyDeficit), 648);
- assert.equal(Math.round(other.dailyDeficit), 591);
- assert.equal(current.fatEquivalent.toFixed(2), '0.59');
+ assert.ok(Math.abs(current.dailyDeficit - (baseline.weekly_burn / 7 - baseline.intake_daily)) < 0.001);
+ assert.ok(Math.abs(other.dailyDeficit - (current.dailyDeficit - 400 / 7)) < 1e-8);
+ assert.ok(Math.abs(current.fatEquivalent - current.weeklyDeficit / 7700) < 1e-8);
  assert.ok(Math.abs(current.weeklyDeficit - other.weeklyDeficit - 400) < 1e-8);
 });
 test('each plan has its own HIIT and three matching alternatives', () => {

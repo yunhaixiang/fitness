@@ -7,13 +7,53 @@
 
   const en = window.fitnessI18n?.language === 'en';
   const t = (zh, english) => en ? english : zh;
-  const key = window.fitnessMealPlan?.storageKey('fitness-cooking-guide-v1') || 'fitness-cooking-guide-v1';
+  const key = window.fitnessMealPlan?.storageKey('fitness-cooking-guide-seven-meals-v1') || 'fitness-cooking-guide-seven-meals-v1';
   const taskMinutes = {
-    'prep-rice': 3, 'prep-chicken': 4, 'prep-potato': 3, 'prep-ribs': 3, 'prep-salmon': 4, 'prep-eggs': 1, 'prep-pasta': 1, 'prep-mushroom': 2, 'prep-spinach': 1, 'prep-tomato': 1, 'prep-meat': 1, 'prep-peas-carrots': 1,
-    rice: 50, 'oven-heat': 15, chicken: 27, potato: 40, ribs: 18,
-    'air-heat': 4, salmon: 8, haddock: 20, eggs: 8,
-    pasta: 8, mushroom: 7, spinach: 7,
-    tomato: 6, ground: 11, wrap: 6, finish: 15
+    "prep-rice": 3,
+    "prep-chicken": 3,
+    "prep-potato": 3,
+    "prep-ribs": 3,
+    "prep-meatballs": 3,
+    "prep-shrimp": 3,
+    "prep-salmon": 3,
+    "prep-eggs": 3,
+    "prep-pasta": 3,
+    "prep-dumplings": 3,
+    "prep-noodles": 15,
+    "prep-mushroom": 3,
+    "prep-spinach": 3,
+    "prep-tomato": 3,
+    "prep-meat": 3,
+    "prep-zucchini": 3,
+    "prep-peas-carrots": 3,
+    "prep-chickpeas": 3,
+    "prep-pepper": 3,
+    "prep-roma": 3,
+    "prep-bread": 3,
+    "prep-curry": 3,
+    "rice": 50,
+    "oven-heat": 15,
+    "chicken": 27,
+    "potato": 40,
+    "ribs": 20,
+    "meatballs": 20,
+    "shrimp": 12,
+    "air-heat": 4,
+    "salmon": 8,
+    "eggs": 9,
+    "dumplings": 8,
+    "pasta": 8,
+    "noodles": 1,
+    "mushroom": 7,
+    "peas": 3,
+    "curry": 6,
+    "spinach": 5,
+    "ground": 10,
+    "tomato": 4,
+    "fried-eggs": 5,
+    "wrap": 4,
+    "sandwich": 4,
+    "finish": 15
   };
   const tasks = plan.nodes.filter((node) => node.manual || Object.hasOwn(taskMinutes, node.id));
   const startEarly = ['egg-water', 'pasta-water', 'oven-heat', 'prep-rice', 'rice'];

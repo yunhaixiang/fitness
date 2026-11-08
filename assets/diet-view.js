@@ -33,7 +33,7 @@
     tabs.setAttribute('role', 'tablist');
     tabs.setAttribute('aria-label', label('选择星期', 'Choose a day'));
     const grid = make('div', 'diet-week-grid');
-    const kinds = ['wrap', 'rice', 'pasta', 'potato', 'rice', 'pasta', 'potato'];
+    const kinds = ['wrap', 'rice', 'pasta', 'potato', 'bread', 'dumpling', 'noodles'];
     const buttons = [];
     const panels = [];
     const nutrientFields = [
@@ -47,7 +47,8 @@
       ['sodium', '钠', 'Sodium', 'mg'],
       ['calcium', '钙', 'Calcium', 'mg'],
       ['iron', '铁', 'Iron', 'mg'],
-      ['potassium', '钾', 'Potassium', 'mg']
+      ['potassium', '钾', 'Potassium', 'mg'],
+      ['epaDha', 'EPA，DHA', 'EPA + DHA', 'g']
     ];
     const addNutrition = (card, meal) => {
       const nutrientPanel = make('section', 'diet-meal-nutrition');
@@ -55,6 +56,7 @@
       nutrientPanel.append(make('h5', '', label('每餐营养', 'Meal nutrition')));
       const metrics = make('dl', 'diet-nutrient-grid');
       for (const [field, zh, english, unit] of nutrientFields) {
+        if (meal[field] === undefined || meal[field] === null) continue;
         const metric = make('div', 'diet-nutrient');
         metric.append(make('dt', '', label(zh, english)));
         metric.append(make('dd', '', `${meal[field]} ${unit}`));

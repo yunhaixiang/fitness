@@ -48,7 +48,7 @@
       if (!row) continue;
       const drink = row.dataset.drink === 'fuze' ? label('Fuze Tea 无糖冰茶 250 mL', '250 mL Fuze Tea Zero Sugar')
         : label('Fresca 1罐（355 mL）', '1 can of Fresca (355 mL)');
-      const food = [...[3, 4, 5].map((index) => translated(cell(row, index))).filter(Boolean), drink].join(' · ');
+      const food = [...[3, 4, 5].map((index) => (en && row.cells[index]?.dataset.en ? row.cells[index].dataset.en : translated(cell(row, index)))).filter(Boolean), drink].join(' · ');
       addMeal(kind, label(zh, english), food, cell(row, 6));
       window.fitnessMealActivities.append(mealsRoot, day, kind, true);
     }

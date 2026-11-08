@@ -4,18 +4,19 @@
   // One slot is one minute. Active work uses the cook; heating can overlap.
   const horizon = 210;
   const beamWidth = 24;
-  const pans = new Set(['mushroom', 'spinach', 'tomato', 'ground']);
-  const continuous = new Set(['wrap', 'finish']);
+  const pans = new Set(['mushroom', 'spinach', 'tomato', 'ground', 'peas', 'curry']);
+  const continuous = new Set(['wrap', 'sandwich', 'fried-eggs', 'finish']);
   const activeTail = { tomato: 3 };
-  const capacity = { rice: 1, oven: 3, air: 1, 'pot-1': 1, 'pot-2': 1, saucepan: 1, wok: 1, counter: 1 };
+  const capacity = { rice: 1, oven: 3, air: 1, 'pot-1': 1, 'pot-2': 1, saucepan: 1, wok: 1, counter: 1, soak: 1 };
   const resource = (task) => {
+    if (task.resource) return task.resource;
     if (task.id === 'egg-water' || task.id === 'eggs') return 'pot-1';
     if (task.id === 'pasta-water' || task.id === 'pasta') return 'pot-2';
     return ({ 'small-wok': 'saucepan', 'large-wok': 'wok', prep: 'counter', wrap: 'counter', finish: 'counter' })[task.group] || task.group;
   };
   const demand = (task) => task.id === 'oven-heat' ? 3 : 1;
   const attentionOffsets = (task, minutes, stirEvery) => {
-    if (continuous.has(task.id) || task.group === 'prep') return Array.from({ length: minutes }, (_, index) => index);
+    if (continuous.has(task.id) || (task.group === 'prep' && !task.passive)) return Array.from({ length: minutes }, (_, index) => index);
     const slots = new Set([0, minutes - 1]);
     const tail = Math.max(1, minutes - (activeTail[task.id] || 0));
     if (pans.has(task.id)) for (let minute = stirEvery; minute < tail; minute += stirEvery) slots.add(minute);
@@ -57,7 +58,7 @@
       const machine = base.machines[resource(task)];
       for (let time = 0; time < Math.min(remaining, horizon); time++) machine[time] += demand(task);
       const tail = activeTail[id] || 0;
-      if (continuous.has(id) || task.group === 'prep' || (tail && remaining <= tail)) {
+      if (continuous.has(id) || (task.group === 'prep' && !task.passive) || (tail && remaining <= tail)) {
         for (let time = 0; time < Math.min(remaining, horizon); time++) base.human[time]++;
       } else {
         for (let time = Math.max(0, remaining - Math.max(1, tail)); time < remaining && time < horizon; time++) base.human[time]++;

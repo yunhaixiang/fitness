@@ -123,7 +123,7 @@ test('split preparation releases only its own cooking task', () => {
   assert.ok(result);
   assert.equal(result.starts.salmon, result.ends['air-heat']);
   for (const task of tasks.filter(t => t.group === 'prep')) assert.ok(Number.isFinite(result.ends[task.id]));
-  const prepItems = fs.readFileSync(require.resolve('../cooking.md'), 'utf8').split('## 备料与调味')[1].split('## 电饭煲')[0].match(/^\d+\. /gm);
+  const prepItems = fs.readFileSync(require.resolve('../cooking.md'), 'utf8').split('<h2 id="prep"')[1].split('<h2 id="rice"')[0].match(/<li /g);
   assert.equal(prepItems.length, tasks.filter(t => t.group === 'prep').length);
 });
 
@@ -161,21 +161,19 @@ test('saved grouped preparation expands without clearing cooking progress', () =
 });
 
 
-test('breaded haddock waits for the air fryer and portioning waits for both fish', () => {
+test('portioning waits for baked shrimp and meatballs as well as salmon', () => {
   const fs = require('node:fs'), vm = require('node:vm');
   const flow = fs.readFileSync(require.resolve('../assets/cooking-flow.js'), 'utf8');
   const guide = fs.readFileSync(require.resolve('../assets/cooking-guide.js'), 'utf8');
   const nodes = vm.runInNewContext(flow.match(/const nodes = (\[[\s\S]*?\n  \]);/)[1]);
   const minutes = vm.runInNewContext('(' + guide.match(/const taskMinutes = ({[\s\S]*?\n  });/)[1] + ')');
   const tasks = nodes.filter(n => n.manual || Object.hasOwn(minutes, n.id));
-  const done = tasks.filter(t => !['air-heat', 'salmon', 'haddock', 'finish'].includes(t.id)).map(t => t.id);
+  assert.ok(!nodes.some(n => n.id === 'haddock'));
+  const done = tasks.filter(t => !['shrimp', 'meatballs', 'finish'].includes(t.id)).map(t => t.id);
   const result = schedule({ tasks, minutes, done, running: {}, ready: true });
   assert.ok(result);
-  assert.equal(result.starts.salmon, result.ends['air-heat']);
-  assert.ok(result.starts.haddock >= result.ends.salmon);
-  assert.equal(result.ends.haddock - result.starts.haddock, 20);
-  assert.ok(result.starts.finish >= result.ends.haddock);
-  const replanned = schedule({ tasks, minutes, done: [...done, 'air-heat', 'salmon'], running: {}, ready: true });
-  assert.equal(replanned.starts.haddock, 0);
-  assert.ok(replanned.starts.finish >= replanned.ends.haddock);
+  assert.ok(result.starts.finish >= result.ends.shrimp);
+  assert.ok(result.starts.finish >= result.ends.meatballs);
+  for (const id of ['dumplings', 'eggs']) assert.equal(nodes.find(n=>n.id===id).resource, 'pot-1');
+  for (const id of ['pasta', 'noodles']) assert.equal(nodes.find(n=>n.id===id).resource, 'pot-2');
 });

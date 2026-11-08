@@ -1,7 +1,6 @@
-weekly_deficit: 4535
-weekly_deficit_display: "4,535"
-# Reference budget: Cardio Plan 2, 4 × 300 net kcal; user-selected planning scenario in cardio_plans.json.
+weekly_deficit: 4425
+weekly_deficit_display: "4,425"
 reference_cardio_weekly: 1200
 weekly_burn: 16635.96
-weekly_deficit_precise: 4535.43097
-intake_daily: 1728.65
+weekly_deficit_precise: 4424.96000
+intake_daily: 1744.42857

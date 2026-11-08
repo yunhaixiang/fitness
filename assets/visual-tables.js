@@ -31,7 +31,7 @@
     const shell = el('div', 'visual-shopping');
     const total = rows.at(-1);
     if (total && !total.querySelector('input')) shell.append(el('p', 'visual-shopping-total', titleCase(`${val(total, 1)} · ${val(total, 4)}`)));
-    shell.append(el('p', 'shopping-price-note', tr('2026-10-31 · Walmart公开标价；菠菜为提供的价格。合计按计划重量，不含按需补货、税费及配送。', 'Oct 31, 2026 · Walmart public prices; spinach price supplied by you. Total uses planned weights and excludes restocks, tax and delivery.')));
+    shell.append(el('p', 'shopping-price-note', tr('Walmart公开标价；新增商品核对于2026-11-07，菠菜为提供的价格。周费用按购买周期折算，不含按需补充的调料、税费及配送。', 'Walmart public prices; new items checked Nov 7, 2026. Spinach price supplied by you. Weekly cost averages listed purchase cycles; excludes as-needed seasonings, tax and delivery.')));
     const overview = el('div', 'visual-shopping-overview');
     const count = el('strong', 'visual-shopping-count');
     const countLabel = el('span', '', tr('项已买', 'Items Bought'));
@@ -383,7 +383,10 @@
       track.setAttribute('aria-hidden', 'true');
       const comparison = el('span', 'visual-nutrient-comparison');
       const hasNumericGoal = /\d/.test(recommendation);
-      if (recommendation === '–') {
+      if (!/\d/.test(current)) {
+        card.classList.add('is-unset');
+        comparison.textContent = tr('待核对', 'Pending Verification');
+      } else if (recommendation === '–') {
         card.classList.add('is-unset');
         comparison.textContent = tr('无可比较的每日目标', 'No daily goal to compare');
       } else if (!hasNumericGoal) {
