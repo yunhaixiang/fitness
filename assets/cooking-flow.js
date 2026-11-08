@@ -25,7 +25,6 @@
     {"id": "prep-rice", "label": ["备白米", "Prepare Rice"], "note": ["", ""], "group": "prep", "before": ["ready"], "link": "#cook-prep-rice", "minutes": 3},
     {"id": "prep-chicken", "label": ["备鸡大腿肉", "Prepare Chicken Thighs"], "note": ["", ""], "group": "prep", "before": ["ready"], "link": "#cook-prep-chicken", "minutes": 3},
     {"id": "prep-potato", "label": ["备土豆", "Prepare Potatoes"], "note": ["", ""], "group": "prep", "before": ["ready"], "link": "#cook-prep-potato", "minutes": 3},
-    {"id": "prep-sweetpotato", "label": ["备红薯", "Prepare Sweet Potato"], "note": ["", ""], "group": "prep", "before": ["ready"], "link": "#cook-prep-sweetpotato", "minutes": 3},
     {"id": "prep-ribs", "label": ["备排骨", "Prepare Ribs"], "note": ["", ""], "group": "prep", "before": ["ready"], "link": "#cook-prep-ribs", "minutes": 3},
     {"id": "prep-meatballs", "label": ["备牛肉丸", "Prepare Meatballs"], "note": ["", ""], "group": "prep", "before": ["ready"], "link": "#cook-prep-meatballs", "minutes": 3},
     {"id": "prep-shrimp", "label": ["备虾仁", "Prepare Shrimp"], "note": ["", ""], "group": "prep", "before": ["ready"], "link": "#cook-prep-shrimp", "minutes": 3},
@@ -49,7 +48,6 @@
     {"id": "oven-heat", "label": ["预热烤箱", "Preheat Oven"], "note": ["", ""], "group": "oven", "before": ["ready"], "link": "#cook-oven-heat", "minutes": 15},
     {"id": "chicken", "label": ["鸡大腿肉", "Chicken Thighs"], "note": ["", ""], "group": "oven", "before": ["oven-heat", "prep-chicken"], "link": "#cook-chicken", "minutes": 27},
     {"id": "potato", "label": ["土豆块", "Potato Wedges"], "note": ["", ""], "group": "oven", "before": ["oven-heat", "prep-potato"], "link": "#cook-potato", "minutes": 40},
-    {"id": "sweetpotato", "label": ["红薯块", "Sweet Potato Cubes"], "note": ["", ""], "group": "oven", "before": ["oven-heat", "prep-sweetpotato"], "link": "#cook-sweetpotato", "minutes": 30},
     {"id": "ribs", "label": ["BBQ排骨", "BBQ Ribs"], "note": ["", ""], "group": "oven", "before": ["oven-heat", "prep-ribs"], "link": "#cook-ribs", "minutes": 20},
     {"id": "meatballs", "label": ["牛肉丸", "Beef Meatballs"], "note": ["", ""], "group": "oven", "before": ["oven-heat", "prep-meatballs"], "link": "#cook-meatballs", "minutes": 20},
     {"id": "shrimp", "label": ["面包糠烤虾", "Panko-Baked Shrimp"], "note": ["", ""], "group": "oven", "before": ["oven-heat", "prep-shrimp"], "link": "#cook-shrimp", "minutes": 12},
@@ -72,7 +70,7 @@
     {"id": "fried-eggs", "label": ["煎蛋", "Fried Eggs"], "note": ["", ""], "group": "large-wok", "before": ["tomato", "prep-eggs"], "link": "#cook-fried-eggs", "minutes": 5},
     {"id": "wrap", "label": ["卷饼", "Wrap"], "note": ["", ""], "group": "wrap", "before": ["chicken", "eggs", "prep-chickpeas", "prep-pepper", "prep-bread"], "link": "#cook-wrap", "minutes": 4},
     {"id": "sandwich", "label": ["三明治", "Sandwich"], "note": ["", ""], "group": "wrap", "before": ["chicken", "fried-eggs", "prep-chickpeas", "prep-roma", "prep-bread"], "link": "#cook-sandwich", "minutes": 4},
-    {"id": "finish", "label": ["分盘、入冰箱、清洗", "Portion, Refrigerate and Clean"], "note": ["", ""], "group": "finish", "before": ["rice", "potato", "ribs", "meatballs", "shrimp", "salmon", "dumplings", "curry", "tomato", "wrap", "sandwich", "mushroom", "spinach", "sweetpotato"], "link": "#portions", "minutes": 15}
+    {"id": "finish", "label": ["分盘、入冰箱、清洗", "Portion, Refrigerate and Clean"], "note": ["", ""], "group": "finish", "before": ["rice", "potato", "ribs", "meatballs", "shrimp", "salmon", "dumplings", "curry", "tomato", "wrap", "sandwich", "mushroom", "spinach"], "link": "#portions", "minutes": 15}
   ];
   const groups = [
     {"id": "cold", "icon": "cold", "title": ["冷冻／解冻", "Freeze / Thaw"], "hint": ["择一", "Choose One Path"]},
@@ -218,7 +216,7 @@
   };
   detail.append(create('p', 'cooking-flow-prompt', t('选择任一步骤，查看它与其他厨具的衔接。', 'Choose a step to see how it connects to the other appliances.')));
 
-  const instructionSections = [["cold", "cold", ["cold-first", "cold-second"]], ["prep", "prep", ["prep-rice", "prep-chicken", "prep-potato", "prep-sweetpotato", "prep-ribs", "prep-meatballs", "prep-shrimp", "prep-salmon", "prep-eggs", "prep-pasta", "prep-dumplings", "prep-noodles", "prep-mushroom", "prep-spinach", "prep-tomato", "prep-meat", "prep-zucchini", "prep-peas-carrots", "prep-chickpeas", "prep-pepper", "prep-roma", "prep-bread", "prep-curry"]], ["rice", "rice", ["rice"]], ["oven", "oven", ["oven-heat", "chicken", "potato", "sweetpotato", "ribs", "meatballs", "shrimp"]], ["air-fryer", "air", ["air-heat", "salmon"]], ["pot-one", "pots", ["egg-water", "eggs", "dumpling-water", "dumplings"]], ["pot-two", "pots", ["pasta-water", "pasta", "noodle-water", "noodles"]], ["small-wok", "small-wok", ["mushroom", "peas", "curry"]], ["large-wok", "large-wok", ["spinach", "ground", "tomato", "fried-eggs"]], ["wraps", "wrap", ["wrap", "sandwich"]]];
+  const instructionSections = [["cold", "cold", ["cold-first", "cold-second"]], ["prep", "prep", ["prep-rice", "prep-chicken", "prep-potato", "prep-ribs", "prep-meatballs", "prep-shrimp", "prep-salmon", "prep-eggs", "prep-pasta", "prep-dumplings", "prep-noodles", "prep-mushroom", "prep-spinach", "prep-tomato", "prep-meat", "prep-zucchini", "prep-peas-carrots", "prep-chickpeas", "prep-pepper", "prep-roma", "prep-bread", "prep-curry"]], ["rice", "rice", ["rice"]], ["oven", "oven", ["oven-heat", "chicken", "potato", "ribs", "meatballs", "shrimp"]], ["air-fryer", "air", ["air-heat", "salmon"]], ["pot-one", "pots", ["egg-water", "eggs", "dumpling-water", "dumplings"]], ["pot-two", "pots", ["pasta-water", "pasta", "noodle-water", "noodles"]], ["small-wok", "small-wok", ["mushroom", "peas", "curry"]], ["large-wok", "large-wok", ["spinach", "ground", "tomato", "fried-eggs"]], ["wraps", "wrap", ["wrap", "sandwich"]]];
   for (const [headingId, group, steps] of instructionSections) {
     const heading = document.getElementById(headingId);
     let source = heading?.nextElementSibling;

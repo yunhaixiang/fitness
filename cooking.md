@@ -26,7 +26,6 @@ cooking: true
 <tr><td data-en="White Rice">白米饭</td><td>2</td></tr>
 <tr><td data-en="Ground Chicken, Zucchini and Tomato Spaghetti">鸡肉末、西葫芦、番茄意面</td><td>3</td></tr>
 <tr><td data-en="Potato Wedges">土豆块</td><td>4</td></tr>
-<tr><td data-en="Sweet Potato Cubes">红薯块</td><td>6</td></tr>
 <tr><td data-en="Boiled Dumplings">水饺</td><td>6</td></tr>
 <tr><td data-en="Curry Rice Noodles">咖喱扁米粉</td><td>7</td></tr>
 <tr><td data-en="Peas and Carrots">豌豆、胡萝卜</td><td>2、7</td></tr>
@@ -41,7 +40,7 @@ cooking: true
 
 <h2 id="cold" data-en="Freeze / Thaw">冷冻／解冻线程</h2>
 <ol>
-<li data-en="Freeze the second-half portions of chicken thighs, ground chicken, salmon, shrimp and ribs. Freeze the later chickpea portion once the can is opened and next week’s tomato sauce. Keep meatballs and dumplings frozen; freeze spare bread and tortillas. Refrigerate potatoes, vegetables and fruit; keep whole sweet potatoes in a cool, dry, ventilated place.">将后半周的鸡大腿肉、鸡肉末、三文鱼、虾仁和半盒排骨分装冷冻；鹰嘴豆开罐后冷冻后半周份，番茄酱冷冻下周份。牛肉丸、水饺保持冷冻；多余面包和卷饼皮分装冷冻。土豆、蔬菜和水果冷藏；完整红薯放阴凉、干燥、通风处。</li>
+<li data-en="Freeze the second-half portions of chicken thighs, ground chicken, salmon, shrimp and ribs. Freeze the later chickpea portion once the can is opened and next week’s tomato sauce. Keep meatballs and dumplings frozen; freeze spare bread and tortillas. Refrigerate potatoes, vegetables and fruit.">将后半周的鸡大腿肉、鸡肉末、三文鱼、虾仁和半盒排骨分装冷冻；鹰嘴豆开罐后冷冻后半周份，番茄酱冷冻下周份。牛肉丸、水饺保持冷冻；多余面包和卷饼皮分装冷冻。土豆、蔬菜和水果冷藏。</li>
 <li data-en="Move chicken thighs, ground chicken, salmon, shrimp, half the ribs and chickpeas to the fridge about 36 hours ahead. Thaw bread and tortillas as needed. Cook meatballs and dumplings from frozen.">提前约36小时将鸡大腿肉、鸡肉末、三文鱼、虾仁、半盒排骨和鹰嘴豆移入冷藏；面包和卷饼皮按需解冻。牛肉丸、水饺不解冻。</li>
 </ol>
 
@@ -50,14 +49,13 @@ cooking: true
 <li data-en="Rinse and drain 52 g dry rice. Use equal volumes of rice and water: about 65 mL water. Place in the rice cooker.">干米52 g淘洗沥干；米和水按体积1:1，加水约65 mL，放入电饭煲。</li>
 <li data-en="Pat dry and season 4 chicken thighs, 465 g total.">取鸡大腿肉4块，共465 g，擦干、调味。</li>
 <li data-en="Cut 150 g yellow potatoes into even wedges and season.">取黄土豆150 g，切成厚度接近的薯角，拌调味。</li>
-<li data-en="Wash and trim sweet potato; weigh 135 g, cut into 2 cm cubes and season.">红薯洗净去除坏皮，称取135 g，切约2 cm块，拌调味。</li>
 <li data-en="Use half the box of ribs, 300 g including bones and sauce. Add the packaged sauce and wrap in foil.">取半盒排骨300 g，淋包装内酱汁，裹好锡纸。</li>
 <li data-en="Place 151 g frozen meatballs on a baking tray.">取冷冻牛肉丸151 g，铺入烤盘。</li>
 <li data-en="Pat 170 g thawed shrimp dry; season with garlic powder and pepper. Mix 20 g panko with 1 tsp olive oil and spread over the shrimp.">取解冻虾仁170 g，擦干，拌蒜粉和黑胡椒。面包糠20 g拌橄榄油1茶匙，覆盖在虾仁上。</li>
 <li data-en="Pat dry and season one 160 g salmon fillet.">取三文鱼1块160 g，擦干、调味。</li>
 <li data-en="Set out 6 eggs: 3 for boiling and 3 for frying, kept whole.">取鸡蛋6个；3个水煮、3个煎，不打散。</li>
 <li data-en="Weigh 50 g dry spaghetti.">称干意面50 g。</li>
-<li data-en="Set aside 113.5 g frozen dumplings and return the rest to the freezer.">取冷冻水饺113.5 g，其余放回冷冻。</li>
+<li data-en="Set aside 7 Great Value frozen dumplings (168 g) and 26.25 mL included dipping sauce; return the rest to the freezer.">取Great Value冷冻水饺7个（168 g），备附带蘸酱26.25 mL，其余放回冷冻。</li>
 <li data-en="Soak 46 g dry rice noodles in hot water for 10–15 minutes until pliable, then drain.">称干扁米粉46 g，用热水浸泡10–15分钟至柔软，沥干。</li>
 <li data-en="Set out 113.5 g mushrooms and their seasonings.">备蘑菇半盒113.5 g和调味料。</li>
 <li data-en="Set out 142 g spinach and its seasonings.">备菠菜半袋142 g和调味料。</li>
@@ -83,7 +81,6 @@ cooking: true
 <table class="plan-table" ><thead><tr><th data-en="Food">食材</th><th data-en="Seasoning">调味</th></tr></thead><tbody>
 <tr><td data-en="Chicken Thighs">鸡大腿肉</td><td data-en="1/2 tsp Olive Oil, 1/8 tsp Salt, 1/2 tsp Garlic Powder, 1/2 tsp Onion Powder, 1 tsp Paprika, 1/2 tsp Oregano">橄榄油½茶匙，盐⅛茶匙，蒜粉½茶匙，洋葱粉½茶匙，红椒粉1茶匙，牛至½茶匙</td></tr>
 <tr><td data-en="Potato Wedges">土豆块</td><td data-en="1/4 tsp Olive Oil, 1/16 tsp Salt, 1/16 tsp Pepper, 1/8 tsp Garlic Powder, 1/8 tsp Onion Powder">橄榄油¼茶匙，盐1/16茶匙，黑胡椒1/16茶匙，蒜粉⅛茶匙，洋葱粉⅛茶匙</td></tr>
-<tr><td data-en="Sweet Potato Cubes">红薯块</td><td data-en="1/4 tsp Olive Oil, 1/16 tsp Salt, 1/16 tsp Pepper, 1/8 tsp Garlic Powder, 1/8 tsp Onion Powder">橄榄油¼茶匙，盐1/16茶匙，黑胡椒1/16茶匙，蒜粉⅛茶匙，洋葱粉⅛茶匙</td></tr>
 <tr><td data-en="Panko-Baked Shrimp">面包糠烤虾</td><td data-en="1 tsp Olive Oil, 1/4 tsp Garlic Powder, 1/8 tsp Pepper">橄榄油1茶匙，蒜粉¼茶匙，黑胡椒⅛茶匙</td></tr>
 </tbody></table>
 </div>
@@ -91,7 +88,6 @@ cooking: true
 <li data-en="Preheat to 400°F while preparing ingredients.">烤箱预热到400°F。备料可同时进行。</li>
 <li data-en="Roast at 400°F for 27 minutes, to 74°C in the centre. Divide the cooked meat 3:3:2 between meals 1, 5 and 7, equivalent to 1½, 1½ and 1 thigh. Shred the wrap and sandwich portions.">400°F烤27分钟，中心达74°C。熟肉按3:3:2分给第1、5、7盘，相当于1½、1½、1块；卷饼与三明治的肉掰碎。</li>
 <li data-en="Roast at 400°F for 35–40 minutes until tender and golden, turning halfway. Place in meal 4.">400°F烤约35–40分钟至内部软、表面金黄，中途翻面；放第4盘。</li>
-<li data-en="Roast sweet potato cubes in a single layer at 400°F for 25–30 minutes, turning halfway, until tender and lightly browned. Place in meal 6.">红薯块单层铺开，400°F烤约25–30分钟，中途翻面，至内部软、表面微焦；放第6盘。</li>
 <li data-en="Heat foil-wrapped ribs at 400°F for 15–20 minutes, to 74°C in the centre. Place in meal 4.">锡纸包好的排骨400°F烤15–20分钟至中心74°C，全部放第4盘。</li>
 <li data-en="Bake from frozen at 400°F, checking after 15–20 minutes for a 74°C centre; follow the pack if its directions differ. Split equally between meals 2 and 4.">冷冻直接入烤箱，400°F先烤15–20分钟，确认中心74°C；包装另有要求则按包装。均分到第2、4盘。</li>
 <li data-en="Bake in a single layer at 400°F for about 10–12 minutes until the shrimp are opaque and the panko is golden. Split equally between meals 2 and 7.">单层铺开，400°F烤约10–12分钟至虾肉不透明、面包糠金黄；均分到第2、7盘。</li>
@@ -114,7 +110,7 @@ cooking: true
 <li data-en="Bring water to a boil in Pot 1 before adding the eggs.">煮锅一烧水，水沸后下鸡蛋。</li>
 <li data-en="Boil for about 9 minutes until firm, cool and peel. Put one egg in each of meals 1, 3 and 7; crumble the egg for meal 1.">水开后煮约9分钟至蛋白蛋黄凝固，冷却剥壳；第1、3、7盘各1个，第1盘的掰碎。</li>
 <li data-en="After removing the eggs, refill with fresh water and bring to a boil.">鸡蛋出锅后换清水烧开。</li>
-<li data-en="Add frozen dumplings to boiling water and cook according to the pack, checking for a 74°C centre after about 6–8 minutes. Drain into meal 6.">冷冻水饺下沸水，按包装煮至中心74°C，约6–8分钟；沥干放第6盘。</li>
+<li data-en="Add frozen dumplings to boiling water and cook according to the pack, checking for a 74°C centre after about 6–8 minutes. Drain into meal 6 and pack the dipping sauce separately.">冷冻水饺下沸水，按包装煮至中心74°C，约6–8分钟；沥干放第6盘，蘸酱另装。</li>
 </ol>
 
 <h2 id="pot-two" data-en="Pot 2">煮锅二线程</h2>
