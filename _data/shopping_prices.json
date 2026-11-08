@@ -2,7 +2,7 @@
   "checked_on": "2026-10-31",
   "currency": "CAD",
   "scope": "Walmart Canada public prices; individual checked_on retained. Popeye spinach price supplied by user. Weekly subtotal averages routine purchase cycles. Bread assumes two slices total 70 g; weighed produce billed by actual weight. Excludes as-needed seasonings, tax and delivery. Not a London store live stock guarantee.",
-  "weekly_total_cad": "134.07",
+  "weekly_total_cad": "133.42",
   "items": [
     {
       "item": "去骨去皮鸡大腿肉",
@@ -315,14 +315,14 @@
       "item": "生虾仁",
       "price_cad": "10.98",
       "basis": "package",
-      "weekly_quantity": "1.058823529411764705882352941",
-      "weekly_cost_cad": "11.63",
+      "weekly_quantity": "1",
+      "weekly_cost_cad": "10.98",
       "source_type": "walmart_public",
       "source_url": "https://www.walmart.ca/en/ip/Great-Value-Wild-Argentinian-Large-Raw-Shrimp/6000202999819",
       "product_url": "https://www.walmart.ca/en/ip/Great-Value-Wild-Argentinian-Large-Raw-Shrimp/6000202999819",
       "checked_on": "2026-11-07",
-      "purchase_frequency_zh": "按需补充",
-      "purchase_frequency_en": "Restock as Needed"
+      "purchase_frequency_zh": "1袋 / 周",
+      "purchase_frequency_en": "1 Bag / Week"
     },
     {
       "item": "鸡肉蔬菜水饺",

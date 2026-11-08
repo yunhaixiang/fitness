@@ -51,7 +51,7 @@ cooking: true
 <li data-en="Cut 110 g yellow potatoes into even wedges and season.">取黄土豆110 g，切成厚度接近的薯角，拌调味。</li>
 <li data-en="Use half the box of ribs, 300 g including bones and sauce. Add the packaged sauce and wrap in foil.">取半盒排骨300 g，淋包装内酱汁，裹好锡纸。</li>
 <li data-en="Place 10 frozen meatballs (151 g) on a baking tray.">取冷冻牛肉丸10颗（151 g），铺入烤盘。</li>
-<li data-en="Pat 180 g thawed shrimp dry; season with garlic powder and pepper. Mix 20 g panko with 1 tsp olive oil and spread over the shrimp.">取解冻虾仁180 g，擦干，拌蒜粉和黑胡椒。面包糠20 g拌橄榄油1茶匙，覆盖在虾仁上。</li>
+<li data-en="Pat 170 g thawed shrimp dry; season with garlic powder and pepper. Mix 20 g panko with 1 tsp olive oil and spread over the shrimp.">取解冻虾仁170 g，擦干，拌蒜粉和黑胡椒。面包糠20 g拌橄榄油1茶匙，覆盖在虾仁上。</li>
 <li data-en="Pat dry and season one 160 g salmon fillet.">取三文鱼1块160 g，擦干、调味。</li>
 <li data-en="Set out 6 eggs: 3 for boiling and 3 for frying, kept whole.">取鸡蛋6个；3个水煮、3个煎，不打散。</li>
 <li data-en="Weigh 60 g dry spaghetti.">称干意面60 g。</li>

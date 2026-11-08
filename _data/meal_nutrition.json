@@ -90,16 +90,16 @@
       "label": "wrap"
     },
     "rice": {
-      "kcal": "665",
-      "protein": "50.1",
+      "kcal": "662",
+      "protein": "49.5",
       "carbs": "59.6",
-      "fat": "23.7",
+      "fat": "23.6",
       "saturatedFat": "7.9",
       "fibre": "6.0",
       "sugar": "4.8",
-      "sodium": "1253",
-      "cholesterol": "539",
-      "epaDha": "0.20",
+      "sodium": "1231",
+      "cholesterol": "533",
+      "epaDha": "0.19",
       "label": "rice"
     },
     "pasta": {
@@ -142,15 +142,15 @@
       "label": "dumpling"
     },
     "noodles": {
-      "kcal": "657",
-      "protein": "46.5",
+      "kcal": "655",
+      "protein": "45.9",
       "carbs": "63.7",
-      "fat": "22.6",
+      "fat": "22.5",
       "saturatedFat": "7.8",
       "fibre": "6.0",
       "sugar": "6.6",
-      "sodium": "1845",
-      "cholesterol": "403",
+      "sodium": "1823",
+      "cholesterol": "397",
       "epaDha": "0.22",
       "label": "noodles"
     }
