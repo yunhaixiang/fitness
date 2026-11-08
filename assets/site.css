@@ -610,3 +610,30 @@ html[data-theme=light] .cooking-guide-primary{color:#fff}
 .cardio-budget-link{display:block;margin-top:14px;font-size:12px;color:var(--muted)}
 .cardio-plan-switcher .meal-plan-control select{min-width:180px}
 @media(max-width:700px){.cardio-plan-switcher .meal-plan-control select{min-width:0}}
+
+/* Completion and next-step recommendations within task dependencies. */
+.cooking-progress{display:grid;gap:12px;margin-bottom:18px;padding:16px;border:1px solid var(--accent-border);border-radius:12px;background:var(--raised)}
+.cooking-progress-toolbar{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.cooking-progress-status{font-size:13px;color:var(--muted)}
+.cooking-progress progress{width:100%;height:8px;accent-color:var(--accent)}
+.cooking-progress-suggestion,.cooking-progress-options{display:grid;gap:8px;min-width:0}
+.cooking-progress-suggestion>strong,.cooking-progress-options>strong{font-size:13px}
+.cooking-progress-next{padding:12px;border:1px solid var(--accent);border-radius:8px;background:var(--accent-soft);color:var(--text);text-align:left;font:inherit;font-weight:700;overflow-wrap:anywhere}
+.cooking-progress-reason,.cooking-progress-warning{font-size:12px;color:var(--muted)}
+.cooking-flow-step-row.has-progress{grid-template-columns:32px minmax(0,1fr) 32px;align-items:stretch}
+.cooking-progress-check{display:grid;place-items:center;cursor:pointer;min-height:44px}
+.cooking-progress-check input{width:20px;height:20px;margin:0;accent-color:var(--accent);cursor:pointer}
+.cooking-progress-check input:disabled{cursor:default}
+.cooking-flow-step-row.is-complete{opacity:.48}
+.cooking-flow-step-row.is-recommended .cooking-flow-step{border-color:var(--accent);box-shadow:inset 3px 0 var(--accent)}
+.cooking-flow-step-row.is-available .cooking-progress-badge{color:var(--accent)}
+.cooking-progress-badge{font-size:10px!important}
+.cooking-progress button:focus-visible,.cooking-progress-check input:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+.cooking-flow-step-row[hidden]{display:none}
+@media(max-width:600px){.cooking-progress{padding:12px}.cooking-flow-step-row.has-progress{grid-template-columns:28px minmax(0,1fr) 28px}.cooking-progress-toolbar{gap:8px}}
+
+.cooking-progress-action{display:flex;gap:8px;align-items:stretch;min-width:0;max-width:100%}
+.cooking-progress-action>button:first-child{flex:1;min-width:0;overflow-wrap:anywhere}
+.cooking-progress-action>button:last-child{flex:none}
+.cooking-flow-step-row.is-running .cooking-flow-step{border-color:var(--gold)}
+.cooking-flow-step-row.is-running .cooking-progress-badge{color:var(--gold)}

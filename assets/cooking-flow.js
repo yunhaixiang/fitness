@@ -127,12 +127,12 @@
     const list = create('div', 'cooking-flow-steps');
     if (group.id === 'cold') {
       const choices = create('div', 'cooking-flow-branches cooking-flow-branches-two');
-      choices.append(step(members[0], 0), step(members[1], 1));
-      list.append(choices, create('span', 'cooking-flow-branch-label', t('任选一条路径 ↓', 'Choose either path ↓')), step(members[2], 2));
+      choices.append(step(byId.get('cold-first'), 0), step(byId.get('cold-second'), 1));
+      list.append(choices, create('span', 'cooking-flow-branch-label', t('完成准备后 ↓', 'After Preparation ↓')), step(byId.get('ready'), 2));
     } else if (group.id === 'oven') {
       const choices = create('div', 'cooking-flow-branches cooking-flow-branches-three');
       members.slice(1).forEach((node, index) => choices.append(step(node, index + 1)));
-      list.append(step(members[0], 0), create('span', 'cooking-flow-branch-label', t('预热后可安排 ↓', 'After preheating ↓')), choices);
+      list.append(step(members[0], 0), create('span', 'cooking-flow-branch-label', t('备料与预热可同时进行 ↓', 'Prepare Ingredients While Preheating ↓')), choices);
     } else if (group.id === 'pots') {
       const branches = create('div', 'cooking-flow-branches cooking-flow-branches-two');
       for (const [index, potNodes] of [members.filter(node => node.resource === "pot-1"), members.filter(node => (node.displayPot || node.resource) === "pot-2")].entries()) {
@@ -221,7 +221,7 @@
       title.append(create('span', 'cooking-detail-index', String(index + 1).padStart(2, '0')));
       title.append(create(heading.tagName === 'H3' ? 'h4' : 'h3', '', t(...node.label)));
       head.append(icon, title);
-      const instruction = source.children[index].textContent.trim().replace(/^[^：:]{1,24}[：:]\s*/, '');
+      const instruction = source.children[index].textContent.trim();
       card.append(head, create('p', 'cooking-detail-copy', instruction));
       grid.append(card);
     }
