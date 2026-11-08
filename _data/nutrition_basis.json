@@ -335,6 +335,18 @@
       2360,
       0,
       0
+    ],
+    "corn": [
+      70,
+      2,
+      15,
+      1,
+      0,
+      2,
+      3,
+      140,
+      0,
+      0
     ]
   },
   "recipes": [
@@ -366,13 +378,13 @@
       "oil": 0.5
     },
     {
-      "potato": 1.5,
       "ribs": 1.417857142857143,
       "ball": 0.889215294117647,
       "spinach": 0.71,
       "mushroom": 0.5675,
-      "oil": 0.625,
-      "salt": 0.0625
+      "oil": 0.375,
+      "salt": 0.0,
+      "corn": 1.364
     },
     {
       "bread": 1,
@@ -419,13 +431,15 @@
     "Label units: egg one large; tortilla one 61 g; bread two slices; oil/mayo/salt one teaspoon; meatballs 85 g; pasta 85 g; ribs 140 g edible; sauce 125 mL; dumplings 92 g; curry 18 g.",
     "Vegetable size assumptions: zucchini 200 g, half red pepper 75 g, Roma 120 g. Chickpeas 340 g drained per can. Meatballs use 907/12 g per meal. Shrimp reference is the actual 50 kcal/100 g package, not generic cooked shrimp.",
     "Oil: thighs 1/2 tsp, potatoes 1/2, shrimp 1, salmon 1/4, mushrooms 1/4, spinach 1/2, ground chicken 1/2, fried eggs 1 tsp per half-week. Salt: thighs 1/8 tsp, potatoes 1/8, salmon 1/16. Dry spices not quantified; no soy sauce or stock powder in this version.",
-    "EPA+DHA uses fish composition proxies. Missing calcium/iron/potassium/vitamin/iodine values in the revised main meals have not been filled from the retired plan. They remain pending instead of reporting stale totals."
+    "EPA+DHA uses fish composition proxies. Missing calcium/iron/potassium/vitamin/iodine values in the revised main meals have not been filled from the retired plan. They remain pending instead of reporting stale totals.",
+    "Corn: Walmart label image lists 70 kcal, 2 g protein, 15 g carbs, 1 g fat, 2 g fibre, 3 g sugar and 140 mg sodium per 125 mL. Half a 341 mL can is modelled as 1.364 servings (~95 kcal); drained yield is unverified, not assumed to equal 170.5 g. Meal 4 has no added potato oil or salt; potatoes for meal 6 use 1/4 tsp oil and 1/16 tsp salt per half-week."
   ],
   "sources": {
     "shrimp": "https://www.walmart.ca/en/ip/Great-Value-Wild-Argentinian-Large-Raw-Shrimp/6000202999819",
     "meatballs": "https://www.walmart.ca/en/ip/Our-Finest-Frozen-Lean-Angus-Meatballs-Appetizers/6000200192499",
     "curry": "https://www.sbfoods-worldwide.com/products/search/005.html",
     "dumplings": "https://siwinfoods.ca/dumplings-potstickers/",
-    "primo": "https://www.primofoods.com/primo/products.php?catid=23&id=40"
+    "primo": "https://www.primofoods.com/primo/products.php?catid=23&id=40",
+    "corn": "https://www.walmart.ca/en/ip/Great-Value-Whole-Kernel-Corn/10275085"
   }
 }

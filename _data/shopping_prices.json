@@ -2,7 +2,7 @@
   "checked_on": "2026-10-31",
   "currency": "CAD",
   "scope": "Walmart Canada public prices; individual checked_on retained. Popeye spinach price supplied by user. Weekly subtotal averages routine purchase cycles. Bread assumes two slices total 70 g; weighed produce billed by actual weight. Excludes as-needed seasonings, tax and delivery. Not a London store live stock guarantee.",
-  "weekly_total_cad": "133.49",
+  "weekly_total_cad": "134.28",
   "items": [
     {
       "item": "去骨去皮鸡大腿肉",
@@ -97,11 +97,11 @@
       "basis": "package",
       "source_url": "https://www.walmart.ca/en/ip/your-fresh-market-yellow-potatoes/6000196075652",
       "source_type": "walmart_public",
-      "weekly_quantity": "0.2643171806167401",
-      "weekly_cost_cad": "1.17",
+      "weekly_quantity": "0.13215859030837004",
+      "weekly_cost_cad": "0.59",
       "product_url": "https://www.walmart.ca/en/ip/your-fresh-market-yellow-potatoes/6000196075652",
-      "purchase_frequency_zh": "1袋 / 约3.8周；每周600 g",
-      "purchase_frequency_en": "1 Bag / About 3.8 Weeks; 600 g Weekly",
+      "purchase_frequency_zh": "1袋 / 约7.6周；每周300 g",
+      "purchase_frequency_en": "1 Bag / About 7.6 Weeks; 300 g Weekly",
       "checked_on": "2026-11-07"
     },
     {
@@ -440,6 +440,19 @@
       "checked_on": "2026-11-07",
       "purchase_frequency_zh": "1盒 / 约2.6周",
       "purchase_frequency_en": "1 Box / About 2.6 Weeks"
+    },
+    {
+      "item": "玉米",
+      "price_cad": "1.37",
+      "basis": "package",
+      "weekly_quantity": "1",
+      "weekly_cost_cad": "1.37",
+      "source_type": "walmart_public",
+      "source_url": "https://www.walmart.ca/en/ip/Great-Value-Whole-Kernel-Corn/10275085",
+      "product_url": "https://www.walmart.ca/en/ip/Great-Value-Whole-Kernel-Corn/10275085",
+      "checked_on": "2026-11-07",
+      "purchase_frequency_zh": "1罐 / 周",
+      "purchase_frequency_en": "1 Can / Week"
     }
   ],
   "updated_on": "2026-11-07"

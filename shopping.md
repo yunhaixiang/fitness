@@ -66,10 +66,10 @@ visual: true
 <td style="text-align: right;">1瓶 / 周</td>
 <td style="text-align: right;"><a href="https://www.walmart.ca/en/ip/Fuze-Iced-Tea-Zero-Sugar-Lemon-Bottle/39X12Q1LJGX0">$2.77</a></td>
 </tr>
-<tr data-weekly-cost="1.17" data-price-id="9">
+<tr data-weekly-cost="0.59" data-price-id="9">
 <td>土豆</td>
 <td><a href="https://www.walmart.ca/en/ip/your-fresh-market-yellow-potatoes/6000196075652">Your Fresh Market Yellow Potatoes</a><br>5 lb / 2.27 kg</td>
-<td data-en="1 Bag / About 3.8 Weeks; 600 g Weekly">1袋 / 约3.8周；每周600 g</td>
+<td data-en="1 Bag / About 7.6 Weeks; 300 g Weekly">1袋 / 约7.6周；每周300 g</td>
 <td style="text-align: right;"><a href="https://www.walmart.ca/en/ip/your-fresh-market-yellow-potatoes/6000196075652">$4.44</a></td>
 </tr>
 <tr data-price-id="10" data-weekly-cost="2.74">
@@ -205,11 +205,12 @@ visual: true
 <tr data-price-id="41" data-weekly-cost="0.40"><td data-en="Rice Noodles">扁米粉</td><td><a href="https://www.walmart.ca/en/ip/Erawan-Rice-Stick/6000199121439">Erawan Rice Stick</a><br><span data-en="454 g">454 g</span></td><td data-en="1 Pack / About 4.9 Weeks">1包 / 约4.9周</td><td><a href="https://www.walmart.ca/en/ip/Erawan-Rice-Stick/6000199121439">$1.97</a></td></tr>
 <tr data-price-id="42" data-weekly-cost="0.52"><td data-en="Panko Breadcrumbs">面包糠</td><td><a href="https://www.walmart.ca/en/ip/Great-Value-Panko-Japanese-Style-Bread-Crumbs/6000197072643">Great Value Panko Japanese Style Bread Crumbs</a><br><span data-en="227 g">227 g</span></td><td data-en="1 Pack / About 5.7 Weeks">1包 / 约5.7周</td><td><a href="https://www.walmart.ca/en/ip/Great-Value-Panko-Japanese-Style-Bread-Crumbs/6000197072643">$2.97</a></td></tr>
 <tr data-price-id="43" data-weekly-cost="1.55"><td data-en="Curry Roux">咖喱块</td><td><a href="https://www.walmart.ca/en/ip/S-B-Golden-curry-sauce-mix-medium-hot/6000198034558">S&amp;B Golden Curry Sauce Mix Medium Hot</a><br><span data-en="92 g">92 g</span></td><td data-en="1 Box / About 2.6 Weeks">1盒 / 约2.6周</td><td><a href="https://www.walmart.ca/en/ip/S-B-Golden-curry-sauce-mix-medium-hot/6000198034558">$3.97</a></td></tr>
+<tr data-price-id="44" data-weekly-cost="1.37"><td data-en="Corn">玉米</td><td><a href="https://www.walmart.ca/en/ip/Great-Value-Whole-Kernel-Corn/10275085">Great Value Whole Kernel Corn</a><br>341 mL</td><td data-en="1 Can / Week">1罐 / 周</td><td><a href="https://www.walmart.ca/en/ip/Great-Value-Whole-Kernel-Corn/10275085">$1.37</a></td></tr>
 <tr>
 <td>每周合计</td>
 <td>—</td>
 <td style="text-align: right;">—</td>
-<td style="text-align: right;">$133.49</td>
+<td style="text-align: right;">$134.28</td>
 </tr>
 </tbody>
 </table>

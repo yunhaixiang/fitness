@@ -25,7 +25,8 @@ cooking: true
 <tr><td data-en="Salmon">三文鱼</td><td data-en="6: 1 Fillet">6放1块</td></tr>
 <tr><td data-en="White Rice">白米饭</td><td>2</td></tr>
 <tr><td data-en="Ground Chicken, Zucchini and Tomato Spaghetti">鸡肉末、西葫芦、番茄意面</td><td>3</td></tr>
-<tr><td data-en="Potato Wedges">土豆块</td><td>4、6</td></tr>
+<tr><td data-en="Potato Wedges">土豆块</td><td>6</td>
+</tr><tr><td data-en="Corn">玉米</td><td>4</td></tr>
 <tr><td data-en="Boiled Dumplings">水饺</td><td>6</td></tr>
 <tr><td data-en="Curry Rice Noodles">咖喱扁米粉</td><td>7</td></tr>
 <tr><td data-en="Peas and Carrots">豌豆、胡萝卜</td><td>2、7</td></tr>
@@ -40,15 +41,15 @@ cooking: true
 
 <h2 id="cold" data-en="Freeze / Thaw">冷冻／解冻线程</h2>
 <ol>
-<li data-en="Freeze the second-half portions of chicken thighs, ground chicken, salmon, shrimp and ribs. Freeze the later chickpea portion once the can is opened and next week’s tomato sauce. Keep meatballs and dumplings frozen; freeze spare bread and tortillas. Refrigerate potatoes, vegetables and fruit.">将后半周的鸡大腿肉、鸡肉末、三文鱼、虾仁和半盒排骨分装冷冻；鹰嘴豆开罐后冷冻后半周份，番茄酱冷冻下周份。牛肉丸、水饺保持冷冻；多余面包和卷饼皮分装冷冻。土豆、蔬菜和水果冷藏。</li>
-<li data-en="Move chicken thighs, ground chicken, salmon, shrimp, half the ribs and chickpeas to the fridge about 36 hours ahead. Thaw bread and tortillas as needed. Cook meatballs and dumplings from frozen.">提前约36小时将鸡大腿肉、鸡肉末、三文鱼、虾仁、半盒排骨和鹰嘴豆移入冷藏；面包和卷饼皮按需解冻。牛肉丸、水饺不解冻。</li>
+<li data-en="Freeze the second-half portions of chicken thighs, ground chicken, salmon, shrimp and ribs. Freeze the later chickpea and corn portions once the can is opened and next week’s tomato sauce. Keep meatballs and dumplings frozen; freeze spare bread and tortillas. Refrigerate potatoes, vegetables and fruit.">将后半周的鸡大腿肉、鸡肉末、三文鱼、虾仁和半盒排骨分装冷冻；鹰嘴豆、玉米开罐后冷冻后半周份，番茄酱冷冻下周份。牛肉丸、水饺保持冷冻；多余面包和卷饼皮分装冷冻。土豆、蔬菜和水果冷藏。</li>
+<li data-en="Move chicken thighs, ground chicken, salmon, shrimp, half the ribs, chickpeas and corn to the fridge about 36 hours ahead. Thaw bread and tortillas as needed. Cook meatballs and dumplings from frozen.">提前约36小时将鸡大腿肉、鸡肉末、三文鱼、虾仁、半盒排骨、鹰嘴豆和玉米移入冷藏；面包和卷饼皮按需解冻。牛肉丸、水饺不解冻。</li>
 </ol>
 
 <h2 id="prep" data-en="Ingredient Prep">备料与调味</h2>
 <ol>
 <li data-en="Rinse and drain 52 g dry rice. Use equal volumes of rice and water: about 65 mL water. Place in the rice cooker.">干米52 g淘洗沥干；米和水按体积1:1，加水约65 mL，放入电饭煲。</li>
 <li data-en="Pat dry and season 4 chicken thighs, 465 g total.">取鸡大腿肉4块，共465 g，擦干、调味。</li>
-<li data-en="Cut 300 g yellow potatoes into even wedges and season.">取黄土豆300 g，切成厚度接近的薯角，拌调味。</li>
+<li data-en="Cut 150 g yellow potatoes into even wedges and season.">取黄土豆150 g，切成厚度接近的薯角，拌调味。</li>
 <li data-en="Use half the box of ribs, 300 g including bones and sauce. Add the packaged sauce and wrap in foil.">取半盒排骨300 g，淋包装内酱汁，裹好锡纸。</li>
 <li data-en="Place 151 g frozen meatballs on a baking tray.">取冷冻牛肉丸151 g，铺入烤盘。</li>
 <li data-en="Pat 170 g thawed shrimp dry; season with garlic powder and pepper. Mix 20 g panko with 1 tsp olive oil and spread over the shrimp.">取解冻虾仁170 g，擦干，拌蒜粉和黑胡椒。面包糠20 g拌橄榄油1茶匙，覆盖在虾仁上。</li>
@@ -68,6 +69,7 @@ cooking: true
 <li data-en="Wash and slice 1 Roma tomato.">罗马番茄1个，洗净切片。</li>
 <li data-en="Set out 1 large whole-wheat tortilla and 2 slices of whole-wheat bread.">取大号全麦卷饼皮1片、全麦面包2片。</li>
 <li data-en="Measure 18 g Golden Curry roux and 150 mL water.">称Golden Curry咖喱块18 g，备水150 mL。</li>
+<li data-en="Drain half a 341 mL can of corn.">取341 mL玉米罐头半罐，沥干。</li>
 </ol>
 
 <h2 id="rice" data-en="Rice Cooker">电饭煲线程</h2>
@@ -80,14 +82,14 @@ cooking: true
 <div class="table-wrap">
 <table class="plan-table" ><thead><tr><th data-en="Food">食材</th><th data-en="Seasoning">调味</th></tr></thead><tbody>
 <tr><td data-en="Chicken Thighs">鸡大腿肉</td><td data-en="1/2 tsp Olive Oil, 1/8 tsp Salt, 1/2 tsp Garlic Powder, 1/2 tsp Onion Powder, 1 tsp Paprika, 1/2 tsp Oregano">橄榄油½茶匙，盐⅛茶匙，蒜粉½茶匙，洋葱粉½茶匙，红椒粉1茶匙，牛至½茶匙</td></tr>
-<tr><td data-en="Potato Wedges">土豆块</td><td data-en="1/2 tsp Olive Oil, 1/8 tsp Salt, 1/8 tsp Pepper, 1/4 tsp Garlic Powder, 1/4 tsp Onion Powder">橄榄油½茶匙，盐⅛茶匙，黑胡椒⅛茶匙，蒜粉¼茶匙，洋葱粉¼茶匙</td></tr>
+<tr><td data-en="Potato Wedges">土豆块</td><td data-en="1/4 tsp Olive Oil, 1/16 tsp Salt, 1/16 tsp Pepper, 1/8 tsp Garlic Powder, 1/8 tsp Onion Powder">橄榄油¼茶匙，盐1/16茶匙，黑胡椒1/16茶匙，蒜粉⅛茶匙，洋葱粉⅛茶匙</td></tr>
 <tr><td data-en="Panko-Baked Shrimp">面包糠烤虾</td><td data-en="1 tsp Olive Oil, 1/4 tsp Garlic Powder, 1/8 tsp Pepper">橄榄油1茶匙，蒜粉¼茶匙，黑胡椒⅛茶匙</td></tr>
 </tbody></table>
 </div>
 <ol>
 <li data-en="Preheat to 400°F while preparing ingredients.">烤箱预热到400°F。备料可同时进行。</li>
 <li data-en="Roast at 400°F for 27 minutes, to 74°C in the centre. Divide the cooked meat 3:3:2 between meals 1, 5 and 7, equivalent to 1½, 1½ and 1 thigh. Shred the wrap and sandwich portions.">400°F烤27分钟，中心达74°C。熟肉按3:3:2分给第1、5、7盘，相当于1½、1½、1块；卷饼与三明治的肉掰碎。</li>
-<li data-en="Roast at 400°F for 35–40 minutes until tender and golden, turning halfway. Split equally between meals 4 and 6.">400°F烤约35–40分钟至内部软、表面金黄，中途翻面；均分到第4、6盘。</li>
+<li data-en="Roast at 400°F for 35–40 minutes until tender and golden, turning halfway. Place in meal 6.">400°F烤约35–40分钟至内部软、表面金黄，中途翻面；放第6盘。</li>
 <li data-en="Heat foil-wrapped ribs at 400°F for 15–20 minutes, to 74°C in the centre. Place in meal 4.">锡纸包好的排骨400°F烤15–20分钟至中心74°C，全部放第4盘。</li>
 <li data-en="Bake from frozen at 400°F, checking after 15–20 minutes for a 74°C centre; follow the pack if its directions differ. Split equally between meals 2 and 4.">冷冻直接入烤箱，400°F先烤15–20分钟，确认中心74°C；包装另有要求则按包装。均分到第2、4盘。</li>
 <li data-en="Bake in a single layer at 400°F for about 10–12 minutes until the shrimp are opaque and the panko is golden. Split equally between meals 2 and 7.">单层铺开，400°F烤约10–12分钟至虾肉不透明、面包糠金黄；均分到第2、7盘。</li>
@@ -133,6 +135,7 @@ cooking: true
 <li data-en="Add oil and seasoning to the saucepan and cook the mushrooms for 5–7 minutes. Split equally between meals 4 and 6.">小锅加油和调味，炒约5–7分钟；均分到第4、6盘。</li>
 <li data-en="Warm the peas and carrots with a splash of water. Put half in meal 2 and reserve half for the curry noodles.">加少量水把豌豆胡萝卜热透，一半放第2盘，另一半盛出留给咖喱米粉。</li>
 <li data-en="Heat the measured water, lower the heat and dissolve the curry roux. Simmer for about 5 minutes until smooth, then toss in the noodles and reserved peas and carrots. Place in meal 7.">水烧热后关小火，溶入咖喱块，再煮约5分钟至顺滑；加入扁米粉和留下的豌豆胡萝卜拌热，放第7盘。</li>
+<li data-en="Warm the drained corn with a splash of water for 2–3 minutes; place in meal 4.">玉米加少量水加热2–3分钟，放第4盘。</li>
 </ol>
 
 <h2 id="large-wok" data-en="Wok">大锅线程</h2>
