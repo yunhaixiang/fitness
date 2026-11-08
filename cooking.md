@@ -31,7 +31,7 @@ cooking: true
 <tr><td data-en="Curry Rice Noodles">咖喱扁米粉</td><td>7</td></tr>
 <tr><td data-en="Peas and Carrots">豌豆、胡萝卜</td><td>2、7</td></tr>
 <tr><td data-en="Tuna">金枪鱼</td><td>1、5</td></tr>
-<tr><td data-en="Red Bell Pepper">红甜椒</td><td>1</td></tr>
+<tr><td data-en="Orange Bell Pepper">橙甜椒</td><td>1</td></tr>
 <tr><td data-en="Roma Tomato">罗马番茄</td><td>5</td></tr>
 <tr><td data-en="Mushrooms">蘑菇</td><td>4、6</td></tr>
 <tr><td data-en="Spinach">菠菜</td><td>4、6</td></tr>
@@ -138,7 +138,7 @@ cooking: true
 
 <h2 id="wraps" data-en="Wrap and Sandwich">卷饼与三明治线程</h2>
 <ol>
-<li data-en="Open and drain 1 can of tuna, dividing it equally between the wrap and sandwich (about 55 g each). Mix the wrap portion with 2½ tsp Chipotle mayonnaise. Wash, deseed and slice half a red pepper. Fill 1 large tortilla with the tuna, meal 1’s shredded chicken, crumbled boiled egg and pepper; roll and place in meal 1.">金枪鱼1罐沥干，均分给卷饼和三明治，每份约55 g；卷饼份拌Chipotle蛋黄酱2½茶匙。半个红甜椒洗净去籽切细条，大号卷饼皮1片放入金枪鱼、第1盘的鸡腿肉、掰碎水煮蛋和红甜椒，卷好放第1盘。</li>
+<li data-en="Open and drain 1 can of tuna, dividing it equally between the wrap and sandwich (about 55 g each). Mix the wrap portion with 2½ tsp Chipotle mayonnaise. Wash, deseed and slice half an orange bell pepper. Fill 1 large tortilla with the tuna, meal 1’s shredded chicken, crumbled boiled egg and pepper; roll and place in meal 1.">金枪鱼1罐沥干，均分给卷饼和三明治，每份约55 g；卷饼份拌Chipotle蛋黄酱2½茶匙。半个橙甜椒洗净去籽切细条，大号卷饼皮1片放入金枪鱼、第1盘的鸡腿肉、掰碎水煮蛋和橙甜椒，卷好放第1盘。</li>
 <li data-en="Wash and slice 1 Roma tomato. Mix the reserved tuna with 2 tsp Chipotle mayonnaise. Fill 2 slices of whole-wheat bread with the tuna, meal 5’s chicken, fried egg and tomato; place in meal 5.">罗马番茄1个洗净切片；留下的金枪鱼拌Chipotle蛋黄酱2茶匙。全麦面包2片夹入金枪鱼、第5盘的鸡腿肉、煎蛋和番茄，放第5盘。</li>
 </ol>
 <!-- Cook to the product package directions where they differ. Rice noodle method: Erawan retailer directions (hot-water soak 10–15 min, boil 30–60 sec). Shrimp is an olive-oil/panko adaptation; oven times vary with size and loading. -->
