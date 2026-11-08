@@ -2,7 +2,7 @@
   "checked_on": "2026-10-31",
   "currency": "CAD",
   "scope": "Walmart Canada public prices; individual checked_on retained. Popeye spinach price supplied by user. Weekly subtotal averages routine purchase cycles. Bread assumes two slices total 70 g; weighed produce billed by actual weight. Excludes as-needed seasonings, tax and delivery. Not a London store live stock guarantee.",
-  "weekly_total_cad": "133.34",
+  "weekly_total_cad": "133.49",
   "items": [
     {
       "item": "去骨去皮鸡大腿肉",
@@ -209,10 +209,10 @@
       "source_url": "https://www.walmart.ca/en/ip/Great-Value-Long-Grain-White-Rice/4UD9P76BEQB4",
       "source_type": "walmart_public",
       "product_url": "https://www.walmart.ca/en/ip/Great-Value-Long-Grain-White-Rice/4UD9P76BEQB4",
-      "purchase_frequency_zh": "1袋 / 10周",
-      "purchase_frequency_en": "1 Bag / 10 Weeks",
-      "weekly_cost_cad": "0.35",
-      "weekly_quantity": "0.1"
+      "purchase_frequency_zh": "1袋 / 约8.7周",
+      "purchase_frequency_en": "1 Bag / About 8.7 Weeks",
+      "weekly_cost_cad": "0.40",
+      "weekly_quantity": "0.11555555555555555"
     },
     {
       "item": "高纤维谷物早餐",
@@ -406,14 +406,14 @@
       "item": "扁米粉",
       "price_cad": "1.97",
       "basis": "package",
-      "weekly_quantity": "0.15418502202643172",
-      "weekly_cost_cad": "0.30",
+      "weekly_quantity": "0.2026431718061674",
+      "weekly_cost_cad": "0.40",
       "source_type": "walmart_public",
       "source_url": "https://www.walmart.ca/en/ip/Erawan-Rice-Stick/6000199121439",
       "product_url": "https://www.walmart.ca/en/ip/Erawan-Rice-Stick/6000199121439",
       "checked_on": "2026-11-07",
-      "purchase_frequency_zh": "1包 / 约6.5周",
-      "purchase_frequency_en": "1 Pack / About 6.5 Weeks"
+      "purchase_frequency_zh": "1包 / 约4.9周",
+      "purchase_frequency_en": "1 Pack / About 4.9 Weeks"
     },
     {
       "item": "面包糠",

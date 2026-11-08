@@ -46,7 +46,7 @@ cooking: true
 
 <h2 id="prep" data-en="Ingredient Prep">备料与调味</h2>
 <ol>
-<li data-en="Rinse and drain 45 g dry rice. Use equal volumes of rice and water: about 56 mL water. Place in the rice cooker.">干米45 g淘洗沥干；米和水按体积1:1，加水约56 mL，放入电饭煲。</li>
+<li data-en="Rinse and drain 52 g dry rice. Use equal volumes of rice and water: about 65 mL water. Place in the rice cooker.">干米52 g淘洗沥干；米和水按体积1:1，加水约65 mL，放入电饭煲。</li>
 <li data-en="Pat dry and season 4 chicken thighs, 465 g total.">取鸡大腿肉4块，共465 g，擦干、调味。</li>
 <li data-en="Cut 300 g yellow potatoes into even wedges and season.">取黄土豆300 g，切成厚度接近的薯角，拌调味。</li>
 <li data-en="Use half the box of ribs, 300 g including bones and sauce. Add the packaged sauce and wrap in foil.">取半盒排骨300 g，淋包装内酱汁，裹好锡纸。</li>
@@ -56,7 +56,7 @@ cooking: true
 <li data-en="Set out 6 eggs: 3 for boiling and 3 for frying, kept whole.">取鸡蛋6个；3个水煮、3个煎，不打散。</li>
 <li data-en="Weigh 50 g dry spaghetti.">称干意面50 g。</li>
 <li data-en="Set aside 113.5 g frozen dumplings and return the rest to the freezer.">取冷冻水饺113.5 g，其余放回冷冻。</li>
-<li data-en="Soak 35 g dry rice noodles in hot water for 10–15 minutes until pliable, then drain.">称干扁米粉35 g，用热水浸泡10–15分钟至柔软，沥干。</li>
+<li data-en="Soak 46 g dry rice noodles in hot water for 10–15 minutes until pliable, then drain.">称干扁米粉46 g，用热水浸泡10–15分钟至柔软，沥干。</li>
 <li data-en="Set out 113.5 g mushrooms and their seasonings.">备蘑菇半盒113.5 g和调味料。</li>
 <li data-en="Set out 142 g spinach and its seasonings.">备菠菜半袋142 g和调味料。</li>
 <li data-en="Measure 150 mL tomato-basil pasta sauce.">量番茄意面酱150 mL。</li>
