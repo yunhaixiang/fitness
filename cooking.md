@@ -37,7 +37,6 @@ cooking: true
 <tr><td data-en="Spinach">菠菜</td><td>4、6</td></tr>
 </tbody></table>
 </div>
-<p data-en="Finish: Portion, Refrigerate and Clean">收尾：分盘、入冰箱、清洗</p>
 
 <h2 id="cold" data-en="Freeze / Thaw">冷冻／解冻线程</h2>
 <ol>

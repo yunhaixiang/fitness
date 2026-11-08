@@ -188,6 +188,17 @@
     card.append(head);
     if (seasoningNotes.has(group.id)) card.append(create('p', 'cooking-flow-seasoning-note', seasoningNotes.get(group.id)));
     card.append(list);
+    if (group.id === 'finish') {
+      const heading = document.getElementById('portions');
+      if (heading) {
+        const content = [];
+        for (let child = heading.nextElementSibling; child && !/^H[1-3]$/.test(child.tagName); child = child.nextElementSibling) content.push(child);
+        const title = create('h4', 'cooking-finish-portions-title', heading.textContent);
+        title.id = 'portions';
+        heading.remove();
+        card.append(title, ...content);
+      }
+    }
     cards.append(card);
     cardElements.set(group.id, card);
   }
