@@ -349,30 +349,31 @@
       "salt": 0.046875
     },
     {
-      "rice": 0.52,
-      "ball": 0.889215294117647,
-      "shrimp": 0.85,
+      "rice": 0.45,
+      "ball": 1.0670588235294118,
+      "shrimp": 0.9,
       "panko": 0.1,
       "egg": 2,
       "pc": 1.3,
       "oil": 1.1666666666666665
     },
     {
-      "pasta": 0.5882352941176471,
+      "pasta": 0.7058823529411765,
       "ground": 2.27,
-      "egg": 1,
+      "egg": 0,
       "zucchini": 2,
       "sauce": 1.2,
-      "oil": 0.5
+      "oil": 1
     },
     {
-      "potato": 1.5,
+      "potato": 1.1,
       "ribs": 1.417857142857143,
-      "ball": 0.889215294117647,
+      "ball": 0.7113725490196079,
       "spinach": 0.71,
       "mushroom": 0.5675,
       "oil": 0.625,
-      "salt": 0.0625
+      "salt": 0.0625,
+      "egg": 1
     },
     {
       "bread": 1,
@@ -393,8 +394,8 @@
       "salt": 0.0625
     },
     {
-      "noodle": 0.46,
-      "shrimp": 0.85,
+      "noodle": 0.42,
+      "shrimp": 0.9,
       "panko": 0.1,
       "thigh": 1.1625,
       "egg": 1,
@@ -416,10 +417,11 @@
   "notes": [
     "Planning estimates, not measurements. Ingredient units: 100 g unless specified below; raw meat weights and dry grains. Ribs use 397 g edible meat and sauce per 600 g bone-in package; this yield is an assumption.",
     "Label units: egg one large; tortilla one 61 g; bread two slices; oil/mayo/salt one teaspoon; meatballs 85 g; pasta 85 g; ribs 140 g edible; sauce 125 mL; dumplings four pieces (96 g) WITH 15 mL included dipping sauce; curry 18 g.",
-    "Vegetable size assumptions: zucchini 200 g, half red pepper 75 g, Roma 120 g. Chickpeas 340 g drained per can. Meatballs use 907/12 g per meal. Shrimp reference is the actual 50 kcal/100 g package, not generic cooked shrimp.",
-    "Oil: thighs 1/2 tsp, potatoes 1/4, shrimp 1, salmon 1/4, mushrooms 1/4, spinach 1/2, ground chicken 1/2, fried eggs 1 tsp per half-week. Salt: thighs 1/8 tsp, potatoes 1/16, salmon 1/16. Dry spices not quantified; no soy sauce or stock powder in this version.",
+    "Vegetable size assumptions: zucchini 200 g, half red pepper 75 g, Roma 120 g. Chickpeas 340 g drained per can. Meatballs average 907/60 g each: six in meal 2, four in meal 4 per half-week. Shrimp reference is the actual 50 kcal/100 g package, not generic cooked shrimp.",
+    "Oil: thighs 1/2 tsp, potatoes 1/4, shrimp 1, salmon 1/4, mushrooms 1/4, spinach 1/2, ground chicken 1, fried eggs 1 tsp per half-week. Salt: thighs 1/8 tsp, potatoes 1/16, salmon 1/16. Dry spices not quantified; no soy sauce or stock powder in this version.",
     "EPA+DHA uses fish composition proxies. Missing calcium/iron/potassium/vitamin/iodine values in the revised main meals have not been filled from the retired plan. They remain pending instead of reporting stale totals.",
-    "Great Value Chicken & Vegetable Potstickers 1.13 kg: verified Walmart nutrition image, 200 kcal / 4 dumplings (96 g) WITH 15 mL sauce. Meal 6 uses seven pieces (168 g) plus 26.25 mL sauce; sauce is included in the nutrition figures. No sweet potatoes or their oil/salt. Shopping cost assumes net package includes sauce and sauce density 1 g/mL; 388.5 g combined product used weekly."
+    "Great Value Chicken & Vegetable Potstickers 1.13 kg: verified Walmart nutrition image, 200 kcal / 4 dumplings (96 g) WITH 15 mL sauce. Meal 6 uses seven pieces (168 g) plus 26.25 mL sauce; sauce is included in the nutrition figures. No sweet potatoes or their oil/salt. Shopping cost assumes net package includes sauce and sauce density 1 g/mL; 388.5 g combined product used weekly.",
+    "Balanced portions: rice 45 g dry, pasta 60 g dry, potatoes 110 g raw, noodles 42 g dry. Boiled eggs in meals 1, 4 and 7. Shrimp 180 g raw per half-week, cooked together with 20 g panko and split equally between meals 2 and 7 (90 g raw equivalent each); 360 g shrimp weekly, restock frozen bags as needed."
   ],
   "sources": {
     "shrimp": "https://www.walmart.ca/en/ip/Great-Value-Wild-Argentinian-Large-Raw-Shrimp/6000202999819",

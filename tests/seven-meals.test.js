@@ -21,15 +21,15 @@ test('weekly meat, eggs, grains and portions match whole-package purchase cycles
  const weekly=food=>basis.recipes.reduce((s,r)=>s+2*(r[food]||0),0);
  const close=(a,b)=>assert.ok(Math.abs(a-b)<.01,`${a} != ${b}`);
  close(weekly('thigh')*100,930); close(weekly('ground')*100,454);
- close(weekly('shrimp')*100,340); close(weekly('salmon')*100,320);
+ close(weekly('shrimp')*100,360); close(weekly('salmon')*100,320);
  close(weekly('ball')*85,907/3); close(weekly('dumpling')*96,336);
- close(weekly('egg'),12); close(weekly('potato')*100,300);
+ close(weekly('egg'),12); close(weekly('potato')*100,220);
  close(weekly('sweetpotato'),0);
- close(weekly('rice')*100,104); close(weekly('pasta')*85,100);
- close(weekly('noodle')*100,92); close(weekly('sauce')*125,300);
+ close(weekly('rice')*100,90); close(weekly('pasta')*85,120);
+ close(weekly('noodle')*100,84); close(weekly('sauce')*125,300);
  close(weekly('chickpea')*100,340); close(weekly('spinach')*100,284);
  close(weekly('mushroom')*100,227); close(weekly('pc')*100,520);
- close(weekly('oil'),8.5); // 4.25 tsp each half-week, including all three fried eggs
+ close(weekly('oil'),9.5); // 4.75 tsp each half-week, including all three fried eggs
 });
 test('daily intake and deficit use the same meal data as the cards',()=>{
  const daily=(basis.mealKeys.reduce((s,k)=>s+2*Number(nutrition[k].kcal),0)+3*Number(nutrition.fruit_breakfast.kcal)+4*Number(nutrition.kiwi_breakfast.kcal)+7*Number(nutrition.outside_drink.kcal))/7;

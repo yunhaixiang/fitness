@@ -66,10 +66,10 @@ visual: true
 <td style="text-align: right;">1瓶 / 周</td>
 <td style="text-align: right;"><a href="https://www.walmart.ca/en/ip/Fuze-Iced-Tea-Zero-Sugar-Lemon-Bottle/39X12Q1LJGX0">$2.77</a></td>
 </tr>
-<tr data-weekly-cost="0.59" data-price-id="9">
+<tr data-weekly-cost="0.43" data-price-id="9">
 <td>土豆</td>
 <td><a href="https://www.walmart.ca/en/ip/your-fresh-market-yellow-potatoes/6000196075652">Your Fresh Market Yellow Potatoes</a><br>5 lb / 2.27 kg</td>
-<td data-en="1 Bag / About 7.6 Weeks; 300 g Weekly">1袋 / 约7.6周；每周300 g</td>
+<td data-en="1 Bag / About 10.3 Weeks; 220 g Weekly">1袋 / 约10.3周；每周220 g</td>
 <td style="text-align: right;"><a href="https://www.walmart.ca/en/ip/your-fresh-market-yellow-potatoes/6000196075652">$4.44</a></td>
 </tr>
 <tr data-price-id="10" data-weekly-cost="2.74">
@@ -108,10 +108,10 @@ visual: true
 <td style="text-align: right;">8个 / 周</td>
 <td style="text-align: right;"><a href="https://www.walmart.ca/en/ip/kiwi/6000196794990">$0.97</a></td>
 </tr>
-<tr data-weekly-cost="0.28" data-price-id="16">
+<tr data-weekly-cost="0.34" data-price-id="16">
 <td>意面</td>
 <td><a href="https://www.walmart.ca/en/ip/PRIMO-SPAGHETTI/1YCQ0A4KHLLW">Primo Spaghetti</a><br>454 g / 包</td>
-<td data-en="1 Pack / About 4.5 Weeks">1包 / 约4.5周</td>
+<td data-en="1 Pack / About 3.8 Weeks">1包 / 约3.8周</td>
 <td style="text-align: right;"><a href="https://www.walmart.ca/en/ip/PRIMO-SPAGHETTI/1YCQ0A4KHLLW">$1.27</a></td>
 </tr>
 <tr data-weekly-cost="0.86" data-price-id="17">
@@ -126,10 +126,10 @@ visual: true
 <td style="text-align: right;">按需补</td>
 <td style="text-align: right;"><a href="https://www.walmart.ca/en/ip/Hellmann-s-Chipotle-Mayonnaise-Mild-Dressing-340ml/5NDTYWNJRQ1Y">$5.47</a></td>
 </tr>
-<tr data-weekly-cost="0.40" data-price-id="19">
+<tr data-weekly-cost="0.35" data-price-id="19">
 <td>白米</td>
 <td><a href="https://www.walmart.ca/en/ip/Great-Value-Long-Grain-White-Rice/4UD9P76BEQB4">Great Value Long Grain White Rice</a><br>900 g / 袋</td>
-<td data-en="1 Bag / About 8.7 Weeks">1袋 / 约8.7周</td>
+<td data-en="1 Bag / 10 Weeks">1袋 / 10周</td>
 <td style="text-align: right;"><a href="https://www.walmart.ca/en/ip/Great-Value-Long-Grain-White-Rice/4UD9P76BEQB4">$3.47</a></td>
 </tr>
 <tr data-weekly-cost="2.73" data-price-id="20">
@@ -195,21 +195,21 @@ visual: true
 <td style="text-align: right;"><a href="https://www.walmart.ca/fr/ip/leanfit-sport-creatine-monohydrate-en-poudre-non-aromatis-300-g-5-g-de-cratine-par-portion-certification-informed-choice-cratine-micronise-et-de-quali/6000208594600">$32.97</a></td>
 </tr>
 <tr data-price-id="33" data-weekly-cost="4.28"><td data-en="Beef Meatballs">牛肉丸</td><td><a href="https://www.walmart.ca/en/ip/Our-Finest-Frozen-Lean-Angus-Meatballs-Appetizers/6000200192499">Our Finest Fully Cooked Lean Angus Beef Meatballs</a><br><span data-en="907 g / 60 Pieces">907 g / 60 Pieces</span></td><td data-en="1 Bag / 3 Weeks">1袋 / 3周</td><td><a href="https://www.walmart.ca/en/ip/Our-Finest-Frozen-Lean-Angus-Meatballs-Appetizers/6000200192499">$12.84</a></td></tr>
-<tr data-price-id="34" data-weekly-cost="10.98"><td data-en="Raw Shrimp">生虾仁</td><td><a href="https://www.walmart.ca/en/ip/Great-Value-Wild-Argentinian-Large-Raw-Shrimp/6000202999819">Great Value Wild Argentinian Large Raw Shrimp</a><br><span data-en="340 g">340 g</span></td><td data-en="1 Bag / Week">1袋 / 周</td><td><a href="https://www.walmart.ca/en/ip/Great-Value-Wild-Argentinian-Large-Raw-Shrimp/6000202999819">$10.98</a></td></tr>
+<tr data-price-id="34" data-weekly-cost="11.63"><td data-en="Raw Shrimp">生虾仁</td><td><a href="https://www.walmart.ca/en/ip/Great-Value-Wild-Argentinian-Large-Raw-Shrimp/6000202999819">Great Value Wild Argentinian Large Raw Shrimp</a><br><span data-en="340 g">340 g</span></td><td data-en="Restock as Needed">按需补充</td><td><a href="https://www.walmart.ca/en/ip/Great-Value-Wild-Argentinian-Large-Raw-Shrimp/6000202999819">$10.98</a></td></tr>
 <tr data-price-id="35" data-weekly-cost="3.43"><td data-en="Chicken and Vegetable Dumplings">鸡肉蔬菜水饺</td><td><a href="https://www.walmart.ca/en/ip/Great-Value-Frozen-Chicken-Vegetable-Potstickers/6O52P9Y77G03">Great Value Frozen Chicken &amp; Vegetable Potstickers</a><br><span data-en="1.13 kg">1.13 kg</span></td><td data-en="Restock as Needed">按需补充</td><td><a href="https://www.walmart.ca/en/ip/Great-Value-Frozen-Chicken-Vegetable-Potstickers/6O52P9Y77G03">$9.98</a></td></tr>
 <tr data-price-id="36" data-weekly-cost="0.56"><td data-en="Whole-Wheat Bread">全麦面包</td><td><a href="https://www.walmart.ca/en/ip/Dempster-s-100-Whole-Wheat-Bread-675-g/6000191268657">Dempster’s 100% Whole Wheat Bread</a><br><span data-en="675 g">675 g</span></td><td data-en="4 Slices / Week; Freeze the Rest">每周4片；剩余冷冻</td><td><a href="https://www.walmart.ca/en/ip/Dempster-s-100-Whole-Wheat-Bread-675-g/6000191268657">$2.68</a></td></tr>
 <tr data-price-id="37" data-weekly-cost="1.48"><td data-en="Chickpeas">鹰嘴豆</td><td><a href="https://www.walmart.ca/en/ip/Great-Value-Chick-Peas/10275238">Great Value Chick Peas</a><br><span data-en="540 mL">540 mL</span></td><td data-en="1 Can / Week">1罐 / 周</td><td><a href="https://www.walmart.ca/en/ip/Great-Value-Chick-Peas/10275238">$1.48</a></td></tr>
 <tr data-price-id="38" data-weekly-cost="1.17"><td data-en="Red Bell Pepper">红甜椒</td><td><a href="https://www.walmart.ca/en/ip/SUNSET-Red-Bell-Pepper/6000191286439">SUNSET Red Bell Pepper</a><br><span data-en="Sold Individually">单颗售卖</span></td><td data-en="1 / Week">1个 / 周</td><td><a href="https://www.walmart.ca/en/ip/SUNSET-Red-Bell-Pepper/6000191286439">$1.17 / Avg.</a></td></tr>
 <tr data-price-id="39" data-weekly-cost="1.32"><td data-en="Zucchini">西葫芦</td><td><a href="https://www.walmart.ca/en/ip/Zucchini-Green/6000191270110">Green Zucchini</a><br><span data-en="Sold Individually">单颗售卖</span></td><td data-en="2 / Week">2根 / 周</td><td><a href="https://www.walmart.ca/en/ip/Zucchini-Green/6000191270110">$0.66 / Avg.</a></td></tr>
 <tr data-price-id="40" data-weekly-cost="1.04"><td data-en="Roma Tomato">罗马番茄</td><td><a href="https://www.walmart.ca/en/ip/Tomato-Roma-Sold-in-singles-0-10-0-14-KG/6000191272055">Roma Tomato</a><br><span data-en="Sold Individually">单颗售卖</span></td><td data-en="2 / Week">2个 / 周</td><td><a href="https://www.walmart.ca/en/ip/Tomato-Roma-Sold-in-singles-0-10-0-14-KG/6000191272055">$0.52 / Avg.</a></td></tr>
-<tr data-price-id="41" data-weekly-cost="0.40"><td data-en="Rice Noodles">扁米粉</td><td><a href="https://www.walmart.ca/en/ip/Erawan-Rice-Stick/6000199121439">Erawan Rice Stick</a><br><span data-en="454 g">454 g</span></td><td data-en="1 Pack / About 4.9 Weeks">1包 / 约4.9周</td><td><a href="https://www.walmart.ca/en/ip/Erawan-Rice-Stick/6000199121439">$1.97</a></td></tr>
+<tr data-price-id="41" data-weekly-cost="0.36"><td data-en="Rice Noodles">扁米粉</td><td><a href="https://www.walmart.ca/en/ip/Erawan-Rice-Stick/6000199121439">Erawan Rice Stick</a><br><span data-en="454 g">454 g</span></td><td data-en="1 Pack / About 5.4 Weeks">1包 / 约5.4周</td><td><a href="https://www.walmart.ca/en/ip/Erawan-Rice-Stick/6000199121439">$1.97</a></td></tr>
 <tr data-price-id="42" data-weekly-cost="0.52"><td data-en="Panko Breadcrumbs">面包糠</td><td><a href="https://www.walmart.ca/en/ip/Great-Value-Panko-Japanese-Style-Bread-Crumbs/6000197072643">Great Value Panko Japanese Style Bread Crumbs</a><br><span data-en="227 g">227 g</span></td><td data-en="1 Pack / About 5.7 Weeks">1包 / 约5.7周</td><td><a href="https://www.walmart.ca/en/ip/Great-Value-Panko-Japanese-Style-Bread-Crumbs/6000197072643">$2.97</a></td></tr>
 <tr data-price-id="43" data-weekly-cost="1.55"><td data-en="Curry Roux">咖喱块</td><td><a href="https://www.walmart.ca/en/ip/S-B-Golden-curry-sauce-mix-medium-hot/6000198034558">S&amp;B Golden Curry Sauce Mix Medium Hot</a><br><span data-en="92 g">92 g</span></td><td data-en="1 Box / About 2.6 Weeks">1盒 / 约2.6周</td><td><a href="https://www.walmart.ca/en/ip/S-B-Golden-curry-sauce-mix-medium-hot/6000198034558">$3.97</a></td></tr>
 <tr>
 <td>每周合计</td>
 <td>—</td>
 <td style="text-align: right;">—</td>
-<td style="text-align: right;">$133.61</td>
+<td style="text-align: right;">$134.07</td>
 </tr>
 </tbody>
 </table>
