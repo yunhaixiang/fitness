@@ -656,3 +656,8 @@ html[data-theme=light] .cooking-guide-primary{color:#fff}
 .cooking-flow-card-finish{grid-column:1/-1}
 .cooking-flow-card .cooking-finish-portions-title{margin:18px 0 10px;font-size:14px;color:var(--thread-accent)}
 .cooking-flow-card-finish>.visual-card-grid{margin-bottom:0}
+
+.cooking-flow-step-row.is-recommended .cooking-flow-step{background:var(--accent-soft);border-color:var(--accent);box-shadow:inset 4px 0 var(--accent)}
+.cooking-flow-step-row.is-recommended>.cooking-flow-instructions{border-color:var(--accent);background:color-mix(in srgb,var(--accent) 7%,var(--surface))}
+.cooking-flow-step.is-before{border-color:var(--gold);box-shadow:inset 3px 0 var(--gold)}
+.cooking-flow-step.is-after{border-color:var(--green);box-shadow:inset 3px 0 var(--green)}

@@ -110,13 +110,11 @@
     return element;
   };
   root.replaceChildren();
-  const intro = create('p', 'cooking-flow-intro', t('点选步骤，查看前置任务与后续任务。', 'Select a step to see what comes before and after it.'));
+  const intro = create('p', 'cooking-flow-intro', t('推荐任务高亮显示；点选步骤可高亮关联任务。', 'Recommended tasks are highlighted. Select a step to highlight related tasks.'));
   const phases = create('div', 'cooking-flow-phases');
   for (const [index, text] of [t('启动加热与备料', 'Start Heating and Prep'), t('并行烹调', 'Cook in Parallel'), t('分盘收尾', 'Portion and Finish')].entries()) {
     phases.append(create('span', `cooking-flow-phase cooking-flow-phase-${index + 1}`, text));
   }
-  const detail = create('section', 'cooking-flow-detail');
-  detail.setAttribute('aria-live', 'polite');
   const cards = create('div', 'cooking-flow-grid');
   root.append(intro, phases, cards);
   const buttons = new Map();
@@ -203,22 +201,6 @@
     cardElements.set(group.id, card);
   }
 
-  const chipList = (ids, either) => {
-    const list = create('div', 'cooking-flow-chip-list');
-    if (!ids.length) {
-      list.append(create('span', 'cooking-flow-empty', t('可直接开始', 'Can start immediately')));
-      return list;
-    }
-    ids.forEach((id, index) => {
-      if (either && index) list.append(create('span', 'cooking-flow-join', t('或', 'or')));
-      const target = byId.get(id);
-      const chip = create('button', 'cooking-flow-chip', t(...target.label));
-      chip.type = 'button';
-      chip.addEventListener('click', () => select(id));
-      list.append(chip);
-    });
-    return list;
-  };
   const select = (id) => {
     const node = byId.get(id);
     for (const [otherId, button] of buttons) {
@@ -230,21 +212,7 @@
       card.classList.toggle('has-selection', groupId === (node.displayGroup || node.group));
       card.classList.toggle('has-link', groupId !== (node.displayGroup || node.group) && nodes.some((part) => (part.displayGroup || part.group) === groupId && (node.before.includes(part.id) || next.get(id).includes(part.id))));
     }
-    detail.replaceChildren();
-    const top = create('div', 'cooking-flow-detail-top');
-    top.append(create('strong', '', t(...node.label)));
-    detail.append(top);
-    const relations = create('div', 'cooking-flow-relations');
-    for (const [heading, items, either] of [
-      [t('先完成', 'Before'), node.before, node.either],
-      [t('接下来', 'Next'), next.get(id), false]
-    ]) {
-      const column = create('div', 'cooking-flow-relation');
-      column.append(create('span', 'cooking-flow-relation-label', heading), chipList(items, either));
-      relations.append(column);
-    }
-    detail.append(relations);
-    buttons.get(id).closest('.cooking-flow-step-row').append(detail);
+
   };
   // Keep the source markup as the no-JavaScript fallback; remove only successfully merged sections.
   mergedSections.flat().forEach(element => element.remove());
