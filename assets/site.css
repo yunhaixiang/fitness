@@ -637,3 +637,18 @@ html[data-theme=light] .cooking-guide-primary{color:#fff}
 .cooking-progress-action>button:last-child{flex:none}
 .cooking-flow-step-row.is-running .cooking-flow-step{border-color:var(--gold)}
 .cooking-flow-step-row.is-running .cooking-progress-badge{color:var(--gold)}
+
+/* Instructions live beside their dependency controls, without a second workflow. */
+.cooking-flow-step-row{grid-template-columns:minmax(0,1fr);align-content:start;scroll-margin-top:90px}
+.cooking-flow-step-row.has-progress{grid-template-columns:32px minmax(0,1fr)}
+.cooking-flow-instructions{grid-column:1/-1;min-width:0;padding:10px 12px;border:1px solid var(--line);border-radius:8px;background:var(--surface);overflow-wrap:anywhere}
+.cooking-flow-instructions p{margin:0!important;font-size:13px;line-height:1.65}
+.cooking-flow-instructions .cooking-flow-seasoning{margin-top:8px!important;padding-top:8px;border-top:1px solid var(--line);color:var(--muted)}
+.cooking-flow-seasoning strong{color:var(--thread-accent)}
+.cooking-flow-seasoning-note{margin:0 0 12px!important;color:var(--muted);font-size:11px;line-height:1.55}
+.cooking-flow-steps,.cooking-flow-branches{gap:12px}
+.cooking-flow-branches-three{grid-template-columns:repeat(2,minmax(0,1fr))}
+.cooking-flow-card-pots{grid-column:1/-1}
+.cooking-flow-card-cold .cooking-flow-branches{grid-template-columns:minmax(0,1fr)}
+.cooking-flow-step-row>.cooking-flow-detail{grid-column:1/-1;position:static;max-height:none;min-height:0;margin:0;padding:12px;box-shadow:none}
+@media(max-width:600px){.cooking-flow-step-row.has-progress{grid-template-columns:28px minmax(0,1fr)}.cooking-flow-branches-three{grid-template-columns:minmax(0,1fr)}}

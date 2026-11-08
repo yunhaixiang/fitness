@@ -72,6 +72,33 @@
     {"id": "finish", "icon": "finish", "title": ["收尾", "Finish"], "hint": ["分盘、入冰箱、清洗", "Portion, Refrigerate and Clean"]}
   ];
 
+  const instructionSections = [["cold", "cold", ["cold-first", "cold-second"]], ["rice", "rice", ["prep-rice", "rice"]], ["oven", "oven", ["oven-heat-start", "oven-heat", "prep-chicken", "chicken", "prep-potato", "potato", "prep-ribs", "ribs", "meatballs", "prep-shrimp", "shrimp"]], ["air-fryer", "air", ["prep-salmon", "air-heat-start", "air-heat", "salmon", "haddock"]], ["pot-one", "pots", ["egg-water", "eggs", "dumpling-water", "dumplings"]], ["pot-two", "pots", ["prep-noodles", "pasta-water", "pasta", "noodle-water", "noodles"]], ["small-wok", "small-wok", ["mushroom", "peas", "curry"]], ["large-wok", "large-wok", ["spinach", "ground", "tomato", "fried-eggs"]], ["wraps", "wrap", ["wrap", "sandwich"]]];
+  const instructions = new Map(), seasonings = new Map(), seasoningNotes = new Map();
+  const mergedSections = [];
+  const seasoningSteps = {
+    oven: ['prep-chicken', 'prep-potato', 'prep-shrimp'],
+    'air-fryer': ['prep-salmon'],
+    'small-wok': ['mushroom', 'peas', 'curry'],
+    'large-wok': ['spinach', 'ground', 'fried-eggs']
+  };
+  for (const [headingId, group, steps] of instructionSections) {
+    const heading = document.getElementById(headingId);
+    const section = [];
+    for (let child = heading?.nextElementSibling; child && !/^H[1-3]$/.test(child.tagName); child = child.nextElementSibling) section.push(child);
+    const source = section.find(child => child.tagName === 'OL');
+    if (!source || source.children.length !== steps.length) continue;
+    steps.forEach((id, index) => instructions.set(id, source.children[index].textContent.trim()));
+    const table = section.map(child => child.querySelector('table')).find(Boolean);
+    const rows = table ? [...table.querySelectorAll('tbody tr')] : [];
+    (seasoningSteps[headingId] || []).forEach((id, index) => {
+      const text = rows[index]?.cells[1]?.textContent.trim();
+      if (text) seasonings.set(id, text);
+    });
+    const note = section.find(child => child.tagName === 'P');
+    if (rows.length && note) seasoningNotes.set(group, note.textContent.trim());
+    mergedSections.push([heading, ...section]);
+  }
+
   window.fitnessCookingFlow = { nodes, groups };
 
   const byId = new Map(nodes.map((node) => [node.id, node]));
@@ -91,7 +118,7 @@
   const detail = create('section', 'cooking-flow-detail');
   detail.setAttribute('aria-live', 'polite');
   const cards = create('div', 'cooking-flow-grid');
-  root.append(intro, phases, detail, cards);
+  root.append(intro, phases, cards);
   const buttons = new Map();
   const cardElements = new Map();
 
@@ -107,6 +134,7 @@
     const members = nodes.filter((node) => (node.displayGroup || node.group) === group.id);
     const step = (node, index) => {
       const row = create('div', 'cooking-flow-step-row');
+      row.id = `cook-${node.id}`;
       const button = create('button', 'cooking-flow-step');
       button.type = 'button';
       button.dataset.node = node.id;
@@ -118,11 +146,17 @@
       if (t(...node.note)) description.append(create('small', '', t(...node.note)));
       button.append(description);
       button.addEventListener('click', () => select(node.id));
-      const jump = create('a', 'cooking-flow-step-jump', '↘');
-      jump.href = node.link;
-      jump.setAttribute('aria-label', t(`跳到${node.label[0]}的详细步骤`, `Jump to ${node.label[1]} details`));
-      jump.addEventListener('click', () => select(node.id));
-      row.append(button, jump);
+      row.append(button);
+      if (instructions.has(node.id) || seasonings.has(node.id)) {
+        const body = create('div', 'cooking-flow-instructions');
+        if (instructions.has(node.id)) body.append(create('p', '', instructions.get(node.id)));
+        if (seasonings.has(node.id)) {
+          const seasoning = create('p', 'cooking-flow-seasoning');
+          seasoning.append(create('strong', '', t('调味：', 'Seasoning: ')), document.createTextNode(seasonings.get(node.id)));
+          body.append(seasoning);
+        }
+        row.append(body);
+      }
       buttons.set(node.id, button);
       return row;
     };
@@ -151,7 +185,9 @@
     } else {
       members.forEach((node, index) => list.append(step(node, index)));
     }
-    card.append(head, list);
+    card.append(head);
+    if (seasoningNotes.has(group.id)) card.append(create('p', 'cooking-flow-seasoning-note', seasoningNotes.get(group.id)));
+    card.append(list);
     cards.append(card);
     cardElements.set(group.id, card);
   }
@@ -186,9 +222,6 @@
     detail.replaceChildren();
     const top = create('div', 'cooking-flow-detail-top');
     top.append(create('strong', '', t(...node.label)));
-    const link = create('a', '', t('查看详细步骤 ↗', 'View Full Steps ↗'));
-    link.href = node.link;
-    top.append(link);
     detail.append(top);
     const relations = create('div', 'cooking-flow-relations');
     for (const [heading, items, either] of [
@@ -200,36 +233,11 @@
       relations.append(column);
     }
     detail.append(relations);
+    buttons.get(id).closest('.cooking-flow-step-row').append(detail);
   };
-  detail.append(create('p', 'cooking-flow-prompt', t('选择任一步骤，查看它与其他厨具的衔接。', 'Choose a step to see how it connects to the other appliances.')));
+  // Keep the source markup as the no-JavaScript fallback; remove only successfully merged sections.
+  mergedSections.flat().forEach(element => element.remove());
 
-  const instructionSections = [["cold", "cold", ["cold-first", "cold-second"]], ["rice", "rice", ["prep-rice", "rice"]], ["oven", "oven", ["oven-heat-start", "oven-heat", "prep-chicken", "chicken", "prep-potato", "potato", "prep-ribs", "ribs", "meatballs", "prep-shrimp", "shrimp"]], ["air-fryer", "air", ["prep-salmon", "air-heat-start", "air-heat", "salmon", "haddock"]], ["pot-one", "pots", ["egg-water", "eggs", "dumpling-water", "dumplings"]], ["pot-two", "pots", ["prep-noodles", "pasta-water", "pasta", "noodle-water", "noodles"]], ["small-wok", "small-wok", ["mushroom", "peas", "curry"]], ["large-wok", "large-wok", ["spinach", "ground", "tomato", "fried-eggs"]], ["wraps", "wrap", ["wrap", "sandwich"]]];
-  for (const [headingId, group, steps] of instructionSections) {
-    const heading = document.getElementById(headingId);
-    let source = heading?.nextElementSibling;
-    while (source && source.tagName !== 'OL' && !/^H[1-3]$/.test(source.tagName)) source = source.nextElementSibling;
-    if (!source || source.tagName !== 'OL' || source.children.length !== steps.length) continue;
-    const grid = create('div', 'cooking-detail-grid');
-    const iconName = group === 'pots' || group === 'small-wok' ? 'pot' : group.endsWith('wok') ? 'wok' : group;
-    for (const [index, entry] of steps.entries()) {
-      const node = typeof entry === 'string' ? byId.get(entry) : entry;
-      const card = create('article', `cooking-detail-card cooking-flow-card-${group}`);
-      card.id = `cook-${node.id}`;
-      card.tabIndex = -1;
-      const head = create('div', 'cooking-detail-head');
-      const icon = create('span', 'cooking-flow-icon');
-      icon.innerHTML = svg(iconName);
-      const title = create('div', 'cooking-detail-title');
-      title.append(create('span', 'cooking-detail-index', String(index + 1).padStart(2, '0')));
-      title.append(create(heading.tagName === 'H3' ? 'h4' : 'h3', '', t(...node.label)));
-      head.append(icon, title);
-      const instruction = source.children[index].textContent.trim();
-      card.append(head, create('p', 'cooking-detail-copy', instruction));
-      grid.append(card);
-    }
-    source.hidden = true;
-    source.after(grid);
-  }
 
   const page = root.closest('.prose');
   if (page) {
