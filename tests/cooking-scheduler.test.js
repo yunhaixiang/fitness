@@ -123,8 +123,9 @@ test('split preparation releases only its own cooking task', () => {
   assert.ok(result);
   assert.equal(result.starts.salmon, result.ends['air-heat']);
   for (const task of tasks.filter(t => t.group === 'prep')) assert.ok(Number.isFinite(result.ends[task.id]));
-  const prepItems = fs.readFileSync(require.resolve('../cooking.md'), 'utf8').split('<h2 id="prep"')[1].split('<h2 id="rice"')[0].match(/<li /g);
-  assert.equal(prepItems.length, tasks.filter(t => t.group === 'prep').length);
+  const page = fs.readFileSync(require.resolve('../cooking.md'), 'utf8');
+  assert.ok(!page.includes('<h2 id="prep"'));
+  for (const task of tasks.filter(t => t.group === 'prep')) assert.ok(task.displayGroup && task.displayGroup !== 'prep');
 });
 
 test('active preparation occupies the cook until finished', () => {
