@@ -2,7 +2,7 @@
   "checked_on": "2026-10-31",
   "currency": "CAD",
   "scope": "Walmart Canada public prices; individual checked_on retained. Popeye spinach, chicken thigh and salmon prices supplied by user. Weekly subtotal averages routine purchase cycles. Bread assumes two slices total 70 g; weighed produce billed by actual weight. Excludes as-needed seasonings, tax and delivery. Not a London store live stock guarantee.",
-  "weekly_total_cad": "137.47",
+  "weekly_total_cad": "136.73",
   "items": [
     {
       "item": "去骨去皮鸡大腿肉",
@@ -463,14 +463,14 @@
       "item": "鹰嘴豆",
       "price_cad": "1.48",
       "basis": "package",
-      "weekly_quantity": "1",
-      "weekly_cost_cad": "1.48",
+      "weekly_quantity": "0.5",
+      "weekly_cost_cad": "0.74",
       "source_type": "walmart_public",
       "source_url": "https://www.walmart.ca/en/ip/Great-Value-Chick-Peas/10275238",
       "product_url": "https://www.walmart.ca/en/ip/Great-Value-Chick-Peas/10275238",
       "checked_on": "2026-11-08",
-      "purchase_frequency_zh": "1罐 / 周",
-      "purchase_frequency_en": "1 Can / Week"
+      "purchase_frequency_zh": "1罐 / 2周",
+      "purchase_frequency_en": "1 Can / 2 Weeks"
     }
   ],
   "updated_on": "2026-11-08"

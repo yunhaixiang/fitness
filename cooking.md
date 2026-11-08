@@ -41,7 +41,7 @@ cooking: true
 
 <h2 id="cold" data-en="Freeze / Thaw">冷冻／解冻线程</h2>
 <ol>
-<li data-en="Freeze the second-half portions of chicken thighs, ground chicken, salmon, shrimp and ribs. Freeze next week’s tomato sauce. Keep tuna cans unopened until each cooking session. After opening the chickpeas for the first half-week, refrigerate the reserved half in a sealed container for the second half-week. Keep haddock, meatballs and dumplings frozen; freeze spare bread and tortillas. Refrigerate potatoes, vegetables and fruit.">将后半周的鸡大腿肉、鸡肉末、三文鱼、虾仁和半盒排骨分装冷冻；番茄酱冷冻下周份；金枪鱼每次做饭开一罐；前半周鹰嘴豆开罐后，留下的一半密封冷藏供后半周用。裹粉黑线鳕、牛肉丸、水饺保持冷冻；多余面包和卷饼皮分装冷冻。土豆、蔬菜和水果冷藏。</li>
+<li data-en="Freeze the second-half portions of chicken thighs, ground chicken, salmon, shrimp and ribs. Freeze next week’s tomato sauce. Keep tuna cans unopened until each cooking session. After opening the chickpeas, divide into four equal portions. Use one now, refrigerate one sealed for the second half-week, and freeze two for next week; thaw the needed portion in the fridge before use. Keep haddock, meatballs and dumplings frozen; freeze spare bread and tortillas. Refrigerate potatoes, vegetables and fruit.">将后半周的鸡大腿肉、鸡肉末、三文鱼、虾仁和半盒排骨分装冷冻；番茄酱冷冻下周份；金枪鱼每次做饭开一罐；鹰嘴豆开罐沥干后均分4份：本次用1份，1份密封冷藏供后半周用，2份冷冻留到下周，使用前移入冷藏解冻。裹粉黑线鳕、牛肉丸、水饺保持冷冻；多余面包和卷饼皮分装冷冻。土豆、蔬菜和水果冷藏。</li>
 <li data-en="Move chicken thighs, ground chicken, salmon, shrimp, half the ribs to the fridge about 36 hours ahead. Thaw bread and tortillas as needed. Cook haddock, meatballs and dumplings from frozen.">提前约36小时将鸡大腿肉、鸡肉末、三文鱼、虾仁、半盒排骨移入冷藏；面包和卷饼皮按需解冻。裹粉黑线鳕、牛肉丸、水饺不解冻。</li>
 </ol>
 
@@ -139,7 +139,7 @@ cooking: true
 
 <h2 id="wraps" data-en="Wrap and Sandwich">卷饼与三明治线程</h2>
 <ol>
-<li data-en="Drain and rinse the chickpeas; use half a can and lightly mash with 2½ tsp Chipotle mayonnaise. Wash, deseed and slice half an orange bell pepper. Fill 1 large tortilla with the chickpeas, meal 1’s shredded chicken, crumbled boiled egg and pepper; roll and place in meal 1.">鹰嘴豆沥干冲洗，取半罐，轻压碎后拌Chipotle蛋黄酱2½茶匙。半个橙甜椒洗净去籽切细条，大号卷饼皮1片放入鹰嘴豆、第1盘的鸡腿肉、掰碎水煮蛋和橙甜椒，卷好放第1盘。</li>
-<li data-en="Open and drain 1 whole can of tuna (about 110 g drained), then mix with 2 tsp Chipotle mayonnaise. Wash and slice 1 Roma tomato. Fill 2 slices of whole-wheat bread with the tuna, meal 4’s chicken, fried egg and tomato; place in meal 4.">金枪鱼1整罐沥干（约110 g），拌Chipotle蛋黄酱2茶匙。罗马番茄1个洗净切片；全麦面包2片夹入金枪鱼、第4盘的鸡腿肉、煎蛋和番茄，放第4盘。</li>
+<li data-en="Drain and rinse the chickpeas; use a quarter can and lightly mash with ¼ tsp Chipotle mayonnaise. Wash, deseed and slice half an orange bell pepper. Fill 1 large tortilla with the chickpeas, meal 1’s shredded chicken, crumbled boiled egg and pepper; roll and place in meal 1.">鹰嘴豆沥干冲洗，取¼罐，轻压碎后拌Chipotle蛋黄酱¼茶匙。半个橙甜椒洗净去籽切细条，大号卷饼皮1片放入鹰嘴豆、第1盘的鸡腿肉、掰碎水煮蛋和橙甜椒，卷好放第1盘。</li>
+<li data-en="Open and drain 1 whole can of tuna (about 110 g drained), then mix with ½ tsp Chipotle mayonnaise. Wash and slice 1 Roma tomato. Fill 2 slices of whole-wheat bread with the tuna, meal 4’s chicken, fried egg and tomato; place in meal 4.">金枪鱼1整罐沥干（约110 g），拌Chipotle蛋黄酱½茶匙。罗马番茄1个洗净切片；全麦面包2片夹入金枪鱼、第4盘的鸡腿肉、煎蛋和番茄，放第4盘。</li>
 </ol>
 <!-- Cook to the product package directions where they differ. Rice noodle method: Erawan retailer directions (hot-water soak 10–15 min, boil 30–60 sec). Shrimp is an olive-oil/panko adaptation; oven times vary with size and loading. -->
