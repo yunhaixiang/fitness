@@ -90,16 +90,16 @@
       "label": "wrap"
     },
     "rice": {
-      "kcal": "656",
-      "protein": "38.5",
-      "carbs": "65.4",
-      "fat": "26.1",
-      "saturatedFat": "5.2",
+      "kcal": "636",
+      "protein": "47.5",
+      "carbs": "59.4",
+      "fat": "22.1",
+      "saturatedFat": "4.7",
       "fibre": "5.8",
       "sugar": "4.7",
-      "sodium": "1176",
-      "cholesterol": "499",
-      "epaDha": "0.27",
+      "sodium": "1256",
+      "cholesterol": "529",
+      "epaDha": "0.35",
       "label": "rice"
     },
     "pasta": {

@@ -189,7 +189,7 @@ visual: true
 <td style="text-align: right;">按需补</td>
 <td style="text-align: right;"><a href="https://www.walmart.ca/fr/ip/leanfit-sport-creatine-monohydrate-en-poudre-non-aromatis-300-g-5-g-de-cratine-par-portion-certification-informed-choice-cratine-micronise-et-de-quali/6000208594600">$32.97</a></td>
 </tr>
-<tr data-price-id="32" data-weekly-cost="5.10" data-purchase-group="restock"><td data-en="Breaded Haddock">裹粉黑线鳕</td><td><a href="https://www.walmart.ca/en/ip/High-Liner-Signature-Cuts-Crispy-Breaded-Haddock-425-g/6000199850269">High Liner Signature Cuts Crispy Breaded Haddock</a><br><span data-en="425 g / Box, 5 Fillets">425 g / 盒，5片</span></td><td data-en="2 Boxes / 5 Weeks">2盒 / 5周</td><td><a href="https://www.walmart.ca/en/ip/High-Liner-Signature-Cuts-Crispy-Breaded-Haddock-425-g/6000199850269">$12.74</a></td></tr>
+<tr data-price-id="32" data-weekly-cost="6.37" data-purchase-group="fortnightly"><td data-en="Breaded Haddock">裹粉黑线鳕</td><td><a href="https://www.walmart.ca/en/ip/High-Liner-Pan-Sear-Selects-Roasted-Garlic-Herb-Haddock/6000196030769">High Liner Pan-Sear Selects Roasted Garlic &amp; Herbs Haddock</a><br><span data-en="500 g / Box, 4 Fillets">500 g / 盒，4片</span></td><td data-en="1 Box / 2 Weeks">1盒 / 2周</td><td><a href="https://www.walmart.ca/en/ip/High-Liner-Pan-Sear-Selects-Roasted-Garlic-Herb-Haddock/6000196030769">$12.74</a></td></tr>
 <tr data-price-id="33" data-weekly-cost="1.28" data-purchase-group="restock"><td data-en="Beef Meatballs">牛肉丸</td><td><a href="https://www.walmart.ca/en/ip/Our-Finest-Frozen-Lean-Angus-Meatballs-Appetizers/6000200192499">Our Finest Fully Cooked Lean Angus Beef Meatballs</a><br><span data-en="907 g / 60 Pieces">907 g / 60 Pieces</span></td><td data-en="1 Bag / 10 Weeks">1袋 / 10周</td><td><a href="https://www.walmart.ca/en/ip/Our-Finest-Frozen-Lean-Angus-Meatballs-Appetizers/6000200192499">$12.84</a></td></tr>
 <tr data-price-id="34" data-weekly-cost="10.98" data-purchase-group="weekly"><td data-en="Raw Shrimp">生虾仁</td><td><a href="https://www.walmart.ca/en/ip/Great-Value-Wild-Argentinian-Large-Raw-Shrimp/6000202999819">Great Value Wild Argentinian Large Raw Shrimp</a><br><span data-en="340 g">340 g</span></td><td data-en="1 Bag / Week">1袋 / 周</td><td><a href="https://www.walmart.ca/en/ip/Great-Value-Wild-Argentinian-Large-Raw-Shrimp/6000202999819">$10.98</a></td></tr>
 <tr data-price-id="35" data-weekly-cost="3.43" data-purchase-group="restock"><td data-en="Chicken and Vegetable Dumplings">鸡肉蔬菜水饺</td><td><a href="https://www.walmart.ca/en/ip/Great-Value-Frozen-Chicken-Vegetable-Potstickers/6O52P9Y77G03">Great Value Frozen Chicken &amp; Vegetable Potstickers</a><br><span data-en="1.13 kg">1.13 kg</span></td><td data-en="Restock as Needed">按需补充</td><td><a href="https://www.walmart.ca/en/ip/Great-Value-Frozen-Chicken-Vegetable-Potstickers/6O52P9Y77G03">$9.98</a></td></tr>
@@ -205,7 +205,7 @@ visual: true
 <td>每周合计</td>
 <td>—</td>
 <td style="text-align: right;">—</td>
-<td style="text-align: right;">$134.72</td>
+<td style="text-align: right;">$135.99</td>
 </tr>
 </tbody>
 </table>

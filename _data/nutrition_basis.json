@@ -325,16 +325,16 @@
       0
     ],
     "haddock": [
-      190,
-      9,
-      17,
-      10,
-      1,
+      170,
+      18,
+      11,
+      6,
+      0.5,
       1,
       0,
-      330,
-      25,
-      0.08
+      410,
+      55,
+      0.16
     ],
     "tuna": [
       50,
@@ -434,7 +434,7 @@
     "EPA+DHA uses fish composition proxies. Missing calcium/iron/potassium/vitamin/iodine values in the revised main meals have not been filled from the retired plan. They remain pending instead of reporting stale totals.",
     "Great Value Chicken & Vegetable Potstickers 1.13 kg: verified Walmart nutrition image, 200 kcal / 4 dumplings (96 g) WITH 15 mL sauce. Meal 6 uses seven pieces (168 g) plus 26.25 mL sauce; sauce is included in the nutrition figures. No sweet potatoes or their oil/salt. Shopping cost assumes net package includes sauce and sauce density 1 g/mL; 388.5 g combined product used weekly.",
     "Balanced portions: rice 35 g dry, pasta 60 g dry, potatoes 170 g raw, noodles 45 g dry. Boiled eggs in meals 1, 4 and 7. Shrimp 170 g raw per half-week, cooked together with 20 g panko and split equally between meals 2 and 7 (85 g raw equivalent each); one 340 g bag of shrimp weekly.",
-    "Haddock: High Liner Signature Cuts Crispy Breaded Haddock, 425 g / five fillets. Manufacturer nutrition per fillet (87 g label serving): 190 kcal, protein 9 g, carbohydrate 17 g, fat 10 g, saturated fat 1 g, trans fat 0 g, fibre 1 g, sugar 0 g, sodium 330 mg, cholesterol 25 mg. Two fillets weekly; two boxes every five weeks. EPA+DHA provisionally estimated at 0.08 g per fillet by scaling the previous fish proxy by protein (0.15 x 9/17); this is not measured. Label total omega-3 is 0.9 g and includes plant oils, so is not treated as EPA+DHA. Use the actual package label if it differs.",
+    "Haddock: High Liner Pan-Sear Selects Roasted Garlic & Herbs, 500 g / four fillets. Manufacturer nutrition per about one fillet (127 g label serving): 170 kcal, protein 18 g, carbohydrate 11 g, fat 6 g, saturated fat 0.5 g, trans fat 0 g, fibre 1 g, sugar 0 g, sodium 410 mg, cholesterol 55 mg. Two fillets weekly; one box every two weeks. Manufacturer figures take precedence over inconsistent retailer copy. EPA+DHA provisionally estimated at 0.16 g per fillet by scaling the original Traditional fish proxy by protein (0.15 x 18/17); not measured. Label total omega-3 is 0.7 g and includes canola oil, so is not treated as EPA+DHA. Use the actual package label if it differs.",
     "Tuna replaces all chickpeas: Clover Leaf Low Sodium Flaked Light Tuna in Water, two 170 g cans weekly. Manufacturer label unit is half a can drained (55 g); one unit in each wrap and sandwich. Chipotle mayonnaise is 2.5 tsp per wrap and 2 tsp per sandwich. Tuna label total omega-3 0.2 g per half-can is used as an EPA+DHA approximation, not a separately measured EPA+DHA value. Little Yellows potatoes use the Canadian label per 110 g; 680 g bag every two weeks. Six meatballs weekly, 60-piece bag every ten weeks."
   ],
   "sources": {
@@ -444,7 +444,7 @@
     "dumplings": "https://www.walmart.ca/en/ip/Great-Value-Frozen-Chicken-Vegetable-Potstickers/6O52P9Y77G03",
     "primo": "https://www.primofoods.com/primo/products.php?catid=23&id=40",
     "dumplings_label": "https://i5.walmartimages.ca/asr/f9754297-5a52-493c-85c6-4017237be33d.d8d51d8130f3824531aea52798ed536b.jpeg",
-    "haddock": "https://www.highliner.com/products/undefined/signature-cuts-crispy-breaded-haddock-fillets",
+    "haddock": "https://www.highliner.com/products/pan-sear-selects/roasted-garlic-herbs-haddock-pan-sear-selects",
     "tuna": "https://www.cloverleaf.ca/en/products/low-sodium-flaked-light-tuna-skipjack-in-water/",
     "potato": "https://www.littlepotatoes.com/product/little-yellows/"
   }

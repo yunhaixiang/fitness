@@ -2,7 +2,7 @@
   "checked_on": "2026-10-31",
   "currency": "CAD",
   "scope": "Walmart Canada public prices; individual checked_on retained. Popeye spinach, chicken thigh and salmon prices supplied by user. Weekly subtotal averages routine purchase cycles. Bread assumes two slices total 70 g; weighed produce billed by actual weight. Excludes as-needed seasonings, tax and delivery. Not a London store live stock guarantee.",
-  "weekly_total_cad": "134.72",
+  "weekly_total_cad": "135.99",
   "items": [
     {
       "item": "去骨去皮鸡大腿肉",
@@ -449,13 +449,13 @@
       "item": "裹粉黑线鳕",
       "price_cad": "12.74",
       "basis": "package",
-      "source_url": "https://www.walmart.ca/en/ip/High-Liner-Signature-Cuts-Crispy-Breaded-Haddock-425-g/6000199850269",
-      "product_url": "https://www.walmart.ca/en/ip/High-Liner-Signature-Cuts-Crispy-Breaded-Haddock-425-g/6000199850269",
+      "source_url": "https://www.walmart.ca/en/ip/High-Liner-Pan-Sear-Selects-Roasted-Garlic-Herb-Haddock/6000196030769",
+      "product_url": "https://www.walmart.ca/en/ip/High-Liner-Pan-Sear-Selects-Roasted-Garlic-Herb-Haddock/6000196030769",
       "source_type": "walmart_public",
-      "weekly_quantity": "0.4",
-      "weekly_cost_cad": "5.10",
-      "purchase_frequency_zh": "2盒 / 5周",
-      "purchase_frequency_en": "2 Boxes / 5 Weeks",
+      "weekly_quantity": "0.5",
+      "weekly_cost_cad": "6.37",
+      "purchase_frequency_zh": "1盒 / 2周",
+      "purchase_frequency_en": "1 Box / 2 Weeks",
       "checked_on": "2026-11-08",
       "price_type": "sale"
     }
