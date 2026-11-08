@@ -77,14 +77,14 @@
       "label": "potato"
     },
     "wrap": {
-      "kcal": "650",
+      "kcal": "651",
       "protein": "50.5",
-      "carbs": "52.1",
-      "fat": "26.8",
+      "carbs": "52.3",
+      "fat": "26.9",
       "saturatedFat": "6.9",
       "fibre": "10.0",
-      "sugar": "7.8",
-      "sodium": "869",
+      "sugar": "8.0",
+      "sodium": "883",
       "cholesterol": "350",
       "epaDha": "0.12",
       "label": "wrap"
@@ -116,15 +116,15 @@
       "label": "pasta"
     },
     "bread": {
-      "kcal": "651",
+      "kcal": "650",
       "protein": "68.8",
-      "carbs": "36.2",
-      "fat": "26.8",
+      "carbs": "36.4",
+      "fat": "26.6",
       "saturatedFat": "6.9",
       "fibre": "6.4",
-      "sugar": "6.5",
-      "sodium": "851",
-      "cholesterol": "411",
+      "sugar": "6.8",
+      "sodium": "870",
+      "cholesterol": "410",
       "epaDha": "0.52",
       "label": "bread"
     },

@@ -30,7 +30,7 @@ test('weekly meat, eggs, grains and portions match whole-package purchase cycles
  const recipes=Object.fromEntries(basis.mealKeys.map((k,i)=>[k,basis.recipes[i]]));
  assert.equal(recipes.wrap.tuna,undefined); close(recipes.bread.tuna,2);
  close(recipes.wrap.chickpea*2,weekly('chickpea'));
- close(weekly('chickpea')*100,170); close(weekly('tuna'),4); close(weekly('mayo'),1.5); close(weekly('spinach')*100,284);
+ close(weekly('chickpea')*100,170); close(weekly('tuna'),4); close(weekly('mayo'),4); close(weekly('spinach')*100,284);
  close(weekly('mushroom')*100,227); close(weekly('pc')*100,520);
  close(weekly('oil'),9.5); // 4.75 tsp each half-week, including all three fried eggs
 });

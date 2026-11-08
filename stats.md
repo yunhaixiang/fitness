@@ -117,7 +117,7 @@ visual: true
 </tr>
 <tr>
 <td>碳水化合物</td>
-<td style="text-align: right;">183.0 g</td>
+<td style="text-align: right;">183.1 g</td>
 <td>180–240 g</td>
 </tr>
 <tr>
@@ -127,7 +127,7 @@ visual: true
 </tr>
 <tr>
 <td>总糖</td>
-<td style="text-align: right;">43.8 g</td>
+<td style="text-align: right;">43.9 g</td>
 <td>无单独上限；重点控制添加糖</td>
 </tr>
 <tr>
@@ -142,7 +142,7 @@ visual: true
 </tr>
 <tr>
 <td>钠</td>
-<td style="text-align: right;">2,860 mg</td>
+<td style="text-align: right;">2,869 mg</td>
 <td>≤2,300 mg</td>
 </tr>
 <tr>
