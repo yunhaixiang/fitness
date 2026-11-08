@@ -48,7 +48,7 @@ cooking: true
 <ol>
 <li data-en="Rinse and drain 45 g dry rice. Use equal volumes of rice and water: about 56 mL water. Place in the rice cooker.">干米45 g淘洗沥干；米和水按体积1:1，加水约56 mL，放入电饭煲。</li>
 <li data-en="Pat dry and season 4 chicken thighs, 465 g total.">取鸡大腿肉4块，共465 g，擦干、调味。</li>
-<li data-en="Cut 370 g yellow potatoes into even wedges and season.">取黄土豆370 g，切成厚度接近的薯角，拌调味。</li>
+<li data-en="Cut 300 g yellow potatoes into even wedges and season.">取黄土豆300 g，切成厚度接近的薯角，拌调味。</li>
 <li data-en="Use half the box of ribs, 300 g including bones and sauce. Add the packaged sauce and wrap in foil.">取半盒排骨300 g，淋包装内酱汁，裹好锡纸。</li>
 <li data-en="Place 151 g frozen meatballs on a baking tray.">取冷冻牛肉丸151 g，铺入烤盘。</li>
 <li data-en="Pat 170 g thawed shrimp dry; season with garlic powder and pepper. Mix 20 g panko with 1 tsp olive oil and spread over the shrimp.">取解冻虾仁170 g，擦干，拌蒜粉和黑胡椒。面包糠20 g拌橄榄油1茶匙，覆盖在虾仁上。</li>

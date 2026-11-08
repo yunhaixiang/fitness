@@ -64,14 +64,14 @@
       "potassium": "377"
     },
     "potato": {
-      "kcal": "684",
-      "protein": "47.4",
-      "carbs": "65.6",
-      "fat": "28.0",
+      "kcal": "657",
+      "protein": "46.6",
+      "carbs": "59.4",
+      "fat": "27.9",
       "saturatedFat": "10.0",
-      "fibre": "8.1",
-      "sugar": "18.4",
-      "sodium": "1474",
+      "fibre": "7.4",
+      "sugar": "18.1",
+      "sodium": "1472",
       "cholesterol": "127",
       "epaDha": "0.04",
       "label": "potato"
@@ -129,14 +129,14 @@
       "label": "bread"
     },
     "dumpling": {
-      "kcal": "697",
-      "protein": "51.1",
-      "carbs": "62.0",
-      "fat": "26.6",
+      "kcal": "670",
+      "protein": "50.4",
+      "carbs": "55.9",
+      "fat": "26.5",
       "saturatedFat": "5.4",
-      "fibre": "8.3",
-      "sugar": "5.3",
-      "sodium": "848",
+      "fibre": "7.5",
+      "sugar": "5.0",
+      "sodium": "846",
       "cholesterol": "94",
       "epaDha": "1.93",
       "label": "dumpling"

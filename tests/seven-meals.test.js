@@ -23,7 +23,7 @@ test('weekly meat, eggs, grains and portions match whole-package purchase cycles
  close(weekly('thigh')*100,930); close(weekly('ground')*100,454);
  close(weekly('shrimp')*100,340); close(weekly('salmon')*100,320);
  close(weekly('ball')*85,907/3); close(weekly('dumpling')*92,454/2);
- close(weekly('egg'),12); close(weekly('potato')*100,740);
+ close(weekly('egg'),12); close(weekly('potato')*100,600);
  close(weekly('rice')*100,90); close(weekly('pasta')*85,100);
  close(weekly('noodle')*100,70); close(weekly('sauce')*125,300);
  close(weekly('chickpea')*100,340); close(weekly('spinach')*100,284);

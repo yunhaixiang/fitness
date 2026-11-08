@@ -66,10 +66,10 @@ visual: true
 <td style="text-align: right;">1瓶 / 周</td>
 <td style="text-align: right;"><a href="https://www.walmart.ca/en/ip/Fuze-Iced-Tea-Zero-Sugar-Lemon-Bottle/39X12Q1LJGX0">$2.77</a></td>
 </tr>
-<tr data-weekly-cost="1.45" data-price-id="9">
+<tr data-weekly-cost="1.17" data-price-id="9">
 <td>土豆</td>
 <td><a href="https://www.walmart.ca/en/ip/your-fresh-market-yellow-potatoes/6000196075652">Your Fresh Market Yellow Potatoes</a><br>5 lb / 2.27 kg</td>
-<td data-en="1 Bag / About 3 Weeks; 740 g Weekly">1袋 / 约3周；每周740 g</td>
+<td data-en="1 Bag / About 3.8 Weeks; 600 g Weekly">1袋 / 约3.8周；每周600 g</td>
 <td style="text-align: right;"><a href="https://www.walmart.ca/en/ip/your-fresh-market-yellow-potatoes/6000196075652">$4.44</a></td>
 </tr>
 <tr data-price-id="10" data-weekly-cost="2.74">
@@ -209,7 +209,7 @@ visual: true
 <td>每周合计</td>
 <td>—</td>
 <td style="text-align: right;">—</td>
-<td style="text-align: right;">$133.62</td>
+<td style="text-align: right;">$133.34</td>
 </tr>
 </tbody>
 </table>
