@@ -335,6 +335,18 @@
       2360,
       0,
       0
+    ],
+    "haddock": [
+      200,
+      17,
+      17,
+      7,
+      0.5,
+      0,
+      0,
+      270,
+      50,
+      0.15
     ]
   },
   "recipes": [
@@ -349,13 +361,13 @@
       "salt": 0.046875
     },
     {
-      "rice": 0.45,
-      "ball": 1.0670588235294118,
+      "rice": 0.35,
       "shrimp": 0.85,
       "panko": 0.1,
       "egg": 2,
       "pc": 1.3,
-      "oil": 1.1666666666666665
+      "oil": 1.1666666666666665,
+      "haddock": 1
     },
     {
       "pasta": 0.7058823529411765,
@@ -417,11 +429,12 @@
   "notes": [
     "Planning estimates, not measurements. Ingredient units: 100 g unless specified below; raw meat weights and dry grains. Ribs use 397 g edible meat and sauce per 600 g bone-in package; this yield is an assumption.",
     "Label units: egg one large; tortilla one 61 g; bread two slices; oil/mayo/salt one teaspoon; meatballs 85 g; pasta 85 g; ribs 140 g edible; sauce 125 mL; dumplings four pieces (96 g) WITH 15 mL included dipping sauce; curry 18 g.",
-    "Vegetable size assumptions: zucchini 200 g, half red pepper 75 g, Roma 120 g. Chickpeas 340 g drained per can. Meatballs average 907/60 g each: six in meal 2, four in meal 4 per half-week. Shrimp reference is the actual 50 kcal/100 g package, not generic cooked shrimp.",
+    "Vegetable size assumptions: zucchini 200 g, half red pepper 75 g, Roma 120 g. Chickpeas 340 g drained per can. Meatballs average 907/60 g each: four in meal 4 per half-week. Shrimp reference is the actual 50 kcal/100 g package, not generic cooked shrimp.",
     "Oil: thighs 1/2 tsp, potatoes 1/4, shrimp 1, salmon 1/4, mushrooms 1/4, spinach 1/2, ground chicken 1, fried eggs 1 tsp per half-week. Salt: thighs 1/8 tsp, potatoes 1/16, salmon 1/16. Dry spices not quantified; no soy sauce or stock powder in this version.",
     "EPA+DHA uses fish composition proxies. Missing calcium/iron/potassium/vitamin/iodine values in the revised main meals have not been filled from the retired plan. They remain pending instead of reporting stale totals.",
     "Great Value Chicken & Vegetable Potstickers 1.13 kg: verified Walmart nutrition image, 200 kcal / 4 dumplings (96 g) WITH 15 mL sauce. Meal 6 uses seven pieces (168 g) plus 26.25 mL sauce; sauce is included in the nutrition figures. No sweet potatoes or their oil/salt. Shopping cost assumes net package includes sauce and sauce density 1 g/mL; 388.5 g combined product used weekly.",
-    "Balanced portions: rice 45 g dry, pasta 60 g dry, potatoes 110 g raw, noodles 42 g dry. Boiled eggs in meals 1, 4 and 7. Shrimp 170 g raw per half-week, cooked together with 20 g panko and split equally between meals 2 and 7 (85 g raw equivalent each); one 340 g bag of shrimp weekly."
+    "Balanced portions: rice 35 g dry, pasta 60 g dry, potatoes 110 g raw, noodles 42 g dry. Boiled eggs in meals 1, 4 and 7. Shrimp 170 g raw per half-week, cooked together with 20 g panko and split equally between meals 2 and 7 (85 g raw equivalent each); one 340 g bag of shrimp weekly.",
+    "Haddock: one High Liner Pan-Sear Selects Traditional fillet (label 126 g), 200 kcal. Two fillets weekly, one box of four every two weeks. EPA+DHA is provisionally estimated at 0.15 g per fillet, not the label’s 0.7 g total omega-3, which also includes plant omega-3 from canola oil."
   ],
   "sources": {
     "shrimp": "https://www.walmart.ca/en/ip/Great-Value-Wild-Argentinian-Large-Raw-Shrimp/6000202999819",
@@ -429,6 +442,7 @@
     "curry": "https://www.sbfoods-worldwide.com/products/search/005.html",
     "dumplings": "https://www.walmart.ca/en/ip/Great-Value-Frozen-Chicken-Vegetable-Potstickers/6O52P9Y77G03",
     "primo": "https://www.primofoods.com/primo/products.php?catid=23&id=40",
-    "dumplings_label": "https://i5.walmartimages.ca/asr/f9754297-5a52-493c-85c6-4017237be33d.d8d51d8130f3824531aea52798ed536b.jpeg"
+    "dumplings_label": "https://i5.walmartimages.ca/asr/f9754297-5a52-493c-85c6-4017237be33d.d8d51d8130f3824531aea52798ed536b.jpeg",
+    "haddock": "https://www.highliner.com/products/undefined/pan-sear-selects-traditional-haddock"
   }
 }

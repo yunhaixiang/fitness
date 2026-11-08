@@ -2,7 +2,7 @@
   "checked_on": "2026-10-31",
   "currency": "CAD",
   "scope": "Walmart Canada public prices; individual checked_on retained. Popeye spinach price supplied by user. Weekly subtotal averages routine purchase cycles. Bread assumes two slices total 70 g; weighed produce billed by actual weight. Excludes as-needed seasonings, tax and delivery. Not a London store live stock guarantee.",
-  "weekly_total_cad": "133.42",
+  "weekly_total_cad": "137.14",
   "items": [
     {
       "item": "去骨去皮鸡大腿肉",
@@ -209,10 +209,10 @@
       "source_url": "https://www.walmart.ca/en/ip/Great-Value-Long-Grain-White-Rice/4UD9P76BEQB4",
       "source_type": "walmart_public",
       "product_url": "https://www.walmart.ca/en/ip/Great-Value-Long-Grain-White-Rice/4UD9P76BEQB4",
-      "purchase_frequency_zh": "1袋 / 10周",
-      "purchase_frequency_en": "1 Bag / 10 Weeks",
-      "weekly_cost_cad": "0.35",
-      "weekly_quantity": "0.1"
+      "purchase_frequency_zh": "1袋 / 约12.9周",
+      "purchase_frequency_en": "1 Bag / About 12.9 Weeks",
+      "weekly_cost_cad": "0.27",
+      "weekly_quantity": "0.07777777777777778"
     },
     {
       "item": "高纤维谷物早餐",
@@ -302,14 +302,14 @@
       "item": "牛肉丸",
       "price_cad": "12.84",
       "basis": "package",
-      "weekly_quantity": "0.3333333333333333",
-      "weekly_cost_cad": "4.28",
+      "weekly_quantity": "0.13333333333333333",
+      "weekly_cost_cad": "1.71",
       "source_type": "walmart_public",
       "source_url": "https://www.walmart.ca/en/ip/Our-Finest-Frozen-Lean-Angus-Meatballs-Appetizers/6000200192499",
       "product_url": "https://www.walmart.ca/en/ip/Our-Finest-Frozen-Lean-Angus-Meatballs-Appetizers/6000200192499",
       "checked_on": "2026-11-07",
-      "purchase_frequency_zh": "1袋 / 3周",
-      "purchase_frequency_en": "1 Bag / 3 Weeks"
+      "purchase_frequency_zh": "1袋 / 7.5周",
+      "purchase_frequency_en": "1 Bag / 7.5 Weeks"
     },
     {
       "item": "生虾仁",
@@ -440,6 +440,20 @@
       "checked_on": "2026-11-07",
       "purchase_frequency_zh": "1盒 / 约2.6周",
       "purchase_frequency_en": "1 Box / About 2.6 Weeks"
+    },
+    {
+      "item": "裹粉黑线鳕",
+      "price_cad": "12.74",
+      "basis": "package",
+      "source_url": "https://www.walmart.ca/en/ip/High-Liner-Pan-Sear-Selects-Traditional-Haddock/6000196031340",
+      "product_url": "https://www.walmart.ca/en/ip/High-Liner-Pan-Sear-Selects-Traditional-Haddock/6000196031340",
+      "source_type": "walmart_public",
+      "weekly_quantity": "0.5",
+      "weekly_cost_cad": "6.37",
+      "purchase_frequency_zh": "1盒 / 2周",
+      "purchase_frequency_en": "1 Box / 2 Weeks",
+      "checked_on": "2026-11-07",
+      "price_type": "sale"
     }
   ],
   "updated_on": "2026-11-07"

@@ -22,10 +22,10 @@ test('weekly meat, eggs, grains and portions match whole-package purchase cycles
  const close=(a,b)=>assert.ok(Math.abs(a-b)<.01,`${a} != ${b}`);
  close(weekly('thigh')*100,930); close(weekly('ground')*100,454);
  close(weekly('shrimp')*100,340); close(weekly('salmon')*100,320);
- close(weekly('ball')*85,907/3); close(weekly('dumpling')*96,336);
+ close(weekly('ball')*85,907*8/60); close(weekly('haddock'),2); close(weekly('dumpling')*96,336);
  close(weekly('egg'),12); close(weekly('potato')*100,220);
  close(weekly('sweetpotato'),0);
- close(weekly('rice')*100,90); close(weekly('pasta')*85,120);
+ close(weekly('rice')*100,70); close(weekly('pasta')*85,120);
  close(weekly('noodle')*100,84); close(weekly('sauce')*125,300);
  close(weekly('chickpea')*100,340); close(weekly('spinach')*100,284);
  close(weekly('mushroom')*100,227); close(weekly('pc')*100,520);
@@ -46,7 +46,7 @@ test('all cooking prerequisites are valid, acyclic, and have matching instructio
  const instructionIds=new Set();
  for(const [id,group,steps] of sections){const fragment=page.split('<h2 id="'+id+'"')[1].split('<h2 ')[0];assert.equal((fragment.match(/<li /g)||[]).length,steps.length,id);steps.forEach(s=>instructionIds.add('cook-'+s));}
  for(const n of flow)assert.ok(instructionIds.has(n.link.slice(1))||['cold','portions'].includes(n.link.slice(1)),n.link);
- assert.ok(!page.includes('裹粉黑线鳕'));
+ assert.ok(page.includes('裹粉黑线鳕'));
  assert.match(page,/第2盘2个，第5盘1个/);
 });
 test('routine shopping subtotal agrees with both stored prices and all shopping cards',()=>{

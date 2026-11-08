@@ -126,10 +126,10 @@ visual: true
 <td style="text-align: right;">按需补</td>
 <td style="text-align: right;"><a href="https://www.walmart.ca/en/ip/Hellmann-s-Chipotle-Mayonnaise-Mild-Dressing-340ml/5NDTYWNJRQ1Y">$5.47</a></td>
 </tr>
-<tr data-weekly-cost="0.35" data-price-id="19">
+<tr data-weekly-cost="0.27" data-price-id="19">
 <td>白米</td>
 <td><a href="https://www.walmart.ca/en/ip/Great-Value-Long-Grain-White-Rice/4UD9P76BEQB4">Great Value Long Grain White Rice</a><br>900 g / 袋</td>
-<td data-en="1 Bag / 10 Weeks">1袋 / 10周</td>
+<td data-en="1 Bag / About 12.9 Weeks">1袋 / 约12.9周</td>
 <td style="text-align: right;"><a href="https://www.walmart.ca/en/ip/Great-Value-Long-Grain-White-Rice/4UD9P76BEQB4">$3.47</a></td>
 </tr>
 <tr data-weekly-cost="2.73" data-price-id="20">
@@ -194,7 +194,8 @@ visual: true
 <td style="text-align: right;">按需补</td>
 <td style="text-align: right;"><a href="https://www.walmart.ca/fr/ip/leanfit-sport-creatine-monohydrate-en-poudre-non-aromatis-300-g-5-g-de-cratine-par-portion-certification-informed-choice-cratine-micronise-et-de-quali/6000208594600">$32.97</a></td>
 </tr>
-<tr data-price-id="33" data-weekly-cost="4.28"><td data-en="Beef Meatballs">牛肉丸</td><td><a href="https://www.walmart.ca/en/ip/Our-Finest-Frozen-Lean-Angus-Meatballs-Appetizers/6000200192499">Our Finest Fully Cooked Lean Angus Beef Meatballs</a><br><span data-en="907 g / 60 Pieces">907 g / 60 Pieces</span></td><td data-en="1 Bag / 3 Weeks">1袋 / 3周</td><td><a href="https://www.walmart.ca/en/ip/Our-Finest-Frozen-Lean-Angus-Meatballs-Appetizers/6000200192499">$12.84</a></td></tr>
+<tr data-price-id="32" data-weekly-cost="6.37"><td data-en="Breaded Haddock">裹粉黑线鳕</td><td><a href="https://www.walmart.ca/en/ip/High-Liner-Pan-Sear-Selects-Traditional-Haddock/6000196031340">High Liner Pan-Sear Selects Traditional Haddock</a><br><span data-en="500 g / Box, 4 Fillets">500 g / 盒，4片</span></td><td data-en="1 Box / 2 Weeks">1盒 / 2周</td><td><a href="https://www.walmart.ca/en/ip/High-Liner-Pan-Sear-Selects-Traditional-Haddock/6000196031340">$12.74</a></td></tr>
+<tr data-price-id="33" data-weekly-cost="1.71"><td data-en="Beef Meatballs">牛肉丸</td><td><a href="https://www.walmart.ca/en/ip/Our-Finest-Frozen-Lean-Angus-Meatballs-Appetizers/6000200192499">Our Finest Fully Cooked Lean Angus Beef Meatballs</a><br><span data-en="907 g / 60 Pieces">907 g / 60 Pieces</span></td><td data-en="1 Bag / 7.5 Weeks">1袋 / 7.5周</td><td><a href="https://www.walmart.ca/en/ip/Our-Finest-Frozen-Lean-Angus-Meatballs-Appetizers/6000200192499">$12.84</a></td></tr>
 <tr data-price-id="34" data-weekly-cost="10.98"><td data-en="Raw Shrimp">生虾仁</td><td><a href="https://www.walmart.ca/en/ip/Great-Value-Wild-Argentinian-Large-Raw-Shrimp/6000202999819">Great Value Wild Argentinian Large Raw Shrimp</a><br><span data-en="340 g">340 g</span></td><td data-en="1 Bag / Week">1袋 / 周</td><td><a href="https://www.walmart.ca/en/ip/Great-Value-Wild-Argentinian-Large-Raw-Shrimp/6000202999819">$10.98</a></td></tr>
 <tr data-price-id="35" data-weekly-cost="3.43"><td data-en="Chicken and Vegetable Dumplings">鸡肉蔬菜水饺</td><td><a href="https://www.walmart.ca/en/ip/Great-Value-Frozen-Chicken-Vegetable-Potstickers/6O52P9Y77G03">Great Value Frozen Chicken &amp; Vegetable Potstickers</a><br><span data-en="1.13 kg">1.13 kg</span></td><td data-en="Restock as Needed">按需补充</td><td><a href="https://www.walmart.ca/en/ip/Great-Value-Frozen-Chicken-Vegetable-Potstickers/6O52P9Y77G03">$9.98</a></td></tr>
 <tr data-price-id="36" data-weekly-cost="0.56"><td data-en="Whole-Wheat Bread">全麦面包</td><td><a href="https://www.walmart.ca/en/ip/Dempster-s-100-Whole-Wheat-Bread-675-g/6000191268657">Dempster’s 100% Whole Wheat Bread</a><br><span data-en="675 g">675 g</span></td><td data-en="4 Slices / Week; Freeze the Rest">每周4片；剩余冷冻</td><td><a href="https://www.walmart.ca/en/ip/Dempster-s-100-Whole-Wheat-Bread-675-g/6000191268657">$2.68</a></td></tr>
@@ -209,7 +210,7 @@ visual: true
 <td>每周合计</td>
 <td>—</td>
 <td style="text-align: right;">—</td>
-<td style="text-align: right;">$133.42</td>
+<td style="text-align: right;">$137.14</td>
 </tr>
 </tbody>
 </table>

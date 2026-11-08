@@ -168,12 +168,13 @@ test('portioning waits for baked shrimp and meatballs as well as salmon', () => 
   const nodes = vm.runInNewContext(flow.match(/const nodes = (\[[\s\S]*?\n  \]);/)[1]);
   const minutes = vm.runInNewContext('(' + guide.match(/const taskMinutes = ({[\s\S]*?\n  });/)[1] + ')');
   const tasks = nodes.filter(n => n.manual || Object.hasOwn(minutes, n.id));
-  assert.ok(!nodes.some(n => n.id === 'haddock'));
-  const done = tasks.filter(t => !['shrimp', 'meatballs', 'finish'].includes(t.id)).map(t => t.id);
+  assert.equal(nodes.find(n => n.id === 'haddock').before[0], 'salmon');
+  const done = tasks.filter(t => !['shrimp', 'meatballs', 'haddock', 'finish'].includes(t.id)).map(t => t.id);
   const result = schedule({ tasks, minutes, done, running: {}, ready: true });
   assert.ok(result);
   assert.ok(result.starts.finish >= result.ends.shrimp);
   assert.ok(result.starts.finish >= result.ends.meatballs);
+  assert.ok(result.starts.finish >= result.ends.haddock);
   for (const id of ['dumplings', 'eggs']) assert.equal(nodes.find(n=>n.id===id).resource, 'pot-1');
   for (const id of ['pasta', 'noodles']) assert.equal(nodes.find(n=>n.id===id).resource, 'pot-2');
 });

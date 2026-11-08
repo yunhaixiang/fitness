@@ -40,6 +40,7 @@
     "shrimp": 12,
     "air-heat": 4,
     "salmon": 8,
+    "haddock": 20,
     "eggs": 9,
     "dumplings": 8,
     "pasta": 8,

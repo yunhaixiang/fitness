@@ -53,6 +53,7 @@
     {"id": "shrimp", "label": ["面包糠烤虾", "Panko-Baked Shrimp"], "note": ["", ""], "group": "oven", "before": ["oven-heat", "prep-shrimp"], "link": "#cook-shrimp", "minutes": 12},
     {"id": "air-heat", "label": ["预热空气炸锅", "Preheat Air Fryer"], "note": ["", ""], "group": "air", "before": ["prep-salmon"], "link": "#cook-air-heat", "minutes": 4},
     {"id": "salmon", "label": ["三文鱼", "Salmon"], "note": ["", ""], "group": "air", "before": ["air-heat", "prep-salmon"], "link": "#cook-salmon", "minutes": 8},
+    {"id": "haddock", "label": ["裹粉黑线鳕", "Breaded Haddock"], "note": ["", ""], "group": "air", "before": ["salmon"], "link": "#cook-haddock", "minutes": 20},
     {"id": "egg-water", "label": ["烧水", "Boil Water"], "note": ["", ""], "group": "pots", "before": ["ready"], "link": "#cook-egg-water", "manual": true, "resource": "pot-1", "minutes": 1},
     {"id": "eggs", "label": ["水煮蛋", "Boiled Eggs"], "note": ["", ""], "group": "pots", "before": ["egg-water", "prep-eggs"], "link": "#cook-eggs", "resource": "pot-1", "minutes": 9},
     {"id": "dumpling-water", "label": ["换水烧开", "Boil Fresh Water"], "note": ["", ""], "group": "pots", "before": ["eggs"], "link": "#cook-dumpling-water", "manual": true, "resource": "pot-1", "minutes": 1},
@@ -70,7 +71,7 @@
     {"id": "fried-eggs", "label": ["煎蛋", "Fried Eggs"], "note": ["", ""], "group": "large-wok", "before": ["tomato", "prep-eggs"], "link": "#cook-fried-eggs", "minutes": 5},
     {"id": "wrap", "label": ["卷饼", "Wrap"], "note": ["", ""], "group": "wrap", "before": ["chicken", "eggs", "prep-chickpeas", "prep-pepper", "prep-bread"], "link": "#cook-wrap", "minutes": 4},
     {"id": "sandwich", "label": ["三明治", "Sandwich"], "note": ["", ""], "group": "wrap", "before": ["chicken", "fried-eggs", "prep-chickpeas", "prep-roma", "prep-bread"], "link": "#cook-sandwich", "minutes": 4},
-    {"id": "finish", "label": ["分盘、入冰箱、清洗", "Portion, Refrigerate and Clean"], "note": ["", ""], "group": "finish", "before": ["rice", "potato", "ribs", "meatballs", "shrimp", "salmon", "dumplings", "curry", "tomato", "wrap", "sandwich", "mushroom", "spinach"], "link": "#portions", "minutes": 15}
+    {"id": "finish", "label": ["分盘、入冰箱、清洗", "Portion, Refrigerate and Clean"], "note": ["", ""], "group": "finish", "before": ["rice", "potato", "ribs", "meatballs", "shrimp", "salmon", "dumplings", "curry", "tomato", "wrap", "sandwich", "mushroom", "spinach", "haddock"], "link": "#portions", "minutes": 15}
   ];
   const groups = [
     {"id": "cold", "icon": "cold", "title": ["冷冻／解冻", "Freeze / Thaw"], "hint": ["择一", "Choose One Path"]},
@@ -216,7 +217,7 @@
   };
   detail.append(create('p', 'cooking-flow-prompt', t('选择任一步骤，查看它与其他厨具的衔接。', 'Choose a step to see how it connects to the other appliances.')));
 
-  const instructionSections = [["cold", "cold", ["cold-first", "cold-second"]], ["prep", "prep", ["prep-rice", "prep-chicken", "prep-potato", "prep-ribs", "prep-meatballs", "prep-shrimp", "prep-salmon", "prep-eggs", "prep-pasta", "prep-dumplings", "prep-noodles", "prep-mushroom", "prep-spinach", "prep-tomato", "prep-meat", "prep-zucchini", "prep-peas-carrots", "prep-chickpeas", "prep-pepper", "prep-roma", "prep-bread", "prep-curry"]], ["rice", "rice", ["rice"]], ["oven", "oven", ["oven-heat", "chicken", "potato", "ribs", "meatballs", "shrimp"]], ["air-fryer", "air", ["air-heat", "salmon"]], ["pot-one", "pots", ["egg-water", "eggs", "dumpling-water", "dumplings"]], ["pot-two", "pots", ["pasta-water", "pasta", "noodle-water", "noodles"]], ["small-wok", "small-wok", ["mushroom", "peas", "curry"]], ["large-wok", "large-wok", ["spinach", "ground", "tomato", "fried-eggs"]], ["wraps", "wrap", ["wrap", "sandwich"]]];
+  const instructionSections = [["cold", "cold", ["cold-first", "cold-second"]], ["prep", "prep", ["prep-rice", "prep-chicken", "prep-potato", "prep-ribs", "prep-meatballs", "prep-shrimp", "prep-salmon", "prep-eggs", "prep-pasta", "prep-dumplings", "prep-noodles", "prep-mushroom", "prep-spinach", "prep-tomato", "prep-meat", "prep-zucchini", "prep-peas-carrots", "prep-chickpeas", "prep-pepper", "prep-roma", "prep-bread", "prep-curry"]], ["rice", "rice", ["rice"]], ["oven", "oven", ["oven-heat", "chicken", "potato", "ribs", "meatballs", "shrimp"]], ["air-fryer", "air", ["air-heat", "salmon", "haddock"]], ["pot-one", "pots", ["egg-water", "eggs", "dumpling-water", "dumplings"]], ["pot-two", "pots", ["pasta-water", "pasta", "noodle-water", "noodles"]], ["small-wok", "small-wok", ["mushroom", "peas", "curry"]], ["large-wok", "large-wok", ["spinach", "ground", "tomato", "fried-eggs"]], ["wraps", "wrap", ["wrap", "sandwich"]]];
   for (const [headingId, group, steps] of instructionSections) {
     const heading = document.getElementById(headingId);
     let source = heading?.nextElementSibling;
