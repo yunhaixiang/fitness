@@ -22,12 +22,12 @@ test('weekly meat, eggs, grains and portions match whole-package purchase cycles
  const close=(a,b)=>assert.ok(Math.abs(a-b)<.01,`${a} != ${b}`);
  close(weekly('thigh')*100,930); close(weekly('ground')*100,454);
  close(weekly('shrimp')*100,340); close(weekly('salmon')*100,320);
- close(weekly('ball')*85,907*8/60); close(weekly('haddock'),2); close(weekly('dumpling')*96,336);
- close(weekly('egg'),12); close(weekly('potato')*100,220);
+ close(weekly('ball')*85,907*6/60); close(weekly('haddock'),2); close(weekly('dumpling')*96,336);
+ close(weekly('egg'),12); close(weekly('potato')*100,340);
  close(weekly('sweetpotato'),0);
  close(weekly('rice')*100,70); close(weekly('pasta')*85,120);
  close(weekly('noodle')*100,90); close(weekly('sauce')*125,300);
- close(weekly('chickpea')*100,340); close(weekly('spinach')*100,284);
+ close(weekly('chickpea'),0); close(weekly('tuna'),4); close(weekly('mayo'),9); close(weekly('spinach')*100,284);
  close(weekly('mushroom')*100,227); close(weekly('pc')*100,520);
  close(weekly('oil'),9.5); // 4.75 tsp each half-week, including all three fried eggs
 });

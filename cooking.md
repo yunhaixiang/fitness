@@ -20,7 +20,7 @@ cooking: true
 <tr><td data-en="Boiled Eggs">水煮蛋</td><td data-en="1, 4, 7: 1 Each">1、4、7各1个</td></tr>
 <tr><td data-en="Fried Eggs">煎蛋</td><td data-en="2: 2 Eggs; 5: 1 Egg">2放2个；5放1个</td></tr>
 <tr><td data-en="Breaded Haddock">裹粉黑线鳕</td><td data-en="2: 1 Fillet">2放1片</td></tr>
-<tr><td data-en="Beef Meatballs">牛肉丸</td><td data-en="4: 4 Pieces">4放4颗</td></tr>
+<tr><td data-en="Beef Meatballs">牛肉丸</td><td data-en="4: 3 Pieces">4放3颗</td></tr>
 <tr><td data-en="Panko-Baked Shrimp">面包糠烤虾</td><td>2、7</td></tr>
 <tr><td data-en="BBQ Ribs">BBQ排骨</td><td>4</td></tr>
 <tr><td data-en="Salmon">三文鱼</td><td data-en="6: 1 Fillet">6放1块</td></tr>
@@ -30,7 +30,7 @@ cooking: true
 <tr><td data-en="Boiled Dumplings">水饺</td><td>6</td></tr>
 <tr><td data-en="Curry Rice Noodles">咖喱扁米粉</td><td>7</td></tr>
 <tr><td data-en="Peas and Carrots">豌豆、胡萝卜</td><td>2、7</td></tr>
-<tr><td data-en="Chickpeas">鹰嘴豆</td><td>1、5</td></tr>
+<tr><td data-en="Tuna">金枪鱼</td><td>1、5</td></tr>
 <tr><td data-en="Red Bell Pepper">红甜椒</td><td>1</td></tr>
 <tr><td data-en="Roma Tomato">罗马番茄</td><td>5</td></tr>
 <tr><td data-en="Mushrooms">蘑菇</td><td>4、6</td></tr>
@@ -41,8 +41,8 @@ cooking: true
 
 <h2 id="cold" data-en="Freeze / Thaw">冷冻／解冻线程</h2>
 <ol>
-<li data-en="Freeze the second-half portions of chicken thighs, ground chicken, salmon, shrimp and ribs. Freeze the later chickpea portion once the can is opened and next week’s tomato sauce. Keep haddock, meatballs and dumplings frozen; freeze spare bread and tortillas. Refrigerate potatoes, vegetables and fruit.">将后半周的鸡大腿肉、鸡肉末、三文鱼、虾仁和半盒排骨分装冷冻；鹰嘴豆开罐后冷冻后半周份，番茄酱冷冻下周份。裹粉黑线鳕、牛肉丸、水饺保持冷冻；多余面包和卷饼皮分装冷冻。土豆、蔬菜和水果冷藏。</li>
-<li data-en="Move chicken thighs, ground chicken, salmon, shrimp, half the ribs and chickpeas to the fridge about 36 hours ahead. Thaw bread and tortillas as needed. Cook haddock, meatballs and dumplings from frozen.">提前约36小时将鸡大腿肉、鸡肉末、三文鱼、虾仁、半盒排骨和鹰嘴豆移入冷藏；面包和卷饼皮按需解冻。裹粉黑线鳕、牛肉丸、水饺不解冻。</li>
+<li data-en="Freeze the second-half portions of chicken thighs, ground chicken, salmon, shrimp and ribs. Freeze next week’s tomato sauce. Keep tuna cans unopened until each cooking session. Keep haddock, meatballs and dumplings frozen; freeze spare bread and tortillas. Refrigerate potatoes, vegetables and fruit.">将后半周的鸡大腿肉、鸡肉末、三文鱼、虾仁和半盒排骨分装冷冻；番茄酱冷冻下周份；金枪鱼每次做饭开一罐。裹粉黑线鳕、牛肉丸、水饺保持冷冻；多余面包和卷饼皮分装冷冻。土豆、蔬菜和水果冷藏。</li>
+<li data-en="Move chicken thighs, ground chicken, salmon, shrimp, half the ribs to the fridge about 36 hours ahead. Thaw bread and tortillas as needed. Cook haddock, meatballs and dumplings from frozen.">提前约36小时将鸡大腿肉、鸡肉末、三文鱼、虾仁、半盒排骨移入冷藏；面包和卷饼皮按需解冻。裹粉黑线鳕、牛肉丸、水饺不解冻。</li>
 </ol>
 
 <h2 id="rice" data-en="Rice Cooker">电饭煲线程</h2>
@@ -64,11 +64,11 @@ cooking: true
 <li data-en="Preheat to 400°F while preparing ingredients.">烤箱预热到400°F。备料可同时进行。</li>
 <li data-en="Pat dry and season 4 chicken thighs, 465 g total.">取鸡大腿肉4块，共465 g，擦干、调味。</li>
 <li data-en="Roast at 400°F for 27 minutes, to 74°C in the centre. Divide the cooked meat 3:3:2 between meals 1, 5 and 7, equivalent to 1½, 1½ and 1 thigh. Shred the wrap and sandwich portions.">400°F烤27分钟，中心达74°C。熟肉按3:3:2分给第1、5、7盘，相当于1½、1½、1块；卷饼与三明治的肉掰碎。</li>
-<li data-en="Cut 110 g yellow potatoes into even wedges and season.">取黄土豆110 g，切成厚度接近的薯角，拌调味。</li>
+<li data-en="Wash 170 g little yellow potatoes, cut into even pieces and season.">取小土豆170 g，洗净切成大小接近的块，拌调味。</li>
 <li data-en="Roast at 400°F for 35–40 minutes until tender and golden, turning halfway. Place in meal 4.">400°F烤约35–40分钟至内部软、表面金黄，中途翻面；放第4盘。</li>
 <li data-en="Use half the box of ribs, 300 g including bones and sauce. Add the packaged sauce and wrap in foil.">取半盒排骨300 g，淋包装内酱汁，裹好锡纸。</li>
 <li data-en="Heat foil-wrapped ribs at 400°F for 15–20 minutes, to 74°C in the centre. Place in meal 4.">锡纸包好的排骨400°F烤15–20分钟至中心74°C，全部放第4盘。</li>
-<li data-en="Place 4 frozen meatballs (60.5 g) on a tray. Bake at 400°F for 15–20 minutes to a 74°C centre, following the pack if different. Place in meal 4.">取冷冻牛肉丸4颗（60.5 g）铺入烤盘，400°F烤15–20分钟至中心74°C；包装另有要求则按包装。放第4盘。</li>
+<li data-en="Place 3 frozen meatballs (45.4 g) on a tray. Bake at 400°F for 15–20 minutes to a 74°C centre, following the pack if different. Place in meal 4.">取冷冻牛肉丸3颗（45.4 g）铺入烤盘，400°F烤15–20分钟至中心74°C；包装另有要求则按包装。放第4盘。</li>
 <li data-en="Pat 170 g thawed shrimp dry; season with garlic powder and pepper. Mix 20 g panko with 1 tsp olive oil and spread over the shrimp.">取解冻虾仁170 g，擦干，拌蒜粉和黑胡椒。面包糠20 g拌橄榄油1茶匙，覆盖在虾仁上。</li>
 <li data-en="Bake in a single layer at 400°F for about 10–12 minutes until the shrimp are opaque and the panko is golden. Split equally between meals 2 and 7.">单层铺开，400°F烤约10–12分钟至虾肉不透明、面包糠金黄；均分到第2、7盘。</li>
 </ol>
@@ -137,7 +137,7 @@ cooking: true
 
 <h2 id="wraps" data-en="Wrap and Sandwich">卷饼与三明治线程</h2>
 <ol>
-<li data-en="Drain and rinse half a can of chickpeas (about 170 g), dividing equally for the wrap and sandwich. Wash, deseed and slice half a red pepper. Spread 1 tsp Chipotle mayonnaise on 1 large tortilla; add meal 1’s shredded chicken, crumbled boiled egg, chickpeas and pepper. Roll and place in meal 1.">半罐鹰嘴豆沥干冲洗，约170 g，均分给卷饼和三明治；半个红甜椒洗净去籽切细条。大号卷饼皮1片抹Chipotle蛋黄酱1茶匙，加入第1盘的鸡腿肉、掰碎水煮蛋、鹰嘴豆和红甜椒，卷好放第1盘。</li>
-<li data-en="Wash and slice 1 Roma tomato. Spread 1/2 tsp Chipotle mayonnaise on 2 slices of whole-wheat bread; fill with meal 5’s chicken, fried egg and tomato. Mash the reserved chickpeas into the filling or serve alongside in meal 5.">罗马番茄1个洗净切片。全麦面包2片抹Chipotle蛋黄酱½茶匙，夹入第5盘的鸡腿肉、煎蛋和番茄；鹰嘴豆压碎夹入或放旁边，放第5盘。</li>
+<li data-en="Open and drain 1 can of tuna, dividing it equally between the wrap and sandwich (about 55 g each). Mix the wrap portion with 2½ tsp Chipotle mayonnaise. Wash, deseed and slice half a red pepper. Fill 1 large tortilla with the tuna, meal 1’s shredded chicken, crumbled boiled egg and pepper; roll and place in meal 1.">金枪鱼1罐沥干，均分给卷饼和三明治，每份约55 g；卷饼份拌Chipotle蛋黄酱2½茶匙。半个红甜椒洗净去籽切细条，大号卷饼皮1片放入金枪鱼、第1盘的鸡腿肉、掰碎水煮蛋和红甜椒，卷好放第1盘。</li>
+<li data-en="Wash and slice 1 Roma tomato. Mix the reserved tuna with 2 tsp Chipotle mayonnaise. Fill 2 slices of whole-wheat bread with the tuna, meal 5’s chicken, fried egg and tomato; place in meal 5.">罗马番茄1个洗净切片；留下的金枪鱼拌Chipotle蛋黄酱2茶匙。全麦面包2片夹入金枪鱼、第5盘的鸡腿肉、煎蛋和番茄，放第5盘。</li>
 </ol>
 <!-- Cook to the product package directions where they differ. Rice noodle method: Erawan retailer directions (hot-water soak 10–15 min, boil 30–60 sec). Shrimp is an olive-oil/panko adaptation; oven times vary with size and loading. -->

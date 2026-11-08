@@ -66,12 +66,7 @@ visual: true
 <td style="text-align: right;">1瓶 / 周</td>
 <td style="text-align: right;"><a href="https://www.walmart.ca/en/ip/Fuze-Iced-Tea-Zero-Sugar-Lemon-Bottle/39X12Q1LJGX0">$2.77</a></td>
 </tr>
-<tr data-weekly-cost="0.43" data-price-id="9">
-<td>土豆</td>
-<td><a href="https://www.walmart.ca/en/ip/your-fresh-market-yellow-potatoes/6000196075652">Your Fresh Market Yellow Potatoes</a><br>5 lb / 2.27 kg</td>
-<td data-en="1 Bag / About 10.3 Weeks; 220 g Weekly">1袋 / 约10.3周；每周220 g</td>
-<td style="text-align: right;"><a href="https://www.walmart.ca/en/ip/your-fresh-market-yellow-potatoes/6000196075652">$4.44</a></td>
-</tr>
+<tr data-price-id="9" data-weekly-cost="1.49"><td>土豆</td><td><a href="https://www.walmart.ca/en/ip/The-Little-Potato-Company-Fresh-Little-Potatoes-1-5lb-Little-Yellows-Fresh-yellow-potatoes/6000201597418">The Little Potato Company Little Yellows</a><br>680 g</td><td data-en="1 Bag / 2 Weeks">1袋 / 2周</td><td><a href="https://www.walmart.ca/en/ip/The-Little-Potato-Company-Fresh-Little-Potatoes-1-5lb-Little-Yellows-Fresh-yellow-potatoes/6000201597418">$2.98</a></td></tr>
 <tr data-price-id="10" data-weekly-cost="2.74">
 <td>豌豆，胡萝卜</td>
 <td><a href="https://www.walmart.ca/en/ip/Great-Value-Peas-and-Carrots-398-mL/5YDQIJZT1APQ">Great Value Peas and Carrots</a><br>398 mL / 罐</td>
@@ -195,11 +190,11 @@ visual: true
 <td style="text-align: right;"><a href="https://www.walmart.ca/fr/ip/leanfit-sport-creatine-monohydrate-en-poudre-non-aromatis-300-g-5-g-de-cratine-par-portion-certification-informed-choice-cratine-micronise-et-de-quali/6000208594600">$32.97</a></td>
 </tr>
 <tr data-price-id="32" data-weekly-cost="6.37"><td data-en="Breaded Haddock">裹粉黑线鳕</td><td><a href="https://www.walmart.ca/en/ip/High-Liner-Pan-Sear-Selects-Traditional-Haddock/6000196031340">High Liner Pan-Sear Selects Traditional Haddock</a><br><span data-en="500 g / Box, 4 Fillets">500 g / 盒，4片</span></td><td data-en="1 Box / 2 Weeks">1盒 / 2周</td><td><a href="https://www.walmart.ca/en/ip/High-Liner-Pan-Sear-Selects-Traditional-Haddock/6000196031340">$12.74</a></td></tr>
-<tr data-price-id="33" data-weekly-cost="1.71"><td data-en="Beef Meatballs">牛肉丸</td><td><a href="https://www.walmart.ca/en/ip/Our-Finest-Frozen-Lean-Angus-Meatballs-Appetizers/6000200192499">Our Finest Fully Cooked Lean Angus Beef Meatballs</a><br><span data-en="907 g / 60 Pieces">907 g / 60 Pieces</span></td><td data-en="1 Bag / 7.5 Weeks">1袋 / 7.5周</td><td><a href="https://www.walmart.ca/en/ip/Our-Finest-Frozen-Lean-Angus-Meatballs-Appetizers/6000200192499">$12.84</a></td></tr>
+<tr data-price-id="33" data-weekly-cost="1.28"><td data-en="Beef Meatballs">牛肉丸</td><td><a href="https://www.walmart.ca/en/ip/Our-Finest-Frozen-Lean-Angus-Meatballs-Appetizers/6000200192499">Our Finest Fully Cooked Lean Angus Beef Meatballs</a><br><span data-en="907 g / 60 Pieces">907 g / 60 Pieces</span></td><td data-en="1 Bag / 10 Weeks">1袋 / 10周</td><td><a href="https://www.walmart.ca/en/ip/Our-Finest-Frozen-Lean-Angus-Meatballs-Appetizers/6000200192499">$12.84</a></td></tr>
 <tr data-price-id="34" data-weekly-cost="10.98"><td data-en="Raw Shrimp">生虾仁</td><td><a href="https://www.walmart.ca/en/ip/Great-Value-Wild-Argentinian-Large-Raw-Shrimp/6000202999819">Great Value Wild Argentinian Large Raw Shrimp</a><br><span data-en="340 g">340 g</span></td><td data-en="1 Bag / Week">1袋 / 周</td><td><a href="https://www.walmart.ca/en/ip/Great-Value-Wild-Argentinian-Large-Raw-Shrimp/6000202999819">$10.98</a></td></tr>
 <tr data-price-id="35" data-weekly-cost="3.43"><td data-en="Chicken and Vegetable Dumplings">鸡肉蔬菜水饺</td><td><a href="https://www.walmart.ca/en/ip/Great-Value-Frozen-Chicken-Vegetable-Potstickers/6O52P9Y77G03">Great Value Frozen Chicken &amp; Vegetable Potstickers</a><br><span data-en="1.13 kg">1.13 kg</span></td><td data-en="Restock as Needed">按需补充</td><td><a href="https://www.walmart.ca/en/ip/Great-Value-Frozen-Chicken-Vegetable-Potstickers/6O52P9Y77G03">$9.98</a></td></tr>
 <tr data-price-id="36" data-weekly-cost="0.56"><td data-en="Whole-Wheat Bread">全麦面包</td><td><a href="https://www.walmart.ca/en/ip/Dempster-s-100-Whole-Wheat-Bread-675-g/6000191268657">Dempster’s 100% Whole Wheat Bread</a><br><span data-en="675 g">675 g</span></td><td data-en="4 Slices / Week; Freeze the Rest">每周4片；剩余冷冻</td><td><a href="https://www.walmart.ca/en/ip/Dempster-s-100-Whole-Wheat-Bread-675-g/6000191268657">$2.68</a></td></tr>
-<tr data-price-id="37" data-weekly-cost="1.48"><td data-en="Chickpeas">鹰嘴豆</td><td><a href="https://www.walmart.ca/en/ip/Great-Value-Chick-Peas/10275238">Great Value Chick Peas</a><br><span data-en="540 mL">540 mL</span></td><td data-en="1 Can / Week">1罐 / 周</td><td><a href="https://www.walmart.ca/en/ip/Great-Value-Chick-Peas/10275238">$1.48</a></td></tr>
+<tr data-price-id="37" data-weekly-cost="2.48"><td data-en="Low-Sodium Tuna in Water">低钠水浸金枪鱼</td><td><a href="https://www.walmart.ca/en/ip/Clover-LEAF-Low-Sodium-Flaked-Light-Tuna-Skipjack-in-Water/10182386">Clover Leaf Low Sodium Flaked Light Tuna in Water</a><br>170 g</td><td data-en="2 Cans / Week">2罐 / 周</td><td><a href="https://www.walmart.ca/en/ip/Clover-LEAF-Low-Sodium-Flaked-Light-Tuna-Skipjack-in-Water/10182386">$1.24</a></td></tr>
 <tr data-price-id="38" data-weekly-cost="1.17"><td data-en="Red Bell Pepper">红甜椒</td><td><a href="https://www.walmart.ca/en/ip/SUNSET-Red-Bell-Pepper/6000191286439">SUNSET Red Bell Pepper</a><br><span data-en="Sold Individually">单颗售卖</span></td><td data-en="1 / Week">1个 / 周</td><td><a href="https://www.walmart.ca/en/ip/SUNSET-Red-Bell-Pepper/6000191286439">$1.17 / Avg.</a></td></tr>
 <tr data-price-id="39" data-weekly-cost="1.32"><td data-en="Zucchini">西葫芦</td><td><a href="https://www.walmart.ca/en/ip/Zucchini-Green/6000191270110">Green Zucchini</a><br><span data-en="Sold Individually">单颗售卖</span></td><td data-en="2 / Week">2根 / 周</td><td><a href="https://www.walmart.ca/en/ip/Zucchini-Green/6000191270110">$0.66 / Avg.</a></td></tr>
 <tr data-price-id="40" data-weekly-cost="1.04"><td data-en="Roma Tomato">罗马番茄</td><td><a href="https://www.walmart.ca/en/ip/Tomato-Roma-Sold-in-singles-0-10-0-14-KG/6000191272055">Roma Tomato</a><br><span data-en="Sold Individually">单颗售卖</span></td><td data-en="2 / Week">2个 / 周</td><td><a href="https://www.walmart.ca/en/ip/Tomato-Roma-Sold-in-singles-0-10-0-14-KG/6000191272055">$0.52 / Avg.</a></td></tr>
@@ -210,7 +205,7 @@ visual: true
 <td>每周合计</td>
 <td>—</td>
 <td style="text-align: right;">—</td>
-<td style="text-align: right;">$134.36</td>
+<td style="text-align: right;">$135.99</td>
 </tr>
 </tbody>
 </table>
