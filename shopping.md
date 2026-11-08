@@ -17,11 +17,11 @@ visual: true
 </tr>
 </thead>
 <tbody>
-<tr data-price-id="1" data-weekly-cost="16.74">
+<tr data-price-id="1" data-weekly-cost="14.34">
 <td>去骨去皮鸡大腿肉</td>
 <td><a href="https://www.walmart.ca/en/ip/mina-halal-boneless-skinless-chicken-thighs/6000201049805">Mina Halal Boneless Skinless Chicken Thighs</a><br>8块装；每盒0.93 kg，平均每块约116 g</td>
 <td style="text-align: right;">1盒 / 周</td>
-<td style="text-align: right;"><a href="https://www.walmart.ca/en/ip/mina-halal-boneless-skinless-chicken-thighs/6000201049805">$18.00 / kg</a></td>
+<td style="text-align: right;"><a href="https://www.walmart.ca/en/ip/mina-halal-boneless-skinless-chicken-thighs/6000201049805">$14.34</a></td>
 </tr>
 <tr data-price-id="2" data-weekly-cost="12.97">
 <td>BBQ熟猪背排骨</td>
@@ -29,11 +29,11 @@ visual: true
 <td style="text-align: right;">1盒 / 周</td>
 <td style="text-align: right;"><a href="https://www.walmart.ca/en/ip/swiss-chalet-smoky-bbq-pork-back-ribs-600g/6000197977827">$12.97</a></td>
 </tr>
-<tr data-weekly-cost="10.88" data-price-id="3">
+<tr data-weekly-cost="10.47" data-price-id="3">
 <td>三文鱼</td>
 <td><a href="https://www.walmart.ca/en/ip/Your-Fresh-Market-Coho-Salmon-Portions/6000208252814">Your Fresh Market Coho Salmon Portions</a><br>每盒2块，按320 g / 盒计算</td>
 <td data-en="1 Pack / Week">1盒 / 周</td>
-<td style="text-align: right;"><a href="https://www.walmart.ca/en/ip/Your-Fresh-Market-Coho-Salmon-Portions/6000208252814">$34.00 / kg</a></td>
+<td style="text-align: right;"><a href="https://www.walmart.ca/en/ip/Your-Fresh-Market-Coho-Salmon-Portions/6000208252814">$10.47</a></td>
 </tr>
 
 <tr data-weekly-cost="7.98" data-price-id="4">
@@ -210,7 +210,7 @@ visual: true
 <td>每周合计</td>
 <td>—</td>
 <td style="text-align: right;">—</td>
-<td style="text-align: right;">$137.17</td>
+<td style="text-align: right;">$134.36</td>
 </tr>
 </tbody>
 </table>

@@ -1,18 +1,19 @@
 {
   "checked_on": "2026-10-31",
   "currency": "CAD",
-  "scope": "Walmart Canada public prices; individual checked_on retained. Popeye spinach price supplied by user. Weekly subtotal averages routine purchase cycles. Bread assumes two slices total 70 g; weighed produce billed by actual weight. Excludes as-needed seasonings, tax and delivery. Not a London store live stock guarantee.",
-  "weekly_total_cad": "137.17",
+  "scope": "Walmart Canada public prices; individual checked_on retained. Popeye spinach, chicken thigh and salmon prices supplied by user. Weekly subtotal averages routine purchase cycles. Bread assumes two slices total 70 g; weighed produce billed by actual weight. Excludes as-needed seasonings, tax and delivery. Not a London store live stock guarantee.",
+  "weekly_total_cad": "134.36",
   "items": [
     {
       "item": "去骨去皮鸡大腿肉",
-      "price_cad": "18.00",
-      "basis": "kg",
-      "source_url": "https://www.walmart.ca/en/c/kp/boneless-chicken-thighs",
-      "source_type": "walmart_public",
-      "weekly_quantity": "0.93",
-      "weekly_cost_cad": "16.74",
-      "product_url": "https://www.walmart.ca/en/ip/mina-halal-boneless-skinless-chicken-thighs/6000201049805"
+      "price_cad": "14.34",
+      "basis": "package",
+      "source_url": "https://www.walmart.ca/en/ip/mina-halal-boneless-skinless-chicken-thighs/6000201049805",
+      "source_type": "user_provided",
+      "weekly_quantity": "1",
+      "weekly_cost_cad": "14.34",
+      "product_url": "https://www.walmart.ca/en/ip/mina-halal-boneless-skinless-chicken-thighs/6000201049805",
+      "checked_on": "2026-11-08"
     },
     {
       "item": "BBQ熟猪背排骨",
@@ -26,15 +27,16 @@
     },
     {
       "item": "三文鱼",
-      "price_cad": "34.00",
-      "basis": "kg",
-      "source_url": "https://www.walmart.ca/en/c/kp/salmon-fillets",
-      "source_type": "walmart_public",
-      "weekly_quantity": "0.32",
-      "weekly_cost_cad": "10.88",
+      "price_cad": "10.47",
+      "basis": "package",
+      "source_url": "https://www.walmart.ca/en/ip/Your-Fresh-Market-Coho-Salmon-Portions/6000208252814",
+      "source_type": "user_provided",
+      "weekly_quantity": "1",
+      "weekly_cost_cad": "10.47",
       "product_url": "https://www.walmart.ca/en/ip/Your-Fresh-Market-Coho-Salmon-Portions/6000208252814",
       "purchase_frequency_zh": "1盒 / 周",
-      "purchase_frequency_en": "1 Pack / Week"
+      "purchase_frequency_en": "1 Pack / Week",
+      "checked_on": "2026-11-08"
     },
     {
       "item": "特瘦鸡肉末",
@@ -456,5 +458,5 @@
       "price_type": "sale"
     }
   ],
-  "updated_on": "2026-11-07"
+  "updated_on": "2026-11-08"
 }
