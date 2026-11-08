@@ -5,11 +5,11 @@
     "outside_drink",
     "wrap",
     "rice",
+    "pasta",
     "bread",
     "potato",
     "noodles",
-    "dumpling",
-    "pasta"
+    "dumpling"
   ],
   "meals": {
     "fruit_breakfast": {
