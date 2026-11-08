@@ -127,6 +127,7 @@
       c.checkbox.checked = checked;
       c.checkbox.disabled = id === 'ready' || (!checked && !available.has(id) && !view.running.includes(id));
       c.row.classList.toggle('is-complete', checked);
+      c.row.classList.toggle('is-blocked', !checked && !available.has(id) && !view.running.includes(id));
       c.row.classList.toggle('is-running', view.running.includes(id));
       c.row.classList.toggle('is-available', available.has(id));
       c.row.classList.toggle('is-recommended', id === view.recommended);

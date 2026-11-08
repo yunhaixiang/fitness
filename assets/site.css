@@ -624,7 +624,10 @@ html[data-theme=light] .cooking-guide-primary{color:#fff}
 .cooking-progress-check{display:grid;place-items:center;cursor:pointer;min-height:44px}
 .cooking-progress-check input{width:20px;height:20px;margin:0;accent-color:var(--accent);cursor:pointer}
 .cooking-progress-check input:disabled{cursor:default}
-.cooking-flow-step-row.is-complete{opacity:.48}
+.cooking-flow-step-row.is-complete{opacity:.65}
+.cooking-flow-step-row.is-complete .cooking-flow-step-copy>strong{text-decoration:line-through;text-decoration-thickness:1.5px}
+.cooking-flow-step-row.is-blocked{opacity:.42}
+.cooking-flow-step-row{transition:opacity .15s}
 .cooking-flow-step-row.is-recommended .cooking-flow-step{border-color:var(--accent);box-shadow:inset 3px 0 var(--accent)}
 .cooking-flow-step-row.is-available .cooking-progress-badge{color:var(--accent)}
 .cooking-progress-badge{font-size:10px!important}
