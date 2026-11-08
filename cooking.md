@@ -128,12 +128,13 @@ cooking: true
 <div class="table-wrap">
 <table class="plan-table" ><thead><tr><th data-en="Food">食材</th><th data-en="Seasoning">调味</th></tr></thead><tbody>
 <tr><td data-en="Mushrooms">蘑菇</td><td data-en="1/4 tsp Olive Oil, 1/8 tsp Pepper, 1/4 tsp Garlic Powder, 1/4 tsp Onion Powder">橄榄油¼茶匙，黑胡椒⅛茶匙，蒜粉¼茶匙，洋葱粉¼茶匙</td></tr>
+<tr><td data-en="Peas and Carrots">豌豆、胡萝卜</td><td data-en="1/8 tsp Garlic Powder, 1/8 tsp Onion Powder, 1/16 tsp Black Pepper">蒜粉⅛茶匙，洋葱粉⅛茶匙，黑胡椒1/16茶匙</td></tr>
 <tr><td data-en="Curry Rice Noodles">咖喱扁米粉</td><td data-en="18 g Golden Curry, 150 mL Water">Golden Curry 18 g，水150 mL</td></tr>
 </tbody></table>
 </div>
 <ol>
 <li data-en="Add oil and seasoning to the saucepan and cook the mushrooms for 5–7 minutes. Split equally between meals 4 and 6.">小锅加油和调味，炒约5–7分钟；均分到第4、6盘。</li>
-<li data-en="Warm the peas and carrots with a splash of water. Put half in meal 2 and reserve half for the curry noodles.">加少量水把豌豆胡萝卜热透，一半放第2盘，另一半盛出留给咖喱米粉。</li>
+<li data-en="Add a splash of water, garlic powder, onion powder and black pepper to the peas and carrots; stir and heat through. Put half in meal 2 and reserve half for the curry noodles.">豌豆胡萝卜加少量水、蒜粉、洋葱粉和黑胡椒，拌匀热透，一半放第2盘，另一半盛出留给咖喱米粉。</li>
 <li data-en="Heat the measured water, lower the heat and dissolve the curry roux. Simmer for about 5 minutes until smooth, then toss in the noodles and reserved peas and carrots. Place in meal 7.">水烧热后关小火，溶入咖喱块，再煮约5分钟至顺滑；加入扁米粉和留下的豌豆胡萝卜拌热，放第7盘。</li>
 </ol>
 
