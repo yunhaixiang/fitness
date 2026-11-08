@@ -26,7 +26,7 @@ test('weekly meat, eggs, grains and portions match whole-package purchase cycles
  close(weekly('egg'),12); close(weekly('potato')*100,220);
  close(weekly('sweetpotato'),0);
  close(weekly('rice')*100,70); close(weekly('pasta')*85,120);
- close(weekly('noodle')*100,84); close(weekly('sauce')*125,300);
+ close(weekly('noodle')*100,90); close(weekly('sauce')*125,300);
  close(weekly('chickpea')*100,340); close(weekly('spinach')*100,284);
  close(weekly('mushroom')*100,227); close(weekly('pc')*100,520);
  close(weekly('oil'),9.5); // 4.75 tsp each half-week, including all three fried eggs

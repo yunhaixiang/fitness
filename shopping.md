@@ -203,14 +203,14 @@ visual: true
 <tr data-price-id="38" data-weekly-cost="1.17"><td data-en="Red Bell Pepper">红甜椒</td><td><a href="https://www.walmart.ca/en/ip/SUNSET-Red-Bell-Pepper/6000191286439">SUNSET Red Bell Pepper</a><br><span data-en="Sold Individually">单颗售卖</span></td><td data-en="1 / Week">1个 / 周</td><td><a href="https://www.walmart.ca/en/ip/SUNSET-Red-Bell-Pepper/6000191286439">$1.17 / Avg.</a></td></tr>
 <tr data-price-id="39" data-weekly-cost="1.32"><td data-en="Zucchini">西葫芦</td><td><a href="https://www.walmart.ca/en/ip/Zucchini-Green/6000191270110">Green Zucchini</a><br><span data-en="Sold Individually">单颗售卖</span></td><td data-en="2 / Week">2根 / 周</td><td><a href="https://www.walmart.ca/en/ip/Zucchini-Green/6000191270110">$0.66 / Avg.</a></td></tr>
 <tr data-price-id="40" data-weekly-cost="1.04"><td data-en="Roma Tomato">罗马番茄</td><td><a href="https://www.walmart.ca/en/ip/Tomato-Roma-Sold-in-singles-0-10-0-14-KG/6000191272055">Roma Tomato</a><br><span data-en="Sold Individually">单颗售卖</span></td><td data-en="2 / Week">2个 / 周</td><td><a href="https://www.walmart.ca/en/ip/Tomato-Roma-Sold-in-singles-0-10-0-14-KG/6000191272055">$0.52 / Avg.</a></td></tr>
-<tr data-price-id="41" data-weekly-cost="0.36"><td data-en="Rice Noodles">扁米粉</td><td><a href="https://www.walmart.ca/en/ip/Erawan-Rice-Stick/6000199121439">Erawan Rice Stick</a><br><span data-en="454 g">454 g</span></td><td data-en="1 Pack / About 5.4 Weeks">1包 / 约5.4周</td><td><a href="https://www.walmart.ca/en/ip/Erawan-Rice-Stick/6000199121439">$1.97</a></td></tr>
+<tr data-price-id="41" data-weekly-cost="0.39"><td data-en="Rice Noodles">扁米粉</td><td><a href="https://www.walmart.ca/en/ip/Erawan-Rice-Stick/6000199121439">Erawan Rice Stick</a><br><span data-en="454 g">454 g</span></td><td data-en="1 Pack / About 5 Weeks">1包 / 约5周</td><td><a href="https://www.walmart.ca/en/ip/Erawan-Rice-Stick/6000199121439">$1.97</a></td></tr>
 <tr data-price-id="42" data-weekly-cost="0.52"><td data-en="Panko Breadcrumbs">面包糠</td><td><a href="https://www.walmart.ca/en/ip/Great-Value-Panko-Japanese-Style-Bread-Crumbs/6000197072643">Great Value Panko Japanese Style Bread Crumbs</a><br><span data-en="227 g">227 g</span></td><td data-en="1 Pack / About 5.7 Weeks">1包 / 约5.7周</td><td><a href="https://www.walmart.ca/en/ip/Great-Value-Panko-Japanese-Style-Bread-Crumbs/6000197072643">$2.97</a></td></tr>
 <tr data-price-id="43" data-weekly-cost="1.55"><td data-en="Curry Roux">咖喱块</td><td><a href="https://www.walmart.ca/en/ip/S-B-Golden-curry-sauce-mix-medium-hot/6000198034558">S&amp;B Golden Curry Sauce Mix Medium Hot</a><br><span data-en="92 g">92 g</span></td><td data-en="1 Box / About 2.6 Weeks">1盒 / 约2.6周</td><td><a href="https://www.walmart.ca/en/ip/S-B-Golden-curry-sauce-mix-medium-hot/6000198034558">$3.97</a></td></tr>
 <tr>
 <td>每周合计</td>
 <td>—</td>
 <td style="text-align: right;">—</td>
-<td style="text-align: right;">$137.14</td>
+<td style="text-align: right;">$137.17</td>
 </tr>
 </tbody>
 </table>

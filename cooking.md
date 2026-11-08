@@ -57,7 +57,7 @@ cooking: true
 <li data-en="Set out 6 eggs: 3 for boiling and 3 for frying, kept whole.">取鸡蛋6个；3个水煮、3个煎，不打散。</li>
 <li data-en="Weigh 60 g dry spaghetti.">称干意面60 g。</li>
 <li data-en="Set aside 7 Great Value frozen dumplings (168 g) and 26.25 mL included dipping sauce; return the rest to the freezer.">取Great Value冷冻水饺7个（168 g），备附带蘸酱26.25 mL，其余放回冷冻。</li>
-<li data-en="Soak 42 g dry rice noodles in hot water for 10–15 minutes until pliable, then drain.">称干扁米粉42 g，用热水浸泡10–15分钟至柔软，沥干。</li>
+<li data-en="Soak 45 g dry rice noodles in hot water for 10–15 minutes until pliable, then drain.">称干扁米粉45 g，用热水浸泡10–15分钟至柔软，沥干。</li>
 <li data-en="Set out 113.5 g mushrooms and their seasonings.">备蘑菇半盒113.5 g和调味料。</li>
 <li data-en="Set out 142 g spinach and its seasonings.">备菠菜半袋142 g和调味料。</li>
 <li data-en="Measure 150 mL tomato-basil pasta sauce.">量番茄意面酱150 mL。</li>
