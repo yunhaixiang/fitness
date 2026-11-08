@@ -33,7 +33,6 @@
     tabs.setAttribute('role', 'tablist');
     tabs.setAttribute('aria-label', label('选择星期', 'Choose a day'));
     const grid = make('div', 'diet-week-grid');
-    const kinds = ['wrap', 'rice', 'pasta', 'potato', 'bread', 'dumpling', 'noodles'];
     const buttons = [];
     const panels = [];
     const nutrientFields = [
@@ -123,7 +122,7 @@
       list.append(dailyCard(dayIndex, false));
       for (const row of dayRows) {
         const index = rows.indexOf(row);
-        const card = make('article', `diet-meal-card diet-kind-${kinds[index % 7]}`);
+        const card = make('article', `diet-meal-card diet-kind-${row.dataset.nutritionKey}`);
         const top = make('div', 'diet-meal-top');
         const when = make('div', 'diet-meal-when');
         when.append(make('span', '', value(row, 1)));

@@ -47,10 +47,18 @@ test('all cooking prerequisites are valid, acyclic, and have matching instructio
  for(const [id,group,steps] of sections){const fragment=page.split('<h2 id="'+id+'"')[1].split('<h2 ')[0];assert.equal((fragment.match(/<li /g)||[]).length,steps.length,id);steps.forEach(s=>instructionIds.add('cook-'+s));}
  for(const n of flow)assert.ok(instructionIds.has(n.link.slice(1))||['cold','portions'].includes(n.link.slice(1)),n.link);
  assert.ok(page.includes('裹粉黑线鳕'));
- assert.match(page,/第2盘2个，第5盘1个/);
+ assert.match(page,/第2盘2个，第3盘1个/);
 });
 test('routine shopping subtotal agrees with both stored prices and all shopping cards',()=>{
  const sum=[...read('shopping.md').matchAll(/data-weekly-cost="([\d.]+)"/g)].reduce((s,m)=>s+Number(m[1]),0);
  assert.equal(sum.toFixed(2),JSON.parse(read('_data/shopping_prices.json')).weekly_total_cad);
  assert.match(read('shopping.md'),new RegExp('\\$'+sum.toFixed(2).replace('.','\\.')));
+});
+
+test('repeated main ingredients stay separated across the half-week boundary',()=>{
+ const avoidAdjacent=[['wrap','bread','noodles'],['rice','noodles'],['potato','dumpling'],['pasta','noodles'],['wrap','bread']];
+ for(let i=0;i<basis.mealKeys.length;i++){
+  const a=basis.mealKeys[i],b=basis.mealKeys[(i+1)%basis.mealKeys.length];
+  for(const group of avoidAdjacent)assert.ok(!(group.includes(a)&&group.includes(b)),`${a} next to ${b}`);
+ }
 });
