@@ -4,12 +4,12 @@
     "kiwi_breakfast",
     "outside_drink",
     "wrap",
-    "rice",
-    "pasta",
-    "bread",
-    "potato",
+    "dumpling",
     "noodles",
-    "dumpling"
+    "potato",
+    "bread",
+    "rice",
+    "pasta"
   ],
   "meals": {
     "fruit_breakfast": {
