@@ -41,6 +41,7 @@
     overview.append(count, countLabel, track);
     shell.append(overview);
     const weekly = el('div', 'visual-card-grid');
+    const fortnightly = el('div', 'visual-card-grid');
     const restock = el('div', 'visual-card-grid');
     const cards = new Map();
     const refresh = () => {
@@ -82,14 +83,16 @@
         updateCard();
       }
       cards.set(row, card);
-      (row.dataset.restock === 'true' ? restock : weekly).append(card);
+      const group = row.dataset.purchaseGroup || (row.dataset.restock === 'true' ? 'restock' : 'weekly');
+      ({ weekly, fortnightly, restock }[group] || restock).append(card);
     }
     const section = (title, grid) => {
       if (!grid.children.length) return;
       shell.append(el('h2', 'visual-section-label', title), grid);
     };
-    section(tr('每周购买', 'Weekly groceries'), weekly);
-    section(tr('按需补货', 'Restock as needed'), restock);
+    section(tr('每周购买', 'Weekly'), weekly);
+    section(tr('每两周购买', 'Every Two Weeks'), fortnightly);
+    section(tr('三周及以上／按需补充', 'Every Three Weeks or Longer / As Needed'), restock);
     mount(table, shell);
     document.querySelector('#shopping-search')?.addEventListener('input', () => {
       for (const [row, card] of cards) card.hidden = row.hidden;
