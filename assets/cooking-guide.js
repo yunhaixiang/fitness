@@ -34,6 +34,7 @@
     "mushroom": 7,
     "peas": 3,
     "curry": 6,
+    "season-noodles": 3,
     "spinach": 5,
     "ground": 10,
     "tomato": 4,

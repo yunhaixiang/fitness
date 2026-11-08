@@ -21,14 +21,14 @@ cooking: true
 <tr><td data-en="Fried Eggs">煎蛋</td><td data-en="5: 1 Egg; 6: 2 Eggs">5放1个；6放2个</td></tr>
 <tr><td data-en="Breaded Haddock">裹粉黑线鳕</td><td data-en="6: 1 Fillet">6放1片</td></tr>
 <tr><td data-en="Beef Meatballs">牛肉丸</td><td data-en="4: 3 Pieces">4放3颗</td></tr>
-<tr><td data-en="Panko-Baked Shrimp">面包糠烤虾</td><td data-en="3, 6">3、6</td></tr>
+<tr><td data-en="Panko-Baked Shrimp">面包糠烤虾</td><td data-en="3">3</td></tr>
 <tr><td data-en="BBQ Ribs">BBQ排骨</td><td data-en="4">4</td></tr>
 <tr><td data-en="Salmon">三文鱼</td><td data-en="2: 1 Fillet">2放1块</td></tr>
-<tr><td data-en="White Rice">白米饭</td><td data-en="6">6</td></tr>
+<tr><td data-en="Curry Rice">咖喱米饭</td><td data-en="6">6</td></tr>
 <tr><td data-en="Ground Chicken, Zucchini and Tomato Spaghetti">鸡肉末、西葫芦、番茄意面</td><td data-en="7">7</td></tr>
 <tr><td data-en="Potato Wedges">土豆块</td><td data-en="4">4</td></tr>
 <tr><td data-en="Boiled Dumplings">水饺</td><td data-en="2">2</td></tr>
-<tr><td data-en="Curry Rice Noodles">咖喱扁米粉</td><td data-en="3">3</td></tr>
+<tr><td data-en="Garlic Soy Rice Noodles">蒜香酱油米粉</td><td data-en="3">3</td></tr>
 <tr><td data-en="Peas and Carrots">豌豆、胡萝卜</td><td data-en="3, 6">3、6</td></tr>
 <tr><td data-en="Tuna">金枪鱼</td><td data-en="5">5</td></tr>
 <tr><td data-en="Chickpeas">鹰嘴豆</td><td data-en="1">1</td></tr>
@@ -47,7 +47,7 @@ cooking: true
 
 <h2 id="rice" data-en="Rice Cooker">电饭煲线程</h2>
 <ol>
-<li data-en="Rinse and drain 44 g dry rice. Use equal volumes of rice and water: about 55 mL water. Place in the rice cooker.">干米44 g淘洗沥干；米和水按体积1:1，加水约55 mL，放入电饭煲。</li>
+<li data-en="Rinse and drain 47 g dry rice. Use equal volumes of rice and water: about 59 mL water. Place in the rice cooker.">干米47 g淘洗沥干；米和水按体积1:1，加水约59 mL，放入电饭煲。</li>
 <li data-en="Use White Rice mode, about 50 minutes.">启动White Rice白米模式，约50分钟。</li>
 </ol>
 
@@ -71,7 +71,7 @@ cooking: true
 <li data-en="Heat foil-wrapped ribs at 400°F for 15–20 minutes, to 74°C in the centre. Place in meal 4.">锡纸包好的排骨400°F烤15–20分钟至中心74°C，全部放第4盘。</li>
 <li data-en="Place 3 frozen meatballs (45.4 g) on a tray. Bake at 400°F for 15–20 minutes to a 74°C centre, following the pack if different. Place in meal 4.">取冷冻牛肉丸3颗（45.4 g）铺入烤盘，400°F烤15–20分钟至中心74°C；包装另有要求则按包装。放第4盘。</li>
 <li data-en="Pat 170 g thawed shrimp dry; season with garlic powder and pepper. Mix 20 g panko with 1 tsp olive oil and spread over the shrimp.">取解冻虾仁170 g，擦干，拌蒜粉和黑胡椒。面包糠20 g拌橄榄油1茶匙，覆盖在虾仁上。</li>
-<li data-en="Bake in a single layer at 400°F for about 10–12 minutes until the shrimp are opaque and the panko is golden. Split equally between meals 3 and 6.">单层铺开，400°F烤约10–12分钟至虾肉不透明、面包糠金黄；均分到第3、6盘。</li>
+<li data-en="Bake in a single layer at 400°F for about 10–12 minutes until the shrimp are opaque and the panko is golden. Place all the shrimp in meal 3.">单层铺开，400°F烤约10–12分钟至虾肉不透明、面包糠金黄；全部放第3盘。</li>
 </ol>
 
 <h2 id="air-fryer" data-en="Air Fryer">空气炸锅线程</h2>
@@ -101,7 +101,7 @@ cooking: true
 <ol>
 <li data-en="Bring water to a boil in Pot 2 before adding spaghetti.">煮锅二烧水，水沸后下意面。</li>
 <li data-en="Add 60 g dry spaghetti and cook for about 8 minutes, following the pack. Lift out with tongs or a strainer, keeping the hot water in the pot and reserving a little for the sauce.">下干意面60 g，按包装时间煮约8分钟，用夹子或漏勺捞出，保留锅内热水，另留少量面水用于拌酱。</li>
-<li data-en="Keep the same water boiling, topping up with hot water if needed. Add 46 g dry rice noodles and cook for 6–8 minutes. Check at 6 minutes; drain once there is no hard centre and the noodles are still springy. Transfer to the saucepan for the curry.">沿用锅内热水，保持沸腾，水不足时补热水；下干扁米粉46 g煮6–8分钟；第6分钟检查，无硬芯且仍有弹性时捞出沥干，交给小锅拌咖喱。</li>
+<li data-en="Keep the same water boiling, topping up with hot water if needed. Add 38 g dry rice noodles and cook for 6–8 minutes. Check at 6 minutes; drain once there is no hard centre and the noodles are still springy. Transfer to the saucepan for the garlic soy sauce.">沿用锅内热水，保持沸腾，水不足时补热水；下干扁米粉38 g煮6–8分钟；第6分钟检查，无硬芯且仍有弹性时捞出沥干，交给小锅拌蒜香酱油汁。</li>
 </ol>
 
 <h2 id="small-wok" data-en="Saucepan">小锅线程</h2>
@@ -110,13 +110,15 @@ cooking: true
 <table class="plan-table" ><thead><tr><th data-en="Food">食材</th><th data-en="Seasoning">调味</th></tr></thead><tbody>
 <tr><td data-en="Mushrooms">蘑菇</td><td data-en="1/4 tsp Olive Oil, 1/8 tsp Pepper, 1/4 tsp Garlic Powder, 1/4 tsp Onion Powder">橄榄油¼茶匙，黑胡椒⅛茶匙，蒜粉¼茶匙，洋葱粉¼茶匙</td></tr>
 <tr><td data-en="Peas and Carrots">豌豆、胡萝卜</td><td data-en="1/8 tsp Garlic Powder, 1/8 tsp Onion Powder, 1/16 tsp Black Pepper">蒜粉⅛茶匙，洋葱粉⅛茶匙，黑胡椒1/16茶匙</td></tr>
-<tr><td data-en="Curry Rice Noodles">咖喱扁米粉</td><td data-en="18 g Golden Curry, 150 mL Water">Golden Curry 18 g，水150 mL</td></tr>
+<tr><td data-en="Curry Sauce">咖喱酱</td><td data-en="18 g Golden Curry, 150 mL Water">Golden Curry 18 g，水150 mL</td></tr>
+<tr><td data-en="Garlic Soy Rice Noodles">蒜香酱油米粉</td><td data-en="1 tsp Soy Sauce, 1/2 tsp White Vinegar, 1/2 tsp Sesame Oil, 1/4 tsp Garlic Powder, 1–2 tbsp Water">酱油1茶匙，白醋½茶匙，芝麻油½茶匙，蒜粉¼茶匙，水1–2汤匙</td></tr>
 </tbody></table>
 </div>
 <ol>
 <li data-en="Cook half a pack of mushrooms (113.5 g) with oil and seasonings for 5–7 minutes. Split equally between meals 2 and 4.">蘑菇半盒113.5 g加油和调味，炒约5–7分钟；均分到第2、4盘。</li>
-<li data-en="Drain 1 can of peas and carrots (about 260 g). Add a splash of water and seasonings, stir and heat through. Put half in meal 6 and reserve half for the curry noodles.">豌豆胡萝卜1罐沥干（约260 g），加少量水和调味，拌匀热透；一半放第6盘，另一半留给咖喱米粉。</li>
-<li data-en="Heat 150 mL water, lower the heat and dissolve 18 g Golden Curry roux. Simmer for about 5 minutes until smooth; toss in the noodles and reserved peas and carrots. Place in meal 3.">水150 mL烧热后关小火，溶入Golden Curry咖喱块18 g，再煮约5分钟至顺滑；加入扁米粉和留下的豌豆胡萝卜拌热，放第3盘。</li>
+<li data-en="Drain 1 can of peas and carrots (about 260 g). Add a splash of water and seasonings, stir and heat through. Divide equally between meals 3 and 6.">豌豆胡萝卜1罐沥干（约260 g），加少量水和调味，拌匀热透；均分到第3、6盘。</li>
+<li data-en="Heat 150 mL water, lower the heat and dissolve 18 g Golden Curry roux. Simmer for about 5 minutes until smooth. Transfer to meal 6 and serve over the rice.">水150 mL烧热后关小火，溶入Golden Curry咖喱块18 g，再煮约5分钟至顺滑；盛入第6盘，分盘时淋在米饭上。</li>
+<li data-en="Rinse the saucepan. Mix the soy sauce, vinegar, garlic powder and water; heat gently and toss with the drained rice noodles for 1–2 minutes. Turn off the heat, stir in sesame oil and place in meal 3.">小锅冲洗一下，加入酱油、醋、蒜粉和水拌匀，小火加热，放入沥干米粉拌热1–2分钟；关火拌入芝麻油，放第3盘。</li>
 </ol>
 
 <h2 id="large-wok" data-en="Wok">大锅线程</h2>
