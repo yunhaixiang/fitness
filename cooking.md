@@ -61,7 +61,8 @@ cooking: true
 </tbody></table>
 </div>
 <ol>
-<li data-en="Preheat to 400°F while preparing ingredients.">烤箱预热到400°F。备料可同时进行。</li>
+<li data-en="Set the oven to 400°F and start preheating. Prepare ingredients while it heats.">烤箱设为400°F，启动预热；期间可继续备料。</li>
+<li data-en="Confirm the oven has reached 400°F before loading the prepared food.">确认烤箱已达到400°F，再放入备好的食材。</li>
 <li data-en="Pat dry and season 4 chicken thighs, 465 g total.">取鸡大腿肉4块，共465 g，擦干、调味。</li>
 <li data-en="Roast at 400°F for 27 minutes, to 74°C in the centre. Divide the cooked meat 3:3:2 between meals 1, 5 and 7, equivalent to 1½, 1½ and 1 thigh. Shred the wrap and sandwich portions.">400°F烤27分钟，中心达74°C。熟肉按3:3:2分给第1、5、7盘，相当于1½、1½、1块；卷饼与三明治的肉掰碎。</li>
 <li data-en="Wash 170 g little yellow potatoes, cut into even pieces and season.">取小土豆170 g，洗净切成大小接近的块，拌调味。</li>
@@ -82,7 +83,8 @@ cooking: true
 </div>
 <ol>
 <li data-en="Pat dry and season one 160 g salmon fillet.">取三文鱼1块160 g，擦干、调味。</li>
-<li data-en="Once the salmon is ready, preheat at 400°F for 4 minutes and load it immediately.">三文鱼备好后，400°F预热4分钟，随即入锅。</li>
+<li data-en="Once the salmon is prepared, start preheating at 400°F for 4 minutes. Work on other short tasks meanwhile.">三文鱼备好后，启动400°F预热4分钟；期间可做其他短任务。</li>
+<li data-en="Confirm preheating is complete, then load the salmon promptly.">确认空气炸锅预热完成，随即放入三文鱼。</li>
 <li data-en="Air-fry at 400°F for about 8–10 minutes, to 70°C in the centre. Place the whole fillet in meal 6.">400°F烤约8–10分钟至中心70°C，整块放第6盘。</li>
 <li data-en="After the salmon, air-fry 1 frozen breaded haddock fillet at 400°F for 18–20 minutes until cooked through. Do not thaw or add oil. Place in meal 2.">三文鱼出锅后，取冷冻裹粉黑线鳕1片，无需解冻或加油，400°F烤18–20分钟至熟透，放第2盘。</li>
 </ol>

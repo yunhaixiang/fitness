@@ -24,7 +24,8 @@
     {"id": "cold-second", "label": ["后半周冷藏解冻", "Thaw Later Portions"], "note": ["", ""], "group": "cold", "before": [], "link": "#cook-cold-second", "minutes": 1},
     {"id": "prep-rice", "label": ["备白米", "Prepare Rice"], "note": ["", ""], "group": "prep", "before": ["ready"], "link": "#cook-prep-rice", "minutes": 3, "displayGroup": "rice"},
     {"id": "rice", "label": ["白米饭", "White Rice"], "note": ["", ""], "group": "rice", "before": ["prep-rice"], "link": "#cook-rice", "minutes": 50},
-    {"id": "oven-heat", "label": ["预热烤箱", "Preheat Oven"], "note": ["", ""], "group": "oven", "before": ["ready"], "link": "#cook-oven-heat", "minutes": 15},
+    {"id": "oven-heat-start", "label": ["开始预热烤箱", "Start Preheating Oven"], "note": ["", ""], "group": "oven", "before": ["ready"], "link": "#cook-oven-heat-start", "minutes": 1, "instant": true},
+    {"id": "oven-heat", "label": ["确认烤箱预热完成", "Confirm Oven Is Preheated"], "note": ["预热期间可继续其他任务", "Continue Other Tasks While Heating"], "group": "oven", "before": ["oven-heat-start"], "link": "#cook-oven-heat", "minutes": 15, "confirmation": true},
     {"id": "prep-chicken", "label": ["备鸡大腿肉", "Prepare Chicken Thighs"], "note": ["", ""], "group": "prep", "before": ["ready"], "link": "#cook-prep-chicken", "minutes": 3, "displayGroup": "oven"},
     {"id": "chicken", "label": ["鸡大腿肉", "Chicken Thighs"], "note": ["", ""], "group": "oven", "before": ["oven-heat", "prep-chicken"], "link": "#cook-chicken", "minutes": 27},
     {"id": "prep-potato", "label": ["备土豆", "Prepare Potatoes"], "note": ["", ""], "group": "prep", "before": ["ready"], "link": "#cook-prep-potato", "minutes": 3, "displayGroup": "oven"},
@@ -35,7 +36,8 @@
     {"id": "prep-shrimp", "label": ["备虾仁", "Prepare Shrimp"], "note": ["", ""], "group": "prep", "before": ["ready"], "link": "#cook-prep-shrimp", "minutes": 3, "displayGroup": "oven"},
     {"id": "shrimp", "label": ["面包糠烤虾", "Panko-Baked Shrimp"], "note": ["", ""], "group": "oven", "before": ["oven-heat", "prep-shrimp"], "link": "#cook-shrimp", "minutes": 12},
     {"id": "prep-salmon", "label": ["备三文鱼", "Prepare Salmon"], "note": ["", ""], "group": "prep", "before": ["ready"], "link": "#cook-prep-salmon", "minutes": 3, "displayGroup": "air"},
-    {"id": "air-heat", "label": ["预热空气炸锅", "Preheat Air Fryer"], "note": ["", ""], "group": "air", "before": ["prep-salmon"], "link": "#cook-air-heat", "minutes": 4},
+    {"id": "air-heat-start", "label": ["开始预热空气炸锅", "Start Preheating Air Fryer"], "note": ["", ""], "group": "air", "before": ["prep-salmon"], "link": "#cook-air-heat-start", "minutes": 1, "instant": true},
+    {"id": "air-heat", "label": ["确认空气炸锅预热完成", "Confirm Air Fryer Is Preheated"], "note": ["预热期间可继续其他任务", "Continue Other Tasks While Heating"], "group": "air", "before": ["air-heat-start"], "link": "#cook-air-heat", "minutes": 4, "confirmation": true},
     {"id": "salmon", "label": ["三文鱼", "Salmon"], "note": ["", ""], "group": "air", "before": ["air-heat", "prep-salmon"], "link": "#cook-salmon", "minutes": 8},
     {"id": "haddock", "label": ["裹粉黑线鳕", "Breaded Haddock"], "note": ["", ""], "group": "air", "before": ["salmon"], "link": "#cook-haddock", "minutes": 20},
     {"id": "egg-water", "label": ["烧水", "Boil Water"], "note": ["", ""], "group": "pots", "before": ["ready"], "link": "#cook-egg-water", "manual": true, "resource": "pot-1", "minutes": 1},
@@ -201,7 +203,7 @@
   };
   detail.append(create('p', 'cooking-flow-prompt', t('选择任一步骤，查看它与其他厨具的衔接。', 'Choose a step to see how it connects to the other appliances.')));
 
-  const instructionSections = [["cold", "cold", ["cold-first", "cold-second"]], ["rice", "rice", ["prep-rice", "rice"]], ["oven", "oven", ["oven-heat", "prep-chicken", "chicken", "prep-potato", "potato", "prep-ribs", "ribs", "meatballs", "prep-shrimp", "shrimp"]], ["air-fryer", "air", ["prep-salmon", "air-heat", "salmon", "haddock"]], ["pot-one", "pots", ["egg-water", "eggs", "dumpling-water", "dumplings"]], ["pot-two", "pots", ["prep-noodles", "pasta-water", "pasta", "noodle-water", "noodles"]], ["small-wok", "small-wok", ["mushroom", "peas", "curry"]], ["large-wok", "large-wok", ["spinach", "ground", "tomato", "fried-eggs"]], ["wraps", "wrap", ["wrap", "sandwich"]]];
+  const instructionSections = [["cold", "cold", ["cold-first", "cold-second"]], ["rice", "rice", ["prep-rice", "rice"]], ["oven", "oven", ["oven-heat-start", "oven-heat", "prep-chicken", "chicken", "prep-potato", "potato", "prep-ribs", "ribs", "meatballs", "prep-shrimp", "shrimp"]], ["air-fryer", "air", ["prep-salmon", "air-heat-start", "air-heat", "salmon", "haddock"]], ["pot-one", "pots", ["egg-water", "eggs", "dumpling-water", "dumplings"]], ["pot-two", "pots", ["prep-noodles", "pasta-water", "pasta", "noodle-water", "noodles"]], ["small-wok", "small-wok", ["mushroom", "peas", "curry"]], ["large-wok", "large-wok", ["spinach", "ground", "tomato", "fried-eggs"]], ["wraps", "wrap", ["wrap", "sandwich"]]];
   for (const [headingId, group, steps] of instructionSections) {
     const heading = document.getElementById(headingId);
     let source = heading?.nextElementSibling;

@@ -29,7 +29,7 @@
     };
     // Use already-heated appliances promptly; otherwise prioritize the longest remaining chain.
     const urgent = n => n.id === 'salmon' && done.has('air-heat') || n.id === 'haddock' && done.has('salmon') || ['eggs', 'pasta', 'dumplings', 'noodles'].includes(n.id) && n.before.some(id => id.endsWith('-water') && done.has(id));
-    available.sort((a,b) => Number(urgent(b)) - Number(urgent(a)) || length(b.id) - length(a.id));
+    available.sort((a,b) => Number(urgent(b)) - Number(urgent(a)) || Number(!!a.confirmation) - Number(!!b.confirmation) || length(b.id) - length(a.id));
     return { done: [...done], running: [...running], active, available, recommended: available[0]?.id || null, ready: done.has(branch), total: active.filter(n => n.id !== 'ready').length };
   }
   function toggle(nodes, saved, half, id, checked, started = []) {
@@ -43,6 +43,12 @@
     let parsed;
     try { parsed = JSON.parse(raw); } catch (_) { parsed = null; }
     const strings = value => Array.isArray(value) ? value.filter(x => typeof x === 'string') : [];
+    // Existing completed/running preheat steps imply that heating was already started.
+    for (const half of ['first', 'second']) {
+      const done = strings(parsed?.[half]), running = strings(parsed?.[half + 'Running']);
+      for (const id of ['oven-heat', 'air-heat']) if ((done.includes(id) || running.includes(id)) && !done.includes(id + '-start')) done.push(id + '-start');
+      if (parsed && typeof parsed === 'object') parsed[half] = done;
+    }
     return { half: parsed?.half === 'second' ? 'second' : 'first', first: strings(parsed?.first), second: strings(parsed?.second), firstRunning: strings(parsed?.firstRunning), secondRunning: strings(parsed?.secondRunning) };
   }
   const api = { derive, toggle, readState };
@@ -88,7 +94,7 @@
     const row = button.closest('.cooking-flow-step-row');
     const label = create('label', 'cooking-progress-check');
     const checkbox = document.createElement('input'); checkbox.type = 'checkbox';
-    checkbox.setAttribute('aria-label', t(`${node.label[0]}完成`, `Mark ${node.label[1]} complete`));
+    checkbox.setAttribute('aria-label', node.confirmation ? t(...node.label) : t(`${node.label[0]}完成`, `Mark ${node.label[1]} complete`));
     const badge = create('small', 'cooking-progress-badge');
     button.querySelector('.cooking-flow-step-copy').append(badge);
     label.append(checkbox); row.prepend(label); row.classList.add('has-progress');
@@ -124,7 +130,7 @@
       c.row.classList.toggle('is-running', view.running.includes(id));
       c.row.classList.toggle('is-available', available.has(id));
       c.row.classList.toggle('is-recommended', id === view.recommended);
-      c.badge.textContent = checked ? t('已完成', 'Done') : view.running.includes(id) ? t('进行中', 'In Progress') : id === view.recommended ? t('推荐下一步', 'Recommended') : available.has(id) ? t('现在可做', 'Ready') : t('等待前置任务', 'Waiting');
+      c.badge.textContent = checked ? t('已完成', 'Done') : view.running.includes(id) ? t('进行中', 'In Progress') : id === view.recommended ? t('推荐下一步', 'Recommended') : available.has(id) ? (plan.nodes.find(n => n.id === id).confirmation ? t('待确认预热完成', 'Confirm When Preheated') : t('现在可做', 'Ready')) : t('等待前置任务', 'Waiting');
     }
     for (const [id, button] of halfButtons) button.setAttribute('aria-pressed', String(state.half === id));
     progress.max = view.total; progress.value = done.size;
@@ -133,9 +139,13 @@
     function action(n, recommended) {
       const row = create('div', 'cooking-progress-action');
       row.append(pick(n, recommended ? 'cooking-progress-next' : 'cooking-flow-chip'));
-      const start = create('button', 'cooking-guide-minor', t('开始', 'Start')); start.type = 'button';
-      start.setAttribute('aria-label', t(`开始${n.label[0]}`, `Start ${n.label[1]}`));
-      start.addEventListener('click', () => { state[state.half + 'Running'].push(n.id); render(); save(); });
+      const start = create('button', 'cooking-guide-minor', n.confirmation ? t('确认完成', 'Confirm Ready') : t('开始', 'Start')); start.type = 'button';
+      start.setAttribute('aria-label', n.confirmation || n.instant ? t(...n.label) : t(`开始${n.label[0]}`, `Start ${n.label[1]}`));
+      start.addEventListener('click', () => {
+        if (n.instant || n.confirmation) state[state.half] = toggle(plan.nodes, state[state.half], state.half, n.id, true, state[state.half + 'Running']);
+        else state[state.half + 'Running'].push(n.id);
+        render(); save();
+      });
       row.append(start); return row;
     }
     if (view.running.length) {
@@ -153,7 +163,7 @@
       suggestion.append(create('strong', '', t('推荐下一步', 'Recommended Next')), action(view.available[0], true));
       const next = view.available[0];
       const reason = ['salmon','haddock','eggs','pasta','dumplings','noodles'].includes(next.id) ? t('加热已就绪，优先接着烹调。', 'The appliance is ready; continue cooking promptly.') : t('优先启动耗时较长的后续流程。', 'Start the longer remaining chain first.');
-      suggestion.append(create('span', 'cooking-progress-reason', next.group === 'cold' ? t('先确认本次食材就绪。', 'Confirm the ingredients are ready first.') : reason));
+      suggestion.append(create('span', 'cooking-progress-reason', next.confirmation ? t('达到预热温度后再确认；等待期间可继续其他任务。', 'Confirm once preheated; continue other tasks while waiting.') : next.group === 'cold' ? t('先确认本次食材就绪。', 'Confirm the ingredients are ready first.') : reason));
       const others = view.available.slice(1);
       if (others.length) { readyList.append(create('strong', '', t('现在也可以做', 'Also Ready'))); const list = create('div', 'cooking-flow-chip-list'); others.forEach(n => list.append(action(n, false))); readyList.append(list); }
     } else suggestion.append(create('strong', '', done.size === view.total ? t('本次做饭已全部完成', 'This Batch Is Complete') : t('等待进行中的任务完成，再勾选解锁下一步。', 'Finish an ongoing task and check it off to unlock the next steps.')));

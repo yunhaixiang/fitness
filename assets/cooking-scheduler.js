@@ -14,7 +14,7 @@
     if (task.id === 'pasta-water' || task.id === 'pasta') return 'pot-2';
     return ({ 'small-wok': 'saucepan', 'large-wok': 'wok', prep: 'counter', wrap: 'counter', finish: 'counter' })[task.group] || task.group;
   };
-  const demand = (task) => task.id === 'oven-heat' ? 3 : 1;
+  const demand = (task) => ['oven-heat-start', 'oven-heat'].includes(task.id) ? 3 : 1;
   const attentionOffsets = (task, minutes, stirEvery) => {
     if (continuous.has(task.id) || (task.group === 'prep' && !task.passive)) return Array.from({ length: minutes }, (_, index) => index);
     const slots = new Set([0, minutes - 1]);

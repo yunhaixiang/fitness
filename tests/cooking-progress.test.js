@@ -9,25 +9,25 @@ test('only the chosen half-week preparation is offered, and it unlocks appliance
  assert.deepEqual(derive(nodes, [], 'first').available.map(n => n.id), ['cold-first']);
  assert.deepEqual(derive(nodes, [], 'second').available.map(n => n.id), ['cold-second']);
  const state = derive(nodes, ['cold-first']);
- assert.ok(state.available.some(n => n.id === 'oven-heat'));
+ assert.ok(state.available.some(n => n.id === 'oven-heat-start'));
  assert.ok(state.available.some(n => n.id === 'prep-rice'));
  assert.ok(!state.available.some(n => n.id === 'chicken'));
  assert.equal(derive(nodes, ['cold-first'], 'second').ready, false);
 });
 test('blocked tasks cannot be checked and independent tasks stay available', () => {
  assert.deepEqual(toggle(nodes, ['cold-first'], 'first', 'chicken', true), ['cold-first']);
- const done = ['cold-first', 'prep-chicken', 'oven-heat'];
+ const done = ['cold-first', 'prep-chicken', 'oven-heat-start', 'oven-heat'];
  assert.ok(derive(nodes, done).available.some(n => n.id === 'chicken'));
  const after = toggle(nodes, done, 'first', 'chicken', true);
  assert.ok(derive(nodes, after).available.some(n => n.id === 'prep-rice'));
 });
 test('undoing prep clears downstream marks without clearing unrelated progress', () => {
- const done = ['cold-first','prep-rice','rice','prep-salmon','air-heat','salmon','haddock'];
+ const done = ['cold-first','prep-rice','rice','prep-salmon','air-heat-start','air-heat','salmon','haddock'];
  const after = toggle(nodes, done, 'first', 'prep-salmon', false);
  assert.deepEqual(after, ['cold-first','prep-rice','rice']);
 });
 test('hot air fryer takes priority and long rice chain comes before short vegetables', () => {
- assert.equal(derive(nodes,['cold-first','prep-salmon','air-heat']).recommended, 'salmon');
+ assert.equal(derive(nodes,['cold-first','prep-salmon','air-heat-start','air-heat']).recommended, 'salmon');
  const ready = derive(nodes,['cold-first','prep-rice']).available.map(n=>n.id);
  assert.ok(ready.indexOf('rice') < ready.indexOf('mushroom'));
 });
@@ -46,11 +46,31 @@ test('all tasks complete without counting the unused cold branch or computed rea
 });
 
 test('started tasks allow parallel work but block their appliance until marked complete', () => {
- const done = ['cold-first','prep-salmon'];
+ const done = ['cold-first','prep-salmon','air-heat-start'];
  const view = derive(nodes,done,'first',['air-heat']);
- assert.ok(view.available.some(n=>n.id==='oven-heat'));
+ assert.ok(view.available.some(n=>n.id==='oven-heat-start'));
  assert.ok(!view.available.some(n=>n.id==='air-heat' || n.id==='salmon'));
  const after = toggle(nodes,done,'first','air-heat',true,['air-heat']);
  assert.equal(derive(nodes,after,'first',['air-heat']).recommended,'salmon');
  assert.deepEqual(derive(nodes,after,'first',['air-heat']).running,[]);
+});
+
+for (const [kind, prep, food] of [['oven', 'prep-chicken', 'chicken'], ['air', 'prep-salmon', 'salmon']]) {
+ test(`${kind}: starting preheat leaves preparation available and requires separate confirmation`, () => {
+  let done = ['cold-first', prep];
+  done = toggle(nodes, done, 'first', `${kind}-heat-start`, true);
+  const heating = derive(nodes, done);
+  assert.ok(heating.available.some(n => n.id === `${kind}-heat`));
+  assert.ok(heating.available.some(n => n.id === 'prep-potato'));
+  assert.ok(!heating.available.some(n => n.id === food));
+  assert.notEqual(heating.recommended, `${kind}-heat`);
+  done = toggle(nodes, done, 'first', `${kind}-heat`, true);
+  assert.ok(derive(nodes, done).available.some(n => n.id === food));
+  const undone = toggle(nodes, done, 'first', `${kind}-heat-start`, false);
+  assert.ok(!undone.includes(`${kind}-heat`));
+ });
+}
+test('saved preheat completion survives the split into two steps', () => {
+ const state = readState(JSON.stringify({first:['cold-first','oven-heat','prep-chicken','chicken'],second:[]}));
+ assert.ok(derive(nodes,state.first).done.includes('chicken'));
 });

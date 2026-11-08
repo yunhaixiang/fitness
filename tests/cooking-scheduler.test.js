@@ -115,7 +115,7 @@ test('split preparation releases only its own cooking task', () => {
   const nodes = vm.runInNewContext(flow.match(/const nodes = (\[[\s\S]*?\n  \]);/)[1]);
   const minutes = vm.runInNewContext('(' + guide.match(/const taskMinutes = ({[\s\S]*?\n  });/)[1] + ')');
   const tasks = nodes.filter(n => n.manual || Object.hasOwn(minutes, n.id));
-  const done = ['oven-heat', 'prep-chicken'];
+  const done = ['oven-heat-start', 'oven-heat', 'prep-chicken'];
   const available = tasks.filter(t => !done.includes(t.id) && t.before.every(id => id === 'ready' || done.includes(id)));
   assert.ok(available.some(t => t.id === 'chicken'));
   assert.ok(!available.some(t => t.id === 'potato' || t.id === 'ribs'));

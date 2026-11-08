@@ -17,12 +17,14 @@
     "prep-salmon": 3,
     "prep-noodles": 15,
     "rice": 50,
+    "oven-heat-start": 1,
     "oven-heat": 15,
     "chicken": 27,
     "potato": 40,
     "ribs": 20,
     "meatballs": 20,
     "shrimp": 12,
+    "air-heat-start": 1,
     "air-heat": 4,
     "salmon": 8,
     "haddock": 20,
@@ -42,7 +44,7 @@
     "finish": 15
   };
   const tasks = plan.nodes.filter((node) => node.manual || Object.hasOwn(taskMinutes, node.id));
-  const startEarly = ['egg-water', 'pasta-water', 'oven-heat', 'prep-rice', 'rice'];
+  const startEarly = ['egg-water', 'pasta-water', 'oven-heat-start', 'prep-rice', 'rice'];
   const byId = new Map(tasks.map((node) => [node.id, node]));
   const successors = new Map(tasks.map((node) => [node.id, tasks.filter((other) => other.before.includes(node.id)).map((other) => other.id)]));
   const validIds = new Set(tasks.map((task) => task.id));
@@ -69,6 +71,10 @@
           startedAt: Number.isFinite(record.startedAt) ? record.startedAt : null,
           finishedAt: Number.isFinite(record.finishedAt) ? record.finishedAt : null
         };
+        for (const id of ['oven-heat', 'air-heat']) {
+          const batch = state.batches[half];
+          if ((batch.done.includes(id) || batch.running[id]) && !batch.done.includes(id + '-start')) batch.done.push(id + '-start');
+        }
         if (saved.version < 3) {
           const previous = state.batches[half];
           const legacyGroups = {
