@@ -97,17 +97,17 @@ visual: true
 </tr>
 <tr>
 <td>蛋白质</td>
-<td style="text-align: right;">125.7 g</td>
+<td style="text-align: right;">125.8 g</td>
 <td>120–140 g</td>
 </tr>
 <tr>
 <td>总脂肪</td>
-<td style="text-align: right;">63.5 g</td>
+<td style="text-align: right;">63.2 g</td>
 <td>45–65 g</td>
 </tr>
 <tr>
 <td>饱和脂肪</td>
-<td style="text-align: right;">15.2 g</td>
+<td style="text-align: right;">15.1 g</td>
 <td>≤11.6 g</td>
 </tr>
 <tr>
@@ -117,17 +117,17 @@ visual: true
 </tr>
 <tr>
 <td>碳水化合物</td>
-<td style="text-align: right;">184.9 g</td>
+<td style="text-align: right;">185.5 g</td>
 <td>180–240 g</td>
 </tr>
 <tr>
 <td>膳食纤维</td>
-<td style="text-align: right;">39.4 g</td>
+<td style="text-align: right;">39.5 g</td>
 <td>30–38 g</td>
 </tr>
 <tr>
 <td>总糖</td>
-<td style="text-align: right;">44.3 g</td>
+<td style="text-align: right;">44.8 g</td>
 <td>无单独上限；重点控制添加糖</td>
 </tr>
 <tr>
@@ -142,7 +142,7 @@ visual: true
 </tr>
 <tr>
 <td>钠</td>
-<td style="text-align: right;">3,002 mg</td>
+<td style="text-align: right;">3,157 mg</td>
 <td>≤2,300 mg</td>
 </tr>
 <tr>

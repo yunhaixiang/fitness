@@ -26,7 +26,7 @@ test('weekly meat, eggs, grains and portions match whole-package purchase cycles
  close(weekly('egg'),12); close(weekly('potato')*100,340);
  close(weekly('sweetpotato'),0);
  close(weekly('rice')*100,94); close(weekly('pasta')*85,120);
- close(weekly('noodle')*100,76); close(weekly('sauce')*125,300);
+ close(weekly('noodle')*100,74); close(weekly('sauce')*125,300);
  const recipes=Object.fromEntries(basis.mealKeys.map((k,i)=>[k,basis.recipes[i]]));
  assert.equal(recipes.wrap.tuna,undefined); close(recipes.bread.tuna,2);
  close(recipes.noodles.shrimp,1.7); close(recipes.noodles.panko,.2);
@@ -35,7 +35,7 @@ test('weekly meat, eggs, grains and portions match whole-package purchase cycles
  close(recipes.wrap.chickpea*2,weekly('chickpea'));
  close(weekly('chickpea')*100,170); close(weekly('tuna'),4); close(weekly('mayo'),11); close(weekly('spinach')*100,284);
  close(weekly('mushroom')*100,227); close(weekly('pc')*100,520);
- close(weekly('oil'),9.5); // 4.75 tsp each half-week, including all three fried eggs
+ close(weekly('oil'),10); // 5 tsp each half-week, including fried eggs and noodle sauce
 });
 test('daily intake and deficit use the same meal data as the cards',()=>{
  const daily=(basis.mealKeys.reduce((s,k)=>s+2*Number(nutrition[k].kcal),0)+3*Number(nutrition.fruit_breakfast.kcal)+4*Number(nutrition.kiwi_breakfast.kcal)+7*Number(nutrition.outside_drink.kcal))/7;

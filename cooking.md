@@ -28,7 +28,7 @@ cooking: true
 <tr><td data-en="Ground Chicken, Zucchini and Tomato Spaghetti">鸡肉末、西葫芦、番茄意面</td><td data-en="7">7</td></tr>
 <tr><td data-en="Potato Wedges">土豆块</td><td data-en="4">4</td></tr>
 <tr><td data-en="Boiled Dumplings">水饺</td><td data-en="2">2</td></tr>
-<tr><td data-en="Garlic Soy Rice Noodles">蒜香酱油米粉</td><td data-en="3">3</td></tr>
+<tr><td data-en="Basil Rice Noodles">罗勒酱香米粉</td><td data-en="3">3</td></tr>
 <tr><td data-en="Peas and Carrots">豌豆、胡萝卜</td><td data-en="3, 6">3、6</td></tr>
 <tr><td data-en="Tuna">金枪鱼</td><td data-en="5">5</td></tr>
 <tr><td data-en="Chickpeas">鹰嘴豆</td><td data-en="1">1</td></tr>
@@ -101,7 +101,7 @@ cooking: true
 <ol>
 <li data-en="Bring water to a boil in Pot 2 before adding spaghetti.">煮锅二烧水，水沸后下意面。</li>
 <li data-en="Add 60 g dry spaghetti and cook for about 8 minutes, following the pack. Lift out with tongs or a strainer, keeping the hot water in the pot and reserving a little for the sauce.">下干意面60 g，按包装时间煮约8分钟，用夹子或漏勺捞出，保留锅内热水，另留少量面水用于拌酱。</li>
-<li data-en="Keep the same water boiling, topping up with hot water if needed. Add 38 g dry rice noodles and cook for 6–8 minutes. Check at 6 minutes; drain once there is no hard centre and the noodles are still springy. Transfer to the saucepan for the garlic soy sauce.">沿用锅内热水，保持沸腾，水不足时补热水；下干扁米粉38 g煮6–8分钟；第6分钟检查，无硬芯且仍有弹性时捞出沥干，交给小锅拌蒜香酱油汁。</li>
+<li data-en="Keep the same water boiling, topping up with hot water if needed. Add 37 g dry rice noodles and cook for 6–8 minutes. Check at 6 minutes; drain once there is no hard centre and the noodles are still springy. Transfer to the saucepan for the basil sauce.">沿用锅内热水，保持沸腾，水不足时补热水；下干扁米粉37 g煮6–8分钟；第6分钟检查，无硬芯且仍有弹性时捞出沥干，交给小锅拌罗勒酱汁。</li>
 </ol>
 
 <h2 id="small-wok" data-en="Saucepan">小锅线程</h2>
@@ -111,14 +111,14 @@ cooking: true
 <tr><td data-en="Mushrooms">蘑菇</td><td data-en="1/4 tsp Olive Oil, 1/8 tsp Pepper, 1/4 tsp Garlic Powder, 1/4 tsp Onion Powder">橄榄油¼茶匙，黑胡椒⅛茶匙，蒜粉¼茶匙，洋葱粉¼茶匙</td></tr>
 <tr><td data-en="Peas and Carrots">豌豆、胡萝卜</td><td data-en="1/8 tsp Garlic Powder, 1/8 tsp Onion Powder, 1/16 tsp Black Pepper">蒜粉⅛茶匙，洋葱粉⅛茶匙，黑胡椒1/16茶匙</td></tr>
 <tr><td data-en="Curry Sauce">咖喱酱</td><td data-en="18 g Golden Curry, 150 mL Water">Golden Curry 18 g，水150 mL</td></tr>
-<tr><td data-en="Garlic Soy Rice Noodles">蒜香酱油米粉</td><td data-en="1 tsp Soy Sauce, 1/2 tsp White Vinegar, 1/2 tsp Sesame Oil, 1/4 tsp Garlic Powder, 1–2 tbsp Water">酱油1茶匙，白醋½茶匙，芝麻油½茶匙，蒜粉¼茶匙，水1–2汤匙</td></tr>
+<tr><td data-en="Basil Rice Noodles">罗勒酱香米粉</td><td data-en="1/4 tsp Olive Oil, 1/2 tsp Each Fish Sauce, Light Soy Sauce and Dark Soy Sauce, 1 tsp Oyster Sauce, 1/4 tsp Garlic Powder, 5 g Red Chili, 2–3 Basil Leaves, 2 tbsp Water">橄榄油¼茶匙，鱼露、生抽、老抽各½茶匙，蚝油1茶匙，蒜粉¼茶匙，红辣椒5 g，罗勒叶2–3片，水2汤匙</td></tr>
 </tbody></table>
 </div>
 <ol>
 <li data-en="Cook half a pack of mushrooms (113.5 g) with oil and seasonings for 5–7 minutes. Split equally between meals 2 and 4.">蘑菇半盒113.5 g加油和调味，炒约5–7分钟；均分到第2、4盘。</li>
 <li data-en="Drain 1 can of peas and carrots (about 260 g). Add a splash of water and seasonings, stir and heat through. Divide equally between meals 3 and 6.">豌豆胡萝卜1罐沥干（约260 g），加少量水和调味，拌匀热透；均分到第3、6盘。</li>
 <li data-en="Heat 150 mL water, lower the heat and dissolve 18 g Golden Curry roux. Simmer for about 5 minutes until smooth. Transfer to meal 6 and serve over the rice.">水150 mL烧热后关小火，溶入Golden Curry咖喱块18 g，再煮约5分钟至顺滑；盛入第6盘，分盘时淋在米饭上。</li>
-<li data-en="Rinse the saucepan. Mix the soy sauce, vinegar, garlic powder and water; heat gently and toss with the drained rice noodles for 1–2 minutes. Turn off the heat, stir in sesame oil and place in meal 3.">小锅冲洗一下，加入酱油、醋、蒜粉和水拌匀，小火加热，放入沥干米粉拌热1–2分钟；关火拌入芝麻油，放第3盘。</li>
+<li data-en="Wash the red chili and basil; slice the chili. Mix fish sauce, light and dark soy sauces, oyster sauce, garlic powder and water. Rinse and dry the saucepan; add the oil and briefly cook the chili over medium-low heat. Add the sauce and drained noodles, tossing for 1–2 minutes; add a splash of water if they start to stick. Turn off the heat, stir in basil and place in meal 3.">红辣椒和罗勒洗净，辣椒切圈；鱼露、生抽、老抽、蚝油、蒜粉和水调匀。小锅冲洗擦干，加油，中小火略炒辣椒；倒入酱汁和沥干米粉，拌热1–2分钟，粘锅时补少量水；关火拌入罗勒，放第3盘。</li>
 </ol>
 
 <h2 id="large-wok" data-en="Wok">大锅线程</h2>

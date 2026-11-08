@@ -2,7 +2,7 @@
   "checked_on": "2026-10-31",
   "currency": "CAD",
   "scope": "Walmart Canada public prices; individual checked_on retained. Popeye spinach, chicken thigh and salmon prices supplied by user. Weekly subtotal averages routine purchase cycles. Bread assumes two slices total 70 g; weighed produce billed by actual weight. Excludes as-needed seasonings, tax and delivery. Not a London store live stock guarantee.",
-  "weekly_total_cad": "136.76",
+  "weekly_total_cad": "136.75",
   "items": [
     {
       "item": "去骨去皮鸡大腿肉",
@@ -410,14 +410,14 @@
       "item": "扁米粉",
       "price_cad": "1.97",
       "basis": "package",
-      "weekly_quantity": "0.16740088105726872",
-      "weekly_cost_cad": "0.33",
+      "weekly_quantity": "0.16299559471365638",
+      "weekly_cost_cad": "0.32",
       "source_type": "walmart_public",
       "source_url": "https://www.walmart.ca/en/ip/Erawan-Rice-Stick/6000199121439",
       "product_url": "https://www.walmart.ca/en/ip/Erawan-Rice-Stick/6000199121439",
       "checked_on": "2026-11-07",
-      "purchase_frequency_zh": "1包 / 约6周",
-      "purchase_frequency_en": "1 Pack / About 6 Weeks"
+      "purchase_frequency_zh": "1包 / 约6.1周",
+      "purchase_frequency_en": "1 Pack / About 6.1 Weeks"
     },
     {
       "item": "面包糠",
@@ -473,34 +473,67 @@
       "purchase_frequency_en": "1 Can / 2 Weeks"
     },
     {
-      "item": "酱油",
-      "price_cad": "2.23",
+      "item": "生抽",
+      "price_cad": "2.77",
       "basis": "package",
       "source_type": "walmart_public",
-      "source_url": "https://www.walmart.ca/en/ip/Great-Value-Soya-Sauce/6000187053931",
-      "product_url": "https://www.walmart.ca/en/ip/Great-Value-Soya-Sauce/6000187053931",
+      "source_url": "https://www.walmart.ca/en/ip/LKK-SOY-SAUCE/874990",
+      "product_url": "https://www.walmart.ca/en/ip/LKK-SOY-SAUCE/874990",
       "checked_on": "2026-11-08",
       "purchase_frequency_zh": "按需补",
       "purchase_frequency_en": "As Needed"
     },
     {
-      "item": "白醋",
-      "price_cad": "1.77",
+      "item": "鱼露",
+      "price_cad": "2.88",
       "basis": "package",
       "source_type": "walmart_public",
-      "source_url": "https://www.walmart.ca/en/ip/Great-Value-Pure-White-Vinegar/10275327",
-      "product_url": "https://www.walmart.ca/en/ip/Great-Value-Pure-White-Vinegar/10275327",
+      "source_url": "https://www.walmart.ca/en/c/kp/fish-sauce",
+      "product_url": "https://www.walmart.ca/en/ip/SQUID-BRAND-FISH-SAUCE/77U7DWXUO6G9",
       "checked_on": "2026-11-08",
       "purchase_frequency_zh": "按需补",
       "purchase_frequency_en": "As Needed"
     },
     {
-      "item": "芝麻油",
-      "price_cad": "4.18",
+      "item": "老抽",
+      "price_cad": "2.97",
       "basis": "package",
       "source_type": "walmart_public",
-      "source_url": "https://www.walmart.ca/en/ip/Kadoya-Pure-Sesame-Oil/6000188762745",
-      "product_url": "https://www.walmart.ca/en/ip/Kadoya-Pure-Sesame-Oil/6000188762745",
+      "source_url": "https://www.walmart.ca/en/ip/Pearl-River-Bridge-PRB-Dark-Soy-Sauce-500-ml/10278824",
+      "product_url": "https://www.walmart.ca/en/ip/Pearl-River-Bridge-PRB-Dark-Soy-Sauce-500-ml/10278824",
+      "checked_on": "2026-11-08",
+      "purchase_frequency_zh": "按需补",
+      "purchase_frequency_en": "As Needed"
+    },
+    {
+      "item": "蚝油",
+      "price_cad": "4.27",
+      "basis": "package",
+      "source_type": "walmart_public",
+      "source_url": "https://www.walmart.ca/en/ip/LKK-PANDA-BRAND-OYSTER-FLAVOURED-SAUCE-510G/10285991",
+      "product_url": "https://www.walmart.ca/en/ip/LKK-PANDA-BRAND-OYSTER-FLAVOURED-SAUCE-510G/10285991",
+      "checked_on": "2026-11-08",
+      "purchase_frequency_zh": "按需补",
+      "purchase_frequency_en": "As Needed"
+    },
+    {
+      "item": "红辣椒",
+      "price_cad": "2.99",
+      "basis": "each_average",
+      "source_type": "walmart_public",
+      "source_url": "https://www.walmart.ca/en/ip/red-chili/6000200611068",
+      "product_url": "https://www.walmart.ca/en/ip/red-chili/6000200611068",
+      "checked_on": "2026-11-08",
+      "purchase_frequency_zh": "按需补",
+      "purchase_frequency_en": "As Needed"
+    },
+    {
+      "item": "罗勒叶",
+      "price_cad": "1.67",
+      "basis": "package",
+      "source_type": "walmart_public",
+      "source_url": "https://www.walmart.ca/en/ip/fresh-basil-your-fresh-market/6000207633451",
+      "product_url": "https://www.walmart.ca/en/ip/fresh-basil-your-fresh-market/6000207633451",
       "checked_on": "2026-11-08",
       "purchase_frequency_zh": "按需补",
       "purchase_frequency_en": "As Needed"
