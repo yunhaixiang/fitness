@@ -120,7 +120,7 @@ visual: true
 </tr>
 <tr>
 <td>碳水化合物</td>
-<td style="text-align: right;">190.5 g</td>
+<td style="text-align: right;">190.6 g</td>
 <td>180–240 g</td>
 </tr>
 <tr>
