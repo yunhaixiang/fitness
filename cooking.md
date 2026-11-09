@@ -338,32 +338,36 @@ cooking: true
 <li class="cooking-task-source"><p data-en="Drain 1 can of 🫛🥕 peas and carrots (about 260 g) and divide equally between meals 3 and 6.">🫛🥕 豌豆胡萝卜1罐沥干（约260 g），直接均分到第3、6盘。</p></li>
 <li class="cooking-task-source">
 <ol lang="zh-CN" class="cooking-source-zh">
-<li>🫘 鹰嘴豆沥干冲洗，取¼罐，轻压碎后拌🥣 Chipotle蛋黄酱2茶匙（10 mL；酱条直径约0.8 cm时，挤约20 cm长）。</li>
-<li>半个🫑 橙甜椒洗净去籽切细条。</li>
-<li>🌯 大号卷饼皮1片放入鹰嘴豆、第1盘的🍗 鸡腿肉、掰碎🥚 水煮蛋和橙甜椒，卷好放第1盘。</li>
+<li>🌯 大号卷饼皮1片铺在第1盘，直接抹上🥣 Chipotle蛋黄酱2茶匙（10 mL；酱条直径约0.8 cm时，挤约20 cm长）。</li>
+<li>🫘 鹰嘴豆沥干冲洗，取¼罐轻压碎，放到卷饼皮上。</li>
+<li>半个🫑 橙甜椒洗净去籽切细条，放到卷饼皮上。</li>
+<li>直接加入第1盘的🍗 鸡腿肉和掰碎🥚 水煮蛋，在盘内卷好。</li>
 <li>鹰嘴豆开罐后均分4份：本次用1份，1份冷藏供后半周用，2份冷冻留到下周。</li>
 <li>多余卷饼皮冷冻。</li>
 </ol>
 <ol lang="en" class="cooking-source-en" hidden>
-<li>Drain and rinse the 🫘 chickpeas; use a quarter can and lightly mash with 2 tsp 🥣 Chipotle mayonnaise (10 mL; about 20 cm squeezed length at a strand diameter of 0.8 cm).</li>
-<li>Wash, deseed and slice half an 🫑 orange bell pepper.</li>
-<li>Fill 1 🌯 large tortilla with the chickpeas, meal 1’s shredded chicken, crumbled 🥚 boiled egg and pepper; roll and place in meal 1.</li>
+<li>Lay 1 🌯 large tortilla on plate 1 and spread with 2 tsp 🥣 Chipotle mayonnaise (10 mL; about 20 cm squeezed length at a strand diameter of 0.8 cm).</li>
+<li>Drain and rinse the 🫘 chickpeas; lightly mash a quarter can and add to the tortilla.</li>
+<li>Wash, deseed and slice half an 🫑 orange bell pepper, then add to the tortilla.</li>
+<li>Add meal 1’s shredded 🍗 chicken and crumbled 🥚 boiled egg directly to the tortilla, then roll it up on the plate.</li>
 <li>On opening the chickpeas, split into four portions: use one now, refrigerate one for the second session, and freeze two for next week.</li>
 <li>Freeze spare tortillas.</li>
 </ol>
 </li>
 <li class="cooking-task-source">
 <ol lang="zh-CN" class="cooking-source-zh">
-<li>取沥干🐟 金枪鱼½罐（约55 g），拌🥣 Chipotle蛋黄酱3½茶匙（17.5 mL；酱条直径约0.8 cm时，挤约35 cm长）。</li>
+<li>🍞 全麦面包3片放在第5盘，直接抹上🥣 Chipotle蛋黄酱，共3½茶匙（17.5 mL；酱条直径约0.8 cm时，挤约35 cm长）。</li>
+<li>取沥干🐟 金枪鱼½罐（约55 g），直接铺在面包上。</li>
 <li>🍅 罗马番茄1个洗净切片，预留🥬 菠菜10 g洗净擦干。</li>
-<li>🍞 全麦面包3片分层夹入金枪鱼、第5盘的🍗 鸡腿肉、切片🥚 水煮蛋、🍅 番茄和菠菜，放第5盘。</li>
+<li>直接在面包上分层加入第5盘的🍗 鸡腿肉、切片🥚 水煮蛋、🍅 番茄和菠菜，在盘内叠好。</li>
 <li>前半周备料时，将剩余沥干金枪鱼密封冷冻供后半周用。</li>
 <li>多余面包冷冻。</li>
 </ol>
 <ol lang="en" class="cooking-source-en" hidden>
-<li>Use half a can of drained 🐟 tuna (about 55 g), then mix with 3½ tsp 🥣 Chipotle mayonnaise (17.5 mL; about 35 cm squeezed length at a strand diameter of 0.8 cm).</li>
+<li>Place 3 slices of 🍞 whole-wheat bread on plate 5 and spread with a total of 3½ tsp 🥣 Chipotle mayonnaise (17.5 mL; about 35 cm squeezed length at a strand diameter of 0.8 cm).</li>
+<li>Spread half a can of drained 🐟 tuna (about 55 g) directly onto the bread.</li>
 <li>Wash and slice 1 🍅 Roma tomato; wash and thoroughly dry the reserved 10 g 🥬 spinach.</li>
-<li>Layer 3 slices of 🍞 whole-wheat bread with the tuna, meal 5’s chicken, sliced 🥚 boiled egg, 🍅 tomato and spinach; place in meal 5.</li>
+<li>Layer meal 5’s 🍗 chicken, sliced 🥚 boiled egg, 🍅 tomato and spinach directly onto the bread, then stack the sandwich on the plate.</li>
 <li>During the first cooking session, freeze the remaining drained tuna for the second session.</li>
 <li>Freeze spare 🍞 bread.</li>
 </ol>
