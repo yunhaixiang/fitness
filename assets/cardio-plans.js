@@ -53,12 +53,7 @@
       row.cells[2].textContent = format(weekly / 7, 2);
     }
     for (const section of document.querySelectorAll('[data-weekly-deficit]')) section.dataset.weeklyDeficit = String(Math.round(budget.weeklyDeficit));
-    const overview = document.querySelector('.nutrition-overview');
-    if (overview) {
-      const link = el('a', 'cardio-budget-link', `${plan.name[lang]} · ${tr('每周', 'Weekly')} ≈${format(budget.weeklyCardio)} kcal`);
-      link.href = `${document.body.dataset.baseurl || ''}/cardio/`;
-      overview.append(link);
-    }
+
   }
 
   const root = document.getElementById('cardio-options');
