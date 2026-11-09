@@ -49,9 +49,10 @@
     {"id": "mushroom", "label": ["蘑菇", "Mushrooms"], "note": ["", ""], "group": "small-wok", "before": [], "link": "#cook-mushroom", "minutes": 7},
     {"id": "curry", "label": ["咖喱酱", "Curry Sauce"], "note": ["", ""], "group": "small-wok", "before": ["mushroom"], "link": "#cook-curry", "minutes": 6},
     {"id": "season-noodles", "label": ["罗勒酱香米粉", "Basil Rice Noodles"], "note": ["", ""], "group": "small-wok", "before": ["curry", "noodles"], "link": "#cook-season-noodles", "minutes": 3},
+    {"id": "prep-bread", "label": ["铺卷饼皮和面包", "Lay Out Tortilla and Bread"], "note": ["", ""], "group": "finish", "before": [], "link": "#cook-prep-bread", "minutes": 2},
     {"id": "peas-carrots", "label": ["豌豆胡萝卜", "Peas and Carrots"], "note": ["", ""], "group": "finish", "before": [], "link": "#cook-peas-carrots", "minutes": 3},
-    {"id": "wrap", "label": ["卷饼", "Wrap"], "note": ["", ""], "group": "finish", "before": ["chicken", "eggs"], "link": "#cook-wrap", "minutes": 4},
-    {"id": "sandwich", "label": ["三明治", "Sandwich"], "note": ["", ""], "group": "finish", "before": ["chicken", "eggs", "wrap"], "link": "#cook-sandwich", "minutes": 4},
+    {"id": "wrap", "label": ["卷饼", "Wrap"], "note": ["", ""], "group": "finish", "before": ["prep-bread", "chicken", "eggs"], "link": "#cook-wrap", "minutes": 4},
+    {"id": "sandwich", "label": ["三明治", "Sandwich"], "note": ["", ""], "group": "finish", "before": ["prep-bread", "chicken", "eggs", "wrap"], "link": "#cook-sandwich", "minutes": 4},
     {"id": "refrigerate", "label": ["入冰箱", "Refrigerate"], "note": ["", ""], "group": "finish", "before": ["rice", "potato", "ribs", "meatballs", "shrimp", "salmon", "dumplings", "curry", "season-noodles", "tomato", "wrap", "sandwich", "mushroom", "spinach", "haddock", "peas-carrots"], "link": "#cook-refrigerate", "minutes": 5},
     {"id": "clean", "label": ["清洗", "Clean Up"], "note": ["", ""], "group": "finish", "before": ["refrigerate"], "link": "#cook-clean", "minutes": 7}
   ];
@@ -68,7 +69,7 @@
     eggs: '🥚', dumplings: '🥟', pasta: '🍝', noodles: '🍜',
     mushroom: '🍄', curry: '🍛', 'season-noodles': '🌿',
     spinach: '🥬', ground: '🍗', tomato: '🍅',
-    'peas-carrots': '🫛🥕', wrap: '🌯', sandwich: '🥪', refrigerate: '🧊', clean: '🧼'
+    'prep-bread': '🌯🍞', 'peas-carrots': '🫛🥕', wrap: '🌯', sandwich: '🥪', refrigerate: '🧊', clean: '🧼'
   };
   const groups = [
     {"id": "oven", "icon": "oven", "title": ["烤箱", "Oven"], "hint": ["按烤盘空间安排", "Schedule According to Tray Space"]},
@@ -80,7 +81,7 @@
     {"id": "finish", "icon": "finish", "title": ["收尾", "Finish"], "hint": ["备好配菜与餐点、入冰箱、清洗", "Assemble Meals, Refrigerate and Clean"]}
   ];
 
-  const instructionSections = [["rice", "rice", ["prep-rice", "rice"]], ["oven", "oven", ["oven-heat-start", "prep-potato", "prep-chicken", "prep-ribs", "prep-shrimp", "oven-heat", "potato", "chicken", "ribs", "meatballs", "shrimp"]], ["air-fryer", "air", ["prep-salmon", "air-heat-start", "air-heat", "salmon", "haddock"]], ["pot-one", "pots", ["egg-water", "eggs", "dumplings"]], ["pot-two", "pots", ["pasta-water", "pasta", "noodles"]], ["small-wok", "small-wok", ["mushroom", "curry", "season-noodles"]], ["large-wok", "large-wok", ["spinach", "ground", "tomato"]], ["finish", "finish", ["peas-carrots", "wrap", "sandwich", "refrigerate", "clean"]]];
+  const instructionSections = [["rice", "rice", ["prep-rice", "rice"]], ["oven", "oven", ["oven-heat-start", "prep-potato", "prep-chicken", "prep-ribs", "prep-shrimp", "oven-heat", "potato", "chicken", "ribs", "meatballs", "shrimp"]], ["air-fryer", "air", ["prep-salmon", "air-heat-start", "air-heat", "salmon", "haddock"]], ["pot-one", "pots", ["egg-water", "eggs", "dumplings"]], ["pot-two", "pots", ["pasta-water", "pasta", "noodles"]], ["small-wok", "small-wok", ["mushroom", "curry", "season-noodles"]], ["large-wok", "large-wok", ["spinach", "ground", "tomato"]], ["finish", "finish", ["prep-bread", "peas-carrots", "wrap", "sandwich", "refrigerate", "clean"]]];
   const instructions = new Map(), seasoningNotes = new Map();
   const mergedSections = [];
   for (const [headingId, group, steps] of instructionSections) {

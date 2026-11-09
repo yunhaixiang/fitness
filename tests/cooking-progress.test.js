@@ -84,7 +84,7 @@ test('saved preheat completion survives the split into two steps', () => {
 
 
 test('finish tasks can assemble food early, but refrigeration waits for every meal', () => {
- const partial = ['prep-chicken','oven-heat-start','oven-heat','chicken','egg-water','eggs'];
+ const partial = ['prep-bread','prep-chicken','oven-heat-start','oven-heat','chicken','egg-water','eggs'];
  const available = derive(nodes,partial).available.map(n=>n.id);
  assert.ok(available.includes('wrap'));
  assert.ok(available.includes('peas-carrots'));
@@ -102,4 +102,18 @@ test('splitting finish preserves completed meals and migrates completed cleanup'
  assert.equal(derive(nodes,migrated.done).done.length,nodes.length);
  const partial = readState(JSON.stringify({version:3,done:['prep-rice','rice']}));
  assert.deepEqual(derive(nodes,partial.done).done,['prep-rice','rice']);
+});
+
+
+test('bread can be laid out immediately while assembly waits for cooked food', () => {
+ assert.ok(derive(nodes,[]).available.some(n=>n.id==='prep-bread'));
+ const prepared = toggle(nodes,[],'first','prep-bread',true);
+ assert.ok(prepared.includes('prep-bread'));
+ assert.ok(!derive(nodes,prepared).available.some(n=>['wrap','sandwich'].includes(n.id)));
+ const cooked = ['prep-chicken','oven-heat-start','oven-heat','chicken','egg-water','eggs'];
+ assert.ok(!derive(nodes,cooked).available.some(n=>n.id==='wrap'));
+ assert.ok(derive(nodes,[...cooked,'prep-bread']).available.some(n=>n.id==='wrap'));
+ const migrated = readState(JSON.stringify({version:3,done:[...cooked,'wrap']}));
+ assert.ok(derive(nodes,migrated.done).done.includes('wrap'));
+ assert.ok(migrated.done.includes('prep-bread'));
 });

@@ -48,6 +48,8 @@
       done.splice(done.indexOf('finish'), 1);
       for (const id of ['peas-carrots', 'refrigerate', 'clean']) if (!done.includes(id)) done.push(id);
     }
+    // Previously, laying out bread was part of assembling either meal.
+    if (done.some(id => ['wrap', 'sandwich'].includes(id)) && !done.includes('prep-bread')) done.push('prep-bread');
     // Legacy running tasks return to unchecked; only completion is persisted.
     return { version: 3, done };
   }

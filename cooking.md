@@ -335,10 +335,20 @@ cooking: true
 
 <h2 id="finish" data-en="Finish">收尾线程</h2>
 <ol>
+<li class="cooking-task-source">
+<ol lang="zh-CN" class="cooking-source-zh">
+<li>🌯 大号卷饼皮1片铺在第1盘。</li>
+<li>🍞 全麦面包3片放在第5盘。</li>
+</ol>
+<ol lang="en" class="cooking-source-en" hidden>
+<li>Lay 1 🌯 large tortilla on plate 1.</li>
+<li>Place 3 slices of 🍞 whole-wheat bread on plate 5.</li>
+</ol>
+</li>
 <li class="cooking-task-source"><p data-en="Drain 1 can of 🫛🥕 peas and carrots (about 260 g) and divide equally between meals 3 and 6.">🫛🥕 豌豆胡萝卜1罐沥干（约260 g），直接均分到第3、6盘。</p></li>
 <li class="cooking-task-source">
 <ol lang="zh-CN" class="cooking-source-zh">
-<li>🌯 大号卷饼皮1片铺在第1盘，直接抹上🥣 Chipotle蛋黄酱2茶匙（10 mL；酱条直径约0.8 cm时，挤约20 cm长）。</li>
+<li>在第1盘的🌯 卷饼皮上抹上🥣 Chipotle蛋黄酱2茶匙（10 mL；酱条直径约0.8 cm时，挤约20 cm长）。</li>
 <li>🫘 鹰嘴豆沥干冲洗，取¼罐轻压碎，放到卷饼皮上。</li>
 <li>半个🫑 橙甜椒洗净去籽切细条，放到卷饼皮上。</li>
 <li>直接加入第1盘的🍗 鸡腿肉和掰碎🥚 水煮蛋，在盘内卷好。</li>
@@ -346,7 +356,7 @@ cooking: true
 <li>多余卷饼皮冷冻。</li>
 </ol>
 <ol lang="en" class="cooking-source-en" hidden>
-<li>Lay 1 🌯 large tortilla on plate 1 and spread with 2 tsp 🥣 Chipotle mayonnaise (10 mL; about 20 cm squeezed length at a strand diameter of 0.8 cm).</li>
+<li>Spread the 🌯 tortilla on plate 1 with 2 tsp 🥣 Chipotle mayonnaise (10 mL; about 20 cm squeezed length at a strand diameter of 0.8 cm).</li>
 <li>Drain and rinse the 🫘 chickpeas; lightly mash a quarter can and add to the tortilla.</li>
 <li>Wash, deseed and slice half an 🫑 orange bell pepper, then add to the tortilla.</li>
 <li>Add meal 1’s shredded 🍗 chicken and crumbled 🥚 boiled egg directly to the tortilla, then roll it up on the plate.</li>
@@ -356,7 +366,7 @@ cooking: true
 </li>
 <li class="cooking-task-source">
 <ol lang="zh-CN" class="cooking-source-zh">
-<li>🍞 全麦面包3片放在第5盘，直接抹上🥣 Chipotle蛋黄酱，共3½茶匙（17.5 mL；酱条直径约0.8 cm时，挤约35 cm长）。</li>
+<li>在第5盘的🍞 面包上抹上🥣 Chipotle蛋黄酱，共3½茶匙（17.5 mL；酱条直径约0.8 cm时，挤约35 cm长）。</li>
 <li>取沥干🐟 金枪鱼½罐（约55 g），直接铺在面包上。</li>
 <li>🍅 罗马番茄1个洗净切片，预留🥬 菠菜10 g洗净擦干。</li>
 <li>直接在面包上分层加入第5盘的🍗 鸡腿肉、切片🥚 水煮蛋、🍅 番茄和菠菜，在盘内叠好。</li>
@@ -364,7 +374,7 @@ cooking: true
 <li>多余面包冷冻。</li>
 </ol>
 <ol lang="en" class="cooking-source-en" hidden>
-<li>Place 3 slices of 🍞 whole-wheat bread on plate 5 and spread with a total of 3½ tsp 🥣 Chipotle mayonnaise (17.5 mL; about 35 cm squeezed length at a strand diameter of 0.8 cm).</li>
+<li>Spread the 🍞 bread on plate 5 with a total of 3½ tsp 🥣 Chipotle mayonnaise (17.5 mL; about 35 cm squeezed length at a strand diameter of 0.8 cm).</li>
 <li>Spread half a can of drained 🐟 tuna (about 55 g) directly onto the bread.</li>
 <li>Wash and slice 1 🍅 Roma tomato; wash and thoroughly dry the reserved 10 g 🥬 spinach.</li>
 <li>Layer meal 5’s 🍗 chicken, sliced 🥚 boiled egg, 🍅 tomato and spinach directly onto the bread, then stack the sandwich on the plate.</li>
