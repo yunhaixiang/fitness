@@ -1,41 +1,28 @@
 (() => {
   'use strict';
   const KEY = 'yunhai-fitness-records-v1';
-  const t = (value) => window.fitnessI18n?.language === 'en' ? window.fitnessI18n.translate(value) : value;
   const DAYS = 56;
   const types = {
-    body: { name: '身体组成', description: '建议起床如厕后、吃喝前记录；同一设备、同一条件下看趋势。', fields: [
-      ['date', '日期', 'date', true], ['weight', '体重 kg', 'number'], ['bf', 'Hume 体脂率 %', 'number'],
-      ['waist', '腰围 cm', 'number'], ['neck', '颈围 cm', 'number'], ['abdomen', '肚脐腹围 cm', 'number'],
-      ['fatMass', '脂肪量 kg', 'number'], ['muscle', '骨骼肌量 kg', 'number'], ['visceral', '内脏脂肪（App 数值）', 'number'],
-      ['water', '体水分 %', 'number']
-    ], chart: [['weight', '体重 kg'], ['bf', '体脂率 %'], ['muscle', '骨骼肌 kg']] },
-    food: { name: '饮食', description: '填当天实际摄入；不必为了凑满所有项目而放弃记录。', fields: [
-      ['date', '日期', 'date', true], ['kcal', '热量 kcal', 'number'], ['protein', '蛋白质 g', 'number'],
-      ['carbs', '碳水 g', 'number'], ['fat', '总脂肪 g', 'number'], ['satFat', '饱和脂肪 g', 'number'],
-      ['fiber', '膳食纤维 g', 'number'], ['note', '备注', 'text']
-    ], chart: [['kcal', '摄入 kcal'], ['protein', '蛋白质 g']] },
-    strength: { name: '力量训练', description: '每个动作记一条；负重写实际使用重量，左右两侧次数可写在备注里。', fields: [
-      ['date', '日期', 'date', true], ['place', '场地', 'select', false, ['在家', '健身馆']], ['exercise', '动作', 'text', true],
-      ['sets', '组数', 'number'], ['reps', '每组次数', 'text'], ['weightLb', '单只哑铃／器械负重 lb', 'number'], ['note', '备注', 'text']
-    ] },
-    cardio: { name: '有氧训练', description: '记录实际完成量；热量是估计值，不必每次都填。', fields: [
-      ['date', '日期', 'date', true], ['activity', '项目', 'select', true, ['HIIT', '游泳', '跑步机', '健身馆自行车', '其他']],
-      ['minutes', '时长 min', 'number'], ['distance', '距离 km', 'number'], ['kcal', '估计净消耗 kcal', 'number'], ['note', '备注', 'text']
-    ], chart: [['minutes', '有氧时长 min']] }
+    body: { name: '身体组成', fields: [
+      ['date', '日期'], ['weight', '体重 kg'], ['bf', '体脂率 %']
+    ], chart: [['weight', '体重 kg'], ['bf', '体脂率 %']] },
+    cheatMeals: { name: '放纵餐', fields: [
+      ['date', '日期'], ['meal', '放纵餐'], ['portion', '份量'], ['kcal', '热量 kcal'], ['note', '备注']
+    ] }
   };
   const names = Object.keys(types);
   const blank = () => Object.fromEntries(names.map((name) => [name, []]));
   let records = blank();
-  let archivedSleep = [];
-  const storedRecords = () => archivedSleep.length ? { ...records, sleep: archivedSleep } : records;
+  let legacyRecords = {};
+  // Keep removed categories available in backups, without displaying or rewriting them.
+  const storedRecords = () => ({ ...legacyRecords, ...records });
   let active = 'body';
   const dateString = (d) => `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}-${String(d.getDate()).padStart(2, '0')}`;
   const today = () => dateString(new Date());
   const cutoff = () => { const d = new Date(); d.setHours(0, 0, 0, 0); d.setDate(d.getDate() - DAYS + 1); return dateString(d); };
   let saved = null;
   try { saved = localStorage.getItem(KEY); } catch (_) { /* storage disabled */ }
-  if (saved) { try { const parsed = JSON.parse(saved); for (const name of names) if (Array.isArray(parsed[name])) records[name] = parsed[name]; if (Array.isArray(parsed.sleep)) archivedSleep = parsed.sleep; } catch (_) { /* keep blank */ } }
+  if (saved) { try { const parsed = JSON.parse(saved); legacyRecords = parsed; for (const name of names) if (Array.isArray(parsed[name])) records[name] = parsed[name]; } catch (_) { /* keep blank */ } }
   try {
     const published = JSON.parse(document.getElementById('tracking-records')?.textContent || '{}');
     for (const name of names) {
@@ -63,13 +50,13 @@
     for (const [key, label] of config.chart || []) { const opt = document.createElement('option'); opt.value = key; opt.textContent = label; chartSelect.append(opt); }
     chartCard.append(chartTitle);
     if (config.chart) { chartCard.append(chartSelect); const chart = document.createElement('div'); chart.className = 'chart-wrap'; chart.dataset.chart = name; chartCard.append(chart); }
-    else { const none = document.createElement('p'); none.textContent = '训练动作按日期列在下方，便于比较组数和负重。'; chartCard.append(none); }
+
     const listCard = document.createElement('div'); listCard.className = 'tracker-card';
     const listTitle = document.createElement('h2'); listTitle.textContent = '最近 8 周记录';
-    const csv = document.createElement('button'); csv.type = 'button'; csv.className = 'small-button'; csv.textContent = '导出此类 CSV'; csv.addEventListener('click', () => exportCsv(name));
     const list = document.createElement('div'); list.className = 'record-list'; list.dataset.list = name;
-    listCard.append(listTitle, csv, list);
-    panel.append(chartCard, listCard); return panel;
+    listCard.append(listTitle, list);
+    if (config.chart) panel.append(chartCard);
+    panel.append(listCard); return panel;
   }
   function renderList(name) {
     const host = document.querySelector(`[data-list="${name}"]`); host.replaceChildren();
@@ -111,7 +98,6 @@
   function renderAll() { renderMetrics(); for (const name of names) { renderList(name); renderChart(name); } window.fitnessI18n?.apply(); }
   function show(name) { active = name; for (const button of document.querySelectorAll('[data-tab]')) button.setAttribute('aria-selected', button.dataset.tab === name ? 'true' : 'false'); for (const panel of document.querySelectorAll('.tracker-panel')) panel.classList.toggle('active', panel.id === `panel-${name}`); }
   function download(filename, data, type) { const blob = new Blob([data], { type }); const url = URL.createObjectURL(blob); const a = document.createElement('a'); a.href = url; a.download = filename; a.click(); setTimeout(() => URL.revokeObjectURL(url), 1000); }
-  function exportCsv(name) { const fields = types[name].fields; const quoted = (value) => `"${String(value ?? '').replaceAll('"', '""')}"`; const rows = [fields.map((item) => quoted(t(item[1]))).join(','), ...records[name].map((row) => fields.map(([key]) => quoted(row[key])).join(','))]; download(`fitness-${name}-${today()}.csv`, '\uFEFF' + rows.join('\r\n'), 'text/csv;charset=utf-8'); }
   document.querySelector('#tracker-panels').append(...names.map(buildPanel));
   document.querySelectorAll('[data-tab]').forEach((button) => button.addEventListener('click', () => show(button.dataset.tab)));
   document.querySelectorAll('.chart-wrap').forEach((host) => host.previousElementSibling.addEventListener('change', () => { renderChart(host.dataset.chart); window.fitnessI18n?.apply(host); }));
