@@ -149,23 +149,23 @@
       "iodine": "34.835"
     },
     "bread": {
-      "kcal": "686",
+      "kcal": "698",
       "protein": "61.4",
-      "carbs": "52.4",
-      "fat": "26.6",
-      "saturatedFat": "6.7",
+      "carbs": "52.7",
+      "fat": "27.7",
+      "saturatedFat": "6.8",
       "fibre": "8.9",
-      "sugar": "8.7",
-      "sodium": "878",
+      "sugar": "9.0",
+      "sodium": "913",
       "cholesterol": "380",
       "epaDha": "0.32",
       "label": "bread",
-      "calcium": "162.562",
-      "iron": "5.982",
-      "potassium": "1089.556",
+      "calcium": "162.862",
+      "iron": "5.989",
+      "potassium": "1091.106",
       "vitaminD": "5.140",
       "vitaminB12": "3.646",
-      "iodine": "40.982"
+      "iodine": "41.249"
     },
     "dumpling": {
       "kcal": "703",
