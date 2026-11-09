@@ -30,17 +30,17 @@ cooking: true
 <h2 id="oven" data-en="Oven">烤箱线程</h2>
 <p data-en="Measure Guide: About 30 Short Oil Sprays = 1 tsp; About 30 Shakes of Powder = 1 tsp">用量换算：橄榄油短喷约30喷＝1茶匙；粉状调味料约30下＝1茶匙</p>
 <ol>
+<li class="cooking-task-source"><p data-en="Set the oven to 400°F and start preheating.">烤箱设为400°F，启动预热。</p></li>
 <li class="cooking-task-source">
 <ol lang="zh-CN" class="cooking-source-zh">
-<li>烤箱设为400°F，启动预热。</li>
-<li>期间可继续备料。</li>
+<li>取🥔 小土豆170 g，洗净切成大小接近的块。</li>
+<li>拌入🫒 橄榄油¼茶匙、🧂 黑胡椒1/16茶匙、🧄 蒜粉⅛茶匙和🧅 洋葱粉⅛茶匙。</li>
 </ol>
 <ol lang="en" class="cooking-source-en" hidden>
-<li>Set the oven to 400°F and start preheating.</li>
-<li>Prepare ingredients while it heats.</li>
+<li>Wash 170 g little yellow 🥔 potatoes and cut into even pieces.</li>
+<li>Toss with ¼ tsp 🫒 olive oil, 1/16 tsp 🧂 black pepper, ⅛ tsp 🧄 garlic powder and ⅛ tsp 🧅 onion powder.</li>
 </ol>
 </li>
-<li class="cooking-task-source"><p data-en="Confirm the oven has reached 400°F before loading the prepared food.">确认烤箱已达到400°F，再放入备好的食材。</p></li>
 <li class="cooking-task-source">
 <ol lang="zh-CN" class="cooking-source-zh">
 <li>取🍗 鸡大腿肉4块，共465 g，擦干。</li>
@@ -55,26 +55,28 @@ cooking: true
 </li>
 <li class="cooking-task-source">
 <ol lang="zh-CN" class="cooking-source-zh">
-<li>400°F烤27分钟，中心达74°C。</li>
-<li>熟肉按3:3:2分给第1、5、3盘，相当于1½、1½、1块。</li>
-<li>卷饼与三明治的肉掰碎。</li>
+<li>取半盒🍖 排骨300 g，淋包装内酱汁，裹好锡纸。</li>
+<li>前半周备料时，将另半盒排骨冷冻。</li>
 </ol>
 <ol lang="en" class="cooking-source-en" hidden>
-<li>Roast at 400°F for 27 minutes, to 74°C in the centre.</li>
-<li>Divide the cooked meat 3:3:2 between meals 1, 5 and 3, equivalent to 1½, 1½ and 1 🍗 thigh.</li>
-<li>Shred the wrap and sandwich portions.</li>
+<li>Use half the box of 🍖 ribs, 300 g including bones and sauce.</li>
+<li>Add the packaged sauce and wrap in foil.</li>
+<li>Freeze the other half during the first cooking session.</li>
 </ol>
 </li>
 <li class="cooking-task-source">
 <ol lang="zh-CN" class="cooking-source-zh">
-<li>取🥔 小土豆170 g，洗净切成大小接近的块。</li>
-<li>拌入🫒 橄榄油¼茶匙、🧂 黑胡椒1/16茶匙、🧄 蒜粉⅛茶匙和🧅 洋葱粉⅛茶匙。</li>
+<li>取解冻🦐 虾仁170 g，擦干，拌🧄 蒜粉¼茶匙和🧂 黑胡椒⅛茶匙。</li>
+<li>🍞 面包糠20 g拌🫒 橄榄油1茶匙，覆盖在虾仁上。</li>
+<li>前半周备料时，将剩余生虾仁分装冷冻。</li>
 </ol>
 <ol lang="en" class="cooking-source-en" hidden>
-<li>Wash 170 g little yellow 🥔 potatoes and cut into even pieces.</li>
-<li>Toss with ¼ tsp 🫒 olive oil, 1/16 tsp 🧂 black pepper, ⅛ tsp 🧄 garlic powder and ⅛ tsp 🧅 onion powder.</li>
+<li>Pat 170 g thawed 🦐 shrimp dry and season with ¼ tsp 🧄 garlic powder and ⅛ tsp 🧂 black pepper.</li>
+<li>Mix 20 g 🍞 panko with 1 tsp 🫒 olive oil and spread over the shrimp.</li>
+<li>Freeze the remaining raw shrimp during the first cooking session.</li>
 </ol>
 </li>
+<li class="cooking-task-source"><p data-en="Confirm the oven has reached 400°F before loading the prepared food.">确认烤箱已达到400°F，再放入备好的食材。</p></li>
 <li class="cooking-task-source">
 <ol lang="zh-CN" class="cooking-source-zh">
 <li>400°F烤约35–40分钟至内部软、表面金黄，中途翻面。</li>
@@ -87,13 +89,14 @@ cooking: true
 </li>
 <li class="cooking-task-source">
 <ol lang="zh-CN" class="cooking-source-zh">
-<li>取半盒🍖 排骨300 g，淋包装内酱汁，裹好锡纸。</li>
-<li>前半周备料时，将另半盒排骨冷冻。</li>
+<li>400°F烤27分钟，中心达74°C。</li>
+<li>熟肉按3:3:2分给第1、5、3盘，相当于1½、1½、1块。</li>
+<li>卷饼与三明治的肉掰碎。</li>
 </ol>
 <ol lang="en" class="cooking-source-en" hidden>
-<li>Use half the box of 🍖 ribs, 300 g including bones and sauce.</li>
-<li>Add the packaged sauce and wrap in foil.</li>
-<li>Freeze the other half during the first cooking session.</li>
+<li>Roast at 400°F for 27 minutes, to 74°C in the centre.</li>
+<li>Divide the cooked meat 3:3:2 between meals 1, 5 and 3, equivalent to 1½, 1½ and 1 🍗 thigh.</li>
+<li>Shred the wrap and sandwich portions.</li>
 </ol>
 </li>
 <li class="cooking-task-source">
@@ -115,18 +118,6 @@ cooking: true
 <li>Place 3 frozen 🧆 meatballs (45.4 g) on a tray.</li>
 <li>Bake at 400°F for 15–20 minutes to a 74°C centre, following the pack if different.</li>
 <li>Place in meal 4.</li>
-</ol>
-</li>
-<li class="cooking-task-source">
-<ol lang="zh-CN" class="cooking-source-zh">
-<li>取解冻🦐 虾仁170 g，擦干，拌🧄 蒜粉¼茶匙和🧂 黑胡椒⅛茶匙。</li>
-<li>🍞 面包糠20 g拌🫒 橄榄油1茶匙，覆盖在虾仁上。</li>
-<li>前半周备料时，将剩余生虾仁分装冷冻。</li>
-</ol>
-<ol lang="en" class="cooking-source-en" hidden>
-<li>Pat 170 g thawed 🦐 shrimp dry and season with ¼ tsp 🧄 garlic powder and ⅛ tsp 🧂 black pepper.</li>
-<li>Mix 20 g 🍞 panko with 1 tsp 🫒 olive oil and spread over the shrimp.</li>
-<li>Freeze the remaining raw shrimp during the first cooking session.</li>
 </ol>
 </li>
 <li class="cooking-task-source">

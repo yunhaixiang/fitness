@@ -19,36 +19,36 @@
   const svg = (name) => `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${icons[name]}</svg>`;
 
   const nodes = [
-    {"id": "prep-rice", "label": ["备白米", "Prepare Rice"], "note": ["", ""], "group": "prep", "before": [], "link": "#cook-prep-rice", "minutes": 3, "displayGroup": "rice"},
-    {"id": "rice", "label": ["白米饭", "White Rice"], "note": ["", ""], "group": "rice", "before": ["prep-rice"], "link": "#cook-rice", "minutes": 50},
     {"id": "oven-heat-start", "label": ["开始预热烤箱", "Start Preheating Oven"], "note": ["", ""], "group": "oven", "before": [], "link": "#cook-oven-heat-start", "minutes": 1, "instant": true},
-    {"id": "oven-heat", "label": ["确认烤箱预热完成", "Confirm Oven Is Preheated"], "note": ["预热期间可继续其他任务", "Continue Other Tasks While Heating"], "group": "oven", "before": ["oven-heat-start"], "link": "#cook-oven-heat", "minutes": 15, "confirmation": true},
-    {"id": "prep-chicken", "label": ["备鸡大腿肉", "Prepare Chicken Thighs"], "note": ["", ""], "group": "prep", "before": [], "link": "#cook-prep-chicken", "minutes": 3, "displayGroup": "oven"},
-    {"id": "chicken", "label": ["鸡大腿肉", "Chicken Thighs"], "note": ["", ""], "group": "oven", "before": ["oven-heat", "prep-chicken"], "link": "#cook-chicken", "minutes": 27},
     {"id": "prep-potato", "label": ["备土豆", "Prepare Potatoes"], "note": ["", ""], "group": "prep", "before": [], "link": "#cook-prep-potato", "minutes": 3, "displayGroup": "oven"},
-    {"id": "potato", "label": ["土豆块", "Potato Wedges"], "note": ["", ""], "group": "oven", "before": ["oven-heat", "prep-potato"], "link": "#cook-potato", "minutes": 40},
+    {"id": "prep-chicken", "label": ["备鸡大腿肉", "Prepare Chicken Thighs"], "note": ["", ""], "group": "prep", "before": [], "link": "#cook-prep-chicken", "minutes": 3, "displayGroup": "oven"},
     {"id": "prep-ribs", "label": ["备排骨", "Prepare Ribs"], "note": ["", ""], "group": "prep", "before": [], "link": "#cook-prep-ribs", "minutes": 3, "displayGroup": "oven"},
+    {"id": "prep-shrimp", "label": ["备虾仁", "Prepare Shrimp"], "note": ["", ""], "group": "prep", "before": [], "link": "#cook-prep-shrimp", "minutes": 3, "displayGroup": "oven"},
+    {"id": "oven-heat", "label": ["确认烤箱预热完成", "Confirm Oven Is Preheated"], "note": ["", ""], "group": "oven", "before": ["oven-heat-start"], "link": "#cook-oven-heat", "minutes": 15, "confirmation": true},
+    {"id": "potato", "label": ["土豆块", "Potato Wedges"], "note": ["", ""], "group": "oven", "before": ["oven-heat", "prep-potato"], "link": "#cook-potato", "minutes": 40},
+    {"id": "chicken", "label": ["鸡大腿肉", "Chicken Thighs"], "note": ["", ""], "group": "oven", "before": ["oven-heat", "prep-chicken"], "link": "#cook-chicken", "minutes": 27},
     {"id": "ribs", "label": ["BBQ排骨", "BBQ Ribs"], "note": ["", ""], "group": "oven", "before": ["oven-heat", "prep-ribs"], "link": "#cook-ribs", "minutes": 20},
     {"id": "meatballs", "label": ["牛肉丸", "Beef Meatballs"], "note": ["", ""], "group": "oven", "before": ["oven-heat"], "link": "#cook-meatballs", "minutes": 20},
-    {"id": "prep-shrimp", "label": ["备虾仁", "Prepare Shrimp"], "note": ["", ""], "group": "prep", "before": [], "link": "#cook-prep-shrimp", "minutes": 3, "displayGroup": "oven"},
     {"id": "shrimp", "label": ["面包糠烤虾", "Panko-Baked Shrimp"], "note": ["", ""], "group": "oven", "before": ["oven-heat", "prep-shrimp"], "link": "#cook-shrimp", "minutes": 12},
+    {"id": "prep-rice", "label": ["备白米", "Prepare Rice"], "note": ["", ""], "group": "prep", "before": [], "link": "#cook-prep-rice", "minutes": 3, "displayGroup": "rice"},
+    {"id": "rice", "label": ["白米饭", "White Rice"], "note": ["", ""], "group": "rice", "before": ["prep-rice"], "link": "#cook-rice", "minutes": 50},
+    {"id": "egg-water", "label": ["煮锅一烧水", "Boil Water in Pot 1"], "note": ["", ""], "group": "pots", "before": [], "link": "#cook-egg-water", "manual": true, "resource": "pot-1", "minutes": 1},
+    {"id": "pasta-water", "label": ["煮锅二烧水", "Boil Water in Pot 2"], "note": ["", ""], "group": "pots", "before": [], "link": "#cook-pasta-water", "manual": true, "resource": "pot-2", "minutes": 1},
+    {"id": "eggs", "label": ["水煮蛋", "Boiled Eggs"], "note": ["", ""], "group": "pots", "before": ["egg-water"], "link": "#cook-eggs", "resource": "pot-1", "minutes": 9},
+    {"id": "pasta", "label": ["意面", "Spaghetti"], "note": ["", ""], "group": "pots", "before": ["pasta-water"], "link": "#cook-pasta", "resource": "pot-2", "minutes": 8},
+    {"id": "noodles", "label": ["扁米粉", "Rice Noodles"], "note": ["", ""], "group": "pots", "before": ["pasta"], "link": "#cook-noodles", "resource": "pot-2", "minutes": 6},
+    {"id": "dumplings", "label": ["水饺", "Boiled Dumplings"], "note": ["", ""], "group": "pots", "before": ["eggs"], "link": "#cook-dumplings", "resource": "pot-1", "minutes": 8},
     {"id": "prep-salmon", "label": ["备三文鱼", "Prepare Salmon"], "note": ["", ""], "group": "prep", "before": [], "link": "#cook-prep-salmon", "minutes": 3, "displayGroup": "air"},
     {"id": "air-heat-start", "label": ["开始预热空气炸锅", "Start Preheating Air Fryer"], "note": ["", ""], "group": "air", "before": ["prep-salmon"], "link": "#cook-air-heat-start", "minutes": 1, "instant": true},
     {"id": "air-heat", "label": ["确认空气炸锅预热完成", "Confirm Air Fryer Is Preheated"], "note": ["预热期间可继续其他任务", "Continue Other Tasks While Heating"], "group": "air", "before": ["air-heat-start"], "link": "#cook-air-heat", "minutes": 4, "confirmation": true},
     {"id": "salmon", "label": ["三文鱼", "Salmon"], "note": ["", ""], "group": "air", "before": ["air-heat", "prep-salmon"], "link": "#cook-salmon", "minutes": 8},
     {"id": "haddock", "label": ["裹粉黑线鳕", "Breaded Haddock"], "note": ["", ""], "group": "air", "before": ["salmon"], "link": "#cook-haddock", "minutes": 20},
-    {"id": "egg-water", "label": ["烧水", "Boil Water"], "note": ["", ""], "group": "pots", "before": [], "link": "#cook-egg-water", "manual": true, "resource": "pot-1", "minutes": 1},
-    {"id": "eggs", "label": ["水煮蛋", "Boiled Eggs"], "note": ["", ""], "group": "pots", "before": ["egg-water"], "link": "#cook-eggs", "resource": "pot-1", "minutes": 9},
-    {"id": "dumplings", "label": ["水饺", "Boiled Dumplings"], "note": ["", ""], "group": "pots", "before": ["eggs"], "link": "#cook-dumplings", "resource": "pot-1", "minutes": 8},
-    {"id": "pasta-water", "label": ["烧水", "Boil Water"], "note": ["", ""], "group": "pots", "before": [], "link": "#cook-pasta-water", "manual": true, "resource": "pot-2", "minutes": 1},
-    {"id": "pasta", "label": ["意面", "Spaghetti"], "note": ["", ""], "group": "pots", "before": ["pasta-water"], "link": "#cook-pasta", "resource": "pot-2", "minutes": 8},
-    {"id": "noodles", "label": ["扁米粉", "Rice Noodles"], "note": ["", ""], "group": "pots", "before": ["pasta"], "link": "#cook-noodles", "resource": "pot-2", "minutes": 6},
-    {"id": "mushroom", "label": ["蘑菇", "Mushrooms"], "note": ["", ""], "group": "small-wok", "before": [], "link": "#cook-mushroom", "minutes": 7},
-    {"id": "curry", "label": ["咖喱酱", "Curry Sauce"], "note": ["", ""], "group": "small-wok", "before": ["mushroom"], "link": "#cook-curry", "minutes": 6},
-    {"id": "season-noodles", "label": ["罗勒酱香米粉", "Basil Rice Noodles"], "note": ["", ""], "group": "small-wok", "before": ["curry", "noodles"], "link": "#cook-season-noodles", "minutes": 3},
     {"id": "spinach", "label": ["菠菜", "Spinach"], "note": ["", ""], "group": "large-wok", "before": [], "link": "#cook-spinach", "minutes": 5},
     {"id": "ground", "label": ["鸡肉末、西葫芦", "Ground Chicken and Zucchini"], "note": ["", ""], "group": "large-wok", "before": ["spinach"], "link": "#cook-ground", "minutes": 10},
     {"id": "tomato", "label": ["拌番茄意面", "Finish Tomato Spaghetti"], "note": ["", ""], "group": "large-wok", "before": ["ground", "pasta"], "link": "#cook-tomato", "minutes": 4},
+    {"id": "mushroom", "label": ["蘑菇", "Mushrooms"], "note": ["", ""], "group": "small-wok", "before": [], "link": "#cook-mushroom", "minutes": 7},
+    {"id": "curry", "label": ["咖喱酱", "Curry Sauce"], "note": ["", ""], "group": "small-wok", "before": ["mushroom"], "link": "#cook-curry", "minutes": 6},
+    {"id": "season-noodles", "label": ["罗勒酱香米粉", "Basil Rice Noodles"], "note": ["", ""], "group": "small-wok", "before": ["curry", "noodles"], "link": "#cook-season-noodles", "minutes": 3},
     {"id": "peas-carrots", "label": ["豌豆胡萝卜", "Peas and Carrots"], "note": ["", ""], "group": "finish", "before": [], "link": "#cook-peas-carrots", "minutes": 3},
     {"id": "wrap", "label": ["卷饼", "Wrap"], "note": ["", ""], "group": "finish", "before": ["chicken", "eggs"], "link": "#cook-wrap", "minutes": 4},
     {"id": "sandwich", "label": ["三明治", "Sandwich"], "note": ["", ""], "group": "finish", "before": ["chicken", "eggs", "wrap"], "link": "#cook-sandwich", "minutes": 4},
@@ -71,16 +71,16 @@
     'peas-carrots': '🫛🥕', wrap: '🌯', sandwich: '🥪', refrigerate: '🧊', clean: '🧼'
   };
   const groups = [
-    {"id": "rice", "icon": "rice", "title": ["电饭煲", "Rice Cooker"], "hint": ["先启动", "Start Early"]},
     {"id": "oven", "icon": "oven", "title": ["烤箱", "Oven"], "hint": ["按烤盘空间安排", "Schedule According to Tray Space"]},
-    {"id": "air", "icon": "air", "title": ["空气炸锅", "Air Fryer"], "hint": ["三文鱼备好再预热", "Prepare Salmon Before Preheating"]},
+    {"id": "rice", "icon": "rice", "title": ["电饭煲", "Rice Cooker"], "hint": ["先启动", "Start Early"]},
     {"id": "pots", "icon": "pot", "title": ["煮锅一、煮锅二", "Pots 1 and 2"], "hint": ["两锅并行", "Two Parallel Pots"]},
-    {"id": "small-wok", "icon": "pot", "title": ["小锅", "Saucepan"], "hint": ["蘑菇 → 咖喱酱 → 拌米粉", "Mushrooms → Curry Sauce → Noodles"]},
+    {"id": "air", "icon": "air", "title": ["空气炸锅", "Air Fryer"], "hint": ["三文鱼备好再预热", "Prepare Salmon Before Preheating"]},
     {"id": "large-wok", "icon": "wok", "title": ["大锅", "Wok"], "hint": ["菠菜 → 鸡肉意面", "Spinach → Chicken Pasta"]},
+    {"id": "small-wok", "icon": "pot", "title": ["小锅", "Saucepan"], "hint": ["蘑菇 → 咖喱酱 → 拌米粉", "Mushrooms → Curry Sauce → Noodles"]},
     {"id": "finish", "icon": "finish", "title": ["收尾", "Finish"], "hint": ["备好配菜与餐点、入冰箱、清洗", "Assemble Meals, Refrigerate and Clean"]}
   ];
 
-  const instructionSections = [["rice", "rice", ["prep-rice", "rice"]], ["oven", "oven", ["oven-heat-start", "oven-heat", "prep-chicken", "chicken", "prep-potato", "potato", "prep-ribs", "ribs", "meatballs", "prep-shrimp", "shrimp"]], ["air-fryer", "air", ["prep-salmon", "air-heat-start", "air-heat", "salmon", "haddock"]], ["pot-one", "pots", ["egg-water", "eggs", "dumplings"]], ["pot-two", "pots", ["pasta-water", "pasta", "noodles"]], ["small-wok", "small-wok", ["mushroom", "curry", "season-noodles"]], ["large-wok", "large-wok", ["spinach", "ground", "tomato"]], ["finish", "finish", ["peas-carrots", "wrap", "sandwich", "refrigerate", "clean"]]];
+  const instructionSections = [["rice", "rice", ["prep-rice", "rice"]], ["oven", "oven", ["oven-heat-start", "prep-potato", "prep-chicken", "prep-ribs", "prep-shrimp", "oven-heat", "potato", "chicken", "ribs", "meatballs", "shrimp"]], ["air-fryer", "air", ["prep-salmon", "air-heat-start", "air-heat", "salmon", "haddock"]], ["pot-one", "pots", ["egg-water", "eggs", "dumplings"]], ["pot-two", "pots", ["pasta-water", "pasta", "noodles"]], ["small-wok", "small-wok", ["mushroom", "curry", "season-noodles"]], ["large-wok", "large-wok", ["spinach", "ground", "tomato"]], ["finish", "finish", ["peas-carrots", "wrap", "sandwich", "refrigerate", "clean"]]];
   const instructions = new Map(), seasoningNotes = new Map();
   const mergedSections = [];
   for (const [headingId, group, steps] of instructionSections) {
@@ -198,26 +198,7 @@
       return row;
     };
     const list = create('div', 'cooking-flow-steps');
-    if (group.id === 'oven') {
-      const choices = create('div', 'cooking-flow-branches cooking-flow-branches-three');
-      members.slice(1).forEach((node, index) => choices.append(step(node, index + 1)));
-      list.append(step(members[0], 0), create('span', 'cooking-flow-branch-label', t('备料与预热可同时进行 ↓', 'Prepare Ingredients While Preheating ↓')), choices);
-    } else if (group.id === 'pots') {
-      const branches = create('div', 'cooking-flow-branches cooking-flow-branches-two');
-      for (const [index, potNodes] of [members.filter(node => node.resource === "pot-1"), members.filter(node => (node.displayPot || node.resource) === "pot-2")].entries()) {
-        const branch = create('div', 'cooking-flow-pot-branch');
-        branch.append(create('span', 'cooking-flow-pot-label', t(`煮锅${index ? '二' : '一'}`, `Pot ${index + 1}`)));
-        potNodes.forEach((node, stepIndex) => branch.append(step(node, stepIndex)));
-        branches.append(branch);
-      }
-      list.append(branches);
-    } else if (group.id === 'prep') {
-      const choices = create('div', 'cooking-flow-branches cooking-flow-branches-two');
-      members.forEach((node, index) => choices.append(step(node, index)));
-      list.append(choices);
-    } else {
-      members.forEach((node, index) => list.append(step(node, index)));
-    }
+    members.forEach((node, index) => list.append(step(node, index)));
     card.append(head);
     if (seasoningNotes.has(group.id)) card.append(create('p', 'cooking-flow-seasoning-note', seasoningNotes.get(group.id)));
     card.append(list);

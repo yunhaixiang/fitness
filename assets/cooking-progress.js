@@ -134,7 +134,7 @@
       suggestion.append(create('strong', '', t('推荐下一步', 'Recommended Next')), action(view.available[0], true));
       const next = view.available[0];
       const reason = ['salmon','haddock','eggs','pasta','dumplings','noodles'].includes(next.id) ? t('加热已就绪，优先接着烹调。', 'The appliance is ready; continue cooking promptly.') : t('优先启动耗时较长的后续流程。', 'Start the longer remaining chain first.');
-      suggestion.append(create('span', 'cooking-progress-reason', next.confirmation ? t('达到预热温度后再确认；等待期间可继续其他任务。', 'Confirm once preheated; continue other tasks while waiting.') : reason));
+      suggestion.append(create('span', 'cooking-progress-reason', next.confirmation ? t('达到预热温度后再确认。', 'Confirm once the target temperature is reached.') : reason));
       const others = view.available.slice(1);
       if (others.length) { readyList.append(create('strong', '', t('现在也可以做', 'Also Ready'))); const list = create('div', 'cooking-flow-chip-list'); others.forEach(n => list.append(action(n, false))); readyList.append(list); }
     } else suggestion.append(create('strong', '', done.size === view.total ? t('本次做饭已全部完成', 'This Batch Is Complete') : t('勾选已完成的前置任务，解锁下一步。', 'Check off completed prerequisites to unlock the next steps.')));
