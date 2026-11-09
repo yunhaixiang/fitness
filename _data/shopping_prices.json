@@ -2,7 +2,7 @@
   "checked_on": "2026-10-31",
   "currency": "CAD",
   "scope": "Walmart Canada public prices; individual checked_on retained. Popeye spinach, chicken thigh and salmon prices supplied by user. Weekly subtotal averages routine purchase cycles. Bread assumes three slices total 105 g; weighed produce billed by actual weight. Excludes as-needed seasonings, tax and delivery. Not a London store live stock guarantee.",
-  "weekly_total_cad": "137.22",
+  "weekly_total_cad": "137.25",
   "items": [
     {
       "item": "去骨去皮鸡大腿肉",
@@ -182,10 +182,10 @@
       "source_url": "https://www.walmart.ca/en/ip/PRIMO-SPAGHETTI/1YCQ0A4KHLLW",
       "source_type": "walmart_public",
       "product_url": "https://www.walmart.ca/en/ip/PRIMO-SPAGHETTI/1YCQ0A4KHLLW",
-      "purchase_frequency_zh": "1包 / 约4.9周",
-      "purchase_frequency_en": "1 Pack / About 4.9 Weeks",
-      "weekly_cost_cad": "0.26",
-      "weekly_quantity": "0.2026431718061674"
+      "purchase_frequency_zh": "1包 / 约4.4周",
+      "purchase_frequency_en": "1 Pack / About 4.4 Weeks",
+      "weekly_cost_cad": "0.29",
+      "weekly_quantity": "0.2290748898678414"
     },
     {
       "item": "全麦卷饼皮",

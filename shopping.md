@@ -103,10 +103,10 @@ visual: true
 <td style="text-align: right;">8个 / 周</td>
 <td style="text-align: right;"><a href="https://www.walmart.ca/en/ip/kiwi/6000196794990">$0.97</a></td>
 </tr>
-<tr data-weekly-cost="0.26" data-price-id="16" data-purchase-group="restock">
+<tr data-weekly-cost="0.29" data-price-id="16" data-purchase-group="restock">
 <td>意面</td>
 <td><a href="https://www.walmart.ca/en/ip/PRIMO-SPAGHETTI/1YCQ0A4KHLLW">Primo Spaghetti</a><br>454 g / 包</td>
-<td data-en="1 Pack / About 4.9 Weeks">1包 / 约4.9周</td>
+<td data-en="1 Pack / About 4.4 Weeks">1包 / 约4.4周</td>
 <td style="text-align: right;"><a href="https://www.walmart.ca/en/ip/PRIMO-SPAGHETTI/1YCQ0A4KHLLW">$1.27</a></td>
 </tr>
 <tr data-weekly-cost="0.86" data-price-id="17" data-purchase-group="restock">
@@ -213,7 +213,7 @@ visual: true
 <td>每周合计</td>
 <td>—</td>
 <td style="text-align: right;">—</td>
-<td style="text-align: right;">$137.22</td>
+<td style="text-align: right;">$137.25</td>
 </tr>
 </tbody>
 </table>

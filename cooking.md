@@ -65,7 +65,7 @@ cooking: true
 <h2 id="pot-two" data-en="Pot 2">煮锅二线程</h2>
 <ol>
 <li data-en="Bring water to a boil in Pot 2 before adding spaghetti.">煮锅二烧水，水沸后下意面。</li>
-<li data-en="Add 46 g dry spaghetti and cook for about 8 minutes, following the pack. Lift out with tongs or a strainer, keeping the hot water in the pot and reserving a little for the sauce.">下干意面46 g，按包装时间煮约8分钟，用夹子或漏勺捞出，保留锅内热水，另留少量面水用于拌酱。</li>
+<li data-en="Add 52 g dry spaghetti and cook for about 8 minutes, following the pack. Lift out with tongs or a strainer, keeping the hot water in the pot and reserving a little for the sauce.">下干意面52 g，按包装时间煮约8分钟，用夹子或漏勺捞出，保留锅内热水，另留少量面水用于拌酱。</li>
 <li data-en="Keep the same water boiling, topping up with hot water if needed. Add 53 g dry rice noodles and cook for 6–8 minutes. Check at 6 minutes; drain once there is no hard centre and the noodles are still springy. Transfer to the saucepan for the basil sauce.">沿用锅内热水，保持沸腾，水不足时补热水；下干扁米粉53 g煮6–8分钟；第6分钟检查，无硬芯且仍有弹性时捞出沥干，交给小锅拌罗勒酱汁。</li>
 </ol>
 
