@@ -89,7 +89,7 @@
       "potassium": "1888.333",
       "vitaminD": "1.680",
       "vitaminB12": "2.570",
-      "iodine": "50.508"
+      "iodine": "53.508"
     },
     "wrap": {
       "kcal": "701",
@@ -108,26 +108,26 @@
       "potassium": "1010.215",
       "vitaminD": "1.153",
       "vitaminB12": "2.190",
-      "iodine": "46.910"
+      "iodine": "49.910"
     },
     "rice": {
-      "kcal": "664",
-      "protein": "38.4",
-      "carbs": "73.8",
-      "fat": "22.2",
-      "saturatedFat": "6.1",
+      "kcal": "673",
+      "protein": "41.6",
+      "carbs": "74.0",
+      "fat": "21.6",
+      "saturatedFat": "6.5",
       "fibre": "6.3",
-      "sugar": "5.6",
-      "sodium": "1326",
-      "cholesterol": "427",
-      "epaDha": "0.22",
+      "sugar": "5.7",
+      "sodium": "1361",
+      "cholesterol": "520",
+      "epaDha": "0.23",
       "label": "rice",
-      "calcium": "121.261",
-      "iron": "4.312",
-      "potassium": "648.755",
-      "vitaminD": "1.768",
-      "vitaminB12": "3.332",
-      "iodine": "286.033"
+      "calcium": "133.814",
+      "iron": "4.751",
+      "potassium": "679.964",
+      "vitaminD": "2.153",
+      "vitaminB12": "3.708",
+      "iodine": "305.533"
     },
     "pasta": {
       "kcal": "699",
@@ -146,14 +146,14 @@
       "potassium": "2665.319",
       "vitaminD": "0.769",
       "vitaminB12": "2.022",
-      "iodine": "32.835"
+      "iodine": "34.835"
     },
     "bread": {
-      "kcal": "700",
+      "kcal": "686",
       "protein": "61.4",
       "carbs": "52.4",
-      "fat": "28.1",
-      "saturatedFat": "6.9",
+      "fat": "26.6",
+      "saturatedFat": "6.7",
       "fibre": "8.9",
       "sugar": "8.7",
       "sodium": "878",
@@ -165,7 +165,7 @@
       "potassium": "1089.556",
       "vitaminD": "5.140",
       "vitaminB12": "3.646",
-      "iodine": "38.982"
+      "iodine": "40.982"
     },
     "dumpling": {
       "kcal": "703",
@@ -184,26 +184,26 @@
       "potassium": "1914.786",
       "vitaminD": "19.562",
       "vitaminB12": "5.325",
-      "iodine": "47.017"
+      "iodine": "49.017"
     },
     "noodles": {
-      "kcal": "737",
-      "protein": "57.7",
-      "carbs": "74.4",
-      "fat": "22.2",
-      "saturatedFat": "5.5",
+      "kcal": "701",
+      "protein": "54.6",
+      "carbs": "74.2",
+      "fat": "19.8",
+      "saturatedFat": "4.7",
       "fibre": "5.8",
-      "sugar": "6.8",
-      "sodium": "2311",
-      "cholesterol": "499",
-      "epaDha": "0.34",
+      "sugar": "6.7",
+      "sodium": "2276",
+      "cholesterol": "406",
+      "epaDha": "0.33",
       "label": "noodles",
-      "calcium": "209.344",
-      "iron": "4.738",
-      "potassium": "785.373",
-      "vitaminD": "0.939",
-      "vitaminB12": "3.456",
-      "iodine": "56.401"
+      "calcium": "196.791",
+      "iron": "4.298",
+      "potassium": "754.163",
+      "vitaminD": "0.554",
+      "vitaminB12": "3.081",
+      "iodine": "42.901"
     }
   }
 }

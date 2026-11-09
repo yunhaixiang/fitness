@@ -35,7 +35,7 @@ test('weekly meat, eggs, grains and portions match whole-package purchase cycles
  close(recipes.wrap.chickpea*2,weekly('chickpea'));
  close(weekly('chickpea')*100,170); close(weekly('tuna'),2); close(weekly('mayo'),9); close(weekly('spinach')*100,284);
  close(weekly('mushroom')*100,227); close(weekly('pc')*100,520);
- close(weekly('oil'),10); // 5 tsp each half-week, including fried eggs and noodle sauce
+ close(weekly('oil'),8); // 4 tsp each half-week; all eggs boiled
 });
 test('daily intake and deficit use the same meal data as the cards',()=>{
  const daily=(basis.mealKeys.reduce((s,k)=>s+2*Number(nutrition[k].kcal),0)+3*Number(nutrition.fruit_breakfast.kcal)+4*Number(nutrition.kiwi_breakfast.kcal)+7*Number(nutrition.outside_drink.kcal))/7;
@@ -53,7 +53,7 @@ test('all cooking prerequisites are valid, acyclic, and have matching instructio
  for(const [id,group,steps] of sections){const fragment=page.split('<h2 id="'+id+'"')[1].split('<h2 ')[0];assert.equal((fragment.match(/<li /g)||[]).length,steps.length,id);steps.forEach(s=>instructionIds.add('cook-'+s));}
  for(const n of flow)assert.ok(instructionIds.has(n.link.slice(1))||['cook-finish'].includes(n.link.slice(1)),n.link);
  assert.ok(page.includes('裹粉黑线鳕'));
- assert.match(page,/第6盘2个，第5盘1个/);
+ assert.match(page,/第3盘½个，第6盘2½个/);
 });
 test('routine shopping subtotal agrees with both stored prices and all shopping cards',()=>{
  const sum=[...read('shopping.md').matchAll(/data-weekly-cost="([\d.]+)"/g)].reduce((s,m)=>s+Number(m[1]),0);

@@ -11,19 +11,19 @@ visual: true
 
 <figure class="nutrition-overview" aria-label="每日能量与每周赤字">
   <div class="nutrition-overview-main">
-    <div class="nutrition-ring" style="--intake-share:76.2%" aria-label="每日摄入与消耗">
+    <div class="nutrition-ring" style="--intake-share:75.7%" aria-label="每日摄入与消耗">
       <div class="nutrition-ring-center">
         <span>日均赤字</span>
-        <strong data-energy="dailyDeficit">566 <small>kcal／天</small></strong>
+        <strong data-energy="dailyDeficit">577 <small>kcal／天</small></strong>
       </div>
     </div>
     <div class="nutrition-overview-key">
       <p class="nutrition-overview-eyebrow">能量概览 · 不含放纵餐</p>
-      <div class="nutrition-key-row nutrition-key-intake"><span>日均摄入</span><strong>1,811 <small>kcal／天</small></strong></div>
+      <div class="nutrition-key-row nutrition-key-intake"><span>日均摄入</span><strong>1,799 <small>kcal／天</small></strong></div>
       <div class="nutrition-key-row nutrition-key-burn"><span>日均消耗</span><strong data-energy="dailyBurn">2,377 <small>kcal／天</small></strong></div>
-      <div class="nutrition-key-row nutrition-key-deficit"><span>日均赤字</span><strong data-energy="dailyDeficit">566 <small>kcal／天</small></strong></div>
+      <div class="nutrition-key-row nutrition-key-deficit"><span>日均赤字</span><strong data-energy="dailyDeficit">577 <small>kcal／天</small></strong></div>
       <div class="nutrition-key-row"><span>每周赤字</span><strong data-energy="weeklyDeficit">{{ site.data.plan_metrics.weekly_deficit_display }} <small>kcal</small></strong></div>
-      <div class="nutrition-key-row"><span>每周赤字等价脂肪</span><strong data-energy="fatEquivalent">0.51 <small>kg／周</small></strong></div>
+      <div class="nutrition-key-row"><span>每周赤字等价脂肪</span><strong data-energy="fatEquivalent">0.52 <small>kg／周</small></strong></div>
     </div>
   </div>
 </figure>
@@ -95,7 +95,7 @@ visual: true
 <tbody>
 <tr>
 <td>热量</td>
-<td style="text-align: right;">1,811 kcal</td>
+<td style="text-align: right;">1,799 kcal</td>
 <td>1,800–2,000 kcal</td>
 </tr>
 <tr>
@@ -105,17 +105,17 @@ visual: true
 </tr>
 <tr>
 <td>总脂肪</td>
-<td style="text-align: right;">65.9 g</td>
+<td style="text-align: right;">64.6 g</td>
 <td>45–65 g</td>
 </tr>
 <tr>
 <td>饱和脂肪</td>
-<td style="text-align: right;">16.0 g</td>
-<td>≤12.1 g</td>
+<td style="text-align: right;">15.8 g</td>
+<td>≤12.0 g</td>
 </tr>
 <tr>
 <td>饱和脂肪占总热量</td>
-<td style="text-align: right;">8.0%</td>
+<td style="text-align: right;">7.9%</td>
 <td>≤6%</td>
 </tr>
 <tr>
@@ -175,7 +175,7 @@ visual: true
 </tr>
 <tr>
 <td>碘</td>
-<td>167 µg</td>
+<td>173 µg</td>
 <td>150 µg</td>
 </tr>
 <tr>

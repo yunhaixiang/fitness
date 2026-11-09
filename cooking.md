@@ -58,7 +58,7 @@ cooking: true
 <h2 id="pot-one" data-en="Pot 1">煮锅一线程</h2>
 <ol>
 <li data-en="Bring water to a boil in Pot 1 before adding the eggs.">煮锅一烧水，水沸后下鸡蛋。</li>
-<li data-en="Add 6 eggs and boil for about 9 minutes until firm. Cool and peel; cut as needed. Put 1½ eggs each in meals 1 and 4, and one each in meals 2, 3 and 7. Crumble the eggs for meal 1.">下鸡蛋6个，水开后煮约9分钟至蛋白蛋黄凝固，冷却剥壳，按需切半；第1、4盘各1½个，第2、3、7盘各1个；第1盘的掰碎。</li>
+<li data-en="Add 9 eggs and boil for about 9 minutes until firm. Cool and peel; cut as needed. Put 1½ eggs each in meals 1 and 4, one each in meals 2, 5 and 7, half an egg in meal 3, and 2½ eggs in meal 6. Crumble the eggs for meal 1 and slice the egg for meal 5.">下鸡蛋9个，水开后煮约9分钟至蛋白蛋黄凝固，冷却剥壳，按需切半；第1、4盘各1½个，第2、5、7盘各1个，第3盘½个，第6盘2½个；第1盘的掰碎，第5盘的切片。</li>
 <li data-en="Add 7 frozen dumplings (168 g) to boiling water. Follow the pack, checking for a 74°C centre after about 6–8 minutes. Drain into meal 2.">冷冻水饺7个（168 g）下沸水，按包装煮至中心74°C，约6–8分钟；沥干放第2盘。</li>
 </ol>
 
@@ -92,19 +92,17 @@ cooking: true
 <table class="plan-table" ><thead><tr><th data-en="Food">食材</th><th data-en="Seasoning">调味</th></tr></thead><tbody>
 <tr><td data-en="Spinach">菠菜</td><td data-en="1/2 tsp Olive Oil, 1/8 tsp Garlic Powder, 1/8 tsp Onion Powder">橄榄油½茶匙，蒜粉⅛茶匙，洋葱粉⅛茶匙</td></tr>
 <tr><td data-en="Ground Chicken, Zucchini and Tomato Spaghetti">鸡肉末、西葫芦、番茄意面</td><td data-en="1 tsp Olive Oil, 1/8 tsp Black Pepper, 1/4 tsp Garlic Powder, 1/4 tsp Italian Seasoning">橄榄油1茶匙，黑胡椒⅛茶匙，蒜粉¼茶匙，意式香料¼茶匙</td></tr>
-<tr><td data-en="Fried Eggs">煎蛋</td><td data-en="1 tsp Olive Oil">橄榄油1茶匙</td></tr>
 </tbody></table>
 </div>
 <ol>
 <li data-en="Cook half a bag of spinach (142 g) first, with oil and seasonings, for 3–5 minutes. Split equally between meals 2 and 4.">先炒菠菜：菠菜半袋142 g加油和调味，炒约3–5分钟；均分到第2、4盘。</li>
 <li data-en="Wash and slice 1 zucchini. Dry the wok and add oil over medium heat. Add half a pack of ground chicken (227 g), let it set briefly, then break it up. Add the zucchini and black pepper; cook until tender, with the chicken reaching 74°C. During the first cooking session, freeze the remaining raw ground chicken after taking this portion.">西葫芦1根洗净切片。擦干锅，中火加油，下鸡肉末半盒227 g，稍定型后炒散；加入西葫芦和黑胡椒炒软，鸡肉中心达74°C。前半周取用鸡肉末后，将剩余生肉末分装冷冻。</li>
 <li data-en="Stir in half a can of Unico Tomato Paste (78 mL), garlic powder and Italian seasoning for 1 minute. Add 80–120 mL reserved pasta water and simmer for 2–3 minutes. Toss in the spaghetti, adding more pasta water if needed. Place in meal 7. Transfer the remaining half-can to a sealed container and refrigerate for the second cooking session.">加入Unico浓缩番茄膏半罐（78 mL）、蒜粉和意式香料，翻炒1分钟；加面水80–120 mL煮2–3分钟，拌入意面，偏稠时再补面水，放第7盘。剩余半罐转入密封盒冷藏，供后半周使用。</li>
-<li data-en="Clean the wok and fry 3 eggs over medium-low heat with 1 tsp oil until the whites and yolks are set. Put 2 in meal 6 and 1 in meal 5.">清理锅底，中小火用1茶匙油煎3个蛋至蛋白蛋黄凝固；第6盘2个，第5盘1个。</li>
 </ol>
 
 <h2 id="wraps" data-en="Wrap and Sandwich">卷饼与三明治线程</h2>
 <ol>
 <li data-en="Drain and rinse the chickpeas; use a quarter can and lightly mash with 2 tsp Chipotle mayonnaise (10 mL; about 20 cm squeezed length at a strand diameter of 0.8 cm). Wash, deseed and slice half an orange bell pepper. Fill 1 large tortilla with the chickpeas, meal 1’s shredded chicken, crumbled boiled egg and pepper; roll and place in meal 1. On opening the chickpeas, split into four portions: use one now, refrigerate one for the second session, and freeze two for next week. Freeze spare tortillas.">鹰嘴豆沥干冲洗，取¼罐，轻压碎后拌Chipotle蛋黄酱2茶匙（10 mL；酱条直径约0.8 cm时，挤约20 cm长）。半个橙甜椒洗净去籽切细条，大号卷饼皮1片放入鹰嘴豆、第1盘的鸡腿肉、掰碎水煮蛋和橙甜椒，卷好放第1盘。鹰嘴豆开罐后均分4份：本次用1份，1份冷藏供后半周用，2份冷冻留到下周；多余卷饼皮冷冻。</li>
-<li data-en="Use half a can of drained tuna (about 55 g), then mix with 2½ tsp Chipotle mayonnaise (12.5 mL; about 25 cm squeezed length at a strand diameter of 0.8 cm). Wash and slice 1 Roma tomato. Layer 3 slices of whole-wheat bread with the tuna, meal 5’s chicken, fried egg and tomato; place in meal 5. During the first cooking session, freeze the remaining drained tuna for the second session. Freeze spare bread.">取沥干金枪鱼½罐（约55 g），拌Chipotle蛋黄酱2½茶匙（12.5 mL；酱条直径约0.8 cm时，挤约25 cm长）。罗马番茄1个洗净切片；全麦面包3片分层夹入金枪鱼、第5盘的鸡腿肉、煎蛋和番茄，放第5盘。前半周备料时，将剩余沥干金枪鱼密封冷冻供后半周用；多余面包冷冻。</li>
+<li data-en="Use half a can of drained tuna (about 55 g), then mix with 2½ tsp Chipotle mayonnaise (12.5 mL; about 25 cm squeezed length at a strand diameter of 0.8 cm). Wash and slice 1 Roma tomato. Layer 3 slices of whole-wheat bread with the tuna, meal 5’s chicken, sliced boiled egg and tomato; place in meal 5. During the first cooking session, freeze the remaining drained tuna for the second session. Freeze spare bread.">取沥干金枪鱼½罐（约55 g），拌Chipotle蛋黄酱2½茶匙（12.5 mL；酱条直径约0.8 cm时，挤约25 cm长）。罗马番茄1个洗净切片；全麦面包3片分层夹入金枪鱼、第5盘的鸡腿肉、切片水煮蛋和番茄，放第5盘。前半周备料时，将剩余沥干金枪鱼密封冷冻供后半周用；多余面包冷冻。</li>
 </ol>
 <!-- Cook to the product package directions where they differ. Rice noodle method: Erawan Walmart directions, boil dry noodles directly for 6–8 minutes, https://www.walmart.ca/en/ip/Erawan-Rice-Stick/6000199121439 . The timer starts with a 6-minute check; extend as needed. Shrimp is an olive-oil/panko adaptation; oven times vary with size and loading. -->

@@ -38,7 +38,6 @@
     "spinach": 5,
     "ground": 10,
     "tomato": 4,
-    "fried-eggs": 5,
     "wrap": 4,
     "sandwich": 4,
     "finish": 15

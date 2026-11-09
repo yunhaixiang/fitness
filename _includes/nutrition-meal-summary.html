@@ -29,12 +29,12 @@
 <td><div data-en="🥔 Potatoes {{ portion.potato | times: 100 | round: 0 }} g">🥔 土豆块{{ portion.potato | times: 100 | round: 0 }} g</div></td>
 {% when 'bread' %}
 <th scope="row"><span class="meal-summary-number">{{ forloop.index }}</span><span data-en="🥪 Sandwich">🥪 三明治</span></th>
-<td><div data-en="🍗 1½ Chicken Thighs ({{ portion.thigh | times: 100 | round: 0 }} g)">🍗 鸡大腿肉1½块（{{ portion.thigh | times: 100 | round: 0 }} g）</div><div data-en="🍳 {{ portion.egg | times: 1 | round: 0 }} Fried Egg">🍳 煎蛋{{ portion.egg | times: 1 | round: 0 }}个</div><div data-en="🐟 ½ Can Tuna ({{ portion.tuna | times: 55 | round: 0 }} g)">🐟 金枪鱼½罐（{{ portion.tuna | times: 55 | round: 0 }} g）</div></td>
+<td><div data-en="🍗 1½ Chicken Thighs ({{ portion.thigh | times: 100 | round: 0 }} g)">🍗 鸡大腿肉1½块（{{ portion.thigh | times: 100 | round: 0 }} g）</div><div data-en="🥚 {{ portion.egg | times: 1 | round: 0 }} Boiled Egg">🥚 水煮蛋{{ portion.egg | times: 1 | round: 0 }}个</div><div data-en="🐟 ½ Can Tuna ({{ portion.tuna | times: 55 | round: 0 }} g)">🐟 金枪鱼½罐（{{ portion.tuna | times: 55 | round: 0 }} g）</div></td>
 <td><div data-en="🍅 1 Roma Tomato ({{ portion.tomato | times: 100 | round: 0 }} g)">🍅 罗马番茄1个（{{ portion.tomato | times: 100 | round: 0 }} g）</div></td>
 <td><div data-en="🍞 {{ portion.bread | times: 2 | round: 0 }} Slices Whole-Wheat Bread">🍞 全麦面包{{ portion.bread | times: 2 | round: 0 }}片</div><div data-en="🥣 {{ portion.mayo | times: 1 | round: 1 }} tsp Chipotle Mayonnaise">🥣 Chipotle蛋黄酱{{ portion.mayo | times: 1 | round: 1 }}茶匙</div></td>
 {% when 'rice' %}
 <th scope="row"><span class="meal-summary-number">{{ forloop.index }}</span><span data-en="🍛 Curry Rice">🍛 咖喱米饭</span></th>
-<td><div data-en="🐟 {{ portion.haddock | times: 1 | round: 0 }} Breaded Haddock Fillet (125 g)">🐟 裹粉黑线鳕{{ portion.haddock | times: 1 | round: 0 }}片（125 g）</div><div data-en="🍳 2 Fried Eggs">🍳 煎蛋2个</div></td>
+<td><div data-en="🐟 {{ portion.haddock | times: 1 | round: 0 }} Breaded Haddock Fillet (125 g)">🐟 裹粉黑线鳕{{ portion.haddock | times: 1 | round: 0 }}片（125 g）</div><div data-en="🥚 {{ portion.egg | round: 1 }} Boiled Eggs">🥚 水煮蛋{{ portion.egg | round: 1 }}个</div></td>
 <td><div data-en="🫛🥕 Peas and Carrots {{ portion.pc | times: 100 | round: 0 }} g Total">🫛🥕 豌豆，胡萝卜共{{ portion.pc | times: 100 | round: 0 }} g</div></td>
 <td><div data-en="🍚 White Rice {{ portion.rice | times: 100 | round: 0 }} g">🍚 白米{{ portion.rice | times: 100 | round: 0 }} g</div><div data-en="🍛 Curry Roux {{ portion.curry | times: 18 | round: 0 }} g">🍛 咖喱块{{ portion.curry | times: 18 | round: 0 }} g</div></td>
 {% when 'pasta' %}
