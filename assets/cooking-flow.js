@@ -46,7 +46,7 @@
     {"id": "haddock", "label": ["裹粉黑线鳕", "Breaded Haddock"], "note": ["", ""], "group": "air", "before": ["air-heat"], "link": "#cook-haddock", "minutes": 20},
     {"id": "prep-zucchini", "label": ["备西葫芦", "Prepare Zucchini"], "note": ["", ""], "group": "prep", "before": [], "link": "#cook-prep-zucchini", "minutes": 2, "displayGroup": "large-wok"},
     {"id": "spinach", "label": ["菠菜", "Spinach"], "note": ["", ""], "group": "large-wok", "before": [], "link": "#cook-spinach", "minutes": 5},
-    {"id": "ground", "label": ["鸡肉末、西葫芦", "Ground Chicken and Zucchini"], "note": ["", ""], "group": "large-wok", "before": ["spinach", "prep-zucchini"], "link": "#cook-ground", "minutes": 8},
+    {"id": "ground", "label": ["鸡肉末、西葫芦", "Ground Chicken and Zucchini"], "note": ["", ""], "group": "large-wok", "before": ["prep-zucchini"], "link": "#cook-ground", "minutes": 8},
     {"id": "tomato", "label": ["拌番茄意面", "Finish Tomato Spaghetti"], "note": ["", ""], "group": "large-wok", "before": ["ground", "pasta"], "link": "#cook-tomato", "minutes": 4},
     {"id": "prep-noodle-sauce", "label": ["备辣椒、罗勒和米粉酱汁", "Prepare Chili, Basil and Noodle Sauce"], "note": ["", ""], "group": "prep", "before": [], "link": "#cook-prep-noodle-sauce", "minutes": 3, "displayGroup": "small-wok"},
     {"id": "mushroom", "label": ["蘑菇", "Mushrooms"], "note": ["", ""], "group": "small-wok", "before": [], "link": "#cook-mushroom", "minutes": 7},
@@ -81,7 +81,7 @@
     {"id": "rice", "icon": "rice", "title": ["电饭煲", "Rice Cooker"], "hint": ["先启动", "Start Early"]},
     {"id": "pots", "icon": "pot", "title": ["煮锅一、煮锅二", "Pots 1 and 2"], "hint": ["两锅并行", "Two Parallel Pots"]},
     {"id": "air", "icon": "air", "title": ["空气炸锅", "Air Fryer"], "hint": ["两种鱼先后可选", "Cook Either Fish First"]},
-    {"id": "large-wok", "icon": "wok", "title": ["大锅", "Wok"], "hint": ["菠菜 → 鸡肉意面", "Spinach → Chicken Pasta"]},
+    {"id": "large-wok", "icon": "wok", "title": ["大锅", "Wok"], "hint": ["菠菜与鸡肉先后可选，换菜按需清理", "Cook Spinach or Chicken First; Clean Between Dishes as Needed"]},
     {"id": "small-wok", "icon": "pot", "title": ["小锅", "Saucepan"], "hint": ["锅空时任选，换菜按需清理", "Choose Any Ready Task; Clean Between Dishes as Needed"]},
     {"id": "finish", "icon": "finish", "title": ["收尾", "Finish"], "hint": ["备好配菜与餐点、入冰箱、清洗", "Assemble Meals, Refrigerate and Clean"]}
   ];

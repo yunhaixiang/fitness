@@ -312,23 +312,23 @@ cooking: true
 <li class="cooking-task-source">
 <ol lang="zh-CN" class="cooking-source-zh">
 <li>🥬 菠菜半袋142 g先留出10 g给三明治。</li>
-<li>剩余132 g加🫒 橄榄油½茶匙、🧄 蒜粉⅛茶匙和🧅 洋葱粉⅛茶匙，炒约3–5分钟。</li>
+<li>锅空出后按需清理，剩余132 g加🫒 橄榄油½茶匙、🧄 蒜粉⅛茶匙和🧅 洋葱粉⅛茶匙，炒约3–5分钟。</li>
 <li>均分到第2、4盘。</li>
 </ol>
 <ol lang="en" class="cooking-source-en" hidden>
 <li>Set aside 10 g from the half-bag of 🥬 spinach (142 g) for the sandwich.</li>
-<li>Cook the remaining 132 g with ½ tsp 🫒 olive oil, ⅛ tsp 🧄 garlic powder and ⅛ tsp 🧅 onion powder for 3–5 minutes.</li>
+<li>Once the wok is free, clean it as needed and cook the remaining 132 g with ½ tsp 🫒 olive oil, ⅛ tsp 🧄 garlic powder and ⅛ tsp 🧅 onion powder for 3–5 minutes.</li>
 <li>Split equally between meals 2 and 4.</li>
 </ol>
 </li>
 <li class="cooking-task-source">
 <ol lang="zh-CN" class="cooking-source-zh">
-<li>擦干锅，中火加🫒 橄榄油1茶匙，下🐔 鸡肉末半盒227 g，稍定型后炒散。</li>
+<li>锅空出后按需清理擦干，中火加🫒 橄榄油1茶匙，下🐔 鸡肉末半盒227 g，稍定型后炒散。</li>
 <li>加入西葫芦和🧂 黑胡椒⅛茶匙炒软，鸡肉中心达74°C。</li>
 <li>前半周取用鸡肉末后，将剩余🐔 生肉末分装冷冻。</li>
 </ol>
 <ol lang="en" class="cooking-source-en" hidden>
-<li>Dry the wok and add 1 tsp 🫒 olive oil over medium heat.</li>
+<li>Once the wok is free, clean and dry it as needed, then add 1 tsp 🫒 olive oil over medium heat.</li>
 <li>Add half a pack of 🐔 ground chicken (227 g), let it set briefly, then break it up.</li>
 <li>Add the zucchini and ⅛ tsp 🧂 black pepper; cook until tender, with the chicken reaching 74°C.</li>
 <li>During the first cooking session, freeze the remaining raw ground chicken after taking this portion.</li>
