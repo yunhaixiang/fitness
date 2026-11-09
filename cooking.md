@@ -9,36 +9,8 @@ cooking: true
 {% comment %}
 <div id="cooking-guide" class="cooking-guide"></div>
 {% endcomment %}
-<h2 id="dependencies" data-en="Task Dependencies">任务依赖</h2>
+<h2 id="dependencies" data-en="Cooking Steps">做饭步骤</h2>
 <div id="cooking-flow" class="cooking-flow" aria-label="厨具并行流程"></div>
-<h2 id="portions" data-en="Portioning">分盘表</h2>
-<div class="table-wrap">
-<table class="plan-table" ><thead><tr><th data-en="Food">食材</th><th data-en="Meal Numbers">分到第几盘</th></tr></thead><tbody>
-<tr><td data-en="Wrap">卷饼</td><td data-en="1">1</td></tr>
-<tr><td data-en="Sandwich">三明治</td><td data-en="5">5</td></tr>
-<tr><td data-en="Chicken Thighs">鸡大腿肉</td><td data-en="1 and 5: 1½ Thighs Each; 3: 1 Thigh">1、5各1½块；3放1块</td></tr>
-<tr><td data-en="Boiled Eggs">水煮蛋</td><td data-en="1 and 4: 1½ Each; 2 and 3: 1 Each; 6 and 7: ½ Each">1、4各1½个；2、3各1个；6、7各½个</td></tr>
-<tr><td data-en="Fried Eggs">煎蛋</td><td data-en="5: 1 Egg; 6: 2 Eggs">5放1个；6放2个</td></tr>
-<tr><td data-en="Breaded Haddock">裹粉黑线鳕</td><td data-en="6: 1 Fillet">6放1片</td></tr>
-<tr><td data-en="Beef Meatballs">牛肉丸</td><td data-en="4: 3 Pieces">4放3颗</td></tr>
-<tr><td data-en="Panko-Baked Shrimp">面包糠烤虾</td><td data-en="3">3</td></tr>
-<tr><td data-en="BBQ Ribs">BBQ排骨</td><td data-en="4">4</td></tr>
-<tr><td data-en="Salmon">三文鱼</td><td data-en="2: 1 Fillet">2放1块</td></tr>
-<tr><td data-en="Curry Rice">咖喱米饭</td><td data-en="6">6</td></tr>
-<tr><td data-en="Ground Chicken, Zucchini and Tomato Spaghetti">鸡肉末、西葫芦、番茄意面</td><td data-en="7">7</td></tr>
-<tr><td data-en="Potato Wedges">土豆块</td><td data-en="2 and 4, Split 3:14">2、4按3:14分</td></tr>
-<tr><td data-en="Boiled Dumplings">水饺</td><td data-en="2">2</td></tr>
-<tr><td data-en="Basil Rice Noodles">罗勒酱香米粉</td><td data-en="3">3</td></tr>
-<tr><td data-en="Peas and Carrots">豌豆、胡萝卜</td><td data-en="3, 6">3、6</td></tr>
-<tr><td data-en="Tuna">金枪鱼</td><td data-en="5">5</td></tr>
-<tr><td data-en="Chickpeas">鹰嘴豆</td><td data-en="1">1</td></tr>
-<tr><td data-en="Orange Bell Pepper">橙甜椒</td><td data-en="1">1</td></tr>
-<tr><td data-en="Roma Tomato">罗马番茄</td><td data-en="5">5</td></tr>
-<tr><td data-en="Mushrooms">蘑菇</td><td data-en="2, 4">2、4</td></tr>
-<tr><td data-en="Spinach">菠菜</td><td data-en="2, 4">2、4</td></tr>
-</tbody></table>
-</div>
-
 <h2 id="cold" data-en="Freeze / Thaw">冷冻／解冻线程</h2>
 <ol>
 <li data-en="Freeze the second-half portions of chicken thighs, ground chicken, salmon, shrimp and ribs. Freeze next week’s tomato sauce. Drain the tuna and split it equally: use half now and freeze the other half in a sealed container for the second cooking session. After opening the chickpeas, divide into four equal portions. Use one now, refrigerate one sealed for the second half-week, and freeze two for next week; thaw the needed portion in the fridge before use. Keep haddock, meatballs and dumplings frozen; freeze spare bread and tortillas. Refrigerate potatoes, vegetables and fruit.">将后半周的鸡大腿肉、鸡肉末、三文鱼、虾仁和半盒排骨分装冷冻；番茄酱冷冻下周份；金枪鱼开罐沥干后均分，本次用一半，另一半密封冷冻供后半周用；鹰嘴豆开罐沥干后均分4份：本次用1份，1份密封冷藏供后半周用，2份冷冻留到下周，使用前移入冷藏解冻。裹粉黑线鳕、牛肉丸、水饺保持冷冻；多余面包和卷饼皮分装冷冻。土豆、蔬菜和水果冷藏。</li>

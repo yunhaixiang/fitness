@@ -57,7 +57,7 @@
     {"id": "fried-eggs", "label": ["煎蛋", "Fried Eggs"], "note": ["", ""], "group": "large-wok", "before": ["tomato"], "link": "#cook-fried-eggs", "minutes": 5},
     {"id": "wrap", "label": ["卷饼", "Wrap"], "note": ["", ""], "group": "wrap", "before": ["chicken", "eggs"], "link": "#cook-wrap", "minutes": 4},
     {"id": "sandwich", "label": ["三明治", "Sandwich"], "note": ["", ""], "group": "wrap", "before": ["chicken", "fried-eggs", "wrap"], "link": "#cook-sandwich", "minutes": 4},
-    {"id": "finish", "label": ["分盘、入冰箱、清洗", "Portion, Refrigerate and Clean"], "note": ["", ""], "group": "finish", "before": ["rice", "potato", "ribs", "meatballs", "shrimp", "salmon", "dumplings", "curry", "season-noodles", "tomato", "wrap", "sandwich", "mushroom", "spinach", "haddock"], "link": "#portions", "minutes": 15}
+    {"id": "finish", "label": ["分盘、入冰箱、清洗", "Portion, Refrigerate and Clean"], "note": ["", ""], "group": "finish", "before": ["rice", "potato", "ribs", "meatballs", "shrimp", "salmon", "dumplings", "curry", "season-noodles", "tomato", "wrap", "sandwich", "mushroom", "spinach", "haddock"], "link": "#cook-finish", "minutes": 15}
   ];
   const groups = [
     {"id": "cold", "icon": "cold", "title": ["冷冻／解冻", "Freeze / Thaw"], "hint": ["择一", "Choose One Path"]},
@@ -188,17 +188,6 @@
     card.append(head);
     if (seasoningNotes.has(group.id)) card.append(create('p', 'cooking-flow-seasoning-note', seasoningNotes.get(group.id)));
     card.append(list);
-    if (group.id === 'finish') {
-      const heading = document.getElementById('portions');
-      if (heading) {
-        const content = [];
-        for (let child = heading.nextElementSibling; child && !/^H[1-3]$/.test(child.tagName); child = child.nextElementSibling) content.push(child);
-        const title = create('h4', 'cooking-finish-portions-title', heading.textContent);
-        title.id = 'portions';
-        heading.remove();
-        card.append(title, ...content);
-      }
-    }
     cards.append(card);
     cardElements.set(group.id, card);
   }
@@ -223,7 +212,7 @@
   const page = root.closest('.prose');
   if (page) {
     const sectionGroups = {
-      dependencies: 'finish', portions: 'finish', cold: 'cold', rice: 'rice',
+      dependencies: 'finish', cold: 'cold', rice: 'rice',
       oven: 'oven', 'air-fryer': 'air', 'pot-one': 'pots', 'pot-two': 'pots',
       'small-wok': 'small-wok', 'large-wok': 'large-wok', wraps: 'wrap'
     };
