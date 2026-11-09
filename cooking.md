@@ -58,7 +58,7 @@ cooking: true
 <h2 id="pot-one" data-en="Pot 1">煮锅一线程</h2>
 <ol>
 <li data-en="Bring water to a boil in Pot 1 before adding the eggs.">煮锅一烧水，水沸后下鸡蛋。</li>
-<li data-en="Add 6 eggs and boil for about 9 minutes until firm. Cool and peel; cut as needed. Put 1½ eggs each in meals 1 and 4, one each in meals 2 and 3, and half each in meals 6 and 7. Crumble the eggs for meal 1.">下鸡蛋6个，水开后煮约9分钟至蛋白蛋黄凝固，冷却剥壳，按需切半；第1、4盘各1½个，第2、3盘各1个，第6、7盘各½个；第1盘的掰碎。</li>
+<li data-en="Add 6 eggs and boil for about 9 minutes until firm. Cool and peel; cut as needed. Put 1½ eggs each in meals 1 and 4, one each in meals 2 and 7, and half each in meals 3 and 6. Crumble the eggs for meal 1.">下鸡蛋6个，水开后煮约9分钟至蛋白蛋黄凝固，冷却剥壳，按需切半；第1、4盘各1½个，第2、7盘各1个，第3、6盘各½个；第1盘的掰碎。</li>
 <li data-en="Add 7 frozen dumplings (168 g) to boiling water. Follow the pack, checking for a 74°C centre after about 6–8 minutes. Drain into meal 2.">冷冻水饺7个（168 g）下沸水，按包装煮至中心74°C，约6–8分钟；沥干放第2盘。</li>
 </ol>
 
@@ -66,7 +66,7 @@ cooking: true
 <ol>
 <li data-en="Bring water to a boil in Pot 2 before adding spaghetti.">煮锅二烧水，水沸后下意面。</li>
 <li data-en="Add 46 g dry spaghetti and cook for about 8 minutes, following the pack. Lift out with tongs or a strainer, keeping the hot water in the pot and reserving a little for the sauce.">下干意面46 g，按包装时间煮约8分钟，用夹子或漏勺捞出，保留锅内热水，另留少量面水用于拌酱。</li>
-<li data-en="Keep the same water boiling, topping up with hot water if needed. Add 43 g dry rice noodles and cook for 6–8 minutes. Check at 6 minutes; drain once there is no hard centre and the noodles are still springy. Transfer to the saucepan for the basil sauce.">沿用锅内热水，保持沸腾，水不足时补热水；下干扁米粉43 g煮6–8分钟；第6分钟检查，无硬芯且仍有弹性时捞出沥干，交给小锅拌罗勒酱汁。</li>
+<li data-en="Keep the same water boiling, topping up with hot water if needed. Add 53 g dry rice noodles and cook for 6–8 minutes. Check at 6 minutes; drain once there is no hard centre and the noodles are still springy. Transfer to the saucepan for the basil sauce.">沿用锅内热水，保持沸腾，水不足时补热水；下干扁米粉53 g煮6–8分钟；第6分钟检查，无硬芯且仍有弹性时捞出沥干，交给小锅拌罗勒酱汁。</li>
 </ol>
 
 <h2 id="small-wok" data-en="Saucepan">小锅线程</h2>

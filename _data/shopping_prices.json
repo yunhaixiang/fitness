@@ -2,7 +2,7 @@
   "checked_on": "2026-10-31",
   "currency": "CAD",
   "scope": "Walmart Canada public prices; individual checked_on retained. Popeye spinach, chicken thigh and salmon prices supplied by user. Weekly subtotal averages routine purchase cycles. Bread assumes three slices total 105 g; weighed produce billed by actual weight. Excludes as-needed seasonings, tax and delivery. Not a London store live stock guarantee.",
-  "weekly_total_cad": "137.13",
+  "weekly_total_cad": "137.22",
   "items": [
     {
       "item": "去骨去皮鸡大腿肉",
@@ -413,14 +413,14 @@
       "item": "扁米粉",
       "price_cad": "1.97",
       "basis": "package",
-      "weekly_quantity": "0.1894273127753304",
-      "weekly_cost_cad": "0.37",
+      "weekly_quantity": "0.23348017621145375",
+      "weekly_cost_cad": "0.46",
       "source_type": "walmart_public",
       "source_url": "https://www.walmart.ca/en/ip/Erawan-Rice-Stick/6000199121439",
       "product_url": "https://www.walmart.ca/en/ip/Erawan-Rice-Stick/6000199121439",
       "checked_on": "2026-11-07",
-      "purchase_frequency_zh": "1包 / 约5.3周",
-      "purchase_frequency_en": "1 Pack / About 5.3 Weeks"
+      "purchase_frequency_zh": "1包 / 约4.3周",
+      "purchase_frequency_en": "1 Pack / About 4.3 Weeks"
     },
     {
       "item": "面包糠",
