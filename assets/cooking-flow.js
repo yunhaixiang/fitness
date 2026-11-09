@@ -134,6 +134,9 @@
       row.id = `cook-${node.id}`;
       const button = create('button', 'cooking-flow-step');
       button.type = 'button';
+      button.id = `cook-task-${node.id}`;
+      row.setAttribute('role', 'group');
+      row.setAttribute('aria-labelledby', button.id);
       button.dataset.node = node.id;
       button.setAttribute('aria-pressed', 'false');
       button.setAttribute('aria-label', `${t(...group.title)}: ${t(...node.label)}`);

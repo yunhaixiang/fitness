@@ -639,10 +639,10 @@ html[data-theme=light] .cooking-guide-primary{color:#fff}
 .cooking-flow-step-row.is-running .cooking-flow-step{border-color:var(--gold)}
 .cooking-flow-step-row.is-running .cooking-progress-badge{color:var(--gold)}
 
-/* Instructions live beside their dependency controls, without a second workflow. */
-.cooking-flow-step-row{grid-template-columns:minmax(0,1fr);align-content:start;scroll-margin-top:90px}
+/* One task card contains its completion control, title, instructions and seasoning. */
+.cooking-flow-step-row{grid-template-columns:minmax(0,1fr);align-content:start;scroll-margin-top:90px;padding:8px;border:1px solid var(--line-strong);border-radius:10px;background:var(--inset);gap:0;transition:opacity .15s,border-color .15s,background .15s}
 .cooking-flow-step-row.has-progress{grid-template-columns:32px minmax(0,1fr)}
-.cooking-flow-instructions{grid-column:1/-1;min-width:0;padding:10px 12px;border:1px solid var(--line);border-radius:8px;background:var(--surface);overflow-wrap:anywhere}
+.cooking-flow-instructions{grid-column:1/-1;min-width:0;padding:2px 10px 8px;border:0;background:none;overflow-wrap:anywhere}
 .cooking-flow-instructions p{margin:0!important;font-size:13px;line-height:1.65}
 .cooking-flow-instructions .cooking-flow-seasoning{margin-top:8px!important;padding-top:8px;border-top:1px solid var(--line);color:var(--muted)}
 .cooking-flow-seasoning strong{color:var(--thread-accent)}
@@ -658,10 +658,18 @@ html[data-theme=light] .cooking-guide-primary{color:#fff}
 .cooking-flow-card .cooking-finish-portions-title{margin:18px 0 10px;font-size:14px;color:var(--thread-accent)}
 .cooking-flow-card-finish>.visual-card-grid{margin-bottom:0}
 
-.cooking-flow-step-row.is-recommended .cooking-flow-step{background:var(--accent-soft);border-color:var(--accent);box-shadow:inset 4px 0 var(--accent)}
-.cooking-flow-step-row.is-recommended>.cooking-flow-instructions{border-color:var(--accent);background:color-mix(in srgb,var(--accent) 7%,var(--surface))}
-.cooking-flow-step.is-before{border-color:var(--gold);box-shadow:inset 3px 0 var(--gold)}
-.cooking-flow-step.is-after{border-color:var(--green);box-shadow:inset 3px 0 var(--green)}
+/* Keep state styling on the shared card, rather than separate inner boxes. */
+.cooking-flow-step-row .cooking-flow-step,
+.cooking-flow-step-row.is-recommended .cooking-flow-step,
+.cooking-flow-step-row.is-running .cooking-flow-step{border:0;background:none;box-shadow:none;border-radius:6px}
+.cooking-flow-step-row:has(.cooking-flow-step:hover),
+.cooking-flow-step-row:has(.cooking-flow-step[aria-pressed=true]){border-color:var(--thread-accent);background:var(--thread-tint)}
+.cooking-flow-step-row:has(.cooking-flow-step.is-before){border-color:var(--gold)}
+.cooking-flow-step-row:has(.cooking-flow-step.is-after){border-color:var(--green)}
+.cooking-flow-step-row.is-running{border-color:var(--gold)}
+.cooking-flow-step-row.is-recommended{border-color:var(--accent);background:var(--accent-soft);box-shadow:inset 4px 0 var(--accent)}
+.cooking-flow-step-row .cooking-flow-step:focus-visible{outline:2px solid var(--thread-accent);outline-offset:1px}
+
 
 /* Overview summary: three compact cards, independent of chronological meal cards. */
 .overview-metrics{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin:0 0 24px}
