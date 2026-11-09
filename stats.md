@@ -145,7 +145,7 @@ visual: true
 </tr>
 <tr>
 <td>钠</td>
-<td style="text-align: right;">2,964 mg</td>
+<td style="text-align: right;">2,880 mg</td>
 <td>≤2,300 mg</td>
 </tr>
 <tr>
@@ -175,7 +175,7 @@ visual: true
 </tr>
 <tr>
 <td>碘</td>
-<td>201 µg</td>
+<td>184 µg</td>
 <td>150 µg</td>
 </tr>
 <tr>

@@ -22,7 +22,7 @@ cooking: true
 <div class="table-wrap">
 <table class="plan-table" ><thead><tr><th data-en="Food">食材</th><th data-en="Seasoning">调味</th></tr></thead><tbody>
 <tr><td data-en="Chicken Thighs">鸡大腿肉</td><td data-en="1/2 tsp Olive Oil, 1/8 tsp Salt, 1/2 tsp Garlic Powder, 1/2 tsp Onion Powder, 1 tsp Paprika, 1/2 tsp Oregano">橄榄油½茶匙，盐⅛茶匙，蒜粉½茶匙，洋葱粉½茶匙，红椒粉1茶匙，牛至½茶匙</td></tr>
-<tr><td data-en="Potato Wedges">土豆块</td><td data-en="1/4 tsp Olive Oil, 1/16 tsp Salt, 1/16 tsp Pepper, 1/8 tsp Garlic Powder, 1/8 tsp Onion Powder">橄榄油¼茶匙，盐1/16茶匙，黑胡椒1/16茶匙，蒜粉⅛茶匙，洋葱粉⅛茶匙</td></tr>
+<tr><td data-en="Potato Wedges">土豆块</td><td data-en="1/4 tsp Olive Oil, 1/16 tsp Pepper, 1/8 tsp Garlic Powder, 1/8 tsp Onion Powder">橄榄油¼茶匙，黑胡椒1/16茶匙，蒜粉⅛茶匙，洋葱粉⅛茶匙</td></tr>
 <tr><td data-en="Panko-Baked Shrimp">面包糠烤虾</td><td data-en="1 tsp Olive Oil, 1/4 tsp Garlic Powder, 1/8 tsp Pepper">橄榄油1茶匙，蒜粉¼茶匙，黑胡椒⅛茶匙</td></tr>
 </tbody></table>
 </div>
@@ -44,7 +44,7 @@ cooking: true
 <p data-en="Seasoning: About 30 Short Oil Sprays = 1 tsp; About 30 Shakes of Powder = 1 tsp">调味表：橄榄油短喷约30喷＝1茶匙；粉状调味料约30下＝1茶匙</p>
 <div class="table-wrap">
 <table class="plan-table" ><thead><tr><th data-en="Food">食材</th><th data-en="Seasoning">调味</th></tr></thead><tbody>
-<tr><td data-en="Salmon">三文鱼</td><td data-en="1/4 tsp Olive Oil, 1/16 tsp Salt, 1/8 tsp Pepper, 1/4 tsp Paprika">橄榄油¼茶匙，盐1/16茶匙，黑胡椒⅛茶匙，红椒粉¼茶匙</td></tr>
+<tr><td data-en="Salmon">三文鱼</td><td data-en="1/4 tsp Olive Oil, 1/8 tsp Pepper, 1/4 tsp Paprika">橄榄油¼茶匙，黑胡椒⅛茶匙，红椒粉¼茶匙</td></tr>
 </tbody></table>
 </div>
 <ol>

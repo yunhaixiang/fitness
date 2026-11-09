@@ -80,7 +80,7 @@
       "saturatedFat": "11.0",
       "fibre": "6.4",
       "sugar": "18.4",
-      "sodium": "1415",
+      "sodium": "1294",
       "cholesterol": "386",
       "epaDha": "0.09",
       "label": "potato",
@@ -89,7 +89,7 @@
       "potassium": "1888.333",
       "vitaminD": "1.680",
       "vitaminB12": "2.570",
-      "iodine": "74.117"
+      "iodine": "50.508"
     },
     "wrap": {
       "kcal": "701",
@@ -175,7 +175,7 @@
       "saturatedFat": "7.5",
       "fibre": "4.2",
       "sugar": "5.2",
-      "sodium": "957",
+      "sodium": "783",
       "cholesterol": "294",
       "epaDha": "1.96",
       "label": "dumpling",
@@ -184,7 +184,7 @@
       "potassium": "1914.786",
       "vitaminD": "19.562",
       "vitaminB12": "5.325",
-      "iodine": "80.745"
+      "iodine": "47.017"
     },
     "noodles": {
       "kcal": "701",
