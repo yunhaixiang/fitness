@@ -25,7 +25,7 @@ test('weekly meat, eggs, grains and portions match whole-package purchase cycles
  close(weekly('ball')*85,907*6/60); close(weekly('haddock'),2); close(weekly('dumpling')*96,336);
  close(weekly('egg'),18); close(weekly('potato')*100,340);
  close(weekly('sweetpotato'),0);
- close(weekly('rice')*100,110); close(weekly('pasta')*85,104);
+ close(weekly('rice')*100,124); close(weekly('pasta')*85,104);
  close(weekly('noodle')*100,106); close(weekly('sauce')*125,156);
  const recipes=Object.fromEntries(basis.mealKeys.map((k,i)=>[k,basis.recipes[i]]));
  assert.equal(recipes.wrap.tuna,undefined); close(recipes.bread.tuna,1); close(recipes.bread.bread,1.5);
