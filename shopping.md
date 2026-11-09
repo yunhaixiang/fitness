@@ -42,10 +42,10 @@ visual: true
 <td data-en="1 Pack / Week">1盒 / 周</td>
 <td style="text-align: right;"><a href="https://www.walmart.ca/en/ip/Prime-Extra-Lean-Ground-Chicken-Raised-Without-Antibiotics-454-g/10243782">$7.98</a></td>
 </tr>
-<tr data-price-id="5" data-weekly-cost="3.93" data-purchase-group="weekly">
+<tr data-price-id="5" data-weekly-cost="5.90" data-purchase-group="fortnightly">
 <td>鸡蛋</td>
 <td><a href="https://www.walmart.ca/en/ip/Great-Value-Large-Eggs/10052944">Great Value Large Eggs</a><br>12个 / 盒</td>
-<td style="text-align: right;">1盒 / 周</td>
+<td data-en="3 Packs / 2 Weeks">3盒 / 2周</td>
 <td style="text-align: right;"><a href="https://www.walmart.ca/en/ip/Great-Value-Large-Eggs/10052944">$3.93</a></td>
 </tr>
 <tr data-weekly-cost="9.96" data-price-id="6" data-purchase-group="weekly">
@@ -198,7 +198,7 @@ visual: true
 <tr data-price-id="38" data-weekly-cost="1.17" data-purchase-group="weekly"><td data-en="Orange Bell Pepper">橙甜椒</td><td><a href="https://www.walmart.ca/en/ip/SUNSET-Orange-Pepper-Single-0-12-0-24-KG/6000197381989">SUNSET Orange Pepper</a><br><span data-en="Sold Individually · About 170 g Each">单颗售卖 · 每个约170 g</span></td><td data-en="1 / Week">1个 / 周</td><td><a href="https://www.walmart.ca/en/ip/SUNSET-Orange-Pepper-Single-0-12-0-24-KG/6000197381989">$1.17 / Avg.</a></td></tr>
 <tr data-price-id="39" data-weekly-cost="1.32" data-purchase-group="weekly"><td data-en="Zucchini">西葫芦</td><td><a href="https://www.walmart.ca/en/ip/Zucchini-Green/6000191270110">Green Zucchini</a><br><span data-en="Sold Individually">单颗售卖</span></td><td data-en="2 / Week">2根 / 周</td><td><a href="https://www.walmart.ca/en/ip/Zucchini-Green/6000191270110">$0.66 / Avg.</a></td></tr>
 <tr data-price-id="40" data-weekly-cost="1.04" data-purchase-group="weekly"><td data-en="Roma Tomato">罗马番茄</td><td><a href="https://www.walmart.ca/en/ip/Tomato-Roma-Sold-in-singles-0-10-0-14-KG/6000191272055">Roma Tomato</a><br><span data-en="Sold Individually">单颗售卖</span></td><td data-en="2 / Week">2个 / 周</td><td><a href="https://www.walmart.ca/en/ip/Tomato-Roma-Sold-in-singles-0-10-0-14-KG/6000191272055">$0.52 / Avg.</a></td></tr>
-<tr data-price-id="41" data-weekly-cost="0.32" data-purchase-group="restock"><td data-en="Rice Noodles">扁米粉</td><td><a href="https://www.walmart.ca/en/ip/Erawan-Rice-Stick/6000199121439">Erawan Rice Stick</a><br><span data-en="454 g">454 g</span></td><td data-en="1 Pack / About 6.1 Weeks">1包 / 约6.1周</td><td><a href="https://www.walmart.ca/en/ip/Erawan-Rice-Stick/6000199121439">$1.97</a></td></tr>
+<tr data-price-id="41" data-weekly-cost="0.37" data-purchase-group="restock"><td data-en="Rice Noodles">扁米粉</td><td><a href="https://www.walmart.ca/en/ip/Erawan-Rice-Stick/6000199121439">Erawan Rice Stick</a><br><span data-en="454 g">454 g</span></td><td data-en="1 Pack / About 5.3 Weeks">1包 / 约5.3周</td><td><a href="https://www.walmart.ca/en/ip/Erawan-Rice-Stick/6000199121439">$1.97</a></td></tr>
 <tr data-price-id="42" data-weekly-cost="0.52" data-purchase-group="restock"><td data-en="Panko Breadcrumbs">面包糠</td><td><a href="https://www.walmart.ca/en/ip/Great-Value-Panko-Japanese-Style-Bread-Crumbs/6000197072643">Great Value Panko Japanese Style Bread Crumbs</a><br><span data-en="227 g">227 g</span></td><td data-en="1 Pack / About 5.7 Weeks">1包 / 约5.7周</td><td><a href="https://www.walmart.ca/en/ip/Great-Value-Panko-Japanese-Style-Bread-Crumbs/6000197072643">$2.97</a></td></tr>
 <tr data-price-id="43" data-weekly-cost="1.55" data-purchase-group="restock"><td data-en="Curry Roux">咖喱块</td><td><a href="https://www.walmart.ca/en/ip/S-B-Golden-curry-sauce-mix-medium-hot/6000198034558">S&amp;B Golden Curry Sauce Mix Medium Hot</a><br><span data-en="92 g">92 g</span></td><td data-en="1 Box / About 2.6 Weeks">1盒 / 约2.6周</td><td><a href="https://www.walmart.ca/en/ip/S-B-Golden-curry-sauce-mix-medium-hot/6000198034558">$3.97</a></td></tr>
 <tr data-price-id="45" data-weekly-cost="0.74" data-purchase-group="fortnightly"><td data-en="Chickpeas">鹰嘴豆</td><td><a href="https://www.walmart.ca/en/ip/Great-Value-Chick-Peas/10275238">Great Value Chick Peas</a><br>540 mL</td><td data-en="1 Can / 2 Weeks">1罐 / 2周</td><td><a href="https://www.walmart.ca/en/ip/Great-Value-Chick-Peas/10275238">$1.48</a></td></tr>
@@ -213,7 +213,7 @@ visual: true
 <td>每周合计</td>
 <td>—</td>
 <td style="text-align: right;">—</td>
-<td style="text-align: right;">$135.78</td>
+<td style="text-align: right;">$137.80</td>
 </tr>
 </tbody>
 </table>

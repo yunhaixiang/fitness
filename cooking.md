@@ -17,7 +17,7 @@ cooking: true
 <tr><td data-en="Wrap">卷饼</td><td data-en="1">1</td></tr>
 <tr><td data-en="Sandwich">三明治</td><td data-en="5">5</td></tr>
 <tr><td data-en="Chicken Thighs">鸡大腿肉</td><td data-en="1 and 5: 1½ Thighs Each; 3: 1 Thigh">1、5各1½块；3放1块</td></tr>
-<tr><td data-en="Boiled Eggs">水煮蛋</td><td data-en="1, 3, 4: 1 Each">1、3、4各1个</td></tr>
+<tr><td data-en="Boiled Eggs">水煮蛋</td><td data-en="1 and 4: 1½ Each; 2 and 3: 1 Each; 6 and 7: ½ Each">1、4各1½个；2、3各1个；6、7各½个</td></tr>
 <tr><td data-en="Fried Eggs">煎蛋</td><td data-en="5: 1 Egg; 6: 2 Eggs">5放1个；6放2个</td></tr>
 <tr><td data-en="Breaded Haddock">裹粉黑线鳕</td><td data-en="6: 1 Fillet">6放1片</td></tr>
 <tr><td data-en="Beef Meatballs">牛肉丸</td><td data-en="4: 3 Pieces">4放3颗</td></tr>
@@ -26,7 +26,7 @@ cooking: true
 <tr><td data-en="Salmon">三文鱼</td><td data-en="2: 1 Fillet">2放1块</td></tr>
 <tr><td data-en="Curry Rice">咖喱米饭</td><td data-en="6">6</td></tr>
 <tr><td data-en="Ground Chicken, Zucchini and Tomato Spaghetti">鸡肉末、西葫芦、番茄意面</td><td data-en="7">7</td></tr>
-<tr><td data-en="Potato Wedges">土豆块</td><td data-en="4">4</td></tr>
+<tr><td data-en="Potato Wedges">土豆块</td><td data-en="2 and 4, Split 3:14">2、4按3:14分</td></tr>
 <tr><td data-en="Boiled Dumplings">水饺</td><td data-en="2">2</td></tr>
 <tr><td data-en="Basil Rice Noodles">罗勒酱香米粉</td><td data-en="3">3</td></tr>
 <tr><td data-en="Peas and Carrots">豌豆、胡萝卜</td><td data-en="3, 6">3、6</td></tr>
@@ -66,7 +66,7 @@ cooking: true
 <li data-en="Pat dry and season 4 chicken thighs, 465 g total.">取鸡大腿肉4块，共465 g，擦干、调味。</li>
 <li data-en="Roast at 400°F for 27 minutes, to 74°C in the centre. Divide the cooked meat 3:3:2 between meals 1, 5 and 3, equivalent to 1½, 1½ and 1 thigh. Shred the wrap and sandwich portions.">400°F烤27分钟，中心达74°C。熟肉按3:3:2分给第1、5、3盘，相当于1½、1½、1块；卷饼与三明治的肉掰碎。</li>
 <li data-en="Wash 170 g little yellow potatoes, cut into even pieces and season.">取小土豆170 g，洗净切成大小接近的块，拌调味。</li>
-<li data-en="Roast at 400°F for 35–40 minutes until tender and golden, turning halfway. Place in meal 4.">400°F烤约35–40分钟至内部软、表面金黄，中途翻面；放第4盘。</li>
+<li data-en="Roast at 400°F for 35–40 minutes until tender and golden, turning halfway. Split the cooked potatoes 3:14 between meals 2 and 4, equivalent to 30 g and 140 g raw.">400°F烤约35–40分钟至内部软、表面金黄，中途翻面；出锅按3:14分给第2、4盘，分别对应生重30 g和140 g。</li>
 <li data-en="Use half the box of ribs, 300 g including bones and sauce. Add the packaged sauce and wrap in foil.">取半盒排骨300 g，淋包装内酱汁，裹好锡纸。</li>
 <li data-en="Heat foil-wrapped ribs at 400°F for 15–20 minutes, to 74°C in the centre. Place in meal 4.">锡纸包好的排骨400°F烤15–20分钟至中心74°C，全部放第4盘。</li>
 <li data-en="Place 3 frozen meatballs (45.4 g) on a tray. Bake at 400°F for 15–20 minutes to a 74°C centre, following the pack if different. Place in meal 4.">取冷冻牛肉丸3颗（45.4 g）铺入烤盘，400°F烤15–20分钟至中心74°C；包装另有要求则按包装。放第4盘。</li>
@@ -92,7 +92,7 @@ cooking: true
 <h2 id="pot-one" data-en="Pot 1">煮锅一线程</h2>
 <ol>
 <li data-en="Bring water to a boil in Pot 1 before adding the eggs.">煮锅一烧水，水沸后下鸡蛋。</li>
-<li data-en="Add 3 eggs and boil for about 9 minutes until firm. Cool and peel; put one in each of meals 1, 3 and 4, crumbling the egg for meal 1.">下鸡蛋3个，水开后煮约9分钟至蛋白蛋黄凝固，冷却剥壳；第1、3、4盘各1个，第1盘的掰碎。</li>
+<li data-en="Add 6 eggs and boil for about 9 minutes until firm. Cool and peel; cut as needed. Put 1½ eggs each in meals 1 and 4, one each in meals 2 and 3, and half each in meals 6 and 7. Crumble the eggs for meal 1.">下鸡蛋6个，水开后煮约9分钟至蛋白蛋黄凝固，冷却剥壳，按需切半；第1、4盘各1½个，第2、3盘各1个，第6、7盘各½个；第1盘的掰碎。</li>
 <li data-en="After removing the eggs, refill with fresh water and bring to a boil.">鸡蛋出锅后换清水烧开。</li>
 <li data-en="Add 7 frozen dumplings (168 g) to boiling water. Follow the pack, checking for a 74°C centre after about 6–8 minutes. Drain into meal 2 without dipping sauce.">冷冻水饺7个（168 g）下沸水，按包装煮至中心74°C，约6–8分钟；沥干放第2盘，不加蘸酱。</li>
 </ol>
@@ -101,7 +101,7 @@ cooking: true
 <ol>
 <li data-en="Bring water to a boil in Pot 2 before adding spaghetti.">煮锅二烧水，水沸后下意面。</li>
 <li data-en="Add 60 g dry spaghetti and cook for about 8 minutes, following the pack. Lift out with tongs or a strainer, keeping the hot water in the pot and reserving a little for the sauce.">下干意面60 g，按包装时间煮约8分钟，用夹子或漏勺捞出，保留锅内热水，另留少量面水用于拌酱。</li>
-<li data-en="Keep the same water boiling, topping up with hot water if needed. Add 37 g dry rice noodles and cook for 6–8 minutes. Check at 6 minutes; drain once there is no hard centre and the noodles are still springy. Transfer to the saucepan for the basil sauce.">沿用锅内热水，保持沸腾，水不足时补热水；下干扁米粉37 g煮6–8分钟；第6分钟检查，无硬芯且仍有弹性时捞出沥干，交给小锅拌罗勒酱汁。</li>
+<li data-en="Keep the same water boiling, topping up with hot water if needed. Add 43 g dry rice noodles and cook for 6–8 minutes. Check at 6 minutes; drain once there is no hard centre and the noodles are still springy. Transfer to the saucepan for the basil sauce.">沿用锅内热水，保持沸腾，水不足时补热水；下干扁米粉43 g煮6–8分钟；第6分钟检查，无硬芯且仍有弹性时捞出沥干，交给小锅拌罗勒酱汁。</li>
 </ol>
 
 <h2 id="small-wok" data-en="Saucepan">小锅线程</h2>
@@ -139,7 +139,7 @@ cooking: true
 
 <h2 id="wraps" data-en="Wrap and Sandwich">卷饼与三明治线程</h2>
 <ol>
-<li data-en="Drain and rinse the chickpeas; use a quarter can and lightly mash with 2½ tsp Chipotle mayonnaise (12.5 mL; about 25 cm squeezed length at a strand diameter of 0.8 cm). Wash, deseed and slice half an orange bell pepper. Fill 1 large tortilla with the chickpeas, meal 1’s shredded chicken, crumbled boiled egg and pepper; roll and place in meal 1.">鹰嘴豆沥干冲洗，取¼罐，轻压碎后拌Chipotle蛋黄酱2½茶匙（12.5 mL；酱条直径约0.8 cm时，挤约25 cm长）。半个橙甜椒洗净去籽切细条，大号卷饼皮1片放入鹰嘴豆、第1盘的鸡腿肉、掰碎水煮蛋和橙甜椒，卷好放第1盘。</li>
-<li data-en="Use half a can of drained tuna (about 55 g), then mix with 3/4 tsp Chipotle mayonnaise (3.75 mL; about 7.5 cm squeezed length at a strand diameter of 0.8 cm). Wash and slice 1 Roma tomato. Layer 3 slices of whole-wheat bread with the tuna, meal 5’s chicken, fried egg and tomato; place in meal 5.">取沥干金枪鱼½罐（约55 g），拌Chipotle蛋黄酱¾茶匙（3.75 mL；酱条直径约0.8 cm时，挤约7.5 cm长）。罗马番茄1个洗净切片；全麦面包3片分层夹入金枪鱼、第5盘的鸡腿肉、煎蛋和番茄，放第5盘。</li>
+<li data-en="Drain and rinse the chickpeas; use a quarter can and lightly mash with 2 tsp Chipotle mayonnaise (10 mL; about 20 cm squeezed length at a strand diameter of 0.8 cm). Wash, deseed and slice half an orange bell pepper. Fill 1 large tortilla with the chickpeas, meal 1’s shredded chicken, crumbled boiled egg and pepper; roll and place in meal 1.">鹰嘴豆沥干冲洗，取¼罐，轻压碎后拌Chipotle蛋黄酱2茶匙（10 mL；酱条直径约0.8 cm时，挤约20 cm长）。半个橙甜椒洗净去籽切细条，大号卷饼皮1片放入鹰嘴豆、第1盘的鸡腿肉、掰碎水煮蛋和橙甜椒，卷好放第1盘。</li>
+<li data-en="Use half a can of drained tuna (about 55 g), then mix with 2½ tsp Chipotle mayonnaise (12.5 mL; about 25 cm squeezed length at a strand diameter of 0.8 cm). Wash and slice 1 Roma tomato. Layer 3 slices of whole-wheat bread with the tuna, meal 5’s chicken, fried egg and tomato; place in meal 5.">取沥干金枪鱼½罐（约55 g），拌Chipotle蛋黄酱2½茶匙（12.5 mL；酱条直径约0.8 cm时，挤约25 cm长）。罗马番茄1个洗净切片；全麦面包3片分层夹入金枪鱼、第5盘的鸡腿肉、煎蛋和番茄，放第5盘。</li>
 </ol>
 <!-- Cook to the product package directions where they differ. Rice noodle method: Erawan Walmart directions, boil dry noodles directly for 6–8 minutes, https://www.walmart.ca/en/ip/Erawan-Rice-Stick/6000199121439 . The timer starts with a 6-minute check; extend as needed. Shrimp is an olive-oil/panko adaptation; oven times vary with size and loading. -->

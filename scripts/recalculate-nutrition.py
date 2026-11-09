@@ -18,6 +18,7 @@ def recalculate(root):
  file=root/'stats.md';page=file.read_text()
  values={'热量':f'{round(daily["kcal"]):,} kcal','蛋白质':f'{daily["protein"]:.1f} g','总脂肪':f'{daily["fat"]:.1f} g','饱和脂肪':f'{daily["saturatedFat"]:.1f} g','饱和脂肪占总热量':f'{daily["saturatedFat"]*900/daily["kcal"]:.1f}%','碳水化合物':f'{daily["carbs"]:.1f} g','膳食纤维':f'{daily["fibre"]:.1f} g','总糖':f'{daily["sugar"]:.1f} g','膳食胆固醇':f'{round(daily["cholesterol"])} mg','钠':f'{round(daily["sodium"]):,} mg','Omega-3：EPA，DHA（合计）':f'{daily["epaDha"]:.1f} g'}
  for label,value in values.items():page=re.sub(r'(<td>'+re.escape(label)+r'</td>\s*<td[^>]*>).*?(</td>)',lambda m:m[1]+value+m[2],page,flags=re.S)
+ page=re.sub(r'(<td>饱和脂肪</td>\s*<td[^>]*>.*?</td>\s*<td>)≤[\d.]+ g',lambda m:m[1]+f'≤{daily["kcal"]*.06/9:.1f} g',page,flags=re.S)
  page=re.sub(r'(data-energy="dailyDeficit">)[\d,]+',lambda m:m[1]+str(round(deficit/7)),page)
  page=re.sub(r'(data-energy="fatEquivalent">)[\d.]+',lambda m:m[1]+f'{deficit/7700:.2f}',page)
  page=re.sub(r'(<span>日均摄入</span><strong>)[\d,]+',lambda m:m[1]+f'{round(daily["kcal"]):,}',page)
