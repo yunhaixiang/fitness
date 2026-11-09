@@ -32,7 +32,6 @@
     "pasta": 8,
     "noodles": 6,
     "mushroom": 7,
-    "peas": 3,
     "curry": 6,
     "season-noodles": 3,
     "spinach": 5,

@@ -4,7 +4,7 @@
   // One slot is one minute. Active work uses the cook; heating can overlap.
   const horizon = 210;
   const beamWidth = 24;
-  const pans = new Set(['mushroom', 'spinach', 'tomato', 'ground', 'peas', 'curry']);
+  const pans = new Set(['mushroom', 'spinach', 'tomato', 'ground', 'curry']);
   const continuous = new Set(['wrap', 'sandwich', 'finish']);
   const activeTail = { tomato: 3, 'season-noodles': 3 };
   const capacity = { rice: 1, oven: 3, air: 1, 'pot-1': 1, 'pot-2': 1, saucepan: 1, wok: 1, counter: 1 };

@@ -74,14 +74,12 @@ cooking: true
 <div class="table-wrap">
 <table class="plan-table" ><thead><tr><th data-en="Food">食材</th><th data-en="Seasoning">调味</th></tr></thead><tbody>
 <tr><td data-en="Mushrooms">蘑菇</td><td data-en="1/4 tsp Olive Oil, 1/8 tsp Pepper, 1/4 tsp Garlic Powder, 1/4 tsp Onion Powder">橄榄油¼茶匙，黑胡椒⅛茶匙，蒜粉¼茶匙，洋葱粉¼茶匙</td></tr>
-<tr><td data-en="Peas and Carrots">豌豆、胡萝卜</td><td data-en="1/8 tsp Garlic Powder, 1/8 tsp Onion Powder, 1/16 tsp Black Pepper">蒜粉⅛茶匙，洋葱粉⅛茶匙，黑胡椒1/16茶匙</td></tr>
 <tr><td data-en="Curry Sauce">咖喱酱</td><td data-en="½ Block Golden Curry (11.5 g), 150 mL Water">Golden Curry半小块（11.5 g），水150 mL</td></tr>
 <tr><td data-en="Basil Rice Noodles">罗勒酱香米粉</td><td data-en="1/4 tsp Olive Oil, 1/2 tsp Each Fish Sauce, Light Soy Sauce and Dark Soy Sauce, 1 tsp Oyster Sauce, 1/4 tsp Garlic Powder, 5 g Red Chili, 2–3 Basil Leaves, 2 tbsp Water">橄榄油¼茶匙，鱼露、生抽、老抽各½茶匙，蚝油1茶匙，蒜粉¼茶匙，红辣椒5 g，罗勒叶2–3片，水2汤匙</td></tr>
 </tbody></table>
 </div>
 <ol>
 <li data-en="Cook half a pack of mushrooms (113.5 g) with oil and seasonings for 5–7 minutes. Split equally between meals 2 and 4.">蘑菇半盒113.5 g加油和调味，炒约5–7分钟；均分到第2、4盘。</li>
-<li data-en="Drain and rinse 1 can of peas and carrots, then drain again (about 260 g). Add a splash of water and seasonings, stir and heat through. Divide equally between meals 3 and 6.">豌豆胡萝卜1罐沥干、冲洗后再次沥干（约260 g），加少量水和调味，拌匀热透；均分到第3、6盘。</li>
 <li data-en="Heat 150 mL water, lower the heat and dissolve ½ block (11.5 g) of Golden Curry roux. Simmer for about 5 minutes until smooth. Transfer to meal 6 and serve over the rice.">水150 mL烧热后关小火，溶入Golden Curry咖喱块半小块（11.5 g），再煮约5分钟至顺滑；盛入第6盘，分盘时淋在米饭上。</li>
 <li data-en="Wash the red chili and basil; slice the chili. Mix fish sauce, light and dark soy sauces, oyster sauce, garlic powder and water. Rinse and dry the saucepan; add the oil and briefly cook the chili over medium-low heat. Add the sauce and drained noodles, tossing for 1–2 minutes; add a splash of water if they start to stick. Turn off the heat, stir in basil and place in meal 3.">红辣椒和罗勒洗净，辣椒切圈；鱼露、生抽、老抽、蚝油、蒜粉和水调匀。小锅冲洗擦干，加油，中小火略炒辣椒；倒入酱汁和沥干米粉，拌热1–2分钟，粘锅时补少量水；关火拌入罗勒，放第3盘。</li>
 </ol>
@@ -106,3 +104,8 @@ cooking: true
 <li data-en="Use half a can of drained tuna (about 55 g), then mix with 2½ tsp Chipotle mayonnaise (12.5 mL; about 25 cm squeezed length at a strand diameter of 0.8 cm). Wash and slice 1 Roma tomato. Layer 3 slices of whole-wheat bread with the tuna, meal 5’s chicken, sliced boiled egg and tomato; place in meal 5. During the first cooking session, freeze the remaining drained tuna for the second session. Freeze spare bread.">取沥干金枪鱼½罐（约55 g），拌Chipotle蛋黄酱2½茶匙（12.5 mL；酱条直径约0.8 cm时，挤约25 cm长）。罗马番茄1个洗净切片；全麦面包3片分层夹入金枪鱼、第5盘的鸡腿肉、切片水煮蛋和番茄，放第5盘。前半周备料时，将剩余沥干金枪鱼密封冷冻供后半周用；多余面包冷冻。</li>
 </ol>
 <!-- Cook to the product package directions where they differ. Rice noodle method: Erawan Walmart directions, boil dry noodles directly for 6–8 minutes, https://www.walmart.ca/en/ip/Erawan-Rice-Stick/6000199121439 . The timer starts with a 6-minute check; extend as needed. Shrimp is an olive-oil/panko adaptation; oven times vary with size and loading. -->
+
+<h2 id="finish" data-en="Finish">收尾线程</h2>
+<ol>
+<li data-en="Drain 1 can of peas and carrots (about 260 g) and divide equally between meals 3 and 6. Finish portioning, refrigerate and clean up.">豌豆胡萝卜1罐沥干（约260 g），直接均分到第3、6盘；完成分盘、入冰箱、清洗。</li>
+</ol>

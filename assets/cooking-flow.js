@@ -44,8 +44,7 @@
     {"id": "pasta", "label": ["意面", "Spaghetti"], "note": ["", ""], "group": "pots", "before": ["pasta-water"], "link": "#cook-pasta", "resource": "pot-2", "minutes": 8},
     {"id": "noodles", "label": ["扁米粉", "Rice Noodles"], "note": ["", ""], "group": "pots", "before": ["pasta"], "link": "#cook-noodles", "resource": "pot-2", "minutes": 6},
     {"id": "mushroom", "label": ["蘑菇", "Mushrooms"], "note": ["", ""], "group": "small-wok", "before": [], "link": "#cook-mushroom", "minutes": 7},
-    {"id": "peas", "label": ["豌豆、胡萝卜", "Peas and Carrots"], "note": ["", ""], "group": "small-wok", "before": ["mushroom"], "link": "#cook-peas", "minutes": 3},
-    {"id": "curry", "label": ["咖喱酱", "Curry Sauce"], "note": ["", ""], "group": "small-wok", "before": ["peas"], "link": "#cook-curry", "minutes": 6},
+    {"id": "curry", "label": ["咖喱酱", "Curry Sauce"], "note": ["", ""], "group": "small-wok", "before": ["mushroom"], "link": "#cook-curry", "minutes": 6},
     {"id": "season-noodles", "label": ["罗勒酱香米粉", "Basil Rice Noodles"], "note": ["", ""], "group": "small-wok", "before": ["curry", "noodles"], "link": "#cook-season-noodles", "minutes": 3},
     {"id": "spinach", "label": ["菠菜", "Spinach"], "note": ["", ""], "group": "large-wok", "before": [], "link": "#cook-spinach", "minutes": 5},
     {"id": "ground", "label": ["鸡肉末、西葫芦", "Ground Chicken and Zucchini"], "note": ["", ""], "group": "large-wok", "before": ["spinach"], "link": "#cook-ground", "minutes": 10},
@@ -65,7 +64,7 @@
     'air-heat-start': '🔥', 'air-heat': '🌡️',
     'egg-water': '💧', 'pasta-water': '💧',
     eggs: '🥚', dumplings: '🥟', pasta: '🍝', noodles: '🍜',
-    mushroom: '🍄', peas: '🥕', curry: '🍛', 'season-noodles': '🌿',
+    mushroom: '🍄', curry: '🍛', 'season-noodles': '🌿',
     spinach: '🥬', ground: '🍗', tomato: '🍅',
     wrap: '🌯', sandwich: '🥪', finish: '🧼'
   };
@@ -74,19 +73,19 @@
     {"id": "oven", "icon": "oven", "title": ["烤箱", "Oven"], "hint": ["按烤盘空间安排", "Schedule According to Tray Space"]},
     {"id": "air", "icon": "air", "title": ["空气炸锅", "Air Fryer"], "hint": ["三文鱼备好再预热", "Prepare Salmon Before Preheating"]},
     {"id": "pots", "icon": "pot", "title": ["煮锅一、煮锅二", "Pots 1 and 2"], "hint": ["两锅并行", "Two Parallel Pots"]},
-    {"id": "small-wok", "icon": "pot", "title": ["小锅", "Saucepan"], "hint": ["蘑菇 → 蔬菜 → 咖喱酱 → 拌米粉", "Mushrooms → Vegetables → Curry Sauce → Noodles"]},
+    {"id": "small-wok", "icon": "pot", "title": ["小锅", "Saucepan"], "hint": ["蘑菇 → 咖喱酱 → 拌米粉", "Mushrooms → Curry Sauce → Noodles"]},
     {"id": "large-wok", "icon": "wok", "title": ["大锅", "Wok"], "hint": ["菠菜 → 鸡肉意面", "Spinach → Chicken Pasta"]},
     {"id": "wrap", "icon": "wrap", "title": ["卷饼与三明治", "Wrap and Sandwich"], "hint": ["等待熟肉和鸡蛋", "Wait for Cooked Chicken and Eggs"]},
     {"id": "finish", "icon": "finish", "title": ["收尾", "Finish"], "hint": ["分盘、入冰箱、清洗", "Portion, Refrigerate and Clean"]}
   ];
 
-  const instructionSections = [["rice", "rice", ["prep-rice", "rice"]], ["oven", "oven", ["oven-heat-start", "oven-heat", "prep-chicken", "chicken", "prep-potato", "potato", "prep-ribs", "ribs", "meatballs", "prep-shrimp", "shrimp"]], ["air-fryer", "air", ["prep-salmon", "air-heat-start", "air-heat", "salmon", "haddock"]], ["pot-one", "pots", ["egg-water", "eggs", "dumplings"]], ["pot-two", "pots", ["pasta-water", "pasta", "noodles"]], ["small-wok", "small-wok", ["mushroom", "peas", "curry", "season-noodles"]], ["large-wok", "large-wok", ["spinach", "ground", "tomato"]], ["wraps", "wrap", ["wrap", "sandwich"]]];
+  const instructionSections = [["rice", "rice", ["prep-rice", "rice"]], ["oven", "oven", ["oven-heat-start", "oven-heat", "prep-chicken", "chicken", "prep-potato", "potato", "prep-ribs", "ribs", "meatballs", "prep-shrimp", "shrimp"]], ["air-fryer", "air", ["prep-salmon", "air-heat-start", "air-heat", "salmon", "haddock"]], ["pot-one", "pots", ["egg-water", "eggs", "dumplings"]], ["pot-two", "pots", ["pasta-water", "pasta", "noodles"]], ["small-wok", "small-wok", ["mushroom", "curry", "season-noodles"]], ["large-wok", "large-wok", ["spinach", "ground", "tomato"]], ["wraps", "wrap", ["wrap", "sandwich"]], ["finish", "finish", ["finish"]]];
   const instructions = new Map(), seasonings = new Map(), seasoningNotes = new Map();
   const mergedSections = [];
   const seasoningSteps = {
     oven: ['prep-chicken', 'prep-potato', 'prep-shrimp'],
     'air-fryer': ['prep-salmon'],
-    'small-wok': ['mushroom', 'peas', 'curry', 'season-noodles'],
+    'small-wok': ['mushroom', 'curry', 'season-noodles'],
     'large-wok': ['spinach', 'ground']
   };
   for (const [headingId, group, steps] of instructionSections) {
