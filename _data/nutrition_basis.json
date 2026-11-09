@@ -414,14 +414,14 @@
       "egg": 1
     },
     {
-      "bread": 1,
+      "bread": 1.5,
       "thigh": 1.74375,
       "egg": 1,
       "tomato": 1.2,
-      "mayo": 3,
+      "mayo": 0.75,
       "oil": 0.5208333333333333,
       "salt": 0.046875,
-      "tuna": 2
+      "tuna": 1
     },
     {
       "rice": 0.47,
@@ -458,9 +458,9 @@
     "Great Value Chicken & Vegetable Potstickers 1.13 kg: verified Walmart nutrition image, 200 kcal / 4 dumplings (96 g) WITH 15 mL sauce. Meal 2 uses seven pieces (168 g) plus 26.25 mL sauce; sauce is included in the nutrition figures. No sweet potatoes or their oil/salt. Shopping cost assumes net package includes sauce and sauce density 1 g/mL; 388.5 g combined product used weekly.",
     "Balanced portions: rice 47 g dry, pasta 60 g dry, potatoes 170 g raw, noodles 37 g dry. Boiled eggs in meals 1, 3 and 4. Shrimp 170 g raw per half-week, cooked together with 20 g panko and all served in meal 3 (170 g raw equivalent); one 340 g bag of shrimp weekly.",
     "Haddock: High Liner Pan-Sear Selects Roasted Garlic & Herbs, 500 g / four fillets. Manufacturer nutrition per about one fillet (127 g label serving): 170 kcal, protein 18 g, carbohydrate 11 g, fat 6 g, saturated fat 0.5 g, trans fat 0 g, fibre 1 g, sugar 0 g, sodium 410 mg, cholesterol 55 mg. Two fillets weekly; one box every two weeks. Manufacturer figures take precedence over inconsistent retailer copy. EPA+DHA provisionally estimated at 0.16 g per fillet by scaling the original Traditional fish proxy by protein (0.15 x 18/17); not measured. Label total omega-3 is 0.7 g and includes canola oil, so is not treated as EPA+DHA. Use the actual package label if it differs.",
-    "Clover Leaf Low Sodium Flaked Light Tuna in Water, two 170 g cans weekly. Manufacturer label unit is half a can drained (55 g); two units (one full can drained, 110 g) in each sandwich; no tuna in the wraps. Chipotle mayonnaise is 2.5 tsp per wrap and 3 tsp per sandwich. Tuna label total omega-3 0.2 g per half-can is used as an EPA+DHA approximation, not a separately measured EPA+DHA value. Little Yellows potatoes use the Canadian label per 110 g; 680 g bag every two weeks. Six meatballs weekly, 60-piece bag every ten weeks.",
+    "Clover Leaf Low Sodium Flaked Light Tuna in Water, one 170 g can weekly. Manufacturer label unit is half a can drained (55 g); one unit (half a can drained, 55 g) in each sandwich; no tuna in the wraps. Chipotle mayonnaise is 2.5 tsp per wrap and 0.75 tsp per sandwich. Tuna label total omega-3 0.2 g per half-can is used as an EPA+DHA approximation, not a separately measured EPA+DHA value. Little Yellows potatoes use the Canadian label per 110 g; 680 g bag every two weeks. Six meatballs weekly, 60-piece bag every ten weeks.",
     "Chickpeas: Great Value Chick Peas 540 mL, one can every two weeks, drained and split equally between four wraps. Planning yield 340 g drained per can (85 g per wrap), not measured. Retains the prior generic canned drained chickpea estimate per 100 g: 139 kcal, protein 7.05 g, carbohydrate 22.5 g, fat 2.77 g, saturated fat 0.27 g, fibre 6.4 g, sugar 4 g, sodium 240 mg; not a verified product-label analysis. Actual drained weight may differ.",
-    "Hellmann’s Mild Chipotle Mayonnaise 340 mL: per 15 mL, 35 kcal, 0.1 g protein, 1 g carbohydrate, 3.5 g fat, 0.3 g saturated fat, 0 g fibre, 1 g sugar, 105 mg sodium and 0 mg cholesterol. Recipe unit is 5 mL (one third of the label serving). Verified manufacturer nutrients and retailer serving size. Squeezed lengths approximate a cylindrical strand of user-reported diameter 0.8 cm: 12.5 mL is 24.87 cm and 15 mL is 29.84 cm, rounded to 25 and 30 cm; not a manufacturer dispensing specification.",
+    "Hellmann’s Mild Chipotle Mayonnaise 340 mL: per 15 mL, 35 kcal, 0.1 g protein, 1 g carbohydrate, 3.5 g fat, 0.3 g saturated fat, 0 g fibre, 1 g sugar, 105 mg sodium and 0 mg cholesterol. Recipe unit is 5 mL (one third of the label serving). Verified manufacturer nutrients and retailer serving size. Squeezed lengths approximate a cylindrical strand of user-reported diameter 0.8 cm: 12.5 mL is 24.87 cm and 3.75 mL is 7.46 cm, rounded to 25 and 7.5 cm; not a manufacturer dispensing specification.",
     "Curry roux 18 g remains in meal 6. Meal 3 noodleSauce unit: fish sauce 2.5 mL, light soy sauce 2.5 mL, dark soy sauce 2.5 mL, oyster sauce 5 mL, garlic powder 1/4 tsp, red chili 5 g, basil 2–3 leaves and water 30 mL. Generic planning estimate excluding oil: 20 kcal, P1/C3.8/F0.1 g, saturated fat0 g, fibre0.3 g, sugar1.8 g, sodium900 mg. These are estimated recipe totals, not verified totals of the selected product labels. Extra olive oil 1/4 tsp is counted separately in recipe oil, replacing the old sesame oil. Rice water remains equal volume to rice: 47 g rice estimated 59 mL water."
   ],
   "sources": {

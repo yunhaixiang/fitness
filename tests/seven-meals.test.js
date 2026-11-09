@@ -28,12 +28,12 @@ test('weekly meat, eggs, grains and portions match whole-package purchase cycles
  close(weekly('rice')*100,94); close(weekly('pasta')*85,120);
  close(weekly('noodle')*100,74); close(weekly('sauce')*125,300);
  const recipes=Object.fromEntries(basis.mealKeys.map((k,i)=>[k,basis.recipes[i]]));
- assert.equal(recipes.wrap.tuna,undefined); close(recipes.bread.tuna,2);
+ assert.equal(recipes.wrap.tuna,undefined); close(recipes.bread.tuna,1); close(recipes.bread.bread,1.5);
  close(recipes.noodles.shrimp,1.7); close(recipes.noodles.panko,.2);
  assert.equal(recipes.rice.shrimp,undefined); assert.equal(recipes.rice.panko,undefined);
  close(recipes.rice.curry,1); assert.equal(recipes.noodles.curry,undefined); close(recipes.noodles.noodleSauce,1);
  close(recipes.wrap.chickpea*2,weekly('chickpea'));
- close(weekly('chickpea')*100,170); close(weekly('tuna'),4); close(weekly('mayo'),11); close(weekly('spinach')*100,284);
+ close(weekly('chickpea')*100,170); close(weekly('tuna'),2); close(weekly('mayo'),6.5); close(weekly('spinach')*100,284);
  close(weekly('mushroom')*100,227); close(weekly('pc')*100,520);
  close(weekly('oil'),10); // 5 tsp each half-week, including fried eggs and noodle sauce
 });

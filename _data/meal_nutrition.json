@@ -116,16 +116,16 @@
       "label": "pasta"
     },
     "bread": {
-      "kcal": "671",
-      "protein": "68.9",
-      "carbs": "37.0",
-      "fat": "28.7",
-      "saturatedFat": "7.1",
-      "fibre": "6.4",
-      "sugar": "7.4",
-      "sodium": "931",
-      "cholesterol": "410",
-      "epaDha": "0.52",
+      "kcal": "679",
+      "protein": "61.3",
+      "carbs": "51.8",
+      "fat": "26.0",
+      "saturatedFat": "6.7",
+      "fibre": "8.9",
+      "sugar": "8.1",
+      "sodium": "927",
+      "cholesterol": "380",
+      "epaDha": "0.32",
       "label": "bread"
     },
     "dumpling": {
