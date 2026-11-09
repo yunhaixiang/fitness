@@ -39,8 +39,7 @@
     {"id": "haddock", "label": ["裹粉黑线鳕", "Breaded Haddock"], "note": ["", ""], "group": "air", "before": ["salmon"], "link": "#cook-haddock", "minutes": 20},
     {"id": "egg-water", "label": ["烧水", "Boil Water"], "note": ["", ""], "group": "pots", "before": [], "link": "#cook-egg-water", "manual": true, "resource": "pot-1", "minutes": 1},
     {"id": "eggs", "label": ["水煮蛋", "Boiled Eggs"], "note": ["", ""], "group": "pots", "before": ["egg-water"], "link": "#cook-eggs", "resource": "pot-1", "minutes": 9},
-    {"id": "dumpling-water", "label": ["换水烧开", "Boil Fresh Water"], "note": ["", ""], "group": "pots", "before": ["eggs"], "link": "#cook-dumpling-water", "manual": true, "resource": "pot-1", "minutes": 1},
-    {"id": "dumplings", "label": ["水饺", "Boiled Dumplings"], "note": ["", ""], "group": "pots", "before": ["dumpling-water"], "link": "#cook-dumplings", "resource": "pot-1", "minutes": 8},
+    {"id": "dumplings", "label": ["水饺", "Boiled Dumplings"], "note": ["", ""], "group": "pots", "before": ["eggs"], "link": "#cook-dumplings", "resource": "pot-1", "minutes": 8},
     {"id": "pasta-water", "label": ["烧水", "Boil Water"], "note": ["", ""], "group": "pots", "before": [], "link": "#cook-pasta-water", "manual": true, "resource": "pot-2", "minutes": 1},
     {"id": "pasta", "label": ["意面", "Spaghetti"], "note": ["", ""], "group": "pots", "before": ["pasta-water"], "link": "#cook-pasta", "resource": "pot-2", "minutes": 8},
     {"id": "noodles", "label": ["扁米粉", "Rice Noodles"], "note": ["", ""], "group": "pots", "before": ["pasta"], "link": "#cook-noodles", "resource": "pot-2", "minutes": 6},
@@ -65,7 +64,7 @@
     'prep-shrimp': '🦐', shrimp: '🦐',
     'prep-salmon': '🐟', salmon: '🐟', haddock: '🐟',
     'air-heat-start': '🔥', 'air-heat': '🌡️',
-    'egg-water': '💧', 'dumpling-water': '💧', 'pasta-water': '💧',
+    'egg-water': '💧', 'pasta-water': '💧',
     eggs: '🥚', dumplings: '🥟', pasta: '🍝', noodles: '🍜',
     mushroom: '🍄', peas: '🥕', curry: '🍛', 'season-noodles': '🌿',
     spinach: '🥬', ground: '🍗', tomato: '🍅', 'fried-eggs': '🍳',
@@ -82,7 +81,7 @@
     {"id": "finish", "icon": "finish", "title": ["收尾", "Finish"], "hint": ["分盘、入冰箱、清洗", "Portion, Refrigerate and Clean"]}
   ];
 
-  const instructionSections = [["rice", "rice", ["prep-rice", "rice"]], ["oven", "oven", ["oven-heat-start", "oven-heat", "prep-chicken", "chicken", "prep-potato", "potato", "prep-ribs", "ribs", "meatballs", "prep-shrimp", "shrimp"]], ["air-fryer", "air", ["prep-salmon", "air-heat-start", "air-heat", "salmon", "haddock"]], ["pot-one", "pots", ["egg-water", "eggs", "dumpling-water", "dumplings"]], ["pot-two", "pots", ["pasta-water", "pasta", "noodles"]], ["small-wok", "small-wok", ["mushroom", "peas", "curry", "season-noodles"]], ["large-wok", "large-wok", ["spinach", "ground", "tomato", "fried-eggs"]], ["wraps", "wrap", ["wrap", "sandwich"]]];
+  const instructionSections = [["rice", "rice", ["prep-rice", "rice"]], ["oven", "oven", ["oven-heat-start", "oven-heat", "prep-chicken", "chicken", "prep-potato", "potato", "prep-ribs", "ribs", "meatballs", "prep-shrimp", "shrimp"]], ["air-fryer", "air", ["prep-salmon", "air-heat-start", "air-heat", "salmon", "haddock"]], ["pot-one", "pots", ["egg-water", "eggs", "dumplings"]], ["pot-two", "pots", ["pasta-water", "pasta", "noodles"]], ["small-wok", "small-wok", ["mushroom", "peas", "curry", "season-noodles"]], ["large-wok", "large-wok", ["spinach", "ground", "tomato", "fried-eggs"]], ["wraps", "wrap", ["wrap", "sandwich"]]];
   const instructions = new Map(), seasonings = new Map(), seasoningNotes = new Map();
   const mergedSections = [];
   const seasoningSteps = {

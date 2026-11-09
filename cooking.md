@@ -59,7 +59,6 @@ cooking: true
 <ol>
 <li data-en="Bring water to a boil in Pot 1 before adding the eggs.">煮锅一烧水，水沸后下鸡蛋。</li>
 <li data-en="Add 6 eggs and boil for about 9 minutes until firm. Cool and peel; cut as needed. Put 1½ eggs each in meals 1 and 4, one each in meals 2 and 3, and half each in meals 6 and 7. Crumble the eggs for meal 1.">下鸡蛋6个，水开后煮约9分钟至蛋白蛋黄凝固，冷却剥壳，按需切半；第1、4盘各1½个，第2、3盘各1个，第6、7盘各½个；第1盘的掰碎。</li>
-<li data-en="After removing the eggs, refill with fresh water and bring to a boil.">鸡蛋出锅后换清水烧开。</li>
 <li data-en="Add 7 frozen dumplings (168 g) to boiling water. Follow the pack, checking for a 74°C centre after about 6–8 minutes. Drain into meal 2.">冷冻水饺7个（168 g）下沸水，按包装煮至中心74°C，约6–8分钟；沥干放第2盘。</li>
 </ol>
 
