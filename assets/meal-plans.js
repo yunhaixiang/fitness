@@ -48,7 +48,7 @@
       else link.removeAttribute('aria-current');
     }
   }
-  if (!result.page) return;
+  if (!result.page || result.page === 'overview') return;
   let en = false;
   try { en = localStorage.getItem('yunhai-fitness-language') === 'en'; } catch (_) { /* default Chinese */ }
   const language = en ? 'en' : 'zh';
