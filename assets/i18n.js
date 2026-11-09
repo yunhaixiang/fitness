@@ -6,6 +6,7 @@
 
   // Longer entries take precedence. This keeps the plan's numbers and product links intact.
   const translations = {
+    '当前体重': 'Current Weight', '当前体脂率': 'Current Body Fat', '当前数据': 'Current Metrics',
     '体重、体脂率和放纵餐记录': 'Weight, body fat and cheat meal records',
     '份量': 'Portion',
     '这里只展示记录；更新请通过对话提交。显示最近 8 周，原有浏览器记录仍可查看和导出。': 'Records are read-only. Send updates through our chat. The last eight weeks are shown; existing browser records remain available to view and export.',

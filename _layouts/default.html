@@ -59,7 +59,11 @@
   {% if page.cooking %}<script src="{{ page.cooking_flow_script | default: '/assets/cooking-flow.js' | relative_url }}?v={{ site.time | date: '%s' }}" defer></script>
   {% endif %}
   {% if page.strength %}<script src="{{ '/assets/strength-volume.js' | relative_url }}?v={{ site.time | date: '%s' }}" defer></script>{% endif %}
-  {% if page.tracker %}<script type="application/json" id="tracking-records">{{ site.data.tracking_records | jsonify | replace: '<', '\u003c' }}</script><script src="{{ '/assets/tracker.js' | relative_url }}?v={{ site.time | date: '%s' }}" defer></script>{% endif %}
+  {% if page.tracker or page.overview or page.url == '/' %}
+  <script type="application/json" id="tracking-records">{{ site.data.tracking_records | jsonify | replace: '<', '\u003c' }}</script>
+  <script src="{{ '/assets/body-metrics.js' | relative_url }}?v={{ site.time | date: '%s' }}" defer></script>
+  {% endif %}
+  {% if page.tracker %}<script src="{{ '/assets/tracker.js' | relative_url }}?v={{ site.time | date: '%s' }}" defer></script>{% endif %}
   <script src="{{ '/assets/section-cards.js' | relative_url }}?v={{ site.time | date: '%s' }}" defer></script>
 </body>
 </html>

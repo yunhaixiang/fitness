@@ -36,7 +36,7 @@
   const metric = (label, value) => { const box = document.createElement('div'); box.className = 'metric-box'; const s = document.createElement('span'); s.textContent = label; const strong = document.createElement('strong'); strong.textContent = value || '—'; box.append(s, strong); return box; };
   function renderMetrics() {
     const host = document.querySelector('#latest-metrics'); host.replaceChildren();
-    const body = latest('body');
+    const body = window.fitnessBodyMetrics || latest('body');
     host.append(metric('最新体重', body?.weight ? `${body.weight} kg` : '—'), metric('最近体脂率', body?.bf ? `${body.bf}%` : '—'));
     if (names.every((name) => records[name].length === 0)) host.setAttribute('aria-label', '还没有记录');
     else host.removeAttribute('aria-label');

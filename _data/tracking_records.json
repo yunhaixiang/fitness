@@ -1,4 +1,8 @@
 {
   "body": [],
-  "cheatMeals": []
+  "cheatMeals": [],
+  "currentBody": {
+    "weight": 76.5,
+    "bf": 31.2
+  }
 }
