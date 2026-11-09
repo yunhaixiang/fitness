@@ -700,3 +700,11 @@ html[data-theme=light] .cooking-guide-primary{color:#fff}
 
 /* Decorative food cues keep bilingual step titles easy to scan. */
 .cooking-step-emoji{display:inline-block;margin-inline-end:.4em;font-size:1.1em;line-height:1;vertical-align:baseline}
+
+/* Quiet semantic colors for recipe scanning; words and units remain explicit. */
+.cooking-flow-instructions .cooking-text-ingredient{color:var(--green);font-weight:600}
+.cooking-flow-instructions .cooking-text-amount{color:var(--gold);font-weight:650;font-variant-numeric:tabular-nums}
+.cooking-flow-instructions .cooking-text-heat{color:var(--peach);font-weight:700;font-variant-numeric:tabular-nums}
+.cooking-flow-instructions .cooking-text-portion{color:var(--violet);font-weight:650}
+.cooking-flow-step-row.is-complete .cooking-flow-instructions span{color:inherit;font-weight:inherit}
+@media(forced-colors:active){.cooking-flow-instructions span[class^="cooking-text-"]{color:CanvasText}}

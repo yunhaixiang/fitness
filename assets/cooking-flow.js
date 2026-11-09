@@ -116,6 +116,35 @@
     if (content !== undefined) element.textContent = content;
     return element;
   };
+  // Highlight meaning without changing the source instructions or injecting HTML.
+  const cookingNumber = String.raw`(?:\d+(?:\.\d+)?(?:[½¼¾⅛⅜⅝⅞])?|[½¼¾⅛⅜⅝⅞]|\d+/\d+)`;
+  const cookingRange = `${cookingNumber}(?:[–—-]${cookingNumber})?`;
+  const cookingIngredients = [
+    '鸡大腿肉', '生鸡腿肉', '鸡腿肉', '鸡肉末', '生肉末', '小土豆', '土豆块', '排骨', '牛肉丸',
+    '虾仁', '虾肉', '面包糠', '三文鱼', '裹粉黑线鳕', '金枪鱼', '水煮蛋', '鸡蛋', '水饺',
+    '干意面', '意面', '干扁米粉', '米粉', '干米', '米饭', '蘑菇', '菠菜', '西葫芦',
+    'Unico浓缩番茄膏', '罗马番茄', '番茄', '鹰嘴豆', '橙甜椒', '大号卷饼皮', '全麦面包', '豌豆胡萝卜',
+    'Chipotle蛋黄酱', '橄榄油', '蒜粉', '洋葱粉', '黑胡椒', '红椒粉', '红辣椒', '辣椒',
+    '意式香料', '牛至', '罗勒叶', '罗勒', '鱼露', '生抽', '老抽', '蚝油', '咖喱块', '咖喱酱', '热水', '面水', '沸水', '水'
+  ].sort((a, b) => b.length - a.length).join('|');
+  const cookingEnglishIngredients = String.raw`\b(?:chicken thighs?|raw thighs?|ground chicken|chicken|potatoes|potato wedges|ribs|meatballs|shrimp|panko|salmon|(?:breaded )?haddock(?: fillet)?|tuna|boiled eggs?|eggs?|dumplings|spaghetti|rice noodles|noodles|dry rice|rice|mushrooms|spinach|zucchini|Unico Tomato Paste|Roma tomato|tomato|chickpeas|orange bell pepper|tortillas?|whole-wheat bread|bread|peas and carrots|Chipotle mayonnaise|olive oil|garlic powder|onion powder|black pepper|pepper|paprika|red chili|chili|Italian seasoning|oregano|basil(?: leaves)?|fish sauce|light and dark soy sauces|light soy sauce|dark soy sauce|oyster sauce|Golden Curry|water)\b`;
+  const cookingTokens = new RegExp([
+    `(?<heat>${cookingRange}\\s*(?:°[FC]|分钟|minutes?\\b))`,
+    `(?<portion>第[0-9、，]+盘|\\bmeals?\\s+\\d+(?:(?:,\\s*|\\s+and\\s+)\\d+)*)`,
+    `(?<amount>${cookingRange}\\s*(?:茶匙|汤匙|mL\\b|kg\\b|g\\b|cm\\b|tsp\\b|tbsp\\b|个|块|颗|片|罐|袋|盒)|半(?:小块|袋|盒|罐)|half a (?:bag|pack|can)|quarter can)`,
+    `(?<ingredient>${cookingIngredients}|${cookingEnglishIngredients})`
+  ].join('|'), 'gi');
+  const appendCookingText = (element, text) => {
+    let cursor = 0;
+    for (const match of text.matchAll(cookingTokens)) {
+      element.append(document.createTextNode(text.slice(cursor, match.index)));
+      const kind = Object.keys(match.groups).find(key => match.groups[key] !== undefined);
+      element.append(create('span', `cooking-text-${kind}`, match[0]));
+      cursor = match.index + match[0].length;
+    }
+    element.append(document.createTextNode(text.slice(cursor)));
+    return element;
+  };
   root.replaceChildren();
   const intro = create('p', 'cooking-flow-intro', t('推荐任务高亮显示；点选步骤可高亮关联任务。', 'Recommended tasks are highlighted. Select a step to highlight related tasks.'));
   const phases = create('div', 'cooking-flow-phases');
@@ -161,10 +190,11 @@
       row.append(button);
       if (instructions.has(node.id) || seasonings.has(node.id)) {
         const body = create('div', 'cooking-flow-instructions');
-        if (instructions.has(node.id)) body.append(create('p', '', instructions.get(node.id)));
+        if (instructions.has(node.id)) body.append(appendCookingText(create('p', ''), instructions.get(node.id)));
         if (seasonings.has(node.id)) {
           const seasoning = create('p', 'cooking-flow-seasoning');
-          seasoning.append(create('strong', '', t('调味：', 'Seasoning: ')), document.createTextNode(seasonings.get(node.id)));
+          seasoning.append(create('strong', '', t('调味：', 'Seasoning: ')));
+          appendCookingText(seasoning, seasonings.get(node.id));
           body.append(seasoning);
         }
         row.append(body);
