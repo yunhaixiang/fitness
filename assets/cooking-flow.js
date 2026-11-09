@@ -211,7 +211,9 @@
     let section = null;
     for (const child of [...page.children]) {
       if (child.tagName === 'H2') {
-        section = create('section', `cooking-section-card cooking-flow-card-${sectionGroups[child.id] || 'finish'}`);
+        section = create('section', child.id === 'dependencies'
+          ? 'cooking-section-overview'
+          : `cooking-section-card cooking-flow-card-${sectionGroups[child.id] || 'finish'}`);
         section.setAttribute('aria-labelledby', child.id);
         page.insertBefore(section, child);
       }
