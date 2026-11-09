@@ -41,13 +41,13 @@
     let parsed;
     try { parsed = JSON.parse(raw); } catch (_) { parsed = null; }
     const strings = value => Array.isArray(value) ? value.filter(x => typeof x === 'string') : [];
-    // Existing completed/running preheat steps imply that heating was already started.
-    for (const half of ['first', 'second']) {
-      const done = strings(parsed?.[half]), running = strings(parsed?.[half + 'Running']);
-      for (const id of ['oven-heat', 'air-heat']) if ((done.includes(id) || running.includes(id)) && !done.includes(id + '-start')) done.push(id + '-start');
-      if (parsed && typeof parsed === 'object') parsed[half] = done;
-    }
-    return { half: parsed?.half === 'second' ? 'second' : 'first', first: strings(parsed?.first), second: strings(parsed?.second), firstRunning: strings(parsed?.firstRunning), secondRunning: strings(parsed?.secondRunning) };
+    // Both halves now have identical tasks. Keep the previously selected batch,
+    // rather than merging marks from separate cooking sessions.
+    const legacyHalf = parsed?.half === 'second' ? 'second' : 'first';
+    const done = strings(parsed?.version === 2 ? parsed.done : parsed?.[legacyHalf]);
+    const running = strings(parsed?.version === 2 ? parsed.running : parsed?.[legacyHalf + 'Running']);
+    for (const id of ['oven-heat', 'air-heat']) if ((done.includes(id) || running.includes(id)) && !done.includes(id + '-start')) done.push(id + '-start');
+    return { version: 2, done, running };
   }
   const api = { derive, toggle, readState };
   if (typeof module !== 'undefined' && module.exports) module.exports = api;
@@ -64,19 +64,12 @@
   const panel = create('section', 'cooking-progress');
   panel.setAttribute('aria-label', t('本次做饭进度', 'Cooking Progress'));
   const toolbar = create('div', 'cooking-progress-toolbar');
-  const halves = create('div', 'cooking-guide-half');
-  const halfButtons = new Map();
-  for (const [id, label] of [['first', t('前半周', 'First Half')], ['second', t('后半周', 'Second Half')]]) {
-    const button = create('button', '', label); button.type = 'button';
-    button.addEventListener('click', () => { state.half = id; save(); render(); });
-    halfButtons.set(id, button); halves.append(button);
-  }
   const reset = create('button', 'cooking-guide-reset', t('重置本次', 'Reset This Batch')); reset.type = 'button';
   reset.addEventListener('click', () => {
-    if (!host.confirm(t('清除当前半周的完成记录，重新开始？', 'Clear completion marks for this half-week and start again?'))) return;
-    state[state.half] = []; state[state.half + 'Running'] = []; save(); render();
+    if (!host.confirm(t('清除本次做饭的完成记录，重新开始？', 'Clear progress for this batch and start again?'))) return;
+    state.done = []; state.running = []; save(); render();
   });
-  toolbar.append(halves, reset);
+  toolbar.append(reset);
   const status = create('div', 'cooking-progress-status'); status.setAttribute('role', 'status');
   const progress = create('progress', ''); progress.setAttribute('aria-label', t('完成进度', 'Completion Progress'));
   const suggestion = create('div', 'cooking-progress-suggestion');
@@ -96,7 +89,7 @@
     const badge = create('small', 'cooking-progress-badge');
     button.querySelector('.cooking-flow-step-copy').append(badge);
     label.append(checkbox); row.prepend(label); row.classList.add('has-progress');
-    checkbox.addEventListener('change', () => { state[state.half] = toggle(plan.nodes, state[state.half], state.half, node.id, checkbox.checked, state[state.half + 'Running']); render(); save(); });
+    checkbox.addEventListener('change', () => { state.done = toggle(plan.nodes, state.done, 'first', node.id, checkbox.checked, state.running); render(); save(); });
     controls.set(node.id, { checkbox, row, badge });
   }
   function save() {
@@ -115,9 +108,9 @@
     }); return button;
   }
   function render() {
-    const view = derive(plan.nodes, state[state.half], state.half, state[state.half + 'Running']);
-    state[state.half] = view.done;
-    state[state.half + 'Running'] = view.running;
+    const view = derive(plan.nodes, state.done, 'first', state.running);
+    state.done = view.done;
+    state.running = view.running;
     const done = new Set(view.done), available = new Set(view.available.map(n => n.id));
     for (const [id, c] of controls) {
       const checked = done.has(id);
@@ -130,7 +123,6 @@
       c.row.classList.toggle('is-recommended', id === view.recommended);
       c.badge.textContent = checked ? t('已完成', 'Done') : view.running.includes(id) ? t('进行中', 'In Progress') : id === view.recommended ? t('推荐下一步', 'Recommended') : available.has(id) ? (plan.nodes.find(n => n.id === id).confirmation ? t('待确认预热完成', 'Confirm When Preheated') : t('现在可做', 'Ready')) : t('等待前置任务', 'Waiting');
     }
-    for (const [id, button] of halfButtons) button.setAttribute('aria-pressed', String(state.half === id));
     progress.max = view.total; progress.value = done.size;
     status.textContent = t(`已完成 ${done.size} / ${view.total}`, `${done.size} / ${view.total} Completed`);
     suggestion.replaceChildren(); readyList.replaceChildren(); runningList.replaceChildren();
@@ -140,8 +132,8 @@
       const start = create('button', 'cooking-guide-minor', n.confirmation ? t('确认完成', 'Confirm Ready') : t('开始', 'Start')); start.type = 'button';
       start.setAttribute('aria-label', n.confirmation || n.instant ? t(...n.label) : t(`开始${n.label[0]}`, `Start ${n.label[1]}`));
       start.addEventListener('click', () => {
-        if (n.instant || n.confirmation) state[state.half] = toggle(plan.nodes, state[state.half], state.half, n.id, true, state[state.half + 'Running']);
-        else state[state.half + 'Running'].push(n.id);
+        if (n.instant || n.confirmation) state.done = toggle(plan.nodes, state.done, 'first', n.id, true, state.running);
+        else state.running.push(n.id);
         render(); save();
       });
       row.append(start); return row;
@@ -153,7 +145,7 @@
         row.append(pick(n, 'cooking-flow-chip'));
         const cancel = create('button', 'cooking-guide-minor', t('取消开始', 'Undo Start')); cancel.type = 'button';
         cancel.setAttribute('aria-label', t(`取消开始${n.label[0]}`, `Undo Start ${n.label[1]}`));
-        cancel.addEventListener('click', () => { state[state.half + 'Running'] = state[state.half + 'Running'].filter(x => x !== id); render(); save(); });
+        cancel.addEventListener('click', () => { state.running = state.running.filter(x => x !== id); render(); save(); });
         row.append(cancel); runningList.append(row);
       }
     }
@@ -167,5 +159,5 @@
     } else suggestion.append(create('strong', '', done.size === view.total ? t('本次做饭已全部完成', 'This Batch Is Complete') : t('等待进行中的任务完成，再勾选解锁下一步。', 'Finish an ongoing task and check it off to unlock the next steps.')));
   }
   host.addEventListener('storage', event => { if (event.key === key) { state = readState(event.newValue); render(); } });
-  render();
+  render(); save();
 })(typeof window === 'undefined' ? null : window);

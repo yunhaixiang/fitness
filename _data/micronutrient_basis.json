@@ -1,0 +1,566 @@
+{
+  "checked": "2026-11-08",
+  "fields": [
+    "calcium",
+    "iron",
+    "potassium",
+    "vitaminD",
+    "vitaminB12",
+    "iodine"
+  ],
+  "units": {
+    "calcium": "mg",
+    "iron": "mg",
+    "potassium": "mg",
+    "vitaminD": "mcg",
+    "vitaminB12": "mcg",
+    "iodine": "mcg"
+  },
+  "sources": {
+    "cnf2026": "https://open.canada.ca/data/en/dataset/1b6139bd-ed7e-4043-bc28-ff00e10f3109",
+    "soyLabel": "https://www.danonefoodservice.ca/wp-content/uploads/2021/02/DAN-7622_BookletPlantBased2020_ENG-Silk-Final.pdf",
+    "cerealLabel": "https://www.zehrs.ca/en/fibre-one-breakfast-cereal-crunchy-original-high-f/p/21411449_EA",
+    "haddockLabel": "https://www.highliner.com/products/pan-sear-selects/roasted-garlic-herbs-haddock-pan-sear-selects",
+    "tunaLabel": "https://www.cloverleaf.ca/en/products/low-sodium-flaked-light-tuna-skipjack-in-water/",
+    "curryLabel": "https://www.sbfoods-worldwide.com/products/search/005.html",
+    "iodineUSDA": "https://www.ars.usda.gov/ARSUserFiles/80400535/Data/Iodine/IODINE_DATABASE_RELEASE_4_PER_SERVING.pdf",
+    "canadianSalt": "https://inspection.canada.ca/en/food-labels/labelling/industry/salt",
+    "assumptions": "Explicit modeling assumptions recorded per food and below; not verified brand values."
+  },
+  "notes": [
+    "Micronutrient planning estimates for the current plan, not a measurement or product-label audit. Units match nutrition_basis.json; breakfast inputs are per 100 g. Numeric coverage is explicit; a missing field causes recalculation to fail.",
+    "Generic CNF 2026 edible raw weights match the plan. Cooking/draining losses are not modeled; branded convenience foods use generic proxies when no label data are available. These estimates must not be used to diagnose a nutrient deficiency. No invented confidence intervals.",
+    "Iodine varies substantially. Egg29 mcg is a 2:1 blend of boiled31 and raw/fried25 proxies for 12 boiled and6 fried eggs/week. Chicken cooked yield assumed75% for the roasted thigh proxy0.7 mcg/85 g. Salmon uses NIH/USDA cooked salmon11 mcg/85 g at75% yield. Haddock250 mcg/110 g raw is based on only3 USDA samples (range152–345 per110 g); 100 g fish per breaded fillet is assumed. Tuna7.4 mcg/85 g drained. Beef proxy6.4 mcg/85 g scaled to85 g meatball unit. Commercial salts are not automatically iodized; low-iodine plant/condiment allowances are estimates, not verified zeros.",
+    "Unquantified dry seasoning beyond noodle sauce, drinking-water minerals and zero-calorie beverages are omitted from these six micronutrient totals. Creatine contributes none. Fruit tray composition and kiwi edible size are assumptions.",
+    "Macro/calorie data remain unchanged by this micronutrient completion. Breakfast and drink mineral estimates are recalculated from the same documented ingredients instead of retaining old totals."
+  ],
+  "foods": {
+    "thigh": {
+      "values": {
+        "calcium": 7.0,
+        "iron": 0.81,
+        "potassium": 242.0,
+        "vitaminD": 0.0,
+        "vitaminB12": 0.61,
+        "iodine": 0.617647
+      },
+      "sources": [
+        "cnf2026",
+        "iodineUSDA"
+      ],
+      "basis": "CNF 853: Chicken, broiler, thigh, meat, raw; 100 g per recipe unit. Generic composition proxy, not the selected product label. Iodine from USDA generic-food proxy; see iodine assumptions."
+    },
+    "egg": {
+      "values": {
+        "calcium": 25.1055,
+        "iron": 0.879,
+        "potassium": 62.419,
+        "vitaminD": 0.769,
+        "vitaminB12": 0.751,
+        "iodine": 29
+      },
+      "sources": [
+        "cnf2026",
+        "iodineUSDA"
+      ],
+      "basis": "CNF 125: Egg, chicken, whole, fresh or frozen, raw; 50 g per recipe unit. Generic composition proxy, not the selected product label. Iodine from USDA generic-food proxy; see iodine assumptions."
+    },
+    "tortilla": {
+      "values": {
+        "calcium": 60.457222,
+        "iron": 1.488022,
+        "potassium": 226.14875,
+        "vitaminD": 0.0,
+        "vitaminB12": 0.0,
+        "iodine": 1
+      },
+      "sources": [
+        "cnf2026",
+        "assumptions"
+      ],
+      "basis": "CNF 7258: Tortilla, ready-to-bake / fry, whole grain (whole wheat); 61 g per recipe unit. Generic composition proxy, not the selected product label. Iodine is an explicit trace-composition allowance, not a laboratory result."
+    },
+    "pepper": {
+      "values": {
+        "calcium": 7.0,
+        "iron": 0.43,
+        "potassium": 211.0,
+        "vitaminD": 0.0,
+        "vitaminB12": 0.0,
+        "iodine": 0.5
+      },
+      "sources": [
+        "cnf2026",
+        "assumptions"
+      ],
+      "basis": "CNF 2484: Pepper, sweet, red, raw; 100 g per recipe unit. Generic composition proxy, not the selected product label. Iodine is an explicit trace-composition allowance, not a laboratory result."
+    },
+    "mayo": {
+      "values": {
+        "calcium": 0.3,
+        "iron": 0.007,
+        "potassium": 1.55,
+        "vitaminD": 0.0,
+        "vitaminB12": 0.0,
+        "iodine": 0.266667
+      },
+      "sources": [
+        "cnf2026",
+        "iodineUSDA"
+      ],
+      "basis": "CNF 5332: Salad dressing, mayonnaise, reduced fat; 5 g per recipe unit. Generic composition proxy, not the selected product label. Iodine from USDA generic-food proxy; see iodine assumptions."
+    },
+    "rice": {
+      "values": {
+        "calcium": 28.0,
+        "iron": 0.8,
+        "potassium": 115.0,
+        "vitaminD": 0.0,
+        "vitaminB12": 0.0,
+        "iodine": 0.2
+      },
+      "sources": [
+        "cnf2026",
+        "assumptions"
+      ],
+      "basis": "CNF 4471: Grains, rice, white, long-grain, regular, dry; 100 g per recipe unit. Generic composition proxy, not the selected product label. Iodine is an explicit trace-composition allowance, not a laboratory result."
+    },
+    "ball": {
+      "values": {
+        "calcium": 68.0,
+        "iron": 1.5045,
+        "potassium": 251.6,
+        "vitaminD": 0.085,
+        "vitaminB12": 0.85,
+        "iodine": 5.44
+      },
+      "sources": [
+        "cnf2026",
+        "iodineUSDA"
+      ],
+      "basis": "CNF 7424: Meatball, Italian style, frozen; 85 g per recipe unit. Generic composition proxy, not the selected product label. Iodine from USDA generic-food proxy; see iodine assumptions."
+    },
+    "shrimp": {
+      "values": {
+        "calcium": 54.0,
+        "iron": 0.21,
+        "potassium": 113.0,
+        "vitaminD": 0.1,
+        "vitaminB12": 1.11,
+        "iodine": 14.545455
+      },
+      "sources": [
+        "cnf2026",
+        "iodineUSDA"
+      ],
+      "basis": "CNF 3211: Crustaceans, shrimp, mixed species, raw; 100 g per recipe unit. Generic composition proxy, not the selected product label. Iodine from USDA generic-food proxy; see iodine assumptions."
+    },
+    "panko": {
+      "values": {
+        "calcium": 183.0,
+        "iron": 4.83,
+        "potassium": 196.0,
+        "vitaminD": 0.0,
+        "vitaminB12": 0.35,
+        "iodine": 2
+      },
+      "sources": [
+        "cnf2026",
+        "assumptions"
+      ],
+      "basis": "CNF 4069: Bread crumbs, dry, grated, plain; 100 g per recipe unit. Generic composition proxy, not the selected product label. Iodine is an explicit trace-composition allowance, not a laboratory result."
+    },
+    "pc": {
+      "values": {
+        "calcium": 23.0,
+        "iron": 0.75,
+        "potassium": 100.0,
+        "vitaminD": 0.0,
+        "vitaminB12": 0.0,
+        "iodine": 0.5
+      },
+      "sources": [
+        "cnf2026",
+        "assumptions"
+      ],
+      "basis": "CNF 2154: Peas and carrots, canned, solids and liquid; 100 g per recipe unit. Generic composition proxy, not the selected product label. Canned solids-and-liquid composition used for drained vegetables; actual drained product differs. Iodine is an explicit trace-composition allowance, not a laboratory result."
+    },
+    "pasta": {
+      "values": {
+        "calcium": 17.85,
+        "iron": 2.805,
+        "potassium": 189.55,
+        "vitaminD": 0.0,
+        "vitaminB12": 0.0,
+        "iodine": 0.2
+      },
+      "sources": [
+        "cnf2026",
+        "assumptions"
+      ],
+      "basis": "CNF 4515: Pasta (spaghetti, macaroni), enriched, dry; 85 g per recipe unit. Generic composition proxy, not the selected product label. Iodine is an explicit trace-composition allowance, not a laboratory result."
+    },
+    "ground": {
+      "values": {
+        "calcium": 6.0,
+        "iron": 0.82,
+        "potassium": 522.0,
+        "vitaminD": 0.0,
+        "vitaminB12": 0.56,
+        "iodine": 0.617647
+      },
+      "sources": [
+        "cnf2026",
+        "iodineUSDA"
+      ],
+      "basis": "CNF 918: Chicken, ground, lean, raw; 100 g per recipe unit. Generic composition proxy, not the selected product label. Missing D uses raw skinless thigh proxy (0 mcg), not an automatic missing-value zero. Iodine from USDA generic-food proxy; see iodine assumptions."
+    },
+    "zucchini": {
+      "values": {
+        "calcium": 16.0,
+        "iron": 0.37,
+        "potassium": 261.0,
+        "vitaminD": 0.0,
+        "vitaminB12": 0.0,
+        "iodine": 0.5
+      },
+      "sources": [
+        "cnf2026",
+        "assumptions"
+      ],
+      "basis": "CNF 2225: Squash, summer, zucchini, raw; 100 g per recipe unit. Generic composition proxy, not the selected product label. Iodine is an explicit trace-composition allowance, not a laboratory result."
+    },
+    "sauce": {
+      "values": {
+        "calcium": 18.48,
+        "iron": 1.2672,
+        "potassium": 392.04,
+        "vitaminD": 0.0,
+        "vitaminB12": 0.0,
+        "iodine": 2.1
+      },
+      "sources": [
+        "cnf2026",
+        "iodineUSDA"
+      ],
+      "basis": "CNF 2465: Tomato products, canned, sauce; 132 g per recipe unit. Generic composition proxy, not the selected product label. Iodine from USDA generic-food proxy; see iodine assumptions."
+    },
+    "potato": {
+      "values": {
+        "calcium": 12.0,
+        "iron": 0.81,
+        "potassium": 425.0,
+        "vitaminD": 0.0,
+        "vitaminB12": 0.0,
+        "iodine": 0.5
+      },
+      "sources": [
+        "cnf2026",
+        "assumptions"
+      ],
+      "basis": "CNF 2505: Potato, flesh and skin, raw; 100 g per recipe unit. Generic composition proxy, not the selected product label. Iodine is an explicit trace-composition allowance, not a laboratory result."
+    },
+    "ribs": {
+      "values": {
+        "calcium": 37.083803,
+        "iron": 0.97431,
+        "potassium": 292.729577,
+        "vitaminD": 0.299296,
+        "vitaminB12": 0.658451,
+        "iodine": 1
+      },
+      "sources": [
+        "cnf2026",
+        "assumptions"
+      ],
+      "basis": "CNF 1894: Pork, back ribs, lean and fat, roasted; 140 g per recipe unit. Generic composition proxy, not the selected product label. Prepared BBQ product model: roasted pork scaled to its declared 17 g protein plus 40 g BBQ sauce per 140 g edible product; no bone weight counted. Iodine is an explicit trace-composition allowance, not a laboratory result."
+    },
+    "spinach": {
+      "values": {
+        "calcium": 99.0,
+        "iron": 2.71,
+        "potassium": 558.0,
+        "vitaminD": 0.0,
+        "vitaminB12": 0.0,
+        "iodine": 2
+      },
+      "sources": [
+        "cnf2026",
+        "assumptions"
+      ],
+      "basis": "CNF 2213: Spinach, raw; 100 g per recipe unit. Generic composition proxy, not the selected product label. Iodine is an explicit trace-composition allowance, not a laboratory result."
+    },
+    "mushroom": {
+      "values": {
+        "calcium": 18.0,
+        "iron": 0.4,
+        "potassium": 448.0,
+        "vitaminD": 0.1,
+        "vitaminB12": 0.1,
+        "iodine": 1
+      },
+      "sources": [
+        "cnf2026",
+        "assumptions"
+      ],
+      "basis": "CNF 4974: Mushroom, brown, Italian (crimini), raw; 100 g per recipe unit. Generic composition proxy, not the selected product label. Iodine is an explicit trace-composition allowance, not a laboratory result."
+    },
+    "bread": {
+      "values": {
+        "calcium": 75.0,
+        "iron": 1.7325,
+        "potassium": 161.25,
+        "vitaminD": 0.2475,
+        "vitaminB12": 0.1245,
+        "iodine": 1.5
+      },
+      "sources": [
+        "cnf2026",
+        "iodineUSDA"
+      ],
+      "basis": "CNF 7196: Bread, whole grain (whole wheat), commercial; 75 g per recipe unit. Generic composition proxy, not the selected product label. Two slices assumed 75 g; dairy-containing generic bread may overstate trace D/B12. Iodine from USDA generic-food proxy; see iodine assumptions."
+    },
+    "tomato": {
+      "values": {
+        "calcium": 10.0,
+        "iron": 0.27,
+        "potassium": 237.0,
+        "vitaminD": 0.0,
+        "vitaminB12": 0.0,
+        "iodine": 1
+      },
+      "sources": [
+        "cnf2026",
+        "assumptions"
+      ],
+      "basis": "CNF 2460: Tomato, red, ripe, raw, year round average; 100 g per recipe unit. Generic composition proxy, not the selected product label. Iodine is an explicit trace-composition allowance, not a laboratory result."
+    },
+    "salmon": {
+      "values": {
+        "calcium": 12.0,
+        "iron": 0.34,
+        "potassium": 450.0,
+        "vitaminD": 11.71,
+        "vitaminB12": 2.67,
+        "iodine": 9.705882
+      },
+      "sources": [
+        "cnf2026",
+        "iodineUSDA"
+      ],
+      "basis": "CNF 3184: Fish, salmon, coho, farmed, raw; 100 g per recipe unit. Generic composition proxy, not the selected product label. Iodine from USDA generic-food proxy; see iodine assumptions."
+    },
+    "noodle": {
+      "values": {
+        "calcium": 18.0,
+        "iron": 0.7,
+        "potassium": 30.0,
+        "vitaminD": 0.0,
+        "vitaminB12": 0.0,
+        "iodine": 0.2
+      },
+      "sources": [
+        "cnf2026",
+        "assumptions"
+      ],
+      "basis": "CNF 4888: Pasta, rice noodles, dry; 100 g per recipe unit. Generic composition proxy, not the selected product label. Iodine is an explicit trace-composition allowance, not a laboratory result."
+    },
+    "haddock": {
+      "values": {
+        "calcium": 20,
+        "iron": 0.5,
+        "potassium": 300,
+        "vitaminD": 0.23,
+        "vitaminB12": 1.83,
+        "iodine": 227.272727
+      },
+      "sources": [
+        "cnf2026",
+        "haddockLabel",
+        "iodineUSDA"
+      ],
+      "basis": "CNF 3198: Fish, haddock, raw; 100 g per recipe unit. Generic composition proxy, not the selected product label. Ca/Fe/K overridden by High Liner label per 127 g fillet. D/B12/iodine use 100 g raw haddock per fillet as a fish-content proxy; breading included in label minerals, not in the fish micronutrient proxy. Iodine from USDA generic-food proxy; see iodine assumptions."
+    },
+    "tuna": {
+      "values": {
+        "calcium": 0,
+        "iron": 0.75,
+        "potassium": 75,
+        "vitaminD": 4,
+        "vitaminB12": 1.6445,
+        "iodine": 4.788235
+      },
+      "sources": [
+        "cnf2026",
+        "tunaLabel",
+        "iodineUSDA"
+      ],
+      "basis": "CNF 3131: Fish, tuna, light, canned in water, drained, unsalted; 55 g per recipe unit. Generic composition proxy, not the selected product label. Ca/Fe/K/D overridden by Clover Leaf label per 55 g drained half-can. Iodine from USDA generic-food proxy; see iodine assumptions."
+    },
+    "chickpea": {
+      "values": {
+        "calcium": 45.0,
+        "iron": 1.07,
+        "potassium": 126.0,
+        "vitaminD": 0.0,
+        "vitaminB12": 0.0,
+        "iodine": 0.5
+      },
+      "sources": [
+        "cnf2026",
+        "assumptions"
+      ],
+      "basis": "CNF 7060: Chickpeas (garbanzo beans, bengal gram), canned, drained solids; 100 g per recipe unit. Generic composition proxy, not the selected product label. Iodine is an explicit trace-composition allowance, not a laboratory result."
+    },
+    "kiwi": {
+      "values": {
+        "calcium": 34.0,
+        "iron": 0.31,
+        "potassium": 312.0,
+        "vitaminD": 0.0,
+        "vitaminB12": 0.0,
+        "iodine": 0.3
+      },
+      "sources": [
+        "cnf2026",
+        "assumptions"
+      ],
+      "basis": "CNF 1585: Kiwi fruit, raw; 100 g per recipe unit. Generic composition proxy, not the selected product label. Iodine is an explicit trace-composition allowance, not a laboratory result."
+    },
+    "oil": {
+      "values": {
+        "calcium": 0,
+        "iron": 0,
+        "potassium": 0,
+        "vitaminD": 0,
+        "vitaminB12": 0,
+        "iodine": 0
+      },
+      "sources": [
+        "assumptions"
+      ],
+      "basis": "One teaspoon olive oil; trace minerals ignored, vitamins D/B12 absent."
+    },
+    "salt": {
+      "values": {
+        "calcium": 0,
+        "iron": 0,
+        "potassium": 0,
+        "vitaminD": 0,
+        "vitaminB12": 0,
+        "iodine": 458.7
+      },
+      "sources": [
+        "canadianSalt"
+      ],
+      "basis": "One teaspoon assumed 6 g. Canadian table salt 0.01% potassium iodide; iodine fraction 126.9/166.0 gives 458.7 mcg. Only separately added salt counted; no iodization assumed for processed-food sodium. No cooking/storage-loss correction."
+    },
+    "curry": {
+      "values": {
+        "calcium": 9,
+        "iron": 1,
+        "potassium": 48,
+        "vitaminD": 0,
+        "vitaminB12": 0,
+        "iodine": 0
+      },
+      "sources": [
+        "curryLabel",
+        "assumptions"
+      ],
+      "basis": "S&B label per 18 g: Ca, Fe, K and D. B12 absent from plant-based unfortified ingredients; iodine unmeasured, trace contribution omitted."
+    },
+    "dumpling": {
+      "values": {
+        "calcium": 15.8182,
+        "iron": 1.7613,
+        "potassium": 202.5413,
+        "vitaminD": 0.0,
+        "vitaminB12": 0.14,
+        "iodine": 0.2
+      },
+      "sources": [
+        "cnf2026",
+        "assumptions"
+      ],
+      "basis": "Per four dumplings/96 g excluding sauce: surrogate 30 g dry wheat flour, 25 g cabbage, 25 g raw ground chicken and 16 g water. Ratios assumed, not manufacturer recipe; iodine trace estimate 0.2 mcg."
+    },
+    "noodleSauce": {
+      "values": {
+        "calcium": 8.261,
+        "iron": 0.24795,
+        "potassium": 64.429,
+        "vitaminD": 0.0,
+        "vitaminB12": 0.039,
+        "iodine": 0.8
+      },
+      "sources": [
+        "cnf2026",
+        "iodineUSDA",
+        "assumptions"
+      ],
+      "basis": "One meal: fish sauce 3 g, combined soy sauces 5.3 g, oyster sauce 6 g, garlic powder 0.8 g, chili 5 g, basil 1 g. Density/leaf-weight assumptions; iodine 0.8 mcg proxy dominated by fish sauce."
+    },
+    "soy": {
+      "values": {
+        "calcium": 120.0,
+        "iron": 0.4,
+        "potassium": 140.0,
+        "vitaminD": 0.8,
+        "vitaminB12": 0.4,
+        "iodine": 1.316872
+      },
+      "sources": [
+        "soyLabel",
+        "iodineUSDA"
+      ],
+      "basis": "Per 100 g, treating 1 g as 1 mL to match the existing plan. Canadian Silk Unsweetened label per 250 mL. Iodine uses unfortified soy beverage 3.2 mcg/243 g; do not use US Silk iodine fortification."
+    },
+    "cereal": {
+      "values": {
+        "calcium": 403.225806,
+        "iron": 12.903226,
+        "potassium": 241.935484,
+        "vitaminD": 0,
+        "vitaminB12": 0,
+        "iodine": 0
+      },
+      "sources": [
+        "cerealLabel",
+        "assumptions"
+      ],
+      "basis": "Canadian Fibre One Original 587 g label per 62 g: Ca250 mg, Fe8 mg, K150 mg, D/B12 zero. Iodine not declared; negligible trace estimate, no iodine fortification assumed."
+    },
+    "fruit": {
+      "values": {
+        "calcium": 10.2,
+        "iron": 0.264,
+        "potassium": 173.8,
+        "vitaminD": 0.0,
+        "vitaminB12": 0.0,
+        "iodine": 0.3
+      },
+      "sources": [
+        "cnf2026",
+        "iodineUSDA",
+        "assumptions"
+      ],
+      "basis": "Per 100 g fruit tray: equal edible weights cantaloupe, honeydew, watermelon, pineapple, strawberry (CNF 1721/1605/1691/1734/1749). Actual fruit proportions unknown. Iodine 0.3 mcg/100 g trace proxy."
+    }
+  },
+  "extraRecipes": {
+    "fruit_breakfast": {
+      "soy": 2.7,
+      "cereal": 0.419,
+      "fruit": 3.3333333333333335
+    },
+    "kiwi_breakfast": {
+      "soy": 2.7,
+      "cereal": 0.419,
+      "kiwi": 1.38
+    },
+    "outside_drink": {
+      "soy": 2.7
+    }
+  }
+}

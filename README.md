@@ -39,4 +39,6 @@
 
 `_data/nutrition_basis.json` 保存食材系数、标签参考和假设，`_data/meal_nutrition.json` 保存每餐数值。用 `scripts/recalculate-nutrition.py` 重算，核对餐单、购物、流程和营养一致后发布。购买费用按周期折算，生重、干重与含骨包装重量不混用。
 
-做饭任务依赖页加载 `cooking-progress.js`，保留前／后半周进度、开始／完成、刷新恢复与推荐高亮。独立计时跟做模块仍按之前要求隐藏。
+做饭任务依赖页加载 `cooking-progress.js`，使用统一的本次做饭进度，保留开始／完成、刷新恢复与推荐高亮；旧的前／后半周记录自动迁移当前选中的一批。独立计时跟做模块仍按之前要求隐藏。
+
+六项微量营养由 `_data/micronutrient_basis.json` 提供逐项数值、来源和假设，随 `scripts/recalculate-nutrition.py` 重算每餐和日均值；没有来源的商品项目使用明确记录的成分代理估算，不能当作实测值。

@@ -35,12 +35,13 @@ test('hot air fryer takes priority and long rice chain comes before short vegeta
  const ready = derive(nodes,['cold-first','prep-rice']).available.map(n=>n.id);
  assert.ok(ready.indexOf('rice') < ready.indexOf('mushroom'));
 });
-test('progress survives serialization, halves are independent, and damaged storage is safe', () => {
- const state = readState(JSON.stringify({half:'second',first:['cold-first','prep-rice'],second:['cold-second']}));
- assert.equal(state.half,'second'); assert.equal(state.first.length,2); assert.equal(state.second.length,1);
- state.second=[]; assert.equal(state.first.length,2);
- assert.deepEqual(readState('{broken'),{half:'first',first:[],second:[],firstRunning:[],secondRunning:[]});
- assert.deepEqual(readState('{"first":[{},null,5,"rice"]}').first,['rice']);
+test('legacy progress keeps the selected batch without merging two sessions', () => {
+ const state = readState(JSON.stringify({half:'second',first:['prep-rice'],second:['prep-salmon'],secondRunning:['air-heat']}));
+ assert.deepEqual(state,{version:2,done:['prep-salmon','air-heat-start'],running:['air-heat']});
+ assert.deepEqual(readState(JSON.stringify(state)),state);
+ assert.deepEqual(readState('{broken'),{version:2,done:[],running:[]});
+ assert.deepEqual(readState('{"first":[{},null,5,"rice"]}').done,['rice']);
+ assert.deepEqual(readState(JSON.stringify({version:2,done:[],running:[],first:['rice']})).done,[]);
 });
 test('all current tasks can complete', () => {
  const done = nodes.map(n => n.id);
@@ -76,5 +77,5 @@ for (const [kind, prep, food] of [['oven', 'prep-chicken', 'chicken'], ['air', '
 }
 test('saved preheat completion survives the split into two steps', () => {
  const state = readState(JSON.stringify({first:['cold-first','oven-heat','prep-chicken','chicken'],second:[]}));
- assert.ok(derive(nodes,state.first).done.includes('chicken'));
+ assert.ok(derive(nodes,state.done).done.includes('chicken'));
 });

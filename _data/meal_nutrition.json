@@ -25,9 +25,12 @@
       "sugar": "31.1",
       "cholesterol": "0",
       "sodium": "263",
-      "calcium": "529",
-      "iron": "7.5",
-      "potassium": "1047"
+      "calcium": "526.952",
+      "iron": "7.366",
+      "potassium": "1058.704",
+      "vitaminD": "2.160",
+      "vitaminB12": "1.080",
+      "iodine": "4.556"
     },
     "kiwi_breakfast": {
       "label": "周三—周六早餐（奇异果2个）",
@@ -42,9 +45,12 @@
       "sugar": "15.8",
       "cholesterol": "0",
       "sodium": "251",
-      "calcium": "540",
-      "iron": "7.2",
-      "potassium": "948"
+      "calcium": "539.872",
+      "iron": "6.914",
+      "potassium": "909.931",
+      "vitaminD": "2.160",
+      "vitaminB12": "1.080",
+      "iodine": "3.970"
     },
     "outside_drink": {
       "label": "餐外饮品",
@@ -59,9 +65,12 @@
       "sugar": "1.1",
       "cholesterol": "0",
       "sodium": "97",
-      "calcium": "323",
-      "iron": "0.9",
-      "potassium": "377"
+      "calcium": "324.000",
+      "iron": "1.080",
+      "potassium": "378.000",
+      "vitaminD": "2.160",
+      "vitaminB12": "1.080",
+      "iodine": "3.556"
     },
     "potato": {
       "kcal": "696",
@@ -74,7 +83,13 @@
       "sodium": "1415",
       "cholesterol": "386",
       "epaDha": "0.09",
-      "label": "potato"
+      "label": "potato",
+      "calcium": "223.823",
+      "iron": "6.788",
+      "potassium": "1888.333",
+      "vitaminD": "1.680",
+      "vitaminB12": "2.570",
+      "iodine": "74.117"
     },
     "wrap": {
       "kcal": "701",
@@ -87,7 +102,13 @@
       "sodium": "962",
       "cholesterol": "443",
       "epaDha": "0.13",
-      "label": "wrap"
+      "label": "wrap",
+      "calcium": "154.422",
+      "iron": "5.465",
+      "potassium": "1010.215",
+      "vitaminD": "1.153",
+      "vitaminB12": "2.190",
+      "iodine": "68.412"
     },
     "rice": {
       "kcal": "703",
@@ -100,7 +121,13 @@
       "sodium": "1650",
       "cholesterol": "520",
       "epaDha": "0.23",
-      "label": "rice"
+      "label": "rice",
+      "calcium": "134.824",
+      "iron": "5.048",
+      "potassium": "688.097",
+      "vitaminD": "2.153",
+      "vitaminB12": "3.708",
+      "iodine": "300.517"
     },
     "pasta": {
       "kcal": "700",
@@ -113,7 +140,13 @@
       "sodium": "654",
       "cholesterol": "297",
       "epaDha": "0.15",
-      "label": "pasta"
+      "label": "pasta",
+      "calcium": "92.949",
+      "iron": "6.542",
+      "potassium": "2342.398",
+      "vitaminD": "0.385",
+      "vitaminB12": "1.647",
+      "iodine": "19.563"
     },
     "bread": {
       "kcal": "700",
@@ -126,7 +159,13 @@
       "sodium": "988",
       "cholesterol": "380",
       "epaDha": "0.32",
-      "label": "bread"
+      "label": "bread",
+      "calcium": "162.562",
+      "iron": "5.982",
+      "potassium": "1089.556",
+      "vitaminD": "5.140",
+      "vitaminB12": "3.646",
+      "iodine": "60.483"
     },
     "dumpling": {
       "kcal": "703",
@@ -139,7 +178,13 @@
       "sodium": "957",
       "cholesterol": "294",
       "epaDha": "1.96",
-      "label": "dumpling"
+      "label": "dumpling",
+      "calcium": "156.092",
+      "iron": "6.899",
+      "potassium": "1914.786",
+      "vitaminD": "19.562",
+      "vitaminB12": "5.325",
+      "iodine": "80.745"
     },
     "noodles": {
       "kcal": "701",
@@ -152,7 +197,13 @@
       "sodium": "2367",
       "cholesterol": "499",
       "epaDha": "0.34",
-      "label": "noodles"
+      "label": "noodles",
+      "calcium": "207.544",
+      "iron": "4.668",
+      "potassium": "782.373",
+      "vitaminD": "0.939",
+      "vitaminB12": "3.456",
+      "iodine": "70.716"
     }
   }
 }

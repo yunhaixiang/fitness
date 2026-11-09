@@ -147,32 +147,32 @@ visual: true
 </tr>
 <tr>
 <td>钙</td>
-<td data-en="Pending Verification">待核对</td>
+<td>1,182 mg</td>
 <td>1,000 mg</td>
 </tr>
 <tr>
 <td>铁</td>
-<td data-en="Pending Verification">待核对</td>
+<td>20.0 mg</td>
 <td>8 mg</td>
 </tr>
 <tr>
 <td>钾</td>
-<td data-en="Pending Verification">待核对</td>
+<td>4,128 mg</td>
 <td>≥3,400 mg</td>
 </tr>
 <tr>
 <td>维生素D</td>
-<td data-en="Pending Verification">待核对</td>
+<td>13.2 µg</td>
 <td>15 µg</td>
 </tr>
 <tr>
 <td>维生素B12</td>
-<td data-en="Pending Verification">待核对</td>
+<td>8.6 µg</td>
 <td>2.4 µg</td>
 </tr>
 <tr>
 <td>碘</td>
-<td data-en="Pending Verification">待核对</td>
+<td>201 µg</td>
 <td>150 µg</td>
 </tr>
 <tr>
@@ -205,4 +205,4 @@ visual: true
 
 <script type="application/json" id="cardio-energy-baseline">{{ site.data.plan_metrics | jsonify }}</script>
 
-<!-- Revised meal estimates: _data/nutrition_basis.json. Daily totals include 3 fruit breakfasts, 4 kiwi breakfasts, 7 soy drinks and 2 of each main meal. Micronutrient totals pending a complete product-label audit; retired-plan values are not reused. Added sugar and ALA remain broad composition estimates. -->
+<!-- Revised meal estimates: _data/nutrition_basis.json. Daily totals include 3 fruit breakfasts, 4 kiwi breakfasts, 7 soy drinks and 2 of each main meal. Micronutrient point estimates use _data/micronutrient_basis.json (Canadian labels, CNF 2026, USDA iodine proxies and documented recipe assumptions); they are not measured product totals. Added sugar and ALA remain broad composition estimates. -->
