@@ -5,7 +5,7 @@ description: 每周购买与按需补货
 permalink: /shopping/
 visual: true
 ---
-<div class="utility-bar"><label>查找食材 <input id="shopping-search" type="search" placeholder="搜索食材或商品"></label></div>
+<div class="utility-bar"><label>查找食材 <input id="shopping-search" type="search" placeholder="搜索食材或商品"></label><button type="button" id="shopping-reset">清空本周勾选</button></div>
 <div class="table-wrap">
 <table class="plan-table shopping-table">
 <thead>

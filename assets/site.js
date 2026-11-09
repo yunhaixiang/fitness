@@ -1,15 +1,96 @@
-// Read-only shopping search; no completion or plan data is written by visitors.
+const weekStart = new Date();
+weekStart.setHours(0, 0, 0, 0);
+weekStart.setDate(weekStart.getDate() - ((weekStart.getDay() + 6) % 7));
+const weekKey = `${weekStart.getFullYear()}-${String(weekStart.getMonth() + 1).padStart(2, '0')}-${String(weekStart.getDate()).padStart(2, '0')}`;
+const trainingBoxes = [...document.querySelectorAll('.training-table input[type="checkbox"][aria-label]')];
+const localDay = () => {
+  const date = new Date();
+  return `${date.getFullYear()}-${String(date.getMonth() + 1).padStart(2, '0')}-${String(date.getDate()).padStart(2, '0')}`;
+};
+let trainingDay = localDay();
+const clearPreviousTrainingChecks = () => {
+  try {
+    if (localStorage.getItem('fitness-check-date') === trainingDay) return;
+    for (const key of Object.keys(localStorage)) {
+      if (key.startsWith('fitness-check:')) localStorage.removeItem(key);
+    }
+    localStorage.setItem('fitness-check-date', trainingDay);
+  } catch (_) { /* storage disabled */ }
+};
+const syncTrainingDay = () => {
+  const today = localDay();
+  if (today === trainingDay) return;
+  trainingDay = today;
+  clearPreviousTrainingChecks();
+  for (const box of trainingBoxes) box.checked = false;
+  document.dispatchEvent(new Event('fitness:training-day-reset'));
+};
+if (trainingBoxes.length) {
+  clearPreviousTrainingChecks();
+  for (const box of trainingBoxes) {
+    const label = window.fitnessI18n?.originalAttribute(box, 'aria-label') || box.getAttribute('aria-label');
+    try { box.checked = localStorage.getItem(`fitness-check:${trainingDay}:${label}`) === '1'; } catch (_) { /* storage disabled */ }
+    box.addEventListener('change', () => {
+      const checked = box.checked;
+      syncTrainingDay();
+      box.checked = checked;
+      try { localStorage.setItem(`fitness-check:${trainingDay}:${label}`, checked ? '1' : '0'); } catch (_) { /* storage disabled */ }
+    });
+  }
+  const scheduleDayReset = () => {
+    const next = new Date();
+    next.setHours(24, 0, 0, 100);
+    setTimeout(() => { syncTrainingDay(); scheduleDayReset(); }, next - new Date());
+  };
+  scheduleDayReset();
+  window.addEventListener('focus', syncTrainingDay);
+  document.addEventListener('visibilitychange', () => { if (!document.hidden) syncTrainingDay(); });
+}
+
+const shoppingStorageKey = (item) => window.fitnessMealPlan?.storageKey(`fitness-shopping:${weekKey}:${item}`) || `fitness-shopping:${weekKey}:${item}`;
 const shoppingTable = document.querySelector('.shopping-table');
 if (shoppingTable) {
+  const heading = document.createElement('th');
+  heading.className = 'check-head';
+  heading.scope = 'col';
+  heading.textContent = '已买';
+  shoppingTable.querySelector('thead tr').prepend(heading);
   const rows = [...shoppingTable.querySelectorAll('tbody tr')];
   for (const row of rows) {
     const name = row.cells[0]?.textContent.trim();
-    row.dataset.itemKey = window.fitnessI18n?.original(row.cells[0]?.firstChild) || name;
-    row.dataset.restock = String(/按需|as needed/i.test(row.cells[2]?.textContent || ''));
+    const originalName = window.fitnessI18n?.original(row.cells[0]?.firstChild) || name;
+    row.dataset.itemKey = originalName;
+    const frequency = row.cells[2]?.textContent.trim() || "";
+    row.dataset.restock = String(/按需|as needed/i.test(frequency));
+    const cell = document.createElement('td');
+    cell.className = 'check-cell';
+    if (name && originalName !== '每周合计') {
+      const box = document.createElement('input');
+      box.type = 'checkbox';
+      box.setAttribute('aria-label', `已购买${name}`);
+      const key = shoppingStorageKey(originalName);
+      try { box.checked = localStorage.getItem(key) === '1'; } catch (_) { /* storage disabled */ }
+      row.classList.toggle('is-checked', box.checked);
+      box.addEventListener('change', () => {
+        row.classList.toggle('is-checked', box.checked);
+        try { localStorage.setItem(key, box.checked ? '1' : '0'); } catch (_) { /* storage disabled */ }
+      });
+      cell.append(box);
+    }
+    row.prepend(cell);
   }
   document.querySelector('#shopping-search')?.addEventListener('input', (event) => {
     const query = event.target.value.trim().toLocaleLowerCase();
     for (const row of rows) row.hidden = !!query && !row.textContent.toLocaleLowerCase().includes(query);
+  });
+  document.querySelector('#shopping-reset')?.addEventListener('click', () => {
+    for (const row of rows) {
+      const box = row.querySelector('input[type="checkbox"]');
+      if (!box) continue;
+      box.checked = false;
+      row.classList.remove('is-checked');
+      try { localStorage.removeItem(shoppingStorageKey(row.dataset.itemKey)); } catch (_) { /* storage disabled */ }
+    }
   });
 }
 window.fitnessI18n?.apply();
