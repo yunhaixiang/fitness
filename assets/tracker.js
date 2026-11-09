@@ -14,8 +14,9 @@
   const blank = () => Object.fromEntries(names.map((name) => [name, []]));
   let records = blank();
   let legacyRecords = {};
+  let publishedCurrent = {};
   // Keep removed categories available in backups, without displaying or rewriting them.
-  const storedRecords = () => ({ ...legacyRecords, ...records });
+  const storedRecords = () => ({ ...legacyRecords, ...records, currentBody: publishedCurrent });
   let active = 'body';
   const dateString = (d) => `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}-${String(d.getDate()).padStart(2, '0')}`;
   const today = () => dateString(new Date());
@@ -25,6 +26,7 @@
   if (saved) { try { const parsed = JSON.parse(saved); legacyRecords = parsed; for (const name of names) if (Array.isArray(parsed[name])) records[name] = parsed[name]; } catch (_) { /* keep blank */ } }
   try {
     const published = JSON.parse(document.getElementById('tracking-records')?.textContent || '{}');
+    publishedCurrent = published.currentBody || {};
     for (const name of names) {
       const canonical = Array.isArray(published[name]) ? published[name] : [];
       const ids = new Set(canonical.map((row) => row.id).filter(Boolean));
@@ -37,8 +39,8 @@
   function renderMetrics() {
     const host = document.querySelector('#latest-metrics'); host.replaceChildren();
     const body = window.fitnessBodyMetrics || latest('body');
-    host.append(metric('最新体重', body?.weight ? `${body.weight} kg` : '—'), metric('最近体脂率', body?.bf ? `${body.bf}%` : '—'));
-    if (names.every((name) => records[name].length === 0)) host.setAttribute('aria-label', '还没有记录');
+    host.append(metric('当前体重', body?.weight ? `${body.weight} kg` : '—'), metric('当前体脂率', body?.bf ? `${body.bf}%` : '—'));
+    if (!body?.weight && !body?.bf && names.every((name) => records[name].length === 0)) host.setAttribute('aria-label', '还没有记录');
     else host.removeAttribute('aria-label');
   }
   function buildPanel(name) {
@@ -61,6 +63,12 @@
   function renderList(name) {
     const host = document.querySelector(`[data-list="${name}"]`); host.replaceChildren();
     const rows = recent(name);
+    // Show the shared current reading even when this browser has no dated history.
+    // Do not invent a measurement date or add an undated reading to the chart.
+    if (name === 'body' && (publishedCurrent.weight || publishedCurrent.bf) && !rows.some(row =>
+      Number(row.weight) === Number(publishedCurrent.weight) && Number(row.bf) === Number(publishedCurrent.bf))) {
+      rows.unshift({ ...publishedCurrent, date: '当前数据' });
+    }
     if (!rows.length) { const empty = document.createElement('p'); empty.className = 'empty-state'; empty.textContent = '还没有最近 8 周的记录。'; host.append(empty); return; }
     const list = document.createElement('div'); list.className = 'record-card-grid';
     for (const row of rows) { const card = document.createElement('article'); card.className = 'record-card';

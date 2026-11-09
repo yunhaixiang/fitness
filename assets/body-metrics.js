@@ -2,13 +2,13 @@
 (() => {
   'use strict';
   function resolve(current = {}, published = [], legacy = []) {
-    const canonical = Array.isArray(published) ? published : [];
+    const canonical = Array.isArray(published) ? published.filter(row => row && typeof row === 'object') : [];
     const ids = new Set(canonical.map(row => row.id).filter(Boolean));
-    const rows = [...canonical, ...(Array.isArray(legacy) ? legacy : []).filter(row => !ids.has(row.id))]
+    const rows = [...canonical, ...(Array.isArray(legacy) ? legacy : []).filter(row => row && !ids.has(row.id))]
       .filter(row => row && typeof row.date === 'string').sort((a, b) => b.date.localeCompare(a.date));
     const valid = (value, key) => value !== '' && value != null && Number.isFinite(Number(value)) && Number(value) > 0 && (key !== 'bf' || Number(value) <= 100);
     return Object.fromEntries(['weight', 'bf'].map(key => {
-      const value = rows.find(row => valid(row[key], key))?.[key] ?? current[key];
+      const value = valid(current?.[key], key) ? current[key] : rows.find(row => valid(row[key], key))?.[key];
       return [key, valid(value, key) ? Number(value) : null];
     }));
   }

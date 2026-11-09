@@ -18,10 +18,10 @@ hide_hero: true
 {% endfor %}
 <div class="overview-metrics" aria-label="当前数据">
   <a class="overview-metric" href="{{ '/tracker/' | relative_url }}">
-    <span>当前体重</span><strong><span data-body-value="weight">{{ latest_weight | default: current_body.weight | default: '—' }}</span> <small>kg</small></strong>
+    <span>当前体重</span><strong><span data-body-value="weight">{{ current_body.weight | default: latest_weight | default: '—' }}</span> <small>kg</small></strong>
   </a>
   <a class="overview-metric" href="{{ '/tracker/' | relative_url }}">
-    <span>当前体脂率</span><strong><span data-body-value="bf">{{ latest_bf | default: current_body.bf | default: '—' }}</span> <small>%</small></strong>
+    <span>当前体脂率</span><strong><span data-body-value="bf">{{ current_body.bf | default: latest_bf | default: '—' }}</span> <small>%</small></strong>
   </a>
   <a class="overview-metric" href="{{ '/stats/' | relative_url }}">
     <span>日均赤字</span><strong data-energy="dailyDeficit">{{ site.data.plan_metrics.weekly_deficit_precise | divided_by: 7.0 | round }} <small>kcal／天</small></strong>

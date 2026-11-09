@@ -23,3 +23,11 @@ test('repository corrections override duplicate legacy IDs and newer legacy date
   assert.deepEqual(resolve({}, published, legacy), {weight:76.4,bf:31.2});
   assert.equal(legacy[0].weight, 99);
 });
+
+test('shared current measurements take precedence over stale browser history', () => {
+  const current = {weight:76.5, bf:31.2};
+  const old = [{date:'2026-11-08',weight:79,bf:21}];
+  assert.deepEqual(resolve(current, [], old), current);
+  assert.deepEqual(resolve(current, [], []), current);
+  assert.deepEqual(resolve({weight:76.5}, [], old), {weight:76.5,bf:21});
+});

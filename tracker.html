@@ -6,8 +6,10 @@ permalink: /tracker/
 wide: true
 tracker: true
 ---
-<div class="tracker-intro"><p>这里只展示记录；更新请通过对话提交。显示最近 8 周，原有浏览器记录仍可查看和导出。</p></div>
-<div class="metrics-strip" id="latest-metrics" aria-live="polite"></div>
+<div class="metrics-strip" id="latest-metrics" aria-live="polite">
+  <div class="metric-box"><span>当前体重</span><strong>{{ site.data.tracking_records.currentBody.weight | default: '—' }} kg</strong></div>
+  <div class="metric-box"><span>当前体脂率</span><strong>{{ site.data.tracking_records.currentBody.bf | default: '—' }}%</strong></div>
+</div>
 <div class="tracker-toolbar">
   <div class="tracker-tabs" role="tablist" aria-label="记录类型">
     <button type="button" role="tab" data-tab="body" aria-selected="true">身体组成</button>
