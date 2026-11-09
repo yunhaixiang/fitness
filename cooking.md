@@ -81,7 +81,7 @@ cooking: true
 </div>
 <ol>
 <li data-en="Cook half a pack of mushrooms (113.5 g) with oil and seasonings for 5–7 minutes. Split equally between meals 2 and 4.">蘑菇半盒113.5 g加油和调味，炒约5–7分钟；均分到第2、4盘。</li>
-<li data-en="Drain 1 can of peas and carrots (about 260 g). Add a splash of water and seasonings, stir and heat through. Divide equally between meals 3 and 6.">豌豆胡萝卜1罐沥干（约260 g），加少量水和调味，拌匀热透；均分到第3、6盘。</li>
+<li data-en="Drain and rinse 1 can of peas and carrots, then drain again (about 260 g). Add a splash of water and seasonings, stir and heat through. Divide equally between meals 3 and 6.">豌豆胡萝卜1罐沥干、冲洗后再次沥干（约260 g），加少量水和调味，拌匀热透；均分到第3、6盘。</li>
 <li data-en="Heat 150 mL water, lower the heat and dissolve ½ block (11.5 g) of Golden Curry roux. Simmer for about 5 minutes until smooth. Transfer to meal 6 and serve over the rice.">水150 mL烧热后关小火，溶入Golden Curry咖喱块半小块（11.5 g），再煮约5分钟至顺滑；盛入第6盘，分盘时淋在米饭上。</li>
 <li data-en="Wash the red chili and basil; slice the chili. Mix fish sauce, light and dark soy sauces, oyster sauce, garlic powder and water. Rinse and dry the saucepan; add the oil and briefly cook the chili over medium-low heat. Add the sauce and drained noodles, tossing for 1–2 minutes; add a splash of water if they start to stick. Turn off the heat, stir in basil and place in meal 3.">红辣椒和罗勒洗净，辣椒切圈；鱼露、生抽、老抽、蚝油、蒜粉和水调匀。小锅冲洗擦干，加油，中小火略炒辣椒；倒入酱汁和沥干米粉，拌热1–2分钟，粘锅时补少量水；关火拌入罗勒，放第3盘。</li>
 </ol>
