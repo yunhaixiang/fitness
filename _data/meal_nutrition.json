@@ -99,7 +99,7 @@
       "saturatedFat": "7.8",
       "fibre": "10.0",
       "sugar": "8.5",
-      "sodium": "962",
+      "sodium": "852",
       "cholesterol": "443",
       "epaDha": "0.13",
       "label": "wrap",
@@ -108,7 +108,7 @@
       "potassium": "1010.215",
       "vitaminD": "1.153",
       "vitaminB12": "2.190",
-      "iodine": "68.412"
+      "iodine": "46.910"
     },
     "rice": {
       "kcal": "700",
@@ -156,7 +156,7 @@
       "saturatedFat": "6.9",
       "fibre": "8.9",
       "sugar": "8.7",
-      "sodium": "988",
+      "sodium": "878",
       "cholesterol": "380",
       "epaDha": "0.32",
       "label": "bread",
@@ -165,7 +165,7 @@
       "potassium": "1089.556",
       "vitaminD": "5.140",
       "vitaminB12": "3.646",
-      "iodine": "60.483"
+      "iodine": "38.982"
     },
     "dumpling": {
       "kcal": "703",
@@ -194,7 +194,7 @@
       "saturatedFat": "5.5",
       "fibre": "5.7",
       "sugar": "6.8",
-      "sodium": "2367",
+      "sodium": "2293",
       "cholesterol": "499",
       "epaDha": "0.34",
       "label": "noodles",
@@ -203,7 +203,7 @@
       "potassium": "782.373",
       "vitaminD": "0.939",
       "vitaminB12": "3.456",
-      "iodine": "70.716"
+      "iodine": "56.381"
     }
   }
 }

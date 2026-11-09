@@ -29,7 +29,7 @@ test('Canadian soy fortification and current seafood servings use their stated u
  assert.equal(micro.foods.tuna.values.vitaminD,4); // one 55 g drained half-can
  assert.equal(micro.foods.haddock.values.potassium,300); // one fillet, not per 100 g
  const weeklySalt=macro.recipes.reduce((s,r)=>s+2*(r.salt||0),0);
- assert.equal(weeklySalt,.25); // chicken thigh seasoning only
+ assert.equal(weeklySalt,0); // no added table salt in the current recipes
 });
 test('recalculation is repeatable and refuses missing micronutrients instead of silently zeroing them', () => {
  const tmp=fs.mkdtempSync(path.join(os.tmpdir(),'fitness-nutrition-'));
