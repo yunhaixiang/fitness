@@ -94,7 +94,7 @@ cooking: true
 <li data-en="Bring water to a boil in Pot 1 before adding the eggs.">煮锅一烧水，水沸后下鸡蛋。</li>
 <li data-en="Add 3 eggs and boil for about 9 minutes until firm. Cool and peel; put one in each of meals 1, 3 and 4, crumbling the egg for meal 1.">下鸡蛋3个，水开后煮约9分钟至蛋白蛋黄凝固，冷却剥壳；第1、3、4盘各1个，第1盘的掰碎。</li>
 <li data-en="After removing the eggs, refill with fresh water and bring to a boil.">鸡蛋出锅后换清水烧开。</li>
-<li data-en="Add 7 frozen dumplings (168 g) to boiling water. Follow the pack, checking for a 74°C centre after about 6–8 minutes. Drain into meal 2; pack 26.25 mL of the included sauce separately.">冷冻水饺7个（168 g）下沸水，按包装煮至中心74°C，约6–8分钟；沥干放第2盘，附带蘸酱26.25 mL另装。</li>
+<li data-en="Add 7 frozen dumplings (168 g) to boiling water. Follow the pack, checking for a 74°C centre after about 6–8 minutes. Drain into meal 2 without dipping sauce.">冷冻水饺7个（168 g）下沸水，按包装煮至中心74°C，约6–8分钟；沥干放第2盘，不加蘸酱。</li>
 </ol>
 
 <h2 id="pot-two" data-en="Pot 2">煮锅二线程</h2>

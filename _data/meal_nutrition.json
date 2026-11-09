@@ -129,14 +129,14 @@
       "label": "bread"
     },
     "dumpling": {
-      "kcal": "660",
-      "protein": "51.5",
-      "carbs": "52.3",
-      "fat": "25.9",
-      "saturatedFat": "6.0",
+      "kcal": "607",
+      "protein": "50.6",
+      "carbs": "41.8",
+      "fat": "25.4",
+      "saturatedFat": "5.9",
       "fibre": "3.7",
-      "sugar": "15.3",
-      "sodium": "1735",
+      "sugar": "4.8",
+      "sodium": "860",
       "cholesterol": "108",
       "epaDha": "1.93",
       "label": "dumpling"
