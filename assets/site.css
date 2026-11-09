@@ -636,8 +636,6 @@ html[data-theme=light] .cooking-guide-primary{color:#fff}
 .cooking-progress-action{display:flex;gap:8px;align-items:stretch;min-width:0;max-width:100%}
 .cooking-progress-action>button:first-child{flex:1;min-width:0;overflow-wrap:anywhere}
 .cooking-progress-action>button:last-child{flex:none}
-.cooking-flow-step-row.is-running .cooking-flow-step{border-color:var(--gold)}
-.cooking-flow-step-row.is-running .cooking-progress-badge{color:var(--gold)}
 
 /* One task card contains its completion control, title, instructions and seasoning. */
 .cooking-flow-step-row{grid-template-columns:minmax(0,1fr);align-content:start;scroll-margin-top:90px;padding:8px;border:1px solid var(--line-strong);border-radius:10px;background:var(--inset);gap:0;transition:opacity .15s,border-color .15s,background .15s}
@@ -661,12 +659,10 @@ html[data-theme=light] .cooking-guide-primary{color:#fff}
 /* Keep state styling on the shared card, rather than separate inner boxes. */
 .cooking-flow-step-row .cooking-flow-step,
 .cooking-flow-step-row.is-recommended .cooking-flow-step,
-.cooking-flow-step-row.is-running .cooking-flow-step{border:0;background:none;box-shadow:none;border-radius:6px}
 .cooking-flow-step-row:has(.cooking-flow-step:hover),
 .cooking-flow-step-row:has(.cooking-flow-step[aria-pressed=true]){border-color:var(--thread-accent);background:var(--thread-tint)}
 .cooking-flow-step-row:has(.cooking-flow-step.is-before){border-color:var(--gold)}
 .cooking-flow-step-row:has(.cooking-flow-step.is-after){border-color:var(--green)}
-.cooking-flow-step-row.is-running{border-color:var(--gold)}
 .cooking-flow-step-row.is-recommended{border-color:var(--accent);background:var(--accent-soft);box-shadow:inset 4px 0 var(--accent)}
 .cooking-flow-step-row .cooking-flow-step:focus-visible{outline:2px solid var(--thread-accent);outline-offset:1px}
 

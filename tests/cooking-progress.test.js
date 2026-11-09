@@ -37,9 +37,9 @@ test('hot air fryer takes priority and long rice chain comes before short vegeta
 });
 test('legacy progress keeps the selected batch without merging two sessions', () => {
  const state = readState(JSON.stringify({half:'second',first:['prep-rice'],second:['prep-salmon'],secondRunning:['air-heat']}));
- assert.deepEqual(state,{version:2,done:['prep-salmon','air-heat-start'],running:['air-heat']});
+ assert.deepEqual(state,{version:3,done:['prep-salmon']});
  assert.deepEqual(readState(JSON.stringify(state)),state);
- assert.deepEqual(readState('{broken'),{version:2,done:[],running:[]});
+ assert.deepEqual(readState('{broken'),{version:3,done:[]});
  assert.deepEqual(readState('{"first":[{},null,5,"rice"]}').done,['rice']);
  assert.deepEqual(readState(JSON.stringify({version:2,done:[],running:[],first:['rice']})).done,[]);
 });
@@ -50,14 +50,16 @@ test('all current tasks can complete', () => {
  assert.equal(state.available.length,0);
 });
 
-test('started tasks allow parallel work but block their appliance until marked complete', () => {
- const done = ['cold-first','prep-salmon','air-heat-start'];
- const view = derive(nodes,done,'first',['air-heat']);
+test('legacy running state never marks work complete or blocks ready tasks', () => {
+ const state = readState(JSON.stringify({version:2,done:['prep-salmon','air-heat-start'],running:['air-heat']}));
+ assert.deepEqual(state,{version:3,done:['prep-salmon','air-heat-start']});
+ const view = derive(nodes,state.done);
+ assert.ok(view.available.some(n=>n.id==='air-heat'));
  assert.ok(view.available.some(n=>n.id==='oven-heat-start'));
- assert.ok(!view.available.some(n=>n.id==='air-heat' || n.id==='salmon'));
- const after = toggle(nodes,done,'first','air-heat',true,['air-heat']);
- assert.equal(derive(nodes,after,'first',['air-heat']).recommended,'salmon');
- assert.deepEqual(derive(nodes,after,'first',['air-heat']).running,[]);
+ assert.ok(!view.available.some(n=>n.id==='salmon'));
+ const done = toggle(nodes,state.done,'first','air-heat',true);
+ assert.equal(derive(nodes,done).recommended,'salmon');
+ assert.deepEqual(readState(JSON.stringify({version:3,done})).done,done);
 });
 
 for (const [kind, prep, food] of [['oven', 'prep-chicken', 'chicken'], ['air', 'prep-salmon', 'salmon']]) {

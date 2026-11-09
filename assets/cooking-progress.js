@@ -1,6 +1,6 @@
 (function (host) {
   'use strict';
-  function derive(nodes, saved, half = 'first', started = []) {
+  function derive(nodes, saved, half = 'first') {
     const active = nodes;
     const byId = new Map(active.map(n => [n.id, n]));
     const done = new Set((Array.isArray(saved) ? saved : []).filter(id => byId.has(id)));
@@ -13,10 +13,7 @@
       for (const id of done) if (!satisfied(byId.get(id))) { done.delete(id); changed = true; }
     } while (changed);
     const pending = active.filter(n => !done.has(n.id));
-    const running = new Set((Array.isArray(started) ? started : []).filter(id => pending.some(n => n.id === id && satisfied(n))));
-    const appliance = n => n.group === 'prep' ? null : n.resource || (['air','rice','small-wok','large-wok'].includes(n.group) ? n.group : null);
-    const busy = new Set(pending.filter(n => running.has(n.id)).map(appliance).filter(Boolean));
-    const available = pending.filter(n => satisfied(n) && !running.has(n.id) && !busy.has(appliance(n)));
+    const available = pending.filter(satisfied);
     const next = new Map(active.map(n => [n.id, active.filter(x => x.before.includes(n.id))]));
     const memo = new Map();
     const length = id => {
@@ -28,12 +25,12 @@
     // Use already-heated appliances promptly; otherwise prioritize the longest remaining chain.
     const urgent = n => n.id === 'salmon' && done.has('air-heat') || n.id === 'haddock' && done.has('salmon') || ['eggs', 'pasta', 'dumplings', 'noodles'].includes(n.id) && n.before.some(id => id.endsWith('-water') && done.has(id));
     available.sort((a,b) => Number(urgent(b)) - Number(urgent(a)) || Number(!!a.confirmation) - Number(!!b.confirmation) || length(b.id) - length(a.id));
-    return { done: [...done], running: [...running], active, available, recommended: available[0]?.id || null, ready: true, total: active.length };
+    return { done: [...done], active, available, recommended: available[0]?.id || null, ready: true, total: active.length };
   }
-  function toggle(nodes, saved, half, id, checked, started = []) {
-    const view = derive(nodes, saved, half, started);
+  function toggle(nodes, saved, half, id, checked) {
+    const view = derive(nodes, saved, half);
     const done = new Set(view.done);
-    if (checked && (view.available.some(n => n.id === id) || view.running.includes(id))) done.add(id);
+    if (checked && view.available.some(n => n.id === id)) done.add(id);
     if (!checked) done.delete(id);
     return derive(nodes, [...done], half).done;
   }
@@ -44,10 +41,10 @@
     // Both halves now have identical tasks. Keep the previously selected batch,
     // rather than merging marks from separate cooking sessions.
     const legacyHalf = parsed?.half === 'second' ? 'second' : 'first';
-    const done = strings(parsed?.version === 2 ? parsed.done : parsed?.[legacyHalf]);
-    const running = strings(parsed?.version === 2 ? parsed.running : parsed?.[legacyHalf + 'Running']);
-    for (const id of ['oven-heat', 'air-heat']) if ((done.includes(id) || running.includes(id)) && !done.includes(id + '-start')) done.push(id + '-start');
-    return { version: 2, done, running };
+    const done = strings([2, 3].includes(parsed?.version) ? parsed.done : parsed?.[legacyHalf]);
+    for (const id of ['oven-heat', 'air-heat']) if (done.includes(id) && !done.includes(id + '-start')) done.push(id + '-start');
+    // Legacy running tasks return to unchecked; only completion is persisted.
+    return { version: 3, done };
   }
   const api = { derive, toggle, readState };
   if (typeof module !== 'undefined' && module.exports) module.exports = api;
@@ -67,16 +64,15 @@
   const reset = create('button', 'cooking-guide-reset', t('重置本次', 'Reset This Batch')); reset.type = 'button';
   reset.addEventListener('click', () => {
     if (!host.confirm(t('清除本次做饭的完成记录，重新开始？', 'Clear progress for this batch and start again?'))) return;
-    state.done = []; state.running = []; save(); render();
+    state.done = []; save(); render();
   });
   toolbar.append(reset);
   const status = create('div', 'cooking-progress-status'); status.setAttribute('role', 'status');
   const progress = create('progress', ''); progress.setAttribute('aria-label', t('完成进度', 'Completion Progress'));
   const suggestion = create('div', 'cooking-progress-suggestion');
   const readyList = create('div', 'cooking-progress-options');
-  const runningList = create('div', 'cooking-progress-options');
   const warning = create('p', 'cooking-progress-warning'); warning.hidden = true;
-  panel.append(toolbar, status, progress, suggestion, runningList, readyList, warning);
+  panel.append(toolbar, status, progress, suggestion, readyList, warning);
   root.prepend(panel);
   const controls = new Map();
   for (const node of plan.nodes) {
@@ -89,7 +85,7 @@
     const badge = create('small', 'cooking-progress-badge');
     button.querySelector('.cooking-flow-step-copy').append(badge);
     label.append(checkbox); row.prepend(label); row.classList.add('has-progress');
-    checkbox.addEventListener('change', () => { state.done = toggle(plan.nodes, state.done, 'first', node.id, checkbox.checked, state.running); render(); save(); });
+    checkbox.addEventListener('change', () => { state.done = toggle(plan.nodes, state.done, 'first', node.id, checkbox.checked); render(); save(); });
     controls.set(node.id, { checkbox, row, badge });
   }
   function save() {
@@ -108,46 +104,26 @@
     }); return button;
   }
   function render() {
-    const view = derive(plan.nodes, state.done, 'first', state.running);
+    const view = derive(plan.nodes, state.done, 'first');
     state.done = view.done;
-    state.running = view.running;
     const done = new Set(view.done), available = new Set(view.available.map(n => n.id));
     for (const [id, c] of controls) {
       const checked = done.has(id);
       c.checkbox.checked = checked;
-      c.checkbox.disabled = !checked && !available.has(id) && !view.running.includes(id);
+      c.checkbox.disabled = !checked && !available.has(id);
       c.row.classList.toggle('is-complete', checked);
-      c.row.classList.toggle('is-blocked', !checked && !available.has(id) && !view.running.includes(id));
-      c.row.classList.toggle('is-running', view.running.includes(id));
+      c.row.classList.toggle('is-blocked', !checked && !available.has(id));
       c.row.classList.toggle('is-available', available.has(id));
       c.row.classList.toggle('is-recommended', id === view.recommended);
-      c.badge.textContent = checked ? t('已完成', 'Done') : view.running.includes(id) ? t('进行中', 'In Progress') : id === view.recommended ? t('推荐下一步', 'Recommended') : available.has(id) ? (plan.nodes.find(n => n.id === id).confirmation ? t('待确认预热完成', 'Confirm When Preheated') : t('现在可做', 'Ready')) : t('等待前置任务', 'Waiting');
+      c.badge.textContent = checked ? t('已完成', 'Done') : id === view.recommended ? t('推荐下一步', 'Recommended') : available.has(id) ? (plan.nodes.find(n => n.id === id).confirmation ? t('待确认预热完成', 'Confirm When Preheated') : t('现在可做', 'Ready')) : t('等待前置任务', 'Waiting');
     }
     progress.max = view.total; progress.value = done.size;
     status.textContent = t(`已完成 ${done.size} / ${view.total}`, `${done.size} / ${view.total} Completed`);
-    suggestion.replaceChildren(); readyList.replaceChildren(); runningList.replaceChildren();
+    suggestion.replaceChildren(); readyList.replaceChildren();
     function action(n, recommended) {
       const row = create('div', 'cooking-progress-action');
       row.append(pick(n, recommended ? 'cooking-progress-next' : 'cooking-flow-chip'));
-      const start = create('button', 'cooking-guide-minor', n.confirmation ? t('确认完成', 'Confirm Ready') : t('开始', 'Start')); start.type = 'button';
-      start.setAttribute('aria-label', n.confirmation || n.instant ? t(...n.label) : t(`开始${n.label[0]}`, `Start ${n.label[1]}`));
-      start.addEventListener('click', () => {
-        if (n.instant || n.confirmation) state.done = toggle(plan.nodes, state.done, 'first', n.id, true, state.running);
-        else state.running.push(n.id);
-        render(); save();
-      });
-      row.append(start); return row;
-    }
-    if (view.running.length) {
-      runningList.append(create('strong', '', t('正在做', 'In Progress')));
-      for (const id of view.running) {
-        const n = plan.nodes.find(n => n.id === id), row = create('div', 'cooking-progress-action');
-        row.append(pick(n, 'cooking-flow-chip'));
-        const cancel = create('button', 'cooking-guide-minor', t('取消开始', 'Undo Start')); cancel.type = 'button';
-        cancel.setAttribute('aria-label', t(`取消开始${n.label[0]}`, `Undo Start ${n.label[1]}`));
-        cancel.addEventListener('click', () => { state.running = state.running.filter(x => x !== id); render(); save(); });
-        row.append(cancel); runningList.append(row);
-      }
+      return row;
     }
     if (view.recommended) {
       suggestion.append(create('strong', '', t('推荐下一步', 'Recommended Next')), action(view.available[0], true));
@@ -156,7 +132,7 @@
       suggestion.append(create('span', 'cooking-progress-reason', next.confirmation ? t('达到预热温度后再确认；等待期间可继续其他任务。', 'Confirm once preheated; continue other tasks while waiting.') : reason));
       const others = view.available.slice(1);
       if (others.length) { readyList.append(create('strong', '', t('现在也可以做', 'Also Ready'))); const list = create('div', 'cooking-flow-chip-list'); others.forEach(n => list.append(action(n, false))); readyList.append(list); }
-    } else suggestion.append(create('strong', '', done.size === view.total ? t('本次做饭已全部完成', 'This Batch Is Complete') : t('等待进行中的任务完成，再勾选解锁下一步。', 'Finish an ongoing task and check it off to unlock the next steps.')));
+    } else suggestion.append(create('strong', '', done.size === view.total ? t('本次做饭已全部完成', 'This Batch Is Complete') : t('勾选已完成的前置任务，解锁下一步。', 'Check off completed prerequisites to unlock the next steps.')));
   }
   host.addEventListener('storage', event => { if (event.key === key) { state = readState(event.newValue); render(); } });
   render(); save();
