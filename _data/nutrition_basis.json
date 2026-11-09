@@ -433,7 +433,7 @@
       "spinach": 0.71,
       "mushroom": 0.5675,
       "oil": 0.5808823529411765,
-      "egg": 1
+      "egg": 1.5
     },
     {
       "bread": 1.5,
@@ -455,7 +455,7 @@
     {
       "pasta": 0.611764705882353,
       "ground": 2.27,
-      "egg": 1.5,
+      "egg": 1,
       "zucchini": 2,
       "sauce": 0.624,
       "oil": 1
@@ -477,7 +477,7 @@
     "Oil: thighs 1/2 tsp, potatoes 1/4, shrimp 1, salmon 1/4, mushrooms 1/4, spinach 1/2, ground chicken 1, fried eggs 1, noodles 1/4 tsp per half-week. Salt: no added salt on chicken thighs, potatoes or salmon. Dry spices not quantified except in the new noodle sauce; no stock powder in this version.",
     "EPA+DHA uses fish composition proxies. The six previously missing micronutrients are calculated using _data/micronutrient_basis.json, combining Canadian product labels, CNF 2026 composition proxies and explicitly documented iodine assumptions.",
     "Great Value Chicken & Vegetable Potstickers 1.13 kg: verified label is 200 kcal / 4 dumplings (96 g) WITH 15 mL sauce. Meal 2 now uses seven pieces (168 g) WITHOUT sauce. No separate sauce label is available. Working estimate per 15 mL sauce: 30 kcal, P0.5/C6/F0.3 g, SFA0.03 g, fibre0 g, sugar6 g, sodium500 mg, cholesterol0 and EPA+DHA0. This is an assumed sweet soy dipping-sauce profile, not manufacturer data. Subtract 1.75 sauce portions per meal (52.5 kcal); all resulting dumpling-only nutrients are estimates. Original combined label and sauce assumption are retained as separate unused arr entries for audit. Purchasing cost stays unchanged because the sauce is included in the same bag; existing package-yield cost assumption is retained.",
-    "Balanced portions: rice 55 g dry, pasta 52 g dry, noodles 53 g dry. Potatoes 170 g raw per half-week split 30 g to meal 2 and 140 g to meal 4; their existing oil split 3:14; no added salt. Six boiled eggs per half-week: meals 1 and 7 get 1.5 each, meals 2, 3 and 4 get one each; meal 6 has no boiled egg. Three fried eggs: one in meal 5 and two in meal 6; no additional frying oil. Eighteen eggs per week. Shrimp 170 g raw per half-week, cooked with 20 g panko and all served in meal 3; one 340 g bag weekly.",
+    "Balanced portions: rice 55 g dry, pasta 52 g dry, noodles 53 g dry. Potatoes 170 g raw per half-week split 30 g to meal 2 and 140 g to meal 4; their existing oil split 3:14; no added salt. Six boiled eggs per half-week: meals 1 and 4 get 1.5 each, meals 2, 3 and 7 get one each; meal 6 has no boiled egg. Three fried eggs: one in meal 5 and two in meal 6; no additional frying oil. Eighteen eggs per week. Shrimp 170 g raw per half-week, cooked with 20 g panko and all served in meal 3; one 340 g bag weekly.",
     "Haddock: High Liner Pan-Sear Selects Roasted Garlic & Herbs, 500 g / four fillets. Manufacturer nutrition per about one fillet (127 g label serving): 170 kcal, protein 18 g, carbohydrate 11 g, fat 6 g, saturated fat 0.5 g, trans fat 0 g, fibre 1 g, sugar 0 g, sodium 410 mg, cholesterol 55 mg. Two fillets weekly; one box every two weeks. Manufacturer figures take precedence over inconsistent retailer copy. EPA+DHA provisionally estimated at 0.16 g per fillet by scaling the original Traditional fish proxy by protein (0.15 x 18/17); not measured. Label total omega-3 is 0.7 g and includes canola oil, so is not treated as EPA+DHA. Use the actual package label if it differs.",
     "Clover Leaf Low Sodium Flaked Light Tuna in Water, one 170 g can weekly. Manufacturer label unit is half a can drained (55 g); one unit (half a can drained, 55 g) in each sandwich; no tuna in the wraps. Chipotle mayonnaise is 2 tsp per wrap and 2.5 tsp per sandwich. Tuna label total omega-3 0.2 g per half-can is used as an EPA+DHA approximation, not a separately measured EPA+DHA value. Little Yellows potatoes use the Canadian label per 110 g; 680 g bag every two weeks. Six meatballs weekly, 60-piece bag every ten weeks.",
     "Chickpeas: Great Value Chick Peas 540 mL, one can every two weeks, drained and split equally between four wraps. Planning yield 340 g drained per can (85 g per wrap), not measured. Retains the prior generic canned drained chickpea estimate per 100 g: 139 kcal, protein 7.05 g, carbohydrate 22.5 g, fat 2.77 g, saturated fat 0.27 g, fibre 6.4 g, sugar 4 g, sodium 240 mg; not a verified product-label analysis. Actual drained weight may differ.",
