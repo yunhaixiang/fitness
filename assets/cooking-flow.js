@@ -87,6 +87,10 @@
   ];
 
   const instructionSections = [["rice", "rice", ["prep-rice", "rice"]], ["oven", "oven", ["oven-heat-start", "prep-potato", "prep-chicken", "prep-ribs", "prep-shrimp", "oven-heat", "potato", "chicken", "ribs", "meatballs", "shrimp"]], ["air-fryer", "air", ["prep-salmon", "air-heat-start", "air-heat", "salmon", "haddock"]], ["pot-one", "pots", ["egg-water", "eggs", "dumplings", "peel-eggs"]], ["pot-two", "pots", ["pasta-water", "pasta", "noodles"]], ["small-wok", "small-wok", ["prep-noodle-sauce", "mushroom", "curry", "season-noodles"]], ["large-wok", "large-wok", ["prep-zucchini", "spinach", "ground", "tomato"]], ["finish", "finish", ["prep-bread", "prep-wrap", "prep-sandwich", "peas-carrots", "wrap", "sandwich", "refrigerate", "clean"]]];
+  if (window.fitnessCookingDefinition) {
+    nodes.splice(0, nodes.length, ...window.fitnessCookingDefinition.nodes);
+    instructionSections.splice(0, instructionSections.length, ...window.fitnessCookingDefinition.instructionSections);
+  }
   const instructions = new Map(), seasoningNotes = new Map();
   const mergedSections = [];
   for (const [headingId, group, steps] of instructionSections) {

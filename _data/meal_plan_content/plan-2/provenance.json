@@ -1,0 +1,15 @@
+{
+  "sourceCommit": "9a4600be79e957a60c4080aa3205e9a36963578f",
+  "boundaryCommit": "40e269d",
+  "description": "Snapshot immediately before the diversified seven-meal menu replaced the repeating menu. Historical recipe portions and nutrient estimates retained; current shared UI, training and body records.",
+  "halfWeekMealKeys": [
+    "wrap",
+    "rice",
+    "pasta",
+    "potato",
+    "rice",
+    "pasta",
+    "potato"
+  ],
+  "aggregation": "Daily macros, reported minerals and energy are recomputed from the restored per-meal estimates to avoid historical rounding drift. Sodium adds 12 Fresca cans at 35 mg per can. Other historical micronutrient estimates are retained. The expenditure baseline is shared with Plan 1."
+}

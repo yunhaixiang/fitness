@@ -1,0 +1,12 @@
+{
+  "order": ["fruit_breakfast", "kiwi_breakfast", "outside_drink", "potato", "wrap", "rice", "pasta"],
+  "meals": {
+    "fruit_breakfast": {"label": "周日—周二早餐（混合水果盘）", "foodZh": "高纤维谷物早餐 40 g，无糖豆奶 270 mL，一水肌酸 5 g，混合水果盘约 333 g", "foodEn": "40 g high-fibre cereal, 270 mL unsweetened soy milk, 5 g creatine monohydrate, about 333 g mixed fruit", "kcal": "342", "protein": "13.3", "fat": "6.0", "saturatedFat": "0.8", "carbs": "74.8", "fibre": "23.0", "sugar": "31.1", "cholesterol": "0", "sodium": "256", "calcium": "521", "iron": "7.2", "potassium": "1,042"},
+    "kiwi_breakfast": {"label": "周三—周六早餐（奇异果2个）", "foodZh": "高纤维谷物早餐 40 g，无糖豆奶 270 mL，一水肌酸 5 g，奇异果 2 个", "foodEn": "40 g high-fibre cereal, 270 mL unsweetened soy milk, 5 g creatine monohydrate, 2 kiwis", "kcal": "285", "protein": "13.0", "fat": "6.2", "saturatedFat": "0.7", "carbs": "61.3", "fibre": "23.8", "sugar": "15.8", "cholesterol": "0", "sodium": "244", "calcium": "532", "iron": "6.9", "potassium": "943"},
+    "outside_drink": {"label": "餐外饮品", "foodZh": "无糖豆奶 270 mL", "foodEn": "270 mL unsweetened soy milk", "kcal": "97", "protein": "8.6", "fat": "4.8", "saturatedFat": "0.5", "carbs": "4.3", "fibre": "2.1", "sugar": "1.1", "cholesterol": "0", "sodium": "97", "calcium": "323", "iron": "0.9", "potassium": "377"},
+    "potato": {"label": "周二午／周三晚／周五晚／周日午", "kcal": "658", "protein": "55.8", "fat": "26.7", "saturatedFat": "7.7", "carbs": "46.3", "fibre": "7.7", "sugar": "11.1", "cholesterol": "128", "sodium": "883", "calcium": "212", "iron": "7.0", "potassium": "2,845"},
+    "wrap": {"label": "周日晚／周四午", "kcal": "692", "protein": "60.9", "fat": "35.2", "saturatedFat": "8.5", "carbs": "32.2", "fibre": "3.9", "sugar": "1.5", "cholesterol": "605", "sodium": "787", "calcium": "107", "iron": "5.2", "potassium": "914"},
+    "rice": {"label": "周一午／周二晚／周四晚／周六午", "kcal": "659", "protein": "61.8", "fat": "23.4", "saturatedFat": "8.0", "carbs": "51.7", "fibre": "5.0", "sugar": "3.8", "cholesterol": "594", "sodium": "685", "calcium": "121", "iron": "3.5", "potassium": "884"},
+    "pasta": {"label": "周一晚／周三午／周五午／周六晚", "kcal": "655", "protein": "48.3", "fat": "20.6", "saturatedFat": "3.4", "carbs": "70.9", "fibre": "4.8", "sugar": "8.5", "cholesterol": "159", "sodium": "820", "calcium": "88", "iron": "4.5", "potassium": "1,363"}
+  }
+}

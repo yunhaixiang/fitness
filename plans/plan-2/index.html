@@ -1,0 +1,81 @@
+---
+layout: default
+title: 总览
+description: 快速打开计划、备餐和记录。
+permalink: /plans/plan-2/
+wide: true
+hide_hero: true
+overview: true
+meal_activities_script: /assets/meal-plans/plan-2/meal-activities.js
+---
+<div class="dashboard-head">
+  <h1>总览</h1>
+</div>
+
+{% assign current_body = site.data.tracking_records.currentBody %}
+{% assign body_records = site.data.tracking_records.body | sort: 'date' %}
+{% for record in body_records %}
+  {% if record.weight %}{% assign latest_weight = record.weight %}{% endif %}
+  {% if record.bf %}{% assign latest_bf = record.bf %}{% endif %}
+{% endfor %}
+<div class="overview-metrics" aria-label="当前数据">
+  <a class="overview-metric" href="{{ '/tracker/' | relative_url }}">
+    <span>当前体重</span><strong><span data-body-value="weight">{{ current_body.weight | default: latest_weight | default: '—' }}</span> <small>kg</small></strong>
+  </a>
+  <a class="overview-metric" href="{{ '/tracker/' | relative_url }}">
+    <span>当前体脂率</span><strong><span data-body-value="bf">{{ current_body.bf | default: latest_bf | default: '—' }}</span> <small>%</small></strong>
+  </a>
+  <a class="overview-metric" href="{{ '/stats/' | relative_url }}">
+    <span>日均赤字</span><strong data-energy="dailyDeficit">{{ site.data.meal_plan_content['plan-2'].metrics.weekly_deficit_precise | divided_by: 7.0 | round }} <small>kcal／天</small></strong>
+  </a>
+</div>
+<script type="application/json" id="cardio-energy-baseline">{{ site.data.meal_plan_content['plan-2'].metrics | jsonify }}</script>
+
+<section class="dashboard-section today-section" aria-labelledby="today-heading">
+  <div class="today-heading">
+    <h2 id="today-heading">今日</h2>
+    <time id="today-date"></time>
+  </div>
+  <div class="today-grid">
+    <section class="today-panel" aria-labelledby="today-food-heading">
+      <div class="today-panel-heading"><h3 id="today-food-heading">饮食</h3></div>
+      <div id="today-meals" class="today-meals"></div>
+    </section>
+    <section class="today-panel" aria-labelledby="today-training-heading">
+      <div class="today-panel-heading"><h3 id="today-training-heading">锻炼</h3></div>
+      <div id="today-training"></div>
+    </section>
+  </div>
+  <noscript><p>启用 JavaScript 后显示今日安排；完整计划可在饮食、力量和有氧页面查看。</p></noscript>
+</section>
+
+<template id="today-diet-source">{% include meal-plans/plan-2/diet-schedule.html %}</template>
+<template id="today-strength-source">{% include strength-home-table.html %}{% include strength-gym-table.html %}</template>
+<template id="today-cardio-source">{% include cardio-weekly-table.html %}</template>
+<script type="application/json" id="today-nutrition-data">{{ site.data.meal_plan_content['plan-2'].nutrition.meals | jsonify }}</script>
+
+<section class="dashboard-section" aria-labelledby="food-heading">
+  <h2 id="food-heading">吃饭与备餐</h2>
+  <div class="link-grid food-link-grid">
+    <a href="{{ '/diet/' | relative_url }}"><strong>饮食安排</strong><span>本周 14 餐、早餐与餐外饮品</span></a>
+    <a href="{{ '/shopping/' | relative_url }}"><strong>购物清单</strong><span>按周购买、按需补货；可搜索</span></a>
+    <a href="{{ '/cooking/' | relative_url }}"><strong>做饭流程</strong><span>半周七餐、厨具线程、分盘表</span></a>
+  </div>
+</section>
+
+<section class="dashboard-section" aria-labelledby="training-heading">
+  <h2 id="training-heading">训练</h2>
+  <div class="link-grid training-link-grid">
+    <a href="{{ '/strength/' | relative_url }}"><strong>力量训练</strong><span>肌群训练量、动作、组数和视频</span></a>
+    <a href="{{ '/cardio/' | relative_url }}"><strong>有氧</strong><span>HIIT、游泳、跑步机和健身馆自行车选项</span></a>
+  </div>
+</section>
+
+<section class="dashboard-section" aria-labelledby="data-heading">
+  <h2 id="data-heading">数据</h2>
+  <div class="link-grid data-link-grid">
+    <a href="{{ '/stats/' | relative_url }}"><strong>营养</strong><span>摄入、消耗构成和营养指标</span></a>
+    <a href="{{ '/tracker/' | relative_url }}"><strong>统计</strong><span>体重、体脂率和放纵餐记录</span></a>
+  </div>
+  <p class="dashboard-note">计划与记录通过对话更新，网站只供查看。</p>
+</section>
