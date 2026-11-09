@@ -5,7 +5,7 @@
   const horizon = 210;
   const beamWidth = 24;
   const pans = new Set(['mushroom', 'spinach', 'tomato', 'ground', 'curry']);
-  const continuous = new Set(['wrap', 'sandwich', 'finish']);
+  const continuous = new Set(['wrap', 'sandwich', 'peas-carrots', 'refrigerate', 'clean']);
   const activeTail = { tomato: 3, 'season-noodles': 3 };
   const capacity = { rice: 1, oven: 3, air: 1, 'pot-1': 1, 'pot-2': 1, saucepan: 1, wok: 1, counter: 1 };
   const resource = (task) => {

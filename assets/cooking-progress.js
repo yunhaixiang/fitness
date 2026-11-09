@@ -43,6 +43,11 @@
     const legacyHalf = parsed?.half === 'second' ? 'second' : 'first';
     const done = strings([2, 3].includes(parsed?.version) ? parsed.done : parsed?.[legacyHalf]);
     for (const id of ['oven-heat', 'air-heat']) if (done.includes(id) && !done.includes(id + '-start')) done.push(id + '-start');
+    // A completed legacy finish task included all three newly separated tasks.
+    if (done.includes('finish')) {
+      done.splice(done.indexOf('finish'), 1);
+      for (const id of ['peas-carrots', 'refrigerate', 'clean']) if (!done.includes(id)) done.push(id);
+    }
     // Legacy running tasks return to unchecked; only completion is persisted.
     return { version: 3, done };
   }

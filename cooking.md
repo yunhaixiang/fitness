@@ -340,8 +340,11 @@ cooking: true
 </li>
 </ol>
 
-<h2 id="wraps" data-en="Wrap and Sandwich">卷饼与三明治线程</h2>
+<!-- Cook to the product package directions where they differ. Rice noodle method: Erawan Walmart directions, boil dry noodles directly for 6–8 minutes, https://www.walmart.ca/en/ip/Erawan-Rice-Stick/6000199121439 . The timer starts with a 6-minute check; extend as needed. Shrimp is an olive-oil/panko adaptation; oven times vary with size and loading. -->
+
+<h2 id="finish" data-en="Finish">收尾线程</h2>
 <ol>
+<li class="cooking-task-source"><p data-en="Drain 1 can of 🫛🥕 peas and carrots (about 260 g) and divide equally between meals 3 and 6.">🫛🥕 豌豆胡萝卜1罐沥干（约260 g），直接均分到第3、6盘。</p></li>
 <li class="cooking-task-source">
 <ol lang="zh-CN" class="cooking-source-zh">
 <li>🫘 鹰嘴豆沥干冲洗，取¼罐，轻压碎后拌🥣 Chipotle蛋黄酱2茶匙（10 mL；酱条直径约0.8 cm时，挤约20 cm长）。</li>
@@ -374,19 +377,6 @@ cooking: true
 <li>Freeze spare 🍞 bread.</li>
 </ol>
 </li>
-</ol>
-<!-- Cook to the product package directions where they differ. Rice noodle method: Erawan Walmart directions, boil dry noodles directly for 6–8 minutes, https://www.walmart.ca/en/ip/Erawan-Rice-Stick/6000199121439 . The timer starts with a 6-minute check; extend as needed. Shrimp is an olive-oil/panko adaptation; oven times vary with size and loading. -->
-
-<h2 id="finish" data-en="Finish">收尾线程</h2>
-<ol>
-<li class="cooking-task-source">
-<ol lang="zh-CN" class="cooking-source-zh">
-<li>🫛🥕 豌豆胡萝卜1罐沥干（约260 g），直接均分到第3、6盘。</li>
-<li>完成分盘、入冰箱、清洗。</li>
-</ol>
-<ol lang="en" class="cooking-source-en" hidden>
-<li>Drain 1 can of 🫛🥕 peas and carrots (about 260 g) and divide equally between meals 3 and 6.</li>
-<li>Finish portioning, refrigerate and clean up.</li>
-</ol>
-</li>
+<li class="cooking-task-source"><p data-en="Check that all seven meals are portioned, then put the meal containers in the 🧊 refrigerator.">确认七餐均已分好，将餐盒放入🧊 冰箱。</p></li>
+<li class="cooking-task-source"><p data-en="🧼 Wash the cookware and utensils, then wipe down the worktop.">🧼 清洗锅具、餐具，擦净台面。</p></li>
 </ol>

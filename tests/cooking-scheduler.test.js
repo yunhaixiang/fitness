@@ -162,20 +162,20 @@ test('saved grouped preparation expands without clearing cooking progress', () =
 });
 
 
-test('portioning waits for baked shrimp and meatballs as well as salmon', () => {
+test('refrigeration waits for baked shrimp, meatballs and haddock before cleanup', () => {
   const fs = require('node:fs'), vm = require('node:vm');
   const flow = fs.readFileSync(require.resolve('../assets/cooking-flow.js'), 'utf8');
-  const guide = fs.readFileSync(require.resolve('../assets/cooking-guide.js'), 'utf8');
   const nodes = vm.runInNewContext(flow.match(/const nodes = (\[[\s\S]*?\n  \]);/)[1]);
-  const minutes = vm.runInNewContext('(' + guide.match(/const taskMinutes = ({[\s\S]*?\n  });/)[1] + ')');
+  const minutes = Object.fromEntries(nodes.map(n => [n.id, n.minutes]));
   const tasks = nodes.filter(n => n.manual || Object.hasOwn(minutes, n.id));
   assert.equal(nodes.find(n => n.id === 'haddock').before[0], 'salmon');
-  const done = tasks.filter(t => !['shrimp', 'meatballs', 'haddock', 'finish'].includes(t.id)).map(t => t.id);
+  const done = tasks.filter(t => !['shrimp', 'meatballs', 'haddock', 'refrigerate', 'clean'].includes(t.id)).map(t => t.id);
   const result = schedule({ tasks, minutes, done, running: {}, ready: true });
   assert.ok(result);
-  assert.ok(result.starts.finish >= result.ends.shrimp);
-  assert.ok(result.starts.finish >= result.ends.meatballs);
-  assert.ok(result.starts.finish >= result.ends.haddock);
+  assert.ok(result.starts.refrigerate >= result.ends.shrimp);
+  assert.ok(result.starts.refrigerate >= result.ends.meatballs);
+  assert.ok(result.starts.refrigerate >= result.ends.haddock);
+  assert.ok(result.starts.clean >= result.ends.refrigerate);
   for (const id of ['dumplings', 'eggs']) assert.equal(nodes.find(n=>n.id===id).resource, 'pot-1');
   for (const id of ['pasta', 'noodles']) assert.equal(nodes.find(n=>n.id===id).resource, 'pot-2');
 });

@@ -81,3 +81,25 @@ test('saved preheat completion survives the split into two steps', () => {
  const state = readState(JSON.stringify({first:['cold-first','oven-heat','prep-chicken','chicken'],second:[]}));
  assert.ok(derive(nodes,state.done).done.includes('chicken'));
 });
+
+
+test('finish tasks can assemble food early, but refrigeration waits for every meal', () => {
+ const partial = ['prep-chicken','oven-heat-start','oven-heat','chicken','egg-water','eggs'];
+ const available = derive(nodes,partial).available.map(n=>n.id);
+ assert.ok(available.includes('wrap'));
+ assert.ok(available.includes('peas-carrots'));
+ assert.ok(!available.includes('refrigerate'));
+ const foodDone = nodes.filter(n=>!['peas-carrots','refrigerate','clean'].includes(n.id)).map(n=>n.id);
+ assert.ok(!derive(nodes,foodDone).available.some(n=>n.id==='refrigerate'));
+ const plated = toggle(nodes,foodDone,'first','peas-carrots',true);
+ assert.deepEqual(derive(nodes,plated).available.map(n=>n.id),['refrigerate']);
+ const chilled = toggle(nodes,plated,'first','refrigerate',true);
+ assert.deepEqual(derive(nodes,chilled).available.map(n=>n.id),['clean']);
+});
+test('splitting finish preserves completed meals and migrates completed cleanup', () => {
+ const oldDone = nodes.filter(n=>!['peas-carrots','refrigerate','clean'].includes(n.id)).map(n=>n.id);
+ const migrated = readState(JSON.stringify({version:3,done:[...oldDone,'finish']}));
+ assert.equal(derive(nodes,migrated.done).done.length,nodes.length);
+ const partial = readState(JSON.stringify({version:3,done:['prep-rice','rice']}));
+ assert.deepEqual(derive(nodes,partial.done).done,['prep-rice','rice']);
+});
