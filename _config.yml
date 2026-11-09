@@ -11,3 +11,5 @@ exclude:
   - README.md
   - scripts
   - tests
+  - cloudflare
+  - docs

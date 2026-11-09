@@ -1,0 +1,9 @@
+{
+  "name": "fitness-ingest",
+  "main": "ingest.mjs",
+  "compatibility_date": "2026-11-09",
+  "workers_dev": true,
+  "preview_urls": false,
+  "observability": { "enabled": false },
+  "d1_databases": [{ "binding": "DB", "database_name": "fitness-health", "database_id": "d2a57276-e0c8-42a2-a9da-912c4a5fb335", "migrations_dir": "migrations" }]
+}

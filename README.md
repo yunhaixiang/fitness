@@ -42,3 +42,7 @@
 做饭任务依赖页加载 `cooking-progress.js`，使用统一的本次做饭进度，保留完成勾选、刷新恢复与推荐高亮；不再记录正在做状态；旧的前／后半周记录自动迁移当前选中的一批。独立计时跟做模块仍按之前要求隐藏。
 
 六项微量营养由 `_data/micronutrient_basis.json` 提供逐项数值、来源和假设，随 `scripts/recalculate-nutrition.py` 重算每餐和日均值；没有来源的商品项目使用明确记录的成分代理估算，不能当作实测值。
+
+## 私人 Hume 同步
+
+Cloudflare D1 与受 Access 保护的网站入口的部署及手机配置见 [Hume 同步设置](docs/hume-sync.md)。新的自动同步记录不提交到本仓库。现有 GitHub Pages 继续发布计划；私人入口读取数据库中的身体记录。
