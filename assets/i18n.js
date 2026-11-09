@@ -6,6 +6,10 @@
 
   // Longer entries take precedence. This keeps the plan's numbers and product links intact.
   const translations = {
+    '这里只展示记录；更新请通过对话提交。显示最近 8 周，原有浏览器记录仍可查看和导出。': 'Records are read-only. Send updates through our chat. The last eight weeks are shown; existing browser records remain available to view and export.',
+    '计划与记录通过对话更新，网站只供查看。': 'Plans and records are updated through our chat. This website is read-only.',
+    '按周购买、按需补货；可搜索': 'Weekly groceries and restocks, with search',
+
     '1、2、5各2个': '1, 2 and 5: 2 Eggs Each',
     "裹粉黑线鳕：取冷冻鱼片2片，无需解冻或另加油和调味；三文鱼出锅后单层放入空气炸锅，400°F烤18–20分钟至熟透；第3、6盘各放1片。": 'Breaded haddock: take two frozen fillets; do not thaw or add oil or seasoning. After the salmon, arrange them in a single layer and air-fry at 400°F for 18–20 minutes until cooked through. Put one fillet each in meals 3 and 6.',
     '裹粉黑线鳕': 'Breaded Haddock',

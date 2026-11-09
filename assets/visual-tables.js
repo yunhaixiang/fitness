@@ -27,61 +27,27 @@
     const table = tables[0];
     const rows = [...table.tBodies[0].rows];
     const items = rows.filter((row) => row.dataset.itemKey && row.dataset.itemKey !== '每周合计');
-    const checkableItems = items.filter((row) => row.querySelector('input[type="checkbox"]'));
     const shell = el('div', 'visual-shopping');
     const total = rows.at(-1);
-    if (total && !total.querySelector('input')) shell.append(el('p', 'visual-shopping-total', titleCase(`${val(total, 1)} · ${val(total, 4)}`)));
+    if (total) shell.append(el('p', 'visual-shopping-total', titleCase(`${val(total, 0)} · ${val(total, 3)}`)));
     shell.append(el('p', 'shopping-price-note', tr('Walmart公开标价；新增商品核对于2026-11-07，菠菜为提供的价格。周费用按购买周期折算，不含按需补充的调料、税费及配送。', 'Walmart public prices; new items checked Nov 7, 2026. Spinach price supplied by you. Weekly cost averages listed purchase cycles; excludes as-needed seasonings, tax and delivery.')));
-    const overview = el('div', 'visual-shopping-overview');
-    const count = el('strong', 'visual-shopping-count');
-    const countLabel = el('span', '', tr('项已买', 'Items Bought'));
-    const track = el('div', 'visual-progress-track');
-    const fill = el('span', 'visual-progress-fill');
-    track.append(fill);
-    overview.append(count, countLabel, track);
-    shell.append(overview);
     const weekly = el('div', 'visual-card-grid');
     const fortnightly = el('div', 'visual-card-grid');
     const restock = el('div', 'visual-card-grid');
     const cards = new Map();
-    const refresh = () => {
-      const done = checkableItems.filter((row) => row.querySelector('input').checked).length;
-      count.textContent = `${done} / ${checkableItems.length}`;
-      fill.style.width = `${checkableItems.length ? 100 * done / checkableItems.length : 0}%`;
-    };
     for (const row of items) {
       const card = el('article', 'visual-card visual-shopping-card');
       const top = el('div', 'visual-card-top');
-      const box = row.querySelector('input[type="checkbox"]');
-      const cardBox = box?.cloneNode(true);
-      const check = el(box ? 'label' : 'div', 'visual-shopping-check');
-      if (cardBox) {
-        cardBox.checked = box.checked;
-        check.append(cardBox);
-      }
-      check.append(el('span', '', titleCase(val(row, 1))));
+      const check = el('div', 'visual-shopping-check', titleCase(val(row, 0)));
       const price = el('strong', 'visual-price');
-      copy(price, row.cells[4]);
+      copy(price, row.cells[3]);
       price.title = tr('商品单价（CAD）', 'Unit Price (CAD)');
       top.append(check, price);
       card.append(top);
       const product = el('div', 'visual-shopping-product');
-      copy(product, row.cells[2]);
-      card.append(product, el('span', 'visual-badge', titleCase(val(row, 3))));
+      copy(product, row.cells[1]);
+      card.append(product, el('span', 'visual-badge', titleCase(val(row, 2))));
       if (row.dataset.weeklyCost) card.append(el('span', 'visual-badge', tr('每周金额', 'Weekly Cost') + ` · $${row.dataset.weeklyCost}`));
-      if (box) {
-        const updateCard = () => {
-          cardBox.checked = box.checked;
-          card.classList.toggle('is-checked', box.checked);
-          refresh();
-        };
-        box.addEventListener('change', updateCard);
-        cardBox.addEventListener('change', () => {
-          box.checked = cardBox.checked;
-          box.dispatchEvent(new Event('change', { bubbles: true }));
-        });
-        updateCard();
-      }
       cards.set(row, card);
       const group = row.dataset.purchaseGroup || (row.dataset.restock === 'true' ? 'restock' : 'weekly');
       ({ weekly, fortnightly, restock }[group] || restock).append(card);
@@ -97,17 +63,6 @@
     document.querySelector('#shopping-search')?.addEventListener('input', () => {
       for (const [row, card] of cards) card.hidden = row.hidden;
     });
-    document.querySelector('#shopping-reset')?.addEventListener('click', () => {
-      for (const [row, card] of cards) {
-        const box = row.querySelector('input');
-        if (!box) continue;
-        const checked = box.checked;
-        card.querySelector('input').checked = checked;
-        card.classList.toggle('is-checked', checked);
-      }
-      refresh();
-    });
-    refresh();
   }
 
   if (page === 'cooking' && tables.length === 5) {
@@ -188,11 +143,9 @@
         day.dataset.weekday = trainingDays[bodyIndex];
         const head = el('div', 'visual-training-head');
         const title = el('h3', '', tr(...(days[key] || [key, key])));
-        const progress = el('span', 'visual-training-progress');
-        head.append(title, el('span', 'visual-training-duration', val(first, 1)), progress);
+        head.append(title, el('span', 'visual-training-duration', val(first, 1)));
         day.append(head);
         const list = el('div', 'visual-training-list');
-        const boxes = [];
         for (const row of body.rows) {
           const offset = row === first ? 2 : 0;
           const action = row.cells[offset].querySelector('a');
@@ -228,22 +181,10 @@
             : kind === 'each' ? tr('／只', ' per dumbbell')
             : kind === 'plates' ? tr('（加片总重）', ' (total plates)') : '';
           const weightLine = el('span', 'visual-exercise-weight', `${tr('配重：', 'Weight: ')}${weight} lbs${suffix}`);
-          const sets = el('div', 'visual-set-list');
-          for (const setLabel of [...row.cells[offset + 2].querySelectorAll('label')]) {
-            boxes.push(setLabel.querySelector('input'));
-            sets.append(setLabel);
-          }
-          content.append(name, dose, weightLine, el('p', 'visual-exercise-muscles', titleCase(val(row, offset + 3))), sets);
+          content.append(name, dose, weightLine, el('p', 'visual-exercise-muscles', titleCase(val(row, offset + 2))));
           card.append(media, content);
           list.append(card);
         }
-        const refresh = () => {
-          const done = boxes.filter((box) => box.checked).length;
-          progress.textContent = `${done}/${boxes.length} ${tr('组', 'sets')}`;
-        };
-        for (const box of boxes) box.addEventListener('change', refresh);
-        document.addEventListener('fitness:training-day-reset', refresh);
-        refresh();
         day.append(list);
         sections.set(trainingDays[bodyIndex], day);
       }

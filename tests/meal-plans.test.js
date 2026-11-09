@@ -8,21 +8,17 @@ const { resolve, scopedKey } = require('../assets/meal-plans.js');
 const original = require('../_data/meal_plans.json');
 const second = { id: 'plan-2', name: { zh: '周计划 2', en: 'Weekly Plan 2' }, pages: Object.fromEntries(Object.entries(original.plans[0].pages).map(([key,url]) => [key, '/plans/plan-2'+url])) };
 const catalog = { ...original, plans: [...original.plans, second] };
-test('stored plan follows each food section and falls back safely for missing plans', () => {
+test('repository default overrides old stored and URL choices on every meal page', () => {
  for (const [page, url] of Object.entries(original.plans[0].pages)) {
-  const chosen = resolve(catalog,url,'plan-2');
-  assert.equal(chosen.active.id,'plan-2');
-  assert.equal(chosen.page,page);
-  assert.equal(chosen.redirect,second.pages[page]);
+  const chosen = resolve(catalog, url, 'plan-2', 'plan-2');
+  assert.equal(chosen.active.id, 'plan-1');
+  assert.equal(chosen.page, page);
+  assert.equal(chosen.redirect, null);
+  assert.equal(resolve(catalog, second.pages[page], 'plan-2', 'plan-2').redirect, url);
  }
- assert.equal(resolve(catalog,'/diet/','deleted-plan').active.id,'plan-1');
- assert.equal(resolve(catalog,'/strength/','plan-2').redirect,null);
-});
-test('explicit plan links override saved choice without redirect loops', () => {
- assert.equal(resolve(catalog,'/diet/','plan-2','plan-1').redirect,null);
- assert.equal(resolve(catalog,'/plans/plan-2/diet/','plan-1').active.id,'plan-2');
- assert.equal(resolve(catalog,'/plans/plan-2/diet/','plan-2','plan-2').redirect,null);
- assert.equal(resolve(catalog,'/diet/','plan-2','invalid').active.id,'plan-2');
+ assert.equal(resolve(catalog, '/strength/', 'plan-2').redirect, null);
+ const changed = {...catalog, default: 'plan-2'};
+ assert.equal(resolve(changed, '/diet/', 'plan-1', 'plan-1').active.id, 'plan-2');
 });
 test('shopping and cooking progress is isolated while preserving original saved data', () => {
  for (const key of ['fitness-shopping:2026-10-26:菠菜','fitness-cooking-guide-v1']) {

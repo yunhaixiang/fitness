@@ -109,7 +109,7 @@
     return element;
   };
   root.replaceChildren();
-  const intro = create('p', 'cooking-flow-intro', t('推荐任务高亮显示；点选步骤可高亮关联任务。', 'Recommended tasks are highlighted. Select a step to highlight related tasks.'));
+  const intro = create('p', 'cooking-flow-intro', t('点选步骤可高亮关联任务。', 'Select a step to highlight related tasks.'));
   const phases = create('div', 'cooking-flow-phases');
   for (const [index, text] of [t('启动加热与备料', 'Start Heating and Prep'), t('并行烹调', 'Cook in Parallel'), t('分盘收尾', 'Portion and Finish')].entries()) {
     phases.append(create('span', `cooking-flow-phase cooking-flow-phase-${index + 1}`, text));

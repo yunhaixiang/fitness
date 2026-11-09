@@ -36,7 +36,14 @@
   let saved = null;
   try { saved = localStorage.getItem(KEY); } catch (_) { /* storage disabled */ }
   if (saved) { try { const parsed = JSON.parse(saved); for (const name of names) if (Array.isArray(parsed[name])) records[name] = parsed[name]; if (Array.isArray(parsed.sleep)) archivedSleep = parsed.sleep; } catch (_) { /* keep blank */ } }
-  const save = () => { try { localStorage.setItem(KEY, JSON.stringify(storedRecords())); return true; } catch (_) { alert(t('浏览器未能保存记录。请检查是否禁用了本地存储，或先导出备份。')); return false; } };
+  try {
+    const published = JSON.parse(document.getElementById('tracking-records')?.textContent || '{}');
+    for (const name of names) {
+      const canonical = Array.isArray(published[name]) ? published[name] : [];
+      const ids = new Set(canonical.map((row) => row.id).filter(Boolean));
+      records[name] = [...canonical, ...records[name].filter((row) => !ids.has(row.id))];
+    }
+  } catch (_) { /* Keep legacy history available if published data cannot be read. */ }
   const latest = (name) => [...records[name]].sort((a, b) => b.date.localeCompare(a.date))[0];
   const recent = (name) => records[name].filter((row) => row.date >= cutoff()).sort((a, b) => b.date.localeCompare(a.date));
   const metric = (label, value) => { const box = document.createElement('div'); box.className = 'metric-box'; const s = document.createElement('span'); s.textContent = label; const strong = document.createElement('strong'); strong.textContent = value || '—'; box.append(s, strong); return box; };
@@ -47,28 +54,9 @@
     if (names.every((name) => records[name].length === 0)) host.setAttribute('aria-label', '还没有记录');
     else host.removeAttribute('aria-label');
   }
-  function fieldControl(field) {
-    const [key, label, type, required, options] = field;
-    const wrapper = document.createElement('label'); wrapper.textContent = label;
-    if (key === 'note') wrapper.className = 'wide-field';
-    const control = type === 'select' ? document.createElement('select') : document.createElement('input');
-    control.name = key; control.required = !!required;
-    if (type === 'select') { for (const option of options) { const el = document.createElement('option'); el.value = option; el.textContent = option; control.append(el); } }
-    else { control.type = type; if (type === 'number') { control.step = 'any'; control.min = '0'; } if (type === 'date') control.value = today(); }
-    wrapper.append(control); return wrapper;
-  }
   function buildPanel(name) {
     const config = types[name];
     const panel = document.createElement('section'); panel.className = 'tracker-panel'; panel.id = `panel-${name}`; panel.setAttribute('role', 'tabpanel');
-    const formCard = document.createElement('div'); formCard.className = 'tracker-card';
-    const title = document.createElement('h2'); title.textContent = `新增${config.name}记录`;
-    const description = document.createElement('p'); description.textContent = config.description;
-    const form = document.createElement('form'); form.className = 'tracker-form'; form.dataset.type = name;
-    for (const field of config.fields) form.append(fieldControl(field));
-    const action = document.createElement('div'); action.className = 'form-submit';
-    const submit = document.createElement('button'); submit.type = 'submit'; submit.textContent = '保存记录';
-    const feedback = document.createElement('span'); feedback.className = 'form-feedback'; feedback.setAttribute('role', 'status');
-    action.append(submit, feedback); form.append(action); formCard.append(title, description, form);
     const chartCard = document.createElement('div'); chartCard.className = 'tracker-card';
     const chartTitle = document.createElement('h2'); chartTitle.textContent = '最近 8 周趋势';
     const chartSelect = document.createElement('select'); chartSelect.className = 'small-button'; chartSelect.setAttribute('aria-label', '选择趋势指标');
@@ -81,7 +69,7 @@
     const csv = document.createElement('button'); csv.type = 'button'; csv.className = 'small-button'; csv.textContent = '导出此类 CSV'; csv.addEventListener('click', () => exportCsv(name));
     const list = document.createElement('div'); list.className = 'record-list'; list.dataset.list = name;
     listCard.append(listTitle, csv, list);
-    panel.append(formCard, chartCard, listCard); return panel;
+    panel.append(chartCard, listCard); return panel;
   }
   function renderList(name) {
     const host = document.querySelector(`[data-list="${name}"]`); host.replaceChildren();
@@ -91,9 +79,7 @@
     for (const row of rows) { const card = document.createElement('article'); card.className = 'record-card';
       const head = document.createElement('div'); head.className = 'record-card-head';
       const date = document.createElement('strong'); date.textContent = row.date;
-      const button = document.createElement('button'); button.type = 'button'; button.className = 'delete-row'; button.textContent = '删除';
-      button.addEventListener('click', () => { if (confirm(t('确定删除这条记录？'))) { records[name] = records[name].filter((item) => item.id !== row.id); if (save()) renderAll(); } });
-      head.append(date, button); card.append(head);
+      head.append(date); card.append(head);
       const fields = document.createElement('dl'); fields.className = 'record-card-fields';
       for (const [key, label] of types[name].fields.slice(1)) {
         if (row[key] === '' || row[key] == null) continue;
@@ -128,46 +114,7 @@
   function exportCsv(name) { const fields = types[name].fields; const quoted = (value) => `"${String(value ?? '').replaceAll('"', '""')}"`; const rows = [fields.map((item) => quoted(t(item[1]))).join(','), ...records[name].map((row) => fields.map(([key]) => quoted(row[key])).join(','))]; download(`fitness-${name}-${today()}.csv`, '\uFEFF' + rows.join('\r\n'), 'text/csv;charset=utf-8'); }
   document.querySelector('#tracker-panels').append(...names.map(buildPanel));
   document.querySelectorAll('[data-tab]').forEach((button) => button.addEventListener('click', () => show(button.dataset.tab)));
-  document.querySelectorAll('.tracker-form').forEach((form) => form.addEventListener('submit', (event) => { event.preventDefault(); const name = form.dataset.type; const values = Object.fromEntries(new FormData(form).entries()); records[name].push({ id: crypto.randomUUID(), ...values }); if (save()) { form.reset(); form.querySelector('[name="date"]').value = today(); form.querySelector('.form-feedback').textContent = t('已保存'); renderAll(); } }));
   document.querySelectorAll('.chart-wrap').forEach((host) => host.previousElementSibling.addEventListener('change', () => { renderChart(host.dataset.chart); window.fitnessI18n?.apply(host); }));
   document.querySelector('#export-json').addEventListener('click', () => download(`fitness-backup-${today()}.json`, JSON.stringify({ version: 1, exportedAt: new Date().toISOString(), records: storedRecords() }, null, 2), 'application/json'));
-  document.querySelector('#import-json').addEventListener('click', () => document.querySelector('#import-file').click());
-  document.querySelector('#import-file').addEventListener('change', async (event) => {
-    const file = event.target.files[0];
-    if (!file) return;
-    try {
-      const parsed = JSON.parse(await file.text());
-      if (parsed.version !== 1 || !parsed.records || typeof parsed.records !== 'object') throw new Error('格式不符');
-      let count = 0;
-      for (const name of names) {
-        const rows = parsed.records[name];
-        if (!Array.isArray(rows)) continue;
-        const known = new Set(records[name].map((row) => row.id));
-        for (const row of rows) {
-          if (!row || typeof row !== 'object' || typeof row.date !== 'string') continue;
-          const id = typeof row.id === 'string' ? row.id : crypto.randomUUID();
-          if (known.has(id)) continue;
-          const clean = { id, date: row.date };
-          for (const [key] of types[name].fields) if (key !== 'date' && (typeof row[key] === 'string' || typeof row[key] === 'number')) clean[key] = String(row[key]);
-          records[name].push(clean);
-          known.add(id);
-          count++;
-        }
-      }
-      if (Array.isArray(parsed.records.sleep)) {
-        const known = new Set(archivedSleep.map((row) => row.id));
-        for (const row of parsed.records.sleep) {
-          if (!row || typeof row !== 'object' || typeof row.date !== 'string') continue;
-          const id = typeof row.id === 'string' ? row.id : crypto.randomUUID();
-          if (known.has(id)) continue;
-          archivedSleep.push({ ...row, id });
-          known.add(id);
-          count++;
-        }
-      }
-      if (save()) { renderAll(); alert(`${t('导入完成，新增')} ${count} ${t('条记录。')}`); }
-    } catch (_) { alert(t('这不是本站导出的有效 JSON 备份。')); }
-    event.target.value = '';
-  });
   show(active); renderAll();
 })();

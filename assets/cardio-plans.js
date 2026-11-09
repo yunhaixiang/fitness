@@ -1,11 +1,8 @@
-/* Cardio is selected independently of meal plans. Apply the energy delta before
-   the nutrition chart and cheat-meal cards read their source data. */
+/* The repository chooses the cardio plan. Apply its energy budget consistently. */
 (() => {
   'use strict';
-  function resolve(catalog, savedId, requestedId) {
-    return catalog.plans.find((p) => p.id === requestedId)
-      || catalog.plans.find((p) => p.id === savedId)
-      || catalog.plans.find((p) => p.id === catalog.default) || catalog.plans[0];
+  function resolve(catalog) {
+    return catalog.plans.find((p) => p.id === catalog.default) || catalog.plans[0];
   }
   function energy(baseline, plan, sessions) {
     const weeklyCardio = plan.netKcal * sessions;
@@ -20,19 +17,8 @@
   const source = document.getElementById('cardio-plan-catalog');
   if (!source) return;
   const catalog = JSON.parse(source.textContent);
-  const key = 'fitness-cardio-plan';
-  let saved;
-  try {
-    saved = localStorage.getItem(key);
-    if (catalog.selectionRevision && localStorage.getItem(key + '-revision') !== catalog.selectionRevision) saved = null;
-  } catch (_) { /* URL/default remains available */ }
-  const requested = new URL(location.href).searchParams.get('cardio-plan');
-  const plan = resolve(catalog, saved, requested);
+  const plan = resolve(catalog);
   if (!plan) return;
-  try {
-    localStorage.setItem(key, plan.id);
-    if (catalog.selectionRevision) localStorage.setItem(key + '-revision', catalog.selectionRevision);
-  } catch (_) { /* storage unavailable */ }
   window.fitnessCardioPlan = plan;
   const en = window.fitnessI18n?.language === 'en';
   const lang = en ? 'en' : 'zh';
@@ -77,31 +63,8 @@
 
   const root = document.getElementById('cardio-options');
   if (root) {
-    const switcher = el('section', 'meal-plan-switcher cardio-plan-switcher');
-    const control = el('div', 'meal-plan-control');
-    const label = el('label', '', tr('周有氧计划', 'Weekly Cardio Plan'));
-    label.htmlFor = 'cardio-plan-select';
-    const select = el('select');
-    select.id = label.htmlFor;
-    for (const item of catalog.plans) {
-      const option = el('option', '', item.name[lang]);
-      option.value = item.id;
-      select.append(option);
-    }
-    select.value = plan.id;
-    control.append(label, select);
-    const detail = el('div', 'meal-plan-detail');
-    detail.append(el('p', 'meal-plan-summary', tr(`每次 ${plan.options.length} 选一 · 净消耗 ≈${plan.netKcal} kcal · 每周 ${catalog.sessionsPerWeek} 次`,
-      `Choose one per session · ≈${plan.netKcal} net kcal · ${catalog.sessionsPerWeek} sessions/week`)),
-      el('span', 'meal-plan-count', tr(`${catalog.plans.length} 套计划`, `${catalog.plans.length} ${catalog.plans.length === 1 ? 'Plan' : 'Plans'}`)));
-    switcher.append(control, detail);
-    document.querySelector('.page-heading')?.after(switcher);
-    select.addEventListener('change', () => {
-      try { localStorage.setItem(key, select.value); } catch (_) { /* URL fallback */ }
-      const url = new URL(location.href);
-      url.searchParams.set('cardio-plan', select.value);
-      location.assign(url.href);
-    });
+    const summary = el('p', 'cardio-plan-summary', `${plan.name[lang]} · ${tr('每周', 'Weekly')} ${catalog.sessionsPerWeek} ${tr('次', 'Sessions')}`);
+    root.before(summary);
     for (const option of plan.options) {
       const card = el('article', 'cardio-option-card');
       const head = el('div', 'cardio-option-head');
@@ -132,7 +95,4 @@
       root.append(card);
     }
   }
-  // Refresh stale pages when the choice changes in another tab or via Back.
-  window.addEventListener('storage', (event) => { if (event.key === key && event.newValue !== plan.id) location.reload(); });
-  window.addEventListener('pageshow', (event) => { if (event.persisted) location.reload(); });
 })();

@@ -5,10 +5,11 @@ const catalog = require('../_data/cardio_plans.json');
 const fs = require('node:fs');
 const path = require('node:path');
 const baseline = Object.fromEntries(fs.readFileSync(path.join(__dirname, '../_data/plan_metrics.yml'), 'utf8').split('\n').filter(line => /^[a-z_]+: [\d.]+$/.test(line)).map(line => { const [k,v] = line.split(': '); return [k, Number(v)]; }));
-test('two plans default to plan 2 while preserving subsequent explicit choices', () => {
+test('repository controls cardio even with stale stored or explicit URL choices', () => {
  assert.equal(catalog.plans.length, 2);
  assert.equal(resolve(catalog).id, 'cardio-2');
- assert.equal(resolve(catalog, 'cardio-1').id, 'cardio-1');
+ assert.equal(resolve(catalog, 'cardio-1', 'cardio-1').id, 'cardio-2');
+ assert.equal(resolve({...catalog, default: 'cardio-1'}, 'cardio-2', 'cardio-2').id, 'cardio-1');
  assert.equal(resolve(catalog, 'cardio-1', 'cardio-2').id, 'cardio-2');
  assert.equal(resolve(catalog, 'removed').id, 'cardio-2');
 });
