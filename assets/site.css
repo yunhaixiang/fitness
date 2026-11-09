@@ -431,6 +431,8 @@ html[data-theme=light] .theme-icon-moon{display:block}
 .cooking-flow-empty,.cooking-flow-join{color:var(--muted);font-size:11px}
 .cooking-flow-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;align-items:start}
 .cooking-flow-grid>.cooking-flow-card{width:100%;margin:0}
+.cooking-flow-grid.is-masonry{display:block;position:relative}
+.cooking-flow-grid.is-masonry>.cooking-flow-card{position:absolute;width:calc((100% - 16px)/2)}
 .cooking-flow-card{--thread-accent:var(--accent);--thread-tint:color-mix(in srgb,var(--thread-accent) 15%,var(--card));min-width:0;padding:15px;border:1px solid var(--line);border-top:3px solid var(--thread-accent);border-radius:10px;background:var(--card);transition:border-color .15s,box-shadow .15s}
 .cooking-flow-card-cold{--thread-accent:var(--cool);--thread-tint:color-mix(in srgb,var(--thread-accent) 15%,var(--card))}
 .cooking-flow-card-prep{--thread-accent:var(--gold);--thread-tint:color-mix(in srgb,var(--thread-accent) 15%,var(--card));grid-column:1/-1}

@@ -243,4 +243,38 @@
     }
     page.classList.add('cooking-page-enhanced');
   }
+  // Place cards in the shorter column while retaining task order in the DOM.
+  let layoutFrame;
+  function layoutCards() {
+    const wide = window.matchMedia('(min-width: 981px)').matches;
+    cards.classList.toggle('is-masonry', wide);
+    if (!wide) {
+      cards.style.removeProperty('height');
+      for (const card of cardElements.values()) {
+        card.style.removeProperty('top');
+        card.style.removeProperty('left');
+      }
+      return;
+    }
+    const gap = 16, columnWidth = (cards.clientWidth - gap) / 2;
+    const heights = [0, 0];
+    for (const card of cardElements.values()) {
+      const column = heights[0] <= heights[1] ? 0 : 1;
+      card.style.top = `${heights[column]}px`;
+      card.style.left = `${column * (columnWidth + gap)}px`;
+      heights[column] += card.getBoundingClientRect().height + gap;
+    }
+    cards.style.height = `${Math.max(...heights) - gap}px`;
+  }
+  function queueLayout() {
+    cancelAnimationFrame(layoutFrame);
+    layoutFrame = requestAnimationFrame(layoutCards);
+  }
+  if ('ResizeObserver' in window) {
+    const observer = new ResizeObserver(queueLayout);
+    observer.observe(cards);
+    for (const card of cardElements.values()) observer.observe(card);
+    window.addEventListener('resize', queueLayout);
+    layoutCards();
+  }
 })();
