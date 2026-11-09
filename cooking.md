@@ -13,7 +13,7 @@ cooking: true
 <div id="cooking-flow" class="cooking-flow" aria-label="厨具并行流程"></div>
 <h2 id="rice" data-en="Rice Cooker">电饭煲线程</h2>
 <ol>
-<li data-en="Rinse and drain 47 g dry rice. Use equal volumes of rice and water: about 59 mL water. Place in the rice cooker.">干米47 g淘洗沥干；米和水按体积1:1，加水约59 mL，放入电饭煲。</li>
+<li data-en="Rinse and drain 55 g dry rice. Use equal volumes of rice and water: about 69 mL water. Place in the rice cooker.">干米55 g淘洗沥干；米和水按体积1:1，加水约69 mL，放入电饭煲。</li>
 <li data-en="Use White Rice mode, about 50 minutes.">启动White Rice白米模式，约50分钟。</li>
 </ol>
 

@@ -121,10 +121,10 @@ visual: true
 <td style="text-align: right;">按需补</td>
 <td style="text-align: right;"><a href="https://www.walmart.ca/en/ip/Hellmann-s-Chipotle-Mayonnaise-Mild-Dressing-340ml/5NDTYWNJRQ1Y">$5.47</a></td>
 </tr>
-<tr data-weekly-cost="0.36" data-price-id="19" data-purchase-group="restock">
+<tr data-weekly-cost="0.42" data-price-id="19" data-purchase-group="restock">
 <td>白米</td>
 <td><a href="https://www.walmart.ca/en/ip/Great-Value-Long-Grain-White-Rice/4UD9P76BEQB4">Great Value Long Grain White Rice</a><br>900 g / 袋</td>
-<td data-en="1 Bag / About 9.6 Weeks">1袋 / 约9.6周</td>
+<td data-en="1 Bag / About 8.2 Weeks">1袋 / 约8.2周</td>
 <td style="text-align: right;"><a href="https://www.walmart.ca/en/ip/Great-Value-Long-Grain-White-Rice/4UD9P76BEQB4">$3.47</a></td>
 </tr>
 <tr data-weekly-cost="2.73" data-price-id="20" data-purchase-group="fortnightly">
@@ -213,7 +213,7 @@ visual: true
 <td>每周合计</td>
 <td>—</td>
 <td style="text-align: right;">—</td>
-<td style="text-align: right;">$138.10</td>
+<td style="text-align: right;">$138.16</td>
 </tr>
 </tbody>
 </table>

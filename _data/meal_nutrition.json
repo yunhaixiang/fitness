@@ -111,23 +111,23 @@
       "iodine": "68.412"
     },
     "rice": {
-      "kcal": "671",
-      "protein": "41.0",
-      "carbs": "67.6",
+      "kcal": "700",
+      "protein": "41.6",
+      "carbs": "74.0",
       "fat": "24.6",
       "saturatedFat": "6.9",
-      "fibre": "6.1",
+      "fibre": "6.3",
       "sugar": "5.7",
       "sodium": "1361",
       "cholesterol": "520",
       "epaDha": "0.23",
       "label": "rice",
-      "calcium": "131.574",
-      "iron": "4.687",
-      "potassium": "670.764",
+      "calcium": "133.814",
+      "iron": "4.751",
+      "potassium": "679.964",
       "vitaminD": "2.153",
       "vitaminB12": "3.708",
-      "iodine": "300.517"
+      "iodine": "300.533"
     },
     "pasta": {
       "kcal": "700",
