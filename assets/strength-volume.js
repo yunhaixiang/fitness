@@ -151,7 +151,7 @@
   root.prepend(toolbar, section);
   root.append(detailsSection);
 
-  const siteRoot = document.querySelector('.brand')?.href || location.origin + '/';
+  const siteRoot = new URL(`${document.body.dataset.baseurl || ''}/`, location.origin).href;
   let leaderObserver;
   let updateLeaders = () => {};
   window.addEventListener('resize', () => updateLeaders());
