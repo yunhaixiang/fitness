@@ -1,6 +1,6 @@
 # Hume → Apple Health → 私人数据库
 
-网站代码继续在 fitness 仓库维护；新的体重、体脂率不写进 Git。Cloudflare D1 保存记录，fitness-private 要求 Cloudflare Access 登录和邮箱白名单，fitness-ingest 只接受带手机专用凭据的上传，不提供读取接口。
+网站代码继续在 fitness 仓库维护；新的体重、体脂率不写进 Git。Cloudflare D1 保存记录，fitness-private 要求 Cloudflare Access 登录和邮箱白名单，fitness-ingest 接收体重、体脂率及可选的每日步数，只接受带手机专用凭据的上传，不提供读取接口。
 
 目前 GitHub Pages 的计划仍是公开版本。私人入口加载同一套界面，服务端替换身体记录，所以原来的发布方式和链接维护不变。旧的公开记录以及 Git 历史不会自动消失。新记录只在私人入口可见。
 
@@ -38,6 +38,21 @@
 
 9. 显示返回结果。`ok: true` 才表示请求已处理；错误必须显示出来，不能无条件提示同步成功。
 10. 打开私人网站的统计页核对日期、体重、体脂率。重复运行不会增加同一天的重复行；同一天保留较新的测量。
+
+## 在同一个 Sync Hume 中加入每日步数
+
+身体数据仍使用最新称重时间；步数使用昨天的日历日期，与称重日期独立。用户目前仅用 iPhone 计步。
+
+在上传动作之前添加：
+
+1. Date（Current Date）→ Adjust Date（Subtract 1 day）→ Format Date（Custom: `yyyy-MM-dd`）→ Set Variable `StepsDate`。这是昨天的日期，不是最近24小时。
+2. 新增独立的 Find Health Samples，Type=Steps，Start Date=is on=昨天的日期变量，Source=实际的 iPhone 数据来源，Group by=None，Limit=Off。确认顶部是 Find，不是 Filter 上一个动作的结果。
+3. 对样本取 Value，再 Calculate Statistics → Sum，Set Variable `StepsCount`。只对选定的 iPhone 来源求和；若以后使用手表或其他来源，需要重新确认去重策略。没有样本或没有权限时，先停止并检查，不自动当作0步。
+4. Date（Current Date）→ Format Date（ISO 8601）→ Set Variable `StepsCollectedAt`。
+5. 在同一个 POST JSON 里增加三项：`steps_count`（Number，StepsCount）、`steps_date`（Text，StepsDate）、`steps_collected_at`（Text，StepsCollectedAt）。原来的4项保留。
+6. 首次把总数与健康 App 中昨天的步数核对。`ok: true` 且 `steps_saved: true` 表示本次步数已保存。重复或更旧的快照会返回 `steps_saved: false`，不会累加。
+
+接口保持兼容：不传这3项时仍只上传身体数据；传步数时3项必须完整。身体和步数验证均通过后在一个数据库事务中保存。新步数只通过受保护的私人入口读取，GitHub Pages 不包含私人步数。统计页提供“步数”页签和最近8周曲线；步数不会自动改写热量赤字。
 
 ## 自动化
 

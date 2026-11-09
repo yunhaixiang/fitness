@@ -6,6 +6,7 @@
     body: { name: '身体组成', fields: [
       ['date', '日期'], ['weight', '体重 kg'], ['bf', '体脂率 %']
     ], chart: [['weight', '体重 kg'], ['bf', '体脂率 %']] },
+    steps: { name: '步数', fields: [['date', '日期'], ['steps', '步数']], chart: [['steps', '步数']] },
     cheatMeals: { name: '放纵餐', fields: [
       ['date', '日期'], ['meal', '放纵餐'], ['portion', '份量'], ['kcal', '热量 kcal'], ['note', '备注']
     ] }

@@ -2,7 +2,7 @@ import {test} from 'node:test';
 import assert from 'node:assert/strict';
 import {DatabaseSync} from 'node:sqlite';
 import {readFileSync} from 'node:fs';
-import {measurement, tokenHash, saveSQL, readRecords} from '../cloudflare/measurements.mjs';
+import {measurement, tokenHash, saveSQL, readRecords, dailySteps} from '../cloudflare/measurements.mjs';
 import ingest from '../cloudflare/ingest.mjs';
 import viewer, {trackingHandler} from '../cloudflare/viewer.mjs';
 
@@ -13,7 +13,12 @@ const ctx = email => ({access: {getIdentity: async () => ({email})}});
 function database() {
   const sql = new DatabaseSync(':memory:');
   sql.exec(readFileSync(new URL('../cloudflare/migrations/0001_measurements.sql', import.meta.url), 'utf8'));
-  return {sql, prepare(query) {
+  sql.exec(readFileSync(new URL('../cloudflare/migrations/0002_daily_steps.sql', import.meta.url), 'utf8'));
+  return {sql, async batch(statements) {
+    sql.exec('BEGIN');
+    try { const results = []; for (const statement of statements) results.push(await statement.run()); sql.exec('COMMIT'); return results; }
+    catch (error) { sql.exec('ROLLBACK'); throw error; }
+  }, prepare(query) {
     const statement = sql.prepare(query);
     const bound = args => ({
       first: async () => statement.get(...args) || null,
@@ -108,4 +113,34 @@ test('private HTML replaces body data, preserves cheat meals and escapes script 
   assert.equal(result.includes('</script>'), false);
   assert.equal(JSON.parse(result).currentBody.weight, 75);
   assert.equal(JSON.parse(result).cheatMeals[0].note, '</script><script>bad</script>');
+});
+
+test('optional steps reject incomplete, fractional, invalid or future totals', () => {
+  assert.equal(dailySteps(sample, now), null);
+  const steps = {steps_count: 0, steps_date: '2026-11-08', steps_collected_at: '2026-11-09T08:35:00-05:00'};
+  assert.equal(dailySteps(steps, now).steps, 0);
+  for (const change of [{steps_count: -1}, {steps_count: 2.5}, {steps_count: true}, {steps_count: ''}, {steps_date:'2026-02-30'}, {steps_date:'2026-11-10'}, {steps_collected_at:'2026-11-09'}, {steps_collected_at:'2030-01-01T00:00:00Z'}]) assert.throws(() => dailySteps({...steps,...change},now));
+  assert.throws(() => dailySteps({steps_count: 10},now));
+});
+test('one upload saves independent daily steps, retries never add totals and stale snapshots cannot overwrite', async () => {
+  const e = env(); const {token} = await (await viewer.fetch(createToken(), e, ctx(owner))).json();
+  const body = {...sample, measured_at:'2020-01-02T08:30:00-05:00', body_fat_measured_at:'2020-01-02T08:30:00-05:00', steps_count:8000, steps_date:'2020-01-01', steps_collected_at:'2020-01-02T08:35:00-05:00'};
+  const response = await ingest.fetch(upload(token,body),e);
+  assert.equal(response.status,200); assert.equal((await response.json()).steps_saved,true);
+  assert.equal((await (await ingest.fetch(upload(token,body),e)).json()).steps_saved,false);
+  await ingest.fetch(upload(token,{...body,steps_count:2000,steps_collected_at:'2020-01-02T08:00:00-05:00'}),e);
+  assert.equal(e.DB.sql.prepare('SELECT steps FROM daily_steps').get().steps,8000);
+  await ingest.fetch(upload(token,{...body,steps_count:7500,steps_collected_at:'2020-01-02T09:00:00-05:00'}),e);
+  assert.equal(e.DB.sql.prepare('SELECT steps FROM daily_steps').get().steps,7500);
+  assert.equal(e.DB.sql.prepare('SELECT count(*) n FROM daily_steps').get().n,1);
+  const invalid = await ingest.fetch(upload(token,{...body,weight_kg:90,steps_count:-1}),e);
+  assert.equal(invalid.status,400);
+  assert.equal(e.DB.sql.prepare('SELECT weight FROM measurements').get().weight,76.5);
+});
+test('private records include step history while unauthenticated readers remain blocked', async () => {
+  const e = env(); const date = new Date().toISOString().slice(0,10);
+  e.DB.sql.prepare('INSERT INTO daily_steps VALUES (?, ?, ?)').run(date,4321,new Date().toISOString());
+  const records = await readRecords(e.DB);
+  assert.equal(records.steps[0].steps,4321);
+  assert.equal((await viewer.fetch(new Request('https://viewer.example/api/records'),e,{})).status,403);
 });

@@ -145,7 +145,7 @@
     '数据只保存在当前浏览器。': 'Data is saved in this browser only. ',
     'GitHub Pages 不会自动把记录写回仓库，也不会跨设备同步。建议每周导出一次 JSON 备份；更换设备时用“导入备份”合并记录。页面默认显示最近 8 周，旧记录仍保存在浏览器和导出文件里。': 'GitHub Pages does not write records back to the repository or sync across devices. Export a JSON backup weekly and use Import backup to merge records on a new device. This page shows the latest eight weeks; older records remain in the browser and exported backups.',
     '导出备份': 'Export backup', '导入备份': 'Import backup',
-    '记录类型': 'Record type',
+    '记录类型': 'Record type', '步数': 'Steps',
     '身体组成': 'Body composition', '饮食': 'Diet', '力量': 'Strength', '有氧': 'Cardio',
     '身体组成记录': 'body-composition entry', '饮食记录': 'diet entry', '力量训练记录': 'strength entry',
     '有氧训练记录': 'cardio entry',

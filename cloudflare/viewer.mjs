@@ -76,6 +76,6 @@ export default {
 
 const setupPage = `<!doctype html><html lang="zh-CN"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Hume 同步设置</title>
 <style>body{background:#191b18;color:#e9e6dc;font:17px system-ui;max-width:650px;margin:60px auto;padding:24px;line-height:1.7}button{padding:12px 18px;cursor:pointer}textarea{box-sizing:border-box;width:100%;margin:12px 0;background:#282b25;color:#fff;padding:12px}a{color:#c4d5a2}</style>
-<h1>Hume 同步设置</h1><p>上传凭据只允许写入体重和体脂率，不能读取记录。生成新凭据会立即停用旧凭据。</p>
+<h1>Hume 同步设置</h1><p>上传凭据只允许写入体重、体脂率和每日步数，不能读取记录。生成新凭据会立即停用旧凭据。</p>
 <button id="create">生成手机同步凭据</button><div id="result" hidden><label>上传地址<textarea id="url" readonly></textarea></label><label>Authorization 请求头<textarea id="secret" readonly></textarea></label><p>只复制到你自己的快捷指令，不要分享。此页面刷新后不再显示凭据。</p></div><p id="status" role="status"></p><a href="/fitness/">返回网站</a>
 <script>document.getElementById('create').onclick=async()=>{const b=document.getElementById('create');b.disabled=true;try{const r=await fetch('/api/sync-token',{method:'POST',headers:{'X-Fitness-Action':'create-sync-token'}});if(!r.ok)throw Error('生成失败，请重新登录后再试。');const d=await r.json();document.getElementById('url').value=d.upload_url;document.getElementById('secret').value='Bearer '+d.token;document.getElementById('result').hidden=false;document.getElementById('status').textContent='已生成。';}catch(e){document.getElementById('status').textContent=e.message;}finally{b.disabled=false;}};</script></html>`;

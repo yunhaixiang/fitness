@@ -45,9 +45,31 @@ WHERE excluded.measured_at >= measurements.measured_at`;
 export async function readRecords(db) {
   const latest = await db.prepare('SELECT weight, bf, measured_at FROM measurements ORDER BY measured_at DESC LIMIT 1').first();
   const {results} = await db.prepare("SELECT * FROM measurements WHERE date >= date('now', '-56 days') ORDER BY date").all();
+  const {results: steps} = await db.prepare("SELECT * FROM daily_steps WHERE date >= date('now', '-56 days') ORDER BY date").all();
   return {
+    steps: steps.map(row => ({id: `apple-health-steps-${row.date}`, date: row.date, steps: row.steps, collectedAt: row.collected_at})),
     body: results.map(row => ({id: `apple-health-${row.date}`, date: row.date, weight: row.weight, bf: row.bf, measuredAt: row.measured_at})),
     currentBody: latest ? {weight: latest.weight, bf: latest.bf, measuredAt: latest.measured_at} : {},
     cheatMeals: []
   };
 }
+
+// Optional daily totals: independent of the date of the latest body measurement.
+export function dailySteps(input, now = new Date()) {
+  const keys = ['steps_count', 'steps_date', 'steps_collected_at'];
+  if (!keys.some(key => Object.hasOwn(input, key))) return null;
+  const raw = input.steps_count;
+  const steps = Number(raw);
+  if (!['number', 'string'].includes(typeof raw) || String(raw).trim() === '' || !Number.isInteger(steps) || steps < 0 || steps > 200000) throw new Error('Invalid steps_count; send a whole-day integer total.');
+  const date = input.steps_date;
+  const parsed = typeof date === 'string' && /^\d{4}-\d{2}-\d{2}$/.test(date) ? new Date(date + 'T12:00:00Z') : new Date(NaN);
+  const today = new Intl.DateTimeFormat('en-CA', {timeZone:'America/Toronto', year:'numeric', month:'2-digit', day:'2-digit'}).format(now);
+  if (!Number.isFinite(parsed.getTime()) || parsed.toISOString().slice(0,10) !== date || date < '2000-01-01' || date > today) throw new Error('Invalid steps_date; use YYYY-MM-DD.');
+  const rawTime = input.steps_collected_at;
+  const collected = new Date(rawTime);
+  if (typeof rawTime !== 'string' || !/^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}(?:\.\d+)?(?:Z|[+-]\d{2}:\d{2})$/.test(rawTime) || !Number.isFinite(collected.getTime()) || collected > new Date(now.getTime()+600000) || collected < new Date(date+'T00:00:00Z')) throw new Error('Invalid steps_collected_at; use the query time in ISO 8601.');
+  return {date, steps, collectedAt: collected.toISOString()};
+}
+export const saveStepsSQL = `INSERT INTO daily_steps (date, steps, collected_at) VALUES (?, ?, ?)
+ON CONFLICT(date) DO UPDATE SET steps=excluded.steps, collected_at=excluded.collected_at
+WHERE excluded.collected_at > daily_steps.collected_at`;

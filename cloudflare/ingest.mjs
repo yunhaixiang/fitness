@@ -1,4 +1,4 @@
-import {measurement, json, tokenHash, saveSQL} from './measurements.mjs';
+import {measurement, json, tokenHash, saveSQL, dailySteps, saveStepsSQL} from './measurements.mjs';
 
 export default {
   async fetch(request, env) {
@@ -24,11 +24,16 @@ export default {
       }
       const bytes = new Uint8Array(size); let offset = 0;
       for (const chunk of chunks) { bytes.set(chunk, offset); offset += chunk.length; }
-      let row;
-      try { row = measurement(JSON.parse(new TextDecoder().decode(bytes))); }
+      let row, steps;
+      try { const input = JSON.parse(new TextDecoder().decode(bytes)); row = measurement(input); steps = dailySteps(input); }
       catch (error) { return json({error: error.message}, 400); }
-      const saved = await env.DB.prepare(saveSQL).bind(row.date, row.weight, row.bf, row.measuredAt, row.bodyFatMeasuredAt).run();
-      return json({ok: true, date: row.date, saved: saved.meta.changes > 0});
+      const bodyStatement = env.DB.prepare(saveSQL).bind(row.date, row.weight, row.bf, row.measuredAt, row.bodyFatMeasuredAt);
+      if (!steps) {
+        const saved = await bodyStatement.run();
+        return json({ok: true, date: row.date, saved: saved.meta.changes > 0});
+      }
+      const [saved, stepsSaved] = await env.DB.batch([bodyStatement, env.DB.prepare(saveStepsSQL).bind(steps.date, steps.steps, steps.collectedAt)]);
+      return json({ok: true, date: row.date, saved: saved.meta.changes > 0, steps_date: steps.date, steps_saved: stepsSaved.meta.changes > 0});
     } catch (_) {
       // Never log the request, bearer token, or health values.
       return json({error: 'Sync temporarily unavailable'}, 503);

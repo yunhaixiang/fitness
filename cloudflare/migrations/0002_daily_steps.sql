@@ -1,0 +1,5 @@
+CREATE TABLE IF NOT EXISTS daily_steps (
+  date TEXT PRIMARY KEY,
+  steps INTEGER NOT NULL CHECK(steps BETWEEN 0 AND 200000),
+  collected_at TEXT NOT NULL
+);
