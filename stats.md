@@ -30,6 +30,10 @@ visual: true
 
 
 
+<h2 id="half-week-meals" data-en="Seven-Meal Plan">半周七餐计划</h2>
+
+{% include nutrition-meal-summary.html %}
+
 ## 消耗构成（估算）
 
 <div class="table-wrap">

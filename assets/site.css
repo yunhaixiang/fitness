@@ -683,3 +683,18 @@ html[data-theme=light] .cooking-guide-primary{color:#fff}
 @media(max-width:600px){.overview-metrics{gap:8px}.overview-metric{padding:14px 10px;gap:8px}.overview-metric>span{font-size:11px}.overview-metric strong{font-size:23px}.overview-metric small{display:block;margin-top:5px;font-size:11px}}
 
 .diet-activity-card[data-activity=thawing],.today-activity[data-activity=thawing]{--kind:var(--cool);border-left-color:var(--cool)}
+
+/* Seven-meal nutrition overview stays a table, independent of chart source tables. */
+.meal-summary-note{color:var(--muted);font-size:13px;line-height:1.6;margin:0 0 12px}
+.meal-summary-scroll{margin-bottom:0;overscroll-behavior-x:contain}
+.meal-summary-scroll:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+.meal-summary-table{width:100%;min-width:800px;border-collapse:collapse;font-size:13px;line-height:1.6}
+.meal-summary-table th,.meal-summary-table td{padding:14px 16px;text-align:left;vertical-align:top;border-bottom:1px solid var(--line)}
+.meal-summary-table thead th{background:var(--soft);font-weight:700;white-space:nowrap}
+.meal-summary-table tbody th{min-width:110px;font-weight:600}
+.meal-summary-table tbody tr:last-child>*{border-bottom:0}
+.meal-summary-table tbody tr:hover{background:var(--hover)}
+.meal-summary-table td>div+div{margin-top:4px}
+.meal-summary-number{display:block;color:var(--accent);font-size:12px;font-weight:700;margin-bottom:3px}
+.meal-summary-table .meal-summary-calories{font-size:18px;font-weight:700;color:var(--accent);text-align:right;white-space:nowrap;font-variant-numeric:tabular-nums}
+.meal-summary-table thead th:last-child{text-align:right}
