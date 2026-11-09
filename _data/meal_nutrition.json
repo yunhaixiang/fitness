@@ -130,23 +130,23 @@
       "iodine": "300.517"
     },
     "pasta": {
-      "kcal": "749",
-      "protein": "56.6",
-      "carbs": "72.7",
-      "fat": "25.4",
+      "kcal": "700",
+      "protein": "55.0",
+      "carbs": "62.4",
+      "fat": "25.2",
       "saturatedFat": "6.1",
-      "fibre": "7.2",
-      "sugar": "15.2",
+      "fibre": "6.7",
+      "sugar": "15.0",
       "sodium": "878",
       "cholesterol": "297",
       "epaDha": "0.15",
       "label": "pasta",
-      "calcium": "102.023",
-      "iron": "6.583",
-      "potassium": "2653.200",
+      "calcium": "99.083",
+      "iron": "6.121",
+      "potassium": "2621.979",
       "vitaminD": "0.385",
       "vitaminB12": "1.647",
-      "iodine": "20.193"
+      "iodine": "20.160"
     },
     "bread": {
       "kcal": "700",
