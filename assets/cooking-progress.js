@@ -1,20 +1,18 @@
 (function (host) {
   'use strict';
-  const branchId = half => half === 'second' ? 'cold-second' : 'cold-first';
   function derive(nodes, saved, half = 'first', started = []) {
-    const branch = branchId(half);
-    const active = nodes.filter(n => !['cold-first', 'cold-second'].includes(n.id) || n.id === branch);
+    const active = nodes;
     const byId = new Map(active.map(n => [n.id, n]));
-    const done = new Set((Array.isArray(saved) ? saved : []).filter(id => byId.has(id) && id !== 'ready'));
-    const complete = id => id === 'ready' ? done.has(branch) : done.has(id);
-    const satisfied = n => n.id === 'ready' ? done.has(branch) : n.before.every(complete);
+    const done = new Set((Array.isArray(saved) ? saved : []).filter(id => byId.has(id)));
+    const complete = id => done.has(id);
+    const satisfied = n => n.before.every(complete);
     // Undoing a prerequisite invalidates only its downstream completion marks.
     let changed;
     do {
       changed = false;
       for (const id of done) if (!satisfied(byId.get(id))) { done.delete(id); changed = true; }
     } while (changed);
-    const pending = active.filter(n => n.id !== 'ready' && !done.has(n.id));
+    const pending = active.filter(n => !done.has(n.id));
     const running = new Set((Array.isArray(started) ? started : []).filter(id => pending.some(n => n.id === id && satisfied(n))));
     const appliance = n => n.group === 'prep' ? null : n.resource || (['air','rice','small-wok','large-wok'].includes(n.group) ? n.group : null);
     const busy = new Set(pending.filter(n => running.has(n.id)).map(appliance).filter(Boolean));
@@ -30,7 +28,7 @@
     // Use already-heated appliances promptly; otherwise prioritize the longest remaining chain.
     const urgent = n => n.id === 'salmon' && done.has('air-heat') || n.id === 'haddock' && done.has('salmon') || ['eggs', 'pasta', 'dumplings', 'noodles'].includes(n.id) && n.before.some(id => id.endsWith('-water') && done.has(id));
     available.sort((a,b) => Number(urgent(b)) - Number(urgent(a)) || Number(!!a.confirmation) - Number(!!b.confirmation) || length(b.id) - length(a.id));
-    return { done: [...done], running: [...running], active, available, recommended: available[0]?.id || null, ready: done.has(branch), total: active.filter(n => n.id !== 'ready').length };
+    return { done: [...done], running: [...running], active, available, recommended: available[0]?.id || null, ready: true, total: active.length };
   }
   function toggle(nodes, saved, half, id, checked, started = []) {
     const view = derive(nodes, saved, half, started);
@@ -122,10 +120,9 @@
     state[state.half + 'Running'] = view.running;
     const done = new Set(view.done), available = new Set(view.available.map(n => n.id));
     for (const [id, c] of controls) {
-      c.row.hidden = ['cold-first', 'cold-second'].includes(id) && id !== branchId(state.half);
-      const checked = id === 'ready' ? view.ready : done.has(id);
+      const checked = done.has(id);
       c.checkbox.checked = checked;
-      c.checkbox.disabled = id === 'ready' || (!checked && !available.has(id) && !view.running.includes(id));
+      c.checkbox.disabled = !checked && !available.has(id) && !view.running.includes(id);
       c.row.classList.toggle('is-complete', checked);
       c.row.classList.toggle('is-blocked', !checked && !available.has(id) && !view.running.includes(id));
       c.row.classList.toggle('is-running', view.running.includes(id));
@@ -164,7 +161,7 @@
       suggestion.append(create('strong', '', t('推荐下一步', 'Recommended Next')), action(view.available[0], true));
       const next = view.available[0];
       const reason = ['salmon','haddock','eggs','pasta','dumplings','noodles'].includes(next.id) ? t('加热已就绪，优先接着烹调。', 'The appliance is ready; continue cooking promptly.') : t('优先启动耗时较长的后续流程。', 'Start the longer remaining chain first.');
-      suggestion.append(create('span', 'cooking-progress-reason', next.confirmation ? t('达到预热温度后再确认；等待期间可继续其他任务。', 'Confirm once preheated; continue other tasks while waiting.') : next.group === 'cold' ? t('先确认本次食材就绪。', 'Confirm the ingredients are ready first.') : reason));
+      suggestion.append(create('span', 'cooking-progress-reason', next.confirmation ? t('达到预热温度后再确认；等待期间可继续其他任务。', 'Confirm once preheated; continue other tasks while waiting.') : reason));
       const others = view.available.slice(1);
       if (others.length) { readyList.append(create('strong', '', t('现在也可以做', 'Also Ready'))); const list = create('div', 'cooking-flow-chip-list'); others.forEach(n => list.append(action(n, false))); readyList.append(list); }
     } else suggestion.append(create('strong', '', done.size === view.total ? t('本次做饭已全部完成', 'This Batch Is Complete') : t('等待进行中的任务完成，再勾选解锁下一步。', 'Finish an ongoing task and check it off to unlock the next steps.')));

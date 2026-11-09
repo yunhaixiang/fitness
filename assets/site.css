@@ -681,3 +681,5 @@ html[data-theme=light] .cooking-guide-primary{color:#fff}
 .overview-metric small{font-size:12px;font-weight:500;color:var(--muted)}
 .overview-metric:hover{border-color:var(--accent);text-decoration:none}
 @media(max-width:600px){.overview-metrics{gap:8px}.overview-metric{padding:14px 10px;gap:8px}.overview-metric>span{font-size:11px}.overview-metric strong{font-size:23px}.overview-metric small{display:block;margin-top:5px;font-size:11px}}
+
+.diet-activity-card[data-activity=thawing],.today-activity[data-activity=thawing]{--kind:var(--cool);border-left-color:var(--cool)}
