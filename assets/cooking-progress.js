@@ -41,7 +41,7 @@
     // Both halves now have identical tasks. Keep the previously selected batch,
     // rather than merging marks from separate cooking sessions.
     const legacyHalf = parsed?.half === 'second' ? 'second' : 'first';
-    const done = strings([2, 3].includes(parsed?.version) ? parsed.done : parsed?.[legacyHalf]);
+    const done = strings([2, 3, 4].includes(parsed?.version) ? parsed.done : parsed?.[legacyHalf]);
     for (const id of ['oven-heat', 'air-heat']) if (done.includes(id) && !done.includes(id + '-start')) done.push(id + '-start');
     // A completed legacy finish task included all three newly separated tasks.
     if (done.includes('finish')) {
@@ -50,8 +50,16 @@
     }
     // Previously, laying out bread was part of assembling either meal.
     if (done.some(id => ['wrap', 'sandwich'].includes(id)) && !done.includes('prep-bread')) done.push('prep-bread');
+    // Older tasks included these preparation steps; migrate only old records.
+    if (parsed?.version !== 4) {
+      const split = { eggs: ['peel-eggs'], ground: ['prep-zucchini'],
+        'season-noodles': ['prep-noodle-sauce'], wrap: ['prep-wrap'], sandwich: ['prep-sandwich'] };
+      for (const [id, children] of Object.entries(split)) if (done.includes(id)) {
+        for (const child of children) if (!done.includes(child)) done.push(child);
+      }
+    }
     // Legacy running tasks return to unchecked; only completion is persisted.
-    return { version: 3, done };
+    return { version: 4, done };
   }
   const api = { derive, toggle, readState };
   if (typeof module !== 'undefined' && module.exports) module.exports = api;

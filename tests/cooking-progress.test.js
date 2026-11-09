@@ -37,9 +37,9 @@ test('hot air fryer takes priority and long rice chain comes before short vegeta
 });
 test('legacy progress keeps the selected batch without merging two sessions', () => {
  const state = readState(JSON.stringify({half:'second',first:['prep-rice'],second:['prep-salmon'],secondRunning:['air-heat']}));
- assert.deepEqual(state,{version:3,done:['prep-salmon']});
+ assert.deepEqual(state,{version:4,done:['prep-salmon']});
  assert.deepEqual(readState(JSON.stringify(state)),state);
- assert.deepEqual(readState('{broken'),{version:3,done:[]});
+ assert.deepEqual(readState('{broken'),{version:4,done:[]});
  assert.deepEqual(readState('{"first":[{},null,5,"rice"]}').done,['rice']);
  assert.deepEqual(readState(JSON.stringify({version:2,done:[],running:[],first:['rice']})).done,[]);
 });
@@ -52,7 +52,7 @@ test('all current tasks can complete', () => {
 
 test('legacy running state never marks work complete or blocks ready tasks', () => {
  const state = readState(JSON.stringify({version:2,done:['prep-salmon','air-heat-start'],running:['air-heat']}));
- assert.deepEqual(state,{version:3,done:['prep-salmon','air-heat-start']});
+ assert.deepEqual(state,{version:4,done:['prep-salmon','air-heat-start']});
  const view = derive(nodes,state.done);
  assert.ok(view.available.some(n=>n.id==='air-heat'));
  assert.ok(view.available.some(n=>n.id==='oven-heat-start'));
@@ -84,7 +84,7 @@ test('saved preheat completion survives the split into two steps', () => {
 
 
 test('finish tasks can assemble food early, but refrigeration waits for every meal', () => {
- const partial = ['prep-bread','prep-chicken','oven-heat-start','oven-heat','chicken','egg-water','eggs'];
+ const partial = ['prep-wrap','peel-eggs','prep-bread','prep-chicken','oven-heat-start','oven-heat','chicken','egg-water','eggs'];
  const available = derive(nodes,partial).available.map(n=>n.id);
  assert.ok(available.includes('wrap'));
  assert.ok(available.includes('peas-carrots'));
@@ -92,7 +92,7 @@ test('finish tasks can assemble food early, but refrigeration waits for every me
  const foodDone = nodes.filter(n=>!['peas-carrots','refrigerate','clean'].includes(n.id)).map(n=>n.id);
  assert.ok(!derive(nodes,foodDone).available.some(n=>n.id==='refrigerate'));
  const plated = toggle(nodes,foodDone,'first','peas-carrots',true);
- assert.deepEqual(derive(nodes,plated).available.map(n=>n.id),['refrigerate']);
+ assert.deepEqual(new Set(derive(nodes,plated).available.map(n=>n.id)),new Set(['refrigerate','clean']));
  const chilled = toggle(nodes,plated,'first','refrigerate',true);
  assert.deepEqual(derive(nodes,chilled).available.map(n=>n.id),['clean']);
 });
@@ -112,8 +112,33 @@ test('bread can be laid out immediately while assembly waits for cooked food', (
  assert.ok(!derive(nodes,prepared).available.some(n=>['wrap','sandwich'].includes(n.id)));
  const cooked = ['prep-chicken','oven-heat-start','oven-heat','chicken','egg-water','eggs'];
  assert.ok(!derive(nodes,cooked).available.some(n=>n.id==='wrap'));
- assert.ok(derive(nodes,[...cooked,'prep-bread']).available.some(n=>n.id==='wrap'));
+ assert.ok(derive(nodes,[...cooked,'prep-bread','prep-wrap','peel-eggs']).available.some(n=>n.id==='wrap'));
  const migrated = readState(JSON.stringify({version:3,done:[...cooked,'wrap']}));
  assert.ok(derive(nodes,migrated.done).done.includes('wrap'));
  assert.ok(migrated.done.includes('prep-bread'));
+});
+
+
+test('preparation is independent and both assemblies unlock without waiting for each other', () => {
+ const initial = derive(nodes,[]).available.map(n=>n.id);
+ for (const id of ['prep-zucchini','prep-noodle-sauce','clean']) assert.ok(initial.includes(id));
+ const bread = toggle(nodes,[],'first','prep-bread',true);
+ for (const id of ['prep-wrap','prep-sandwich']) assert.ok(derive(nodes,bread).available.some(n=>n.id===id));
+ const ready = ['prep-bread','prep-wrap','prep-sandwich','prep-chicken','oven-heat-start','oven-heat','chicken','egg-water','eggs','peel-eggs'];
+ for (const id of ['wrap','sandwich']) assert.ok(derive(nodes,ready).available.some(n=>n.id===id));
+ const withSandwich = toggle(nodes,ready,'first','sandwich',true);
+ assert.ok(withSandwich.includes('sandwich'));
+ assert.ok(!withSandwich.includes('wrap'));
+});
+test('lifting eggs releases the pot while peeling stays separate across reloads', () => {
+ const done = ['egg-water','eggs'];
+ const available = derive(nodes,done).available.map(n=>n.id);
+ assert.ok(available.includes('dumplings'));
+ assert.ok(available.includes('peel-eggs'));
+ const current = readState(JSON.stringify({version:4,done}));
+ assert.ok(!current.done.includes('peel-eggs'));
+ const old = readState(JSON.stringify({version:3,done}));
+ assert.ok(old.done.includes('peel-eggs'));
+ const beforeSplit = nodes.filter(n=>!['prep-wrap','prep-sandwich','prep-zucchini','prep-noodle-sauce','peel-eggs'].includes(n.id)).map(n=>n.id);
+ assert.equal(derive(nodes,readState(JSON.stringify({version:3,done:beforeSplit})).done).done.length,nodes.length);
 });

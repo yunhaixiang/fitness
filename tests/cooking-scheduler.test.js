@@ -122,7 +122,8 @@ test('split preparation releases only its own cooking task', () => {
   const result = schedule({ tasks, minutes, done, running: {}, ready: true });
   assert.ok(result);
   assert.equal(result.starts.salmon, result.ends['air-heat']);
-  for (const task of tasks.filter(t => t.group === 'prep')) assert.ok(Number.isFinite(result.ends[task.id]));
+  for (const task of tasks.filter(t => t.group === 'prep' && t.id !== 'peel-eggs')) assert.ok(Number.isFinite(result.ends[task.id]));
+  assert.equal(result.ends['peel-eggs'], undefined); // Boiling has not been confirmed yet.
   const page = fs.readFileSync(require.resolve('../cooking.md'), 'utf8');
   assert.ok(!page.includes('<h2 id="prep"'));
   for (const task of tasks.filter(t => t.group === 'prep')) assert.ok(task.displayGroup && task.displayGroup !== 'prep');
@@ -162,7 +163,7 @@ test('saved grouped preparation expands without clearing cooking progress', () =
 });
 
 
-test('refrigeration waits for baked shrimp, meatballs and haddock before cleanup', () => {
+test('refrigeration waits for food while cleanup stays independent', () => {
   const fs = require('node:fs'), vm = require('node:vm');
   const flow = fs.readFileSync(require.resolve('../assets/cooking-flow.js'), 'utf8');
   const nodes = vm.runInNewContext(flow.match(/const nodes = (\[[\s\S]*?\n  \]);/)[1]);
@@ -175,7 +176,8 @@ test('refrigeration waits for baked shrimp, meatballs and haddock before cleanup
   assert.ok(result.starts.refrigerate >= result.ends.shrimp);
   assert.ok(result.starts.refrigerate >= result.ends.meatballs);
   assert.ok(result.starts.refrigerate >= result.ends.haddock);
-  assert.ok(result.starts.clean >= result.ends.refrigerate);
+  assert.equal(nodes.find(n=>n.id==='clean').before.length, 0);
+  assert.ok(Number.isFinite(result.starts.clean));
   for (const id of ['dumplings', 'eggs']) assert.equal(nodes.find(n=>n.id===id).resource, 'pot-1');
   for (const id of ['pasta', 'noodles']) assert.equal(nodes.find(n=>n.id===id).resource, 'pot-2');
 });

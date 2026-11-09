@@ -187,15 +187,11 @@ cooking: true
 <li class="cooking-task-source">
 <ol lang="zh-CN" class="cooking-source-zh">
 <li>下🥚 鸡蛋9个，💧 水开后煮约9分钟至蛋白蛋黄凝固。</li>
-<li>冷却剥壳，按需切半。</li>
-<li>第1、4盘各1½个，第2、5、7盘各1个，第3盘½个，第6盘2½个。</li>
-<li>第1盘的掰碎，第5盘的切片。</li>
+<li>捞出🥚 鸡蛋，放入💧 冷水冷却。</li>
 </ol>
 <ol lang="en" class="cooking-source-en" hidden>
 <li>Add 9 🥚 eggs and boil for about 9 minutes until firm.</li>
-<li>Cool, peel and cut as needed.</li>
-<li>Put 1½ eggs each in meals 1 and 4, one each in meals 2, 5 and 7, half an 🥚 egg in meal 3, and 2½ eggs in meal 6.</li>
-<li>Crumble the eggs for meal 1 and slice the egg for meal 5.</li>
+<li>Lift the 🥚 eggs out into cold 💧 water to cool.</li>
 </ol>
 </li>
 <li class="cooking-task-source">
@@ -207,6 +203,18 @@ cooking: true
 <li>Add 7 frozen 🥟 dumplings (168 g) to boiling 💧 water.</li>
 <li>Follow the pack, checking for a 74°C centre after about 6–8 minutes.</li>
 <li>Drain into meal 2.</li>
+</ol>
+</li>
+<li class="cooking-task-source">
+<ol lang="zh-CN" class="cooking-source-zh">
+<li>冷却剥壳，按需切半。</li>
+<li>第1、4盘各1½个，第2、5、7盘各1个，第3盘½个，第6盘2½个。</li>
+<li>第1盘的掰碎，第5盘的切片。</li>
+</ol>
+<ol lang="en" class="cooking-source-en" hidden>
+<li>Cool, peel and cut as needed.</li>
+<li>Put 1½ eggs each in meals 1 and 4, one each in meals 2, 5 and 7, half an 🥚 egg in meal 3, and 2½ eggs in meal 6.</li>
+<li>Crumble the eggs for meal 1 and slice the egg for meal 5.</li>
 </ol>
 </li>
 </ol>
@@ -244,6 +252,16 @@ cooking: true
 <ol>
 <li class="cooking-task-source">
 <ol lang="zh-CN" class="cooking-source-zh">
+<li>🌶️ 红辣椒5 g和🌿 罗勒叶2–3片洗净，辣椒切圈。</li>
+<li>🥣 鱼露、生抽、老抽各½茶匙，🥣 蚝油1茶匙、🧄 蒜粉¼茶匙和💧 水2汤匙调匀。</li>
+</ol>
+<ol lang="en" class="cooking-source-en" hidden>
+<li>Wash 5 g 🌶️ red chili and 2–3 🌿 basil leaves; slice the chili.</li>
+<li>Mix ½ tsp each 🥣 fish sauce, 🥣 light soy sauce and 🥣 dark soy sauce, 1 tsp 🥣 oyster sauce, ¼ tsp 🧄 garlic powder and 2 tbsp 💧 water.</li>
+</ol>
+</li>
+<li class="cooking-task-source">
+<ol lang="zh-CN" class="cooking-source-zh">
 <li>加🫒 橄榄油¼茶匙，下🍄 蘑菇半盒113.5 g、🧂 黑胡椒⅛茶匙、🧄 蒜粉¼茶匙和🧅 洋葱粉¼茶匙。</li>
 <li>炒约5–7分钟，均分到第2、4盘。</li>
 </ol>
@@ -267,15 +285,11 @@ cooking: true
 </li>
 <li class="cooking-task-source">
 <ol lang="zh-CN" class="cooking-source-zh">
-<li>🌶️ 红辣椒5 g和🌿 罗勒叶2–3片洗净，辣椒切圈。</li>
-<li>🥣 鱼露、生抽、老抽各½茶匙，🥣 蚝油1茶匙、🧄 蒜粉¼茶匙和💧 水2汤匙调匀。</li>
 <li>小锅冲洗擦干，加🫒 橄榄油¼茶匙，中小火略炒辣椒。</li>
 <li>倒入酱汁和沥干🍜 米粉，拌热1–2分钟，粘锅时补少量💧 水。</li>
 <li>关火拌入罗勒，放第3盘。</li>
 </ol>
 <ol lang="en" class="cooking-source-en" hidden>
-<li>Wash 5 g 🌶️ red chili and 2–3 🌿 basil leaves; slice the chili.</li>
-<li>Mix ½ tsp each 🥣 fish sauce, 🥣 light soy sauce and 🥣 dark soy sauce, 1 tsp 🥣 oyster sauce, ¼ tsp 🧄 garlic powder and 2 tbsp 💧 water.</li>
 <li>Rinse and dry the saucepan.</li>
 <li>Add ¼ tsp 🫒 olive oil and briefly cook the chili over medium-low heat.</li>
 <li>Add the sauce and drained 🍜 noodles, tossing for 1–2 minutes; add a splash of 💧 water if they start to stick.</li>
@@ -287,6 +301,14 @@ cooking: true
 <h2 id="large-wok" data-en="Wok">大锅线程</h2>
 <p data-en="Measure Guide: About 30 Short Oil Sprays = 1 tsp; About 30 Shakes of Powder = 1 tsp">用量换算：橄榄油短喷约30喷＝1茶匙；粉状调味料约30下＝1茶匙</p>
 <ol>
+<li class="cooking-task-source">
+<ol lang="zh-CN" class="cooking-source-zh">
+<li>🥒 西葫芦1根洗净切片。</li>
+</ol>
+<ol lang="en" class="cooking-source-en" hidden>
+<li>Wash and slice 1 🥒 zucchini.</li>
+</ol>
+</li>
 <li class="cooking-task-source">
 <ol lang="zh-CN" class="cooking-source-zh">
 <li>🥬 菠菜半袋142 g先留出10 g给三明治。</li>
@@ -301,13 +323,11 @@ cooking: true
 </li>
 <li class="cooking-task-source">
 <ol lang="zh-CN" class="cooking-source-zh">
-<li>🥒 西葫芦1根洗净切片。</li>
 <li>擦干锅，中火加🫒 橄榄油1茶匙，下🐔 鸡肉末半盒227 g，稍定型后炒散。</li>
 <li>加入西葫芦和🧂 黑胡椒⅛茶匙炒软，鸡肉中心达74°C。</li>
 <li>前半周取用鸡肉末后，将剩余🐔 生肉末分装冷冻。</li>
 </ol>
 <ol lang="en" class="cooking-source-en" hidden>
-<li>Wash and slice 1 🥒 zucchini.</li>
 <li>Dry the wok and add 1 tsp 🫒 olive oil over medium heat.</li>
 <li>Add half a pack of 🐔 ground chicken (227 g), let it set briefly, then break it up.</li>
 <li>Add the zucchini and ⅛ tsp 🧂 black pepper; cook until tender, with the chicken reaching 74°C.</li>
@@ -345,13 +365,11 @@ cooking: true
 <li>Place 3 slices of 🍞 whole-wheat bread on plate 5.</li>
 </ol>
 </li>
-<li class="cooking-task-source"><p data-en="Drain 1 can of 🫛🥕 peas and carrots (about 260 g) and divide equally between meals 3 and 6.">🫛🥕 豌豆胡萝卜1罐沥干（约260 g），直接均分到第3、6盘。</p></li>
 <li class="cooking-task-source">
 <ol lang="zh-CN" class="cooking-source-zh">
 <li>在第1盘的🌯 卷饼皮上抹上🥣 Chipotle蛋黄酱2茶匙（10 mL；酱条直径约0.8 cm时，挤约20 cm长）。</li>
 <li>🫘 鹰嘴豆沥干冲洗，取¼罐轻压碎，放到卷饼皮上。</li>
 <li>半个🫑 橙甜椒洗净去籽切细条，放到卷饼皮上。</li>
-<li>直接加入第1盘的🍗 鸡腿肉和掰碎🥚 水煮蛋，在盘内卷好。</li>
 <li>鹰嘴豆开罐后均分4份：本次用1份，1份冷藏供后半周用，2份冷冻留到下周。</li>
 <li>多余卷饼皮冷冻。</li>
 </ol>
@@ -359,7 +377,6 @@ cooking: true
 <li>Spread the 🌯 tortilla on plate 1 with 2 tsp 🥣 Chipotle mayonnaise (10 mL; about 20 cm squeezed length at a strand diameter of 0.8 cm).</li>
 <li>Drain and rinse the 🫘 chickpeas; lightly mash a quarter can and add to the tortilla.</li>
 <li>Wash, deseed and slice half an 🫑 orange bell pepper, then add to the tortilla.</li>
-<li>Add meal 1’s shredded 🍗 chicken and crumbled 🥚 boiled egg directly to the tortilla, then roll it up on the plate.</li>
 <li>On opening the chickpeas, split into four portions: use one now, refrigerate one for the second session, and freeze two for next week.</li>
 <li>Freeze spare tortillas.</li>
 </ol>
@@ -369,7 +386,6 @@ cooking: true
 <li>在第5盘的🍞 面包上抹上🥣 Chipotle蛋黄酱，共3½茶匙（17.5 mL；酱条直径约0.8 cm时，挤约35 cm长）。</li>
 <li>取沥干🐟 金枪鱼½罐（约55 g），直接铺在面包上。</li>
 <li>🍅 罗马番茄1个洗净切片，预留🥬 菠菜10 g洗净擦干。</li>
-<li>直接在面包上分层加入第5盘的🍗 鸡腿肉、切片🥚 水煮蛋、🍅 番茄和菠菜，在盘内叠好。</li>
 <li>前半周备料时，将剩余沥干金枪鱼密封冷冻供后半周用。</li>
 <li>多余面包冷冻。</li>
 </ol>
@@ -377,11 +393,36 @@ cooking: true
 <li>Spread the 🍞 bread on plate 5 with a total of 3½ tsp 🥣 Chipotle mayonnaise (17.5 mL; about 35 cm squeezed length at a strand diameter of 0.8 cm).</li>
 <li>Spread half a can of drained 🐟 tuna (about 55 g) directly onto the bread.</li>
 <li>Wash and slice 1 🍅 Roma tomato; wash and thoroughly dry the reserved 10 g 🥬 spinach.</li>
-<li>Layer meal 5’s 🍗 chicken, sliced 🥚 boiled egg, 🍅 tomato and spinach directly onto the bread, then stack the sandwich on the plate.</li>
 <li>During the first cooking session, freeze the remaining drained tuna for the second session.</li>
 <li>Freeze spare 🍞 bread.</li>
 </ol>
 </li>
+<li class="cooking-task-source"><p data-en="Drain 1 can of 🫛🥕 peas and carrots (about 260 g) and divide equally between meals 3 and 6.">🫛🥕 豌豆胡萝卜1罐沥干（约260 g），直接均分到第3、6盘。</p></li>
+<li class="cooking-task-source">
+<ol lang="zh-CN" class="cooking-source-zh">
+<li>直接加入第1盘的🍗 鸡腿肉和掰碎🥚 水煮蛋，在盘内卷好。</li>
+</ol>
+<ol lang="en" class="cooking-source-en" hidden>
+<li>Add meal 1’s shredded 🍗 chicken and crumbled 🥚 boiled egg directly to the tortilla, then roll it up on the plate.</li>
+</ol>
+</li>
+<li class="cooking-task-source">
+<ol lang="zh-CN" class="cooking-source-zh">
+<li>直接在面包上分层加入第5盘的🍗 鸡腿肉、切片🥚 水煮蛋、🍅 番茄和菠菜，在盘内叠好。</li>
+</ol>
+<ol lang="en" class="cooking-source-en" hidden>
+<li>Layer meal 5’s 🍗 chicken, sliced 🥚 boiled egg, 🍅 tomato and spinach directly onto the bread, then stack the sandwich on the plate.</li>
+</ol>
+</li>
 <li class="cooking-task-source"><p data-en="Check that all seven meals are portioned, then put the meal containers in the 🧊 refrigerator.">确认七餐均已分好，将餐盒放入🧊 冰箱。</p></li>
-<li class="cooking-task-source"><p data-en="🧼 Wash the cookware and utensils, then wipe down the worktop.">🧼 清洗锅具、餐具，擦净台面。</p></li>
+<li class="cooking-task-source">
+<ol lang="zh-CN" class="cooking-source-zh">
+<li>🧼 已用完的锅具、餐具随手清洗，擦净空出的台面。</li>
+<li>全部清洗完成后勾选。</li>
+</ol>
+<ol lang="en" class="cooking-source-en" hidden>
+<li>🧼 Wash cookware and utensils as you finish using them, and wipe clear sections of the worktop.</li>
+<li>Check off once all cleaning is finished.</li>
+</ol>
+</li>
 </ol>
