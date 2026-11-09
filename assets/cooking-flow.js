@@ -56,6 +56,21 @@
     {"id": "sandwich", "label": ["三明治", "Sandwich"], "note": ["", ""], "group": "wrap", "before": ["chicken", "fried-eggs", "wrap"], "link": "#cook-sandwich", "minutes": 4},
     {"id": "finish", "label": ["分盘、入冰箱、清洗", "Portion, Refrigerate and Clean"], "note": ["", ""], "group": "finish", "before": ["rice", "potato", "ribs", "meatballs", "shrimp", "salmon", "dumplings", "curry", "season-noodles", "tomato", "wrap", "sandwich", "mushroom", "spinach", "haddock"], "link": "#cook-finish", "minutes": 15}
   ];
+  const stepEmoji = {
+    'prep-rice': '🍚', rice: '🍚',
+    'oven-heat-start': '🔥', 'oven-heat': '🌡️',
+    'prep-chicken': '🍗', chicken: '🍗',
+    'prep-potato': '🥔', potato: '🥔',
+    'prep-ribs': '🍖', ribs: '🍖', meatballs: '🧆',
+    'prep-shrimp': '🦐', shrimp: '🦐',
+    'prep-salmon': '🐟', salmon: '🐟', haddock: '🐟',
+    'air-heat-start': '🔥', 'air-heat': '🌡️',
+    'egg-water': '💧', 'dumpling-water': '💧', 'pasta-water': '💧',
+    eggs: '🥚', dumplings: '🥟', pasta: '🍝', noodles: '🍜',
+    mushroom: '🍄', peas: '🥕', curry: '🍛', 'season-noodles': '🌿',
+    spinach: '🥬', ground: '🍗', tomato: '🍅', 'fried-eggs': '🍳',
+    wrap: '🌯', sandwich: '🥪', finish: '🧼'
+  };
   const groups = [
     {"id": "rice", "icon": "rice", "title": ["电饭煲", "Rice Cooker"], "hint": ["先启动", "Start Early"]},
     {"id": "oven", "icon": "oven", "title": ["烤箱", "Oven"], "hint": ["按烤盘空间安排", "Schedule According to Tray Space"]},
@@ -138,7 +153,11 @@
       button.setAttribute('aria-label', `${t(...group.title)}: ${t(...node.label)}`);
       button.append(create('span', 'cooking-flow-step-index', String(index + 1).padStart(2, '0')));
       const description = create('span', 'cooking-flow-step-copy');
-      description.append(create('strong', '', t(...node.label)));
+      const title = create('strong', '');
+      const emoji = create('span', 'cooking-step-emoji', stepEmoji[node.id]);
+      emoji.setAttribute('aria-hidden', 'true');
+      title.append(emoji, document.createTextNode(t(...node.label)));
+      description.append(title);
       if (t(...node.note)) description.append(create('small', '', t(...node.note)));
       button.append(description);
       button.addEventListener('click', () => select(node.id));

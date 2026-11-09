@@ -697,3 +697,6 @@ html[data-theme=light] .cooking-guide-primary{color:#fff}
 .meal-summary-number{display:block;color:var(--accent);font-size:12px;font-weight:700;margin-bottom:3px}
 .meal-summary-table .meal-summary-calories{font-size:18px;font-weight:700;color:var(--accent);text-align:right;white-space:nowrap;font-variant-numeric:tabular-nums}
 .meal-summary-table thead th:last-child{text-align:right}
+
+/* Decorative food cues keep bilingual step titles easy to scan. */
+.cooking-step-emoji{display:inline-block;margin-inline-end:.4em;font-size:1.1em;line-height:1;vertical-align:baseline}
