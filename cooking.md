@@ -149,32 +149,32 @@ cooking: true
 </li>
 <li class="cooking-task-source">
 <ol lang="zh-CN" class="cooking-source-zh">
-<li>🐟 三文鱼备好后，启动400°F预热4分钟。</li>
+<li>启动400°F预热4分钟，可与🐟 三文鱼备料并行。</li>
 <li>期间可做其他短任务。</li>
 </ol>
 <ol lang="en" class="cooking-source-en" hidden>
-<li>Once the 🐟 salmon is prepared, start preheating at 400°F for 4 minutes.</li>
+<li>Start preheating at 400°F for 4 minutes; prepare the 🐟 salmon meanwhile.</li>
 <li>Work on other short tasks meanwhile.</li>
 </ol>
 </li>
-<li class="cooking-task-source"><p data-en="Confirm preheating is complete, then load the 🐟 salmon promptly.">确认空气炸锅预热完成，随即放入🐟 三文鱼。</p></li>
+<li class="cooking-task-source"><p data-en="Confirm preheating is complete, then load the prepared 🐟 salmon or frozen haddock promptly.">确认空气炸锅预热完成，放入备好的🐟 三文鱼或冷冻黑线鳕。</p></li>
 <li class="cooking-task-source">
 <ol lang="zh-CN" class="cooking-source-zh">
-<li>400°F烤约8–10分钟至中心70°C。</li>
+<li>空气炸锅空出且达到400°F时，烤约8–10分钟至中心70°C。</li>
 <li>整块放第2盘。</li>
 </ol>
 <ol lang="en" class="cooking-source-en" hidden>
-<li>Air-fry at 400°F for about 8–10 minutes, to 70°C in the centre.</li>
+<li>When the air fryer is empty and at 400°F, cook for about 8–10 minutes, to 70°C in the centre.</li>
 <li>Place the whole fillet in meal 2.</li>
 </ol>
 </li>
 <li class="cooking-task-source">
 <ol lang="zh-CN" class="cooking-source-zh">
-<li>🐟 三文鱼出锅后，取冷冻🐟 裹粉黑线鳕1片，无需解冻或加油，单层摆放。</li>
+<li>空气炸锅空出且达到400°F时，放入冷冻🐟 裹粉黑线鳕1片，无需解冻或加油，单层摆放。</li>
 <li>400°F烤18–20分钟至熟透，放第6盘。</li>
 </ol>
 <ol lang="en" class="cooking-source-en" hidden>
-<li>After the 🐟 salmon, air-fry 1 frozen breaded 🐟 haddock fillet at 400°F for 18–20 minutes until cooked through, arranged in a single layer.</li>
+<li>When the air fryer is empty and at 400°F, air-fry 1 frozen breaded 🐟 haddock fillet for 18–20 minutes until cooked through, arranged in a single layer.</li>
 <li>Do not thaw or add oil.</li>
 <li>Place in meal 6.</li>
 </ol>
@@ -221,27 +221,27 @@ cooking: true
 
 <h2 id="pot-two" data-en="Pot 2">煮锅二线程</h2>
 <ol>
-<li class="cooking-task-source"><p data-en="Bring 💧 water to a boil in Pot 2 before adding 🍝 spaghetti.">煮锅二烧💧 水，💧 水沸后下🍝 意面。</p></li>
+<li class="cooking-task-source"><p data-en="Bring 💧 water to a boil in Pot 2; cook either 🍝 spaghetti or 🍜 rice noodles first.">煮锅二烧💧 水，💧 水沸后可先煮🍝 意面或🍜 扁米粉。</p></li>
 <li class="cooking-task-source">
 <ol lang="zh-CN" class="cooking-source-zh">
-<li>下🍝 干意面52 g，按包装时间煮约8分钟。</li>
+<li>锅空且💧 水沸后，下🍝 干意面52 g，按包装时间煮约8分钟。</li>
 <li>用夹子或漏勺捞出，保留锅内💧 热水，另留少量💧 面水用于拌酱。</li>
 </ol>
 <ol lang="en" class="cooking-source-en" hidden>
-<li>Add 52 g dry 🍝 spaghetti and cook for about 8 minutes, following the pack.</li>
+<li>When the pot is free and the 💧 water is boiling, add 52 g dry 🍝 spaghetti and cook for about 8 minutes, following the pack.</li>
 <li>Lift out with tongs or a strainer, keeping the hot 💧 water in the pot and reserving a little for the sauce.</li>
 </ol>
 </li>
 <li class="cooking-task-source">
 <ol lang="zh-CN" class="cooking-source-zh">
-<li>沿用锅内💧 热水，保持沸腾，💧 水不足时补💧 热水。</li>
+<li>锅空且💧 水沸后即可下米粉；可沿用锅内💧 热水，不足时补💧 热水。</li>
 <li>下🍜 干扁米粉53 g煮6–8分钟。</li>
-<li>第6分钟检查，无硬芯且仍有弹性时捞出沥干，交给小锅拌🌿 罗勒酱汁。</li>
+<li>第6分钟检查，无硬芯且仍有弹性时捞出沥干，保留锅内💧 热水，交给小锅拌🌿 罗勒酱汁。</li>
 </ol>
 <ol lang="en" class="cooking-source-en" hidden>
-<li>Keep the same 💧 water boiling, topping up with hot 💧 water if needed.</li>
+<li>Use the free pot once the 💧 water boils; reuse the hot 💧 water and top up if needed.</li>
 <li>Add 53 g 🍜 dry rice noodles and cook for 6–8 minutes.</li>
-<li>Check at 6 minutes; drain once there is no hard centre and the noodles are still springy.</li>
+<li>Check at 6 minutes; lift out and drain once there is no hard centre and the noodles are still springy, keeping the hot 💧 water in the pot.</li>
 <li>Transfer to the saucepan for the 🌿 basil sauce.</li>
 </ol>
 </li>

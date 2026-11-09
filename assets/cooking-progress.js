@@ -23,8 +23,10 @@
       memo.set(id, score); return score;
     };
     // Use already-heated appliances promptly; otherwise prioritize the longest remaining chain.
-    const urgent = n => n.id === 'salmon' && done.has('air-heat') || n.id === 'haddock' && done.has('salmon') || ['eggs', 'pasta', 'dumplings', 'noodles'].includes(n.id) && n.before.some(id => id.endsWith('-water') && done.has(id));
-    available.sort((a,b) => Number(urgent(b)) - Number(urgent(a)) || Number(!!a.confirmation) - Number(!!b.confirmation) || length(b.id) - length(a.id));
+    const urgent = n => n.id === 'salmon' && done.has('air-heat') ? 3
+      : n.id === 'haddock' && done.has('air-heat') ? 2
+      : ['eggs', 'pasta', 'dumplings', 'noodles'].includes(n.id) && n.before.some(id => id.endsWith('-water') && done.has(id)) ? 1 : 0;
+    available.sort((a,b) => urgent(b) - urgent(a) || Number(!!a.confirmation) - Number(!!b.confirmation) || length(b.id) - length(a.id));
     return { done: [...done], active, available, recommended: available[0]?.id || null, ready: true, total: active.length };
   }
   function toggle(nodes, saved, half, id, checked) {

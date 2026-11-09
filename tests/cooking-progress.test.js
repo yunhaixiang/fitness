@@ -28,7 +28,7 @@ test('blocked tasks cannot be checked and independent tasks stay available', () 
 test('undoing prep clears downstream marks without clearing unrelated progress', () => {
  const done = ['cold-first','prep-rice','rice','prep-salmon','air-heat-start','air-heat','salmon','haddock'];
  const after = toggle(nodes, done, 'first', 'prep-salmon', false);
- assert.deepEqual(after, ['prep-rice','rice']);
+ assert.deepEqual(after, ['prep-rice','rice','air-heat-start','air-heat','haddock']);
 });
 test('hot air fryer takes priority and long rice chain comes before short vegetables', () => {
  assert.equal(derive(nodes,['cold-first','prep-salmon','air-heat-start','air-heat']).recommended, 'salmon');
@@ -141,4 +141,28 @@ test('lifting eggs releases the pot while peeling stays separate across reloads'
  assert.ok(old.done.includes('peel-eggs'));
  const beforeSplit = nodes.filter(n=>!['prep-wrap','prep-sandwich','prep-zucchini','prep-noodle-sauce','peel-eggs'].includes(n.id)).map(n=>n.id);
  assert.equal(derive(nodes,readState(JSON.stringify({version:3,done:beforeSplit})).done).done.length,nodes.length);
+});
+
+
+test('optional cooking order never gates ready tasks or clears independent progress', () => {
+ const initial = derive(nodes,[]).available.map(n=>n.id);
+ assert.ok(initial.includes('air-heat-start'));
+ assert.ok(initial.includes('curry'));
+ const hot = ['air-heat-start','air-heat'];
+ assert.ok(derive(nodes,hot).available.some(n=>n.id==='haddock'));
+ assert.ok(!derive(nodes,hot).available.some(n=>n.id==='salmon'));
+ const firstFish = toggle(nodes,hot,'first','haddock',true);
+ assert.ok(firstFish.includes('haddock'));
+ assert.ok(derive(nodes,[...firstFish,'prep-salmon']).available.some(n=>n.id==='salmon'));
+ const water = ['pasta-water'];
+ for (const id of ['pasta','noodles']) assert.ok(derive(nodes,water).available.some(n=>n.id===id));
+ const noodlesFirst = toggle(nodes,water,'first','noodles',true);
+ assert.ok(derive(nodes,[...noodlesFirst,'prep-noodle-sauce']).available.some(n=>n.id==='season-noodles'));
+ assert.ok(derive(nodes,noodlesFirst).available.some(n=>n.id==='pasta'));
+ const all = nodes.map(n=>n.id);
+ for (const [undo,keep] of [['salmon','haddock'],['pasta','noodles'],['mushroom','curry'],['curry','season-noodles']]) {
+   const after = toggle(nodes,all,'first',undo,false);
+   assert.ok(after.includes(keep), `${undo} must not invalidate ${keep}`);
+ }
+ assert.ok(!initial.includes('refrigerate'));
 });

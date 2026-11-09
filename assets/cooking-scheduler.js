@@ -109,12 +109,16 @@
         for (let time = start; time < start + length; time++) next.machines[machineName][time] += load;
         for (const offset of offsets) next.human[start + offset]++;
         next.score = bound(next);
-        // Reserve preheating and loading as one sequence: the fryer cannot hold heat indefinitely.
-        const follow = task.id === 'air-heat' && pending.find((item) => item.id === 'salmon');
-        if (follow && next.ends.salmon === undefined) {
-          const paired = place(next, follow);
-          if (!paired || paired.starts.salmon !== next.ends['air-heat']) continue;
-          return paired;
+        // Load either ready fish promptly after preheating; do not force salmon first.
+        if (task.id === 'air-heat') {
+          const fish = pending.filter(item => ['salmon', 'haddock'].includes(item.id) &&
+            next.ends[item.id] === undefined);
+          for (const follow of fish) {
+            if (!follow.before.every(id => id === 'ready' || next.ends[id] !== undefined)) continue;
+            const paired = place(next, follow);
+            if (paired && paired.starts[follow.id] === next.ends['air-heat']) return paired;
+          }
+          if (fish.length) continue;
         }
         return next;
       }
