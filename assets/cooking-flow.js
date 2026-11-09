@@ -80,29 +80,22 @@
   ];
 
   const instructionSections = [["rice", "rice", ["prep-rice", "rice"]], ["oven", "oven", ["oven-heat-start", "oven-heat", "prep-chicken", "chicken", "prep-potato", "potato", "prep-ribs", "ribs", "meatballs", "prep-shrimp", "shrimp"]], ["air-fryer", "air", ["prep-salmon", "air-heat-start", "air-heat", "salmon", "haddock"]], ["pot-one", "pots", ["egg-water", "eggs", "dumplings"]], ["pot-two", "pots", ["pasta-water", "pasta", "noodles"]], ["small-wok", "small-wok", ["mushroom", "curry", "season-noodles"]], ["large-wok", "large-wok", ["spinach", "ground", "tomato"]], ["wraps", "wrap", ["wrap", "sandwich"]], ["finish", "finish", ["finish"]]];
-  const instructions = new Map(), seasonings = new Map(), seasoningNotes = new Map();
+  const instructions = new Map(), seasoningNotes = new Map();
   const mergedSections = [];
-  const seasoningSteps = {
-    oven: ['prep-chicken', 'prep-potato', 'prep-shrimp'],
-    'air-fryer': ['prep-salmon'],
-    'small-wok': ['mushroom', 'curry', 'season-noodles'],
-    'large-wok': ['spinach', 'ground']
-  };
   for (const [headingId, group, steps] of instructionSections) {
     const heading = document.getElementById(headingId);
     const section = [];
     for (let child = heading?.nextElementSibling; child && !/^H[1-3]$/.test(child.tagName); child = child.nextElementSibling) section.push(child);
     const source = section.find(child => child.tagName === 'OL');
     if (!source || source.children.length !== steps.length) continue;
-    steps.forEach((id, index) => instructions.set(id, source.children[index].textContent.trim()));
-    const table = section.map(child => child.querySelector('table')).find(Boolean);
-    const rows = table ? [...table.querySelectorAll('tbody tr')] : [];
-    (seasoningSteps[headingId] || []).forEach((id, index) => {
-      const text = rows[index]?.cells[1]?.textContent.trim();
-      if (text) seasonings.set(id, text);
+    steps.forEach((id, index) => {
+      const task = source.children[index];
+      const list = task.querySelector(en ? '.cooking-source-en' : '.cooking-source-zh');
+      const parts = list ? [...list.children] : [...task.children];
+      instructions.set(id, parts.map(part => part.textContent.trim()));
     });
     const note = section.find(child => child.tagName === 'P');
-    if (rows.length && note) seasoningNotes.set(group, note.textContent.trim());
+    if (note) seasoningNotes.set(group, note.textContent.trim());
     mergedSections.push([heading, ...section]);
   }
 
@@ -188,14 +181,15 @@
       button.append(description);
       button.addEventListener('click', () => select(node.id));
       row.append(button);
-      if (instructions.has(node.id) || seasonings.has(node.id)) {
+      if (instructions.has(node.id)) {
         const body = create('div', 'cooking-flow-instructions');
-        if (instructions.has(node.id)) body.append(appendCookingText(create('p', ''), instructions.get(node.id)));
-        if (seasonings.has(node.id)) {
-          const seasoning = create('p', 'cooking-flow-seasoning');
-          seasoning.append(create('strong', '', t('调味：', 'Seasoning: ')));
-          appendCookingText(seasoning, seasonings.get(node.id));
-          body.append(seasoning);
+        const parts = instructions.get(node.id);
+        if (parts.length > 1) {
+          const sequence = create('ol', 'cooking-instruction-list');
+          parts.forEach(text => sequence.append(appendCookingText(create('li', ''), text)));
+          body.append(sequence);
+        } else {
+          body.append(appendCookingText(create('p', ''), parts[0]));
         }
         row.append(body);
       }

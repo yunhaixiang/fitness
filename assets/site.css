@@ -642,8 +642,6 @@ html[data-theme=light] .cooking-guide-primary{color:#fff}
 .cooking-flow-step-row.has-progress{grid-template-columns:32px minmax(0,1fr)}
 .cooking-flow-instructions{grid-column:1/-1;min-width:0;padding:2px 10px 8px;border:0;background:none;overflow-wrap:anywhere}
 .cooking-flow-instructions p{margin:0!important;font-size:13px;line-height:1.65}
-.cooking-flow-instructions .cooking-flow-seasoning{margin-top:8px!important;padding-top:8px;border-top:1px solid var(--line);color:var(--muted)}
-.cooking-flow-seasoning strong{color:var(--thread-accent)}
 .cooking-flow-seasoning-note{margin:0 0 12px!important;color:var(--muted);font-size:11px;line-height:1.55}
 .cooking-flow-steps,.cooking-flow-branches{gap:12px}
 .cooking-flow-branches-three{grid-template-columns:repeat(2,minmax(0,1fr))}
@@ -708,3 +706,8 @@ html[data-theme=light] .cooking-guide-primary{color:#fff}
 .cooking-flow-instructions .cooking-text-portion{color:var(--violet);font-weight:650}
 .cooking-flow-step-row.is-complete .cooking-flow-instructions span{color:inherit;font-weight:inherit}
 @media(forced-colors:active){.cooking-flow-instructions span[class^="cooking-text-"]{color:CanvasText}}
+
+.cooking-flow-instructions .cooking-instruction-list{margin:0!important;padding-left:1.7em;list-style:decimal;font-size:13px;line-height:1.75}
+.cooking-flow-instructions .cooking-instruction-list>li{margin:0;padding-left:.3em}
+.cooking-flow-instructions .cooking-instruction-list>li+li{margin-top:8px}
+.cooking-instruction-list>li::marker{color:var(--muted);font-weight:650;font-variant-numeric:tabular-nums}

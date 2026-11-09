@@ -50,7 +50,7 @@ test('all cooking prerequisites are valid, acyclic, and have matching instructio
  const page=read('cooking.md');
  const sections=vm.runInNewContext(read('assets/cooking-flow.js').match(/const instructionSections = (\[[^\n]+\]);/)[1]);
  const instructionIds=new Set();
- for(const [id,group,steps] of sections){const fragment=page.split('<h2 id="'+id+'"')[1].split('<h2 ')[0];assert.equal((fragment.match(/<li /g)||[]).length,steps.length,id);steps.forEach(s=>instructionIds.add('cook-'+s));}
+ for(const [id,group,steps] of sections){const fragment=page.split('<h2 id="'+id+'"')[1].split('<h2 ')[0];assert.equal((fragment.match(/<li class="cooking-task-source"/g)||[]).length,steps.length,id);steps.forEach(s=>instructionIds.add('cook-'+s));}
  for(const n of flow)assert.ok(instructionIds.has(n.link.slice(1))||['cook-finish'].includes(n.link.slice(1)),n.link);
  assert.ok(page.includes('裹粉黑线鳕'));
  assert.match(page,/第3盘½个，第6盘2½个/);
