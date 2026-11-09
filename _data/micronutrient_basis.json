@@ -26,9 +26,9 @@
     "iodineUSDA": "https://www.ars.usda.gov/ARSUserFiles/80400535/Data/Iodine/IODINE_DATABASE_RELEASE_4_PER_SERVING.pdf",
     "canadianSalt": "https://inspection.canada.ca/en/food-labels/labelling/industry/salt",
     "assumptions": "Explicit modeling assumptions recorded per food and below; not verified brand values.",
-    "primoPizzaLabel": {
-      "url": "https://www.loblaws.ca/en/pizza-squeeze-original/p/20097909001_EA",
-      "description": "Primo Pizza Squeeze Original, Canadian label per 60 mL: calcium 10 mg, iron 0.5 mg, potassium 250 mg."
+    "unicoPasteLabel": {
+      "url": "https://www.unico.ca/products/unico-tomato-paste",
+      "description": "Per 30 mL: calcium 10 mg, iron 0.4 mg, potassium 300 mg."
     }
   },
   "notes": [
@@ -236,18 +236,18 @@
     },
     "sauce": {
       "values": {
-        "calcium": 20.833333333333332,
-        "iron": 1.0416666666666667,
-        "potassium": 520.8333333333334,
-        "vitaminD": 0.0,
-        "vitaminB12": 0.0,
+        "calcium": 41.666666666666664,
+        "iron": 1.6666666666666667,
+        "potassium": 1250.0,
+        "vitaminD": 0,
+        "vitaminB12": 0,
         "iodine": 2.1
       },
       "sources": [
-        "primoPizzaLabel",
+        "unicoPasteLabel",
         "iodineUSDA"
       ],
-      "basis": "Per 125 mL: calcium, iron and potassium scaled from Canadian Primo Pizza Squeeze label per 60 mL. Vitamin D and B12 assumed zero for this plant-based sauce; iodine retains generic tomato-sauce proxy 2.1 mcg, not a label value."
+      "basis": "Per 125 mL, scaled from Unico label per 30 mL. Vitamin D and B12 assumed zero; iodine retains generic tomato-sauce proxy 2.1 mcg, not a product measurement."
     },
     "potato": {
       "values": {

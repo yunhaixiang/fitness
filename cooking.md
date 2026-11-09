@@ -91,14 +91,14 @@ cooking: true
 <div class="table-wrap">
 <table class="plan-table" ><thead><tr><th data-en="Food">食材</th><th data-en="Seasoning">调味</th></tr></thead><tbody>
 <tr><td data-en="Spinach">菠菜</td><td data-en="1/2 tsp Olive Oil, 1/8 tsp Garlic Powder, 1/8 tsp Onion Powder">橄榄油½茶匙，蒜粉⅛茶匙，洋葱粉⅛茶匙</td></tr>
-<tr><td data-en="Ground Chicken, Zucchini and Tomato Spaghetti">鸡肉末、西葫芦、番茄意面</td><td data-en="1 tsp Olive Oil, 1/8 tsp Black Pepper">橄榄油1茶匙，黑胡椒⅛茶匙</td></tr>
+<tr><td data-en="Ground Chicken, Zucchini and Tomato Spaghetti">鸡肉末、西葫芦、番茄意面</td><td data-en="1 tsp Olive Oil, 1/8 tsp Black Pepper, 1/4 tsp Garlic Powder, 1/4 tsp Italian Seasoning">橄榄油1茶匙，黑胡椒⅛茶匙，蒜粉¼茶匙，意式香料¼茶匙</td></tr>
 <tr><td data-en="Fried Eggs">煎蛋</td><td data-en="1 tsp Olive Oil">橄榄油1茶匙</td></tr>
 </tbody></table>
 </div>
 <ol>
 <li data-en="Cook half a bag of spinach (142 g) first, with oil and seasonings, for 3–5 minutes. Split equally between meals 2 and 4.">先炒菠菜：菠菜半袋142 g加油和调味，炒约3–5分钟；均分到第2、4盘。</li>
 <li data-en="Wash and slice 1 zucchini. Dry the wok and add oil over medium heat. Add half a pack of ground chicken (227 g), let it set briefly, then break it up. Add the zucchini and black pepper; cook until tender, with the chicken reaching 74°C. During the first cooking session, freeze the remaining raw ground chicken after taking this portion.">西葫芦1根洗净切片。擦干锅，中火加油，下鸡肉末半盒227 g，稍定型后炒散；加入西葫芦和黑胡椒炒软，鸡肉中心达74°C。前半周取用鸡肉末后，将剩余生肉末分装冷冻。</li>
-<li data-en="Add half a bottle of Primo Pizza Squeeze (187.5 mL) and 2–3 tbsp reserved pasta water; simmer for 2–3 minutes. Toss in the spaghetti, adding a little more pasta water if needed. Place in meal 7. Refrigerate the remaining half-bottle for the second cooking session.">加入Primo Pizza Squeeze半瓶（187.5 mL）和面水2–3汤匙，煮2–3分钟；拌入意面，偏稠时再补少量面水，放第7盘。剩余半瓶酱冷藏供后半周使用。</li>
+<li data-en="Stir in half a can of Unico Tomato Paste (78 mL), garlic powder and Italian seasoning for 1 minute. Add 80–120 mL reserved pasta water and simmer for 2–3 minutes. Toss in the spaghetti, adding more pasta water if needed. Place in meal 7. Transfer the remaining half-can to a sealed container and refrigerate for the second cooking session.">加入Unico浓缩番茄膏半罐（78 mL）、蒜粉和意式香料，翻炒1分钟；加面水80–120 mL煮2–3分钟，拌入意面，偏稠时再补面水，放第7盘。剩余半罐转入密封盒冷藏，供后半周使用。</li>
 <li data-en="Clean the wok and fry 3 eggs over medium-low heat with 1 tsp oil until the whites and yolks are set. Put 2 in meal 6 and 1 in meal 5.">清理锅底，中小火用1茶匙油煎3个蛋至蛋白蛋黄凝固；第6盘2个，第5盘1个。</li>
 </ol>
 

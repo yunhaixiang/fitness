@@ -85,11 +85,11 @@ visual: true
 <td data-en="1 Bag / Week">1袋 / 周</td>
 <td style="text-align: right;"><a href="https://www.instacart.ca/store/products/347630-popeye-spinach-10-oz">$3.61</a></td>
 </tr>
-<tr data-weekly-cost="2.27" data-price-id="13" data-purchase-group="weekly">
-<td data-en="Tomato Pizza Sauce">番茄披萨酱</td>
-<td><a href="https://www.walmart.ca/en/ip/Primo-Pizza-Squeeze-Traditional-Pizza-Sauce/6000191250000">Primo Pizza Squeeze Traditional Pizza Sauce</a><br>375 mL / <span data-en="Bottle">瓶</span></td>
-<td data-en="1 Bottle / Week">1瓶 / 周</td>
-<td style="text-align: right;"><a href="https://www.walmart.ca/en/ip/Primo-Pizza-Squeeze-Traditional-Pizza-Sauce/6000191250000">$2.27</a></td>
+<tr data-weekly-cost="1.24" data-price-id="13" data-purchase-group="weekly">
+<td data-en="Tomato Paste">浓缩番茄膏</td>
+<td><a href="https://www.walmart.ca/en/ip/Unico-Tomato-Paste-156ml/6000188762632">Unico Tomato Paste</a><br>156 mL / <span data-en="Can">罐</span></td>
+<td data-en="1 Can / Week">1罐 / 周</td>
+<td style="text-align: right;"><a href="https://www.walmart.ca/en/ip/Unico-Tomato-Paste-156ml/6000188762632">$1.24</a></td>
 </tr>
 <tr data-price-id="14" data-weekly-cost="11.97" data-purchase-group="weekly">
 <td>新鲜混合水果盘</td>
@@ -213,7 +213,7 @@ visual: true
 <td>每周合计</td>
 <td>—</td>
 <td style="text-align: right;">—</td>
-<td style="text-align: right;">$138.16</td>
+<td style="text-align: right;">$137.13</td>
 </tr>
 </tbody>
 </table>
