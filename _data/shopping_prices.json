@@ -2,7 +2,7 @@
   "checked_on": "2026-10-31",
   "currency": "CAD",
   "scope": "Walmart Canada public prices; individual checked_on retained. Popeye spinach, chicken thigh and salmon prices supplied by user. Weekly subtotal averages routine purchase cycles. Bread assumes three slices total 105 g; weighed produce billed by actual weight. Excludes as-needed seasonings, tax and delivery. Not a London store live stock guarantee.",
-  "weekly_total_cad": "137.80",
+  "weekly_total_cad": "138.74",
   "items": [
     {
       "item": "去骨去皮鸡大腿肉",
@@ -143,16 +143,17 @@
       "purchase_frequency_en": "1 Bag / Week"
     },
     {
-      "item": "番茄意面酱",
-      "price_cad": "2.67",
+      "item": "番茄披萨酱",
+      "price_cad": "2.27",
       "basis": "package",
-      "source_url": "https://www.walmart.ca/en/ip/Catelli-Garden-Select-Tomato-Basil-Pasta-Sauce-600-mL-Jar/3B5Q7OZH5XF7",
+      "source_url": "https://www.walmart.ca/en/ip/Primo-Pizza-Squeeze-Traditional-Pizza-Sauce/6000191250000",
       "source_type": "walmart_public",
-      "weekly_quantity": "0.5",
-      "weekly_cost_cad": "1.33",
-      "product_url": "https://www.walmart.ca/en/ip/Catelli-Garden-Select-Tomato-Basil-Pasta-Sauce-600-mL-Jar/3B5Q7OZH5XF7",
-      "purchase_frequency_zh": "1瓶 / 2周",
-      "purchase_frequency_en": "1 Jar / 2 Weeks"
+      "weekly_quantity": "1",
+      "weekly_cost_cad": "2.27",
+      "product_url": "https://www.walmart.ca/en/ip/Primo-Pizza-Squeeze-Traditional-Pizza-Sauce/6000191250000",
+      "purchase_frequency_zh": "1瓶 / 周",
+      "purchase_frequency_en": "1 Bottle / Week",
+      "checked_on": "2026-11-08"
     },
     {
       "item": "新鲜混合水果盘",
