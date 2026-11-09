@@ -13,7 +13,7 @@ cooking: true
 <div id="cooking-flow" class="cooking-flow" aria-label="厨具并行流程"></div>
 <h2 id="rice" data-en="Rice Cooker">电饭煲线程</h2>
 <ol>
-<li data-en="Rinse and drain 62 g 🍚 dry rice. Use equal volumes of rice and 💧 water: about 78 mL water. Place in the rice cooker.">🍚 干米62 g淘洗沥干；米和水按体积1:1，加水约78 mL，放入电饭煲。</li>
+<li data-en="Rinse and drain 62 g 🍚 dry rice. Use equal volumes of rice and 💧 water: about 78 mL 💧 water. Place in the rice cooker.">🍚 干米62 g淘洗沥干；米和💧 水按体积1:1，加💧 水约78 mL，放入电饭煲。</li>
 <li data-en="Use White Rice mode, about 50 minutes.">启动White Rice白米模式，约50分钟。</li>
 </ol>
 
@@ -57,16 +57,16 @@ cooking: true
 
 <h2 id="pot-one" data-en="Pot 1">煮锅一线程</h2>
 <ol>
-<li data-en="Bring 💧 water to a boil in Pot 1 before adding the 🥚 eggs.">煮锅一烧水，水沸后下🥚 鸡蛋。</li>
-<li data-en="Add 9 🥚 eggs and boil for about 9 minutes until firm. Cool and peel; cut as needed. Put 1½ eggs each in meals 1 and 4, one each in meals 2, 5 and 7, half an 🥚 egg in meal 3, and 2½ eggs in meal 6. Crumble the eggs for meal 1 and slice the egg for meal 5.">下🥚 鸡蛋9个，水开后煮约9分钟至蛋白蛋黄凝固，冷却剥壳，按需切半；第1、4盘各1½个，第2、5、7盘各1个，第3盘½个，第6盘2½个；第1盘的掰碎，第5盘的切片。</li>
-<li data-en="Add 7 frozen 🥟 dumplings (168 g) to boiling 💧 water. Follow the pack, checking for a 74°C centre after about 6–8 minutes. Drain into meal 2.">冷冻🥟 水饺7个（168 g）下沸水，按包装煮至中心74°C，约6–8分钟；沥干放第2盘。</li>
+<li data-en="Bring 💧 water to a boil in Pot 1 before adding the 🥚 eggs.">煮锅一烧💧 水，💧 水沸后下🥚 鸡蛋。</li>
+<li data-en="Add 9 🥚 eggs and boil for about 9 minutes until firm. Cool and peel; cut as needed. Put 1½ eggs each in meals 1 and 4, one each in meals 2, 5 and 7, half an 🥚 egg in meal 3, and 2½ eggs in meal 6. Crumble the eggs for meal 1 and slice the egg for meal 5.">下🥚 鸡蛋9个，💧 水开后煮约9分钟至蛋白蛋黄凝固，冷却剥壳，按需切半；第1、4盘各1½个，第2、5、7盘各1个，第3盘½个，第6盘2½个；第1盘的掰碎，第5盘的切片。</li>
+<li data-en="Add 7 frozen 🥟 dumplings (168 g) to boiling 💧 water. Follow the pack, checking for a 74°C centre after about 6–8 minutes. Drain into meal 2.">冷冻🥟 水饺7个（168 g）下💧 沸水，按包装煮至中心74°C，约6–8分钟；沥干放第2盘。</li>
 </ol>
 
 <h2 id="pot-two" data-en="Pot 2">煮锅二线程</h2>
 <ol>
-<li data-en="Bring 💧 water to a boil in Pot 2 before adding 🍝 spaghetti.">煮锅二烧水，水沸后下🍝 意面。</li>
-<li data-en="Add 52 g dry 🍝 spaghetti and cook for about 8 minutes, following the pack. Lift out with tongs or a strainer, keeping the hot 💧 water in the pot and reserving a little for the sauce.">下🍝 干意面52 g，按包装时间煮约8分钟，用夹子或漏勺捞出，保留锅内热水，另留少量面水用于拌酱。</li>
-<li data-en="Keep the same 💧 water boiling, topping up with hot water if needed. Add 53 g 🍚 dry rice 🍜 noodles and cook for 6–8 minutes. Check at 6 minutes; drain once there is no hard centre and the noodles are still springy. Transfer to the saucepan for the 🌿 basil sauce.">沿用锅内热水，保持沸腾，水不足时补热水；下🍜 干扁米粉53 g煮6–8分钟；第6分钟检查，无硬芯且仍有弹性时捞出沥干，交给小锅拌🌿 罗勒酱汁。</li>
+<li data-en="Bring 💧 water to a boil in Pot 2 before adding 🍝 spaghetti.">煮锅二烧💧 水，💧 水沸后下🍝 意面。</li>
+<li data-en="Add 52 g dry 🍝 spaghetti and cook for about 8 minutes, following the pack. Lift out with tongs or a strainer, keeping the hot 💧 water in the pot and reserving a little for the sauce.">下🍝 干意面52 g，按包装时间煮约8分钟，用夹子或漏勺捞出，保留锅内💧 热水，另留少量💧 面水用于拌酱。</li>
+<li data-en="Keep the same 💧 water boiling, topping up with hot 💧 water if needed. Add 53 g 🍜 dry rice noodles and cook for 6–8 minutes. Check at 6 minutes; drain once there is no hard centre and the noodles are still springy. Transfer to the saucepan for the 🌿 basil sauce.">沿用锅内💧 热水，保持沸腾，💧 水不足时补💧 热水；下🍜 干扁米粉53 g煮6–8分钟；第6分钟检查，无硬芯且仍有弹性时捞出沥干，交给小锅拌🌿 罗勒酱汁。</li>
 </ol>
 
 <h2 id="small-wok" data-en="Saucepan">小锅线程</h2>
@@ -81,7 +81,7 @@ cooking: true
 <ol>
 <li data-en="Cook half a pack of 🍄 mushrooms (113.5 g) with oil and seasonings for 5–7 minutes. Split equally between meals 2 and 4.">🍄 蘑菇半盒113.5 g加油和调味，炒约5–7分钟；均分到第2、4盘。</li>
 <li data-en="Heat 150 mL 💧 water, lower the heat and dissolve ½ block (11.5 g) of 🍛 Golden Curry roux. Simmer for about 5 minutes until smooth. Transfer to meal 6 and serve over the rice.">💧 水150 mL烧热后关小火，溶入🍛 Golden Curry咖喱块半小块（11.5 g），再煮约5分钟至顺滑；盛入第6盘，分盘时淋在🍚 米饭上。</li>
-<li data-en="Wash the 🌶️ red chili and 🌿 basil; slice the 🌶️ chili. Mix 🥣 fish sauce, 🥣 light and dark soy sauces, 🥣 oyster sauce, 🧄 garlic powder and 💧 water. Rinse and dry the saucepan; add the oil and briefly cook the chili over medium-low heat. Add the sauce and drained 🍜 noodles, tossing for 1–2 minutes; add a splash of water if they start to stick. Turn off the heat, stir in basil and place in meal 3.">🌶️ 红辣椒和🌿 罗勒洗净，🌶️ 辣椒切圈；🥣 鱼露、🥣 生抽、🥣 老抽、🥣 蚝油、🧄 蒜粉和水调匀。小锅冲洗擦干，加油，中小火略炒辣椒；倒入酱汁和沥🍚 干米粉，拌热1–2分钟，粘锅时补少量水；关火拌入罗勒，放第3盘。</li>
+<li data-en="Wash the 🌶️ red chili and 🌿 basil; slice the 🌶️ chili. Mix 🥣 fish sauce, 🥣 light and dark soy sauces, 🥣 oyster sauce, 🧄 garlic powder and 💧 water. Rinse and dry the saucepan; add the oil and briefly cook the chili over medium-low heat. Add the sauce and drained 🍜 noodles, tossing for 1–2 minutes; add a splash of 💧 water if they start to stick. Turn off the heat, stir in basil and place in meal 3.">🌶️ 红辣椒和🌿 罗勒洗净，🌶️ 辣椒切圈；🥣 鱼露、🥣 生抽、🥣 老抽、🥣 蚝油、🧄 蒜粉和💧 水调匀。小锅冲洗擦干，加油，中小火略炒辣椒；倒入酱汁和沥干🍜 米粉，拌热1–2分钟，粘锅时补少量💧 水；关火拌入罗勒，放第3盘。</li>
 </ol>
 
 <h2 id="large-wok" data-en="Wok">大锅线程</h2>
@@ -95,7 +95,7 @@ cooking: true
 <ol>
 <li data-en="Set aside 10 g from the half-bag of 🥬 spinach (142 g) for the sandwich. Cook the remaining 132 g with oil and seasonings for 3–5 minutes; split equally between meals 2 and 4.">🥬 菠菜半袋142 g先留出10 g给三明治；剩余132 g加油和调味，炒约3–5分钟，均分到第2、4盘。</li>
 <li data-en="Wash and slice 1 🥒 zucchini. Dry the wok and add oil over medium heat. Add half a pack of 🐔 ground chicken (227 g), let it set briefly, then break it up. Add the zucchini and 🧂 black pepper; cook until tender, with the chicken reaching 74°C. During the first cooking session, freeze the remaining raw ground chicken after taking this portion.">🥒 西葫芦1根洗净切片。擦干锅，中火加油，下🐔 鸡肉末半盒227 g，稍定型后炒散；加入西葫芦和🧂 黑胡椒炒软，鸡肉中心达74°C。前半周取用鸡肉末后，将剩余🐔 生肉末分装冷冻。</li>
-<li data-en="Stir in half a can of 🍅 Unico Tomato Paste (78 mL), 🧄 garlic powder and 🌿 Italian seasoning for 1 minute. Add 80–120 mL reserved pasta 💧 water and simmer for 2–3 minutes. Toss in the 🍝 spaghetti, adding more pasta water if needed. Place in meal 7. Transfer the remaining half-can to a sealed container and refrigerate for the second cooking session.">加入🍅 Unico浓缩番茄膏半罐（78 mL）、🧄 蒜粉和🌿 意式香料，翻炒1分钟；加面水80–120 mL煮2–3分钟，拌入🍝 意面，偏稠时再补面水，放第7盘。剩余半罐转入密封盒冷藏，供后半周使用。</li>
+<li data-en="Stir in half a can of 🍅 Unico Tomato Paste (78 mL), 🧄 garlic powder and 🌿 Italian seasoning for 1 minute. Add 80–120 mL reserved pasta 💧 water and simmer for 2–3 minutes. Toss in the 🍝 spaghetti, adding more pasta 💧 water if needed. Place in meal 7. Transfer the remaining half-can to a sealed container and refrigerate for the second cooking session.">加入🍅 Unico浓缩番茄膏半罐（78 mL）、🧄 蒜粉和🌿 意式香料，翻炒1分钟；加💧 面水80–120 mL煮2–3分钟，拌入🍝 意面，偏稠时再补💧 面水，放第7盘。剩余半罐转入密封盒冷藏，供后半周使用。</li>
 </ol>
 
 <h2 id="wraps" data-en="Wrap and Sandwich">卷饼与三明治线程</h2>
