@@ -140,7 +140,6 @@
     '营养与训练统计': 'Nutrition & training statistics',
     '每日营养、每餐营养及每周训练量': 'Daily nutrition, meal nutrition and weekly training volume',
     '一周营养统计': 'Weekly Nutrition', '一周营养': 'Weekly Nutrition', '每日营养': 'Daily Nutrition',
-    '运动按扣除同期基础消耗后的净增加量计入，避免重复计算；日常加成不代表单独测得的食物热效应。': 'Exercise is counted as additional calories burned beyond resting energy use to avoid double counting. The daily activity allowance is not a separately measured thermic effect of food.',
     '页面填写。': 'page.',
     '数据记录': 'Data log', '记录实际执行，而不只看计划上的数字。': 'Track what I actually did, not just the planned numbers.',
     '数据只保存在当前浏览器。': 'Data is saved in this browser only. ',
