@@ -57,25 +57,24 @@
   section.setAttribute('aria-label', en ? 'Weekly Meal Plan' : '周饮食计划');
   const control = document.createElement('div');
   control.className = 'meal-plan-control';
-  const label = document.createElement('span');
+  const label = document.createElement('label');
+  label.htmlFor = 'meal-plan-select';
   label.textContent = en ? 'Meal Plan' : '饮食计划';
-  const choices = document.createElement('div');
-  choices.className = 'meal-plan-choices';
-  choices.setAttribute('role', 'group');
-  choices.setAttribute('aria-label', label.textContent);
+  const choices = document.createElement('select');
+  choices.id = 'meal-plan-select';
   for (const plan of catalog.plans) {
-    const button = document.createElement('button');
-    button.type = 'button';
-    button.dataset.plan = plan.id;
-    button.textContent = plan.name[language];
-    button.setAttribute('aria-pressed', String(plan.id === active.id));
-    button.addEventListener('click', () => {
-      if (plan.id === active.id) return;
-      try { localStorage.setItem(storageKey, plan.id); } catch (_) {}
-      location.assign(urlFor(result.page, plan).href);
-    });
-    choices.append(button);
+    const option = document.createElement('option');
+    option.value = plan.id;
+    option.textContent = plan.name[language];
+    option.selected = plan.id === active.id;
+    choices.append(option);
   }
+  choices.addEventListener('change', () => {
+    const plan = catalog.plans.find((entry) => entry.id === choices.value);
+    if (!plan || plan.id === active.id) return;
+    try { localStorage.setItem(storageKey, plan.id); } catch (_) {}
+    location.assign(urlFor(result.page, plan).href);
+  });
   control.append(label, choices);
   const summary = document.createElement('p');
   summary.className = 'meal-plan-summary';
