@@ -21,17 +21,13 @@
 
 首次安装依赖：`bundle install`、`npm ci`。发布：`npm test`、`npm run build`、`npm run deploy`（本机需先 `npx wrangler login`）。`_site/fitness` 是自动生成的页面，不提交到 Git。
 
-自动发布使用 Cloudflare Workers Builds，三个 Worker 分别连接同一个 GitHub 仓库 `yunhaixiang/fitness` 的 `main` 分支，根目录均为 `/`：
+自动发布由 [GitHub Actions](.github/workflows/deploy-cloudflare.yml) 执行：推送到 `main` 后，安装固定版本依赖、运行测试、构建页面，再依次发布 `fitness-assets`、`fitness-private`、`fitness-ingest`。也可在仓库 Actions → Deploy to Cloudflare 手动运行。其他分支和拉取请求不会部署。
 
-| Worker | Build command | Deploy command |
-| --- | --- | --- |
-| `fitness-assets` | `npm run build:ci` | `npm run deploy:assets` |
-| `fitness-private` | `npm test` | `npm run deploy:viewer` |
-| `fitness-ingest` | `npm test` | `npm run deploy:ingest` |
+一次性设置：在仓库 Settings → Secrets and variables → Actions 添加名为 `CLOUDFLARE_API_TOKEN` 的 Repository secret，内容为仅限当前 Cloudflare 账户、具有 `Workers Scripts: Edit` 权限的用户 API token。密钥只存入 GitHub 加密的 Secrets，不写入代码或聊天。不要同时启用 Cloudflare Workers Builds，以免重复部署。使用公开仓库的标准 Ubuntu 执行器，不启用付费执行器。
 
-在各 Worker 的 Settings → Builds → Connect 设置；关闭其他分支的自动构建与预览部署。必须使用对应的单服务发布命令，不能在某个 Worker 的 Builds 中使用本地全量 `npm run deploy`。每次 push 后检查三个构建均成功；失败时保留上次成功部署，可在 Builds 中重试。Node 和 Ruby 版本由仓库文件固定，Ruby 依赖由 `Gemfile.lock` 固定。构建额度沿用 Free，不启用付费升级。
+发布凭据仅传给发布步骤；GitHub 权限仅为读取代码，不保留检出凭据。发布按顺序执行且不会并发打断，最多运行 20 分钟。三个服务逐个部署，不是原子切换；若中途失败，前面已成功的服务可能已更新，可在 Actions 修复后重试。
 
-部署只更新代码和静态页面，不执行 D1 数据库迁移、清空、导入，也不改 Access 白名单或同步凭据。Hume 记录独立保留在 D1。初次连接完成并验证成功前，仅 push 仍不会自动更新 Cloudflare。
+部署不执行 D1 数据库迁移、清空或导入，也不更改 Access 白名单或手机同步凭据。Hume 记录独立保留在 D1。首次成功运行前，自动发布仍未验证完成。
 
 确认私人入口工作后，在 GitHub 仓库 Settings → Pages，将发布分支设为 None 并保存。此操作只取消公开网站，不会删除仓库及历史内容。
 
