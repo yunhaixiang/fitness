@@ -38,7 +38,7 @@ test('weekly meat, eggs, grains and portions match whole-package purchase cycles
  close(weekly('oil'),8); // 4 tsp each half-week; all eggs boiled
 });
 test('daily intake and deficit use the same meal data as the cards',()=>{
- const daily=(basis.mealKeys.reduce((s,k)=>s+2*Number(nutrition[k].kcal),0)+3*Number(nutrition.fruit_breakfast.kcal)+4*Number(nutrition.kiwi_breakfast.kcal)+7*Number(nutrition.outside_drink.kcal))/7;
+ const daily=(basis.mealKeys.reduce((s,k)=>s+2*Number(nutrition[k].kcal),0)+3*Number(nutrition.fruit_breakfast.kcal)+4*Number(nutrition.kiwi_breakfast.kcal)+3*Number(nutrition.fruit_snack.kcal)+4*Number(nutrition.kiwi_snack.kcal))/7;
  const metrics=Object.fromEntries([...read('_data/plan_metrics.yml').matchAll(/^(\w+): ([\d.]+)$/gm)].map(m=>[m[1],Number(m[2])]));
  assert.ok(Math.abs(daily-metrics.intake_daily)<.01);
  assert.ok(Math.abs(metrics.weekly_burn-daily*7-metrics.weekly_deficit_precise)<.01);

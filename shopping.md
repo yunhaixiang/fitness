@@ -97,10 +97,10 @@ visual: true
 <td style="text-align: right;">1盘 / 周</td>
 <td style="text-align: right;"><a href="https://www.walmart.ca/en/ip/your-fresh-market-large-party-fruit-tray/6000205351477">$11.97</a></td>
 </tr>
-<tr data-price-id="15" data-weekly-cost="7.76" data-purchase-group="weekly">
+<tr data-price-id="15" data-weekly-cost="11.64" data-purchase-group="weekly">
 <td>完整奇异果</td>
 <td><a href="https://www.walmart.ca/en/ip/kiwi/6000196794990">Zespri Kiwi</a><br>单颗售卖</td>
-<td style="text-align: right;">8个 / 周</td>
+<td style="text-align: right;">12个 / 周</td>
 <td style="text-align: right;"><a href="https://www.walmart.ca/en/ip/kiwi/6000196794990">$0.97</a></td>
 </tr>
 <tr data-weekly-cost="0.29" data-price-id="16" data-purchase-group="restock">
@@ -189,12 +189,6 @@ visual: true
 <td style="text-align: right;">按需补</td>
 <td style="text-align: right;"><a href="https://www.walmart.ca/fr/ip/leanfit-sport-creatine-monohydrate-en-poudre-non-aromatis-300-g-5-g-de-cratine-par-portion-certification-informed-choice-cratine-micronise-et-de-quali/6000208594600">$32.97</a></td>
 </tr>
-<tr data-price-id="56" data-purchase-group="restock">
-<td data-en="Men’s Multivitamin">男士复合维生素</td>
-<td><a href="https://www.walmart.ca/en/ip/Olly-Blackberry-Blitz-Men-s-Multi-Vitamin/6000200680035">OLLY Men’s Multi — Blackberry Blitz</a><br><span data-en="90 Gummies / Bottle">90粒 / 瓶</span></td>
-<td data-en="2 Gummies with Breakfast Daily · 1 Bottle / 45 Days">每天早餐2粒；1瓶 / 45天</td>
-<td><a href="https://www.walmart.ca/en/ip/Olly-Blackberry-Blitz-Men-s-Multi-Vitamin/6000200680035">$17.98</a></td>
-</tr>
 <tr data-price-id="57" data-purchase-group="restock">
 <td data-en="Magnesium Bisglycinate">甘氨酸镁</td>
 <td data-en="Current Bottle · 200 mg Label Dose">现有瓶装；瓶标剂量200 mg</td>
@@ -237,7 +231,7 @@ visual: true
 <td>每周合计</td>
 <td>—</td>
 <td style="text-align: right;">—</td>
-<td style="text-align: right;">$137.31</td>
+<td style="text-align: right;">$141.19</td>
 </tr>
 </tbody>
 </table>

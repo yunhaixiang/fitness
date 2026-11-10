@@ -79,17 +79,20 @@
       card.append(ingredients);
     };
     const dailyCard = (dayIndex, beverage) => {
-      const key = beverage ? 'outside_drink' : `${dayIndex < 3 ? 'fruit' : 'kiwi'}_breakfast`;
+      const snackKey = `${dayIndex < 3 ? 'fruit' : 'kiwi'}_snack`;
+      const hasSnack = Boolean(nutrition[snackKey]);
+      const key = beverage ? (hasSnack ? snackKey : 'outside_drink') : `${dayIndex < 3 ? 'fruit' : 'kiwi'}_breakfast`;
       const meal = nutrition[key];
       const card = make('article', `diet-meal-card diet-kind-${beverage ? 'beverage' : 'breakfast'}`);
       const top = make('div', 'diet-meal-top');
       const when = make('div', 'diet-meal-when');
       when.append(make('span', '', days[dayIndex]));
       top.append(when, make('strong', 'diet-meal-kcal', `${meal.kcal} kcal`));
-      card.append(top, make('h4', 'diet-meal-title', beverage ? label('餐外饮品', 'Between-Meal Drinks') : label('早餐', 'Breakfast')));
+      card.append(top, make('h4', 'diet-meal-title', beverage ? (hasSnack ? label('睡前加餐', 'Bedtime Snack') : label('餐外饮品', 'Between-Meal Drinks')) : label('早餐', 'Breakfast')));
       const food = en ? meal.foodEn : meal.foodZh;
       if (beverage) {
-        addIngredients(card, [['饮料', 'Drink', food]]);
+        const parts = food.split(en ? ', ' : '，');
+        addIngredients(card, hasSnack ? [['饮料', 'Drink', parts[0]], ['水果', 'Fruit', parts[1]]] : [['饮料', 'Drink', food]]);
       } else {
         const separator = en ? ', ' : '，';
         const parts = food.split(separator);

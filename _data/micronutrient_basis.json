@@ -30,8 +30,7 @@
       "url": "https://www.unico.ca/products/unico-tomato-paste",
       "description": "Per 30 mL: calcium 10 mg, iron 0.4 mg, potassium 300 mg."
     },
-    "flaxLabel": "https://www.bobsredmill.com/product/flaxseed-meal",
-    "ollyCanada": "https://www.ollynutrition.ca/cdn/shop/files/850004462201.08_1.png?v=1712928422&width=1946"
+    "flaxLabel": "https://www.bobsredmill.com/product/flaxseed-meal"
   },
   "notes": [
     "Micronutrient planning estimates for the current plan, not a measurement or product-label audit. Units match nutrition_basis.json; breakfast inputs are per 100 g. Numeric coverage is explicit; a missing field causes recalculation to fail.",
@@ -567,40 +566,28 @@
         "assumptions"
       ],
       "basis": "Per 13 g manufacturer serving: Ca24 mg, Fe1 mg, K113 mg, D0. B12 and iodine not declared, omitted contribution modeled as zero, not measured zero."
-    },
-    "olly": {
-      "values": {
-        "calcium": 0,
-        "iron": 0,
-        "potassium": 0,
-        "vitaminD": 20,
-        "vitaminB12": 9,
-        "iodine": 75
-      },
-      "sources": [
-        "ollyCanada",
-        "assumptions"
-      ],
-      "basis": "Two gummies daily. Canadian label per gummy D10 mcg, B12 4.5 mcg, iodine37.5 mcg. Ca/Fe/K not quantified and omitted, not analytical zeros. Other declared daily nutrients: A450 mcgRAE, E15mgAT, niacin8mg, B6 3.4mg, folic acid180mcg, biotin30mcg, zinc5mg, selenium27.5mcg, chromium17.5mcg, C75mg."
     }
   },
   "extraRecipes": {
     "fruit_breakfast": {
       "soy": 2.7,
       "cereal": 0.419,
-      "fruit": 3.3333333333333335,
-      "flax": 0.23076923076923078,
-      "olly": 1
+      "fruit": 1.1111111111111112,
+      "flax": 0.23076923076923078
     },
     "kiwi_breakfast": {
       "soy": 2.7,
       "cereal": 0.419,
-      "kiwi": 1.38,
-      "flax": 0.23076923076923078,
-      "olly": 1
+      "kiwi": 0.69,
+      "flax": 0.23076923076923078
     },
-    "outside_drink": {
-      "soy": 2.7
+    "fruit_snack": {
+      "soy": 2.7,
+      "fruit": 2.2222222222222223
+    },
+    "kiwi_snack": {
+      "soy": 2.7,
+      "kiwi": 1.38
     }
   }
 }

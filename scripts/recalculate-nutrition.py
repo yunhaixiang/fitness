@@ -15,6 +15,10 @@ def recalculate(root):
    addition=source.get('breakfastAddition',{})
    value=base.get(field,0)+supplement.get(field,0)*supplement['dailySoftgels']+addition.get(field,0)*addition.get('dailyGrams',0)/addition.get('referenceGrams',1)+sum(extra.get(field,0) for extra in source.get('breakfastExtras',[]))
    meals[key][field]=str(round(value)) if field in ['kcal','sodium','cholesterol'] else f'{value:.2f}' if field=='epaDha' else f'{value:.1f}'
+ for key,base in source.get('snackBase',{}).items():
+  for field in fields:
+   value=base.get(field,0)
+   meals[key][field]=str(round(value)) if field in ['kcal','sodium','cholesterol'] else f'{value:.2f}' if field=='epaDha' else f'{value:.1f}'
  micro=json.loads((root/'_data/micronutrient_basis.json').read_text())
  micro_recipes=dict(zip(source['mealKeys'],source['recipes'])) | micro['extraRecipes']
  for key,recipe in micro_recipes.items():
@@ -22,7 +26,7 @@ def recalculate(root):
    value=sum(micro['foods'][food]['values'][field]*amount for food,amount in recipe.items())
    meals[key][field]=f'{value:.3f}'
  fields+=micro['fields']
- daily={f:(sum(float(meals[k].get(f,0))*2 for k in source['mealKeys'])+3*float(meals['fruit_breakfast'].get(f,0))+4*float(meals['kiwi_breakfast'].get(f,0))+7*float(meals['outside_drink'].get(f,0)))/7 for f in fields}
+ daily={f:(sum(float(meals[k].get(f,0))*2 for k in source['mealKeys'])+3*float(meals['fruit_breakfast'].get(f,0))+4*float(meals['kiwi_breakfast'].get(f,0))+3*float(meals['fruit_snack'].get(f,0))+4*float(meals['kiwi_snack'].get(f,0)))/7 for f in fields}
  daily['sodium']+=12*35/7
  (root/'_data/meal_nutrition.json').write_text(json.dumps(data,ensure_ascii=False,indent=2)+'\n')
  file=root/'_data/plan_metrics.yml';metrics=file.read_text();burn=float(re.search(r'weekly_burn: ([\d.]+)',metrics)[1]);deficit=burn-daily['kcal']*7

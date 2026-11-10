@@ -2,7 +2,7 @@
   "checked_on": "2026-10-31",
   "currency": "CAD",
   "scope": "Walmart Canada public prices; individual checked_on retained. Popeye spinach, chicken thigh and salmon prices supplied by user. Weekly subtotal averages routine purchase cycles. Bread assumes three slices total 105 g; weighed produce billed by actual weight. Excludes as-needed seasonings, tax and delivery. Not a London store live stock guarantee.",
-  "weekly_total_cad": "137.31",
+  "weekly_total_cad": "141.19",
   "items": [
     {
       "item": "去骨去皮鸡大腿肉",
@@ -171,8 +171,8 @@
       "basis": "each",
       "source_url": "https://www.walmart.ca/en/ip/kiwi/6000196794990",
       "source_type": "walmart_public",
-      "weekly_quantity": "8",
-      "weekly_cost_cad": "7.76",
+      "weekly_quantity": "12",
+      "weekly_cost_cad": "11.64",
       "product_url": "https://www.walmart.ca/en/ip/kiwi/6000196794990"
     },
     {
