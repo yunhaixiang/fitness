@@ -189,6 +189,12 @@ visual: true
 <td style="text-align: right;">按需补</td>
 <td style="text-align: right;"><a href="https://www.walmart.ca/fr/ip/leanfit-sport-creatine-monohydrate-en-poudre-non-aromatis-300-g-5-g-de-cratine-par-portion-certification-informed-choice-cratine-micronise-et-de-quali/6000208594600">$32.97</a></td>
 </tr>
+<tr data-price-id="54" data-purchase-group="restock">
+<td data-en="Omega-3 Fish Oil">Omega-3 鱼油</td>
+<td><a href="https://www.amazon.ca/dp/B00L3WS0Y2">Webber Naturals Triple Strength Omega-3 900 mg（Amazon）</a><br><span data-en="120 Softgels / Bottle · EPA 600 mg + DHA 300 mg per Softgel">120粒 / 瓶；每粒 EPA 600 mg，DHA 300 mg</span></td>
+<td data-en="1 Bottle / 120 Days · 1 Softgel with Breakfast Daily">1瓶 / 120天；每天早餐1粒</td>
+<td><a href="https://www.amazon.ca/dp/B00L3WS0Y2" data-en="Check Amazon Price">查看 Amazon 价格</a></td>
+</tr>
 <tr data-price-id="32" data-weekly-cost="6.37" data-purchase-group="fortnightly"><td data-en="Breaded Haddock">裹粉黑线鳕</td><td><a href="https://www.walmart.ca/en/ip/High-Liner-Pan-Sear-Selects-Roasted-Garlic-Herb-Haddock/6000196030769">High Liner Pan-Sear Selects Roasted Garlic &amp; Herbs Haddock</a><br><span data-en="500 g / Box, 4 Fillets">500 g / 盒，4片</span></td><td data-en="1 Box / 2 Weeks">1盒 / 2周</td><td><a href="https://www.walmart.ca/en/ip/High-Liner-Pan-Sear-Selects-Roasted-Garlic-Herb-Haddock/6000196030769">$12.74</a></td></tr>
 <tr data-price-id="33" data-weekly-cost="1.28" data-purchase-group="restock"><td data-en="Beef Meatballs">牛肉丸</td><td><a href="https://www.walmart.ca/en/ip/Our-Finest-Frozen-Lean-Angus-Meatballs-Appetizers/6000200192499">Our Finest Fully Cooked Lean Angus Beef Meatballs</a><br><span data-en="907 g / 60 Pieces">907 g / 60 Pieces</span></td><td data-en="1 Bag / 10 Weeks">1袋 / 10周</td><td><a href="https://www.walmart.ca/en/ip/Our-Finest-Frozen-Lean-Angus-Meatballs-Appetizers/6000200192499">$12.84</a></td></tr>
 <tr data-price-id="34" data-weekly-cost="10.98" data-purchase-group="weekly"><td data-en="Raw Shrimp">生虾仁</td><td><a href="https://www.walmart.ca/en/ip/Great-Value-Wild-Argentinian-Large-Raw-Shrimp/6000202999819">Great Value Wild Argentinian Large Raw Shrimp</a><br><span data-en="340 g">340 g</span></td><td data-en="1 Bag / Week">1袋 / 周</td><td><a href="https://www.walmart.ca/en/ip/Great-Value-Wild-Argentinian-Large-Raw-Shrimp/6000202999819">$10.98</a></td></tr>

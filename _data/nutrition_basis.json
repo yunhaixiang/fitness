@@ -498,5 +498,40 @@
     "chickpea": "https://www.walmart.ca/en/ip/Great-Value-Chick-Peas/10275238",
     "mayo": "https://www.hellmanns.com/ca/en/p/chipotle-mayonnaise.html/00068400004097",
     "mayo_serving": "https://www.realcanadiansuperstore.ca/en/mayonnaise-dressing-mild-chipotle/p/21591867_EA"
+  },
+  "breakfastBase": {
+    "fruit_breakfast": {
+      "kcal": 346.0,
+      "protein": 13.4,
+      "carbs": 76.5,
+      "fat": 6.0,
+      "saturatedFat": 0.8,
+      "fibre": 23.9,
+      "sugar": 31.1,
+      "sodium": 263.0,
+      "cholesterol": 0.0,
+      "epaDha": 0.0
+    },
+    "kiwi_breakfast": {
+      "kcal": 290.0,
+      "protein": 13.1,
+      "carbs": 63.0,
+      "fat": 6.2,
+      "saturatedFat": 0.7,
+      "fibre": 24.7,
+      "sugar": 15.8,
+      "sodium": 251.0,
+      "cholesterol": 0.0,
+      "epaDha": 0.0
+    }
+  },
+  "breakfastSupplement": {
+    "name": "Webber Naturals Triple Strength Omega-3 900 mg, 120 softgels",
+    "dailySoftgels": 1,
+    "kcal": 13,
+    "fat": 1.425,
+    "epaDha": 0.9,
+    "source": "https://webbernaturals.com/products/triple-strength-omega-3-900-mg-no-fishy-aftertaste",
+    "basis": "Per softgel: fish oil 1425 mg, EPA 600 mg and DHA 300 mg from manufacturer. Calories estimated as 1.425 g oil x 9 kcal/g, rounded to 13. Capsule excipients, saturated fat and cholesterol are not quantified by this label and are not added to totals; omitted does not mean measured zero."
   }
 }

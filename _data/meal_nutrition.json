@@ -14,11 +14,11 @@
   "meals": {
     "fruit_breakfast": {
       "label": "周日—周二早餐（混合水果盘）",
-      "foodZh": "高纤维谷物早餐 41.9 g，无糖豆奶 270 g，一水肌酸 5 g，混合水果盘约 333 g",
-      "foodEn": "41.9 g high-fibre cereal, 270 g unsweetened soy milk, 5 g creatine monohydrate, about 333 g mixed fruit",
-      "kcal": "346",
+      "foodZh": "高纤维谷物早餐 41.9 g，无糖豆奶 270 g，一水肌酸 5 g、Webber Naturals Omega-3 鱼油 1粒，混合水果盘约 333 g",
+      "foodEn": "41.9 g high-fibre cereal, 270 g unsweetened soy milk, 5 g creatine monohydrate and 1 Webber Naturals Omega-3 softgel, about 333 g mixed fruit",
+      "kcal": "359",
       "protein": "13.4",
-      "fat": "6.0",
+      "fat": "7.4",
       "saturatedFat": "0.8",
       "carbs": "76.5",
       "fibre": "23.9",
@@ -30,15 +30,16 @@
       "potassium": "1058.704",
       "vitaminD": "2.160",
       "vitaminB12": "1.080",
-      "iodine": "4.556"
+      "iodine": "4.556",
+      "epaDha": "0.90"
     },
     "kiwi_breakfast": {
       "label": "周三—周六早餐（奇异果2个）",
-      "foodZh": "高纤维谷物早餐 41.9 g，无糖豆奶 270 g，一水肌酸 5 g，奇异果 2 个",
-      "foodEn": "41.9 g high-fibre cereal, 270 g unsweetened soy milk, 5 g creatine monohydrate, 2 kiwis",
-      "kcal": "290",
+      "foodZh": "高纤维谷物早餐 41.9 g，无糖豆奶 270 g，一水肌酸 5 g、Webber Naturals Omega-3 鱼油 1粒，奇异果 2 个",
+      "foodEn": "41.9 g high-fibre cereal, 270 g unsweetened soy milk, 5 g creatine monohydrate and 1 Webber Naturals Omega-3 softgel, 2 kiwis",
+      "kcal": "303",
       "protein": "13.1",
-      "fat": "6.2",
+      "fat": "7.6",
       "saturatedFat": "0.7",
       "carbs": "63.0",
       "fibre": "24.7",
@@ -50,7 +51,8 @@
       "potassium": "909.931",
       "vitaminD": "2.160",
       "vitaminB12": "1.080",
-      "iodine": "3.970"
+      "iodine": "3.970",
+      "epaDha": "0.90"
     },
     "outside_drink": {
       "label": "餐外饮品",

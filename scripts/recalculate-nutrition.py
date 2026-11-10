@@ -8,6 +8,12 @@ def recalculate(root):
   for i,field in enumerate(fields):
    value=sum(source['arr'][food][i]*amount for food,amount in recipe.items())
    meals[key][field]=str(round(value)) if field in ['kcal','sodium','cholesterol'] else f'{value:.2f}' if field=='epaDha' else f'{value:.1f}'
+ # Reset breakfast from its food-only baseline before adding the daily supplement.
+ for key,base in source.get('breakfastBase',{}).items():
+  supplement=source['breakfastSupplement']
+  for field in fields:
+   value=base.get(field,0)+supplement.get(field,0)*supplement['dailySoftgels']
+   meals[key][field]=str(round(value)) if field in ['kcal','sodium','cholesterol'] else f'{value:.2f}' if field=='epaDha' else f'{value:.1f}'
  micro=json.loads((root/'_data/micronutrient_basis.json').read_text())
  micro_recipes=dict(zip(source['mealKeys'],source['recipes'])) | micro['extraRecipes']
  for key,recipe in micro_recipes.items():
