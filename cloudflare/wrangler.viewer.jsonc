@@ -1,4 +1,5 @@
 {
+  "account_id": "cdc88e15c2b41f8da4380928934c3869",
   "name": "fitness-private",
   "main": "viewer.mjs",
   "compatibility_date": "2026-11-09",
