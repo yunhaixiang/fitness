@@ -59,7 +59,7 @@
     {"id": "wrap", "label": ["卷饼", "Wrap"], "note": ["", ""], "group": "finish", "before": ["prep-wrap", "chicken", "peel-eggs"], "link": "#cook-wrap", "minutes": 1},
     {"id": "sandwich", "label": ["三明治", "Sandwich"], "note": ["", ""], "group": "finish", "before": ["prep-sandwich", "chicken", "peel-eggs"], "link": "#cook-sandwich", "minutes": 1},
     {"id": "refrigerate", "label": ["入冰箱", "Refrigerate"], "note": ["", ""], "group": "finish", "before": ["rice", "potato", "ribs", "meatballs", "shrimp", "salmon", "dumplings", "curry", "season-noodles", "tomato", "wrap", "sandwich", "mushroom", "spinach", "haddock", "peas-carrots"], "link": "#cook-refrigerate", "minutes": 5},
-    {"id": "clean", "label": ["清洗", "Clean Up"], "note": ["", ""], "group": "finish", "before": [], "link": "#cook-clean", "minutes": 7}
+    {"id": "clean", "label": ["清洗", "Clean Up"], "note": ["", ""], "group": "finish", "before": ["refrigerate"], "link": "#cook-clean", "minutes": 7}
   ];
   const stepEmoji = {
     'prep-rice': '🍚', rice: '🍚',

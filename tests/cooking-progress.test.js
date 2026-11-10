@@ -92,7 +92,7 @@ test('finish tasks can assemble food early, but refrigeration waits for every me
  const foodDone = nodes.filter(n=>!['peas-carrots','refrigerate','clean'].includes(n.id)).map(n=>n.id);
  assert.ok(!derive(nodes,foodDone).available.some(n=>n.id==='refrigerate'));
  const plated = toggle(nodes,foodDone,'first','peas-carrots',true);
- assert.deepEqual(new Set(derive(nodes,plated).available.map(n=>n.id)),new Set(['refrigerate','clean']));
+ assert.deepEqual(new Set(derive(nodes,plated).available.map(n=>n.id)),new Set(['refrigerate']));
  const chilled = toggle(nodes,plated,'first','refrigerate',true);
  assert.deepEqual(derive(nodes,chilled).available.map(n=>n.id),['clean']);
 });
@@ -121,7 +121,7 @@ test('bread can be laid out immediately while assembly waits for cooked food', (
 
 test('preparation is independent and both assemblies unlock without waiting for each other', () => {
  const initial = derive(nodes,[]).available.map(n=>n.id);
- for (const id of ['prep-zucchini','prep-noodle-sauce','clean']) assert.ok(initial.includes(id));
+ for (const id of ['prep-zucchini','prep-noodle-sauce']) assert.ok(initial.includes(id));
  const bread = toggle(nodes,[],'first','prep-bread',true);
  for (const id of ['prep-wrap','prep-sandwich']) assert.ok(derive(nodes,bread).available.some(n=>n.id===id));
  const ready = ['prep-bread','prep-wrap','prep-sandwich','prep-chicken','oven-heat-start','oven-heat','chicken','egg-water','eggs','peel-eggs'];

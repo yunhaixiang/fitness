@@ -479,7 +479,7 @@
         ""
       ],
       "group": "finish",
-      "before": [],
+      "before": ["refrigerate"],
       "link": "#cook-clean",
       "minutes": 7
     }

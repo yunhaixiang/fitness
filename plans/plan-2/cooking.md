@@ -142,7 +142,7 @@ meal_activities_script: /assets/meal-plans/plan-2/meal-activities.js
 <ol class="cooking-source-en" lang="en" hidden><li>Refrigerate the meal containers and 🥚 boiled eggs for this batch.</li></ol>
 </li>
 <li class="cooking-task-source">
-<ol class="cooking-source-zh" lang="zh"><li>🧼 清洗用过的厨具，擦净台面。</li></ol>
-<ol class="cooking-source-en" lang="en" hidden><li>🧼 Wash used cookware and wipe the counter.</li></ol>
+<ol class="cooking-source-zh" lang="zh"><li>🧼 所有餐盒入冰箱后，最后清洗用过的厨具，擦净台面。</li></ol>
+<ol class="cooking-source-en" lang="en" hidden><li>🧼 After refrigerating all meals, finish by washing used cookware and wiping the counter.</li></ol>
 </li>
 </ol>

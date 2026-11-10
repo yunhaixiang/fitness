@@ -417,11 +417,11 @@ cooking: true
 <li class="cooking-task-source"><p data-en="Check that all seven meals are portioned, then put the meal containers in the 🧊 refrigerator.">确认七餐均已分好，将餐盒放入🧊 冰箱。</p></li>
 <li class="cooking-task-source">
 <ol lang="zh-CN" class="cooking-source-zh">
-<li>🧼 已用完的锅具、餐具随手清洗，擦净空出的台面。</li>
+<li>🧼 所有餐盒入冰箱后，最后清洗锅具、餐具，擦净台面。</li>
 <li>全部清洗完成后勾选。</li>
 </ol>
 <ol lang="en" class="cooking-source-en" hidden>
-<li>🧼 Wash cookware and utensils as you finish using them, and wipe clear sections of the worktop.</li>
+<li>🧼 After refrigerating all meals, finish by washing cookware and utensils and wiping the worktop.</li>
 <li>Check off once all cleaning is finished.</li>
 </ol>
 </li>

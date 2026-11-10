@@ -163,7 +163,7 @@ test('saved grouped preparation expands without clearing cooking progress', () =
 });
 
 
-test('refrigeration waits for food while cleanup stays independent', () => {
+test('refrigeration waits for food and cleanup runs last', () => {
   const fs = require('node:fs'), vm = require('node:vm');
   const flow = fs.readFileSync(require.resolve('../assets/cooking-flow.js'), 'utf8');
   const nodes = vm.runInNewContext(flow.match(/const nodes = (\[[\s\S]*?\n  \]);/)[1]);
@@ -176,8 +176,8 @@ test('refrigeration waits for food while cleanup stays independent', () => {
   assert.ok(result.starts.refrigerate >= result.ends.shrimp);
   assert.ok(result.starts.refrigerate >= result.ends.meatballs);
   assert.ok(result.starts.refrigerate >= result.ends.haddock);
-  assert.equal(nodes.find(n=>n.id==='clean').before.length, 0);
-  assert.ok(Number.isFinite(result.starts.clean));
+  assert.equal(nodes.find(n=>n.id==='clean').before[0], 'refrigerate');
+  assert.ok(result.starts.clean >= result.ends.refrigerate);
   for (const id of ['dumplings', 'eggs']) assert.equal(nodes.find(n=>n.id===id).resource, 'pot-1');
   for (const id of ['pasta', 'noodles']) assert.equal(nodes.find(n=>n.id===id).resource, 'pot-2');
 });
