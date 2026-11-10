@@ -1,7 +1,7 @@
 title: Yunhai Fitness
 description: 个人训练、饮食与恢复计划
 lang: zh-CN
-url: https://yunhaixiang.github.io
+url: https://fitness-private.yunhaixiang-fitness.workers.dev
 baseurl: /fitness
 markdown: kramdown
 kramdown:
@@ -13,3 +13,9 @@ exclude:
   - tests
   - cloudflare
   - docs
+  - Gemfile
+  - Gemfile.lock
+  - package.json
+  - package-lock.json
+  - node_modules
+  - vendor

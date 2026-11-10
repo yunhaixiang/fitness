@@ -11,13 +11,19 @@
 - `stats.md`：营养和热量估计
 - `tracker.html`：只读记录页面；已发布记录在 `_data/tracking_records.json`
 
-首页“今日”按本地日期读取上述餐单和训练表。网页使用 GitHub Pages 的 Jekyll 构建，不需要单独的数据库或 npm 构建。改动上述文件后提交、推送即可更新网站。
+首页“今日”按本地日期读取上述餐单和训练表。网页使用 Jekyll 构建，页面与资源部署到 Cloudflare Worker；健康同步记录保存在私人 D1 数据库。发布流程见下文。
 
 网站默认使用低眩光暗色主题。页眉的“中文 / EN”可切换整站文字，语言选择保存在当前浏览器；切换不会改动饮食数据或训练记录。中文内容仍是计划的维护原稿，英文文本集中在 `assets/i18n.js`。
 
-## 发布到 GitHub Pages
+## 发布到 Cloudflare
 
-在仓库的 **Settings → Pages → Build and deployment** 中选择 **Deploy from a branch**，分支选 `main`、文件夹选 `/(root)`，保存。站点地址将是 `https://yunhaixiang.github.io/fitness/`。如果以后使用自定义域名，需同时更新 `_config.yml` 中的 `url` 和 `baseurl`。
+私人入口：`https://fitness-private.yunhaixiang-fitness.workers.dev/fitness/`。所有页面和静态资源先经过 Access 及邮箱白名单验证。页面存放于无公开网址的 `fitness-assets`，由 `fitness-private` 通过内部服务绑定读取，不依赖 GitHub Pages；手机上传入口与凭据保持不变。
+
+首次安装依赖：`bundle install`、`npm ci`。发布：`npm test`、`npm run build`、`npm run deploy`（本机需先 `npx wrangler login`）。`_site/fitness` 是自动生成的页面，不提交到 Git。
+
+自动发布需要在 Cloudflare 的 `fitness-private → Settings → Builds → Connect` 连接此仓库，生产分支 `main`，根目录 `/`，Build command 使用 `bundle install && npm test && npm run build`，Deploy command 使用 `npm run deploy`。关闭其他分支的预览部署。首次构建成功后，后续 push 自动更新私人网站。连接完成前，由维护者推送代码并在本机发布；仅 push 不会更新 Cloudflare。
+
+确认私人入口工作后，在 GitHub 仓库 Settings → Pages，将发布分支设为 None 并保存。此操作只取消公开网站，不会删除仓库及历史内容。
 
 本仓库的页面和仓库内容可能公开。迁移时没有复制原博客 Markdown 中的隐藏 HTML 注释和私密计算备注；今后也不要把不想公开的个人数据直接提交到仓库。
 
@@ -31,7 +37,7 @@
 
 ## 本地预览与验证
 
-已安装 Jekyll 时运行 `jekyll serve --baseurl /fitness`。测试：`node --test tests/*.test.js`。GitHub Pages 使用 Jekyll 构建。
+已安装 Jekyll 时运行 `jekyll serve --baseurl /fitness`。测试：`node --test tests/*.test.js`。Cloudflare 使用 Jekyll 构建输出。
 
 ## 计划维护
 
@@ -45,4 +51,4 @@
 
 ## 私人 Hume 同步
 
-Cloudflare D1 与受 Access 保护的网站入口的部署及手机配置见 [Hume 同步设置](docs/hume-sync.md)。新的自动同步记录不提交到本仓库。现有 GitHub Pages 继续发布计划；私人入口读取数据库中的身体记录。
+Cloudflare D1 与受 Access 保护的网站入口的部署及手机配置见 [Hume 同步设置](docs/hume-sync.md)。新的自动同步记录不提交到本仓库。页面直接部署到 Cloudflare；私人入口读取数据库中的身体记录和步数。

@@ -96,7 +96,7 @@ test('upload requires a valid token and bounded JSON; invalid requests leave dat
   assert.equal((await ingest.fetch(upload(token, {...sample, body_fat_percent: .312}), e)).status, 400);
   assert.equal(e.DB.sql.prepare('SELECT count(*) n FROM measurements').get().n, 0);
 });
-test('missing Access setup never fetches the public origin or exposes static content', async () => {
+test('missing Access setup never exposes static content', async () => {
   const r = await viewer.fetch(new Request('https://viewer.example/fitness/'), env(), {});
   assert.equal(r.status, 403);
 });
@@ -143,4 +143,47 @@ test('private records include step history while unauthenticated readers remain 
   const records = await readRecords(e.DB);
   assert.equal(records.steps[0].steps,4321);
   assert.equal((await viewer.fetch(new Request('https://viewer.example/api/records'),e,{})).status,403);
+});
+
+
+test('private asset service is never fetched before authorization', async () => {
+  let calls = 0;
+  const e = {...env(), ASSETS: {async fetch(request) {
+    calls++;
+    assert.equal(new URL(request.url).pathname, '/fitness/assets/site.css');
+    return new Response('body{}', {headers: {'Content-Type': 'text/css', ETag: 'static-tag'}});
+  }}};
+  const req = new Request('https://viewer.example/fitness/assets/site.css');
+  assert.equal((await viewer.fetch(req,e,{})).status,403);
+  assert.equal((await viewer.fetch(req,e,ctx('stranger@example.com'))).status,403);
+  assert.equal(calls,0);
+  const result = await viewer.fetch(req,e,ctx(owner));
+  assert.equal(result.status,200);
+  assert.equal(await result.text(),'body{}');
+  assert.equal(result.headers.get('Cache-Control'),'private, no-store');
+  assert.equal(result.headers.get('ETag'),null);
+  assert.equal(calls,1);
+});
+test('asset redirects stay on the private site; missing binding fails closed', async () => {
+  const req = new Request('https://viewer.example/fitness/diet');
+  const e = {...env(), ASSETS: {async fetch() {return new Response(null,{status:307,headers:{Location:'/fitness/diet/'}});}}};
+  const response = await viewer.fetch(req,e,ctx(owner));
+  assert.equal(response.status,307);
+  assert.equal(response.headers.get('Location'),'https://viewer.example/fitness/diet/');
+  e.ASSETS.fetch = async () => new Response(null,{status:302,headers:{Location:'https://elsewhere.example/fitness/'}});
+  assert.equal((await viewer.fetch(req,e,ctx(owner))).status,502);
+  assert.equal((await viewer.fetch(req,env(),ctx(owner))).status,503);
+});
+test('deployment always runs authenticated Worker before serving assets', () => {
+  const config = JSON.parse(readFileSync(new URL('../cloudflare/wrangler.viewer.jsonc',import.meta.url),'utf8'));
+  // Assets on the entry Worker strip ctx.access behind Cloudflare's internal router.
+  assert.equal(config.assets,undefined);
+  assert.deepEqual(config.services,[{binding:'ASSETS',service:'fitness-assets'}]);
+  const assets = JSON.parse(readFileSync(new URL('../cloudflare/wrangler.assets.jsonc',import.meta.url),'utf8'));
+  assert.equal(assets.workers_dev,false);
+  assert.equal(assets.preview_urls,false);
+  assert.equal(assets.routes,undefined);
+  assert.equal(config.preview_urls,false);
+  assert.equal(assets.assets.directory,'../_site');
+  assert.equal(readFileSync(new URL('../cloudflare/viewer.mjs',import.meta.url),'utf8').includes('github.io'),false);
 });

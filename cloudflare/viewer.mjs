@@ -45,23 +45,22 @@ export default {
         return new Response(setupPage, {headers: {'Content-Type': 'text/html; charset=utf-8', 'Cache-Control': 'private, no-store', 'Referrer-Policy': 'no-referrer'}});
       }
       if (!url.pathname.startsWith('/fitness/')) return Response.redirect(`${url.origin}/fitness/`, 302);
-      // Plans/assets remain maintained by the existing GitHub Pages publication.
-      // Every request, including assets, passes Access. No private data is sent upstream.
-      const upstream = new URL('https://yunhaixiang.github.io');
-      upstream.pathname = url.pathname;
-      upstream.search = url.search;
-      const source = await fetch(upstream, {redirect: 'manual'});
+      // Authenticate before every asset lookup; never fall back to a public origin.
+      const source = await env.ASSETS.fetch(new Request(url, {method: request.method}));
       if (source.status >= 300 && source.status < 400) {
-        const target = new URL(source.headers.get('Location'), upstream);
-        if (target.origin !== upstream.origin || !target.pathname.startsWith('/fitness/')) return json({error: 'Invalid redirect'}, 502);
-        return Response.redirect(`${url.origin}${target.pathname}${target.search}`, 302);
+        const target = new URL(source.headers.get('Location'), url);
+        if (target.origin !== url.origin || !target.pathname.startsWith('/fitness/')) return json({error: 'Invalid redirect'}, 502);
+        const redirect = new Response(null, {status: source.status, headers: {
+          Location: target.href, 'Cache-Control': 'private, no-store'
+        }});
+        return redirect;
       }
       const response = new Response(source.body, source);
       response.headers.set('Cache-Control', 'private, no-store');
       response.headers.set('Referrer-Policy', 'same-origin');
       response.headers.delete('ETag');
       response.headers.delete('Last-Modified');
-      if (response.headers.get('Content-Type')?.includes('text/html')) {
+      if (request.method !== 'HEAD' && response.headers.get('Content-Type')?.includes('text/html')) {
         const records = await readRecords(env.DB);
         return new HTMLRewriter()
           .on('#tracking-records', trackingHandler(records))
