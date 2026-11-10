@@ -47,11 +47,11 @@ visual: true
 <td style="text-align: right;">2盒 / 周</td>
 <td style="text-align: right;"><a href="https://www.walmart.ca/en/ip/Prime-Extra-Lean-Ground-Chicken-Raised-Without-Antibiotics-454-g/10243782">$7.98</a></td>
 </tr>
-<tr data-price-id="5" data-weekly-cost="3.93">
+<tr data-price-id="5" data-weekly-cost="4.65" data-purchase-group="restock">
 <td>鸡蛋</td>
-<td><a href="https://www.walmart.ca/en/ip/Great-Value-Large-Eggs/10052944">Great Value Large Eggs</a><br>12个 / 盒</td>
-<td style="text-align: right;">1盒 / 周</td>
-<td style="text-align: right;"><a href="https://www.walmart.ca/en/ip/Great-Value-Large-Eggs/10052944">$3.93</a></td>
+<td><a href="https://www.walmart.ca/en/ip/Gray-Ridge-Premium-Large-White-18-Eggs/6000191268613">Gray Ridge Premium Large White Eggs</a><br>18个 / 盒</td>
+<td data-en="2 Cartons / 3 Weeks">2盒 / 3周</td>
+<td style="text-align: right;"><a href="https://www.walmart.ca/en/ip/Gray-Ridge-Premium-Large-White-18-Eggs/6000191268613">$6.98</a></td>
 </tr>
 <tr data-price-id="6" data-weekly-cost="9.96">
 <td>无糖豆奶</td>
@@ -213,7 +213,7 @@ visual: true
 <td>每周合计</td>
 <td>—</td>
 <td style="text-align: right;">—</td>
-<td style="text-align: right;">$140.77</td>
+<td style="text-align: right;">$141.49</td>
 </tr>
 </tbody>
 </table>

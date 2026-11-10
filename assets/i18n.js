@@ -223,7 +223,7 @@
     '已购买': 'Bought: ',
     '8块装；每盒0.93 kg，平均每块约116 g': 'Eight pieces per pack; 0.93 kg per pack, averaging about 116 g each',
     '2桶 / 周（1桶用于早餐，1桶作为餐外饮品）': '2 cartons / week (one for breakfast, one for between-meal drinks)',
-    '12个 / 盒': '12 eggs per pack', '2桶 / 周': '2 cartons / week',
+    '18个 / 盒': '18 Eggs per Carton', '12个 / 盒': '12 eggs per pack', '2桶 / 周': '2 cartons / week',
     '12罐×355 mL / 箱': '12 cans × 355 mL / case', '1箱 / 周': '1 case / week',
     '1 kg / 盘': '1 kg / tray', '1盘 / 周': '1 tray / week',
     '454 g / 包': '454 g / pack',

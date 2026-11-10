@@ -54,5 +54,6 @@ test('restored shopping subtotal matches its own groceries, and current menu is 
  assert.ok(Math.abs(sum-total)<.01);
  assert.doesNotMatch(text,/金枪鱼|水饺|扁米粉|牛肉丸/);
  assert.match(text,/2盒（4块）\/ 周/);
- assert.match(text,/12个 \/ 盒/);
+ assert.match(text,/18个 \/ 盒/);
+ assert.match(text,/2盒 \/ 3周/);
 });
