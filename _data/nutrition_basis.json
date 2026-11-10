@@ -551,5 +551,24 @@
     "ala": 1.7,
     "source": "https://www.bobsredmill.com/product/flaxseed-meal",
     "basis": "Manufacturer label per 13 g; ALA 1.7 g per two tablespoons. Label zeros include rounding. Daily amount 3 g. Food-only ALA baseline remains a composition estimate of 1.1–1.3 g/day."
+  },
+  "breakfastExtras": [
+    {
+      "name": "OLLY Men's Multi — Canadian 90-gummy bottle",
+      "dailyGummies": 2,
+      "kcal": 20,
+      "carbs": 4,
+      "sugar": 2,
+      "addedSugar": 2,
+      "source": "https://www.ollynutrition.ca/products/mens-multi",
+      "macroSource": "https://www.gnc.com/on/demandware.static/-/Sites-GNC2-Library/default/v1753520588213/pdf/525804_lbl.pdf",
+      "basis": "Values here are per daily serving of two gummies. Canadian medicinal ingredients verified from manufacturer packaging. Canadian label does not declare calories/macros; 20 kcal, 4 g carbohydrate and 2 g added sugar are planning estimates using US OLLY two-gummy label, not verified Canadian nutrition facts."
+    }
+  ],
+  "magnesiumSupplement": {
+    "name": "Magnesium bisglycinate",
+    "labelDoseMg": 200,
+    "timing": "Breakfast",
+    "basis": "Existing user-owned bottle; exact formulation and elemental magnesium per serving not confirmed. Record requested label dose only; do not treat 200 mg compound as 200 mg elemental magnesium or invent pill count."
   }
 }

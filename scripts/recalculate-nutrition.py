@@ -13,7 +13,7 @@ def recalculate(root):
   supplement=source['breakfastSupplement']
   for field in fields:
    addition=source.get('breakfastAddition',{})
-   value=base.get(field,0)+supplement.get(field,0)*supplement['dailySoftgels']+addition.get(field,0)*addition.get('dailyGrams',0)/addition.get('referenceGrams',1)
+   value=base.get(field,0)+supplement.get(field,0)*supplement['dailySoftgels']+addition.get(field,0)*addition.get('dailyGrams',0)/addition.get('referenceGrams',1)+sum(extra.get(field,0) for extra in source.get('breakfastExtras',[]))
    meals[key][field]=str(round(value)) if field in ['kcal','sodium','cholesterol'] else f'{value:.2f}' if field=='epaDha' else f'{value:.1f}'
  micro=json.loads((root/'_data/micronutrient_basis.json').read_text())
  micro_recipes=dict(zip(source['mealKeys'],source['recipes'])) | micro['extraRecipes']
@@ -36,6 +36,8 @@ def recalculate(root):
  page=page.replace(' data-en="Pending Verification"','')
  addition=source.get('breakfastAddition',{})
  ala=addition.get('ala',0)*addition.get('dailyGrams',0)/addition.get('referenceGrams',1)
+ added_sugar=sum(extra.get('addedSugar',0) for extra in source.get('breakfastExtras',[]))
+ values['添加糖']=f'{4+added_sugar:g}–{9+added_sugar:g} g'
  values['Omega-3：ALA']=f'{1.1+ala:.1f}–{1.3+ala:.1f} g'
  for label,value in values.items():page=re.sub(r'(<td>'+re.escape(label)+r'</td>\s*<td[^>]*>).*?(</td>)',lambda m:m[1]+value+m[2],page,flags=re.S)
  page=re.sub(r'(<td>饱和脂肪</td>\s*<td[^>]*>.*?</td>\s*<td>)≤[\d.]+ g',lambda m:m[1]+f'≤{daily["kcal"]*.06/9:.1f} g',page,flags=re.S)
