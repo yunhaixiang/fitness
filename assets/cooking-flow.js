@@ -28,7 +28,6 @@
     {"id": "potato", "label": ["土豆块", "Potato Wedges"], "note": ["", ""], "group": "oven", "before": ["oven-heat", "prep-potato"], "link": "#cook-potato", "minutes": 40},
     {"id": "chicken", "label": ["鸡大腿肉", "Chicken Thighs"], "note": ["", ""], "group": "oven", "before": ["oven-heat", "prep-chicken"], "link": "#cook-chicken", "minutes": 27},
     {"id": "ribs", "label": ["BBQ排骨", "BBQ Ribs"], "note": ["", ""], "group": "oven", "before": ["oven-heat", "prep-ribs"], "link": "#cook-ribs", "minutes": 20},
-    {"id": "meatballs", "label": ["牛肉丸", "Beef Meatballs"], "note": ["", ""], "group": "oven", "before": ["oven-heat"], "link": "#cook-meatballs", "minutes": 20},
     {"id": "shrimp", "label": ["面包糠烤虾", "Panko-Baked Shrimp"], "note": ["", ""], "group": "oven", "before": ["oven-heat", "prep-shrimp"], "link": "#cook-shrimp", "minutes": 12},
     {"id": "prep-rice", "label": ["备白米", "Prepare Rice"], "note": ["", ""], "group": "prep", "before": [], "link": "#cook-prep-rice", "minutes": 3, "displayGroup": "rice"},
     {"id": "rice", "label": ["白米饭", "White Rice"], "note": ["", ""], "group": "rice", "before": ["prep-rice"], "link": "#cook-rice", "minutes": 50},
@@ -58,7 +57,7 @@
     {"id": "peas-carrots", "label": ["豌豆胡萝卜", "Peas and Carrots"], "note": ["", ""], "group": "finish", "before": [], "link": "#cook-peas-carrots", "minutes": 3},
     {"id": "wrap", "label": ["卷饼", "Wrap"], "note": ["", ""], "group": "finish", "before": ["prep-wrap", "chicken", "peel-eggs"], "link": "#cook-wrap", "minutes": 1},
     {"id": "sandwich", "label": ["三明治", "Sandwich"], "note": ["", ""], "group": "finish", "before": ["prep-sandwich", "chicken", "peel-eggs"], "link": "#cook-sandwich", "minutes": 1},
-    {"id": "refrigerate", "label": ["入冰箱", "Refrigerate"], "note": ["", ""], "group": "finish", "before": ["rice", "potato", "ribs", "meatballs", "shrimp", "salmon", "dumplings", "curry", "season-noodles", "tomato", "wrap", "sandwich", "mushroom", "spinach", "haddock", "peas-carrots"], "link": "#cook-refrigerate", "minutes": 5},
+    {"id": "refrigerate", "label": ["入冰箱", "Refrigerate"], "note": ["", ""], "group": "finish", "before": ["rice", "potato", "ribs", "shrimp", "salmon", "dumplings", "curry", "season-noodles", "tomato", "wrap", "sandwich", "mushroom", "spinach", "haddock", "peas-carrots"], "link": "#cook-refrigerate", "minutes": 5},
     {"id": "clean", "label": ["清洗", "Clean Up"], "note": ["", ""], "group": "finish", "before": ["refrigerate"], "link": "#cook-clean", "minutes": 7}
   ];
   const stepEmoji = {
@@ -66,7 +65,7 @@
     'oven-heat-start': '🔥', 'oven-heat': '🌡️',
     'prep-chicken': '🍗', chicken: '🍗',
     'prep-potato': '🥔', potato: '🥔',
-    'prep-ribs': '🍖', ribs: '🍖', meatballs: '🧆',
+    'prep-ribs': '🍖', ribs: '🍖',
     'prep-shrimp': '🦐', shrimp: '🦐',
     'prep-salmon': '🐟', salmon: '🐟', haddock: '🐟',
     'air-heat-start': '🔥', 'air-heat': '🌡️',
@@ -86,7 +85,7 @@
     {"id": "finish", "icon": "finish", "title": ["收尾", "Finish"], "hint": ["备好配菜与餐点、入冰箱、清洗", "Assemble Meals, Refrigerate and Clean"]}
   ];
 
-  const instructionSections = [["rice", "rice", ["prep-rice", "rice"]], ["oven", "oven", ["oven-heat-start", "prep-potato", "prep-chicken", "prep-ribs", "prep-shrimp", "oven-heat", "potato", "chicken", "ribs", "meatballs", "shrimp"]], ["air-fryer", "air", ["prep-salmon", "air-heat-start", "air-heat", "salmon", "haddock"]], ["pot-one", "pots", ["egg-water", "eggs", "dumplings", "peel-eggs"]], ["pot-two", "pots", ["pasta-water", "pasta", "noodles"]], ["small-wok", "small-wok", ["prep-noodle-sauce", "mushroom", "curry", "season-noodles"]], ["large-wok", "large-wok", ["prep-zucchini", "spinach", "ground", "tomato"]], ["finish", "finish", ["prep-bread", "prep-wrap", "prep-sandwich", "peas-carrots", "wrap", "sandwich", "refrigerate", "clean"]]];
+  const instructionSections = [["rice", "rice", ["prep-rice", "rice"]], ["oven", "oven", ["oven-heat-start", "prep-potato", "prep-chicken", "prep-ribs", "prep-shrimp", "oven-heat", "potato", "chicken", "ribs", "shrimp"]], ["air-fryer", "air", ["prep-salmon", "air-heat-start", "air-heat", "salmon", "haddock"]], ["pot-one", "pots", ["egg-water", "eggs", "dumplings", "peel-eggs"]], ["pot-two", "pots", ["pasta-water", "pasta", "noodles"]], ["small-wok", "small-wok", ["prep-noodle-sauce", "mushroom", "curry", "season-noodles"]], ["large-wok", "large-wok", ["prep-zucchini", "spinach", "ground", "tomato"]], ["finish", "finish", ["prep-bread", "prep-wrap", "prep-sandwich", "peas-carrots", "wrap", "sandwich", "refrigerate", "clean"]]];
   if (window.fitnessCookingDefinition) {
     nodes.splice(0, nodes.length, ...window.fitnessCookingDefinition.nodes);
     instructionSections.splice(0, instructionSections.length, ...window.fitnessCookingDefinition.instructionSections);

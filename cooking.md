@@ -15,12 +15,12 @@ cooking: true
 <ol>
 <li class="cooking-task-source">
 <ol lang="zh-CN" class="cooking-source-zh">
-<li>🍚 干米62 g淘洗沥干。</li>
-<li>米和💧 水按体积1:1，加💧 水约78 mL，放入电饭煲。</li>
+<li>🍚 干米35 g淘洗沥干。</li>
+<li>米和💧 水按体积1:1，加💧 水约44 mL，放入电饭煲。</li>
 </ol>
 <ol lang="en" class="cooking-source-en" hidden>
-<li>Rinse and drain 62 g 🍚 dry rice.</li>
-<li>Use equal volumes of rice and 💧 water: about 78 mL 💧 water.</li>
+<li>Rinse and drain 35 g 🍚 dry rice.</li>
+<li>Use equal volumes of rice and 💧 water: about 44 mL 💧 water.</li>
 <li>Place in the rice cooker.</li>
 </ol>
 </li>
@@ -80,11 +80,11 @@ cooking: true
 <li class="cooking-task-source">
 <ol lang="zh-CN" class="cooking-source-zh">
 <li>400°F烤约35–40分钟至内部软、表面金黄，中途翻面。</li>
-<li>出锅按3:14分给第2、4盘，分别对应生重30 g和140 g。</li>
+<li>出锅全部放第4盘。</li>
 </ol>
 <ol lang="en" class="cooking-source-en" hidden>
 <li>Roast at 400°F for 35–40 minutes until tender and golden, turning halfway.</li>
-<li>Split the cooked 🥔 potatoes 3:14 between meals 2 and 4, equivalent to 30 g and 140 g raw.</li>
+<li>Place all the cooked 🥔 potatoes in meal 4.</li>
 </ol>
 </li>
 <li class="cooking-task-source">
@@ -106,17 +106,6 @@ cooking: true
 </ol>
 <ol lang="en" class="cooking-source-en" hidden>
 <li>Heat foil-wrapped 🍖 ribs at 400°F for 15–20 minutes, to 74°C in the centre.</li>
-<li>Place in meal 4.</li>
-</ol>
-</li>
-<li class="cooking-task-source">
-<ol lang="zh-CN" class="cooking-source-zh">
-<li>取冷冻🧆 牛肉丸3颗（45.4 g）铺入烤盘，400°F烤15–20分钟至中心74°C，包装另有要求则按包装。</li>
-<li>放第4盘。</li>
-</ol>
-<ol lang="en" class="cooking-source-en" hidden>
-<li>Place 3 frozen 🧆 meatballs (45.4 g) on a tray.</li>
-<li>Bake at 400°F for 15–20 minutes to a 74°C centre, following the pack if different.</li>
 <li>Place in meal 4.</li>
 </ol>
 </li>
@@ -170,11 +159,11 @@ cooking: true
 </li>
 <li class="cooking-task-source">
 <ol lang="zh-CN" class="cooking-source-zh">
-<li>空气炸锅空出且达到400°F时，放入冷冻🐟 裹粉黑线鳕1片，无需解冻或加油，单层摆放。</li>
+<li>空气炸锅空出且达到400°F时，放入冷冻🐟 裹粉黑线鳕2片，无需解冻或加油，单层摆放。</li>
 <li>400°F烤18–20分钟至熟透，放第6盘。</li>
 </ol>
 <ol lang="en" class="cooking-source-en" hidden>
-<li>When the air fryer is empty and at 400°F, air-fry 1 frozen breaded 🐟 haddock fillet for 18–20 minutes until cooked through, arranged in a single layer.</li>
+<li>When the air fryer is empty and at 400°F, air-fry 2 frozen breaded 🐟 haddock fillets for 18–20 minutes until cooked through, arranged in a single layer.</li>
 <li>Do not thaw or add oil.</li>
 <li>Place in meal 6.</li>
 </ol>
@@ -208,12 +197,12 @@ cooking: true
 <li class="cooking-task-source">
 <ol lang="zh-CN" class="cooking-source-zh">
 <li>冷却剥壳，按需切半。</li>
-<li>第1、4盘各1½个，第2、5、7盘各1个，第3盘½个，第6盘2½个。</li>
+<li>第1、6盘各1½个，第2、5、7盘各1个，第3盘½个，第4盘2½个。</li>
 <li>第1盘的掰碎，第5盘的切片。</li>
 </ol>
 <ol lang="en" class="cooking-source-en" hidden>
 <li>Cool, peel and cut as needed.</li>
-<li>Put 1½ eggs each in meals 1 and 4, one each in meals 2, 5 and 7, half an 🥚 egg in meal 3, and 2½ eggs in meal 6.</li>
+<li>Put 1½ eggs each in meals 1 and 6, one each in meals 2, 5 and 7, half an 🥚 egg in meal 3, and 2½ eggs in meal 4.</li>
 <li>Crumble the eggs for meal 1 and slice the egg for meal 5.</li>
 </ol>
 </li>
@@ -336,13 +325,13 @@ cooking: true
 </li>
 <li class="cooking-task-source">
 <ol lang="zh-CN" class="cooking-source-zh">
-<li>加入🍅 Unico浓缩番茄膏半罐（78 mL）、🧄 蒜粉¼茶匙和🌿 意式香料¼茶匙，翻炒1分钟。</li>
+<li>加入🍅 Unico浓缩番茄膏半罐（44 mL）、🧄 蒜粉¼茶匙和🌿 意式香料¼茶匙，翻炒1分钟。</li>
 <li>加💧 面水80–120 mL煮2–3分钟。</li>
 <li>拌入🍝 意面，偏稠时再补💧 面水，放第7盘。</li>
 <li>剩余半罐转入密封盒冷藏，供后半周使用。</li>
 </ol>
 <ol lang="en" class="cooking-source-en" hidden>
-<li>Stir in half a can of 🍅 Unico Tomato Paste (78 mL), ¼ tsp 🧄 garlic powder and ¼ tsp 🌿 Italian seasoning for 1 minute.</li>
+<li>Stir in half a can of 🍅 Unico Tomato Paste (44 mL), ¼ tsp 🧄 garlic powder and ¼ tsp 🌿 Italian seasoning for 1 minute.</li>
 <li>Add 80–120 mL reserved pasta 💧 water and simmer for 2–3 minutes.</li>
 <li>Toss in the 🍝 spaghetti, adding more pasta 💧 water if needed.</li>
 <li>Place in meal 7.</li>

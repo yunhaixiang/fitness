@@ -213,8 +213,7 @@ visual: true
 <td data-en="1 Bottle / 120 Days · 1 Softgel with Breakfast Daily">1瓶 / 120天；每天早餐1粒</td>
 <td><a href="https://www.amazon.ca/dp/B00L3WS0Y2" data-en="Check Amazon Price">查看 Amazon 价格</a></td>
 </tr>
-<tr data-price-id="32" data-weekly-cost="6.37" data-purchase-group="fortnightly"><td data-en="Breaded Haddock">裹粉黑线鳕</td><td><a href="https://www.walmart.ca/en/ip/High-Liner-Pan-Sear-Selects-Roasted-Garlic-Herb-Haddock/6000196030769">High Liner Pan-Sear Selects Roasted Garlic &amp; Herbs Haddock</a><br><span data-en="500 g / Box, 4 Fillets">500 g / 盒，4片</span></td><td data-en="1 Box / 2 Weeks">1盒 / 2周</td><td><a href="https://www.walmart.ca/en/ip/High-Liner-Pan-Sear-Selects-Roasted-Garlic-Herb-Haddock/6000196030769">$12.74</a></td></tr>
-<tr data-price-id="33" data-weekly-cost="1.28" data-purchase-group="restock"><td data-en="Beef Meatballs">牛肉丸</td><td><a href="https://www.walmart.ca/en/ip/Our-Finest-Frozen-Lean-Angus-Meatballs-Appetizers/6000200192499">Our Finest Fully Cooked Lean Angus Beef Meatballs</a><br><span data-en="907 g / 60 Pieces">907 g / 60 Pieces</span></td><td data-en="1 Bag / 10 Weeks">1袋 / 10周</td><td><a href="https://www.walmart.ca/en/ip/Our-Finest-Frozen-Lean-Angus-Meatballs-Appetizers/6000200192499">$12.84</a></td></tr>
+<tr data-price-id="32" data-weekly-cost="12.74" data-purchase-group="weekly"><td data-en="Breaded Haddock">裹粉黑线鳕</td><td><a href="https://www.walmart.ca/en/ip/High-Liner-Pan-Sear-Selects-Roasted-Garlic-Herb-Haddock/6000196030769">High Liner Pan-Sear Selects Roasted Garlic &amp; Herbs Haddock</a><br><span data-en="500 g / Box, 4 Fillets">500 g / 盒，4片</span></td><td data-en="1 Box / Week">1盒 / 周</td><td><a href="https://www.walmart.ca/en/ip/High-Liner-Pan-Sear-Selects-Roasted-Garlic-Herb-Haddock/6000196030769">$12.74</a></td></tr>
 <tr data-price-id="34" data-weekly-cost="10.98" data-purchase-group="weekly"><td data-en="Raw Shrimp">生虾仁</td><td><a href="https://www.walmart.ca/en/ip/Great-Value-Wild-Argentinian-Large-Raw-Shrimp/6000202999819">Great Value Wild Argentinian Large Raw Shrimp</a><br><span data-en="340 g">340 g</span></td><td data-en="1 Bag / Week">1袋 / 周</td><td><a href="https://www.walmart.ca/en/ip/Great-Value-Wild-Argentinian-Large-Raw-Shrimp/6000202999819">$10.98</a></td></tr>
 <tr data-price-id="35" data-weekly-cost="3.43" data-purchase-group="restock"><td data-en="Chicken and Vegetable Dumplings">鸡肉蔬菜水饺</td><td><a href="https://www.walmart.ca/en/ip/Great-Value-Frozen-Chicken-Vegetable-Potstickers/6O52P9Y77G03">Great Value Frozen Chicken &amp; Vegetable Potstickers</a><br><span data-en="1.13 kg">1.13 kg</span></td><td data-en="Restock as Needed">按需补充</td><td><a href="https://www.walmart.ca/en/ip/Great-Value-Frozen-Chicken-Vegetable-Potstickers/6O52P9Y77G03">$9.98</a></td></tr>
 <tr data-price-id="36" data-weekly-cost="0.83" data-purchase-group="restock"><td data-en="Whole-Wheat Bread">全麦面包</td><td><a href="https://www.walmart.ca/en/ip/Dempster-s-100-Whole-Wheat-Bread-675-g/6000191268657">Dempster’s 100% Whole Wheat Bread</a><br><span data-en="675 g">675 g</span></td><td data-en="6 Slices / Week; Freeze the Rest">每周6片；剩余冷冻</td><td><a href="https://www.walmart.ca/en/ip/Dempster-s-100-Whole-Wheat-Bread-675-g/6000191268657">$2.68</a></td></tr>
@@ -236,7 +235,7 @@ visual: true
 <td>每周合计</td>
 <td>—</td>
 <td style="text-align: right;">—</td>
-<td style="text-align: right;">$144.50</td>
+<td style="text-align: right;">$149.59</td>
 </tr>
 </tbody>
 </table>
