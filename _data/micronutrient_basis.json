@@ -490,7 +490,7 @@
         "iodineUSDA",
         "assumptions"
       ],
-      "basis": "One meal: fish sauce 3 g, combined soy sauces 5.3 g, oyster sauce 6 g, garlic powder 0.8 g, chili 5 g, basil 1 g. Density/leaf-weight assumptions; iodine 0.8 mcg proxy dominated by fish sauce."
+      "basis": "One meal: fish sauce 3 g, combined soy sauces 5.3 g, oyster sauce 6 g, garlic powder 0.8 g, paprika 1/4 tsp (about 0.6 g), basil 1 g. Density/leaf-weight assumptions; iodine 0.8 mcg proxy dominated by fish sauce. Trace micronutrients retain the previous sauce proxy; this spice substitution has not been separately resolved."
     },
     "soy": {
       "values": {

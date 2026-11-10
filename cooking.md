@@ -252,12 +252,12 @@ cooking: true
 <ol>
 <li class="cooking-task-source">
 <ol lang="zh-CN" class="cooking-source-zh">
-<li>🌶️ 红辣椒5 g和🌿 罗勒叶2–3片洗净，辣椒切圈。</li>
-<li>🥣 鱼露、生抽、老抽各½茶匙，🥣 蚝油1茶匙、🧄 蒜粉¼茶匙和💧 水2汤匙调匀。</li>
+<li>🌿 罗勒叶2–3片洗净。</li>
+<li>🥣 鱼露、生抽、老抽各½茶匙，🥣 蚝油1茶匙、🧄 蒜粉¼茶匙、🌶️ 红椒粉¼茶匙和💧 水2汤匙调匀。</li>
 </ol>
 <ol lang="en" class="cooking-source-en" hidden>
-<li>Wash 5 g 🌶️ red chili and 2–3 🌿 basil leaves; slice the chili.</li>
-<li>Mix ½ tsp each 🥣 fish sauce, 🥣 light soy sauce and 🥣 dark soy sauce, 1 tsp 🥣 oyster sauce, ¼ tsp 🧄 garlic powder and 2 tbsp 💧 water.</li>
+<li>Wash 2–3 🌿 basil leaves.</li>
+<li>Mix ½ tsp each 🥣 fish sauce, 🥣 light soy sauce and 🥣 dark soy sauce, 1 tsp 🥣 oyster sauce, ¼ tsp 🧄 garlic powder, ¼ tsp 🌶️ paprika and 2 tbsp 💧 water.</li>
 </ol>
 </li>
 <li class="cooking-task-source">
@@ -285,13 +285,13 @@ cooking: true
 </li>
 <li class="cooking-task-source">
 <ol lang="zh-CN" class="cooking-source-zh">
-<li>小锅冲洗擦干，加🫒 橄榄油¼茶匙，中小火略炒辣椒。</li>
+<li>小锅冲洗擦干，加🫒 橄榄油¼茶匙，中小火加热。</li>
 <li>倒入酱汁和沥干🍜 米粉，拌热1–2分钟，粘锅时补少量💧 水。</li>
 <li>关火拌入罗勒，放第3盘。</li>
 </ol>
 <ol lang="en" class="cooking-source-en" hidden>
 <li>Rinse and dry the saucepan.</li>
-<li>Add ¼ tsp 🫒 olive oil and briefly cook the chili over medium-low heat.</li>
+<li>Add ¼ tsp 🫒 olive oil and heat over medium-low heat.</li>
 <li>Add the sauce and drained 🍜 noodles, tossing for 1–2 minutes; add a splash of 💧 water if they start to stick.</li>
 <li>Turn off the heat, stir in basil and place in meal 3.</li>
 </ol>

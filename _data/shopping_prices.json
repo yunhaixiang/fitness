@@ -521,17 +521,6 @@
       "purchase_frequency_en": "As Needed"
     },
     {
-      "item": "红辣椒",
-      "price_cad": "2.99",
-      "basis": "each_average",
-      "source_type": "walmart_public",
-      "source_url": "https://www.walmart.ca/en/ip/red-chili/6000200611068",
-      "product_url": "https://www.walmart.ca/en/ip/red-chili/6000200611068",
-      "checked_on": "2026-11-08",
-      "purchase_frequency_zh": "按需补",
-      "purchase_frequency_en": "As Needed"
-    },
-    {
       "item": "罗勒叶",
       "price_cad": "1.67",
       "basis": "package",
