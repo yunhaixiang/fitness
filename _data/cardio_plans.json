@@ -1,7 +1,6 @@
 {
   "default": "cardio-2",
   "sessionsPerWeek": 4,
-  "weightKg": 77.4,
   "plans": [
     {
       "id": "cardio-1",
@@ -234,7 +233,7 @@
   ],
   "estimation": {
     "reviewedOn": "2026-11-03",
-    "note": "Net kcal = sum((MET - 1) × 3.5 × 77.4 / 200 × minutes). Segment timing was reviewed against public video storyboard frames sampled every 10 seconds and visible countdowns; phase boundaries are approximate. The video is 34:42, but modelled exercise plus recovery is about 32:15. Intro/outro receive no exercise credit. Twenty pairs contain 25 s work + 10 s pause + 25 s variation, with nineteen 20 s between-pair rests: 1,000 s working and 580 s recovery. Warm-up and cool-down are about 150 s each, with another 55 s of transitions. This corrects the former unsupported 8.4 MET average over 30 minutes.",
+    "note": "Net kcal per kg = sum((MET - 1) × 3.5 / 200 × minutes). Personal weight is supplied only by the private database. Segment timing was reviewed against public video storyboard frames sampled every 10 seconds and visible countdowns; phase boundaries are approximate. The video is 34:42, but modelled exercise plus recovery is about 32:15. Intro/outro receive no exercise credit. Twenty pairs contain 25 s work + 10 s pause + 25 s variation, with nineteen 20 s between-pair rests: 1,000 s working and 580 s recovery. Warm-up and cool-down are about 150 s each, with another 55 s of transitions. This corrects the former unsupported 8.4 MET average over 30 minutes.",
     "methodLimits": "Compendium activities provide anchors, not measurements of these exact video moves. Category MET values and recovery MET are modelling assumptions. Central effort represents mainly the higher-impact version with occasional modifications; no measured modification fraction is available. Short-interval oxygen uptake does not instantly track movement, so 3 MET during recovery (scenario 2–4) is an explicit uncertain allowance, not a published measurement of this video. No separate post-workout afterburn is added. Greater timing detail does not establish greater individual accuracy. The 150–250 net kcal range is a rounded scenario range, not a confidence interval or guaranteed bounds. Both videos have now been reviewed with the same category assumptions. Their scenario ranges substantially overlap; the model cannot establish which burns more for this individual.",
     "hiit": {
       "videoSeconds": 2082,
@@ -428,13 +427,12 @@
           "workSeconds": 50
         }
       ],
-      "centralNetKcal": 194.935125,
-      "centralGrossKcal": 238.61775,
-      "scenarioNetKcal": [
-        150,
-        250
-      ],
-      "planningNetKcal": 200
+      "centralNetKcalPerKg": 2.5185416666666667,
+      "centralGrossKcalPerKg": 3.0829166666666667,
+      "scenarioNetKcalPerKg": [
+        1.9038541666666666,
+        3.2207291666666666
+      ]
     },
     "anchors": {
       "jumping-running": "Conditioning 02006 (8 MET vigorous high-impact aerobics), 02068 (11 MET skipping), 02214 (11 MET vigorous HIIT): interpolate 9.5 for the mixed movement category.",
@@ -647,13 +645,12 @@
           "workSeconds": 50
         }
       ],
-      "centralNetKcal": 181.72875,
-      "centralGrossKcal": 217.623,
-      "scenarioNetKcal": [
-        140,
-        230
-      ],
-      "planningNetKcal": 180
+      "centralNetKcalPerKg": 2.3479166666666664,
+      "centralGrossKcalPerKg": 2.8116666666666665,
+      "scenarioNetKcalPerKg": [
+        1.8214583333333332,
+        2.9502083333333333
+      ]
     },
     "alternatives": {
       "swim": {
@@ -671,8 +668,8 @@
             "met": 1.5
           }
         ],
-        "netKcal": 201.752775,
-        "note": "Easy warm-up/cool-down 9 min at assumed 4.8 MET, main swimming 25 min at the average of recreational freestyle 5.8 and breaststroke 5.3 MET, 2 min resting at assumed 1.5 MET. Distance is an approximate pacing guide; 34 min moving is the model basis, not a calorie guarantee for 22 laps."
+        "note": "Easy warm-up/cool-down 9 min at assumed 4.8 MET, main swimming 25 min at the average of recreational freestyle 5.8 and breaststroke 5.3 MET, 2 min resting at assumed 1.5 MET. Distance is an approximate pacing guide; 34 min moving is the model basis, not a calorie guarantee for 22 laps.",
+        "netKcalPerKg": 2.606625
       },
       "treadmill": {
         "segments": [
@@ -689,8 +686,8 @@
             "met": 2.8
           }
         ],
-        "netKcal": 201.8205,
-        "note": "Running 12030, 5.0–5.2 mph, 8.5 MET. Warm-up and cool-down walking use 3.5 and 2.8 MET planning values."
+        "note": "Running 12030, 5.0–5.2 mph, 8.5 MET. Warm-up and cool-down walking use 3.5 and 2.8 MET planning values.",
+        "netKcalPerKg": 2.6075
       },
       "bike": {
         "segments": [
@@ -707,8 +704,8 @@
             "met": 4
           }
         ],
-        "netKcal": 203.175,
-        "note": "Stationary cycling 01214 (50 W, 4 MET) and 01220 (90–100 W, 6 MET)."
+        "note": "Stationary cycling 01214 (50 W, 4 MET) and 01220 (90–100 W, 6 MET).",
+        "netKcalPerKg": 2.6249999999999996
       }
     },
     "plan2Alternatives": {
@@ -727,8 +724,8 @@
             "met": 1.5
           }
         ],
-        "netKcal": 300.36037500000003,
-        "note": "9 min easy swimming, 41 min main swimming, 2 min rest. Distance is an approximate pacing guide."
+        "note": "9 min easy swimming, 41 min main swimming, 2 min rest. Distance is an approximate pacing guide.",
+        "netKcalPerKg": 3.880625
       },
       "treadmill": {
         "segments": [
@@ -745,8 +742,8 @@
             "met": 2.8
           }
         ],
-        "netKcal": 303.4080000000001,
-        "note": "Running 12030, 5.0–5.2 mph, 8.5 MET. Warm-up and cool-down walking use 3.5 and 2.8 MET planning values."
+        "note": "Running 12030, 5.0–5.2 mph, 8.5 MET. Warm-up and cool-down walking use 3.5 and 2.8 MET planning values.",
+        "netKcalPerKg": 3.92
       },
       "bike": {
         "segments": [
@@ -763,8 +760,8 @@
             "met": 4
           }
         ],
-        "netKcal": 297.99,
-        "note": "Stationary cycling 01214 (50 W, 4 MET) and 01220 (90–100 W, 6 MET)."
+        "note": "Stationary cycling 01214 (50 W, 4 MET) and 01220 (90–100 W, 6 MET).",
+        "netKcalPerKg": 3.8499999999999996
       }
     },
     "planningOverride": {

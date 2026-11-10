@@ -37,7 +37,7 @@ test('each plan has its own HIIT and three matching alternatives', () => {
   }
  }
 });
-const net = parts => parts.reduce((sum, {minutes, met}) => sum + (met-1)*3.5*catalog.weightKg/200*minutes, 0);
+const net = parts => parts.reduce((sum, {minutes, met}) => sum + (met-1)*3.5/200*minutes, 0);
 test('audited video accounts for every work pair once and all interval recovery', () => {
  const h = catalog.estimation.hiit;
  const active = h.segments.filter(s => s.pairs);
@@ -48,9 +48,8 @@ test('audited video accounts for every work pair once and all interval recovery'
  assert.equal(h.segments.find(s=>s.id==='interval-recovery').seconds,20*10+19*20);
  assert.equal(h.segments.reduce((n,s)=>n+s.seconds,0),1935);
  const computed = net(h.segments.map(s=>({minutes:s.seconds/60,met:s.met})));
- assert.ok(Math.abs(computed-h.centralNetKcal)<1e-6);
- assert.equal(Math.round(computed/25)*25, h.planningNetKcal);
- assert.ok(Math.abs(h.centralGrossKcal-computed-1935/60*3.5*catalog.weightKg/200)<1e-6);
+ assert.ok(Math.abs(computed-h.centralNetKcalPerKg)<1e-6);
+ assert.ok(Math.abs(h.centralGrossKcalPerKg-computed-1935/60*3.5/200)<1e-6);
 });
 test('original video audit counts 20 work bouts and one midpoint break', () => {
  const h = catalog.estimation.originalHiit;
@@ -63,17 +62,15 @@ test('original video audit counts 20 work bouts and one midpoint break', () => {
  const seconds=h.segments.reduce((sum,s)=>sum+s.seconds,0);
  assert.equal(seconds,1590);
  const computed=net(h.segments.map(s=>({minutes:s.seconds/60,met:s.met})));
- assert.ok(Math.abs(computed-h.centralNetKcal)<1e-6);
- assert.equal(Math.round(computed/10)*10,h.planningNetKcal);
- assert.ok(Math.abs(h.centralGrossKcal-computed-seconds/60*3.5*catalog.weightKg/200)<1e-6);
+ assert.ok(Math.abs(computed-h.centralNetKcalPerKg)<1e-6);
+ assert.ok(Math.abs(h.centralGrossKcalPerKg-computed-seconds/60*3.5/200)<1e-6);
 });
-test('both sets of alternatives match their planning target and displayed duration', () => {
+test('alternatives preserve weight-independent MET models and displayed duration', () => {
  for(const [index, audits] of [catalog.estimation.alternatives, catalog.estimation.plan2Alternatives].entries()) {
   const plan = catalog.plans[index];
   for(const [id,audit] of Object.entries(audits)) {
    const kcal=net(audit.segments);
-   assert.ok(Math.abs(kcal-audit.netKcal)<1e-6);
-   assert.ok(Math.abs(kcal-plan.netKcal)<plan.netKcal*0.05);
+   assert.ok(Math.abs(kcal-audit.netKcalPerKg)<1e-6);
    const minutes=audit.segments.reduce((n,s)=>n+s.minutes,0);
    assert.equal(plan.options.find(o=>o.id===id).duration.en,`${minutes} min`);
   }

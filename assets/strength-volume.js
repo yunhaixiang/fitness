@@ -8,14 +8,9 @@
   const en = window.fitnessI18n?.language === 'en';
   const tr = (zh, english) => en ? english : zh;
   const numberFormat = new Intl.NumberFormat(en ? 'en-CA' : 'zh-CN', { maximumFractionDigits: 0 });
-  const bodyWeightKg = (() => {
-    try {
-      const records = JSON.parse(localStorage.getItem('yunhai-fitness-records-v1') || '{}');
-      const latest = (records.body || []).filter((row) => Number(row.weight) > 0)
-        .sort((a, b) => b.date.localeCompare(a.date))[0];
-      return latest ? Number(latest.weight) : 77.4;
-    } catch (_) { return 77.4; }
-  })();
+  // Only authenticated database data may supply a personal body weight.
+  const bodyWeightKg = Number(window.fitnessBodyMetrics?.weight) > 0
+    ? Number(window.fitnessBodyMetrics.weight) : NaN;
   const bodyWeightLb = bodyWeightKg * 2.20462;
   const muscles = [
     ['chest', '胸肌', 'Chest'], ['front-delts', '肩前侧', 'Front Delts'],
@@ -92,7 +87,7 @@
     '史密斯机臀推': { primary: ['glutes'], secondary: ['hamstrings'] }
   };
   const original = (node) => node ? window.fitnessI18n?.original(node) || node.textContent : '';
-  const format = (value) => `${numberFormat.format(value)} lb`;
+  const format = (value) => Number.isFinite(value) ? `${numberFormat.format(value)} lb` : '—';
   const text = (tag, className, value) => {
     const element = document.createElement(tag);
     if (className) element.className = className;
@@ -131,7 +126,7 @@
           for (const muscle of assignment[category]) {
             const item = entries[muscle];
             item[category] += volume;
-            const previous = item[`${category}Moves`].get(name) || 0;
+            const previous = item[`${category}Moves`].get(name) ?? 0;
             item[`${category}Moves`].set(name, previous + volume);
           }
         }

@@ -1,3 +1,4 @@
+// Synthetic fixtures; these are not the owner's measurements.
 import {test} from 'node:test';
 import assert from 'node:assert/strict';
 import {DatabaseSync} from 'node:sqlite';
@@ -7,13 +8,14 @@ import ingest from '../cloudflare/ingest.mjs';
 import viewer, {trackingHandler} from '../cloudflare/viewer.mjs';
 
 const now = new Date('2026-11-09T20:00:00Z');
-const sample = {weight_kg: 76.5, body_fat_percent: 31.2, measured_at: '2026-11-09T08:30:00-05:00', body_fat_measured_at: '2026-11-09T08:30:01-05:00'};
+const sample = {weight_kg: 64.5, body_fat_percent: 24.6, measured_at: '2026-11-09T08:30:00-05:00', body_fat_measured_at: '2026-11-09T08:30:01-05:00'};
 const owner = 'owner@example.com';
 const ctx = email => ({access: {getIdentity: async () => ({email})}});
 function database() {
   const sql = new DatabaseSync(':memory:');
   sql.exec(readFileSync(new URL('../cloudflare/migrations/0001_measurements.sql', import.meta.url), 'utf8'));
   sql.exec(readFileSync(new URL('../cloudflare/migrations/0002_daily_steps.sql', import.meta.url), 'utf8'));
+  sql.exec(readFileSync(new URL('../cloudflare/migrations/0003_private_profile.sql', import.meta.url), 'utf8'));
   return {sql, async batch(statements) {
     sql.exec('BEGIN');
     try { const results = []; for (const statement of statements) results.push(await statement.run()); sql.exec('COMMIT'); return results; }
@@ -37,7 +39,7 @@ const upload = (token, body = {...sample, measured_at: '2020-01-01T08:30:00-05:0
 const createToken = () => new Request('https://viewer.example/api/sync-token', {method: 'POST', headers: {Origin: 'https://viewer.example', 'X-Fitness-Action': 'create-sync-token'}});
 
 test('unit validation rejects fractional percent, nonfinite values, missing values and bad timestamps', () => {
-  for (const change of [{body_fat_percent: .312}, {weight_kg: NaN}, {weight_kg: true}, {weight_kg: ''}, {weight_kg: '76kg'}, {measured_at: '2026-11-09'}, {measured_at: '2030-01-01T00:00:00Z'}, {body_fat_measured_at: '2026-11-08T08:30:00-05:00'}]) {
+  for (const change of [{body_fat_percent: .246}, {weight_kg: NaN}, {weight_kg: true}, {weight_kg: ''}, {weight_kg: '64kg'}, {measured_at: '2026-11-09'}, {measured_at: '2030-01-01T00:00:00Z'}, {body_fat_measured_at: '2026-11-08T08:30:00-05:00'}]) {
     assert.throws(() => measurement({...sample, ...change}, now));
   }
 });
@@ -48,16 +50,16 @@ test('retries do not duplicate; older same-day samples do not replace newer ones
   const db = database();
   await put(db); await put(db);
   assert.equal(db.sql.prepare('SELECT count(*) n FROM measurements').get().n, 1);
-  await put(db, {weight_kg: 77, measured_at: '2026-11-09T07:00:00-05:00', body_fat_measured_at: '2026-11-09T07:00:00-05:00'});
-  assert.equal((await readRecords(db)).currentBody.weight, 76.5);
-  await put(db, {weight_kg: 76, measured_at: '2026-11-09T09:00:00-05:00', body_fat_measured_at: '2026-11-09T09:00:00-05:00'});
-  assert.equal((await readRecords(db)).currentBody.weight, 76);
+  await put(db, {weight_kg: 65, measured_at: '2026-11-09T07:00:00-05:00', body_fat_measured_at: '2026-11-09T07:00:00-05:00'});
+  assert.equal((await readRecords(db)).currentBody.weight, 64.5);
+  await put(db, {weight_kg: 64, measured_at: '2026-11-09T09:00:00-05:00', body_fat_measured_at: '2026-11-09T09:00:00-05:00'});
+  assert.equal((await readRecords(db)).currentBody.weight, 64);
 });
 test('backfilling preserves the newest current reading and keeps daily history', async () => {
   const db = database(); await put(db);
-  await put(db, {weight_kg: 77, measured_at: '2026-11-08T08:30:00-05:00', body_fat_measured_at: '2026-11-08T08:30:00-05:00'});
+  await put(db, {weight_kg: 65, measured_at: '2026-11-08T08:30:00-05:00', body_fat_measured_at: '2026-11-08T08:30:00-05:00'});
   assert.equal(db.sql.prepare('SELECT count(*) n FROM measurements').get().n, 2);
-  assert.equal((await readRecords(db)).currentBody.weight, 76.5);
+  assert.equal((await readRecords(db)).currentBody.weight, 64.5);
 });
 test('viewer fails closed without trusted Access context; spoofed email headers do not work', async () => {
   const e = env();
@@ -70,7 +72,7 @@ test('viewer fails closed without trusted Access context; spoofed email headers 
 test('whitelisted viewer can read records but cannot issue upload credentials', async () => {
   const e = env(); await put(e.DB);
   const r = await viewer.fetch(new Request('https://viewer.example/api/records'), e, ctx('doctor@example.com'));
-  assert.equal(r.status, 200); assert.equal((await r.json()).currentBody.weight, 76.5);
+  assert.equal(r.status, 200); assert.equal((await r.json()).currentBody.weight, 64.5);
   assert.equal(r.headers.get('Cache-Control'), 'private, no-store');
   assert.equal((await viewer.fetch(createToken(), e, ctx('doctor@example.com'))).status, 403);
 });
@@ -93,7 +95,7 @@ test('upload requires a valid token and bounded JSON; invalid requests leave dat
   assert.equal((await ingest.fetch(upload('x'.repeat(43)), e)).status, 401);
   assert.equal((await ingest.fetch(upload(token, sample, {'Content-Type': 'text/plain'}), e)).status, 415);
   assert.equal((await ingest.fetch(upload(token, {...sample, extra: 'x'.repeat(3000)}), e)).status, 413);
-  assert.equal((await ingest.fetch(upload(token, {...sample, body_fat_percent: .312}), e)).status, 400);
+  assert.equal((await ingest.fetch(upload(token, {...sample, body_fat_percent: .246}), e)).status, 400);
   assert.equal(e.DB.sql.prepare('SELECT count(*) n FROM measurements').get().n, 0);
 });
 test('missing Access setup never exposes static content', async () => {
@@ -135,7 +137,7 @@ test('one upload saves independent daily steps, retries never add totals and sta
   assert.equal(e.DB.sql.prepare('SELECT count(*) n FROM daily_steps').get().n,1);
   const invalid = await ingest.fetch(upload(token,{...body,weight_kg:90,steps_count:-1}),e);
   assert.equal(invalid.status,400);
-  assert.equal(e.DB.sql.prepare('SELECT weight FROM measurements').get().weight,76.5);
+  assert.equal(e.DB.sql.prepare('SELECT weight FROM measurements').get().weight,64.5);
 });
 test('private records include step history while unauthenticated readers remain blocked', async () => {
   const e = env(); const date = new Date().toISOString().slice(0,10);
@@ -186,4 +188,15 @@ test('deployment always runs authenticated Worker before serving assets', () => 
   assert.equal(config.preview_urls,false);
   assert.equal(assets.assets.directory,'../_site');
   assert.equal(readFileSync(new URL('../cloudflare/viewer.mjs',import.meta.url),'utf8').includes('github.io'),false);
+});
+
+test('profile is database-only and shares the authenticated records boundary', async () => {
+  const e = env();
+  assert.deepEqual((await readRecords(e.DB)).profile, {});
+  e.DB.sql.exec('INSERT INTO private_profile (id, height_cm) VALUES (1, 182)');
+  const request = () => new Request('https://viewer.example/api/records');
+  assert.equal((await viewer.fetch(request(), e, {})).status, 403);
+  assert.equal((await viewer.fetch(request(), e, ctx('stranger@example.com'))).status, 403);
+  const response = await viewer.fetch(request(), e, ctx(owner));
+  assert.deepEqual((await response.json()).profile, {heightCm:182});
 });

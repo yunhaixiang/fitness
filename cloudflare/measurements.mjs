@@ -5,7 +5,7 @@ export function measurement(input, now = new Date()) {
     const raw = input[key];
     if ((typeof raw !== 'number' && typeof raw !== 'string') || String(raw).trim() === '') throw new Error(`Missing ${key}.`);
     const n = Number(raw);
-    if (!Number.isFinite(n) || n < min || n > max) throw new Error(`Invalid ${key}; use kg and percentage points (31.2, not 0.312).`);
+    if (!Number.isFinite(n) || n < min || n > max) throw new Error(`Invalid ${key}; use kg and percentage points (25, not 0.25).`);
     return Math.round(n * 100) / 100;
   };
   const instant = key => {
@@ -43,10 +43,12 @@ measured_at=excluded.measured_at, body_fat_measured_at=excluded.body_fat_measure
 WHERE excluded.measured_at >= measurements.measured_at`;
 
 export async function readRecords(db) {
+  const profile = await db.prepare('SELECT height_cm FROM private_profile WHERE id = 1').first();
   const latest = await db.prepare('SELECT weight, bf, measured_at FROM measurements ORDER BY measured_at DESC LIMIT 1').first();
   const {results} = await db.prepare("SELECT * FROM measurements WHERE date >= date('now', '-56 days') ORDER BY date").all();
   const {results: steps} = await db.prepare("SELECT * FROM daily_steps WHERE date >= date('now', '-56 days') ORDER BY date").all();
   return {
+    profile: profile ? {heightCm: profile.height_cm} : {},
     steps: steps.map(row => ({id: `apple-health-steps-${row.date}`, date: row.date, steps: row.steps, collectedAt: row.collected_at})),
     body: results.map(row => ({id: `apple-health-${row.date}`, date: row.date, weight: row.weight, bf: row.bf, measuredAt: row.measured_at})),
     currentBody: latest ? {weight: latest.weight, bf: latest.bf, measuredAt: latest.measured_at} : {},
