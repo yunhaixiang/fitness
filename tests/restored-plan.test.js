@@ -55,5 +55,8 @@ test('restored shopping subtotal matches its own groceries, and current menu is 
  assert.doesNotMatch(text,/金枪鱼|水饺|扁米粉|牛肉丸/);
  assert.match(text,/2盒（4块）\/ 周/);
  assert.match(text,/18个 \/ 盒/);
- assert.match(text,/2盒 \/ 3周/);
+ assert.match(text, /data-price-id="5" data-weekly-cost="6.98" data-purchase-group="weekly"/);
+ const eggRow = text.match(/<tr[^>]*data-price-id="5"[\s\S]*?<\/tr>/)[0];
+ assert.match(eggRow, /1 Carton \/ Week/);
+ assert.doesNotMatch(eggRow, /3 Weeks|3周/);
 });
