@@ -29,7 +29,8 @@
     "unicoPasteLabel": {
       "url": "https://www.unico.ca/products/unico-tomato-paste",
       "description": "Per 30 mL: calcium 10 mg, iron 0.4 mg, potassium 300 mg."
-    }
+    },
+    "flaxLabel": "https://www.bobsredmill.com/product/flaxseed-meal"
   },
   "notes": [
     "Micronutrient planning estimates for the current plan, not a measurement or product-label audit. Units match nutrition_basis.json; breakfast inputs are per 100 g. Numeric coverage is explicit; a missing field causes recalculation to fail.",
@@ -550,18 +551,35 @@
         "assumptions"
       ],
       "basis": "Per 100 g fruit tray: equal edible weights cantaloupe, honeydew, watermelon, pineapple, strawberry (CNF 1721/1605/1691/1734/1749). Actual fruit proportions unknown. Iodine 0.3 mcg/100 g trace proxy."
+    },
+    "flax": {
+      "values": {
+        "calcium": 24,
+        "iron": 1,
+        "potassium": 113,
+        "vitaminD": 0,
+        "vitaminB12": 0,
+        "iodine": 0
+      },
+      "sources": [
+        "flaxLabel",
+        "assumptions"
+      ],
+      "basis": "Per 13 g manufacturer serving: Ca24 mg, Fe1 mg, K113 mg, D0. B12 and iodine not declared, omitted contribution modeled as zero, not measured zero."
     }
   },
   "extraRecipes": {
     "fruit_breakfast": {
       "soy": 2.7,
       "cereal": 0.419,
-      "fruit": 3.3333333333333335
+      "fruit": 3.3333333333333335,
+      "flax": 0.23076923076923078
     },
     "kiwi_breakfast": {
       "soy": 2.7,
       "cereal": 0.419,
-      "kiwi": 1.38
+      "kiwi": 1.38,
+      "flax": 0.23076923076923078
     },
     "outside_drink": {
       "soy": 2.7

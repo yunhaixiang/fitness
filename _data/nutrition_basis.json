@@ -533,5 +533,23 @@
     "epaDha": 0.9,
     "source": "https://webbernaturals.com/products/triple-strength-omega-3-900-mg-no-fishy-aftertaste",
     "basis": "Per softgel: fish oil 1425 mg, EPA 600 mg and DHA 300 mg from manufacturer. Calories estimated as 1.425 g oil x 9 kcal/g, rounded to 13. Capsule excipients, saturated fat and cholesterol are not quantified by this label and are not added to totals; omitted does not mean measured zero."
+  },
+  "breakfastAddition": {
+    "name": "Ground flaxseed meal",
+    "dailyGrams": 3,
+    "referenceGrams": 13,
+    "kcal": 70,
+    "protein": 2,
+    "carbs": 4,
+    "fat": 5,
+    "saturatedFat": 0,
+    "fibre": 3,
+    "sugar": 0,
+    "sodium": 0,
+    "cholesterol": 0,
+    "epaDha": 0,
+    "ala": 1.7,
+    "source": "https://www.bobsredmill.com/product/flaxseed-meal",
+    "basis": "Manufacturer label per 13 g; ALA 1.7 g per two tablespoons. Label zeros include rounding. Daily amount 3 g. Food-only ALA baseline remains a composition estimate of 1.1–1.3 g/day."
   }
 }

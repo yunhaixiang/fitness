@@ -8,11 +8,12 @@ def recalculate(root):
   for i,field in enumerate(fields):
    value=sum(source['arr'][food][i]*amount for food,amount in recipe.items())
    meals[key][field]=str(round(value)) if field in ['kcal','sodium','cholesterol'] else f'{value:.2f}' if field=='epaDha' else f'{value:.1f}'
- # Reset breakfast from its food-only baseline before adding the daily supplement.
+ # Reset breakfast from its baseline before adding supplements and flaxseed.
  for key,base in source.get('breakfastBase',{}).items():
   supplement=source['breakfastSupplement']
   for field in fields:
-   value=base.get(field,0)+supplement.get(field,0)*supplement['dailySoftgels']
+   addition=source.get('breakfastAddition',{})
+   value=base.get(field,0)+supplement.get(field,0)*supplement['dailySoftgels']+addition.get(field,0)*addition.get('dailyGrams',0)/addition.get('referenceGrams',1)
    meals[key][field]=str(round(value)) if field in ['kcal','sodium','cholesterol'] else f'{value:.2f}' if field=='epaDha' else f'{value:.1f}'
  micro=json.loads((root/'_data/micronutrient_basis.json').read_text())
  micro_recipes=dict(zip(source['mealKeys'],source['recipes'])) | micro['extraRecipes']
@@ -33,6 +34,9 @@ def recalculate(root):
  for label,field,unit,decimals in [('钙','calcium','mg',0),('铁','iron','mg',1),('钾','potassium','mg',0),('维生素D','vitaminD','µg',1),('维生素B12','vitaminB12','µg',1),('碘','iodine','µg',0)]:
   values[label]=f'{daily[field]:,.{decimals}f} {unit}'
  page=page.replace(' data-en="Pending Verification"','')
+ addition=source.get('breakfastAddition',{})
+ ala=addition.get('ala',0)*addition.get('dailyGrams',0)/addition.get('referenceGrams',1)
+ values['Omega-3：ALA']=f'{1.1+ala:.1f}–{1.3+ala:.1f} g'
  for label,value in values.items():page=re.sub(r'(<td>'+re.escape(label)+r'</td>\s*<td[^>]*>).*?(</td>)',lambda m:m[1]+value+m[2],page,flags=re.S)
  page=re.sub(r'(<td>饱和脂肪</td>\s*<td[^>]*>.*?</td>\s*<td>)≤[\d.]+ g',lambda m:m[1]+f'≤{daily["kcal"]*.06/9:.1f} g',page,flags=re.S)
  page=re.sub(r'(data-energy="dailyDeficit">)[\d,]+',lambda m:m[1]+str(round(deficit/7)),page)

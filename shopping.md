@@ -189,6 +189,12 @@ visual: true
 <td style="text-align: right;">按需补</td>
 <td style="text-align: right;"><a href="https://www.walmart.ca/fr/ip/leanfit-sport-creatine-monohydrate-en-poudre-non-aromatis-300-g-5-g-de-cratine-par-portion-certification-informed-choice-cratine-micronise-et-de-quali/6000208594600">$32.97</a></td>
 </tr>
+<tr data-price-id="55" data-purchase-group="restock">
+<td data-en="Ground Flaxseed">磨碎亚麻籽</td>
+<td><a href="https://www.walmart.ca/en/ip/BRM-FLAXSEED-MEAL/6000198391170">Bob’s Red Mill Flaxseed Meal</a><br><span data-en="453 g / Bag">453 g / 袋</span></td>
+<td data-en="3 g with Breakfast Daily · 21 g / Week · Restock as Needed">每天早餐3 g；每周21 g；按需补</td>
+<td><a href="https://www.walmart.ca/en/ip/BRM-FLAXSEED-MEAL/6000198391170" data-en="Check Walmart Availability and Price">查看沃尔玛库存与价格</a></td>
+</tr>
 <tr data-price-id="54" data-purchase-group="restock">
 <td data-en="Omega-3 Fish Oil">Omega-3 鱼油</td>
 <td><a href="https://www.amazon.ca/dp/B00L3WS0Y2">Webber Naturals Triple Strength Omega-3 900 mg（Amazon）</a><br><span data-en="120 Softgels / Bottle · EPA 600 mg + DHA 300 mg per Softgel">120粒 / 瓶；每粒 EPA 600 mg，DHA 300 mg</span></td>
