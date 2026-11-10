@@ -59,8 +59,8 @@ meal_activities_script: /assets/meal-plans/plan-2/meal-activities.js
 <h2 id="air-fryer" data-en="Air Fryer">空气炸锅</h2>
 <ol>
 <li class="cooking-task-source">
-<ol class="cooking-source-zh" lang="zh"><li>🐟 三文鱼2块（320 g）擦干。</li><li>拌🫒 油¼茶匙、🧂 盐1/16茶匙、黑胡椒¼茶匙、🌶️ 红椒粉½茶匙。</li><li>前半周备料时，后半周三文鱼冷冻。</li></ol>
-<ol class="cooking-source-en" lang="en" hidden><li>Pat dry 2 🐟 salmon portions (320 g).</li><li>Season with ¼ tsp 🫒 oil, 1/16 tsp 🧂 salt, ¼ tsp black pepper and ½ tsp 🌶️ paprika.</li><li>Freeze the second-half salmon during the first cooking session.</li></ol>
+<ol class="cooking-source-zh" lang="zh"><li>🐟 三文鱼4块（640 g）擦干。</li><li>拌🫒 油½茶匙、🧂 盐⅛茶匙、黑胡椒½茶匙、🌶️ 红椒粉1茶匙。</li><li>前半周备料时，后半周三文鱼冷冻。</li></ol>
+<ol class="cooking-source-en" lang="en" hidden><li>Pat dry 4 🐟 salmon portions (640 g).</li><li>Season with ½ tsp 🫒 oil, ⅛ tsp 🧂 salt, ½ tsp black pepper and 1 tsp 🌶️ paprika.</li><li>Freeze the second-half salmon during the first cooking session.</li></ol>
 </li>
 <li class="cooking-task-source">
 <ol class="cooking-source-zh" lang="zh"><li>空气炸锅设为400°F，启动预热。</li></ol>
@@ -71,12 +71,8 @@ meal_activities_script: /assets/meal-plans/plan-2/meal-activities.js
 <ol class="cooking-source-en" lang="en" hidden><li>After about 4 minutes, confirm the air fryer has reached 400°F.</li></ol>
 </li>
 <li class="cooking-task-source">
-<ol class="cooking-source-zh" lang="zh"><li>🐟 400°F烤8分钟至熟透；第4、7盘各1块。</li></ol>
-<ol class="cooking-source-en" lang="en" hidden><li>Air-fry 🐟 salmon at 400°F for 8 minutes until cooked through; place 1 portion each in meals 4 and 7.</li></ol>
-</li>
-<li class="cooking-task-source">
-<ol class="cooking-source-zh" lang="zh"><li>取冷冻🐟 裹粉黑线鳕2片，不解冻、不加油。</li><li>400°F单层烤18–20分钟至熟透；第3、6盘各1片。</li></ol>
-<ol class="cooking-source-en" lang="en" hidden><li>Use 2 frozen 🐟 breaded haddock fillets; do not thaw or add oil.</li><li>Air-fry in a single layer at 400°F for 18–20 minutes until cooked through; place 1 fillet each in meals 3 and 6.</li></ol>
+<ol class="cooking-source-zh" lang="zh"><li>🐟 400°F烤8分钟起检查至熟透；第3、4、6、7盘各1块。</li></ol>
+<ol class="cooking-source-en" lang="en" hidden><li>Air-fry 🐟 salmon at 400°F, checking from 8 minutes until cooked through; place 1 portion each in meals 3, 4, 6 and 7.</li></ol>
 </li>
 </ol>
 <h2 id="pot-one" data-en="Pot 1">煮锅一</h2>

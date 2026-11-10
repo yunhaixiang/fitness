@@ -11,5 +11,8 @@
     "pasta",
     "potato"
   ],
-  "aggregation": "Daily macros, reported minerals and energy are recomputed from the restored per-meal estimates to avoid historical rounding drift. Sodium adds 12 Fresca cans at 35 mg per can. Other historical micronutrient estimates are retained. The expenditure baseline is shared with Plan 1."
+  "aggregation": "Daily macros, reported minerals and energy are recomputed from the restored per-meal estimates to avoid historical rounding drift. Sodium adds 12 Fresca cans at 35 mg per can. Other historical micronutrient estimates are retained. The expenditure baseline is shared with Plan 1.",
+  "corrections": [
+    "2026-11-10: User confirmed the original pasta protein is coho salmon, not haddock. Restore four 160 g salmon portions per week and their original seasonings by reversing the isolated substitution in commit 79283e9. Preserve subsequent unrelated meal edits. Weekly salmon: eight portions, four 320 g packs. Eggs: twelve consumed; two 18-count cartons per three weeks."
+  ]
 }

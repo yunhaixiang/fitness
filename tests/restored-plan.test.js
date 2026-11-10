@@ -53,10 +53,25 @@ test('restored shopping subtotal matches its own groceries, and current menu is 
  const total=+text.split('每周合计')[1].match(/\$([\d.]+)/)[1];
  assert.ok(Math.abs(sum-total)<.01);
  assert.doesNotMatch(text,/金枪鱼|水饺|扁米粉|牛肉丸/);
- assert.match(text,/2盒（4块）\/ 周/);
+ assert.match(text,/4盒（8块）\/ 周/);
  assert.match(text,/18个 \/ 盒/);
  assert.match(text, /data-price-id="5" data-weekly-cost="4.65" data-purchase-group="restock"/);
  const eggRow = text.match(/<tr[^>]*data-price-id="5"[\s\S]*?<\/tr>/)[0];
  assert.match(eggRow, /2 Cartons \/ 3 Weeks · 12 Eggs \/ Week/);
  assert.match(read('plans/plan-2/cooking.md'), /鸡蛋6个/);
+});
+
+test('Plan 2 uses eight salmon portions, no haddock, and twelve eggs weekly',()=>{
+ const schedule=read('_includes/meal-plans/plan-2/diet-schedule.html');
+ assert.equal((schedule.match(/三文鱼1块/g)||[]).length,8);
+ assert.equal((schedule.match(/水煮蛋2个/g)||[]).length*2,12);
+ const shopping=read('plans/plan-2/shopping.md');
+ const cooking=read('plans/plan-2/cooking.md');
+ for(const text of [schedule,shopping,cooking,read('_includes/meal-plans/plan-2/nutrition-meal-summary.html')])assert.doesNotMatch(text,/haddock|黑线鳕/i);
+ assert.match(shopping,/4盒（8块）\/ 周/);
+ assert.match(cooking,/三文鱼4块（640 g）/);
+ assert.match(cooking,/第3、4、6、7盘各1块/);
+ assert.ok(!definition.nodes.some(n=>n.id==='haddock'));
+ assert.equal(+data.meals.pasta.kcal,718);
+ assert.equal(+data.meals.pasta.protein,65.5);
 });

@@ -328,23 +328,6 @@
       "minutes": 8
     },
     {
-      "id": "haddock",
-      "label": [
-        "裹粉黑线鳕",
-        "Breaded Haddock"
-      ],
-      "note": [
-        "",
-        ""
-      ],
-      "group": "air",
-      "before": [
-        "air-heat"
-      ],
-      "link": "#cook-haddock",
-      "minutes": 20
-    },
-    {
       "id": "spinach",
       "label": [
         "菠菜",
@@ -458,7 +441,6 @@
         "ribs",
         "peel-eggs",
         "salmon",
-        "haddock",
         "spinach",
         "ground",
         "mushroom",
@@ -479,7 +461,9 @@
         ""
       ],
       "group": "finish",
-      "before": ["refrigerate"],
+      "before": [
+        "refrigerate"
+      ],
       "link": "#cook-clean",
       "minutes": 7
     }
@@ -514,8 +498,7 @@
         "prep-salmon",
         "air-heat-start",
         "air-heat",
-        "salmon",
-        "haddock"
+        "salmon"
       ]
     ],
     [
