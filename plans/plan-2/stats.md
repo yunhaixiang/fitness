@@ -27,7 +27,6 @@ visual: true
     </div>
   </div>
 </figure>
-<p data-walking-summary></p>
 
 
 

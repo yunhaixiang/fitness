@@ -26,7 +26,7 @@ meal_activities_script: /assets/meal-plans/plan-2/meal-activities.js
     <span>当前体脂率</span><strong><span data-body-value="bf">{{ current_body.bf | default: latest_bf | default: '—' }}</span> <small>%</small></strong>
   </a>
   <a class="overview-metric" href="{{ '/stats/' | relative_url }}">
-    <span>日均赤字</span><strong data-energy="dailyDeficit">— <small>kcal／天</small></strong><small data-walking-summary></small>
+    <span>日均赤字</span><strong data-energy="dailyDeficit">— <small>kcal／天</small></strong>
   </a>
 </div>
 <script type="application/json" id="cardio-energy-baseline">{{ site.data.meal_plan_content['plan-2'].metrics | jsonify }}</script>

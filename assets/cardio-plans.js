@@ -48,7 +48,6 @@
       walkingRow.cells[1].textContent = format(walking.weeklyKcal,2);
       walkingRow.cells[2].textContent = format(walking.dailyKcal,2);
     }
-    for (const node of document.querySelectorAll('[data-walking-summary]')) node.textContent = walking.days ? tr(`按近7天已同步 ${walking.days}/7 天的日均步数推算`, `Projected from ${walking.days}/7 Synced Days in the Past Week`) : tr('等待同步完整日步数', 'Awaiting Full-Day Step Data');
     for (const node of document.querySelectorAll('[data-energy]')) {
       const unit = node.querySelector('small');
       node.replaceChildren(document.createTextNode(format(budget[node.dataset.energy], node.dataset.energy === 'fatEquivalent' ? 2 : 0) + ' '));
