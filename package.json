@@ -4,7 +4,11 @@
   "scripts": {
     "test": "node --test tests/*.test.js tests/*.test.mjs",
     "build": "bundle exec jekyll build --destination _site/fitness",
-    "deploy": "wrangler deploy --config cloudflare/wrangler.assets.jsonc && wrangler deploy --config cloudflare/wrangler.viewer.jsonc"
+    "deploy": "npm run deploy:assets && npm run deploy:viewer && npm run deploy:ingest",
+    "build:ci": "gem install bundler -v 4.0.10 --no-document && bundle _4.0.10_ install && npm test && npm run build",
+    "deploy:assets": "wrangler deploy --config cloudflare/wrangler.assets.jsonc",
+    "deploy:viewer": "wrangler deploy --config cloudflare/wrangler.viewer.jsonc",
+    "deploy:ingest": "wrangler deploy --config cloudflare/wrangler.ingest.jsonc"
   },
   "devDependencies": {
     "wrangler": "4.158.0"

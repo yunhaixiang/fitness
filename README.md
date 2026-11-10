@@ -21,7 +21,17 @@
 
 首次安装依赖：`bundle install`、`npm ci`。发布：`npm test`、`npm run build`、`npm run deploy`（本机需先 `npx wrangler login`）。`_site/fitness` 是自动生成的页面，不提交到 Git。
 
-自动发布需要在 Cloudflare 的 `fitness-private → Settings → Builds → Connect` 连接此仓库，生产分支 `main`，根目录 `/`，Build command 使用 `bundle install && npm test && npm run build`，Deploy command 使用 `npm run deploy`。关闭其他分支的预览部署。首次构建成功后，后续 push 自动更新私人网站。连接完成前，由维护者推送代码并在本机发布；仅 push 不会更新 Cloudflare。
+自动发布使用 Cloudflare Workers Builds，三个 Worker 分别连接同一个 GitHub 仓库 `yunhaixiang/fitness` 的 `main` 分支，根目录均为 `/`：
+
+| Worker | Build command | Deploy command |
+| --- | --- | --- |
+| `fitness-assets` | `npm run build:ci` | `npm run deploy:assets` |
+| `fitness-private` | `npm test` | `npm run deploy:viewer` |
+| `fitness-ingest` | `npm test` | `npm run deploy:ingest` |
+
+在各 Worker 的 Settings → Builds → Connect 设置；关闭其他分支的自动构建与预览部署。必须使用对应的单服务发布命令，不能在某个 Worker 的 Builds 中使用本地全量 `npm run deploy`。每次 push 后检查三个构建均成功；失败时保留上次成功部署，可在 Builds 中重试。Node 和 Ruby 版本由仓库文件固定，Ruby 依赖由 `Gemfile.lock` 固定。构建额度沿用 Free，不启用付费升级。
+
+部署只更新代码和静态页面，不执行 D1 数据库迁移、清空、导入，也不改 Access 白名单或同步凭据。Hume 记录独立保留在 D1。初次连接完成并验证成功前，仅 push 仍不会自动更新 Cloudflare。
 
 确认私人入口工作后，在 GitHub 仓库 Settings → Pages，将发布分支设为 None 并保存。此操作只取消公开网站，不会删除仓库及历史内容。
 
@@ -31,8 +41,7 @@
 
 网站只展示计划和记录。饮食计划可切换浏览，默认计划1；选择不修改仓库或身体记录。有氧计划由仓库配置决定。已移除记录新增、删除、导入入口。力量训练每组勾选、购物勾选，以及做饭勾选和下一步推荐保留，进度保存在当前浏览器，刷新后恢复；它们不修改仓库计划或健康记录。力量勾选每日清空，购物勾选按周保存，也可以手动清空本周勾选。保留语言、主题、日期、在家／健身馆的查看切换、食材搜索、趋势指标选择和 JSON 备份导出。记录页仅保留身体组成与放纵餐两个标签，不显示常规饮食、力量、有氧日志和 CSV 导出。
 
-以后通过对话修改本仓库并发布。`_data/tracking_records.json` 保存确认日期后的记录，按 `body`（体重 `weight`、体脂率 `bf`）和 `cheatMeals`（餐点 `meal`、份量 `portion`、热量 `kcal`、备注 `note`）分类，每条用稳定 `id` 和 `YYYY-MM-DD` 格式 `date`。没有确认日期的数据不编造日期补入；可在 `currentBody` 中存放当前体重与体脂率，作为总览和记录页优先显示的当前值；每次确认新测量时同步更新它，不为无日期的读数伪造趋势点。旧浏览器历史不会覆盖此当前值。总览日均赤字与营养页共用计划预算。页面展示最近八周，导出包含全部记录。旧浏览器记录仍只在原浏览器读取和导出，不会被删除或上传；同 ID 的仓库记录优先。
-
+以后通过对话修改本仓库并发布。`_data/tracking_records.json` 中 `body`、`steps` 必须为空数组，`currentBody` 必须为空对象；公开版本的身体指标显示横线。放纵餐可按用户授权记录在 `cheatMeals` 中。私人网站通过邮箱验证后读取 D1，在返回页面时填入体重、体脂、步数与基于步数的消耗。同步健康数据不触发 Git 提交或网站部署。浏览器旧身体记录不会作为公开页面的回退数据。
 只读并不等于私密：网站及提交到公开仓库的记录仍可被其他人看到。
 
 ## 本地预览与验证
