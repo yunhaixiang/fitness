@@ -34,7 +34,11 @@ visual: true
 
 {% include nutrition-meal-summary.html %}
 
-## 消耗构成（估算）
+<h2 id="calorie-intake" data-en="Calorie Intake Breakdown">摄入构成</h2>
+
+<div data-intake-chart></div>
+
+<h2 id="calories-burned" data-en="Calories Burned Breakdown">消耗构成</h2>
 
 <div class="table-wrap">
 <table class="plan-table">
@@ -98,12 +102,12 @@ visual: true
 <td style="text-align: right;">1,865 kcal</td>
 <td>1,800–2,000 kcal</td>
 </tr>
-<tr>
+<tr data-macro="protein">
 <td>蛋白质</td>
 <td style="text-align: right;">130.3 g</td>
 <td>120–140 g</td>
 </tr>
-<tr>
+<tr data-macro="fat">
 <td>总脂肪</td>
 <td style="text-align: right;">67.8 g</td>
 <td>45–65 g</td>
@@ -118,7 +122,7 @@ visual: true
 <td style="text-align: right;">7.7%</td>
 <td>≤6%</td>
 </tr>
-<tr>
+<tr data-macro="carbs">
 <td>碳水化合物</td>
 <td style="text-align: right;">198.9 g</td>
 <td>180–240 g</td>

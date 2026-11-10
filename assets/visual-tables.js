@@ -373,6 +373,56 @@
     chart.append(plot, legend);
     mount(tables[0], chart);
 
+    const intakeHost = document.querySelector('[data-intake-chart]');
+    if (intakeHost) {
+      // Normalize the 4/4/9 macro energy estimates, rather than divide by label
+      // calories: fibre and label rounding can make those totals differ.
+      const macros = [
+        { key: 'protein', name: tr('蛋白质', 'Protein'), factor: 4 },
+        { key: 'carbs', name: tr('碳水', 'Carbohydrates'), factor: 4 },
+        { key: 'fat', name: tr('脂肪', 'Fat'), factor: 9 }
+      ].map(macro => {
+        const row = tables[1].querySelector(`[data-macro="${macro.key}"]`);
+        const grams = number(row ? val(row, 1) : '0');
+        return { ...macro, grams, kcal: grams * macro.factor };
+      });
+      const macroEnergy = macros.reduce((sum, macro) => sum + macro.kcal, 0);
+      const intake = el('figure', 'visual-expenditure visual-intake');
+      const intakePlot = el('div', 'visual-expenditure-plot');
+      const intakePie = el('div', 'visual-expenditure-pie');
+      intakePie.setAttribute('role', 'img');
+      const intakeLegend = el('ul', 'visual-expenditure-legend');
+      const intakeStops = [];
+      const intakeDescriptions = [];
+      let start = 0;
+      for (const [index, macro] of macros.entries()) {
+        const share = macroEnergy ? macro.kcal / macroEnergy * 100 : 0;
+        const end = index === macros.length - 1 ? 100 : start + share;
+        const color = colors[index];
+        intakeStops.push(`${color} ${start.toFixed(3)}% ${end.toFixed(3)}%`);
+        start = end;
+        const percent = `${share.toFixed(1)}%`;
+        intakeDescriptions.push(`${macro.name}: ${macro.grams} g, ${percent}`);
+        const item = el('li', 'visual-expenditure-item');
+        const nameLine = el('div', 'visual-expenditure-name');
+        const swatch = el('span', 'visual-expenditure-swatch');
+        swatch.style.backgroundColor = color;
+        swatch.setAttribute('aria-hidden', 'true');
+        nameLine.append(swatch, el('span', '', macro.name));
+        const values = el('div', 'visual-expenditure-values');
+        values.append(el('span', '', `${macro.grams.toFixed(1)} g / ${tr('天', 'day')}`), el('span', '', `${macro.kcal.toFixed(1)} kcal / ${tr('天', 'day')}`));
+        item.append(nameLine, el('strong', 'visual-expenditure-percent', percent), values);
+        intakeLegend.append(item);
+      }
+      intakePie.style.background = `conic-gradient(${intakeStops.join(', ')})`;
+      intakePie.setAttribute('aria-label', intakeDescriptions.join('; '));
+      const intakeLabel = el('div', 'visual-expenditure-total');
+      intakeLabel.append(el('strong', '', tr('三大营养供能占比', 'Share of Macro Calories')), el('small', '', tr('蛋白质、碳水 4 kcal/g · 脂肪 9 kcal/g', 'Protein & Carbs 4 kcal/g · Fat 9 kcal/g')));
+      intakePlot.append(intakePie, intakeLabel);
+      intake.append(intakePlot, intakeLegend);
+      intakeHost.replaceWith(intake);
+    }
+
     const nutrients = el('div', 'visual-card-grid visual-nutrient-grid');
     for (const row of tables[1].tBodies[0].rows) {
       const card = el('article', 'visual-card visual-nutrient-card');

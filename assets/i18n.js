@@ -279,7 +279,7 @@
     '总脂肪': 'Total fat', '添加糖': 'Added sugar', '总糖': 'Total sugars',
     '无单独上限；重点控制添加糖': 'No separate limit; focus on added sugar',
     '尽量少；优先控制饱和脂肪': 'Keep low; prioritize saturated fat',
-    '营养指标': 'Nutrient', '热量估计': 'Calorie estimate', '消耗构成（估算）': 'Where Your Calories Are Burned',
+    '营养指标': 'Nutrient', '热量估计': 'Calorie estimate', '消耗构成': 'Calories Burned Breakdown', '摄入构成': 'Calorie Intake Breakdown',
     '每周 kcal': 'Weekly kcal', '日均 kcal': 'Daily kcal',
     '周日—周二早餐（混合水果盘）': 'Sunday–Tuesday breakfast (mixed fruit)',
     '周三—周六早餐（奇异果2个）': 'Wednesday–Saturday breakfast (2 kiwis)',
