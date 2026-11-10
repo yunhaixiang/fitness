@@ -566,6 +566,21 @@
         "assumptions"
       ],
       "basis": "Per 13 g manufacturer serving: Ca24 mg, Fe1 mg, K113 mg, D0. B12 and iodine not declared, omitted contribution modeled as zero, not measured zero."
+    },
+    "lightMayo": {
+      "values": {
+        "calcium": 0.3,
+        "iron": 0.007,
+        "potassium": 1.55,
+        "vitaminD": 0.0,
+        "vitaminB12": 0.0,
+        "iodine": 0.266667
+      },
+      "sources": [
+        "cnf2026",
+        "iodineUSDA"
+      ],
+      "basis": "CNF 5332: Salad dressing, mayonnaise, reduced fat; 5 g per recipe unit. Generic composition proxy, not the selected product label. Iodine from USDA generic-food proxy; see iodine assumptions."
     }
   },
   "extraRecipes": {

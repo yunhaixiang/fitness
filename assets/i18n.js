@@ -302,6 +302,7 @@
     '2桶 / 周（1桶用于早餐，1桶作为餐外饮品）': '2 cartons / week (one for breakfast and one for between-meal drinks)',
     '1瓶 / 周': '1 bottle / week',
     'Chipotle蛋黄酱': 'chipotle mayonnaise',
+    'Light ½ Fat蛋黄酱': 'Light ½ Fat Mayonnaise',
     '黑胡椒': 'black pepper', '蒜粉': 'garlic powder', '洋葱粉': 'onion powder',
     '红椒粉': 'paprika', '干牛至叶': 'dried oregano', '意式混合香草': 'Italian herb blend',
     '橄榄油': 'olive oil', '减盐酱油': 'reduced-sodium soy sauce', '酱油': 'soy sauce',

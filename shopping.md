@@ -121,6 +121,12 @@ visual: true
 <td style="text-align: right;">按需补</td>
 <td style="text-align: right;"><a href="https://www.walmart.ca/en/ip/Hellmann-s-Chipotle-Mayonnaise-Mild-Dressing-340ml/5NDTYWNJRQ1Y">$5.47</a></td>
 </tr>
+<tr data-price-id="48" data-purchase-group="restock">
+<td data-en="Light ½ Fat Mayonnaise">Light ½ Fat蛋黄酱</td>
+<td><a href="https://www.walmart.ca/en/ip/Hellmann-s-Light-Half-Fat-Mayonnaise-Type-Dressing-with-Canadian-Cage-Free-Eggs-750-mL-squeeze-bottle/206910">Hellmann’s Light ½ Fat Mayonnaise</a><br>750 mL / 瓶</td>
+<td style="text-align: right;">按需补</td>
+<td style="text-align: right;"><a href="https://www.walmart.ca/en/ip/Hellmann-s-Light-Half-Fat-Mayonnaise-Type-Dressing-with-Canadian-Cage-Free-Eggs-750-mL-squeeze-bottle/206910">$6.47</a></td>
+</tr>
 <tr data-weekly-cost="0.48" data-price-id="19" data-purchase-group="restock">
 <td>白米</td>
 <td><a href="https://www.walmart.ca/en/ip/Great-Value-Long-Grain-White-Rice/4UD9P76BEQB4">Great Value Long Grain White Rice</a><br>900 g / 袋</td>

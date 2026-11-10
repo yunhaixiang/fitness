@@ -540,6 +540,15 @@
       "checked_on": "2026-11-08",
       "purchase_frequency_zh": "按需补",
       "purchase_frequency_en": "As Needed"
+    },
+    {
+      "item": "Light ½ Fat蛋黄酱",
+      "price_cad": "6.47",
+      "basis": "package",
+      "source_url": "https://www.walmart.ca/en/c/brand/hellmann-s",
+      "source_type": "walmart_public",
+      "product_url": "https://www.walmart.ca/en/ip/Hellmann-s-Light-Half-Fat-Mayonnaise-Type-Dressing-with-Canadian-Cage-Free-Eggs-750-mL-squeeze-bottle/206910",
+      "checked_on": "2026-11-09"
     }
   ],
   "updated_on": "2026-11-08"
