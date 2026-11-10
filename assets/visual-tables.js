@@ -333,7 +333,8 @@
     const energyRows = [...tables[0].tBodies[0].rows];
     const breakdown = energyRows.slice(0, -1);
     const totalRow = energyRows.at(-1);
-    const total = breakdown.reduce((sum, row) => sum + number(val(row, 1)), 0);
+    const incomplete = breakdown.some(row => val(row,1).includes('—'));
+    const total = incomplete ? 0 : breakdown.reduce((sum, row) => sum + number(val(row, 1)), 0);
     const colors = ['var(--chart-1)', 'var(--chart-2)', 'var(--chart-3)', 'var(--chart-4)', 'var(--chart-5)'];
     const chart = el('figure', 'visual-expenditure');
     const plot = el('div', 'visual-expenditure-plot');
@@ -350,7 +351,7 @@
       const color = colors[index % colors.length];
       stops.push(`${color} ${position.toFixed(3)}% ${end.toFixed(3)}%`);
       position = end;
-      const percentage = `${share.toFixed(1)}%`;
+      const percentage = incomplete ? '—' : `${share.toFixed(1)}%`;
       descriptions.push(`${name} ${percentage}`);
       const item = el('li', 'visual-expenditure-item');
       const nameLine = el('div', 'visual-expenditure-name');
@@ -364,7 +365,7 @@
       item.append(values);
       legend.append(item);
     }
-    pie.style.background = `conic-gradient(${stops.join(', ')})`;
+    pie.style.background = incomplete ? 'var(--surface)' : `conic-gradient(${stops.join(', ')})`;
     pie.setAttribute('aria-label', descriptions.join(window.fitnessI18n?.language === 'en' ? '; ' : '；'));
     const totalLabel = el('div', 'visual-expenditure-total');
     totalLabel.append(el('span', '', tr('合计日均消耗', 'Total Daily Calories Burned')), el('strong', '', `${val(totalRow, 2)} kcal`), el('small', '', `${tr('每周', 'Weekly')} ${val(totalRow, 1)} kcal`));

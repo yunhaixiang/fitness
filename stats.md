@@ -14,19 +14,20 @@ visual: true
     <div class="nutrition-ring" style="--intake-share:76.2%" aria-label="每日摄入与消耗">
       <div class="nutrition-ring-center">
         <span>日均赤字</span>
-        <strong data-energy="dailyDeficit">566 <small>kcal／天</small></strong>
+        <strong data-energy="dailyDeficit">— <small>kcal／天</small></strong>
       </div>
     </div>
     <div class="nutrition-overview-key">
       <p class="nutrition-overview-eyebrow">能量概览 · 不含放纵餐</p>
       <div class="nutrition-key-row nutrition-key-intake"><span>日均摄入</span><strong>1,810 <small>kcal／天</small></strong></div>
-      <div class="nutrition-key-row nutrition-key-burn"><span>日均消耗</span><strong data-energy="dailyBurn">2,377 <small>kcal／天</small></strong></div>
-      <div class="nutrition-key-row nutrition-key-deficit"><span>日均赤字</span><strong data-energy="dailyDeficit">566 <small>kcal／天</small></strong></div>
-      <div class="nutrition-key-row"><span>每周赤字</span><strong data-energy="weeklyDeficit">{{ site.data.plan_metrics.weekly_deficit_display }} <small>kcal</small></strong></div>
-      <div class="nutrition-key-row"><span>每周赤字等价脂肪</span><strong data-energy="fatEquivalent">0.51 <small>kg／周</small></strong></div>
+      <div class="nutrition-key-row nutrition-key-burn"><span>日均消耗</span><strong data-energy="dailyBurn">— <small>kcal／天</small></strong></div>
+      <div class="nutrition-key-row nutrition-key-deficit"><span>日均赤字</span><strong data-energy="dailyDeficit">— <small>kcal／天</small></strong></div>
+      <div class="nutrition-key-row"><span>每周赤字</span><strong data-energy="weeklyDeficit">— <small>kcal</small></strong></div>
+      <div class="nutrition-key-row"><span>每周赤字等价脂肪</span><strong data-energy="fatEquivalent">— <small>kg／周</small></strong></div>
     </div>
   </div>
 </figure>
+<p data-walking-summary></p>
 
 
 
@@ -66,10 +67,10 @@ visual: true
 <td style="text-align: right;">1,200.00</td>
 <td style="text-align: right;">171.43</td>
 </tr>
-<tr>
-<td>步行（估计每周12 km，净增加）</td>
-<td style="text-align: right;">474.00</td>
-<td style="text-align: right;">67.71</td>
+<tr data-energy-row="walking">
+<td>步行（按同步步数）</td>
+<td style="text-align: right;">—</td>
+<td style="text-align: right;">—</td>
 </tr>
 <tr data-energy-row="total">
 <td>合计</td>

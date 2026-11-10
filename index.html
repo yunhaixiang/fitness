@@ -24,7 +24,7 @@ hide_hero: true
     <span>当前体脂率</span><strong><span data-body-value="bf">{{ current_body.bf | default: latest_bf | default: '—' }}</span> <small>%</small></strong>
   </a>
   <a class="overview-metric" href="{{ '/stats/' | relative_url }}">
-    <span>日均赤字</span><strong data-energy="dailyDeficit">{{ site.data.plan_metrics.weekly_deficit_precise | divided_by: 7.0 | round }} <small>kcal／天</small></strong>
+    <span>日均赤字</span><strong data-energy="dailyDeficit">— <small>kcal／天</small></strong><small data-walking-summary></small>
   </a>
 </div>
 <script type="application/json" id="cardio-energy-baseline">{{ site.data.plan_metrics | jsonify }}</script>

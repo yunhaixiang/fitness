@@ -195,10 +195,10 @@
   const treats = document.querySelector('[data-diet-view="treats"]');
   if (treats) {
     const section = document.querySelector('.diet-cheat-section');
-    const weeklyDeficit = Number(section?.dataset.weeklyDeficit) || 3916;
+    const weeklyDeficit = window.fitnessEnergyBudget?.weeklyDeficit ?? NaN;
     const fmt = new Intl.NumberFormat(en ? 'en-CA' : 'zh-CN', { maximumFractionDigits: 0 });
     const nutrientFmt = new Intl.NumberFormat(en ? 'en-CA' : 'zh-CN', { maximumFractionDigits: 1 });
-    const range = (low, high, suffix = '') => `${fmt.format(low)}${high !== low ? `–${fmt.format(high)}` : ''}${suffix}`;
+    const range = (low, high, suffix = '') => !Number.isFinite(low) || !Number.isFinite(high) ? '—' : `${fmt.format(low)}${high !== low ? `–${fmt.format(high)}` : ''}${suffix}`;
     const grid = make('div', 'diet-treat-grid');
     for (const row of treats.tBodies[0].rows) {
       const card = make('article', 'diet-treat-card');
@@ -228,12 +228,12 @@
       const [low, high = low] = calories;
       const impact = make('div', 'diet-treat-impact');
       impact.append(make('span', '', label('占每周赤字', 'Share of weekly deficit')),
-        make('strong', '', range(Math.round(low / weeklyDeficit * 100), Math.round(high / weeklyDeficit * 100), '%')));
+        make('strong', '', weeklyDeficit > 0 ? range(Math.round(low / weeklyDeficit * 100), Math.round(high / weeklyDeficit * 100), '%') : '—'));
       card.append(impact);
       const track = make('div', 'diet-impact-track');
       track.setAttribute('aria-hidden', 'true');
       const fill = make('span', 'diet-impact-fill');
-      fill.style.width = `${Math.min(100, high / weeklyDeficit * 100)}%`;
+      fill.style.width = `${weeklyDeficit > 0 ? Math.min(100, high / weeklyDeficit * 100) : 0}%`;
       track.append(fill);
       card.append(track);
       const remaining = make('div', 'diet-treat-remaining');

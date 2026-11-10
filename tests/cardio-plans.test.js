@@ -14,8 +14,8 @@ test('repository controls cardio even with stale stored or explicit URL choices'
  assert.equal(resolve(catalog, 'removed').id, 'cardio-2');
 });
 test('200 and 300 kcal budgets update deficits without double counting', () => {
- const current = energy(baseline, catalog.plans[1], catalog.sessionsPerWeek);
- const other = energy(baseline, catalog.plans[0], catalog.sessionsPerWeek);
+ const current = energy(baseline, catalog.plans[1], catalog.sessionsPerWeek, {weeklyKcal:474});
+ const other = energy(baseline, catalog.plans[0], catalog.sessionsPerWeek, {weeklyKcal:474});
  assert.equal(current.weeklyCardio, 1200);
  assert.equal(other.weeklyCardio, 800);
  assert.equal(current.weeklyBurn, baseline.weekly_burn);
@@ -77,5 +77,16 @@ test('both sets of alternatives match their planning target and displayed durati
    const minutes=audit.segments.reduce((n,s)=>n+s.minutes,0);
    assert.equal(plan.options.find(o=>o.id===id).duration.en,`${minutes} min`);
   }
+ }
+});
+
+test('step energy replaces the old walking allowance in both meal plans', () => {
+ for (const intake of [1810.14286,1731]) {
+  const b={...baseline,intake_daily:intake,weekly_deficit_precise:baseline.weekly_burn-intake*7};
+  const result=energy(b,catalog.plans[1],4,{weeklyKcal:140});
+  assert.ok(Math.abs(result.weeklyBurn-(b.weekly_burn-474+140))<1e-8);
+  assert.ok(Math.abs(result.dailyDeficit-(result.weeklyBurn/7-intake))<1e-8);
+  assert.equal(energy(b,catalog.plans[1],4,{}).dailyDeficit,null);
+  assert.ok(Number.isFinite(energy(b,catalog.plans[1],4,{weeklyKcal:0}).dailyDeficit));
  }
 });
