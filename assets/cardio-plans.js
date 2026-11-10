@@ -1,4 +1,4 @@
-/* The repository chooses the cardio plan. Apply its energy budget consistently. */
+/* Browsing alternatives does not change the repository-selected energy budget. */
 (() => {
   'use strict';
   function resolve(catalog) {
@@ -70,36 +70,62 @@
 
   const root = document.getElementById('cardio-options');
   if (root) {
-    const summary = el('p', 'cardio-plan-summary', `${plan.name[lang]} · ${tr('每周', 'Weekly')} ${catalog.sessionsPerWeek} ${tr('次', 'Sessions')}`);
-    root.before(summary);
-    for (const option of plan.options) {
-      const card = el('article', 'cardio-option-card');
-      const head = el('div', 'cardio-option-head');
-      head.append(el('h3', '', option.name[lang]), el('span', '', option.duration[lang]));
-      card.append(head);
-      if (option.video) {
-        const link = el('a', 'cardio-video-link');
-        link.href = `https://www.youtube.com/watch?v=${option.video}`;
-        link.target = '_blank';
-        link.rel = 'noopener noreferrer';
-        const media = el('span', 'cardio-video-image');
-        const img = el('img');
-        img.src = `https://i.ytimg.com/vi/${option.video}/hqdefault.jpg`;
-        img.alt = '';
-        img.loading = 'lazy';
-        const play = el('span', 'cardio-video-play', '▶');
-        play.setAttribute('aria-hidden', 'true');
-        media.append(img, play);
-        link.append(media, el('span', 'cardio-video-label', tr('Juice & Toya 跟练视频 ↗', 'Juice & Toya Workout Video ↗')));
-        card.append(link);
-      }
-      if (option.description[lang]) card.append(el('p', '', option.description[lang]));
-      if (option.steps.length) {
-        const steps = el('ol');
-        option.steps.forEach((step) => steps.append(el('li', '', step[lang])));
-        card.append(steps);
-      }
-      root.append(card);
+    const switcher = el('section', 'meal-plan-switcher cardio-plan-switcher');
+    const control = el('div', 'meal-plan-control');
+    const label = el('label', '', tr('有氧计划', 'Cardio Plan'));
+    label.htmlFor = 'cardio-plan-select';
+    const choices = el('select');
+    choices.id = 'cardio-plan-select';
+    // The configured current plan always comes first; additional plans remain browsable.
+    const ordered = [plan, ...catalog.plans.filter(entry => entry.id !== plan.id)];
+    for (const entry of ordered) {
+      const option = el('option', '', entry.name[lang] + (entry.id === plan.id ? tr(' · 当前', ' · Current') : ''));
+      option.value = entry.id;
+      choices.append(option);
     }
+    choices.value = plan.id;
+    const summary = el('p', 'meal-plan-summary', `${tr('每周', 'Weekly')} ${catalog.sessionsPerWeek} ${tr('次', 'Sessions')}`);
+    control.append(label, choices);
+    switcher.append(control, summary);
+    const main = document.getElementById('main');
+    const heading = main?.querySelector(':scope > .page-heading');
+    if (heading) heading.after(switcher);
+    else root.before(switcher);
+    function show(viewedPlan) {
+      root.replaceChildren();
+      for (const option of viewedPlan.options) {
+        const card = el('article', 'cardio-option-card');
+        const head = el('div', 'cardio-option-head');
+        head.append(el('h3', '', option.name[lang]), el('span', '', option.duration[lang]));
+        card.append(head);
+        if (option.video) {
+          const link = el('a', 'cardio-video-link');
+          link.href = `https://www.youtube.com/watch?v=${option.video}`;
+          link.target = '_blank';
+          link.rel = 'noopener noreferrer';
+          const media = el('span', 'cardio-video-image');
+          const img = el('img');
+          img.src = `https://i.ytimg.com/vi/${option.video}/hqdefault.jpg`;
+          img.alt = '';
+          img.loading = 'lazy';
+          const play = el('span', 'cardio-video-play', '▶');
+          play.setAttribute('aria-hidden', 'true');
+          media.append(img, play);
+          link.append(media, el('span', 'cardio-video-label', tr('Juice & Toya 跟练视频 ↗', 'Juice & Toya Workout Video ↗')));
+          card.append(link);
+        }
+        if (option.description[lang]) card.append(el('p', '', option.description[lang]));
+        if (option.steps.length) {
+          const steps = el('ol');
+          option.steps.forEach((step) => steps.append(el('li', '', step[lang])));
+          card.append(steps);
+        }
+        root.append(card);
+      }
+    }
+    choices.addEventListener('change', () => {
+      show(catalog.plans.find(entry => entry.id === choices.value) || plan);
+    });
+    show(plan);
   }
 })();
