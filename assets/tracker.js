@@ -24,7 +24,7 @@
   const cutoff = () => { const d = new Date(); d.setHours(0, 0, 0, 0); d.setDate(d.getDate() - DAYS + 1); return dateString(d); };
   let saved = null;
   try { saved = localStorage.getItem(KEY); } catch (_) { /* storage disabled */ }
-  if (saved) { try { const parsed = JSON.parse(saved); legacyRecords = parsed; for (const name of names) if (Array.isArray(parsed[name])) records[name] = parsed[name]; } catch (_) { /* keep blank */ } }
+  if (saved) { try { const parsed = JSON.parse(saved); legacyRecords = {cheatMeals: Array.isArray(parsed.cheatMeals) ? parsed.cheatMeals : []}; records.cheatMeals = legacyRecords.cheatMeals; } catch (_) { /* keep blank */ } }
   try {
     const published = JSON.parse(document.getElementById('tracking-records')?.textContent || '{}');
     publishedCurrent = published.currentBody || {};
@@ -33,7 +33,7 @@
       const ids = new Set(canonical.map((row) => row.id).filter(Boolean));
       records[name] = [...canonical, ...records[name].filter((row) => !ids.has(row.id))];
     }
-  } catch (_) { /* Keep legacy history available if published data cannot be read. */ }
+  } catch (_) { /* Health records stay empty unless supplied by the private server. */ }
   const latest = (name) => [...records[name]].sort((a, b) => b.date.localeCompare(a.date))[0];
   const recent = (name) => records[name].filter((row) => row.date >= cutoff()).sort((a, b) => b.date.localeCompare(a.date));
   const metric = (label, value) => { const box = document.createElement('div'); box.className = 'metric-box'; const s = document.createElement('span'); s.textContent = label; const strong = document.createElement('strong'); strong.textContent = value || '—'; box.append(s, strong); return box; };

@@ -31,3 +31,17 @@ test('shared current measurements take precedence over stale browser history', (
   assert.deepEqual(resolve(current, [], []), current);
   assert.deepEqual(resolve({weight:76.5}, [], old), {weight:76.5,bf:21});
 });
+
+
+test('public pages leave health records blank even with old browser measurements', () => {
+  const fs = require('node:fs');
+  const vm = require('node:vm');
+  const published = require('../_data/tracking_records.json');
+  assert.deepEqual(published.body, []);
+  assert.deepEqual(published.steps, []);
+  assert.deepEqual(published.currentBody, {});
+  const nodes = ['weight','bf'].map(key=>({dataset:{bodyValue:key},textContent:''}));
+  const context = {window:{},localStorage:{getItem:()=>JSON.stringify({body:[{date:'2099-01-01',weight:90,bf:30}]})},document:{getElementById:()=>({textContent:JSON.stringify(published)}),querySelectorAll:()=>nodes}};
+  vm.runInNewContext(fs.readFileSync(require.resolve('../assets/body-metrics.js'),'utf8'),context);
+  assert.deepEqual(nodes.map(node=>node.textContent),['—','—']);
+});

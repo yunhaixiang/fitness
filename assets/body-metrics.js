@@ -13,10 +13,9 @@
     }));
   }
   if (typeof module !== 'undefined' && module.exports) { module.exports = { resolve }; return; }
-  let published = {}, legacy = {};
+  let published = {};
   try { published = JSON.parse(document.getElementById('tracking-records')?.textContent || '{}'); } catch (_) {}
-  try { legacy = JSON.parse(localStorage.getItem('yunhai-fitness-records-v1') || '{}') || {}; } catch (_) {}
-  const current = resolve(published.currentBody, published.body, legacy.body);
+  const current = resolve(published.currentBody, published.body);
   window.fitnessBodyMetrics = current;
   for (const node of document.querySelectorAll('[data-body-value]')) node.textContent = current[node.dataset.bodyValue] ?? '—';
 })();
