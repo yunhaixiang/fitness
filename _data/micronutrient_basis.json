@@ -30,7 +30,8 @@
       "url": "https://www.unico.ca/products/unico-tomato-paste",
       "description": "Per 30 mL: calcium 10 mg, iron 0.4 mg, potassium 300 mg."
     },
-    "flaxLabel": "https://www.bobsredmill.com/product/flaxseed-meal"
+    "flaxLabel": "https://www.bobsredmill.com/product/flaxseed-meal",
+    "refriedBeansLabel": "https://www.oldelpaso.ca/products/rice-beans/old-el-paso-refried-beans"
   },
   "notes": [
     "Micronutrient planning estimates for the current plan, not a measurement or product-label audit. Units match nutrition_basis.json; breakfast inputs are per 100 g. Numeric coverage is explicit; a missing field causes recalculation to fail.",
@@ -402,21 +403,6 @@
       ],
       "basis": "CNF 3131: Fish, tuna, light, canned in water, drained, unsalted; 55 g per recipe unit. Generic composition proxy, not the selected product label. Ca/Fe/K/D overridden by Clover Leaf label per 55 g drained half-can. Iodine from USDA generic-food proxy; see iodine assumptions."
     },
-    "chickpea": {
-      "values": {
-        "calcium": 45.0,
-        "iron": 1.07,
-        "potassium": 126.0,
-        "vitaminD": 0.0,
-        "vitaminB12": 0.0,
-        "iodine": 0.5
-      },
-      "sources": [
-        "cnf2026",
-        "assumptions"
-      ],
-      "basis": "CNF 7060: Chickpeas (garbanzo beans, bengal gram), canned, drained solids; 100 g per recipe unit. Generic composition proxy, not the selected product label. Iodine is an explicit trace-composition allowance, not a laboratory result."
-    },
     "kiwi": {
       "values": {
         "calcium": 34.0,
@@ -581,6 +567,21 @@
         "iodineUSDA"
       ],
       "basis": "CNF 5332: Salad dressing, mayonnaise, reduced fat; 5 g per recipe unit. Generic composition proxy, not the selected product label. Iodine from USDA generic-food proxy; see iodine assumptions."
+    },
+    "refriedBeans": {
+      "values": {
+        "calcium": 30,
+        "iron": 1.25,
+        "potassium": 300,
+        "vitaminD": 0,
+        "vitaminB12": 0,
+        "iodine": 0.5
+      },
+      "sources": [
+        "refriedBeansLabel",
+        "assumptions"
+      ],
+      "basis": "Per 125 mL: calcium, iron and potassium from Old El Paso Canadian label. Vitamin D and B12 assumed zero for the unfortified plant product. Iodine 0.5 mcg per unit is an explicit trace-composition allowance, not a verified product measurement."
     }
   },
   "extraRecipes": {

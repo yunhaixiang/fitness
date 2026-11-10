@@ -127,11 +127,11 @@
     '鸡大腿肉', '生鸡腿肉', '鸡腿肉', '鸡肉末', '生肉末', '小土豆', '土豆块', '排骨', '牛肉丸',
     '虾仁', '虾肉', '面包糠', '三文鱼', '裹粉黑线鳕', '金枪鱼', '水煮蛋', '鸡蛋', '水饺',
     '干意面', '意面', '干扁米粉', '米粉', '干米', '米饭', '蘑菇', '菠菜', '西葫芦',
-    'Unico浓缩番茄膏', '罗马番茄', '番茄', '鹰嘴豆', '橙甜椒', '大号卷饼皮', '全麦面包', '豌豆胡萝卜',
+    'Unico浓缩番茄膏', '罗马番茄', '番茄', '鹰嘴豆', '豆泥', '橙甜椒', '大号卷饼皮', '全麦面包', '豌豆胡萝卜',
     'Hellmann’s Light ½ Fat 蛋黄酱', 'Chipotle蛋黄酱', '橄榄油', '蒜粉', '洋葱粉', '黑胡椒', '红椒粉', '红辣椒', '辣椒',
     '意式香料', '牛至', '罗勒叶', '罗勒', '鱼露', '生抽', '老抽', '蚝油', '咖喱块', '咖喱酱', '热水', '面水', '沸水', '水'
   ].sort((a, b) => b.length - a.length).join('|');
-  const cookingEnglishIngredients = String.raw`\b(?:chicken thighs?|raw thighs?|ground chicken|chicken|potatoes|potato wedges|ribs|meatballs|shrimp|panko|salmon|(?:breaded )?haddock(?: fillet)?|tuna|boiled eggs?|eggs?|dumplings|spaghetti|rice noodles|noodles|dry rice|rice|mushrooms|spinach|zucchini|Unico Tomato Paste|Roma tomato|tomato|chickpeas|orange bell pepper|tortillas?|whole-wheat bread|bread|peas and carrots|Hellmann’s Light ½ Fat mayonnaise|Chipotle mayonnaise|olive oil|garlic powder|onion powder|black pepper|pepper|paprika|red chili|chili|Italian seasoning|oregano|basil(?: leaves)?|fish sauce|light and dark soy sauces|light soy sauce|dark soy sauce|oyster sauce|Golden Curry|water)\b`;
+  const cookingEnglishIngredients = String.raw`\b(?:chicken thighs?|raw thighs?|ground chicken|chicken|potatoes|potato wedges|ribs|meatballs|shrimp|panko|salmon|(?:breaded )?haddock(?: fillet)?|tuna|boiled eggs?|eggs?|dumplings|spaghetti|rice noodles|noodles|dry rice|rice|mushrooms|spinach|zucchini|Unico Tomato Paste|Roma tomato|tomato|chickpeas|refried beans|orange bell pepper|tortillas?|whole-wheat bread|bread|peas and carrots|Hellmann’s Light ½ Fat mayonnaise|Chipotle mayonnaise|olive oil|garlic powder|onion powder|black pepper|pepper|paprika|red chili|chili|Italian seasoning|oregano|basil(?: leaves)?|fish sauce|light and dark soy sauces|light soy sauce|dark soy sauce|oyster sauce|Golden Curry|water)\b`;
   const cookingTokens = new RegExp([
     `(?<heat>${cookingRange}\\s*(?:°[FC]|分钟|minutes?\\b))`,
     `(?<portion>第[0-9、，]+盘|\\bmeals?\\s+\\d+(?:(?:,\\s*|\\s+and\\s+)\\d+)*)`,

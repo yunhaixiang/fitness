@@ -9,7 +9,7 @@
 {% case key %}
 {% when 'wrap' %}
 <th scope="row"><span class="meal-summary-number">{{ forloop.index }}</span><span data-en="🌯 Wrap">🌯 卷饼</span></th>
-<td><div data-en="🍗 1½ Chicken Thighs ({{ portion.thigh | times: 100 | round: 0 }} g)">🍗 鸡大腿肉1½块（{{ portion.thigh | times: 100 | round: 0 }} g）</div><div data-en="🥚 {{ portion.egg | times: 1 | round: 1 }} Boiled Eggs">🥚 水煮蛋{{ portion.egg | times: 1 | round: 1 }}个</div><div data-en="🫘 ¼ Can Chickpeas ({{ portion.chickpea | times: 100 | round: 0 }} g)">🫘 鹰嘴豆¼罐（{{ portion.chickpea | times: 100 | round: 0 }} g）</div></td>
+<td><div data-en="🍗 1½ Chicken Thighs ({{ portion.thigh | times: 100 | round: 0 }} g)">🍗 鸡大腿肉1½块（{{ portion.thigh | times: 100 | round: 0 }} g）</div><div data-en="🥚 {{ portion.egg | times: 1 | round: 1 }} Boiled Eggs">🥚 水煮蛋{{ portion.egg | times: 1 | round: 1 }}个</div><div data-en="🫘 ½ Can Refried Beans ({{ portion.refriedBeans | times: 125 | round: 0 }} mL)">🫘 豆泥½罐（{{ portion.refriedBeans | times: 125 | round: 0 }} mL）</div></td>
 <td><div data-en="🫑 ½ Orange Bell Pepper ({{ portion.pepper | times: 100 | round: 0 }} g)">🫑 橙甜椒半个（{{ portion.pepper | times: 100 | round: 0 }} g）</div></td>
 <td><div data-en="🌯 {{ portion.tortilla | times: 1 | round: 0 }} Large Whole-Wheat Tortilla">🌯 大号全麦卷饼皮{{ portion.tortilla | times: 1 | round: 0 }}片</div><div data-en="🥣 {{ portion.mayo | times: 1 | round: 1 }} tsp Chipotle Mayonnaise">🥣 Chipotle蛋黄酱{{ portion.mayo | times: 1 | round: 1 }}茶匙</div></td>
 {% when 'dumpling' %}

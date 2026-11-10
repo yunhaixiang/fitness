@@ -2,7 +2,7 @@
   "checked_on": "2026-10-31",
   "currency": "CAD",
   "scope": "Walmart Canada public prices; individual checked_on retained. Popeye spinach, chicken thigh and salmon prices supplied by user. Weekly subtotal averages routine purchase cycles. Bread assumes three slices total 105 g; weighed produce billed by actual weight. Excludes as-needed seasonings, tax and delivery. Not a London store live stock guarantee.",
-  "weekly_total_cad": "142.27",
+  "weekly_total_cad": "144.50",
   "items": [
     {
       "item": "去骨去皮鸡大腿肉",
@@ -464,17 +464,17 @@
       "price_type": "sale"
     },
     {
-      "item": "鹰嘴豆",
-      "price_cad": "1.48",
+      "item": "豆泥",
+      "price_cad": "2.97",
       "basis": "package",
-      "weekly_quantity": "0.5",
-      "weekly_cost_cad": "0.74",
+      "weekly_quantity": "1",
+      "weekly_cost_cad": "2.97",
       "source_type": "walmart_public",
-      "source_url": "https://www.walmart.ca/en/ip/Great-Value-Chick-Peas/10275238",
-      "product_url": "https://www.walmart.ca/en/ip/Great-Value-Chick-Peas/10275238",
-      "checked_on": "2026-11-08",
-      "purchase_frequency_zh": "1罐 / 2周",
-      "purchase_frequency_en": "1 Can / 2 Weeks"
+      "source_url": "https://www.walmart.ca/en/ip/Old-El-Paso-Mexican-Refried-Beans-Pinto-Beans-398-ml/6000188283974",
+      "product_url": "https://www.walmart.ca/en/ip/Old-El-Paso-Mexican-Refried-Beans-Pinto-Beans-398-ml/6000188283974",
+      "checked_on": "2026-11-09",
+      "purchase_frequency_zh": "1罐 / 周",
+      "purchase_frequency_en": "1 Can / Week"
     },
     {
       "item": "生抽",
