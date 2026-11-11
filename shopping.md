@@ -202,11 +202,11 @@ visual: true
 <td data-en="1 Bottle / 120 Days · 1 Capsule with Breakfast Daily">1瓶 / 120天；每天早餐1粒</td>
 <td><a href="https://www.amazon.ca/dp/B08WVD2YDB">$16.49</a></td>
 </tr>
-<tr data-price-id="55" data-purchase-group="restock">
+<tr data-price-id="55" data-weekly-cost="0.18" data-purchase-group="restock">
 <td data-en="Ground Flaxseed">磨碎亚麻籽</td>
-<td><a href="https://www.walmart.ca/en/ip/BRM-FLAXSEED-MEAL/6000198391170">Bob’s Red Mill Flaxseed Meal</a><br><span data-en="453 g / Bag">453 g / 袋</span></td>
+<td><a href="https://www.walmart.ca/en/ip/JOES-TASTY-EX-GROUND-FLAX-SDS-350G/6000192737948">Joe’s Tasty Travels Milled Flax Seeds</a><br><span data-en="350 g / Bag">350 g / 袋</span></td>
 <td data-en="3 g with Breakfast Daily · 21 g / Week · Restock as Needed">每天早餐3 g；每周21 g；按需补</td>
-<td><a href="https://www.walmart.ca/en/ip/BRM-FLAXSEED-MEAL/6000198391170" data-en="Check Walmart Availability and Price">查看沃尔玛库存与价格</a></td>
+<td><a href="https://www.walmart.ca/en/ip/JOES-TASTY-EX-GROUND-FLAX-SDS-350G/6000192737948">$3.00</a></td>
 </tr>
 <tr data-price-id="54" data-weekly-cost="1.77" data-purchase-group="restock">
 <td data-en="Omega-3 Fish Oil">Omega-3 鱼油</td>
@@ -236,7 +236,7 @@ visual: true
 <td>每周合计</td>
 <td>—</td>
 <td style="text-align: right;">—</td>
-<td style="text-align: right;">$152.32</td>
+<td style="text-align: right;">$152.50</td>
 </tr>
 </tbody>
 </table>

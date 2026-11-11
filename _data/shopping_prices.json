@@ -2,7 +2,7 @@
   "checked_on": "2026-10-31",
   "currency": "CAD",
   "scope": "Walmart Canada public prices; individual checked_on retained. Popeye spinach, chicken thigh and salmon prices supplied by user. Weekly subtotal averages routine purchase cycles. Bread assumes three slices total 105 g; weighed produce billed by actual weight. Excludes as-needed seasonings, tax and delivery. Not a London store live stock guarantee.",
-  "weekly_total_cad": "152.32",
+  "weekly_total_cad": "152.50",
   "items": [
     {
       "item": "去骨去皮鸡大腿肉",
@@ -558,6 +558,21 @@
       "weekly_cost_cad": "0.96",
       "purchase_frequency_zh": "1瓶 / 120天",
       "purchase_frequency_en": "1 Bottle / 120 Days"
+    },
+    {
+      "item": "磨碎亚麻籽",
+      "product": "Joe’s Tasty Travels Milled Flax Seeds",
+      "price_cad": "3.00",
+      "basis": "bag",
+      "package_g": 350,
+      "daily_g": 3,
+      "source_url": "https://www.walmart.ca/en/ip/JOES-TASTY-EX-GROUND-FLAX-SDS-350G/6000192737948",
+      "product_url": "https://www.walmart.ca/en/ip/JOES-TASTY-EX-GROUND-FLAX-SDS-350G/6000192737948",
+      "source_type": "walmart_public",
+      "checked_on": "2026-11-11",
+      "weekly_quantity": "0.06",
+      "weekly_cost_cad": "0.18",
+      "availability_note": "Public listing price; London stock not verified."
     }
   ],
   "updated_on": "2026-11-11"
