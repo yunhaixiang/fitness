@@ -67,13 +67,13 @@ cooking: true
 <li class="cooking-task-source">
 <ol lang="zh-CN" class="cooking-source-zh">
 <li>取解冻🦐 虾仁170 g，擦干，拌🧄 蒜粉¼茶匙和🧂 黑胡椒⅛茶匙。</li>
-<li>🥚 鸡蛋1个打散；🦐 虾仁薄裹🌽 玉米淀粉5 g，抖掉浮粉，再蘸蛋液并沥去多余蛋液。</li>
+<li>🥚 鸡蛋1个打散；🦐 虾仁薄裹🌽 玉米淀粉2平茶匙，抖掉浮粉，再蘸蛋液并沥去多余蛋液。</li>
 <li>🍞 面包糠20 g拌🫒 橄榄油1茶匙，裹在虾仁上并轻压贴牢。</li>
 <li>前半周备料时，将剩余生虾仁分装冷冻。</li>
 </ol>
 <ol lang="en" class="cooking-source-en" hidden>
 <li>Pat 170 g thawed 🦐 shrimp dry and season with ¼ tsp 🧄 garlic powder and ⅛ tsp 🧂 black pepper.</li>
-<li>Beat 1 🥚 egg. Lightly coat the 🦐 shrimp with 5 g 🌽 cornstarch, shake off excess, then dip in the egg and let excess drip off.</li>
+<li>Beat 1 🥚 egg. Lightly coat the 🦐 shrimp with 2 level tsp 🌽 cornstarch, shake off excess, then dip in the egg and let excess drip off.</li>
 <li>Mix 20 g 🍞 panko with 1 tsp 🫒 olive oil, coat the shrimp and press gently to adhere.</li>
 <li>Freeze the remaining raw shrimp during the first cooking session.</li>
 </ol>
