@@ -195,11 +195,11 @@ visual: true
 <td style="text-align: right;">按需补</td>
 <td style="text-align: right;"><a href="https://www.walmart.ca/fr/ip/leanfit-sport-creatine-monohydrate-en-poudre-non-aromatis-300-g-5-g-de-cratine-par-portion-certification-informed-choice-cratine-micronise-et-de-quali/6000208594600">$32.97</a></td>
 </tr>
-<tr data-price-id="57" data-purchase-group="restock">
+<tr data-price-id="57" data-weekly-cost="0.96" data-purchase-group="restock">
 <td data-en="Magnesium Bisglycinate">甘氨酸镁</td>
-<td data-en="Current Bottle · 200 mg Label Dose">现有瓶装；瓶标剂量200 mg</td>
-<td data-en="200 mg with Breakfast Daily · Restock as Needed">每天早餐200 mg；按需补</td>
-<td data-en="Already Owned">已有</td>
+<td><a href="https://www.amazon.ca/dp/B08WVD2YDB">Webber Naturals Magnesium Bisglycinate 200 mg（Amazon）</a><br><span data-en="120 Capsules / Bottle · 200 mg per Capsule">120粒 / 瓶；每粒200 mg</span></td>
+<td data-en="1 Bottle / 120 Days · 1 Capsule with Breakfast Daily">1瓶 / 120天；每天早餐1粒</td>
+<td><a href="https://www.amazon.ca/dp/B08WVD2YDB">$16.49</a></td>
 </tr>
 <tr data-price-id="55" data-purchase-group="restock">
 <td data-en="Ground Flaxseed">磨碎亚麻籽</td>
@@ -207,11 +207,11 @@ visual: true
 <td data-en="3 g with Breakfast Daily · 21 g / Week · Restock as Needed">每天早餐3 g；每周21 g；按需补</td>
 <td><a href="https://www.walmart.ca/en/ip/BRM-FLAXSEED-MEAL/6000198391170" data-en="Check Walmart Availability and Price">查看沃尔玛库存与价格</a></td>
 </tr>
-<tr data-price-id="54" data-purchase-group="restock">
+<tr data-price-id="54" data-weekly-cost="1.77" data-purchase-group="restock">
 <td data-en="Omega-3 Fish Oil">Omega-3 鱼油</td>
 <td><a href="https://www.amazon.ca/dp/B00L3WS0Y2">Webber Naturals Triple Strength Omega-3 900 mg（Amazon）</a><br><span data-en="120 Softgels / Bottle · EPA 600 mg + DHA 300 mg per Softgel">120粒 / 瓶；每粒 EPA 600 mg，DHA 300 mg</span></td>
 <td data-en="1 Bottle / 120 Days · 1 Softgel with Breakfast Daily">1瓶 / 120天；每天早餐1粒</td>
-<td><a href="https://www.amazon.ca/dp/B00L3WS0Y2" data-en="Check Amazon Price">查看 Amazon 价格</a></td>
+<td><a href="https://www.amazon.ca/dp/B00L3WS0Y2" >$30.39</a></td>
 </tr>
 <tr data-price-id="32" data-weekly-cost="12.74" data-purchase-group="weekly"><td data-en="Breaded Haddock">裹粉黑线鳕</td><td><a href="https://www.walmart.ca/en/ip/High-Liner-Pan-Sear-Selects-Roasted-Garlic-Herb-Haddock/6000196030769">High Liner Pan-Sear Selects Roasted Garlic &amp; Herbs Haddock</a><br><span data-en="500 g / Box, 4 Fillets">500 g / 盒，4片</span></td><td data-en="1 Box / Week">1盒 / 周</td><td><a href="https://www.walmart.ca/en/ip/High-Liner-Pan-Sear-Selects-Roasted-Garlic-Herb-Haddock/6000196030769">$12.74</a></td></tr>
 <tr data-price-id="34" data-weekly-cost="10.98" data-purchase-group="weekly"><td data-en="Raw Shrimp">生虾仁</td><td><a href="https://www.walmart.ca/en/ip/Great-Value-Wild-Argentinian-Large-Raw-Shrimp/6000202999819">Great Value Wild Argentinian Large Raw Shrimp</a><br><span data-en="340 g">340 g</span></td><td data-en="1 Bag / Week">1袋 / 周</td><td><a href="https://www.walmart.ca/en/ip/Great-Value-Wild-Argentinian-Large-Raw-Shrimp/6000202999819">$10.98</a></td></tr>
@@ -235,7 +235,7 @@ visual: true
 <td>每周合计</td>
 <td>—</td>
 <td style="text-align: right;">—</td>
-<td style="text-align: right;">$149.59</td>
+<td style="text-align: right;">$152.32</td>
 </tr>
 </tbody>
 </table>

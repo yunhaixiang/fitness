@@ -2,7 +2,7 @@
   "checked_on": "2026-10-31",
   "currency": "CAD",
   "scope": "Walmart Canada public prices; individual checked_on retained. Popeye spinach, chicken thigh and salmon prices supplied by user. Weekly subtotal averages routine purchase cycles. Bread assumes three slices total 105 g; weighed produce billed by actual weight. Excludes as-needed seasonings, tax and delivery. Not a London store live stock guarantee.",
-  "weekly_total_cad": "149.59",
+  "weekly_total_cad": "152.32",
   "items": [
     {
       "item": "去骨去皮鸡大腿肉",
@@ -526,7 +526,39 @@
       "source_type": "walmart_public",
       "product_url": "https://www.walmart.ca/en/ip/Hellmann-s-Light-Half-Fat-Mayonnaise-Type-Dressing-with-Canadian-Cage-Free-Eggs-750-mL-squeeze-bottle/206910",
       "checked_on": "2026-11-09"
+    },
+    {
+      "item": "Omega-3 鱼油",
+      "product": "Webber Naturals Triple Strength Omega-3 900 mg",
+      "price_cad": "30.39",
+      "basis": "bottle",
+      "package_count": 120,
+      "daily_quantity": 1,
+      "source_url": "https://www.amazon.ca/dp/B00L3WS0Y2",
+      "product_url": "https://www.amazon.ca/dp/B00L3WS0Y2",
+      "source_type": "user_provided",
+      "checked_on": "2026-11-11",
+      "weekly_quantity": "0.058333333333333334",
+      "weekly_cost_cad": "1.77",
+      "purchase_frequency_zh": "1瓶 / 120天",
+      "purchase_frequency_en": "1 Bottle / 120 Days"
+    },
+    {
+      "item": "甘氨酸镁",
+      "product": "Webber Naturals Magnesium Bisglycinate 200 mg",
+      "price_cad": "16.49",
+      "basis": "bottle",
+      "package_count": 120,
+      "daily_quantity": 1,
+      "source_url": "https://www.amazon.ca/dp/B08WVD2YDB",
+      "product_url": "https://www.amazon.ca/dp/B08WVD2YDB",
+      "source_type": "amazon_public",
+      "checked_on": "2026-11-11",
+      "weekly_quantity": "0.058333333333333334",
+      "weekly_cost_cad": "0.96",
+      "purchase_frequency_zh": "1瓶 / 120天",
+      "purchase_frequency_en": "1 Bottle / 120 Days"
     }
   ],
-  "updated_on": "2026-11-08"
+  "updated_on": "2026-11-11"
 }
