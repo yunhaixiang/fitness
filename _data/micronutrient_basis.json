@@ -582,6 +582,20 @@
         "assumptions"
       ],
       "basis": "Per 125 mL: calcium, iron and potassium from Old El Paso Canadian label. Vitamin D and B12 assumed zero for the unfortified plant product. Iodine 0.5 mcg per unit is an explicit trace-composition allowance, not a verified product measurement."
+    },
+    "cornstarch": {
+      "values": {
+        "calcium": 2,
+        "iron": 0.47,
+        "potassium": 3,
+        "vitaminD": 0,
+        "vitaminB12": 0,
+        "iodine": 0
+      },
+      "sources": [
+        "assumptions"
+      ],
+      "basis": "Generic cornstarch proxy per 100 g; iodine assumed negligible. Not verified brand values."
     }
   },
   "extraRecipes": {

@@ -407,13 +407,25 @@
       450,
       0,
       0
+    ],
+    "cornstarch": [
+      381,
+      0.26,
+      91.27,
+      0.05,
+      0.009,
+      0.9,
+      0,
+      9,
+      0,
+      0
     ]
   },
   "recipes": [
     {
       "tortilla": 1,
       "thigh": 1.74375,
-      "egg": 1.5,
+      "egg": 1,
       "pepper": 0.75,
       "mayo": 1,
       "oil": 0.1875,
@@ -432,10 +444,11 @@
       "shrimp": 1.7,
       "panko": 0.2,
       "thigh": 1.1625,
-      "egg": 0.5,
+      "egg": 1,
       "pc": 1.3,
       "oil": 1.375,
-      "noodleSauce": 1
+      "noodleSauce": 1,
+      "cornstarch": 0.05
     },
     {
       "potato": 1.7,
@@ -495,7 +508,8 @@
     "Meal 6 uses half a scored block of the 92 g / four-block Golden Curry pack: 11.5 g per meal, 23 g weekly. Nutrition reference unit remains 18 g. Meal 3 noodleSauce unit: fish sauce 2.5 mL, light soy sauce 2.5 mL, dark soy sauce 2.5 mL, oyster sauce 5 mL, garlic powder 1/4 tsp, paprika 1/4 tsp (about 0.6 g), basil 2–3 leaves and water 30 mL. Generic planning estimate excluding oil: 20 kcal, P1/C3.8/F0.1 g, saturated fat0 g, fibre0.3 g, sugar1.8 g, sodium900 mg. These are estimated recipe totals, not verified totals of the selected product labels. Extra olive oil 1/4 tsp is counted separately in recipe oil, replacing the old sesame oil. Rice water remains equal volume to rice: 35 g rice estimated 44 mL water.",
     "Unico Tomato Paste 156 mL: one can weekly, 78 mL per pasta meal. Sauce unit remains 125 mL. Label per 30 mL: 20 kcal, protein 1 g, carbs 5 g, fat 0 g, saturated fat 0 g, fibre 1 g, sugars 3 g, sodium 0 mg (rounded label), cholesterol 0 mg. Source: https://www.unico.ca/products/unico-tomato-paste. Add pasta water, garlic powder and Italian seasoning; retain existing oil. Pasta is 52 g dry per meal.",
     "Hellmann’s Light ½ Fat Mayonnaise: Canadian label per 15 mL is 40 kcal, P0/C1/F4 g, saturated fat0.3 g, fibre0 g, sugar0 g, sodium100 mg, cholesterol0 mg. Recipe unit is 5 mL; sandwich uses 17.5 mL. Nutrition reference is the Canadian 890 mL label; shopping uses the 750 mL squeeze bottle of the same Light ½ Fat product. No dispensing-length assumption is carried over from the Chipotle bottle.",
-    "2026-11-10: Noodle sauce uses paprika instead of fresh red chili. Retain the coarse 20 kcal sauce estimate; this sub-gram spice substitution is below the precision of that estimate."
+    "2026-11-10: Noodle sauce uses paprika instead of fresh red chili. Retain the coarse 20 kcal sauce estimate; this sub-gram spice substitution is below the precision of that estimate.",
+    "Shrimp coating per half-week: 1 whole egg, 5 g cornstarch, existing 20 g panko and 1 tsp oil. All coating ingredients counted conservatively; unused egg wash is not deducted. Cornstarch uses generic USDA composition per 100 g, not a verified brand label."
   ],
   "sources": {
     "shrimp": "https://www.walmart.ca/en/ip/Great-Value-Wild-Argentinian-Large-Raw-Shrimp/6000202999819",

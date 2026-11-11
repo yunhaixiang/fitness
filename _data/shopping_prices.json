@@ -573,6 +573,20 @@
       "weekly_quantity": "0.06",
       "weekly_cost_cad": "0.18",
       "availability_note": "Public listing price; London stock not verified."
+    },
+    {
+      "item": "玉米淀粉",
+      "product": "Great Value Corn Starch",
+      "price_cad": "3.77",
+      "basis": "box",
+      "package_g": 454,
+      "source_url": "https://www.walmart.ca/en/ip/great-value-corn-starch/10317740",
+      "product_url": "https://www.walmart.ca/en/ip/great-value-corn-starch/10317740",
+      "source_type": "walmart_public",
+      "checked_on": "2026-11-11",
+      "purchase_frequency_zh": "按需补",
+      "purchase_frequency_en": "As Needed",
+      "availability_note": "Public listing price; London stock not verified. Excluded from routine subtotal like other as-needed seasonings."
     }
   ],
   "updated_on": "2026-11-11"

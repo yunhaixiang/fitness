@@ -67,12 +67,14 @@ cooking: true
 <li class="cooking-task-source">
 <ol lang="zh-CN" class="cooking-source-zh">
 <li>取解冻🦐 虾仁170 g，擦干，拌🧄 蒜粉¼茶匙和🧂 黑胡椒⅛茶匙。</li>
-<li>🍞 面包糠20 g拌🫒 橄榄油1茶匙，覆盖在虾仁上。</li>
+<li>🥚 鸡蛋1个打散；🦐 虾仁薄裹🌽 玉米淀粉5 g，抖掉浮粉，再蘸蛋液并沥去多余蛋液。</li>
+<li>🍞 面包糠20 g拌🫒 橄榄油1茶匙，裹在虾仁上并轻压贴牢。</li>
 <li>前半周备料时，将剩余生虾仁分装冷冻。</li>
 </ol>
 <ol lang="en" class="cooking-source-en" hidden>
 <li>Pat 170 g thawed 🦐 shrimp dry and season with ¼ tsp 🧄 garlic powder and ⅛ tsp 🧂 black pepper.</li>
-<li>Mix 20 g 🍞 panko with 1 tsp 🫒 olive oil and spread over the shrimp.</li>
+<li>Beat 1 🥚 egg. Lightly coat the 🦐 shrimp with 5 g 🌽 cornstarch, shake off excess, then dip in the egg and let excess drip off.</li>
+<li>Mix 20 g 🍞 panko with 1 tsp 🫒 olive oil, coat the shrimp and press gently to adhere.</li>
 <li>Freeze the remaining raw shrimp during the first cooking session.</li>
 </ol>
 </li>
@@ -175,11 +177,11 @@ cooking: true
 <li class="cooking-task-source"><p data-en="Bring 💧 water to a boil in Pot 1 before adding the 🥚 eggs.">煮锅一烧💧 水，💧 水沸后下🥚 鸡蛋。</p></li>
 <li class="cooking-task-source">
 <ol lang="zh-CN" class="cooking-source-zh">
-<li>下🥚 鸡蛋9个，💧 水开后煮约9分钟至蛋白蛋黄凝固。</li>
+<li>下🥚 鸡蛋8个，💧 水开后煮约9分钟至蛋白蛋黄凝固。</li>
 <li>捞出🥚 鸡蛋，放入💧 冷水冷却。</li>
 </ol>
 <ol lang="en" class="cooking-source-en" hidden>
-<li>Add 9 🥚 eggs and boil for about 9 minutes until firm.</li>
+<li>Add 8 🥚 eggs and boil for about 9 minutes until firm.</li>
 <li>Lift the 🥚 eggs out into cold 💧 water to cool.</li>
 </ol>
 </li>
@@ -197,12 +199,12 @@ cooking: true
 <li class="cooking-task-source">
 <ol lang="zh-CN" class="cooking-source-zh">
 <li>冷却剥壳，按需切半。</li>
-<li>第1、6盘各1½个，第2、5、7盘各1个，第3盘½个，第4盘2½个。</li>
+<li>第1、2、5、7盘各1个，第4盘2½个，第6盘1½个。</li>
 <li>第1盘的掰碎，第5盘的切片。</li>
 </ol>
 <ol lang="en" class="cooking-source-en" hidden>
 <li>Cool, peel and cut as needed.</li>
-<li>Put 1½ eggs each in meals 1 and 6, one each in meals 2, 5 and 7, half an 🥚 egg in meal 3, and 2½ eggs in meal 4.</li>
+<li>Put 1 🥚 egg each in meals 1, 2, 5 and 7, 2½ eggs in meal 4, and 1½ eggs in meal 6.</li>
 <li>Crumble the eggs for meal 1 and slice the egg for meal 5.</li>
 </ol>
 </li>
@@ -340,7 +342,7 @@ cooking: true
 </li>
 </ol>
 
-<!-- Cook to the product package directions where they differ. Rice noodle method: Erawan Walmart directions, boil dry noodles directly for 6–8 minutes, https://www.walmart.ca/en/ip/Erawan-Rice-Stick/6000199121439 . The timer starts with a 6-minute check; extend as needed. Shrimp is an olive-oil/panko adaptation; oven times vary with size and loading. -->
+<!-- Cook to the product package directions where they differ. Rice noodle method: Erawan Walmart directions, boil dry noodles directly for 6–8 minutes, https://www.walmart.ca/en/ip/Erawan-Rice-Stick/6000199121439 . The timer starts with a 6-minute check; extend as needed. Shrimp uses cornstarch, egg and oil-mixed panko; oven times vary with size and loading. -->
 
 <h2 id="finish" data-en="Finish">收尾线程</h2>
 <ol>
