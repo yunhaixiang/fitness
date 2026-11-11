@@ -23,7 +23,9 @@ test('weekly meat, eggs, grains and portions match whole-package purchase cycles
  close(weekly('thigh')*100,930); close(weekly('ground')*100,454);
  close(weekly('shrimp')*100,340); close(weekly('salmon')*100,320);
  close(weekly('ball'),0); close(weekly('haddock'),4); close(weekly('dumpling')*96,336);
- close(weekly('egg'),18); close(weekly('potato')*100,340);
+ close(weekly('egg'),17);
+ const wash=basis.shrimpEggWash;
+ close(weekly('egg')+2*wash.preparedEggsPerHalfWeek*(1-wash.consumedFraction),18); close(weekly('potato')*100,340);
  close(weekly('sweetpotato'),0);
  close(weekly('rice')*100,70); close(weekly('pasta')*85,104);
  close(weekly('noodle')*100,106); close(weekly('sauce')*125,156);
@@ -56,7 +58,7 @@ test('all cooking prerequisites are valid, acyclic, and have matching instructio
  assert.match(page,/第1、2、5、7盘各1个，第4盘2½个，第6盘1½个/);
  assert.match(page,/鸡蛋8个/);
  assert.equal(basis.recipes[0].egg,1);
- assert.equal(basis.recipes[2].egg,1);
+ assert.equal(basis.recipes[2].egg,.5);
  assert.equal(basis.recipes[2].cornstarch,.05);
 });
 test('routine shopping subtotal agrees with both stored prices and all shopping cards',()=>{
