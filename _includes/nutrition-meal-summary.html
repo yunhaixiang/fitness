@@ -7,7 +7,7 @@
 {% assign portion = site.data.nutrition_basis.recipes[forloop.index0] %}
 {% assign egg_whole = portion.egg | floor %}
 {% assign egg_fraction = portion.egg | modulo: 1 %}
-{% capture egg_display %}{% if egg_fraction == 0.5 %}{% if egg_whole > 0 %}{{ egg_whole }} {% endif %}1/2{% else %}{{ portion.egg | round: 0 }}{% endif %}{% endcapture %}
+{% capture egg_display %}{% if egg_fraction == 0.5 %}{% if egg_whole > 0 %}{{ egg_whole }}{% endif %}½{% else %}{{ portion.egg | round: 0 }}{% endif %}{% endcapture %}
 <tr>
 {% case key %}
 {% when 'wrap' %}
