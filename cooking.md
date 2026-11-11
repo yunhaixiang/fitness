@@ -199,12 +199,12 @@ cooking: true
 <li class="cooking-task-source">
 <ol lang="zh-CN" class="cooking-source-zh">
 <li>冷却剥壳，按需切半。</li>
-<li>第1、2、5、7盘各1个，第4盘2½个，第6盘1½个。</li>
+<li>第1、2、5、7盘各1个，第4、6盘各2个。</li>
 <li>第1盘的掰碎，第5盘的切片。</li>
 </ol>
 <ol lang="en" class="cooking-source-en" hidden>
 <li>Cool, peel and cut as needed.</li>
-<li>Put 1 🥚 egg each in meals 1, 2, 5 and 7, 2½ eggs in meal 4, and 1½ eggs in meal 6.</li>
+<li>Put 1 🥚 egg each in meals 1, 2, 5 and 7, 2 eggs each in meals 4 and 6.</li>
 <li>Crumble the eggs for meal 1 and slice the egg for meal 5.</li>
 </ol>
 </li>

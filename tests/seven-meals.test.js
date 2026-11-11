@@ -55,10 +55,12 @@ test('all cooking prerequisites are valid, acyclic, and have matching instructio
  for(const [id,group,steps] of sections){const fragment=page.split('<h2 id="'+id+'"')[1].split('<h2 ')[0];assert.equal((fragment.match(/<li class="cooking-task-source"/g)||[]).length,steps.length,id);steps.forEach(s=>instructionIds.add('cook-'+s));}
  for(const n of flow)assert.ok(instructionIds.has(n.link.slice(1))||['cook-finish'].includes(n.link.slice(1)),n.link);
  assert.ok(page.includes('裹粉黑线鳕'));
- assert.match(page,/第1、2、5、7盘各1个，第4盘2½个，第6盘1½个/);
+ assert.match(page,/第1、2、5、7盘各1个，第4、6盘各2个/);
  assert.match(page,/鸡蛋8个/);
  assert.equal(basis.recipes[0].egg,1);
  assert.equal(basis.recipes[2].egg,.5);
+ assert.equal(basis.recipes[3].egg,2);
+ assert.equal(basis.recipes[5].egg,2);
  assert.equal(basis.recipes[2].cornstarch,.05);
 });
 test('routine shopping subtotal agrees with both stored prices and all shopping cards',()=>{
