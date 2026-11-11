@@ -713,3 +713,11 @@ html[data-theme=light] .cooking-guide-primary{color:#fff}
 .cooking-flow-instructions .cooking-instruction-list>li{margin:0;padding-left:.3em}
 .cooking-flow-instructions .cooking-instruction-list>li+li{margin-top:8px}
 .cooking-instruction-list>li::marker{color:var(--muted);font-weight:650;font-variant-numeric:tabular-nums}
+
+/* Weekly shopping budget: fees stay separate from grocery checkboxes. */
+.shopping-cost-breakdown{margin:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px 24px}
+.shopping-cost-line{display:flex;justify-content:space-between;gap:12px;padding:10px 0;border-bottom:1px solid var(--line);min-width:0}
+.shopping-cost-line dt{min-width:0}.shopping-cost-line dd{margin:0;white-space:nowrap;font-variant-numeric:tabular-nums;font-weight:600}
+.shopping-cost-line small{display:block;font-size:12px;opacity:.75;margin-top:4px}
+.shopping-cost-note{font-size:12px;opacity:.75;margin:10px 0 16px!important}
+@media(max-width:600px){.shopping-cost-breakdown{grid-template-columns:1fr}}

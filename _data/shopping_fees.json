@@ -1,0 +1,24 @@
+{
+  "currency": "CAD",
+  "location": "London, Ontario",
+  "checked_on": "2026-11-11",
+  "orders_per_week": 1,
+  "tip_per_order_cad": 10,
+  "delivery_per_order_cad": 5,
+  "service_per_order_cad": 15,
+  "hst_rate": 0.13,
+  "taxable_price_ids": [
+    "7",
+    "8",
+    "54",
+    "57"
+  ],
+  "assumptions": "Non-Uber One budget. Delivery $5 is a planning allowance, not a live quote. Grocery service fee budget uses the published $15 cap. Tax only routine priced taxable items and delivery/service fees; voluntary tip and basic groceries excluded. As-needed purchases not in the grocery subtotal are excluded, including creatine; their tax is additional on purchase. Amazon supplements are amortized in the weekly household budget, not assumed to be ordered via Uber Eats. Uber Eats item markups, bags and membership charges excluded.",
+  "sources": {
+    "fees": "https://help.uber.com/en/ubereats/stores/article/?nodeId=d8b62dc4-67af-4bdf-9383-49ce46bb759d",
+    "hst": "https://www.ontario.ca/document/harmonized-sales-tax-hst",
+    "groceries": "https://www.canada.ca/en/revenue-agency/services/forms-publications/publications/4-3/basic-groceries.html",
+    "beverages": "https://www.canada.ca/en/revenue-agency/services/forms-publications/publications/gi-036/beverages.html",
+    "tips": "https://www.canada.ca/en/revenue-agency/services/tax/businesses/topics/gst-hst-businesses/charge-collect-special-cases.html"
+  }
+}

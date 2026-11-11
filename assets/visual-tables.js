@@ -30,7 +30,35 @@
     const checkableItems = items.filter((row) => row.querySelector('input[type="checkbox"]'));
     const shell = el('div', 'visual-shopping');
     const total = rows.at(-1);
-    if (total && !total.querySelector('input')) shell.append(el('p', 'visual-shopping-total', titleCase(`${val(total, 1)} · ${val(total, 4)}`)));
+    const feesConfig = document.querySelector('#shopping-fees-config');
+    if (feesConfig && window.fitnessShoppingCosts) {
+      const config = JSON.parse(feesConfig.textContent);
+      const costs = window.fitnessShoppingCosts.calculateShoppingCosts(items.map(row => ({
+        id: row.dataset.priceId, weeklyCost: row.dataset.weeklyCost
+      })), config);
+      const money = cents => `$${(cents / 100).toFixed(2)}`;
+      shell.append(el('p', 'visual-shopping-total', tr('每周合计', 'Weekly Total') + ` · ≈${money(costs.total)} CAD`));
+      const breakdown = el('dl', 'shopping-cost-breakdown');
+      for (const [label, amount, detail] of [
+        [tr('商品', 'Groceries & Supplements'), money(costs.goods), ''],
+        [tr('配送小费', 'Delivery Tip'), money(costs.tip), ''],
+        [tr('Uber Eats配送', 'Uber Eats Delivery'), '≈' + money(costs.delivery + costs.service),
+          tr('配送$5，服务费$15', '$5 Delivery + $15 Service Fee')],
+        [tr('消费税', 'Sales Tax'), '≈' + money(costs.tax), tr('HST 13% · 仅应税项目', '13% HST · Taxable Items Only')]
+      ]) {
+        const line = el('div', 'shopping-cost-line');
+        const term = el('dt', '', label);
+        if (detail) term.append(el('small', '', detail));
+        line.append(term, el('dd', '', amount));
+        breakdown.append(line);
+      }
+      shell.append(breakdown, el('p', 'shopping-cost-note', tr(
+        '每周1单，非Uber One；配送和税费按预算计，按需补货另计，实际以结账为准。',
+        'One order per week without Uber One. Fees and tax are budget estimates; extra restocking is not included. Actual checkout charges may differ.'
+      )));
+    } else if (total && !total.querySelector('input')) {
+      shell.append(el('p', 'visual-shopping-total', titleCase(`${val(total, 1)} · ${val(total, 4)}`)));
+    }
     const overview = el('div', 'visual-shopping-overview');
     const count = el('strong', 'visual-shopping-count');
     const countLabel = el('span', '', tr('项已买', 'Items Bought'));
