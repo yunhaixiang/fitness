@@ -82,43 +82,43 @@ cooking: true
 <li class="cooking-task-source">
 <ol lang="zh-CN" class="cooking-source-zh">
 <li>400°F烤约35–40分钟至内部软、表面金黄，中途翻面。</li>
-<li>出锅全部放第4盘。</li>
+<li>出锅全部放第6盘。</li>
 </ol>
 <ol lang="en" class="cooking-source-en" hidden>
 <li>Roast at 400°F for 35–40 minutes until tender and golden, turning halfway.</li>
-<li>Place all the cooked 🥔 potatoes in meal 4.</li>
+<li>Place all the cooked 🥔 potatoes in meal 6.</li>
 </ol>
 </li>
 <li class="cooking-task-source">
 <ol lang="zh-CN" class="cooking-source-zh">
 <li>400°F烤27分钟，中心达74°C。</li>
-<li>熟肉按3:3:2分给第1、5、3盘，相当于1½、1½、1块。</li>
+<li>熟肉按3:3:2分给第4、1、2盘，相当于1½、1½、1块。</li>
 <li>卷饼与三明治的肉掰碎。</li>
 </ol>
 <ol lang="en" class="cooking-source-en" hidden>
 <li>Roast at 400°F for 27 minutes, to 74°C in the centre.</li>
-<li>Divide the cooked meat 3:3:2 between meals 1, 5 and 3, equivalent to 1½, 1½ and 1 🍗 thigh.</li>
+<li>Divide the cooked meat 3:3:2 between meals 4, 1 and 2, equivalent to 1½, 1½ and 1 🍗 thigh.</li>
 <li>Shred the wrap and sandwich portions.</li>
 </ol>
 </li>
 <li class="cooking-task-source">
 <ol lang="zh-CN" class="cooking-source-zh">
 <li>锡纸包好的🍖 排骨400°F烤15–20分钟至中心74°C。</li>
-<li>全部放第4盘。</li>
+<li>全部放第6盘。</li>
 </ol>
 <ol lang="en" class="cooking-source-en" hidden>
 <li>Heat foil-wrapped 🍖 ribs at 400°F for 15–20 minutes, to 74°C in the centre.</li>
-<li>Place in meal 4.</li>
+<li>Place in meal 6.</li>
 </ol>
 </li>
 <li class="cooking-task-source">
 <ol lang="zh-CN" class="cooking-source-zh">
 <li>单层铺开，400°F烤约10–12分钟至🦐 虾肉不透明、🍞 面包糠金黄。</li>
-<li>全部放第3盘。</li>
+<li>全部放第2盘。</li>
 </ol>
 <ol lang="en" class="cooking-source-en" hidden>
 <li>Bake in a single layer at 400°F for about 10–12 minutes until the 🦐 shrimp are opaque and the 🍞 panko is golden.</li>
-<li>Place all the shrimp in meal 3.</li>
+<li>Place all the shrimp in meal 2.</li>
 </ol>
 </li>
 </ol>
@@ -152,22 +152,22 @@ cooking: true
 <li class="cooking-task-source">
 <ol lang="zh-CN" class="cooking-source-zh">
 <li>空气炸锅空出且达到400°F时，烤约8–10分钟至中心70°C。</li>
-<li>整块放第2盘。</li>
+<li>整块放第3盘。</li>
 </ol>
 <ol lang="en" class="cooking-source-en" hidden>
 <li>When the air fryer is empty and at 400°F, cook for about 8–10 minutes, to 70°C in the centre.</li>
-<li>Place the whole fillet in meal 2.</li>
+<li>Place the whole fillet in meal 3.</li>
 </ol>
 </li>
 <li class="cooking-task-source">
 <ol lang="zh-CN" class="cooking-source-zh">
 <li>空气炸锅空出且达到400°F时，放入冷冻🐟 裹粉黑线鳕2片，无需解冻或加油，单层摆放。</li>
-<li>400°F烤18–20分钟至熟透，放第6盘。</li>
+<li>400°F烤18–20分钟至熟透，放第5盘。</li>
 </ol>
 <ol lang="en" class="cooking-source-en" hidden>
 <li>When the air fryer is empty and at 400°F, air-fry 2 frozen breaded 🐟 haddock fillets for 18–20 minutes until cooked through, arranged in a single layer.</li>
 <li>Do not thaw or add oil.</li>
-<li>Place in meal 6.</li>
+<li>Place in meal 5.</li>
 </ol>
 </li>
 </ol>
@@ -188,24 +188,24 @@ cooking: true
 <li class="cooking-task-source">
 <ol lang="zh-CN" class="cooking-source-zh">
 <li>冷冻🥟 水饺7个（168 g）下💧 沸水，按包装煮至中心74°C，约6–8分钟。</li>
-<li>沥干放第2盘。</li>
+<li>沥干放第3盘。</li>
 </ol>
 <ol lang="en" class="cooking-source-en" hidden>
 <li>Add 7 frozen 🥟 dumplings (168 g) to boiling 💧 water.</li>
 <li>Follow the pack, checking for a 74°C centre after about 6–8 minutes.</li>
-<li>Drain into meal 2.</li>
+<li>Drain into meal 3.</li>
 </ol>
 </li>
 <li class="cooking-task-source">
 <ol lang="zh-CN" class="cooking-source-zh">
 <li>冷却剥壳，按需切半。</li>
-<li>第1、2、5、7盘各1个，第4、6盘各2个。</li>
-<li>第1盘的掰碎，第5盘的切片。</li>
+<li>第1、3、4、7盘各1个，第5、6盘各2个。</li>
+<li>第4盘的掰碎，第1盘的切片。</li>
 </ol>
 <ol lang="en" class="cooking-source-en" hidden>
 <li>Cool, peel and cut as needed.</li>
-<li>Put 1 🥚 egg each in meals 1, 2, 5 and 7, 2 eggs each in meals 4 and 6.</li>
-<li>Crumble the eggs for meal 1 and slice the egg for meal 5.</li>
+<li>Put 1 🥚 egg each in meals 1, 3, 4 and 7, and 2 eggs each in meals 5 and 6.</li>
+<li>Crumble the eggs for meal 4 and slice the egg for meal 1.</li>
 </ol>
 </li>
 </ol>
@@ -254,37 +254,37 @@ cooking: true
 <li class="cooking-task-source">
 <ol lang="zh-CN" class="cooking-source-zh">
 <li>加🫒 橄榄油¼茶匙，下🍄 蘑菇半盒113.5 g、🧂 黑胡椒⅛茶匙、🧄 蒜粉¼茶匙和🧅 洋葱粉¼茶匙。</li>
-<li>炒约5–7分钟，均分到第2、4盘。</li>
+<li>炒约5–7分钟，均分到第3、6盘。</li>
 </ol>
 <ol lang="en" class="cooking-source-en" hidden>
 <li>Heat ¼ tsp 🫒 olive oil, then add half a pack of 🍄 mushrooms (113.5 g), ⅛ tsp 🧂 black pepper, ¼ tsp 🧄 garlic powder and ¼ tsp 🧅 onion powder.</li>
 <li>Cook for 5–7 minutes.</li>
-<li>Split equally between meals 2 and 4.</li>
+<li>Split equally between meals 3 and 6.</li>
 </ol>
 </li>
 <li class="cooking-task-source">
 <ol lang="zh-CN" class="cooking-source-zh">
 <li>💧 水150 mL烧热后关小火，溶入🍛 Golden Curry咖喱块半小块（11.5 g）。</li>
 <li>再煮约5分钟至顺滑。</li>
-<li>盛入第6盘，分盘时淋在🍚 米饭上。</li>
+<li>盛入第5盘，分盘时淋在🍚 米饭上。</li>
 </ol>
 <ol lang="en" class="cooking-source-en" hidden>
 <li>Heat 150 mL 💧 water, lower the heat and dissolve ½ block (11.5 g) of 🍛 Golden Curry roux.</li>
 <li>Simmer for about 5 minutes until smooth.</li>
-<li>Transfer to meal 6 and serve over the rice.</li>
+<li>Transfer to meal 5 and serve over the rice.</li>
 </ol>
 </li>
 <li class="cooking-task-source">
 <ol lang="zh-CN" class="cooking-source-zh">
 <li>小锅冲洗擦干，加🫒 橄榄油¼茶匙，中小火加热。</li>
 <li>倒入酱汁和沥干🍜 米粉，拌热1–2分钟，粘锅时补少量💧 水。</li>
-<li>关火拌入罗勒，放第3盘。</li>
+<li>关火拌入罗勒，放第2盘。</li>
 </ol>
 <ol lang="en" class="cooking-source-en" hidden>
 <li>Rinse and dry the saucepan.</li>
 <li>Add ¼ tsp 🫒 olive oil and heat over medium-low heat.</li>
 <li>Add the sauce and drained 🍜 noodles, tossing for 1–2 minutes; add a splash of 💧 water if they start to stick.</li>
-<li>Turn off the heat, stir in basil and place in meal 3.</li>
+<li>Turn off the heat, stir in basil and place in meal 2.</li>
 </ol>
 </li>
 </ol>
@@ -304,12 +304,12 @@ cooking: true
 <ol lang="zh-CN" class="cooking-source-zh">
 <li>🥬 菠菜半袋142 g先留出10 g给三明治。</li>
 <li>锅空出后按需清理，剩余132 g加🫒 橄榄油½茶匙、🧄 蒜粉⅛茶匙和🧅 洋葱粉⅛茶匙，炒约3–5分钟。</li>
-<li>均分到第2、4盘。</li>
+<li>均分到第3、6盘。</li>
 </ol>
 <ol lang="en" class="cooking-source-en" hidden>
 <li>Set aside 10 g from the half-bag of 🥬 spinach (142 g) for the sandwich.</li>
 <li>Once the wok is free, clean it as needed and cook the remaining 132 g with ½ tsp 🫒 olive oil, ⅛ tsp 🧄 garlic powder and ⅛ tsp 🧅 onion powder for 3–5 minutes.</li>
-<li>Split equally between meals 2 and 4.</li>
+<li>Split equally between meals 3 and 6.</li>
 </ol>
 </li>
 <li class="cooking-task-source">
@@ -348,24 +348,24 @@ cooking: true
 <ol>
 <li class="cooking-task-source">
 <ol lang="zh-CN" class="cooking-source-zh">
-<li>🌯 大号卷饼皮1片铺在第1盘。</li>
-<li>🍞 全麦面包3片放在第5盘。</li>
+<li>🌯 大号卷饼皮1片铺在第4盘。</li>
+<li>🍞 全麦面包3片放在第1盘。</li>
 </ol>
 <ol lang="en" class="cooking-source-en" hidden>
-<li>Lay 1 🌯 large tortilla on plate 1.</li>
-<li>Place 3 slices of 🍞 whole-wheat bread on plate 5.</li>
+<li>Lay 1 🌯 large tortilla on plate 4.</li>
+<li>Place 3 slices of 🍞 whole-wheat bread on plate 1.</li>
 </ol>
 </li>
 <li class="cooking-task-source">
 <ol lang="zh-CN" class="cooking-source-zh">
-<li>在第1盘的🌯 卷饼皮上抹上🥣 Chipotle蛋黄酱1茶匙（5 mL；酱条直径约0.8 cm时，挤约10 cm长）。</li>
+<li>在第4盘的🌯 卷饼皮上抹上🥣 Chipotle蛋黄酱1茶匙（5 mL；酱条直径约0.8 cm时，挤约10 cm长）。</li>
 <li>🫘 豆泥取½罐，抹在卷饼皮上。</li>
 <li>半个🫑 橙甜椒洗净去籽切细条，放到卷饼皮上。</li>
 <li>豆泥开罐后用一半，剩余一半密封冷藏供后半周用。</li>
 <li>多余卷饼皮冷冻。</li>
 </ol>
 <ol lang="en" class="cooking-source-en" hidden>
-<li>Spread the 🌯 tortilla on plate 1 with 1 tsp 🥣 Chipotle mayonnaise (5 mL; about 10 cm squeezed length at a strand diameter of 0.8 cm).</li>
+<li>Spread the 🌯 tortilla on plate 4 with 1 tsp 🥣 Chipotle mayonnaise (5 mL; about 10 cm squeezed length at a strand diameter of 0.8 cm).</li>
 <li>Spread half a can of 🫘 refried beans on the tortilla.</li>
 <li>Wash, deseed and slice half an 🫑 orange bell pepper, then add to the tortilla.</li>
 <li>Use half the can of refried beans and refrigerate the remaining half in a sealed container for the second session.</li>
@@ -374,35 +374,35 @@ cooking: true
 </li>
 <li class="cooking-task-source">
 <ol lang="zh-CN" class="cooking-source-zh">
-<li>在第5盘的🍞 面包上抹上🥣 Hellmann’s Light ½ Fat 蛋黄酱，共3½茶匙（17.5 mL）。</li>
+<li>在第1盘的🍞 面包上抹上🥣 Hellmann’s Light ½ Fat 蛋黄酱，共3½茶匙（17.5 mL）。</li>
 <li>取沥干🐟 金枪鱼½罐（约55 g），直接铺在面包上。</li>
 <li>🍅 罗马番茄1个洗净切片，预留🥬 菠菜10 g洗净擦干。</li>
 <li>前半周备料时，将剩余沥干金枪鱼密封冷冻供后半周用。</li>
 <li>多余面包冷冻。</li>
 </ol>
 <ol lang="en" class="cooking-source-en" hidden>
-<li>Spread the 🍞 bread on plate 5 with a total of 3½ tsp 🥣 Hellmann’s Light ½ Fat mayonnaise (17.5 mL).</li>
+<li>Spread the 🍞 bread on plate 1 with a total of 3½ tsp 🥣 Hellmann’s Light ½ Fat mayonnaise (17.5 mL).</li>
 <li>Spread half a can of drained 🐟 tuna (about 55 g) directly onto the bread.</li>
 <li>Wash and slice 1 🍅 Roma tomato; wash and thoroughly dry the reserved 10 g 🥬 spinach.</li>
 <li>During the first cooking session, freeze the remaining drained tuna for the second session.</li>
 <li>Freeze spare 🍞 bread.</li>
 </ol>
 </li>
-<li class="cooking-task-source"><p data-en="Drain 1 can of 🫛🥕 peas and carrots (about 260 g) and divide equally between meals 3 and 6.">🫛🥕 豌豆胡萝卜1罐沥干（约260 g），直接均分到第3、6盘。</p></li>
+<li class="cooking-task-source"><p data-en="Drain 1 can of 🫛🥕 peas and carrots (about 260 g) and divide equally between meals 2 and 5.">🫛🥕 豌豆胡萝卜1罐沥干（约260 g），直接均分到第2、5盘。</p></li>
 <li class="cooking-task-source">
 <ol lang="zh-CN" class="cooking-source-zh">
-<li>直接加入第1盘的🍗 鸡腿肉和掰碎🥚 水煮蛋，在盘内卷好。</li>
+<li>直接加入第4盘的🍗 鸡腿肉和掰碎🥚 水煮蛋，在盘内卷好。</li>
 </ol>
 <ol lang="en" class="cooking-source-en" hidden>
-<li>Add meal 1’s shredded 🍗 chicken and crumbled 🥚 boiled egg directly to the tortilla, then roll it up on the plate.</li>
+<li>Add meal 4’s shredded 🍗 chicken and crumbled 🥚 boiled egg directly to the tortilla, then roll it up on the plate.</li>
 </ol>
 </li>
 <li class="cooking-task-source">
 <ol lang="zh-CN" class="cooking-source-zh">
-<li>直接在面包上分层加入第5盘的🍗 鸡腿肉、切片🥚 水煮蛋、🍅 番茄和菠菜，在盘内叠好。</li>
+<li>直接在面包上分层加入第1盘的🍗 鸡腿肉、切片🥚 水煮蛋、🍅 番茄和菠菜，在盘内叠好。</li>
 </ol>
 <ol lang="en" class="cooking-source-en" hidden>
-<li>Layer meal 5’s 🍗 chicken, sliced 🥚 boiled egg, 🍅 tomato and spinach directly onto the bread, then stack the sandwich on the plate.</li>
+<li>Layer meal 1’s 🍗 chicken, sliced 🥚 boiled egg, 🍅 tomato and spinach directly onto the bread, then stack the sandwich on the plate.</li>
 </ol>
 </li>
 <li class="cooking-task-source"><p data-en="Check that all seven meals are portioned, then put the meal containers in the 🧊 refrigerator.">确认七餐均已分好，将餐盒放入🧊 冰箱。</p></li>

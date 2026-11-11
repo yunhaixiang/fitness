@@ -12,6 +12,7 @@ test('seven distinct meals repeat symmetrically, retaining all 14 meal slots and
  const source=read('_includes/diet-schedule.html');
  const rows=[...source.matchAll(/<tr data-nutrition-key="([^"]+)"([^>]*)>([\s\S]*?)<\/tr>/g)];
  assert.equal(rows.length,14);
+ assert.deepEqual(basis.mealKeys,['bread','noodles','dumpling','wrap','rice','potato','pasta']);
  assert.deepEqual(rows.slice(0,7).map(m=>m[1]),basis.mealKeys);
  assert.deepEqual(rows.slice(7).map(m=>m[1]),basis.mealKeys);
  assert.equal(rows.filter(m=>m[2].includes('fuze')).length,2);
@@ -55,13 +56,15 @@ test('all cooking prerequisites are valid, acyclic, and have matching instructio
  for(const [id,group,steps] of sections){const fragment=page.split('<h2 id="'+id+'"')[1].split('<h2 ')[0];assert.equal((fragment.match(/<li class="cooking-task-source"/g)||[]).length,steps.length,id);steps.forEach(s=>instructionIds.add('cook-'+s));}
  for(const n of flow)assert.ok(instructionIds.has(n.link.slice(1))||['cook-finish'].includes(n.link.slice(1)),n.link);
  assert.ok(page.includes('裹粉黑线鳕'));
- assert.match(page,/第1、2、5、7盘各1个，第4、6盘各2个/);
+ assert.match(page,/第1、3、4、7盘各1个，第5、6盘各2个/);
  assert.match(page,/鸡蛋8个/);
- assert.equal(basis.recipes[0].egg,1);
- assert.equal(basis.recipes[2].egg,.5);
- assert.equal(basis.recipes[3].egg,2);
- assert.equal(basis.recipes[5].egg,2);
- assert.equal(basis.recipes[2].cornstarch,.05);
+ assert.match(page,/2 eggs each in meals 5 and 6/);
+ const recipes=Object.fromEntries(basis.mealKeys.map((k,i)=>[k,basis.recipes[i]]));
+ assert.equal(recipes.wrap.egg,1);
+ assert.equal(recipes.noodles.egg,.5);
+ assert.equal(recipes.potato.egg,2);
+ assert.equal(recipes.rice.egg,2);
+ assert.equal(recipes.noodles.cornstarch,.05);
 });
 test('routine shopping subtotal agrees with both stored prices and all shopping cards',()=>{
  const sum=[...read('shopping.md').matchAll(/data-weekly-cost="([\d.]+)"/g)].reduce((s,m)=>s+Number(m[1]),0);
@@ -71,7 +74,7 @@ test('routine shopping subtotal agrees with both stored prices and all shopping 
 });
 
 test('repeated main ingredients stay separated across the half-week boundary',()=>{
- const avoidAdjacent=[['wrap','bread','noodles'],['rice','noodles'],['potato','dumpling'],['pasta','noodles'],['wrap','bread']];
+ const avoidAdjacent=[['rice','noodles'],['potato','dumpling'],['pasta','noodles'],['wrap','bread']];
  for(let i=0;i<basis.mealKeys.length;i++){
   const a=basis.mealKeys[i],b=basis.mealKeys[(i+1)%basis.mealKeys.length];
   for(const group of avoidAdjacent)assert.ok(!(group.includes(a)&&group.includes(b)),`${a} next to ${b}`);

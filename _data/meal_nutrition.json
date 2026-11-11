@@ -4,12 +4,12 @@
     "kiwi_breakfast",
     "fruit_snack",
     "kiwi_snack",
-    "wrap",
-    "dumpling",
-    "noodles",
-    "potato",
     "bread",
+    "noodles",
+    "dumpling",
+    "wrap",
     "rice",
+    "potato",
     "pasta"
   ],
   "meals": {
