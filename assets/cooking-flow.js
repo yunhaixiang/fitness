@@ -28,7 +28,7 @@
     {"id": "potato", "label": ["土豆块", "Potato Wedges"], "note": ["", ""], "group": "oven", "before": ["oven-heat", "prep-potato"], "link": "#cook-potato", "minutes": 40},
     {"id": "chicken", "label": ["鸡大腿肉", "Chicken Thighs"], "note": ["", ""], "group": "oven", "before": ["oven-heat", "prep-chicken"], "link": "#cook-chicken", "minutes": 27},
     {"id": "ribs", "label": ["BBQ排骨", "BBQ Ribs"], "note": ["", ""], "group": "oven", "before": ["oven-heat", "prep-ribs"], "link": "#cook-ribs", "minutes": 20},
-    {"id": "shrimp", "label": ["面包糠烤虾", "Panko-Baked Shrimp"], "note": ["", ""], "group": "oven", "before": ["oven-heat", "prep-shrimp"], "link": "#cook-shrimp", "minutes": 12},
+    {"id": "shrimp", "label": ["蒜香红椒粉烤虾", "Garlic-Paprika Baked Shrimp"], "note": ["", ""], "group": "oven", "before": ["oven-heat", "prep-shrimp"], "link": "#cook-shrimp", "minutes": 12},
     {"id": "prep-rice", "label": ["备白米", "Prepare Rice"], "note": ["", ""], "group": "prep", "before": [], "link": "#cook-prep-rice", "minutes": 3, "displayGroup": "rice"},
     {"id": "rice", "label": ["白米饭", "White Rice"], "note": ["", ""], "group": "rice", "before": ["prep-rice"], "link": "#cook-rice", "minutes": 50},
     {"id": "egg-water", "label": ["煮锅一烧水", "Boil Water in Pot 1"], "note": ["", ""], "group": "pots", "before": [], "link": "#cook-egg-water", "manual": true, "resource": "pot-1", "minutes": 1},

@@ -2,7 +2,7 @@
   "checked_on": "2026-10-31",
   "currency": "CAD",
   "scope": "Walmart Canada public prices; individual checked_on retained. Popeye spinach, chicken thigh and salmon prices supplied by user. Weekly subtotal averages routine purchase cycles. Bread assumes three slices total 105 g; weighed produce billed by actual weight. Excludes as-needed seasonings, tax and delivery. Not a London store live stock guarantee.",
-  "weekly_total_cad": "152.50",
+  "weekly_total_cad": "151.98",
   "items": [
     {
       "item": "去骨去皮鸡大腿肉",
@@ -411,19 +411,6 @@
       "purchase_frequency_en": "1 Pack / About 4.3 Weeks"
     },
     {
-      "item": "面包糠",
-      "price_cad": "2.97",
-      "basis": "package",
-      "weekly_quantity": "0.1762114537444934",
-      "weekly_cost_cad": "0.52",
-      "source_type": "walmart_public",
-      "source_url": "https://www.walmart.ca/en/ip/Great-Value-Panko-Japanese-Style-Bread-Crumbs/6000197072643",
-      "product_url": "https://www.walmart.ca/en/ip/Great-Value-Panko-Japanese-Style-Bread-Crumbs/6000197072643",
-      "checked_on": "2026-11-07",
-      "purchase_frequency_zh": "1包 / 约5.7周",
-      "purchase_frequency_en": "1 Pack / About 5.7 Weeks"
-    },
-    {
       "item": "咖喱块",
       "price_cad": "3.97",
       "basis": "package",
@@ -573,20 +560,6 @@
       "weekly_quantity": "0.06",
       "weekly_cost_cad": "0.18",
       "availability_note": "Public listing price; London stock not verified."
-    },
-    {
-      "item": "玉米淀粉",
-      "product": "Great Value Corn Starch",
-      "price_cad": "3.77",
-      "basis": "box",
-      "package_g": 454,
-      "source_url": "https://www.walmart.ca/en/ip/great-value-corn-starch/10317740",
-      "product_url": "https://www.walmart.ca/en/ip/great-value-corn-starch/10317740",
-      "source_type": "walmart_public",
-      "checked_on": "2026-11-11",
-      "purchase_frequency_zh": "按需补",
-      "purchase_frequency_en": "As Needed",
-      "availability_note": "Public listing price; London stock not verified. Excluded from routine subtotal like other as-needed seasonings."
     }
   ],
   "updated_on": "2026-11-11"

@@ -435,13 +435,11 @@
     {
       "noodle": 0.53,
       "shrimp": 1.7,
-      "panko": 0.2,
       "thigh": 1.1625,
-      "egg": 0.5,
+      "egg": 1,
       "pc": 1.3,
-      "oil": 1.375,
-      "noodleSauce": 1,
-      "cornstarch": 0.05
+      "oil": 0.875,
+      "noodleSauce": 1
     },
     {
       "dumpling": 1.75,
@@ -497,10 +495,10 @@
     "Planning estimates, not measurements. Ingredient units: 100 g unless specified below; raw meat weights and dry grains. Ribs use 397 g edible meat and sauce per 600 g bone-in package; this yield is an assumption.",
     "Label units: egg one large; tortilla one 61 g; bread two slices; oil/mayo/salt one teaspoon; meatballs 85 g; pasta 85 g; ribs 140 g edible; sauce 125 mL; dumplings four pieces (96 g) WITHOUT dipping sauce, estimated by subtracting a sauce proxy from the combined label; curry 18 g.",
     "Vegetable size assumptions: zucchini 200 g, half orange bell pepper 75 g edible (170 g whole pepper; red sweet pepper nutrient profile retained as a proxy), Roma 120 g. Shrimp reference is the actual 50 kcal/100 g package, not generic cooked shrimp.",
-    "Oil: thighs 1/2 tsp, potatoes 1/4, shrimp 1, salmon 1/4, mushrooms 1/4, spinach 1/2, ground chicken 1, noodles 1/4 tsp per half-week. Salt: no added salt on chicken thighs, potatoes or salmon. Dry spices not quantified except in the new noodle sauce; no stock powder in this version.",
+    "Oil: thighs 1/2 tsp, potatoes 1/4, shrimp 1/2, salmon 1/4, mushrooms 1/4, spinach 1/2, ground chicken 1, noodles 1/4 tsp per half-week. Salt: no added salt on chicken thighs, potatoes or salmon. Dry spices not quantified except in the new noodle sauce; no stock powder in this version.",
     "EPA+DHA uses fish composition proxies. The six previously missing micronutrients are calculated using _data/micronutrient_basis.json, combining Canadian product labels, CNF 2026 composition proxies and explicitly documented iodine assumptions.",
     "Great Value Chicken & Vegetable Potstickers 1.13 kg: verified label is 200 kcal / 4 dumplings (96 g) WITH 15 mL sauce. Meal 3 now uses seven pieces (168 g) WITHOUT sauce. No separate sauce label is available. Working estimate per 15 mL sauce: 30 kcal, P0.5/C6/F0.3 g, SFA0.03 g, fibre0 g, sugar6 g, sodium500 mg, cholesterol0 and EPA+DHA0. This is an assumed sweet soy dipping-sauce profile, not manufacturer data. Subtract 1.75 sauce portions per meal (52.5 kcal); all resulting dumpling-only nutrients are estimates. Original combined label and sauce assumption are retained as separate unused arr entries for audit. Purchasing cost stays unchanged because the sauce is included in the same bag; existing package-yield cost assumption is retained.",
-    "Balanced portions: rice 35 g dry, pasta 52 g dry, noodles 53 g dry. Potatoes 170 g raw per half-week, all in meal 6 with their existing oil; no added salt. Eight boiled eggs per half-week: meals 1, 3, 4 and 7 get one each, meals 5 and 6 get two each. One additional whole egg is prepared for shrimp coating; half is counted as consumed. Purchase 18 eggs weekly; count 17 eggs as consumed. No egg-frying oil. Shrimp 170 g raw per half-week, cooked with 20 g panko and all served in meal 2; one 340 g bag weekly.",
+    "Balanced portions: rice 35 g dry, pasta 52 g dry, noodles 53 g dry. Potatoes 170 g raw per half-week, all in meal 6 with their existing oil; no added salt. Nine boiled eggs per half-week: meals 1, 2, 3, 4 and 7 get one each, meals 5 and 6 get two each. Purchase and consume 18 eggs weekly. No egg-frying oil. Shrimp 170 g raw per half-week, seasoned with garlic powder, paprika and black pepper, baked with 1/2 tsp olive oil and all served in meal 2; one 340 g bag weekly.",
     "Haddock: High Liner Pan-Sear Selects Roasted Garlic & Herbs, 500 g / four fillets. Manufacturer nutrition per about one fillet (127 g label serving): 170 kcal, protein 18 g, carbohydrate 11 g, fat 6 g, saturated fat 0.5 g, trans fat 0 g, fibre 1 g, sugar 0 g, sodium 410 mg, cholesterol 55 mg. Two fillets weekly; one box every two weeks. Manufacturer figures take precedence over inconsistent retailer copy. EPA+DHA provisionally estimated at 0.16 g per fillet by scaling the original Traditional fish proxy by protein (0.15 x 18/17); not measured. Label total omega-3 is 0.7 g and includes canola oil, so is not treated as EPA+DHA. Use the actual package label if it differs.",
     "Clover Leaf Low Sodium Flaked Light Tuna in Water, one 170 g can weekly. Manufacturer label unit is half a can drained (55 g); one unit (half a can drained, 55 g) in each sandwich; no tuna in the wraps. Chipotle mayonnaise is 1 tsp per wrap; Light ½ Fat mayonnaise is 3.5 tsp per sandwich. Tuna label total omega-3 0.2 g per half-can is used as an EPA+DHA approximation, not a separately measured EPA+DHA value. Little Yellows potatoes use the Canadian label per 110 g; 680 g bag every two weeks. No meatballs. Four haddock fillets weekly, one 500 g box.",
     "Old El Paso Mexican Refried Pinto Beans 398 mL: one can weekly, half a can (199 mL) per wrap, without draining. Recipe unit is 125 mL. Manufacturer label: 90 kcal, protein 5 g, carbohydrate 16 g, fat 0.5 g, saturated fat 0.1 g, fibre 8 g, sugar 1 g, sodium 450 mg, cholesterol 0 mg. EPA/DHA assumed zero for this plant product. Checked 2026-11-09. https://www.oldelpaso.ca/products/rice-beans/old-el-paso-refried-beans",
@@ -508,8 +506,7 @@
     "Meal 6 uses half a scored block of the 92 g / four-block Golden Curry pack: 11.5 g per meal, 23 g weekly. Nutrition reference unit remains 18 g. Meal 3 noodleSauce unit: fish sauce 2.5 mL, light soy sauce 2.5 mL, dark soy sauce 2.5 mL, oyster sauce 5 mL, garlic powder 1/4 tsp, paprika 1/4 tsp (about 0.6 g), basil 2–3 leaves and water 30 mL. Generic planning estimate excluding oil: 20 kcal, P1/C3.8/F0.1 g, saturated fat0 g, fibre0.3 g, sugar1.8 g, sodium900 mg. These are estimated recipe totals, not verified totals of the selected product labels. Extra olive oil 1/4 tsp is counted separately in recipe oil, replacing the old sesame oil. Rice water remains equal volume to rice: 35 g rice estimated 44 mL water.",
     "Unico Tomato Paste 156 mL: one can weekly, 78 mL per pasta meal. Sauce unit remains 125 mL. Label per 30 mL: 20 kcal, protein 1 g, carbs 5 g, fat 0 g, saturated fat 0 g, fibre 1 g, sugars 3 g, sodium 0 mg (rounded label), cholesterol 0 mg. Source: https://www.unico.ca/products/unico-tomato-paste. Add pasta water, garlic powder and Italian seasoning; retain existing oil. Pasta is 52 g dry per meal.",
     "Hellmann’s Light ½ Fat Mayonnaise: Canadian label per 15 mL is 40 kcal, P0/C1/F4 g, saturated fat0.3 g, fibre0 g, sugar0 g, sodium100 mg, cholesterol0 mg. Recipe unit is 5 mL; sandwich uses 17.5 mL. Nutrition reference is the Canadian 890 mL label; shopping uses the 750 mL squeeze bottle of the same Light ½ Fat product. No dispensing-length assumption is carried over from the Chipotle bottle.",
-    "2026-11-10: Noodle sauce uses paprika instead of fresh red chili. Retain the coarse 20 kcal sauce estimate; this sub-gram spice substitution is below the precision of that estimate.",
-    "Shrimp coating per half-week: 1 whole egg, 5 g cornstarch, existing 20 g panko and 1 tsp oil. Count half the egg wash as consumed (0.5 egg = 36 kcal); the remaining half is discarded. Panko, cornstarch and oil remain fully counted. Cornstarch uses generic USDA composition per 100 g, not a verified brand label."
+    "2026-11-10: Noodle sauce uses paprika instead of fresh red chili. Retain the coarse 20 kcal sauce estimate; this sub-gram spice substitution is below the precision of that estimate."
   ],
   "sources": {
     "shrimp": "https://www.walmart.ca/en/ip/Great-Value-Wild-Argentinian-Large-Raw-Shrimp/6000202999819",
@@ -635,9 +632,5 @@
       "epaDha": 0
     },
     "basis": "Existing raw kiwi composition proxy and 69 g edible portion. Mixed-fruit macros transferred from the previous breakfast baseline; weekly mixed fruit remains unchanged."
-  },
-  "shrimpEggWash": {
-    "preparedEggsPerHalfWeek": 1,
-    "consumedFraction": 0.5
   }
 }

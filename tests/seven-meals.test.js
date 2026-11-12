@@ -24,21 +24,20 @@ test('weekly meat, eggs, grains and portions match whole-package purchase cycles
  close(weekly('thigh')*100,930); close(weekly('ground')*100,454);
  close(weekly('shrimp')*100,340); close(weekly('salmon')*100,320);
  close(weekly('ball'),0); close(weekly('haddock'),4); close(weekly('dumpling')*96,336);
- close(weekly('egg'),17);
- const wash=basis.shrimpEggWash;
- close(weekly('egg')+2*wash.preparedEggsPerHalfWeek*(1-wash.consumedFraction),18); close(weekly('potato')*100,340);
+ close(weekly('egg'),18);
+ assert.equal(basis.shrimpEggWash,undefined); close(weekly('potato')*100,340);
  close(weekly('sweetpotato'),0);
  close(weekly('rice')*100,70); close(weekly('pasta')*85,104);
  close(weekly('noodle')*100,106); close(weekly('sauce')*125,156);
  const recipes=Object.fromEntries(basis.mealKeys.map((k,i)=>[k,basis.recipes[i]]));
  assert.equal(recipes.wrap.tuna,undefined); close(recipes.bread.tuna,1); close(recipes.bread.bread,1.5);
- close(recipes.noodles.shrimp,1.7); close(recipes.noodles.panko,.2);
+ close(recipes.noodles.shrimp,1.7); assert.equal(recipes.noodles.panko,undefined);
  assert.equal(recipes.rice.shrimp,undefined); assert.equal(recipes.rice.panko,undefined);
  close(recipes.rice.curry*18,11.5); assert.equal(recipes.noodles.curry,undefined); close(recipes.noodles.noodleSauce,1);
  close(recipes.wrap.refriedBeans*2,weekly('refriedBeans'));
  close(weekly('refriedBeans')*125,398); close(weekly('tuna'),2); close(weekly('mayo'),2); close(weekly('lightMayo'),7); close(weekly('spinach')*100,284);
  close(weekly('mushroom')*100,227); close(weekly('pc')*100,520);
- close(weekly('oil'),8); // 4 tsp each half-week; coating oil unchanged
+ close(weekly('oil'),7); // 3.5 tsp each half-week, including 0.5 tsp for shrimp
 });
 test('daily intake and deficit use the same meal data as the cards',()=>{
  const daily=(basis.mealKeys.reduce((s,k)=>s+2*Number(nutrition[k].kcal),0)+3*Number(nutrition.fruit_breakfast.kcal)+4*Number(nutrition.kiwi_breakfast.kcal)+3*Number(nutrition.fruit_snack.kcal)+4*Number(nutrition.kiwi_snack.kcal))/7;
@@ -56,15 +55,15 @@ test('all cooking prerequisites are valid, acyclic, and have matching instructio
  for(const [id,group,steps] of sections){const fragment=page.split('<h2 id="'+id+'"')[1].split('<h2 ')[0];assert.equal((fragment.match(/<li class="cooking-task-source"/g)||[]).length,steps.length,id);steps.forEach(s=>instructionIds.add('cook-'+s));}
  for(const n of flow)assert.ok(instructionIds.has(n.link.slice(1))||['cook-finish'].includes(n.link.slice(1)),n.link);
  assert.ok(page.includes('裹粉黑线鳕'));
- assert.match(page,/第1、3、4、7盘各1个，第5、6盘各2个/);
- assert.match(page,/鸡蛋8个/);
+ assert.match(page,/第1、2、3、4、7盘各1个，第5、6盘各2个/);
+ assert.match(page,/鸡蛋9个/);
  assert.match(page,/2 eggs each in meals 5 and 6/);
  const recipes=Object.fromEntries(basis.mealKeys.map((k,i)=>[k,basis.recipes[i]]));
  assert.equal(recipes.wrap.egg,1);
- assert.equal(recipes.noodles.egg,.5);
+ assert.equal(recipes.noodles.egg,1);
  assert.equal(recipes.potato.egg,2);
  assert.equal(recipes.rice.egg,2);
- assert.equal(recipes.noodles.cornstarch,.05);
+ assert.equal(recipes.noodles.cornstarch,undefined);
 });
 test('routine shopping subtotal agrees with both stored prices and all shopping cards',()=>{
  const sum=[...read('shopping.md').matchAll(/data-weekly-cost="([\d.]+)"/g)].reduce((s,m)=>s+Number(m[1]),0);

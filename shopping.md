@@ -223,7 +223,6 @@ visual: true
 <tr data-price-id="39" data-weekly-cost="1.32" data-purchase-group="weekly"><td data-en="Zucchini">西葫芦</td><td><a href="https://www.walmart.ca/en/ip/Zucchini-Green/6000191270110">Green Zucchini</a><br><span data-en="Sold Individually">单颗售卖</span></td><td data-en="2 / Week">2根 / 周</td><td><a href="https://www.walmart.ca/en/ip/Zucchini-Green/6000191270110">$0.66 / Avg.</a></td></tr>
 <tr data-price-id="40" data-weekly-cost="1.04" data-purchase-group="weekly"><td data-en="Roma Tomato">罗马番茄</td><td><a href="https://www.walmart.ca/en/ip/Tomato-Roma-Sold-in-singles-0-10-0-14-KG/6000191272055">Roma Tomato</a><br><span data-en="Sold Individually">单颗售卖</span></td><td data-en="2 / Week">2个 / 周</td><td><a href="https://www.walmart.ca/en/ip/Tomato-Roma-Sold-in-singles-0-10-0-14-KG/6000191272055">$0.52 / Avg.</a></td></tr>
 <tr data-price-id="41" data-weekly-cost="0.46" data-purchase-group="restock"><td data-en="Rice Noodles">扁米粉</td><td><a href="https://www.walmart.ca/en/ip/Erawan-Rice-Stick/6000199121439">Erawan Rice Stick</a><br><span data-en="454 g">454 g</span></td><td data-en="1 Pack / About 4.3 Weeks">1包 / 约4.3周</td><td><a href="https://www.walmart.ca/en/ip/Erawan-Rice-Stick/6000199121439">$1.97</a></td></tr>
-<tr data-price-id="42" data-weekly-cost="0.52" data-purchase-group="restock"><td data-en="Panko Breadcrumbs">面包糠</td><td><a href="https://www.walmart.ca/en/ip/Great-Value-Panko-Japanese-Style-Bread-Crumbs/6000197072643">Great Value Panko Japanese Style Bread Crumbs</a><br><span data-en="227 g">227 g</span></td><td data-en="1 Pack / About 5.7 Weeks">1包 / 约5.7周</td><td><a href="https://www.walmart.ca/en/ip/Great-Value-Panko-Japanese-Style-Bread-Crumbs/6000197072643">$2.97</a></td></tr>
 <tr data-price-id="43" data-weekly-cost="0.99" data-purchase-group="restock"><td data-en="Curry Roux">咖喱块</td><td><a href="https://www.walmart.ca/en/ip/S-B-Golden-curry-sauce-mix-medium-hot/6000198034558">S&amp;B Golden Curry Sauce Mix Medium Hot</a><br><span data-en="92 g">92 g</span></td><td data-en="1 Box / 4 Weeks">1盒 / 4周</td><td><a href="https://www.walmart.ca/en/ip/S-B-Golden-curry-sauce-mix-medium-hot/6000198034558">$3.97</a></td></tr>
 <tr data-price-id="45" data-weekly-cost="2.97" data-purchase-group="weekly"><td data-en="Refried Beans">豆泥</td><td><a href="https://www.walmart.ca/en/ip/Old-El-Paso-Mexican-Refried-Beans-Pinto-Beans-398-ml/6000188283974">Old El Paso Mexican Refried Pinto Beans</a><br>398 mL</td><td data-en="1 Can / Week">1罐 / 周</td><td><a href="https://www.walmart.ca/en/ip/Old-El-Paso-Mexican-Refried-Beans-Pinto-Beans-398-ml/6000188283974">$2.97</a></td></tr>
 
@@ -232,12 +231,11 @@ visual: true
 <tr data-price-id="50" data-purchase-group="restock"><td data-en="Dark Soy Sauce">老抽</td><td><a href="https://www.walmart.ca/en/ip/Pearl-River-Bridge-PRB-Dark-Soy-Sauce-500-ml/10278824">Pearl River Bridge Dark Soy Sauce</a><br>500 mL</td><td data-en="As Needed">按需补</td><td><a href="https://www.walmart.ca/en/ip/Pearl-River-Bridge-PRB-Dark-Soy-Sauce-500-ml/10278824">$2.97</a></td></tr>
 <tr data-price-id="51" data-purchase-group="restock"><td data-en="Oyster Sauce">蚝油</td><td><a href="https://www.walmart.ca/en/ip/LKK-PANDA-BRAND-OYSTER-FLAVOURED-SAUCE-510G/10285991">Lee Kum Kee Panda Oyster Flavoured Sauce</a><br>510 g</td><td data-en="As Needed">按需补</td><td><a href="https://www.walmart.ca/en/ip/LKK-PANDA-BRAND-OYSTER-FLAVOURED-SAUCE-510G/10285991">$4.27</a></td></tr>
 <tr data-price-id="53" data-purchase-group="restock"><td data-en="Fresh Basil">罗勒叶</td><td><a href="https://www.walmart.ca/en/ip/fresh-basil-your-fresh-market/6000207633451">Your Fresh Market Fresh Basil</a><br>28 g</td><td data-en="As Needed">按需补</td><td><a href="https://www.walmart.ca/en/ip/fresh-basil-your-fresh-market/6000207633451">$1.67</a></td></tr>
-<tr data-price-id="58" data-purchase-group="restock"><td data-en="Cornstarch">玉米淀粉</td><td><a href="https://www.walmart.ca/en/ip/great-value-corn-starch/10317740">Great Value Corn Starch</a><br>454 g</td><td data-en="As Needed">按需补</td><td><a href="https://www.walmart.ca/en/ip/great-value-corn-starch/10317740">$3.77</a></td></tr>
 <tr>
 <td>每周合计</td>
 <td>—</td>
 <td style="text-align: right;">—</td>
-<td style="text-align: right;">$152.50</td>
+<td style="text-align: right;">$151.98</td>
 </tr>
 </tbody>
 </table>
