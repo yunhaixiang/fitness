@@ -33,7 +33,7 @@ test('weekly meat, eggs, grains and portions match whole-package purchase cycles
  assert.equal(recipes.wrap.tuna,undefined); close(recipes.bread.tuna,1); close(recipes.bread.bread,1.5);
  close(recipes.noodles.shrimp,1.7); assert.equal(recipes.noodles.panko,undefined);
  assert.equal(recipes.rice.shrimp,undefined); assert.equal(recipes.rice.panko,undefined);
- close(recipes.rice.curry*18,11.5); assert.equal(recipes.noodles.curry,undefined); close(recipes.noodles.noodleSauce,1);
+ close(recipes.rice.curry*18,23); assert.equal(recipes.noodles.curry,undefined); close(recipes.noodles.noodleSauce,1);
  close(recipes.wrap.refriedBeans*2,weekly('refriedBeans'));
  close(weekly('refriedBeans')*125,398); close(weekly('tuna'),2); close(weekly('mayo'),2); close(weekly('lightMayo'),7); close(weekly('spinach')*100,284);
  close(weekly('mushroom')*100,227); close(weekly('pc')*100,520);
@@ -55,14 +55,14 @@ test('all cooking prerequisites are valid, acyclic, and have matching instructio
  for(const [id,group,steps] of sections){const fragment=page.split('<h2 id="'+id+'"')[1].split('<h2 ')[0];assert.equal((fragment.match(/<li class="cooking-task-source"/g)||[]).length,steps.length,id);steps.forEach(s=>instructionIds.add('cook-'+s));}
  for(const n of flow)assert.ok(instructionIds.has(n.link.slice(1))||['cook-finish'].includes(n.link.slice(1)),n.link);
  assert.ok(page.includes('裹粉黑线鳕'));
- assert.match(page,/第1、2、3、4、7盘各1个，第5、6盘各2个/);
+ assert.match(page,/第1、3、4、5、7盘各1个，第2、6盘各2个/);
  assert.match(page,/鸡蛋9个/);
- assert.match(page,/2 eggs each in meals 5 and 6/);
+ assert.match(page,/2 eggs each in meals 2 and 6/);
  const recipes=Object.fromEntries(basis.mealKeys.map((k,i)=>[k,basis.recipes[i]]));
  assert.equal(recipes.wrap.egg,1);
- assert.equal(recipes.noodles.egg,1);
+ assert.equal(recipes.noodles.egg,2);
  assert.equal(recipes.potato.egg,2);
- assert.equal(recipes.rice.egg,2);
+ assert.equal(recipes.rice.egg,1);
  assert.equal(recipes.noodles.cornstarch,undefined);
 });
 test('routine shopping subtotal agrees with both stored prices and all shopping cards',()=>{

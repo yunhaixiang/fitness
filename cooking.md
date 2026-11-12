@@ -197,12 +197,12 @@ cooking: true
 <li class="cooking-task-source">
 <ol lang="zh-CN" class="cooking-source-zh">
 <li>冷却剥壳，按需切半。</li>
-<li>第1、2、3、4、7盘各1个，第5、6盘各2个。</li>
+<li>第1、3、4、5、7盘各1个，第2、6盘各2个。</li>
 <li>第4盘的掰碎，第1盘的切片。</li>
 </ol>
 <ol lang="en" class="cooking-source-en" hidden>
 <li>Cool, peel and cut as needed.</li>
-<li>Put 1 🥚 egg each in meals 1, 2, 3, 4 and 7, and 2 eggs each in meals 5 and 6.</li>
+<li>Put 1 🥚 egg each in meals 1, 3, 4, 5 and 7, and 2 eggs each in meals 2 and 6.</li>
 <li>Crumble the eggs for meal 4 and slice the egg for meal 1.</li>
 </ol>
 </li>
@@ -262,12 +262,12 @@ cooking: true
 </li>
 <li class="cooking-task-source">
 <ol lang="zh-CN" class="cooking-source-zh">
-<li>💧 水150 mL烧热后关小火，溶入🍛 Golden Curry咖喱块半小块（11.5 g）。</li>
+<li>💧 水150 mL烧热后关小火，溶入🍛 Golden Curry咖喱块1小块（23 g）。</li>
 <li>再煮约5分钟至顺滑。</li>
 <li>盛入第5盘，分盘时淋在🍚 米饭上。</li>
 </ol>
 <ol lang="en" class="cooking-source-en" hidden>
-<li>Heat 150 mL 💧 water, lower the heat and dissolve ½ block (11.5 g) of 🍛 Golden Curry roux.</li>
+<li>Heat 150 mL 💧 water, lower the heat and dissolve 1 block (23 g) of 🍛 Golden Curry roux.</li>
 <li>Simmer for about 5 minutes until smooth.</li>
 <li>Transfer to meal 5 and serve over the rice.</li>
 </ol>
