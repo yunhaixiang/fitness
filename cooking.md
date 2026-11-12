@@ -358,14 +358,14 @@ cooking: true
 <ol lang="zh-CN" class="cooking-source-zh">
 <li>在第4盘的🌯 卷饼皮上抹上🥣 Chipotle蛋黄酱1茶匙（5 mL；酱条直径约0.8 cm时，挤约10 cm长）。</li>
 <li>🫘 豆泥取½罐，抹在卷饼皮上。</li>
-<li>半个🫑 橙甜椒洗净去籽切细条，放到卷饼皮上。</li>
+<li>1个🫑 橙甜椒洗净去籽切细条，放到卷饼皮上。</li>
 <li>豆泥开罐后用一半，剩余一半密封冷藏供后半周用。</li>
 <li>多余卷饼皮冷冻。</li>
 </ol>
 <ol lang="en" class="cooking-source-en" hidden>
 <li>Spread the 🌯 tortilla on plate 4 with 1 tsp 🥣 Chipotle mayonnaise (5 mL; about 10 cm squeezed length at a strand diameter of 0.8 cm).</li>
 <li>Spread half a can of 🫘 refried beans on the tortilla.</li>
-<li>Wash, deseed and slice half an 🫑 orange bell pepper, then add to the tortilla.</li>
+<li>Wash, deseed and slice one 🫑 orange bell pepper, then add to the tortilla.</li>
 <li>Use half the can of refried beans and refrigerate the remaining half in a sealed container for the second session.</li>
 <li>Freeze spare tortillas.</li>
 </ol>
