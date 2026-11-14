@@ -15,7 +15,7 @@ diet: true
 <p>周三—周六早餐：{{ site.data.meal_nutrition.meals.kiwi_breakfast.foodZh }}。</p>
 <p>周日—周二睡前加餐：{{ site.data.meal_nutrition.meals.fruit_snack.foodZh }}。</p>
 <p>周三—周六睡前加餐：{{ site.data.meal_nutrition.meals.kiwi_snack.foodZh }}。</p>
-<p>午晚餐饮料：前两餐（上1、上2）每餐 Fuze Tea 无糖冰茶 250 mL；其余12餐每餐 Fresca 1罐（355 mL）。</p>
+<p>午晚餐饮料：前两餐（上1、上2）每餐 Sparkling Ice 橙芒果味气泡水 251.5 mL；其余12餐每餐 Fresca 1罐（355 mL）。</p>
 </noscript>
 
 

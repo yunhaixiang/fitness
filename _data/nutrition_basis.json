@@ -632,5 +632,10 @@
       "epaDha": 0
     },
     "basis": "Existing raw kiwi composition proxy and 69 g edible portion. Mixed-fruit macros transferred from the previous breakfast baseline; weekly mixed fruit remains unchanged."
-  }
+  },
+  "weeklyDrinkNutrition": {
+    "sodium": 10,
+    "potassium": 60
+  },
+  "weeklyDrinkNutritionSource": "Sparkling Ice Orange Mango, one 503 mL bottle per week: https://sparklingice.ca/faq/"
 }

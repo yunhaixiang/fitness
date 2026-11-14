@@ -28,6 +28,7 @@ def recalculate(root):
  fields+=micro['fields']
  daily={f:(sum(float(meals[k].get(f,0))*2 for k in source['mealKeys'])+3*float(meals['fruit_breakfast'].get(f,0))+4*float(meals['kiwi_breakfast'].get(f,0))+3*float(meals['fruit_snack'].get(f,0))+4*float(meals['kiwi_snack'].get(f,0)))/7 for f in fields}
  daily['sodium']+=12*35/7
+ for field,value in source.get('weeklyDrinkNutrition',{}).items():daily[field]+=value/7
  (root/'_data/meal_nutrition.json').write_text(json.dumps(data,ensure_ascii=False,indent=2)+'\n')
  file=root/'_data/plan_metrics.yml';metrics=file.read_text();burn=float(re.search(r'weekly_burn: ([\d.]+)',metrics)[1]);deficit=burn-daily['kcal']*7
  updates={'weekly_deficit':str(round(deficit)),'weekly_deficit_display':f'"{round(deficit):,}"','weekly_deficit_precise':f'{deficit:.5f}','intake_daily':f'{daily["kcal"]:.5f}'}

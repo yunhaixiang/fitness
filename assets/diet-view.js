@@ -135,7 +135,9 @@
           ['主食', 'Starch', value(row, 3)],
           ['蛋白质', 'Protein', value(row, 4)],
           ['蔬菜', 'Vegetables', value(row, 5)],
-          ['饮料', 'Drink', row.dataset.drink === 'fuze'
+          ['饮料', 'Drink', row.dataset.drink === 'sparkling-ice'
+            ? label('Sparkling Ice 橙芒果味气泡水 251.5 mL', '251.5 mL Sparkling Ice Orange Mango')
+            : row.dataset.drink === 'fuze'
             ? label('Fuze Tea 无糖冰茶 250 mL', '250 mL Fuze Tea Zero Sugar')
             : label('Fresca 1罐（355 mL）', '1 can of Fresca (355 mL)')]
         ]);

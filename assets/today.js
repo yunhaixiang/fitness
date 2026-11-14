@@ -47,7 +47,9 @@
     for (const [kind, zh, english] of [['lunch', '午餐', 'Lunch'], ['dinner', '晚餐', 'Dinner']]) {
       const row = rows.find((item) => cell(item, 2) === zh);
       if (!row) continue;
-      const drink = row.dataset.drink === 'fuze' ? label('Fuze Tea 无糖冰茶 250 mL', '250 mL Fuze Tea Zero Sugar')
+      const drink = row.dataset.drink === 'sparkling-ice'
+            ? label('Sparkling Ice 橙芒果味气泡水 251.5 mL', '251.5 mL Sparkling Ice Orange Mango')
+            : row.dataset.drink === 'fuze' ? label('Fuze Tea 无糖冰茶 250 mL', '250 mL Fuze Tea Zero Sugar')
         : label('Fresca 1罐（355 mL）', '1 can of Fresca (355 mL)');
       const food = [...[3, 4, 5].map((index) => (en && row.cells[index]?.dataset.en ? row.cells[index].dataset.en : translated(cell(row, index)))).filter(Boolean), drink].join(' · ');
       addMeal(kind, label(zh, english), food, cell(row, 6));

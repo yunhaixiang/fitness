@@ -61,11 +61,11 @@ visual: true
 <td style="text-align: right;">1箱 / 周</td>
 <td style="text-align: right;"><a href="https://www.walmart.ca/en/ip/Fresca-Citrus-Soda-Pop-Fridge-Pack-Cans-355-mL-12-pack/10277189">$6.94</a></td>
 </tr>
-<tr data-price-id="8" data-weekly-cost="2.77" data-purchase-group="weekly">
-<td>Fuze无糖冰茶</td>
-<td><a href="https://www.walmart.ca/en/ip/Fuze-Iced-Tea-Zero-Sugar-Lemon-Bottle/39X12Q1LJGX0">Fuze Iced Tea Zero Sugar Lemon</a><br>500 mL / 瓶</td>
+<tr data-price-id="8" data-weekly-cost="1.27" data-purchase-group="weekly">
+<td data-en="Sparkling Ice Orange Mango">Sparkling Ice 橙芒果味气泡水</td>
+<td><a href="https://www.walmart.ca/en/ip/Sparkling-Ice-Orange-Mango-503ml/6000190578527">Sparkling Ice Orange Mango</a><br>503 mL / 瓶</td>
 <td style="text-align: right;">1瓶 / 周</td>
-<td style="text-align: right;"><a href="https://www.walmart.ca/en/ip/Fuze-Iced-Tea-Zero-Sugar-Lemon-Bottle/39X12Q1LJGX0">$2.77</a></td>
+<td style="text-align: right;"><a href="https://www.walmart.ca/en/ip/Sparkling-Ice-Orange-Mango-503ml/6000190578527">$1.27</a></td>
 </tr>
 <tr data-price-id="9" data-weekly-cost="1.49" data-purchase-group="fortnightly"><td>土豆</td><td><a href="https://www.walmart.ca/en/ip/The-Little-Potato-Company-Fresh-Little-Potatoes-1-5lb-Little-Yellows-Fresh-yellow-potatoes/6000201597418">The Little Potato Company Little Yellows</a><br>680 g</td><td data-en="1 Bag / 2 Weeks">1袋 / 2周</td><td><a href="https://www.walmart.ca/en/ip/The-Little-Potato-Company-Fresh-Little-Potatoes-1-5lb-Little-Yellows-Fresh-yellow-potatoes/6000201597418">$2.98</a></td></tr>
 <tr data-price-id="10" data-weekly-cost="2.74" data-purchase-group="weekly">
@@ -235,7 +235,7 @@ visual: true
 <td>每周合计</td>
 <td>—</td>
 <td style="text-align: right;">—</td>
-<td style="text-align: right;">$154.15</td>
+<td style="text-align: right;">$152.65</td>
 </tr>
 </tbody>
 </table>

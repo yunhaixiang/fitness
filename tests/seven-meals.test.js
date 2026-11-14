@@ -8,14 +8,14 @@ const read = p => fs.readFileSync(path.join(root,p),'utf8');
 const nutrition = JSON.parse(read('_data/meal_nutrition.json')).meals;
 const basis = JSON.parse(read('_data/nutrition_basis.json'));
 const flow = vm.runInNewContext(read('assets/cooking-flow.js').match(/const nodes = (\[[\s\S]*?\n  \]);/)[1]);
-test('seven distinct meals repeat symmetrically, retaining all 14 meal slots and two Fuze servings',()=>{
+test('seven distinct meals repeat symmetrically, retaining all 14 meal slots and two Sparkling Ice servings',()=>{
  const source=read('_includes/diet-schedule.html');
  const rows=[...source.matchAll(/<tr data-nutrition-key="([^"]+)"([^>]*)>([\s\S]*?)<\/tr>/g)];
  assert.equal(rows.length,14);
  assert.deepEqual(basis.mealKeys,['bread','noodles','dumpling','wrap','rice','potato','pasta']);
  assert.deepEqual(rows.slice(0,7).map(m=>m[1]),basis.mealKeys);
  assert.deepEqual(rows.slice(7).map(m=>m[1]),basis.mealKeys);
- assert.equal(rows.filter(m=>m[2].includes('fuze')).length,2);
+ assert.equal(rows.filter(m=>m[2].includes('sparkling-ice')).length,2);
  for(const row of rows){assert.ok(nutrition[row[1]]);assert.equal((row[3].match(/<td/g)||[]).length,7);}
 });
 test('weekly meat, eggs, grains and portions match whole-package purchase cycles',()=>{
