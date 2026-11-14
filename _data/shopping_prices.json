@@ -2,7 +2,7 @@
   "checked_on": "2026-10-31",
   "currency": "CAD",
   "scope": "Walmart Canada public prices and user-provided Metro fruit price; individual checked_on retained. Chicken thigh and salmon prices supplied by user. Weekly subtotal averages routine purchase cycles. Bread assumes three slices total 105 g; weighed produce billed by actual weight. Excludes as-needed seasonings, tax and delivery. Not a London store live stock guarantee.",
-  "weekly_total_cad": "162.09",
+  "weekly_total_cad": "161.25",
   "items": [
     {
       "item": "去骨去皮鸡大腿肉",
@@ -226,10 +226,11 @@
       "source_url": "https://www.walmart.ca/en/cp/diabetes-friendly-diet/6000207260877",
       "source_type": "walmart_public",
       "product_url": "https://www.walmart.ca/en/ip/Fibre-One-Breakfast-Cereal-Crunchy-Original-High-Fibre-and-Whole-Grains-587-g/1OUNWA7P5WCS",
-      "purchase_frequency_zh": "1盒 / 2周",
-      "purchase_frequency_en": "1 Box / 2 Weeks",
-      "weekly_cost_cad": "2.73",
-      "weekly_quantity": "0.5"
+      "purchase_frequency_zh": "1盒 / 约20天",
+      "purchase_frequency_en": "1 Box / About 20 Days",
+      "weekly_cost_cad": "1.89",
+      "weekly_quantity": "0.34582623509369675",
+      "daily_grams": 29
     },
     {
       "item": "黑胡椒",

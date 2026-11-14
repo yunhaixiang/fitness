@@ -525,26 +525,26 @@
   },
   "breakfastBase": {
     "fruit_breakfast": {
-      "kcal": 271.2373333333333,
-      "protein": 12.40096,
-      "carbs": 58.510239999999996,
-      "fat": 5.7239466666666665,
-      "saturatedFat": 0.7253226666666667,
-      "fibre": 22.118666666666666,
-      "sugar": 16.32336,
-      "sodium": 254.39200000000002,
+      "kcal": 242.1083010752688,
+      "protein": 11.56870193548387,
+      "carbs": 47.48282064516129,
+      "fat": 5.515882150537634,
+      "saturatedFat": 0.6837097634408602,
+      "fibre": 16.500924731182796,
+      "sugar": 16.11529548387097,
+      "sodium": 208.61780645161292,
       "cholesterol": 0.0,
       "epaDha": 0.0
     },
     "late_fruit_breakfast": {
-      "kcal": 254.88299999999998,
-      "protein": 12.18242,
-      "carbs": 54.57498,
-      "fat": 5.66356,
-      "saturatedFat": 0.708987,
-      "fibre": 21.729,
-      "sugar": 13.090969999999999,
-      "sodium": 252.50900000000001,
+      "kcal": 225.75396774193547,
+      "protein": 11.350161935483872,
+      "carbs": 43.54756064516129,
+      "fat": 5.455495483870968,
+      "saturatedFat": 0.6673740967741936,
+      "fibre": 16.11125806451613,
+      "sugar": 12.882905483870966,
+      "sodium": 206.73480645161294,
       "cholesterol": 0.0,
       "epaDha": 0.0
     }
@@ -640,5 +640,24 @@
     "sodium": 10,
     "potassium": 60
   },
-  "weeklyDrinkNutritionSource": "Sparkling Ice Orange Mango, one 503 mL bottle per week: https://sparklingice.ca/faq/"
+  "weeklyDrinkNutritionSource": "Sparkling Ice Orange Mango, one 503 mL bottle per week: https://sparklingice.ca/faq/",
+  "breakfastCereal": {
+    "dailyGrams": 29,
+    "packageGrams": 587,
+    "referenceGrams": 62,
+    "perReference": {
+      "kcal": 140,
+      "protein": 4,
+      "carbs": 53,
+      "fat": 1,
+      "saturatedFat": 0.2,
+      "fibre": 27,
+      "sugar": 1,
+      "sodium": 220,
+      "cholesterol": 0,
+      "epaDha": 0
+    },
+    "source": "https://www.zehrs.ca/en/fibre-one-breakfast-cereal-crunchy-original-high-f/p/21411449_EA",
+    "basis": "Breakfast baseline reduced from 41.9 g to 29 g using the Canadian label per 62 g. Targets about 38 g total daily fibre averaged over the week."
+  }
 }

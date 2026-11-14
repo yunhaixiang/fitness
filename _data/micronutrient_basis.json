@@ -586,7 +586,7 @@
   "extraRecipes": {
     "fruit_breakfast": {
       "soy": 2.7,
-      "cereal": 0.419,
+      "cereal": 0.29,
       "fruit": 1.5555555555555554,
       "flax": 0.23076923076923078
     },
@@ -596,7 +596,7 @@
     },
     "late_fruit_breakfast": {
       "soy": 2.7,
-      "cereal": 0.419,
+      "cereal": 0.29,
       "fruit": 1.1666666666666665,
       "flax": 0.23076923076923078
     },

@@ -128,10 +128,10 @@ visual: true
 <td data-en="1 Bag / About 7.3 Weeks">1袋 / 约7.3周</td>
 <td style="text-align: right;"><a href="https://www.walmart.ca/en/ip/Great-Value-Long-Grain-White-Rice/4UD9P76BEQB4">$3.47</a></td>
 </tr>
-<tr data-weekly-cost="2.73" data-price-id="20" data-purchase-group="fortnightly">
+<tr data-weekly-cost="1.89" data-price-id="20" data-purchase-group="restock">
 <td>高纤维谷物早餐</td>
 <td><a href="https://www.walmart.ca/en/ip/Fibre-One-Breakfast-Cereal-Crunchy-Original-High-Fibre-and-Whole-Grains-587-g/1OUNWA7P5WCS">Fibre One Crunchy Original</a><br>587 g / 盒</td>
-<td data-en="1 Box / 2 Weeks">1盒 / 2周</td>
+<td data-en="1 Box / About 20 Days">1盒 / 约20天</td>
 <td style="text-align: right;"><a href="https://www.walmart.ca/en/ip/Fibre-One-Breakfast-Cereal-Crunchy-Original-High-Fibre-and-Whole-Grains-587-g/1OUNWA7P5WCS">$5.47</a></td>
 </tr>
 <tr data-price-id="21" data-purchase-group="restock">
@@ -229,7 +229,7 @@ visual: true
 <td>每周合计</td>
 <td>—</td>
 <td style="text-align: right;">—</td>
-<td style="text-align: right;">$162.09</td>
+<td style="text-align: right;">$161.25</td>
 </tr>
 </tbody>
 </table>
