@@ -595,7 +595,7 @@
         "tilapiaUSDA",
         "assumptions"
       ],
-      "basis": "Per 100 g raw tilapia, USDA SR28 NDB15261: Ca10 mg, Fe0.56 mg, K302 mg, D3.1 mcg, B121.58 mcg. Generic composition estimates, not the selected product label. Iodine is not provided by SR28; 2 mcg/100 g is a provisional freshwater-fish modeling allowance, not a measured tilapia value. Recipe uses 350 g raw per meal; actual tray weight varies."
+      "basis": "Per 100 g raw tilapia, USDA SR28 NDB15261: Ca10 mg, Fe0.56 mg, K302 mg, D3.1 mcg, B121.58 mcg. Generic composition estimates, not the selected product label. Iodine is not provided by SR28; 2 mcg/100 g is a provisional freshwater-fish modeling allowance, not a measured tilapia value. Recipe uses 175 g raw per meal (half a tray); actual tray weight varies."
     }
   },
   "extraRecipes": {

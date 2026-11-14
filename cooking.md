@@ -15,12 +15,12 @@ cooking: true
 <ol>
 <li class="cooking-task-source">
 <ol lang="zh-CN" class="cooking-source-zh">
-<li>🍚 干米35 g淘洗沥干。</li>
-<li>米和💧 水按体积1:1，加💧 水约44 mL，放入电饭煲。</li>
+<li>🍚 干米70 g淘洗沥干。</li>
+<li>米和💧 水按体积1:1，加💧 水约88 mL，放入电饭煲。</li>
 </ol>
 <ol lang="en" class="cooking-source-en" hidden>
-<li>Rinse and drain 35 g 🍚 dry rice.</li>
-<li>Use equal volumes of rice and 💧 water: about 44 mL 💧 water.</li>
+<li>Rinse and drain 70 g 🍚 dry rice.</li>
+<li>Use equal volumes of rice and 💧 water: about 88 mL 💧 water.</li>
 <li>Place in the rice cooker.</li>
 </ol>
 </li>
@@ -159,16 +159,16 @@ cooking: true
 </li>
 <li class="cooking-task-source">
 <ol lang="zh-CN" class="cooking-source-zh">
-<li>🐟 罗非鱼每次用1整盒（2片，300–400 g；营养按350 g计），擦干表面、检查小刺。冷冻鱼先在冷藏中解冻。</li>
-<li>两面撒🧄 蒜粉¼茶匙、🌶️ paprika¼茶匙和🧂 黑胡椒⅛茶匙，不另加盐或油。</li>
+<li>🐟 罗非鱼每次用½盒（1片；营养按175 g计），擦干表面、检查小刺。冷冻鱼先在冷藏中解冻。</li>
+<li>两面薄抹🫒 橄榄油½茶匙，再撒🧄 蒜粉¼茶匙、🌶️ paprika¼茶匙和🧂 黑胡椒⅛茶匙，不另加盐。</li>
 <li>空气炸锅空出且达到400°F时单层放入，第8分钟开始检查，通常8–12分钟；厚处中心达到70°C后取出，全部放第5盘。放不下时分批烤，不叠放。</li>
-<li>前半周备料时，将后半周那盒生鱼及时密封冷冻。</li>
+<li>前半周备料时，将剩下的1片生鱼及时密封冷冻，留到后半周。</li>
 </ol>
 <ol lang="en" class="cooking-source-en" hidden>
-<li>Use one whole tray of 🐟 tilapia (2 fillets, 300–400 g; nutrition assumes 350 g). Pat dry and check for small bones. Thaw frozen fish in the refrigerator first.</li>
-<li>Season both sides with ¼ tsp 🧄 garlic powder, ¼ tsp 🌶️ paprika and ⅛ tsp 🧂 black pepper, without extra salt or oil.</li>
+<li>Use half a tray of 🐟 tilapia (1 fillet; nutrition assumes 175 g). Pat dry and check for small bones. Thaw frozen fish in the refrigerator first.</li>
+<li>Coat both sides with ½ tsp 🫒 olive oil, then season with ¼ tsp 🧄 garlic powder, ¼ tsp 🌶️ paprika and ⅛ tsp 🧂 black pepper, without extra salt.</li>
 <li>When the air fryer is free and at 400°F, arrange in one layer. Start checking at 8 minutes; typically cook 8–12 minutes until the thickest part reaches 70°C. Place all the fish in meal 5. Cook in batches if needed; do not stack.</li>
-<li>During the first cooking session, promptly freeze the second tray of raw fish in sealed packaging.</li>
+<li>During the first cooking session, promptly freeze the remaining raw fillet in sealed packaging for the second cooking session.</li>
 </ol>
 </li>
 </ol>

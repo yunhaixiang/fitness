@@ -27,11 +27,11 @@ test('weekly meat, eggs, grains and portions match whole-package purchase cycles
  const close=(a,b)=>assert.ok(Math.abs(a-b)<.01,`${a} != ${b}`);
  close(weekly('thigh')*100,930); close(weekly('ground')*100,454);
  close(weekly('shrimp')*100,340); close(weekly('salmon')*100,320);
- close(weekly('ball'),0); close(weekly('haddock'),0); close(weekly('tilapia')*100,700); close(weekly('dumpling')*96,336);
+ close(weekly('ball'),0); close(weekly('haddock'),0); close(weekly('tilapia')*100,350); close(weekly('dumpling')*96,336);
  close(weekly('egg'),12);
  assert.equal(basis.shrimpEggWash,undefined); close(weekly('potato')*100,340);
  close(weekly('sweetpotato'),0);
- close(weekly('rice')*100,70); close(weekly('pasta')*85,104);
+ close(weekly('rice')*100,140); close(weekly('pasta')*85,104);
  close(weekly('noodle')*100,106); close(weekly('sauce')*125,156);
  const recipes=Object.fromEntries(basis.mealKeys.map((k,i)=>[k,basis.recipes[i]]));
  assert.equal(recipes.wrap.tuna,undefined); close(recipes.bread.tuna,1); close(recipes.bread.bread,1.5);
@@ -41,7 +41,7 @@ test('weekly meat, eggs, grains and portions match whole-package purchase cycles
  close(recipes.wrap.chickpeas / recipes.potato.chickpeas,3); close(recipes.potato.chickpeas,recipes.dumpling.chickpeas); close(weekly('refriedBeans'),0);
  close(weekly('chickpeas')*125,540); close(weekly('tuna'),2); close(weekly('mayo'),2); close(weekly('lightMayo'),7); close(weekly('spinach')*100,284);
  close(weekly('pepper')*100,300); close(weekly('mushroom')*100,227); close(weekly('pc')*100,520);
- close(weekly('oil'),7); // 3.5 tsp each half-week, including 0.5 tsp for shrimp
+ close(weekly('oil'),8); // 4 tsp each half-week, including 0.5 tsp each for shrimp and tilapia
 });
 test('daily intake and deficit use the same meal data as the cards',()=>{
  const daily=(basis.mealKeys.reduce((s,k)=>s+2*Number(nutrition[k].kcal),0)+3*Number(nutrition.fruit_breakfast.kcal)+4*Number(nutrition.late_fruit_breakfast.kcal)+3*Number(nutrition.fruit_snack.kcal)+4*Number(nutrition.late_fruit_snack.kcal))/7;

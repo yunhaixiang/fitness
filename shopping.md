@@ -122,10 +122,10 @@ visual: true
 <td style="text-align: right;">按需补</td>
 <td style="text-align: right;"><a href="https://www.walmart.ca/en/ip/Hellmann-s-Light-Half-Fat-Mayonnaise-Type-Dressing-with-Canadian-Cage-Free-Eggs-750-mL-squeeze-bottle/206910">$6.47</a></td>
 </tr>
-<tr data-weekly-cost="0.48" data-price-id="19" data-purchase-group="restock">
+<tr data-weekly-cost="0.54" data-price-id="19" data-purchase-group="restock">
 <td>白米</td>
 <td><a href="https://www.walmart.ca/en/ip/Great-Value-Long-Grain-White-Rice/4UD9P76BEQB4">Great Value Long Grain White Rice</a><br>900 g / 袋</td>
-<td data-en="1 Bag / About 7.3 Weeks">1袋 / 约7.3周</td>
+<td data-en="1 Bag / About 6.4 Weeks">1袋 / 约6.4周</td>
 <td style="text-align: right;"><a href="https://www.walmart.ca/en/ip/Great-Value-Long-Grain-White-Rice/4UD9P76BEQB4">$3.47</a></td>
 </tr>
 <tr data-weekly-cost="1.89" data-price-id="20" data-purchase-group="restock">
@@ -214,7 +214,7 @@ visual: true
 <td data-en="1 Bottle / 120 Days · 1 Softgel with Breakfast Daily">1瓶 / 120天；每天早餐1粒</td>
 <td><a href="https://www.amazon.ca/dp/B00L3WS0Y2" >$30.39</a></td>
 </tr>
-<tr data-price-id="32" data-weekly-cost="19.60" data-purchase-group="weekly"><td data-en="Tilapia">罗非鱼</td><td><a href="https://www.walmart.ca/en/ip/your-fresh-market-tilapia-fillets/6000203880047">Your Fresh Market Tilapia Fillets</a><br><span data-en="300–400 g / Tray, 2 Fillets">300–400 g / 盒，2片</span></td><td data-en="2 Trays / Week">2盒 / 周</td><td><a href="https://www.walmart.ca/en/ip/your-fresh-market-tilapia-fillets/6000203880047">$2.80 / 100 g</a></td></tr>
+<tr data-price-id="32" data-weekly-cost="9.80" data-purchase-group="weekly"><td data-en="Tilapia">罗非鱼</td><td><a href="https://www.walmart.ca/en/ip/your-fresh-market-tilapia-fillets/6000203880047">Your Fresh Market Tilapia Fillets</a><br><span data-en="300–400 g / Tray, 2 Fillets">300–400 g / 盒，2片</span></td><td data-en="1 Tray / Week">1盒 / 周</td><td><a href="https://www.walmart.ca/en/ip/your-fresh-market-tilapia-fillets/6000203880047">$2.80 / 100 g</a></td></tr>
 <tr data-price-id="34" data-weekly-cost="10.98" data-purchase-group="weekly"><td data-en="Raw Shrimp">生虾仁</td><td><a href="https://www.walmart.ca/en/ip/Great-Value-Wild-Argentinian-Large-Raw-Shrimp/6000202999819">Great Value Wild Argentinian Large Raw Shrimp</a><br><span data-en="340 g">340 g</span></td><td data-en="1 Bag / Week">1袋 / 周</td><td><a href="https://www.walmart.ca/en/ip/Great-Value-Wild-Argentinian-Large-Raw-Shrimp/6000202999819">$10.98</a></td></tr>
 <tr data-price-id="35" data-weekly-cost="3.43" data-purchase-group="restock"><td data-en="Chicken and Vegetable Dumplings">鸡肉蔬菜水饺</td><td><a href="https://www.walmart.ca/en/ip/Great-Value-Frozen-Chicken-Vegetable-Potstickers/6O52P9Y77G03">Great Value Frozen Chicken &amp; Vegetable Potstickers</a><br><span data-en="1.13 kg">1.13 kg</span></td><td data-en="Restock as Needed">按需补充</td><td><a href="https://www.walmart.ca/en/ip/Great-Value-Frozen-Chicken-Vegetable-Potstickers/6O52P9Y77G03">$9.98</a></td></tr>
 <tr data-price-id="36" data-weekly-cost="0.83" data-purchase-group="restock"><td data-en="Whole-Wheat Bread">全麦面包</td><td><a href="https://www.walmart.ca/en/ip/Dempster-s-100-Whole-Wheat-Bread-675-g/6000191268657">Dempster’s 100% Whole Wheat Bread</a><br><span data-en="675 g">675 g</span></td><td data-en="6 Slices / Week; Freeze the Rest">每周6片；剩余冷冻</td><td><a href="https://www.walmart.ca/en/ip/Dempster-s-100-Whole-Wheat-Bread-675-g/6000191268657">$2.68</a></td></tr>
@@ -235,7 +235,7 @@ visual: true
 <td>每周合计</td>
 <td>—</td>
 <td style="text-align: right;">—</td>
-<td style="text-align: right;">$163.46</td>
+<td style="text-align: right;">$153.72</td>
 </tr>
 </tbody>
 </table>
