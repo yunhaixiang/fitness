@@ -2,7 +2,7 @@
   "checked_on": "2026-10-31",
   "currency": "CAD",
   "scope": "Walmart Canada public prices and user-provided Metro fruit price; individual checked_on retained. Chicken thigh and salmon prices supplied by user. Weekly subtotal averages routine purchase cycles. Bread assumes three slices total 105 g; weighed produce billed by actual weight. Excludes as-needed seasonings, tax and delivery. Not a London store live stock guarantee.",
-  "weekly_total_cad": "166.51",
+  "weekly_total_cad": "163.46",
   "items": [
     {
       "item": "去骨去皮鸡大腿肉",
@@ -52,16 +52,17 @@
     },
     {
       "item": "鸡蛋",
-      "price_cad": "6.98",
+      "price_cad": "3.93",
       "basis": "package",
-      "source_url": "https://www.walmart.ca/en/ip/Gray-Ridge-Premium-Large-White-18-Eggs/6000191268613",
-      "source_type": "walmart_london_live",
+      "source_url": "https://www.walmart.ca/en/ip/Great-Value-Large-Eggs/10052944",
+      "source_type": "walmart_public",
       "weekly_quantity": "1",
-      "weekly_cost_cad": "6.98",
-      "product_url": "https://www.walmart.ca/en/ip/Gray-Ridge-Premium-Large-White-18-Eggs/6000191268613",
+      "weekly_cost_cad": "3.93",
+      "product_url": "https://www.walmart.ca/en/ip/Great-Value-Large-Eggs/10052944",
       "purchase_frequency_zh": "1盒 / 周",
       "purchase_frequency_en": "1 Carton / Week",
-      "checked_on": "2026-11-09"
+      "checked_on": "2026-11-14",
+      "usage_note": "Great Value Large 12 Eggs: one carton consumed weekly. Public online price, not London-specific stock confirmation."
     },
     {
       "item": "无糖豆奶",

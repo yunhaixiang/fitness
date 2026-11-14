@@ -178,11 +178,11 @@ cooking: true
 <li class="cooking-task-source"><p data-en="Bring 💧 water to a boil in Pot 1 before adding the 🥚 eggs.">煮锅一烧💧 水，💧 水沸后下🥚 鸡蛋。</p></li>
 <li class="cooking-task-source">
 <ol lang="zh-CN" class="cooking-source-zh">
-<li>下🥚 鸡蛋9个，💧 水开后煮约9分钟至蛋白蛋黄凝固。</li>
+<li>下🥚 鸡蛋6个，💧 水开后煮约9分钟至蛋白蛋黄凝固。</li>
 <li>捞出🥚 鸡蛋，放入💧 冷水冷却。</li>
 </ol>
 <ol lang="en" class="cooking-source-en" hidden>
-<li>Add 9 🥚 eggs and boil for about 9 minutes until firm.</li>
+<li>Add 6 🥚 eggs and boil for about 9 minutes until firm.</li>
 <li>Lift the 🥚 eggs out into cold 💧 water to cool.</li>
 </ol>
 </li>
@@ -199,13 +199,13 @@ cooking: true
 </li>
 <li class="cooking-task-source">
 <ol lang="zh-CN" class="cooking-source-zh">
-<li>冷却剥壳，按需切半。</li>
-<li>第1、3、4、5、7盘各1个，第2、6盘各2个。</li>
+<li>冷却后剥壳。</li>
+<li>第1、2、3、4、6、7盘各1个，第5盘不放鸡蛋。</li>
 <li>第4盘的掰碎，第1盘的切片。</li>
 </ol>
 <ol lang="en" class="cooking-source-en" hidden>
-<li>Cool, peel and cut as needed.</li>
-<li>Put 1 🥚 egg each in meals 1, 3, 4, 5 and 7, and 2 eggs each in meals 2 and 6.</li>
+<li>Cool and peel the eggs.</li>
+<li>Put 1 whole 🥚 egg each in meals 1, 2, 3, 4, 6 and 7; no egg in meal 5.</li>
 <li>Crumble the eggs for meal 4 and slice the egg for meal 1.</li>
 </ol>
 </li>

@@ -37,7 +37,7 @@
 <td><div data-en="🍞 {{ portion.bread | times: 2 | round: 0 }} Slices Whole-Wheat Bread">🍞 全麦面包{{ portion.bread | times: 2 | round: 0 }}片</div><div data-en="🥣 {{ portion.lightMayo | times: 1 | round: 1 }} tsp Hellmann’s Light ½ Fat Mayonnaise">🥣 Hellmann’s Light ½ Fat 蛋黄酱{{ portion.lightMayo | times: 1 | round: 1 }}茶匙</div></td>
 {% when 'rice' %}
 <th scope="row"><span class="meal-summary-number">{{ forloop.index }}</span><span data-en="🍛 Curry Rice">🍛 咖喱米饭</span></th>
-<td><div data-en="🐟 1 Tray Tilapia ({{ portion.tilapia | times: 100 | round: 0 }} g Planned)">🐟 罗非鱼1盒（按{{ portion.tilapia | times: 100 | round: 0 }} g计）</div><div data-en="🥚 {{ egg_display }} Boiled Eggs">🥚 水煮蛋{{ egg_display }}个</div></td>
+<td><div data-en="🐟 1 Tray Tilapia ({{ portion.tilapia | times: 100 | round: 0 }} g Planned)">🐟 罗非鱼1盒（按{{ portion.tilapia | times: 100 | round: 0 }} g计）</div></td>
 <td><div data-en="🫛🥕 Peas and Carrots {{ portion.pc | times: 100 | round: 0 }} g Total">🫛🥕 豌豆，胡萝卜共{{ portion.pc | times: 100 | round: 0 }} g</div></td>
 <td><div data-en="🍚 White Rice {{ portion.rice | times: 100 | round: 0 }} g">🍚 白米{{ portion.rice | times: 100 | round: 0 }} g</div><div data-en="🍛 Curry Roux {{ portion.curry | times: 18 | round: 0 }} g">🍛 咖喱块{{ portion.curry | times: 18 | round: 0 }} g</div></td>
 {% when 'pasta' %}
