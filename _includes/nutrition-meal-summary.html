@@ -17,7 +17,7 @@
 <td><div data-en="🌯 {{ portion.tortilla | times: 1 | round: 0 }} Large Whole-Wheat Tortilla">🌯 大号全麦卷饼皮{{ portion.tortilla | times: 1 | round: 0 }}片</div><div data-en="🥣 {{ portion.mayo | times: 1 | round: 1 }} tsp Chipotle Mayonnaise">🥣 Chipotle蛋黄酱{{ portion.mayo | times: 1 | round: 1 }}茶匙</div></td>
 {% when 'dumpling' %}
 <th scope="row"><span class="meal-summary-number">{{ forloop.index }}</span><span data-en="🥟 Dumplings">🥟 水饺</span></th>
-<td><div data-en="🐟 1 Salmon Fillet ({{ portion.salmon | times: 100 | round: 0 }} g)">🐟 三文鱼1块（{{ portion.salmon | times: 100 | round: 0 }} g）</div><div data-en="🥚 {{ egg_display }} Boiled Egg">🥚 水煮蛋{{ egg_display }}个</div></td>
+<td><div data-en="🐟 1 Salmon Fillet ({{ portion.salmon | times: 100 | round: 0 }} g)">🐟 三文鱼1块（{{ portion.salmon | times: 100 | round: 0 }} g）</div></td>
 <td><div data-en="🥬 Spinach {{ portion.spinach | times: 100 | round: 0 }} g">🥬 菠菜{{ portion.spinach | times: 100 | round: 0 }} g</div><div data-en="🍄 Mushrooms {{ portion.mushroom | times: 100 | round: 1 }} g">🍄 蘑菇{{ portion.mushroom | times: 100 | round: 1 }} g</div></td>
 <td><div data-en="🥟 {{ portion.dumpling | times: 4 | round: 0 }} Dumplings ({{ portion.dumpling | times: 96 | round: 0 }} g)">🥟 水饺{{ portion.dumpling | times: 4 | round: 0 }}个（{{ portion.dumpling | times: 96 | round: 0 }} g）</div><div data-en="🫘 1/10 Can No Salt Added Chickpeas">🫘 无添加盐鹰嘴豆1/10罐</div></td>
 {% when 'noodles' %}
@@ -37,7 +37,7 @@
 <td><div data-en="🍞 {{ portion.bread | times: 2 | round: 0 }} Slices Whole-Wheat Bread">🍞 全麦面包{{ portion.bread | times: 2 | round: 0 }}片</div><div data-en="🥣 {{ portion.lightMayo | times: 1 | round: 1 }} tsp Hellmann’s Light ½ Fat Mayonnaise">🥣 Hellmann’s Light ½ Fat 蛋黄酱{{ portion.lightMayo | times: 1 | round: 1 }}茶匙</div></td>
 {% when 'rice' %}
 <th scope="row"><span class="meal-summary-number">{{ forloop.index }}</span><span data-en="🍛 Curry Rice">🍛 咖喱米饭</span></th>
-<td><div data-en="🐟 ½ Tray Tilapia ({{ portion.tilapia | times: 100 | round: 0 }} g Planned)">🐟 罗非鱼½盒（按{{ portion.tilapia | times: 100 | round: 0 }} g计）</div></td>
+<td><div data-en="🐟 ½ Bag Haddock ({{ portion.plainHaddock | times: 100 | round: 0 }} g)">🐟 黑线鳕½袋（{{ portion.plainHaddock | times: 100 | round: 0 }} g）</div><div data-en="🥚 {{ egg_display }} Boiled Egg">🥚 水煮蛋{{ egg_display }}个</div></td>
 <td><div data-en="🫛🥕 Peas and Carrots {{ portion.pc | times: 100 | round: 0 }} g Total">🫛🥕 豌豆，胡萝卜共{{ portion.pc | times: 100 | round: 0 }} g</div></td>
 <td><div data-en="🍚 White Rice {{ portion.rice | times: 100 | round: 0 }} g">🍚 白米{{ portion.rice | times: 100 | round: 0 }} g</div><div data-en="🍛 Curry Roux {{ portion.curry | times: 18 | round: 0 }} g">🍛 咖喱块{{ portion.curry | times: 18 | round: 0 }} g</div></td>
 {% when 'pasta' %}

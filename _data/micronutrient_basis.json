@@ -32,12 +32,13 @@
     "flaxLabel": "https://www.bobsredmill.com/product/flaxseed-meal",
     "jamiesonVitaminDLabel": "https://www.jamiesonvitamins.com/products/vitamin-d",
     "chickpeasLabel": "https://i5.walmartimages.ca/asr/370f0918-c48f-4d88-8977-543b148667d9.313a5c461508f29f6820143dc0554de7.jpeg",
-    "tilapiaUSDA": "https://www.ars.usda.gov/ARSUserFiles/80400535/Data/SR/SR28/reports/sr28fg15.pdf"
+    "plainHaddockLabel": "https://i5.walmartimages.ca/asr/2003afba-e739-42db-953b-88508c2c052e.6f55f9fc30bab167d22f3a5e59500fbb.jpeg",
+    "plainHaddockUSDA": "https://www.ars.usda.gov/ARSUserFiles/80400535/Data/SR/SR28/reports/sr28fg15.pdf"
   },
   "notes": [
     "Micronutrient planning estimates for the current plan, not a measurement or product-label audit. Units match nutrition_basis.json; breakfast inputs are per 100 g. Numeric coverage is explicit; a missing field causes recalculation to fail.",
     "Generic CNF 2026 edible raw weights match the plan. Cooking/draining losses are not modeled; branded convenience foods use generic proxies when no label data are available. These estimates must not be used to diagnose a nutrient deficiency. No invented confidence intervals.",
-    "Iodine varies substantially. Egg iodine uses the boiled-egg proxy of 31 mcg each for the 17 egg equivalents consumed per week (18 prepared; half of each shrimp-coating egg discarded). Chicken cooked yield assumed75% for the roasted thigh proxy0.7 mcg/85 g. Salmon uses NIH/USDA cooked salmon11 mcg/85 g at75% yield. Tuna7.4 mcg/85 g drained. Beef proxy6.4 mcg/85 g scaled to85 g meatball unit. Commercial salts are not automatically iodized; low-iodine plant/condiment allowances are estimates, not verified zeros.",
+    "Iodine varies substantially. Egg iodine uses the boiled-egg proxy of 31 mcg each for the 12 whole boiled eggs consumed per week. Chicken cooked yield assumed75% for the roasted thigh proxy0.7 mcg/85 g. Salmon uses NIH/USDA cooked salmon11 mcg/85 g at75% yield. Tuna7.4 mcg/85 g drained. Beef proxy6.4 mcg/85 g scaled to85 g meatball unit. Commercial salts are not automatically iodized; low-iodine plant/condiment allowances are estimates, not verified zeros.",
     "Unquantified dry seasoning beyond noodle sauce, drinking-water minerals and zero-calorie beverages are omitted from these six micronutrient totals. Creatine contributes none. Fruit tray composition is an assumption.",
     "Macro/calorie data remain unchanged by this micronutrient completion. Breakfast and drink mineral estimates are recalculated from the same documented ingredients instead of retaining old totals."
   ],
@@ -582,20 +583,21 @@
       ],
       "basis": "Per 125 mL Canadian label: calcium20 mg, iron0.75 mg, potassium150 mg. Vitamin D and B12 assumed zero for unfortified chickpeas; iodine0.5 mcg is an explicit trace allowance, not a measured label value. Whole-can conversion 540/125 is a planning estimate; drained yield is unmeasured."
     },
-    "tilapia": {
+    "plainHaddock": {
       "values": {
-        "calcium": 10,
-        "iron": 0.56,
-        "potassium": 302,
-        "vitaminD": 3.1,
-        "vitaminB12": 1.58,
-        "iodine": 2
+        "calcium": 8.771929824561404,
+        "iron": 0,
+        "potassium": 307.01754385964915,
+        "vitaminD": 0.5,
+        "vitaminB12": 1.83,
+        "iodine": 227.27272727272725
       },
       "sources": [
-        "tilapiaUSDA",
-        "assumptions"
+        "plainHaddockLabel",
+        "plainHaddockUSDA",
+        "iodineUSDA"
       ],
-      "basis": "Per 100 g raw tilapia, USDA SR28 NDB15261: Ca10 mg, Fe0.56 mg, K302 mg, D3.1 mcg, B121.58 mcg. Generic composition estimates, not the selected product label. Iodine is not provided by SR28; 2 mcg/100 g is a provisional freshwater-fish modeling allowance, not a measured tilapia value. Recipe uses 175 g raw per meal (half a tray); actual tray weight varies."
+      "basis": "Per100 g raw: label calcium10/1.14 mg, iron0 mg (rounded), potassium350/1.14 mg. USDA SR28 NDB15033 generic vitamin D0.5 mcg and B121.83 mcg. Iodine250 mcg/110 g from USDA/FDA/ODS release4 raw haddock; substantial natural variation, not a brand measurement. Recipe250 g per meal."
     }
   },
   "extraRecipes": {

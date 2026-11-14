@@ -146,7 +146,7 @@ cooking: true
 <li>Work on other short tasks meanwhile.</li>
 </ol>
 </li>
-<li class="cooking-task-source"><p data-en="Confirm preheating is complete, then load the prepared 🐟 salmon or tilapia promptly.">确认空气炸锅预热完成，放入备好的🐟 三文鱼或罗非鱼。</p></li>
+<li class="cooking-task-source"><p data-en="Confirm preheating is complete, then load the prepared 🐟 salmon or haddock promptly.">确认空气炸锅预热完成，放入备好的🐟 三文鱼或黑线鳕。</p></li>
 <li class="cooking-task-source">
 <ol lang="zh-CN" class="cooking-source-zh">
 <li>空气炸锅空出且达到400°F时，烤约8–10分钟至中心70°C。</li>
@@ -159,16 +159,16 @@ cooking: true
 </li>
 <li class="cooking-task-source">
 <ol lang="zh-CN" class="cooking-source-zh">
-<li>🐟 罗非鱼每次用½盒（1片；营养按175 g计），擦干表面、检查小刺。冷冻鱼先在冷藏中解冻。</li>
+<li>🐟 原味黑线鳕每次用½袋（250 g）。先拆除内层真空包装，在冷藏中解冻，再擦干表面、检查小刺。</li>
 <li>两面薄抹🫒 橄榄油½茶匙，再撒🧄 蒜粉¼茶匙、🌶️ paprika¼茶匙和🧂 黑胡椒⅛茶匙，不另加盐。</li>
 <li>空气炸锅空出且达到400°F时单层放入，第8分钟开始检查，通常8–12分钟；厚处中心达到70°C后取出，全部放第5盘。放不下时分批烤，不叠放。</li>
-<li>前半周备料时，将剩下的1片生鱼及时密封冷冻，留到后半周。</li>
+<li>只解冻本次要用的半袋，剩余半袋继续冷冻保存，留到后半周。</li>
 </ol>
 <ol lang="en" class="cooking-source-en" hidden>
-<li>Use half a tray of 🐟 tilapia (1 fillet; nutrition assumes 175 g). Pat dry and check for small bones. Thaw frozen fish in the refrigerator first.</li>
+<li>Use half a bag of 🐟 plain haddock (250 g). Remove the inner vacuum packaging before thawing in the refrigerator, then pat dry and check for small bones.</li>
 <li>Coat both sides with ½ tsp 🫒 olive oil, then season with ¼ tsp 🧄 garlic powder, ¼ tsp 🌶️ paprika and ⅛ tsp 🧂 black pepper, without extra salt.</li>
 <li>When the air fryer is free and at 400°F, arrange in one layer. Start checking at 8 minutes; typically cook 8–12 minutes until the thickest part reaches 70°C. Place all the fish in meal 5. Cook in batches if needed; do not stack.</li>
-<li>During the first cooking session, promptly freeze the remaining raw fillet in sealed packaging for the second cooking session.</li>
+<li>Thaw only the half-bag needed for this session; keep the remaining half frozen for the second session.</li>
 </ol>
 </li>
 </ol>
@@ -200,12 +200,12 @@ cooking: true
 <li class="cooking-task-source">
 <ol lang="zh-CN" class="cooking-source-zh">
 <li>冷却后剥壳。</li>
-<li>第1、2、3、4、6、7盘各1个，第5盘不放鸡蛋。</li>
+<li>第1、2、4、5、6、7盘各1个，第3盘不放鸡蛋。</li>
 <li>第4盘的掰碎，第1盘的切片。</li>
 </ol>
 <ol lang="en" class="cooking-source-en" hidden>
 <li>Cool and peel the eggs.</li>
-<li>Put 1 whole 🥚 egg each in meals 1, 2, 3, 4, 6 and 7; no egg in meal 5.</li>
+<li>Put 1 whole 🥚 egg each in meals 1, 2, 4, 5, 6 and 7; no egg in meal 3.</li>
 <li>Crumble the eggs for meal 4 and slice the egg for meal 1.</li>
 </ol>
 </li>
