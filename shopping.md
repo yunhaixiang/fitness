@@ -80,11 +80,11 @@ visual: true
 <td data-en="1 Pack / Week">1盒 / 周</td>
 <td style="text-align: right;"><a href="https://www.walmart.ca/en/ip/mushrooms-sliced-cremini-your-fresh-market/6000196148725">$2.44</a></td>
 </tr>
-<tr data-weekly-cost="3.61" data-price-id="12" data-purchase-group="weekly">
-<td>菠菜</td>
-<td><a href="https://www.instacart.ca/store/products/347630-popeye-spinach-10-oz">Popeye Superfood Spinach</a><br>284 g / 袋</td>
-<td data-en="1 Bag / Week">1袋 / 周</td>
-<td style="text-align: right;"><a href="https://www.instacart.ca/store/products/347630-popeye-spinach-10-oz">$3.61</a></td>
+<tr data-weekly-cost="6.88" data-price-id="12" data-purchase-group="weekly">
+<td data-en="Baby Spinach">嫩菠菜</td>
+<td><a href="https://www.walmart.ca/en/ip/Your-Fresh-Market-Baby-Spinach-142g/1Z471AOSG7GL">Your Fresh Market Baby Spinach</a><br><span data-en="142 g per Bag">142 g / 袋</span></td>
+<td data-en="2 Bags / Week">2袋 / 周</td>
+<td style="text-align: right;"><a href="https://www.walmart.ca/en/ip/Your-Fresh-Market-Baby-Spinach-142g/1Z471AOSG7GL">$3.44</a></td>
 </tr>
 <tr data-weekly-cost="1.24" data-price-id="13" data-purchase-group="weekly">
 <td data-en="Tomato Paste">浓缩番茄膏</td>
@@ -229,7 +229,7 @@ visual: true
 <td>每周合计</td>
 <td>—</td>
 <td style="text-align: right;">—</td>
-<td style="text-align: right;">$158.82</td>
+<td style="text-align: right;">$162.09</td>
 </tr>
 </tbody>
 </table>

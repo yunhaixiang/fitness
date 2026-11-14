@@ -1,8 +1,8 @@
 {
   "checked_on": "2026-10-31",
   "currency": "CAD",
-  "scope": "Walmart Canada public prices and user-provided Metro fruit price; individual checked_on retained. Popeye spinach, chicken thigh and salmon prices supplied by user. Weekly subtotal averages routine purchase cycles. Bread assumes three slices total 105 g; weighed produce billed by actual weight. Excludes as-needed seasonings, tax and delivery. Not a London store live stock guarantee.",
-  "weekly_total_cad": "158.82",
+  "scope": "Walmart Canada public prices and user-provided Metro fruit price; individual checked_on retained. Chicken thigh and salmon prices supplied by user. Weekly subtotal averages routine purchase cycles. Bread assumes three slices total 105 g; weighed produce billed by actual weight. Excludes as-needed seasonings, tax and delivery. Not a London store live stock guarantee.",
+  "weekly_total_cad": "162.09",
   "items": [
     {
       "item": "去骨去皮鸡大腿肉",
@@ -133,16 +133,18 @@
       "purchase_frequency_en": "1 Pack / Week"
     },
     {
-      "item": "菠菜",
-      "price_cad": "3.61",
+      "item": "嫩菠菜",
+      "price_cad": "3.44",
       "basis": "package",
-      "source_url": "https://www.instacart.ca/store/products/347630-popeye-spinach-10-oz",
-      "source_type": "user_provided",
-      "weekly_quantity": "1.0",
-      "weekly_cost_cad": "3.61",
-      "product_url": "https://www.instacart.ca/store/products/347630-popeye-spinach-10-oz",
-      "purchase_frequency_zh": "1袋 / 周",
-      "purchase_frequency_en": "1 Bag / Week"
+      "source_url": "https://www.walmart.ca/en/ip/Your-Fresh-Market-Baby-Spinach-142g/1Z471AOSG7GL",
+      "source_type": "walmart_public",
+      "weekly_quantity": "2",
+      "weekly_cost_cad": "6.88",
+      "product_url": "https://www.walmart.ca/en/ip/Your-Fresh-Market-Baby-Spinach-142g/1Z471AOSG7GL",
+      "purchase_frequency_zh": "2袋 / 周",
+      "purchase_frequency_en": "2 Bags / Week",
+      "checked_on": "2026-11-14",
+      "package_grams": 142
     },
     {
       "item": "浓缩番茄膏",

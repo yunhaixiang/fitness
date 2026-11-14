@@ -300,12 +300,12 @@ cooking: true
 </li>
 <li class="cooking-task-source">
 <ol lang="zh-CN" class="cooking-source-zh">
-<li>🥬 菠菜半袋142 g先留出10 g给三明治。</li>
+<li>🥬 Your Fresh Market 嫩菠菜1袋142 g先留出10 g给三明治。</li>
 <li>锅空出后按需清理，剩余132 g加🫒 橄榄油½茶匙、🧄 蒜粉⅛茶匙和🧅 洋葱粉⅛茶匙，炒约3–5分钟。</li>
 <li>均分到第3、6盘。</li>
 </ol>
 <ol lang="en" class="cooking-source-en" hidden>
-<li>Set aside 10 g from the half-bag of 🥬 spinach (142 g) for the sandwich.</li>
+<li>Set aside 10 g from one full 142 g bag of 🥬 Your Fresh Market Baby Spinach for the sandwich.</li>
 <li>Once the wok is free, clean it as needed and cook the remaining 132 g with ½ tsp 🫒 olive oil, ⅛ tsp 🧄 garlic powder and ⅛ tsp 🧅 onion powder for 3–5 minutes.</li>
 <li>Split equally between meals 3 and 6.</li>
 </ol>
