@@ -45,17 +45,17 @@ test('recalculation is repeatable and refuses missing micronutrients instead of 
  } finally {fs.rmSync(tmp,{recursive:true,force:true});}
 });
 
-test('breakfast and bedtime fruit use one tray and twelve kiwis without OLLY', () => {
+test('breakfast and bedtime fruit use two Metro fruit trays without OLLY', () => {
  const recipes=micro.extraRecipes;
- const sumFood=food=>3*((recipes.fruit_breakfast[food]||0)+(recipes.fruit_snack[food]||0))+4*((recipes.kiwi_breakfast[food]||0)+(recipes.kiwi_snack[food]||0));
- assert.ok(Math.abs(sumFood('fruit')*100-1000)<.001);
- assert.ok(Math.abs(sumFood('kiwi')*100-12*69)<.001);
+ const sumFood=food=>3*((recipes.fruit_breakfast[food]||0)+(recipes.fruit_snack[food]||0))+4*((recipes.late_fruit_breakfast[food]||0)+(recipes.late_fruit_snack[food]||0));
+ assert.ok(Math.abs(sumFood('fruit')*100-2800)<.001);
+ assert.equal(sumFood('kiwi'),0);
  assert.ok(Math.abs(sumFood('soy')*100-3780)<.001);
- assert.equal(recipes.kiwi_breakfast.kiwi,.69);
- assert.equal(recipes.kiwi_snack.kiwi,1.38);
+ assert.ok(Math.abs(recipes.late_fruit_breakfast.fruit*100-1400/4/3)<.001);
+ assert.ok(Math.abs(recipes.late_fruit_snack.fruit*100-1400/4*2/3)<.001);
  assert.ok(!micro.foods.olly);
  assert.equal(macro.breakfastExtras.length,0);
- for(const key of ['fruit_breakfast','kiwi_breakfast']) {
+ for(const key of ['fruit_breakfast','late_fruit_breakfast']) {
   assert.equal(meals[key].foodEn.split(', ').length,4);
   assert.equal(meals[key].foodZh.split('，').length,4);
  }

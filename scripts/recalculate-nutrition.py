@@ -26,7 +26,7 @@ def recalculate(root):
    value=sum(micro['foods'][food]['values'][field]*amount for food,amount in recipe.items())
    meals[key][field]=f'{value:.3f}'
  fields+=micro['fields']
- daily={f:(sum(float(meals[k].get(f,0))*2 for k in source['mealKeys'])+3*float(meals['fruit_breakfast'].get(f,0))+4*float(meals['kiwi_breakfast'].get(f,0))+3*float(meals['fruit_snack'].get(f,0))+4*float(meals['kiwi_snack'].get(f,0)))/7 for f in fields}
+ daily={f:(sum(float(meals[k].get(f,0))*2 for k in source['mealKeys'])+3*float(meals['fruit_breakfast'].get(f,0))+4*float(meals['late_fruit_breakfast'].get(f,0))+3*float(meals['fruit_snack'].get(f,0))+4*float(meals['late_fruit_snack'].get(f,0)))/7 for f in fields}
  daily['sodium']+=12*35/7
  for field,value in source.get('weeklyDrinkNutrition',{}).items():daily[field]+=value/7
  (root/'_data/meal_nutrition.json').write_text(json.dumps(data,ensure_ascii=False,indent=2)+'\n')

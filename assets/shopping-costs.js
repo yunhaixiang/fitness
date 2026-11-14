@@ -3,7 +3,7 @@
   const cents = value => Math.round(Number(value) * 100);
   function calculateShoppingCosts(items, config) {
     const goods = items.reduce((sum, item) => sum + cents(item.weeklyCost || 0), 0);
-    const taxableGoods = items.filter(item => config.taxable_price_ids.includes(String(item.id)))
+    const taxableGoods = items.filter(item => item.taxable === true || config.taxable_price_ids.includes(String(item.id)))
       .reduce((sum, item) => sum + cents(item.weeklyCost || 0), 0);
     const orders = config.orders_per_week;
     const tip = cents(config.tip_per_order_cad) * orders;

@@ -38,10 +38,11 @@
 
   function renderMeals(day) {
     mealsRoot.replaceChildren();
-    const fruit = day <= 2 ? 'fruit' : 'kiwi';
+    const fruit = day <= 2 ? 'fruit' : (nutrition.late_fruit_breakfast ? 'late_fruit' : 'kiwi');
     const breakfast = nutrition[`${fruit}_breakfast`];
     const snack = nutrition[`${fruit}_snack`];
     const drink = snack || nutrition.outside_drink;
+    window.fitnessMealActivities.append(mealsRoot, day, 'before-breakfast', true);
     addMeal('breakfast', label('早餐', 'Breakfast'), en ? breakfast.foodEn : breakfast.foodZh, breakfast.kcal);
     const rows = [...dietTable.tBodies[0].rows].filter((row) => cell(row, 1) === weekdays[day]);
     for (const [kind, zh, english] of [['lunch', '午餐', 'Lunch'], ['dinner', '晚餐', 'Dinner']]) {

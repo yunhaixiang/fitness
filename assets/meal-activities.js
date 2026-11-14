@@ -6,7 +6,8 @@
     { day: 2, after: 'lunch', kind: 'thawing', time: ['中午', 'Midday'], detail: ['将后半周的鸡大腿肉、鸡肉末、三文鱼、虾仁、排骨和金枪鱼从冷冻移入冷藏解冻。', 'Move the second-half portions of chicken thighs, ground chicken, salmon, shrimp, ribs and tuna from the freezer to the fridge to thaw.'] },
     { day: 0, after: 'lunch', kind: 'cooking', time: ['午餐后', 'After Lunch'], detail: ['准备上1–上7', 'Prepare Meals 1–7 for the First Half of the Week'] },
     { day: 3, after: 'dinner', kind: 'cooking', time: ['晚餐后', 'After Dinner'], detail: ['准备下1–下7', 'Prepare Meals 1–7 for the Second Half of the Week'] },
-    { day: 6, after: 'lunch', kind: 'shopping', time: ['下午', 'Afternoon'], detail: ['购买整周食材', 'Buy Groceries for the Week'] }
+    { day: 3, after: 'before-breakfast', kind: 'shopping', time: ['早餐前', 'Before Breakfast'], detail: ['在 Metro 购买1盒 Fresh Fruit Carousel（1.4 kg）', 'Buy 1 Metro Fresh Fruit Carousel (1.4 kg)'] },
+    { day: 6, after: 'lunch', kind: 'shopping', time: ['下午', 'Afternoon'], detail: ['购买整周食材，并在 Metro 购买1盒 Fresh Fruit Carousel（1.4 kg）', 'Buy Groceries for the Week and 1 Metro Fresh Fruit Carousel (1.4 kg)'] }
   ];
   const names = { thawing: ['解冻', 'Thaw Ingredients'], cooking: ['做饭', 'Cooking'], shopping: ['购物', 'Shopping'] };
   const paths = {

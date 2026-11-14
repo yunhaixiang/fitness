@@ -6,12 +6,13 @@ const config = require('../_data/shopping_fees.json');
 function rows(file) {
   return [...fs.readFileSync(file, 'utf8').matchAll(/<tr\b[^>]*>/g)].map(([row]) => ({
     id: row.match(/data-price-id="([^"]+)"/)?.[1],
-    weeklyCost: row.match(/data-weekly-cost="([^"]+)"/)?.[1]
+    weeklyCost: row.match(/data-weekly-cost="([^"]+)"/)?.[1],
+    taxable: row.includes('data-taxable="true"')
   }));
 }
 test('shopping budgets follow each plan without taxing basic food or voluntary tips', () => {
   assert.deepEqual(calculateShoppingCosts(rows('shopping.md'), config), {
-    goods: 15265, tip: 1000, delivery: 500, service: 1500, tax: 402, total: 18667
+    goods: 15882, tip: 1000, delivery: 500, service: 1500, tax: 789, total: 19671
   });
   assert.deepEqual(calculateShoppingCosts(rows('plans/plan-2/shopping.md'), config), {
     goods: 14969, tip: 1000, delivery: 500, service: 1500, tax: 386, total: 18355

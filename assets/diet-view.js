@@ -79,9 +79,10 @@
       card.append(ingredients);
     };
     const dailyCard = (dayIndex, beverage) => {
-      const snackKey = `${dayIndex < 3 ? 'fruit' : 'kiwi'}_snack`;
+      const fruitKey = dayIndex < 3 ? 'fruit' : (nutrition.late_fruit_breakfast ? 'late_fruit' : 'kiwi');
+      const snackKey = `${fruitKey}_snack`;
       const hasSnack = Boolean(nutrition[snackKey]);
-      const key = beverage ? (hasSnack ? snackKey : 'outside_drink') : `${dayIndex < 3 ? 'fruit' : 'kiwi'}_breakfast`;
+      const key = beverage ? (hasSnack ? snackKey : 'outside_drink') : `${fruitKey}_breakfast`;
       const meal = nutrition[key];
       const card = make('article', `diet-meal-card diet-kind-${beverage ? 'beverage' : 'breakfast'}`);
       const top = make('div', 'diet-meal-top');
@@ -122,6 +123,7 @@
       week.setAttribute('aria-labelledby', button.id);
       week.hidden = true;
       const list = make('div', 'diet-meal-list');
+      window.fitnessMealActivities.append(list, dayIndex, 'before-breakfast');
       list.append(dailyCard(dayIndex, false));
       for (const row of dayRows) {
         const index = rows.indexOf(row);

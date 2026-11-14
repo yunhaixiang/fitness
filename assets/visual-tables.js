@@ -34,7 +34,7 @@
     if (feesConfig && window.fitnessShoppingCosts) {
       const config = JSON.parse(feesConfig.textContent);
       const costs = window.fitnessShoppingCosts.calculateShoppingCosts(items.map(row => ({
-        id: row.dataset.priceId, weeklyCost: row.dataset.weeklyCost
+        id: row.dataset.priceId, weeklyCost: row.dataset.weeklyCost, taxable: row.dataset.taxable === 'true'
       })), config);
       const money = cents => `$${(cents / 100).toFixed(2)}`;
       shell.append(el('p', 'visual-shopping-total', tr('每周合计', 'Weekly Total') + ` · ≈${money(costs.total)} CAD`));

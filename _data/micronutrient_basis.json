@@ -37,7 +37,7 @@
     "Micronutrient planning estimates for the current plan, not a measurement or product-label audit. Units match nutrition_basis.json; breakfast inputs are per 100 g. Numeric coverage is explicit; a missing field causes recalculation to fail.",
     "Generic CNF 2026 edible raw weights match the plan. Cooking/draining losses are not modeled; branded convenience foods use generic proxies when no label data are available. These estimates must not be used to diagnose a nutrient deficiency. No invented confidence intervals.",
     "Iodine varies substantially. Egg iodine uses the boiled-egg proxy of 31 mcg each for the 17 egg equivalents consumed per week (18 prepared; half of each shrimp-coating egg discarded). Chicken cooked yield assumed75% for the roasted thigh proxy0.7 mcg/85 g. Salmon uses NIH/USDA cooked salmon11 mcg/85 g at75% yield. Haddock250 mcg/110 g raw is based on only3 USDA samples (range152–345 per110 g); 100 g fish per breaded fillet is assumed. Tuna7.4 mcg/85 g drained. Beef proxy6.4 mcg/85 g scaled to85 g meatball unit. Commercial salts are not automatically iodized; low-iodine plant/condiment allowances are estimates, not verified zeros.",
-    "Unquantified dry seasoning beyond noodle sauce, drinking-water minerals and zero-calorie beverages are omitted from these six micronutrient totals. Creatine contributes none. Fruit tray composition and kiwi edible size are assumptions.",
+    "Unquantified dry seasoning beyond noodle sauce, drinking-water minerals and zero-calorie beverages are omitted from these six micronutrient totals. Creatine contributes none. Fruit tray composition is an assumption.",
     "Macro/calorie data remain unchanged by this micronutrient completion. Breakfast and drink mineral estimates are recalculated from the same documented ingredients instead of retaining old totals."
   ],
   "foods": {
@@ -403,21 +403,6 @@
       ],
       "basis": "CNF 3131: Fish, tuna, light, canned in water, drained, unsalted; 55 g per recipe unit. Generic composition proxy, not the selected product label. Ca/Fe/K/D overridden by Clover Leaf label per 55 g drained half-can. Iodine from USDA generic-food proxy; see iodine assumptions."
     },
-    "kiwi": {
-      "values": {
-        "calcium": 34.0,
-        "iron": 0.31,
-        "potassium": 312.0,
-        "vitaminD": 0.0,
-        "vitaminB12": 0.0,
-        "iodine": 0.3
-      },
-      "sources": [
-        "cnf2026",
-        "assumptions"
-      ],
-      "basis": "CNF 1585: Kiwi fruit, raw; 100 g per recipe unit. Generic composition proxy, not the selected product label. Iodine is an explicit trace-composition allowance, not a laboratory result."
-    },
     "oil": {
       "values": {
         "calcium": 0,
@@ -536,7 +521,7 @@
         "iodineUSDA",
         "assumptions"
       ],
-      "basis": "Per 100 g fruit tray: equal edible weights cantaloupe, honeydew, watermelon, pineapple, strawberry (CNF 1721/1605/1691/1734/1749). Actual fruit proportions unknown. Iodine 0.3 mcg/100 g trace proxy."
+      "basis": "Per 100 g fruit tray: equal edible weights cantaloupe, honeydew, watermelon, pineapple, strawberry (CNF 1721/1605/1691/1734/1749). Actual fruit proportions unknown. Iodine 0.3 mcg/100 g trace proxy. Used as a proxy for Metro Fresh Fruit Carousel; no product-specific nutrition label or ingredient proportions verified."
     },
     "flax": {
       "values": {
@@ -602,22 +587,22 @@
     "fruit_breakfast": {
       "soy": 2.7,
       "cereal": 0.419,
-      "fruit": 1.1111111111111112,
-      "flax": 0.23076923076923078
-    },
-    "kiwi_breakfast": {
-      "soy": 2.7,
-      "cereal": 0.419,
-      "kiwi": 0.69,
+      "fruit": 1.5555555555555554,
       "flax": 0.23076923076923078
     },
     "fruit_snack": {
       "soy": 2.7,
-      "fruit": 2.2222222222222223
+      "fruit": 3.1111111111111107
     },
-    "kiwi_snack": {
+    "late_fruit_breakfast": {
       "soy": 2.7,
-      "kiwi": 1.38
+      "cereal": 0.419,
+      "fruit": 1.1666666666666665,
+      "flax": 0.23076923076923078
+    },
+    "late_fruit_snack": {
+      "soy": 2.7,
+      "fruit": 2.333333333333333
     }
   }
 }
