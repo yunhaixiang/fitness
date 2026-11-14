@@ -659,5 +659,16 @@
     },
     "source": "https://www.zehrs.ca/en/fibre-one-breakfast-cereal-crunchy-original-high-f/p/21411449_EA",
     "basis": "Breakfast baseline reduced from 41.9 g to 29 g using the Canadian label per 62 g. Targets about 38 g total daily fibre averaged over the week."
+  },
+  "vitaminDSupplement": {
+    "name": "Jamieson Vitamin D3 1,000 IU Tablets",
+    "dailyTablets": 1,
+    "vitaminDMcg": 25,
+    "vitaminDIU": 1000,
+    "packageCount": 500,
+    "timing": "Breakfast",
+    "source": "https://www.jamiesonvitamins.com/products/vitamin-d",
+    "productUrl": "https://www.amazon.ca/dp/B01NARPPT8",
+    "basis": "Manufacturer label: 25 mcg (1,000 IU) cholecalciferol per tablet; adults one tablet daily. Tablet excipient quantities are not declared; no unverified calorie or mineral contribution added."
   }
 }

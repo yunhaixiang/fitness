@@ -190,6 +190,12 @@ visual: true
 <td style="text-align: right;">按需补</td>
 <td style="text-align: right;"><a href="https://www.walmart.ca/fr/ip/leanfit-sport-creatine-monohydrate-en-poudre-non-aromatis-300-g-5-g-de-cratine-par-portion-certification-informed-choice-cratine-micronise-et-de-quali/6000208594600">$32.97</a></td>
 </tr>
+<tr data-price-id="58" data-weekly-cost="0.17" data-taxable="true" data-purchase-group="restock">
+<td data-en="Vitamin D3">维生素D3</td>
+<td><a href="https://www.amazon.ca/dp/B01NARPPT8">Jamieson Vitamin D3 1,000 IU（Amazon）</a><br><span data-en="500 Tablets / Bottle · 1000 IU (25 µg) per Tablet">500片 / 瓶；每片1,000 IU（25 µg）</span></td>
+<td data-en="1 Bottle / 500 Days · 1 Tablet with Breakfast Daily">1瓶 / 500天；每天早餐1片</td>
+<td><a href="https://www.amazon.ca/dp/B01NARPPT8">$11.81</a></td>
+</tr>
 <tr data-price-id="57" data-weekly-cost="0.96" data-purchase-group="restock">
 <td data-en="Magnesium Bisglycinate">甘氨酸镁</td>
 <td><a href="https://www.amazon.ca/dp/B08WVD2YDB">Webber Naturals Magnesium Bisglycinate 200 mg（Amazon）</a><br><span data-en="120 Capsules / Bottle · 200 mg per Capsule">120粒 / 瓶；每粒200 mg</span></td>
@@ -229,7 +235,7 @@ visual: true
 <td>每周合计</td>
 <td>—</td>
 <td style="text-align: right;">—</td>
-<td style="text-align: right;">$161.37</td>
+<td style="text-align: right;">$161.54</td>
 </tr>
 </tbody>
 </table>

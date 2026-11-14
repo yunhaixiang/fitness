@@ -169,7 +169,7 @@ visual: true
 </tr>
 <tr>
 <td>维生素D</td>
-<td>13.2 µg</td>
+<td>38.2 µg</td>
 <td>15 µg</td>
 </tr>
 <tr>

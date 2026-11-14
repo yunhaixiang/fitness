@@ -2,7 +2,7 @@
   "checked_on": "2026-10-31",
   "currency": "CAD",
   "scope": "Walmart Canada public prices and user-provided Metro fruit price; individual checked_on retained. Chicken thigh and salmon prices supplied by user. Weekly subtotal averages routine purchase cycles. Bread assumes three slices total 105 g; weighed produce billed by actual weight. Excludes as-needed seasonings, tax and delivery. Not a London store live stock guarantee.",
-  "weekly_total_cad": "161.37",
+  "weekly_total_cad": "161.54",
   "items": [
     {
       "item": "去骨去皮鸡大腿肉",
@@ -560,6 +560,22 @@
       "weekly_quantity": "0.1",
       "weekly_cost_cad": "0.30",
       "availability_note": "Public listing price; London stock not verified."
+    },
+    {
+      "item": "维生素D3",
+      "product": "Jamieson Vitamin D3 1,000 IU Tablets",
+      "price_cad": "11.81",
+      "basis": "bottle",
+      "package_count": 500,
+      "daily_quantity": 1,
+      "source_url": "https://www.amazon.ca/dp/B01NARPPT8",
+      "product_url": "https://www.amazon.ca/dp/B01NARPPT8",
+      "source_type": "user_provided",
+      "checked_on": "2026-11-14",
+      "weekly_quantity": "0.014",
+      "weekly_cost_cad": "0.17",
+      "purchase_frequency_zh": "1瓶 / 500天",
+      "purchase_frequency_en": "1 Bottle / 500 Days"
     }
   ],
   "updated_on": "2026-11-11"
