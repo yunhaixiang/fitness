@@ -560,7 +560,7 @@
   },
   "breakfastAddition": {
     "name": "Ground flaxseed meal",
-    "dailyGrams": 3,
+    "dailyGrams": 5,
     "referenceGrams": 13,
     "kcal": 70,
     "protein": 2,
@@ -574,7 +574,7 @@
     "epaDha": 0,
     "ala": 1.7,
     "source": "https://www.bobsredmill.com/product/flaxseed-meal",
-    "basis": "Manufacturer label per 13 g; ALA 1.7 g per two tablespoons. Label zeros include rounding. Daily amount 3 g. Food-only ALA baseline remains a composition estimate of 1.1–1.3 g/day."
+    "basis": "Bob’s Red Mill composition proxy for Joe’s Tasty Travels milled flaxseed, not a verified Joe’s label. Manufacturer label per 13 g; ALA 1.7 g per two tablespoons. Label zeros include rounding. Daily amount 5 g. Food-only ALA baseline remains a composition estimate of 1.1–1.3 g/day."
   },
   "breakfastExtras": [],
   "magnesiumSupplement": {

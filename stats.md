@@ -11,7 +11,7 @@ visual: true
 
 <figure class="nutrition-overview" aria-label="每日能量与每周赤字">
   <div class="nutrition-overview-main">
-    <div class="nutrition-ring" style="--intake-share:78.6%" aria-label="每日摄入与消耗">
+    <div class="nutrition-ring" style="--intake-share:79.1%" aria-label="每日摄入与消耗">
       <div class="nutrition-ring-center">
         <span>日均赤字</span>
         <strong data-energy="dailyDeficit">— <small>kcal／天</small></strong>
@@ -19,7 +19,7 @@ visual: true
     </div>
     <div class="nutrition-overview-key">
       <p class="nutrition-overview-eyebrow">能量概览 · 不含放纵餐</p>
-      <div class="nutrition-key-row nutrition-key-intake"><span>日均摄入</span><strong>1,868 <small>kcal／天</small></strong></div>
+      <div class="nutrition-key-row nutrition-key-intake"><span>日均摄入</span><strong>1,879 <small>kcal／天</small></strong></div>
       <div class="nutrition-key-row nutrition-key-burn"><span>日均消耗</span><strong data-energy="dailyBurn">— <small>kcal／天</small></strong></div>
       <div class="nutrition-key-row nutrition-key-deficit"><span>日均赤字</span><strong data-energy="dailyDeficit">— <small>kcal／天</small></strong></div>
       <div class="nutrition-key-row"><span>每周赤字</span><strong data-energy="weeklyDeficit">— <small>kcal</small></strong></div>
@@ -99,17 +99,17 @@ visual: true
 <tbody>
 <tr>
 <td>热量</td>
-<td style="text-align: right;">1,868 kcal</td>
+<td style="text-align: right;">1,879 kcal</td>
 <td>1,800–2,000 kcal</td>
 </tr>
 <tr data-macro="protein">
 <td>蛋白质</td>
-<td style="text-align: right;">131.8 g</td>
+<td style="text-align: right;">132.1 g</td>
 <td>120–140 g</td>
 </tr>
 <tr data-macro="fat">
 <td>总脂肪</td>
-<td style="text-align: right;">67.5 g</td>
+<td style="text-align: right;">68.3 g</td>
 <td>45–65 g</td>
 </tr>
 <tr>
@@ -119,17 +119,17 @@ visual: true
 </tr>
 <tr>
 <td>饱和脂肪占总热量</td>
-<td style="text-align: right;">7.7%</td>
+<td style="text-align: right;">7.6%</td>
 <td>≤6%</td>
 </tr>
 <tr data-macro="carbs">
 <td>碳水化合物</td>
-<td style="text-align: right;">193.3 g</td>
+<td style="text-align: right;">193.9 g</td>
 <td>180–240 g</td>
 </tr>
 <tr>
 <td>膳食纤维</td>
-<td style="text-align: right;">38.0 g</td>
+<td style="text-align: right;">38.5 g</td>
 <td>30–38 g</td>
 </tr>
 <tr>
@@ -154,17 +154,17 @@ visual: true
 </tr>
 <tr>
 <td>钙</td>
-<td>1,125 mg</td>
+<td>1,128 mg</td>
 <td>1,000 mg</td>
 </tr>
 <tr>
 <td>铁</td>
-<td>18.9 mg</td>
+<td>19.1 mg</td>
 <td>8 mg</td>
 </tr>
 <tr>
 <td>钾</td>
-<td>4,603 mg</td>
+<td>4,621 mg</td>
 <td>≥3,400 mg</td>
 </tr>
 <tr>
@@ -184,7 +184,7 @@ visual: true
 </tr>
 <tr>
 <td>Omega-3：ALA</td>
-<td style="text-align: right;">1.5–1.7 g</td>
+<td style="text-align: right;">1.8–2.0 g</td>
 <td>1.6 g</td>
 </tr>
 <tr>
@@ -212,4 +212,4 @@ visual: true
 
 <script type="application/json" id="cardio-energy-baseline">{{ site.data.plan_metrics | jsonify }}</script>
 
-<!-- Revised meal estimates: _data/nutrition_basis.json. Daily totals include 3 fruit breakfasts, 4 kiwi breakfasts, 7 soy drinks and 2 of each main meal. Micronutrient point estimates use _data/micronutrient_basis.json (Canadian labels, CNF 2026, USDA iodine proxies and documented recipe assumptions); they are not measured product totals. Added sugar and ALA remain broad composition estimates. -->
+<!-- Revised meal estimates: _data/nutrition_basis.json. Daily totals include 3 early-week and 4 late-week fruit breakfasts and bedtime snacks, plus 2 of each main meal. Micronutrient point estimates use _data/micronutrient_basis.json (Canadian labels, CNF 2026, USDA iodine proxies and documented recipe assumptions); they are not measured product totals. Added sugar and ALA remain broad composition estimates. -->
