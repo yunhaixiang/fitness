@@ -188,11 +188,11 @@ cooking: true
 </li>
 <li class="cooking-task-source">
 <ol lang="zh-CN" class="cooking-source-zh">
-<li>冷冻🥟 水饺7个（168 g）下💧 沸水，按包装煮至中心74°C，约6–8分钟。</li>
+<li>冷冻🥟 水饺8个（192 g）下💧 沸水，按包装煮至中心74°C，约6–8分钟。</li>
 <li>沥干放第3盘。</li>
 </ol>
 <ol lang="en" class="cooking-source-en" hidden>
-<li>Add 7 frozen 🥟 dumplings (168 g) to boiling 💧 water.</li>
+<li>Add 8 frozen 🥟 dumplings (192 g) to boiling 💧 water.</li>
 <li>Follow the pack, checking for a 74°C centre after about 6–8 minutes.</li>
 <li>Drain into meal 3.</li>
 </ol>
