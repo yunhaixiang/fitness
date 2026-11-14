@@ -2,7 +2,7 @@
   "checked_on": "2026-10-31",
   "currency": "CAD",
   "scope": "Walmart Canada public prices and user-provided Metro fruit price; individual checked_on retained. Chicken thigh and salmon prices supplied by user. Weekly subtotal averages routine purchase cycles. Bread assumes three slices total 105 g; weighed produce billed by actual weight. Excludes as-needed seasonings, tax and delivery. Not a London store live stock guarantee.",
-  "weekly_total_cad": "161.54",
+  "weekly_total_cad": "161.14",
   "items": [
     {
       "item": "去骨去皮鸡大腿肉",
@@ -414,14 +414,14 @@
       "item": "咖喱块",
       "price_cad": "3.97",
       "basis": "package",
-      "weekly_quantity": "0.5",
-      "weekly_cost_cad": "1.99",
+      "weekly_quantity": "0.4",
+      "weekly_cost_cad": "1.59",
       "source_type": "walmart_public",
       "source_url": "https://www.walmart.ca/en/ip/S-B-Golden-curry-sauce-mix-medium-hot/6000198034558",
       "product_url": "https://www.walmart.ca/en/ip/S-B-Golden-curry-sauce-mix-medium-hot/6000198034558",
       "checked_on": "2026-11-07",
-      "purchase_frequency_zh": "1盒 / 2周",
-      "purchase_frequency_en": "1 Box / 2 Weeks"
+      "purchase_frequency_zh": "1盒 / 2.5周",
+      "purchase_frequency_en": "1 Box / 2.5 Weeks"
     },
     {
       "item": "裹粉黑线鳕",

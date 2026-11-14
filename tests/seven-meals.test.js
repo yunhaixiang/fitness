@@ -33,7 +33,7 @@ test('weekly meat, eggs, grains and portions match whole-package purchase cycles
  assert.equal(recipes.wrap.tuna,undefined); close(recipes.bread.tuna,1); close(recipes.bread.bread,1.5);
  close(recipes.noodles.shrimp,1.7); assert.equal(recipes.noodles.panko,undefined);
  assert.equal(recipes.rice.shrimp,undefined); assert.equal(recipes.rice.panko,undefined);
- close(recipes.rice.curry*18,23); assert.equal(recipes.noodles.curry,undefined); close(recipes.noodles.noodleSauce,1);
+ close(recipes.rice.curry*18,18); assert.equal(recipes.noodles.curry,undefined); close(recipes.noodles.noodleSauce,1);
  close(recipes.wrap.refriedBeans*2,weekly('refriedBeans'));
  close(weekly('refriedBeans')*125,398); close(weekly('tuna'),2); close(weekly('mayo'),2); close(weekly('lightMayo'),7); close(weekly('spinach')*100,284);
  close(weekly('pepper')*100,300); close(weekly('mushroom')*100,227); close(weekly('pc')*100,520);
