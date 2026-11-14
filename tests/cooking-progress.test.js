@@ -84,7 +84,7 @@ test('saved preheat completion survives the split into two steps', () => {
 
 
 test('finish tasks can assemble food early, but refrigeration waits for every meal', () => {
- const partial = ['prep-wrap','peel-eggs','prep-bread','prep-chicken','oven-heat-start','oven-heat','chicken','egg-water','eggs'];
+ const partial = ['prep-chickpeas','prep-wrap','peel-eggs','prep-bread','prep-chicken','oven-heat-start','oven-heat','chicken','egg-water','eggs'];
  const available = derive(nodes,partial).available.map(n=>n.id);
  assert.ok(available.includes('wrap'));
  assert.ok(available.includes('peas-carrots'));
@@ -112,19 +112,19 @@ test('bread can be laid out immediately while assembly waits for cooked food', (
  assert.ok(!derive(nodes,prepared).available.some(n=>['wrap','sandwich'].includes(n.id)));
  const cooked = ['prep-chicken','oven-heat-start','oven-heat','chicken','egg-water','eggs'];
  assert.ok(!derive(nodes,cooked).available.some(n=>n.id==='wrap'));
- assert.ok(derive(nodes,[...cooked,'prep-bread','prep-wrap','peel-eggs']).available.some(n=>n.id==='wrap'));
+ assert.ok(derive(nodes,[...cooked,'prep-chickpeas','prep-bread','prep-wrap','peel-eggs']).available.some(n=>n.id==='wrap'));
  const migrated = readState(JSON.stringify({version:3,done:[...cooked,'wrap']}));
- assert.ok(derive(nodes,migrated.done).done.includes('wrap'));
+ assert.ok(!derive(nodes,migrated.done).done.includes('wrap')); // new chickpea portioning still needs completion
  assert.ok(migrated.done.includes('prep-bread'));
 });
 
 
 test('preparation is independent and both assemblies unlock without waiting for each other', () => {
  const initial = derive(nodes,[]).available.map(n=>n.id);
- for (const id of ['prep-zucchini','prep-noodle-sauce']) assert.ok(initial.includes(id));
+ for (const id of ['prep-zucchini','prep-noodle-sauce','prep-chickpeas']) assert.ok(initial.includes(id));
  const bread = toggle(nodes,[],'first','prep-bread',true);
  for (const id of ['prep-wrap','prep-sandwich']) assert.ok(derive(nodes,bread).available.some(n=>n.id===id));
- const ready = ['prep-bread','prep-wrap','prep-sandwich','prep-chicken','oven-heat-start','oven-heat','chicken','egg-water','eggs','peel-eggs'];
+ const ready = ['prep-chickpeas','prep-bread','prep-wrap','prep-sandwich','prep-chicken','oven-heat-start','oven-heat','chicken','egg-water','eggs','peel-eggs'];
  for (const id of ['wrap','sandwich']) assert.ok(derive(nodes,ready).available.some(n=>n.id===id));
  const withSandwich = toggle(nodes,ready,'first','sandwich',true);
  assert.ok(withSandwich.includes('sandwich'));

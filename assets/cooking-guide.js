@@ -41,6 +41,7 @@
     "curry": 6,
     "season-noodles": 3,
     "prep-bread": 2,
+    "prep-chickpeas": 3,
     "prep-wrap": 3,
     "prep-sandwich": 3,
     "peas-carrots": 3,

@@ -346,6 +346,19 @@ cooking: true
 <ol>
 <li class="cooking-task-source">
 <ol lang="zh-CN" class="cooking-source-zh">
+<li>前半周：🫘 无添加盐鹰嘴豆整罐沥干、用💧 清水冲洗，再分成两等份；后半周那份密封冷藏，按包装开罐保存期限使用。后半周做饭时直接取预留的那份。</li>
+<li>本次半罐按3∶1∶1分：3份留给第4盘卷饼，1份放第6盘排骨土豆，1份放第3盘水饺三文鱼。对应每餐为整罐的3/10、1/10、1/10。</li>
+<li>卷饼那份加少量💧 水，用叉子压碎；配菜两份保持整粒。各份按口味拌少量🧄 蒜粉、🌶️ paprika，不另加盐或油。</li>
+</ol>
+<ol lang="en" class="cooking-source-en" hidden>
+<li>First session: drain and rinse the whole can of 🫘 no salt added chickpeas with 💧 water, then split into two equal batches. Refrigerate the second batch in a sealed container and follow the package storage instructions. For the second session, use the reserved batch.</li>
+<li>Divide this batch 3:1:1: reserve three parts for the wrap in meal 4, put one part in meal 6 with ribs and potatoes, and one part in meal 3 with dumplings and salmon. These are 3/10, 1/10 and 1/10 of the full drained can.</li>
+<li>Mash the wrap portion with a fork and a little 💧 water; leave the side portions whole. Season to taste with a little 🧄 garlic powder and 🌶️ paprika, without extra salt or oil.</li>
+</ol>
+</li>
+
+<li class="cooking-task-source">
+<ol lang="zh-CN" class="cooking-source-zh">
 <li>🌯 大号卷饼皮1片铺在第4盘。</li>
 <li>🍞 全麦面包3片放在第1盘。</li>
 </ol>
@@ -357,16 +370,12 @@ cooking: true
 <li class="cooking-task-source">
 <ol lang="zh-CN" class="cooking-source-zh">
 <li>在第4盘的🌯 卷饼皮上抹上🥣 Chipotle蛋黄酱1茶匙（5 mL；酱条直径约0.8 cm时，挤约10 cm长）。</li>
-<li>🫘 豆泥取½罐，抹在卷饼皮上。</li>
 <li>1个🫑 橙甜椒洗净去籽切细条，放到卷饼皮上。</li>
-<li>豆泥开罐后用一半，剩余一半密封冷藏供后半周用。</li>
 <li>多余卷饼皮冷冻。</li>
 </ol>
 <ol lang="en" class="cooking-source-en" hidden>
 <li>Spread the 🌯 tortilla on plate 4 with 1 tsp 🥣 Chipotle mayonnaise (5 mL; about 10 cm squeezed length at a strand diameter of 0.8 cm).</li>
-<li>Spread half a can of 🫘 refried beans on the tortilla.</li>
 <li>Wash, deseed and slice one 🫑 orange bell pepper, then add to the tortilla.</li>
-<li>Use half the can of refried beans and refrigerate the remaining half in a sealed container for the second session.</li>
 <li>Freeze spare tortillas.</li>
 </ol>
 </li>
@@ -389,10 +398,10 @@ cooking: true
 <li class="cooking-task-source"><p data-en="Drain 1 can of 🫛🥕 peas and carrots (about 260 g) and divide equally between meals 2 and 5.">🫛🥕 豌豆胡萝卜1罐沥干（约260 g），直接均分到第2、5盘。</p></li>
 <li class="cooking-task-source">
 <ol lang="zh-CN" class="cooking-source-zh">
-<li>直接加入第4盘的🍗 鸡腿肉和掰碎🥚 水煮蛋，在盘内卷好。</li>
+<li>先抹上预留的🫘 鹰嘴豆泥（整罐的3/10），加入第4盘的🍗 鸡腿肉和掰碎🥚 水煮蛋，在盘内卷好。</li>
 </ol>
 <ol lang="en" class="cooking-source-en" hidden>
-<li>Add meal 4’s shredded 🍗 chicken and crumbled 🥚 boiled egg directly to the tortilla, then roll it up on the plate.</li>
+<li>Spread the reserved mashed 🫘 chickpeas (3/10 of the full can) on the tortilla, add meal 4’s shredded 🍗 chicken and crumbled 🥚 boiled egg, then roll it up on the plate.</li>
 </ol>
 </li>
 <li class="cooking-task-source">

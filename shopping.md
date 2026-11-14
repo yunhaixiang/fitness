@@ -224,7 +224,7 @@ visual: true
 <tr data-price-id="40" data-weekly-cost="1.04" data-purchase-group="weekly"><td data-en="Roma Tomato">罗马番茄</td><td><a href="https://www.walmart.ca/en/ip/Tomato-Roma-Sold-in-singles-0-10-0-14-KG/6000191272055">Roma Tomato</a><br><span data-en="Sold Individually">单颗售卖</span></td><td data-en="2 / Week">2个 / 周</td><td><a href="https://www.walmart.ca/en/ip/Tomato-Roma-Sold-in-singles-0-10-0-14-KG/6000191272055">$0.52 / Avg.</a></td></tr>
 <tr data-price-id="41" data-weekly-cost="0.46" data-purchase-group="restock"><td data-en="Rice Noodles">扁米粉</td><td><a href="https://www.walmart.ca/en/ip/Erawan-Rice-Stick/6000199121439">Erawan Rice Stick</a><br><span data-en="454 g">454 g</span></td><td data-en="1 Pack / About 4.3 Weeks">1包 / 约4.3周</td><td><a href="https://www.walmart.ca/en/ip/Erawan-Rice-Stick/6000199121439">$1.97</a></td></tr>
 <tr data-price-id="43" data-weekly-cost="1.59" data-purchase-group="restock"><td data-en="Curry Roux">咖喱块</td><td><a href="https://www.walmart.ca/en/ip/S-B-Golden-curry-sauce-mix-medium-hot/6000198034558">S&amp;B Golden Curry Sauce Mix Medium Hot</a><br><span data-en="90 g">90 g</span></td><td data-en="1 Box / 2.5 Weeks">1盒 / 2.5周</td><td><a href="https://www.walmart.ca/en/ip/S-B-Golden-curry-sauce-mix-medium-hot/6000198034558">$3.97</a></td></tr>
-<tr data-price-id="45" data-weekly-cost="2.97" data-purchase-group="weekly"><td data-en="Refried Beans">豆泥</td><td><a href="https://www.walmart.ca/en/ip/Old-El-Paso-Mexican-Refried-Beans-Pinto-Beans-398-ml/6000188283974">Old El Paso Mexican Refried Pinto Beans</a><br>398 mL</td><td data-en="1 Can / Week">1罐 / 周</td><td><a href="https://www.walmart.ca/en/ip/Old-El-Paso-Mexican-Refried-Beans-Pinto-Beans-398-ml/6000188283974">$2.97</a></td></tr>
+<tr data-price-id="45" data-weekly-cost="1.48" data-purchase-group="weekly"><td data-en="No Salt Added Chickpeas">无添加盐鹰嘴豆</td><td><a href="https://www.walmart.ca/en/ip/Great-Value-No-Salt-Chick-Peas/10275066">Great Value No Salt Chick Peas</a><br>540 mL</td><td data-en="1 Can / Week">1罐 / 周</td><td><a href="https://www.walmart.ca/en/ip/Great-Value-No-Salt-Chick-Peas/10275066">$1.48</a></td></tr>
 
 <tr data-price-id="46" data-purchase-group="restock"><td data-en="Light Soy Sauce">生抽</td><td><a href="https://www.walmart.ca/en/ip/LKK-SOY-SAUCE/874990">Lee Kum Kee Soy Sauce</a><br>500 mL</td><td data-en="As Needed">按需补</td><td><a href="https://www.walmart.ca/en/ip/LKK-SOY-SAUCE/874990">$2.77</a></td></tr>
 <tr data-price-id="49" data-purchase-group="restock"><td data-en="Fish Sauce">鱼露</td><td><a href="https://www.walmart.ca/en/ip/SQUID-BRAND-FISH-SAUCE/77U7DWXUO6G9">Squid Brand Fish Sauce</a><br>725 mL</td><td data-en="As Needed">按需补</td><td><a href="https://www.walmart.ca/en/ip/SQUID-BRAND-FISH-SAUCE/77U7DWXUO6G9">$2.88</a></td></tr>
@@ -235,7 +235,7 @@ visual: true
 <td>每周合计</td>
 <td>—</td>
 <td style="text-align: right;">—</td>
-<td style="text-align: right;">$161.14</td>
+<td style="text-align: right;">$159.65</td>
 </tr>
 </tbody>
 </table>

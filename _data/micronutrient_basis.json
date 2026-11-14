@@ -31,8 +31,8 @@
       "description": "Per 30 mL: calcium 10 mg, iron 0.4 mg, potassium 300 mg."
     },
     "flaxLabel": "https://www.bobsredmill.com/product/flaxseed-meal",
-    "refriedBeansLabel": "https://www.oldelpaso.ca/products/rice-beans/old-el-paso-refried-beans",
-    "jamiesonVitaminDLabel": "https://www.jamiesonvitamins.com/products/vitamin-d"
+    "jamiesonVitaminDLabel": "https://www.jamiesonvitamins.com/products/vitamin-d",
+    "chickpeasLabel": "https://i5.walmartimages.ca/asr/370f0918-c48f-4d88-8977-543b148667d9.313a5c461508f29f6820143dc0554de7.jpeg"
   },
   "notes": [
     "Micronutrient planning estimates for the current plan, not a measurement or product-label audit. Units match nutrition_basis.json; breakfast inputs are per 100 g. Numeric coverage is explicit; a missing field causes recalculation to fail.",
@@ -554,21 +554,6 @@
       ],
       "basis": "CNF 5332: Salad dressing, mayonnaise, reduced fat; 5 g per recipe unit. Generic composition proxy, not the selected product label. Iodine from USDA generic-food proxy; see iodine assumptions."
     },
-    "refriedBeans": {
-      "values": {
-        "calcium": 30,
-        "iron": 1.25,
-        "potassium": 300,
-        "vitaminD": 0,
-        "vitaminB12": 0,
-        "iodine": 0.5
-      },
-      "sources": [
-        "refriedBeansLabel",
-        "assumptions"
-      ],
-      "basis": "Per 125 mL: calcium, iron and potassium from Old El Paso Canadian label. Vitamin D and B12 assumed zero for the unfortified plant product. Iodine 0.5 mcg per unit is an explicit trace-composition allowance, not a verified product measurement."
-    },
     "cornstarch": {
       "values": {
         "calcium": 2,
@@ -597,6 +582,21 @@
         "assumptions"
       ],
       "basis": "Per tablet: vitamin D3 25 mcg (1,000 IU) from manufacturer. Other micronutrients are not quantified on the supplement label; omitted contributions modeled as zero, not measured zero."
+    },
+    "chickpeas": {
+      "values": {
+        "calcium": 20,
+        "iron": 0.75,
+        "potassium": 150,
+        "vitaminD": 0,
+        "vitaminB12": 0,
+        "iodine": 0.5
+      },
+      "sources": [
+        "chickpeasLabel",
+        "assumptions"
+      ],
+      "basis": "Per 125 mL Canadian label: calcium20 mg, iron0.75 mg, potassium150 mg. Vitamin D and B12 assumed zero for unfortified chickpeas; iodine0.5 mcg is an explicit trace allowance, not a measured label value. Whole-can conversion 540/125 is a planning estimate; drained yield is unmeasured."
     }
   },
   "extraRecipes": {
