@@ -15,7 +15,11 @@ test('seven distinct meals repeat symmetrically, retaining all 14 meal slots and
  assert.deepEqual(basis.mealKeys,['bread','noodles','dumpling','wrap','rice','potato','pasta']);
  assert.deepEqual(rows.slice(0,7).map(m=>m[1]),basis.mealKeys);
  assert.deepEqual(rows.slice(7).map(m=>m[1]),basis.mealKeys);
- assert.equal(rows.filter(m=>m[2].includes('sparkling-ice')).length,2);
+ const sparklingRows=rows.filter(m=>m[2].includes('sparkling-ice'));
+ assert.equal(sparklingRows.length,2);
+ assert.ok(sparklingRows.every(m=>m[3].includes('<td>周日</td>')));
+ assert.ok(sparklingRows.some(m=>m[3].includes('<td>午餐</td>')));
+ assert.ok(sparklingRows.some(m=>m[3].includes('<td>晚餐</td>')));
  for(const row of rows){assert.ok(nutrition[row[1]]);assert.equal((row[3].match(/<td/g)||[]).length,7);}
 });
 test('weekly meat, eggs, grains and portions match whole-package purchase cycles',()=>{
