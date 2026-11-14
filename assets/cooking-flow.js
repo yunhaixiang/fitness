@@ -18,6 +18,7 @@
   };
   const svg = (name) => `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${icons[name]}</svg>`;
 
+  // Keep the legacy haddock task ID so existing cooking checkmarks remain compatible.
   const nodes = [
     {"id": "oven-heat-start", "label": ["开始预热烤箱", "Start Preheating Oven"], "note": ["", ""], "group": "oven", "before": [], "link": "#cook-oven-heat-start", "minutes": 1, "instant": true},
     {"id": "prep-potato", "label": ["备土豆", "Prepare Potatoes"], "note": ["", ""], "group": "prep", "before": [], "link": "#cook-prep-potato", "minutes": 3, "displayGroup": "oven"},
@@ -42,7 +43,7 @@
     {"id": "air-heat-start", "label": ["开始预热空气炸锅", "Start Preheating Air Fryer"], "note": ["", ""], "group": "air", "before": [], "link": "#cook-air-heat-start", "minutes": 1, "instant": true},
     {"id": "air-heat", "label": ["确认空气炸锅预热完成", "Confirm Air Fryer Is Preheated"], "note": ["预热期间可继续其他任务", "Continue Other Tasks While Heating"], "group": "air", "before": ["air-heat-start"], "link": "#cook-air-heat", "minutes": 4, "confirmation": true},
     {"id": "salmon", "label": ["三文鱼", "Salmon"], "note": ["", ""], "group": "air", "before": ["air-heat", "prep-salmon"], "link": "#cook-salmon", "minutes": 8},
-    {"id": "haddock", "label": ["裹粉黑线鳕", "Breaded Haddock"], "note": ["", ""], "group": "air", "before": ["air-heat"], "link": "#cook-haddock", "minutes": 20},
+    {"id": "haddock", "label": ["罗非鱼", "Tilapia"], "note": ["", ""], "group": "air", "before": ["air-heat"], "link": "#cook-haddock", "minutes": 12},
     {"id": "prep-zucchini", "label": ["备西葫芦", "Prepare Zucchini"], "note": ["", ""], "group": "prep", "before": [], "link": "#cook-prep-zucchini", "minutes": 2, "displayGroup": "large-wok"},
     {"id": "spinach", "label": ["菠菜", "Spinach"], "note": ["", ""], "group": "large-wok", "before": [], "link": "#cook-spinach", "minutes": 5},
     {"id": "ground", "label": ["鸡肉末、西葫芦", "Ground Chicken and Zucchini"], "note": ["", ""], "group": "large-wok", "before": ["prep-zucchini"], "link": "#cook-ground", "minutes": 8},
@@ -125,13 +126,13 @@
   const cookingRange = `${cookingNumber}(?:[–—-]${cookingNumber})?`;
   const cookingIngredients = [
     '鸡大腿肉', '生鸡腿肉', '鸡腿肉', '鸡肉末', '生肉末', '小土豆', '土豆块', '排骨', '牛肉丸',
-    '虾仁', '虾肉', '面包糠', '三文鱼', '裹粉黑线鳕', '金枪鱼', '水煮蛋', '鸡蛋', '水饺',
+    '虾仁', '虾肉', '面包糠', '三文鱼', '裹粉黑线鳕', '罗非鱼', '金枪鱼', '水煮蛋', '鸡蛋', '水饺',
     '干意面', '意面', '干扁米粉', '米粉', '干米', '米饭', '蘑菇', '菠菜', '西葫芦',
     'Unico浓缩番茄膏', '罗马番茄', '番茄', '鹰嘴豆', '豆泥', '橙甜椒', '大号卷饼皮', '全麦面包', '豌豆胡萝卜',
     'Hellmann’s Light ½ Fat 蛋黄酱', 'Chipotle蛋黄酱', '橄榄油', '蒜粉', '洋葱粉', '黑胡椒', '红椒粉', '红辣椒', '辣椒',
     '意式香料', '牛至', '罗勒叶', '罗勒', '鱼露', '生抽', '老抽', '蚝油', '咖喱块', '咖喱酱', '热水', '面水', '沸水', '水'
   ].sort((a, b) => b.length - a.length).join('|');
-  const cookingEnglishIngredients = String.raw`\b(?:chicken thighs?|raw thighs?|ground chicken|chicken|potatoes|potato wedges|ribs|meatballs|shrimp|panko|salmon|(?:breaded )?haddock(?: fillet)?|tuna|boiled eggs?|eggs?|dumplings|spaghetti|rice noodles|noodles|dry rice|rice|mushrooms|spinach|zucchini|Unico Tomato Paste|Roma tomato|tomato|chickpeas|refried beans|orange bell pepper|tortillas?|whole-wheat bread|bread|peas and carrots|Hellmann’s Light ½ Fat mayonnaise|Chipotle mayonnaise|olive oil|garlic powder|onion powder|black pepper|pepper|paprika|red chili|chili|Italian seasoning|oregano|basil(?: leaves)?|fish sauce|light and dark soy sauces|light soy sauce|dark soy sauce|oyster sauce|Golden Curry|water)\b`;
+  const cookingEnglishIngredients = String.raw`\b(?:chicken thighs?|raw thighs?|ground chicken|chicken|potatoes|potato wedges|ribs|meatballs|shrimp|panko|salmon|tilapia|(?:breaded )?haddock(?: fillet)?|tuna|boiled eggs?|eggs?|dumplings|spaghetti|rice noodles|noodles|dry rice|rice|mushrooms|spinach|zucchini|Unico Tomato Paste|Roma tomato|tomato|chickpeas|refried beans|orange bell pepper|tortillas?|whole-wheat bread|bread|peas and carrots|Hellmann’s Light ½ Fat mayonnaise|Chipotle mayonnaise|olive oil|garlic powder|onion powder|black pepper|pepper|paprika|red chili|chili|Italian seasoning|oregano|basil(?: leaves)?|fish sauce|light and dark soy sauces|light soy sauce|dark soy sauce|oyster sauce|Golden Curry|water)\b`;
   const cookingTokens = new RegExp([
     `(?<heat>${cookingRange}\\s*(?:°[FC]|分钟|minutes?\\b))`,
     `(?<portion>第[0-9、，]+盘|\\bmeals?\\s+\\d+(?:(?:,\\s*|\\s+and\\s+)\\d+)*)`,

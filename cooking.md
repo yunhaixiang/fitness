@@ -146,7 +146,7 @@ cooking: true
 <li>Work on other short tasks meanwhile.</li>
 </ol>
 </li>
-<li class="cooking-task-source"><p data-en="Confirm preheating is complete, then load the prepared 🐟 salmon or frozen haddock promptly.">确认空气炸锅预热完成，放入备好的🐟 三文鱼或冷冻黑线鳕。</p></li>
+<li class="cooking-task-source"><p data-en="Confirm preheating is complete, then load the prepared 🐟 salmon or tilapia promptly.">确认空气炸锅预热完成，放入备好的🐟 三文鱼或罗非鱼。</p></li>
 <li class="cooking-task-source">
 <ol lang="zh-CN" class="cooking-source-zh">
 <li>空气炸锅空出且达到400°F时，烤约8–10分钟至中心70°C。</li>
@@ -159,13 +159,16 @@ cooking: true
 </li>
 <li class="cooking-task-source">
 <ol lang="zh-CN" class="cooking-source-zh">
-<li>空气炸锅空出且达到400°F时，放入冷冻🐟 裹粉黑线鳕2片，无需解冻或加油，单层摆放。</li>
-<li>400°F烤18–20分钟至熟透，放第5盘。</li>
+<li>🐟 罗非鱼每次用1整盒（2片，300–400 g；营养按350 g计），擦干表面、检查小刺。冷冻鱼先在冷藏中解冻。</li>
+<li>两面撒🧄 蒜粉¼茶匙、🌶️ paprika¼茶匙和🧂 黑胡椒⅛茶匙，不另加盐或油。</li>
+<li>空气炸锅空出且达到400°F时单层放入，第8分钟开始检查，通常8–12分钟；厚处中心达到70°C后取出，全部放第5盘。放不下时分批烤，不叠放。</li>
+<li>前半周备料时，将后半周那盒生鱼及时密封冷冻。</li>
 </ol>
 <ol lang="en" class="cooking-source-en" hidden>
-<li>When the air fryer is empty and at 400°F, air-fry 2 frozen breaded 🐟 haddock fillets for 18–20 minutes until cooked through, arranged in a single layer.</li>
-<li>Do not thaw or add oil.</li>
-<li>Place in meal 5.</li>
+<li>Use one whole tray of 🐟 tilapia (2 fillets, 300–400 g; nutrition assumes 350 g). Pat dry and check for small bones. Thaw frozen fish in the refrigerator first.</li>
+<li>Season both sides with ¼ tsp 🧄 garlic powder, ¼ tsp 🌶️ paprika and ⅛ tsp 🧂 black pepper, without extra salt or oil.</li>
+<li>When the air fryer is free and at 400°F, arrange in one layer. Start checking at 8 minutes; typically cook 8–12 minutes until the thickest part reaches 70°C. Place all the fish in meal 5. Cook in batches if needed; do not stack.</li>
+<li>During the first cooking session, promptly freeze the second tray of raw fish in sealed packaging.</li>
 </ol>
 </li>
 </ol>

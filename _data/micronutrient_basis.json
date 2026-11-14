@@ -20,7 +20,6 @@
     "cnf2026": "https://open.canada.ca/data/en/dataset/1b6139bd-ed7e-4043-bc28-ff00e10f3109",
     "soyLabel": "https://www.danonefoodservice.ca/wp-content/uploads/2021/02/DAN-7622_BookletPlantBased2020_ENG-Silk-Final.pdf",
     "cerealLabel": "https://www.zehrs.ca/en/fibre-one-breakfast-cereal-crunchy-original-high-f/p/21411449_EA",
-    "haddockLabel": "https://www.highliner.com/products/pan-sear-selects/roasted-garlic-herbs-haddock-pan-sear-selects",
     "tunaLabel": "https://www.cloverleaf.ca/en/products/low-sodium-flaked-light-tuna-skipjack-in-water/",
     "curryLabel": "https://www.sbfoods-worldwide.com/products/search/005.html",
     "iodineUSDA": "https://www.ars.usda.gov/ARSUserFiles/80400535/Data/Iodine/IODINE_DATABASE_RELEASE_4_PER_SERVING.pdf",
@@ -32,12 +31,13 @@
     },
     "flaxLabel": "https://www.bobsredmill.com/product/flaxseed-meal",
     "jamiesonVitaminDLabel": "https://www.jamiesonvitamins.com/products/vitamin-d",
-    "chickpeasLabel": "https://i5.walmartimages.ca/asr/370f0918-c48f-4d88-8977-543b148667d9.313a5c461508f29f6820143dc0554de7.jpeg"
+    "chickpeasLabel": "https://i5.walmartimages.ca/asr/370f0918-c48f-4d88-8977-543b148667d9.313a5c461508f29f6820143dc0554de7.jpeg",
+    "tilapiaUSDA": "https://www.ars.usda.gov/ARSUserFiles/80400535/Data/SR/SR28/reports/sr28fg15.pdf"
   },
   "notes": [
     "Micronutrient planning estimates for the current plan, not a measurement or product-label audit. Units match nutrition_basis.json; breakfast inputs are per 100 g. Numeric coverage is explicit; a missing field causes recalculation to fail.",
     "Generic CNF 2026 edible raw weights match the plan. Cooking/draining losses are not modeled; branded convenience foods use generic proxies when no label data are available. These estimates must not be used to diagnose a nutrient deficiency. No invented confidence intervals.",
-    "Iodine varies substantially. Egg iodine uses the boiled-egg proxy of 31 mcg each for the 17 egg equivalents consumed per week (18 prepared; half of each shrimp-coating egg discarded). Chicken cooked yield assumed75% for the roasted thigh proxy0.7 mcg/85 g. Salmon uses NIH/USDA cooked salmon11 mcg/85 g at75% yield. Haddock250 mcg/110 g raw is based on only3 USDA samples (range152–345 per110 g); 100 g fish per breaded fillet is assumed. Tuna7.4 mcg/85 g drained. Beef proxy6.4 mcg/85 g scaled to85 g meatball unit. Commercial salts are not automatically iodized; low-iodine plant/condiment allowances are estimates, not verified zeros.",
+    "Iodine varies substantially. Egg iodine uses the boiled-egg proxy of 31 mcg each for the 17 egg equivalents consumed per week (18 prepared; half of each shrimp-coating egg discarded). Chicken cooked yield assumed75% for the roasted thigh proxy0.7 mcg/85 g. Salmon uses NIH/USDA cooked salmon11 mcg/85 g at75% yield. Tuna7.4 mcg/85 g drained. Beef proxy6.4 mcg/85 g scaled to85 g meatball unit. Commercial salts are not automatically iodized; low-iodine plant/condiment allowances are estimates, not verified zeros.",
     "Unquantified dry seasoning beyond noodle sauce, drinking-water minerals and zero-calorie beverages are omitted from these six micronutrient totals. Creatine contributes none. Fruit tray composition is an assumption.",
     "Macro/calorie data remain unchanged by this micronutrient completion. Breakfast and drink mineral estimates are recalculated from the same documented ingredients instead of retaining old totals."
   ],
@@ -372,22 +372,6 @@
       ],
       "basis": "CNF 4888: Pasta, rice noodles, dry; 100 g per recipe unit. Generic composition proxy, not the selected product label. Iodine is an explicit trace-composition allowance, not a laboratory result."
     },
-    "haddock": {
-      "values": {
-        "calcium": 20,
-        "iron": 0.5,
-        "potassium": 300,
-        "vitaminD": 0.23,
-        "vitaminB12": 1.83,
-        "iodine": 227.272727
-      },
-      "sources": [
-        "cnf2026",
-        "haddockLabel",
-        "iodineUSDA"
-      ],
-      "basis": "CNF 3198: Fish, haddock, raw; 100 g per recipe unit. Generic composition proxy, not the selected product label. Ca/Fe/K overridden by High Liner label per 127 g fillet. D/B12/iodine use 100 g raw haddock per fillet as a fish-content proxy; breading included in label minerals, not in the fish micronutrient proxy. Iodine from USDA generic-food proxy; see iodine assumptions."
-    },
     "tuna": {
       "values": {
         "calcium": 0,
@@ -597,6 +581,21 @@
         "assumptions"
       ],
       "basis": "Per 125 mL Canadian label: calcium20 mg, iron0.75 mg, potassium150 mg. Vitamin D and B12 assumed zero for unfortified chickpeas; iodine0.5 mcg is an explicit trace allowance, not a measured label value. Whole-can conversion 540/125 is a planning estimate; drained yield is unmeasured."
+    },
+    "tilapia": {
+      "values": {
+        "calcium": 10,
+        "iron": 0.56,
+        "potassium": 302,
+        "vitaminD": 3.1,
+        "vitaminB12": 1.58,
+        "iodine": 2
+      },
+      "sources": [
+        "tilapiaUSDA",
+        "assumptions"
+      ],
+      "basis": "Per 100 g raw tilapia, USDA SR28 NDB15261: Ca10 mg, Fe0.56 mg, K302 mg, D3.1 mcg, B121.58 mcg. Generic composition estimates, not the selected product label. Iodine is not provided by SR28; 2 mcg/100 g is a provisional freshwater-fish modeling allowance, not a measured tilapia value. Recipe uses 350 g raw per meal; actual tray weight varies."
     }
   },
   "extraRecipes": {

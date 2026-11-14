@@ -27,7 +27,7 @@ test('Canadian soy fortification and current seafood servings use their stated u
  assert.equal(micro.foods.cereal.values.vitaminB12,0);
  assert.equal(meals.fruit_snack.vitaminD,'2.160');
  assert.equal(micro.foods.tuna.values.vitaminD,4); // one 55 g drained half-can
- assert.equal(micro.foods.haddock.values.potassium,300); // one fillet, not per 100 g
+ assert.equal(micro.foods.tilapia.values.potassium,302); // per 100 g raw tilapia
  const weeklySalt=macro.recipes.reduce((s,r)=>s+2*(r.salt||0),0);
  assert.equal(weeklySalt,0); // no added table salt in the current recipes
 });

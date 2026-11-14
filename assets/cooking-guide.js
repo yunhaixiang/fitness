@@ -31,7 +31,7 @@
     "air-heat-start": 1,
     "air-heat": 4,
     "salmon": 8,
-    "haddock": 20,
+    "haddock": 12,
     "prep-zucchini": 2,
     "spinach": 5,
     "ground": 8,

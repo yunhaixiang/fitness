@@ -2,7 +2,7 @@
   "checked_on": "2026-10-31",
   "currency": "CAD",
   "scope": "Walmart Canada public prices and user-provided Metro fruit price; individual checked_on retained. Chicken thigh and salmon prices supplied by user. Weekly subtotal averages routine purchase cycles. Bread assumes three slices total 105 g; weighed produce billed by actual weight. Excludes as-needed seasonings, tax and delivery. Not a London store live stock guarantee.",
-  "weekly_total_cad": "159.65",
+  "weekly_total_cad": "166.51",
   "items": [
     {
       "item": "去骨去皮鸡大腿肉",
@@ -424,18 +424,25 @@
       "purchase_frequency_en": "1 Box / 2.5 Weeks"
     },
     {
-      "item": "裹粉黑线鳕",
-      "price_cad": "12.74",
-      "basis": "package",
-      "source_url": "https://www.walmart.ca/en/ip/High-Liner-Pan-Sear-Selects-Roasted-Garlic-Herb-Haddock/6000196030769",
-      "product_url": "https://www.walmart.ca/en/ip/High-Liner-Pan-Sear-Selects-Roasted-Garlic-Herb-Haddock/6000196030769",
+      "item": "罗非鱼",
+      "price_cad": "2.80",
+      "basis": "100g",
+      "source_url": "https://www.walmart.ca/en/ip/your-fresh-market-tilapia-fillets/6000203880047",
+      "product_url": "https://www.walmart.ca/en/ip/your-fresh-market-tilapia-fillets/6000203880047",
       "source_type": "walmart_public",
-      "weekly_quantity": "1",
-      "weekly_cost_cad": "12.74",
-      "purchase_frequency_zh": "1盒 / 周",
-      "purchase_frequency_en": "1 Box / Week",
-      "checked_on": "2026-11-08",
-      "price_type": "sale"
+      "weekly_quantity": "7",
+      "weekly_cost_cad": "19.60",
+      "purchase_frequency_zh": "2盒 / 周",
+      "purchase_frequency_en": "2 Trays / Week",
+      "checked_on": "2026-11-14",
+      "price_type": "regular",
+      "product": "Your Fresh Market Tilapia Fillets",
+      "package_g_range": [
+        300,
+        400
+      ],
+      "planning_package_g": 350,
+      "availability_note": "Public unit price; weekly budget assumes two 350 g trays. Actual checkout cost follows tray weights. London stock not verified."
     },
     {
       "item": "无添加盐鹰嘴豆",

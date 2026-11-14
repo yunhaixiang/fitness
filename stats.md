@@ -19,7 +19,7 @@ visual: true
     </div>
     <div class="nutrition-overview-key">
       <p class="nutrition-overview-eyebrow">能量概览 · 不含放纵餐</p>
-      <div class="nutrition-key-row nutrition-key-intake"><span>日均摄入</span><strong>1,892 <small>kcal／天</small></strong></div>
+      <div class="nutrition-key-row nutrition-key-intake"><span>日均摄入</span><strong>1,891 <small>kcal／天</small></strong></div>
       <div class="nutrition-key-row nutrition-key-burn"><span>日均消耗</span><strong data-energy="dailyBurn">— <small>kcal／天</small></strong></div>
       <div class="nutrition-key-row nutrition-key-deficit"><span>日均赤字</span><strong data-energy="dailyDeficit">— <small>kcal／天</small></strong></div>
       <div class="nutrition-key-row"><span>每周赤字</span><strong data-energy="weeklyDeficit">— <small>kcal</small></strong></div>
@@ -99,37 +99,37 @@ visual: true
 <tbody>
 <tr>
 <td>热量</td>
-<td style="text-align: right;">1,892 kcal</td>
+<td style="text-align: right;">1,891 kcal</td>
 <td>1,800–2,000 kcal</td>
 </tr>
 <tr data-macro="protein">
 <td>蛋白质</td>
-<td style="text-align: right;">133.4 g</td>
+<td style="text-align: right;">143.2 g</td>
 <td>120–140 g</td>
 </tr>
 <tr data-macro="fat">
 <td>总脂肪</td>
-<td style="text-align: right;">68.6 g</td>
+<td style="text-align: right;">66.9 g</td>
 <td>45–65 g</td>
 </tr>
 <tr>
 <td>饱和脂肪</td>
-<td style="text-align: right;">15.8 g</td>
+<td style="text-align: right;">16.1 g</td>
 <td>≤12.6 g</td>
 </tr>
 <tr>
 <td>饱和脂肪占总热量</td>
-<td style="text-align: right;">7.5%</td>
+<td style="text-align: right;">7.6%</td>
 <td>≤6%</td>
 </tr>
 <tr data-macro="carbs">
 <td>碳水化合物</td>
-<td style="text-align: right;">195.8 g</td>
+<td style="text-align: right;">189.5 g</td>
 <td>180–240 g</td>
 </tr>
 <tr>
 <td>膳食纤维</td>
-<td style="text-align: right;">37.2 g</td>
+<td style="text-align: right;">36.7 g</td>
 <td>30–38 g</td>
 </tr>
 <tr>
@@ -144,42 +144,42 @@ visual: true
 </tr>
 <tr>
 <td>膳食胆固醇</td>
-<td style="text-align: right;">813 mg</td>
+<td style="text-align: right;">831 mg</td>
 <td>尽量少；优先控制饱和脂肪</td>
 </tr>
 <tr>
 <td>钠</td>
-<td style="text-align: right;">2,630 mg</td>
+<td style="text-align: right;">2,448 mg</td>
 <td>≤2,300 mg</td>
 </tr>
 <tr>
 <td>钙</td>
-<td>1,126 mg</td>
+<td>1,125 mg</td>
 <td>1,000 mg</td>
 </tr>
 <tr>
 <td>铁</td>
-<td>18.9 mg</td>
+<td>19.2 mg</td>
 <td>8 mg</td>
 </tr>
 <tr>
 <td>钾</td>
-<td>4,573 mg</td>
+<td>4,704 mg</td>
 <td>≥3,400 mg</td>
 </tr>
 <tr>
 <td>维生素D</td>
-<td>38.2 µg</td>
+<td>41.2 µg</td>
 <td>15 µg</td>
 </tr>
 <tr>
 <td>维生素B12</td>
-<td>9.0 µg</td>
+<td>9.5 µg</td>
 <td>2.4 µg</td>
 </tr>
 <tr>
 <td>碘</td>
-<td>237 µg</td>
+<td>109 µg</td>
 <td>150 µg</td>
 </tr>
 <tr>
