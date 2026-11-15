@@ -455,7 +455,7 @@
       "sesame": 0.05
     },
     {
-      "dumpling": 2,
+      "dumpling": 2.25,
       "salmon": 1.6,
       "spinach": 0.66,
       "mushroom": 0.5675,
@@ -527,7 +527,8 @@
     "2026-11-14: halve only the four salty liquid noodle sauces; garlic powder, paprika, basil, water and separate olive oil stay unchanged. Sodium450 mg is half the previous generic900 mg liquid-sauce allowance, not a measured brand-label total. To preserve herbs/spices rather than halve them, use their approximate unchanged proxy of5 kcal, P0.3/C0.9/F0.1 g, fibre0.3 g and sugar0.1 g; halve the remainder of the previous20 kcal composite. No replacement calories added.",
     "2026-11-14: move another half chicken thigh from wrap (meal4) to ribs/potatoes (meal6). Meals1,2,4,6 now each receive one thigh (116.25 g raw equivalent); four equal portions per cooking session. Weekly thigh total remains930 g. All other recipe quantities unchanged.",
     "2026-11-14: all chickpeas now go to the two wraps only, half the drained can per wrap (2.16 label units per meal). Remove chickpeas from dumpling and ribs/potato meals. Weekly amount remains one540 mL can; no purchase or seasoning changes.",
-    "2026-11-14: add5 g Heiwa roasted white sesame seeds to meals2 and5, four servings/20 g per week. Per5 g verified retailer label:30 kcal, protein1 g, carbs1 g, fat3 g, saturated0.5 g, fibre1 g, sugar0 g, sodium0 mg, cholesterol0 mg. Array scaled to100 g; label rounding retained. EPA/DHA assumed zero for sesame. Other recipe portions unchanged."
+    "2026-11-14: add5 g Heiwa roasted white sesame seeds to meals2 and5, four servings/20 g per week. Per5 g verified retailer label:30 kcal, protein1 g, carbs1 g, fat3 g, saturated0.5 g, fibre1 g, sugar0 g, sodium0 mg, cholesterol0 mg. Array scaled to100 g; label rounding retained. EPA/DHA assumed zero for sesame. Other recipe portions unchanged.",
+    "2026-11-14: increase meal3 from8 to9 dumplings (216 g sauce-free dumpling weight), twice per week:18 dumplings/432 g. Existing estimated sauce-free composition retained:42.5 kcal per piece. Other recipe portions unchanged; no extra rice added."
   ],
   "sources": {
     "shrimp": "https://www.walmart.ca/en/ip/Great-Value-Wild-Argentinian-Large-Raw-Shrimp/6000202999819",
