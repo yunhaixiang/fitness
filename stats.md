@@ -11,7 +11,7 @@ visual: true
 
 <figure class="nutrition-overview" aria-label="每日能量与每周赤字">
   <div class="nutrition-overview-main">
-    <div class="nutrition-ring" style="--intake-share:81.6%" aria-label="每日摄入与消耗">
+    <div class="nutrition-ring" style="--intake-share:81.5%" aria-label="每日摄入与消耗">
       <div class="nutrition-ring-center">
         <span>日均赤字</span>
         <strong data-energy="dailyDeficit">— <small>kcal／天</small></strong>
@@ -104,12 +104,12 @@ visual: true
 </tr>
 <tr data-macro="protein">
 <td>蛋白质</td>
-<td style="text-align: right;">132.9 g</td>
+<td style="text-align: right;">132.8 g</td>
 <td>120–140 g</td>
 </tr>
 <tr data-macro="fat">
 <td>总脂肪</td>
-<td style="text-align: right;">64.2 g</td>
+<td style="text-align: right;">64.1 g</td>
 <td>45–65 g</td>
 </tr>
 <tr>
@@ -149,7 +149,7 @@ visual: true
 </tr>
 <tr>
 <td>钠</td>
-<td style="text-align: right;">2,312 mg</td>
+<td style="text-align: right;">2,311 mg</td>
 <td>≤2,300 mg</td>
 </tr>
 <tr>
@@ -164,12 +164,12 @@ visual: true
 </tr>
 <tr>
 <td>钾</td>
-<td>4,565 mg</td>
+<td>4,563 mg</td>
 <td>≥3,400 mg</td>
 </tr>
 <tr>
 <td>维生素D</td>
-<td>37.8 µg</td>
+<td>37.7 µg</td>
 <td>15 µg</td>
 </tr>
 <tr>

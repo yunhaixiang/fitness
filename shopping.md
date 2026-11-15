@@ -32,7 +32,7 @@ visual: true
 </tr>
 <tr data-weekly-cost="10.47" data-price-id="3" data-purchase-group="weekly">
 <td>三文鱼</td>
-<td><a href="https://www.walmart.ca/en/ip/Your-Fresh-Market-Coho-Salmon-Portions/6000208252814">Your Fresh Market Coho Salmon Portions</a><br>每盒2块，按320 g / 盒计算</td>
+<td><a href="https://www.walmart.ca/en/ip/Your-Fresh-Market-Coho-Salmon-Portions/6000208252814">Your Fresh Market Coho Salmon Portions</a><br><span data-en="2 Fillets per Pack · 316 g">每盒2块，共316 g</span></td>
 <td data-en="1 Pack / Week">1盒 / 周</td>
 <td style="text-align: right;"><a href="https://www.walmart.ca/en/ip/Your-Fresh-Market-Coho-Salmon-Portions/6000208252814">$10.47</a></td>
 </tr>

@@ -36,7 +36,10 @@
       "product_url": "https://www.walmart.ca/en/ip/Your-Fresh-Market-Coho-Salmon-Portions/6000208252814",
       "purchase_frequency_zh": "1盒 / 周",
       "purchase_frequency_en": "1 Pack / Week",
-      "checked_on": "2026-11-08"
+      "checked_on": "2026-11-08",
+      "package_grams": 316,
+      "pieces_per_package": 2,
+      "weight_source": "user_provided"
     },
     {
       "item": "特瘦鸡肉末",

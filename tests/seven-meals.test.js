@@ -26,7 +26,7 @@ test('weekly meat, eggs, grains and portions match whole-package purchase cycles
  const weekly=food=>basis.recipes.reduce((s,r)=>s+2*(r[food]||0),0);
  const close=(a,b)=>assert.ok(Math.abs(a-b)<.01,`${a} != ${b}`);
  close(weekly('thigh')*100,930); close(weekly('ground')*100,454);
- close(weekly('shrimp')*100,340); close(weekly('salmon')*100,320);
+ close(weekly('shrimp')*100,340); close(weekly('salmon')*100,316);
  close(weekly('ball'),0); close(weekly('haddock'),0); close(weekly('tilapia'),0); close(weekly('plainHaddock')*100,500); close(weekly('dumpling')*96,432);
  close(weekly('egg'),12);
  assert.equal(basis.shrimpEggWash,undefined); close(weekly('potato')*100,340);

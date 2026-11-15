@@ -455,7 +455,7 @@
     },
     {
       "dumpling": 2.25,
-      "salmon": 1.6,
+      "salmon": 1.58,
       "spinach": 0.66,
       "mushroom": 0.5675,
       "oil": 0.625,
@@ -529,7 +529,8 @@
     "2026-11-14: all chickpeas now go to the two wraps only, half the drained can per wrap (2.16 label units per meal). Remove chickpeas from dumpling and ribs/potato meals. Weekly amount remains one540 mL can; no purchase or seasoning changes.",
     "2026-11-14: add5 g Heiwa roasted white sesame seeds to meals2 and5, four servings/20 g per week. Per5 g verified retailer label:30 kcal, protein1 g, carbs1 g, fat3 g, saturated0.5 g, fibre1 g, sugar0 g, sodium0 mg, cholesterol0 mg. Array scaled to100 g; label rounding retained. EPA/DHA assumed zero for sesame. Other recipe portions unchanged.",
     "2026-11-14: increase meal3 from8 to9 dumplings (216 g sauce-free dumpling weight), twice per week:18 dumplings/432 g. Existing estimated sauce-free composition retained:42.5 kcal per piece. Other recipe portions unchanged; no extra rice added.",
-    "2026-11-14: reorder the repeating half-week to bread, rice, dumpling, noodles, wrap, potato, pasta. Preserve every food quantity and weekly nutrition. Practical freshness/variety constraints: sandwich first; all fish/shrimp dishes within first4 slots; wrap maximally separated from sandwich; avoid adjacent rice/noodles, potato/dumpling, pasta/noodles and wrap/bread. Among the4 feasible permutations, minimize the sum of squared coefficients of variation of full-day kcal, protein, carbs, fat and sodium, using the actual Sunday-to-Saturday lunch/dinner pairs plus existing breakfast/snack portions. This is a planning tradeoff, not a validated clinical optimum or a food-safety guarantee. No new freezing requirement at user request; existing storage instructions remain."
+    "2026-11-14: reorder the repeating half-week to bread, rice, dumpling, noodles, wrap, potato, pasta. Preserve every food quantity and weekly nutrition. Practical freshness/variety constraints: sandwich first; all fish/shrimp dishes within first4 slots; wrap maximally separated from sandwich; avoid adjacent rice/noodles, potato/dumpling, pasta/noodles and wrap/bread. Among the4 feasible permutations, minimize the sum of squared coefficients of variation of full-day kcal, protein, carbs, fat and sodium, using the actual Sunday-to-Saturday lunch/dinner pairs plus existing breakfast/snack portions. This is a planning tradeoff, not a validated clinical optimum or a food-safety guarantee. No new freezing requirement at user request; existing storage instructions remain.",
+    "2026-11-15: User reports two Coho salmon portions total316 g per weekly pack; model one fillet per dumpling meal as158 g. Existing per100 g composition retained."
   ],
   "sources": {
     "shrimp": "https://www.walmart.ca/en/ip/Great-Value-Wild-Argentinian-Large-Raw-Shrimp/6000202999819",

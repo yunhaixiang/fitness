@@ -126,12 +126,12 @@ cooking: true
 <ol>
 <li class="cooking-task-source">
 <ol lang="zh-CN" class="cooking-source-zh">
-<li>取🐟 三文鱼1块160 g，擦干。</li>
+<li>取🐟 三文鱼1块158 g，擦干。</li>
 <li>拌入🫒 橄榄油¼茶匙、🧂 黑胡椒⅛茶匙和🌶️ 红椒粉¼茶匙。</li>
 <li>前半周备料时，将后半周的生三文鱼分装冷冻。</li>
 </ol>
 <ol lang="en" class="cooking-source-en" hidden>
-<li>Pat dry one 160 g 🐟 salmon fillet.</li>
+<li>Pat dry one 158 g 🐟 salmon fillet.</li>
 <li>Coat with ¼ tsp 🫒 olive oil, ⅛ tsp 🧂 black pepper and ¼ tsp 🌶️ paprika.</li>
 <li>Freeze the remaining raw salmon for the second half of the week during the first cooking session.</li>
 </ol>
