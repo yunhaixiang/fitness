@@ -185,18 +185,21 @@
     });
     root.append(dayTabs);
     const modes = [['home', '在家', 'Home'], ['gym', '健身馆', 'Gym']];
-    const toolbar = el('div', 'volume-switch strength-switch');
-    toolbar.setAttribute('role', 'group');
-    toolbar.setAttribute('aria-label', tr('训练场地', 'Training location'));
-    const buttons = new Map();
+    const toolbar = el('section', 'meal-plan-switcher strength-switch');
+    const control = el('div', 'meal-plan-control');
+    const label = el('label', '', tr('力量计划', 'Strength Plan'));
+    label.htmlFor = 'strength-plan-select';
+    const choices = el('select');
+    choices.id = 'strength-plan-select';
     const panels = new Map();
     for (const [mode, zh, english] of modes) {
-      const button = el('button', 'volume-switch-button', tr(zh, english));
-      button.type = 'button';
-      button.addEventListener('click', () => show(mode));
-      buttons.set(mode, button);
-      toolbar.append(button);
+      const option = el('option', '', mode === 'home' ? tr('当前 · 在家', 'Current · Home') : tr('计划 2 · 健身馆', 'Plan 2 · Gym'));
+      option.value = mode;
+      choices.append(option);
     }
+    choices.addEventListener('change', () => show(choices.value));
+    control.append(label, choices);
+    toolbar.append(control);
     root.append(toolbar);
     const gymWeightNote = document.querySelector('#gym-weight-note');
     for (const [index, [mode]] of modes.entries()) {
@@ -295,9 +298,8 @@
       root.append(panel);
     }
     function show(mode) {
-      for (const [name, button] of buttons) button.setAttribute('aria-pressed', String(name === mode));
+      choices.value = mode;
       for (const [name, panel] of panels) panel.hidden = name !== mode;
-      try { localStorage.setItem('yunhai-fitness-volume-mode', mode); } catch (_) { /* storage unavailable */ }
       showDay(activeDay);
     }
     function showDay(weekday) {
@@ -314,9 +316,7 @@
       if (wrap.previousElementSibling?.tagName === 'H2') wrap.previousElementSibling.hidden = true;
       wrap.hidden = true;
     }
-    let initial = 'home';
-    try { if (localStorage.getItem('yunhai-fitness-volume-mode') === 'gym') initial = 'gym'; } catch (_) { /* storage unavailable */ }
-    show(initial);
+    show('home');
     let selectedDate = new Date().toDateString();
     const selectToday = () => {
       const today = new Date();

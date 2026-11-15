@@ -25,7 +25,6 @@
     return node;
   };
   let mode = 'home';
-  try { mode = localStorage.getItem('yunhai-fitness-volume-mode') === 'gym' ? 'gym' : 'home'; } catch (_) { /* storage unavailable */ }
 
   function addMeal(kind, title, food, kcal) {
     const card = element('article', 'today-meal');
@@ -85,12 +84,11 @@
     switcher.setAttribute('role', 'group');
     switcher.setAttribute('aria-label', label('训练场地', 'Training Location'));
     for (const [value, zh, english] of [['home', '在家', 'Home'], ['gym', '健身馆', 'Gym']]) {
-      const button = element('button', '', label(zh, english));
+      const button = element('button', '', value === 'home' ? label('在家 · 当前', 'Home · Current') : label(zh, english));
       button.type = 'button';
       button.setAttribute('aria-pressed', String(mode === value));
       button.addEventListener('click', () => {
         mode = value;
-        try { localStorage.setItem('yunhai-fitness-volume-mode', mode); } catch (_) { /* storage unavailable */ }
         renderTraining(day);
       });
       switcher.append(button);

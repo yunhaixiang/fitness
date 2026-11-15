@@ -62,10 +62,11 @@
   label.textContent = en ? 'Meal Plan' : '饮食计划';
   const choices = document.createElement('select');
   choices.id = 'meal-plan-select';
-  for (const plan of catalog.plans) {
+  const ordered = [...catalog.plans].sort((a, b) => Number(b.id === catalog.default) - Number(a.id === catalog.default));
+  for (const plan of ordered) {
     const option = document.createElement('option');
     option.value = plan.id;
-    option.textContent = plan.name[language];
+    option.textContent = plan.id === catalog.default ? (en ? 'Current' : '当前') : plan.name[language];
     option.selected = plan.id === active.id;
     choices.append(option);
   }

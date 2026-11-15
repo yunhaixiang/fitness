@@ -28,9 +28,8 @@
   if (!plan) return;
   const metabolism = JSON.parse(document.getElementById('metabolic-energy')?.textContent || '{}');
   const ratio = metabolism.exerciseWeightRatio;
-  const planName = entry => Number.isFinite(ratio) && ratio > 0
-    ? {zh: `有氧计划 · 约 ${Math.round(entry.netKcal * ratio)} kcal`, en: `Cardio Plan · ≈${Math.round(entry.netKcal * ratio)} kcal`}
-    : {zh: '有氧计划', en: 'Cardio Plan'};
+  // Names identify the 200/300 kcal planning tiers; actual energy still scales with private weight below.
+  const planName = entry => entry.name;
   window.fitnessCardioPlan = {...plan, name: planName(plan), netKcal: Number.isFinite(ratio) && ratio > 0 ? plan.netKcal * ratio : null};
   const en = window.fitnessI18n?.language === 'en';
   const lang = en ? 'en' : 'zh';
@@ -88,7 +87,7 @@
     // The configured current plan always comes first; additional plans remain browsable.
     const ordered = [plan, ...catalog.plans.filter(entry => entry.id !== plan.id)];
     for (const entry of ordered) {
-      const option = el('option', '', planName(entry)[lang] + (entry.id === plan.id ? tr(' · 当前', ' · Current') : ''));
+      const option = el('option', '', planName(entry)[lang]);
       option.value = entry.id;
       choices.append(option);
     }
@@ -121,7 +120,7 @@
           const play = el('span', 'cardio-video-play', '▶');
           play.setAttribute('aria-hidden', 'true');
           media.append(img, play);
-          link.append(media, el('span', 'cardio-video-label', tr('Juice & Toya 跟练视频 ↗', 'Juice & Toya Workout Video ↗')));
+          link.append(media, el('span', 'cardio-video-label', `${option.creator || ''}${tr(' 跟练视频 ↗', ' Workout Video ↗')}`));
           card.append(link);
         }
         if (option.description[lang]) card.append(el('p', '', option.description[lang]));

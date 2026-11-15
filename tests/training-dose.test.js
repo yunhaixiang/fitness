@@ -36,8 +36,9 @@ function table(mode){
   })}))}))};
 }
 function render(language,withWeight=false){
-  const root=new Element(),toolbar=new Element(),buttons=[new Element('button'),new Element('button')];
-  toolbar.querySelectorAll=()=>buttons;root.querySelector=()=>toolbar;
+  const root=new Element(),toolbar=new Element(),choices=new Element('select');
+  choices.value='home';toolbar.querySelector=()=>choices;root.querySelector=()=>toolbar;
+  const buttons=['home','gym'].map(mode=>({events:{click(){choices.value=mode;choices.events.change();}}}));
   const document={querySelector:()=>root,querySelectorAll:()=>[table('home'),table('gym')],createElement:tag=>new Element(tag),createElementNS:(_,tag)=>new Element(tag),body:{dataset:{}}};
   const window={fitnessTrainingDose:dose,fitnessExerciseLoad:loads,fitnessI18n:{language,original:n=>n.textContent,translate:n=>n},addEventListener(){}};
   if(withWeight)window.fitnessBodyMetrics={weight: typeof withWeight === 'number' ? withWeight : 80}; // Synthetic fixture, not a personal record.

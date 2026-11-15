@@ -322,7 +322,7 @@
     }
     requestAnimationFrame(updateLeaders);
   }
-  const buttons = [...toolbar.querySelectorAll('.volume-switch-button')];
-  buttons.forEach((button, index) => button.addEventListener('click', () => show(index === 0 ? 'home' : 'gym')));
-  show(buttons[1]?.getAttribute('aria-pressed') === 'true' ? 'gym' : 'home');
+  const choices = toolbar.querySelector('#strength-plan-select');
+  choices.addEventListener('change', () => show(choices.value === 'gym' ? 'gym' : 'home'));
+  show(choices.value === 'gym' ? 'gym' : 'home');
 })();
