@@ -453,15 +453,15 @@
         "iron": 0.24795,
         "potassium": 64.429,
         "vitaminD": 0.0,
-        "vitaminB12": 0.039,
-        "iodine": 0.8
+        "vitaminB12": 0.0195,
+        "iodine": 0.4
       },
       "sources": [
         "cnf2026",
         "iodineUSDA",
         "assumptions"
       ],
-      "basis": "One meal: fish sauce 3 g, combined soy sauces 5.3 g, oyster sauce 6 g, garlic powder 0.8 g, paprika 1/4 tsp (about 0.6 g), basil 1 g. Density/leaf-weight assumptions; iodine 0.8 mcg proxy dominated by fish sauce. Trace micronutrients retain the previous sauce proxy; this spice substitution has not been separately resolved."
+      "basis": "One meal: fish sauce 1.5 g, combined soy sauces 2.65 g, oyster sauce 3 g, garlic powder 0.8 g, paprika 1/4 tsp (about 0.6 g), basil 1 g. Density/leaf-weight assumptions; iodine 0.4 mcg proxy dominated by fish sauce. Trace micronutrients retain the previous sauce proxy; this spice substitution has not been separately resolved. 2026-11-14: liquid sauces halved while herbs/spices remain unchanged. Fish-sauce B12 and iodine proxies halved. Calcium, iron and potassium retain the unresolved composite estimate; they are not separately quantified by sauce and spice, so no precise reduction is claimed."
     },
     "soy": {
       "values": {

@@ -245,11 +245,11 @@ cooking: true
 <li class="cooking-task-source">
 <ol lang="zh-CN" class="cooking-source-zh">
 <li>🌿 罗勒叶2–3片洗净。</li>
-<li>🥣 鱼露、生抽、老抽各½茶匙，🥣 蚝油1茶匙、🧄 蒜粉¼茶匙、🌶️ 红椒粉¼茶匙和💧 水2汤匙调匀。</li>
+<li>🥣 鱼露、生抽、老抽各¼茶匙，🥣 蚝油½茶匙、🧄 蒜粉¼茶匙、🌶️ 红椒粉¼茶匙和💧 水2汤匙调匀。</li>
 </ol>
 <ol lang="en" class="cooking-source-en" hidden>
 <li>Wash 2–3 🌿 basil leaves.</li>
-<li>Mix ½ tsp each 🥣 fish sauce, 🥣 light soy sauce and 🥣 dark soy sauce, 1 tsp 🥣 oyster sauce, ¼ tsp 🧄 garlic powder, ¼ tsp 🌶️ paprika and 2 tbsp 💧 water.</li>
+<li>Mix ¼ tsp each 🥣 fish sauce, 🥣 light soy sauce and 🥣 dark soy sauce, ½ tsp 🥣 oyster sauce, ¼ tsp 🧄 garlic powder, ¼ tsp 🌶️ paprika and 2 tbsp 💧 water.</li>
 </ol>
 </li>
 <li class="cooking-task-source">

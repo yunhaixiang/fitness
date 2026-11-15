@@ -149,14 +149,14 @@
       "iodine": "18.033"
     },
     "noodles": {
-      "kcal": "674",
-      "protein": "56.3",
-      "carbs": "66.4",
+      "kcal": "666",
+      "protein": "56.0",
+      "carbs": "64.9",
       "fat": "19.6",
       "saturatedFat": "5.2",
       "fibre": "5.2",
-      "sugar": "6.0",
-      "sodium": "2209",
+      "sugar": "5.1",
+      "sodium": "1759",
       "cholesterol": "499",
       "epaDha": "0.34",
       "label": "noodles",
@@ -164,8 +164,8 @@
       "iron": "3.842",
       "potassium": "749.173",
       "vitaminD": "0.939",
-      "vitaminB12": "3.386",
-      "iodine": "58.021"
+      "vitaminB12": "3.367",
+      "iodine": "57.621"
     },
     "fruit_snack": {
       "label": "周日—周二睡前加餐（混合水果盘）",
