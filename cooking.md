@@ -350,13 +350,13 @@ cooking: true
 <li class="cooking-task-source">
 <ol lang="zh-CN" class="cooking-source-zh">
 <li>前半周：🫘 无添加盐鹰嘴豆整罐沥干、用💧 清水冲洗，再分成两等份；后半周那份密封冷藏，按包装开罐保存期限使用。后半周做饭时直接取预留的那份。</li>
-<li>本次半罐按3∶1∶1分：3份留给第4盘卷饼，1份放第6盘排骨土豆，1份放第3盘水饺三文鱼。对应每餐为整罐的3/10、1/10、1/10。</li>
-<li>卷饼那份加少量💧 水，用叉子压碎；配菜两份保持整粒。各份按口味拌少量🧄 蒜粉、🌶️ paprika，不另加盐或油。</li>
+<li>本次半罐全部留给第4盘卷饼。</li>
+<li>加少量💧 水，用叉子压碎，按口味拌少量🧄 蒜粉、🌶️ paprika，不另加盐或油。</li>
 </ol>
 <ol lang="en" class="cooking-source-en" hidden>
 <li>First session: drain and rinse the whole can of 🫘 no salt added chickpeas with 💧 water, then split into two equal batches. Refrigerate the second batch in a sealed container and follow the package storage instructions. For the second session, use the reserved batch.</li>
-<li>Divide this batch 3:1:1: reserve three parts for the wrap in meal 4, put one part in meal 6 with ribs and potatoes, and one part in meal 3 with dumplings and salmon. These are 3/10, 1/10 and 1/10 of the full drained can.</li>
-<li>Mash the wrap portion with a fork and a little 💧 water; leave the side portions whole. Season to taste with a little 🧄 garlic powder and 🌶️ paprika, without extra salt or oil.</li>
+<li>Reserve this entire half-can batch for the wrap in meal 4.</li>
+<li>Mash with a fork and a little 💧 water. Season to taste with a little 🧄 garlic powder and 🌶️ paprika, without extra salt or oil.</li>
 </ol>
 </li>
 
@@ -401,10 +401,10 @@ cooking: true
 <li class="cooking-task-source"><p data-en="Drain 1 can of 🫛🥕 peas and carrots (about 260 g) and divide equally between meals 2 and 5.">🫛🥕 豌豆胡萝卜1罐沥干（约260 g），直接均分到第2、5盘。</p></li>
 <li class="cooking-task-source">
 <ol lang="zh-CN" class="cooking-source-zh">
-<li>先抹上预留的🫘 鹰嘴豆泥（整罐的3/10），加入第4盘的🍗 鸡腿肉和掰碎🥚 水煮蛋，在盘内卷好。</li>
+<li>先抹上预留的🫘 鹰嘴豆泥（½罐），加入第4盘的🍗 鸡腿肉和掰碎🥚 水煮蛋，在盘内卷好。</li>
 </ol>
 <ol lang="en" class="cooking-source-en" hidden>
-<li>Spread the reserved mashed 🫘 chickpeas (3/10 of the full can) on the tortilla, add meal 4’s shredded 🍗 chicken and crumbled 🥚 boiled egg, then roll it up on the plate.</li>
+<li>Spread the reserved mashed 🫘 chickpeas (½ can) on the tortilla, add meal 4’s shredded 🍗 chicken and crumbled 🥚 boiled egg, then roll it up on the plate.</li>
 </ol>
 </li>
 <li class="cooking-task-source">
