@@ -17,8 +17,20 @@ meal_activities_script: /assets/meal-plans/plan-2/meal-activities.js
 <ol class="cooking-source-en" lang="en" hidden><li>Rinse and drain 120 mL (96 g) 🍚 dry rice.</li><li>Add 120 mL 💧 water to the rice cooker.</li></ol>
 </li>
 <li class="cooking-task-source">
-<ol class="cooking-source-zh" lang="zh"><li>启动White Rice白米模式，约50分钟；均分到第2、5盘。</li></ol>
-<ol class="cooking-source-en" lang="en" hidden><li>Use White Rice mode, about 50 minutes; divide equally between meals 2 and 5.</li></ol>
+<ol lang="zh-CN" class="cooking-source-zh">
+<li>启动White Rice白米模式，完成启动后勾选。</li>
+</ol>
+<ol lang="en" class="cooking-source-en" hidden>
+<li>Start White Rice mode and check this step once the cooker is running.</li>
+</ol>
+</li>
+<li class="cooking-task-source">
+<ol lang="zh-CN" class="cooking-source-zh">
+<li>约50分钟后，确认电饭煲完成煮饭，再开盖松散、分装🍚 米饭。</li>
+</ol>
+<ol lang="en" class="cooking-source-en" hidden>
+<li>After about 50 minutes, confirm the rice cycle is complete, then fluff and portion the 🍚 rice.</li>
+</ol>
 </li>
 </ol>
 <h2 id="oven" data-en="Oven">烤箱</h2>
@@ -44,16 +56,68 @@ meal_activities_script: /assets/meal-plans/plan-2/meal-activities.js
 <ol class="cooking-source-en" lang="en" hidden><li>Confirm the oven has reached 400°F.</li></ol>
 </li>
 <li class="cooking-task-source">
-<ol class="cooking-source-zh" lang="zh"><li>🥔 整颗土豆400°F烤40分钟至软；均分到第4、7盘。</li></ol>
-<ol class="cooking-source-en" lang="en" hidden><li>Roast whole 🥔 potatoes at 400°F for 40 minutes until tender; divide equally between meals 4 and 7.</li></ol>
+<ol lang="zh-CN" class="cooking-source-zh">
+<li>将备好的土豆放入预热至400°F的烤箱，开始烹调后勾选。</li>
+<li>约40分钟后检查熟度。</li>
+</ol>
+<ol lang="en" class="cooking-source-en" hidden>
+<li>Load the prepared potatoes into the oven preheated to 400°F and check after starting.</li>
+<li>Check for doneness after about 40 minutes.</li>
+</ol>
 </li>
 <li class="cooking-task-source">
-<ol class="cooking-source-zh" lang="zh"><li>400°F烤27分钟，中心达74°C。</li><li>第1盘2块掰碎；第3、6盘各1块。</li></ol>
-<ol class="cooking-source-en" lang="en" hidden><li>Roast at 400°F for 27 minutes, to 74°C in the centre.</li><li>Shred 2 thighs for meal 1; place 1 thigh each in meals 3 and 6.</li></ol>
+<ol lang="zh-CN" class="cooking-source-zh">
+<li>烤约20分钟时将🥔 土豆翻面，再放回继续烤。</li>
+</ol>
+<ol lang="en" class="cooking-source-en" hidden>
+<li>After about 20 minutes, turn the 🥔 potatoes and return them to the oven.</li>
+</ol>
 </li>
 <li class="cooking-task-source">
-<ol class="cooking-source-zh" lang="zh"><li>400°F烤15–20分钟，中心达74°C；第4、7盘各¼盒。</li></ol>
-<ol class="cooking-source-en" lang="en" hidden><li>Heat at 400°F for 15–20 minutes, to 74°C in the centre; put ¼ box each in meals 4 and 7.</li></ol>
+<ol lang="zh-CN" class="cooking-source-zh">
+<li>确认熟度后取出：🥔 整颗土豆400°F烤40分钟至软；均分到第4、7盘。</li>
+</ol>
+<ol lang="en" class="cooking-source-en" hidden>
+<li>Check doneness before removing: Roast whole 🥔 potatoes at 400°F for 40 minutes until tender; divide equally between meals 4 and 7.</li>
+</ol>
+</li>
+<li class="cooking-task-source">
+<ol lang="zh-CN" class="cooking-source-zh">
+<li>将备好的鸡大腿肉放入预热至400°F的烤箱，开始烹调后勾选。</li>
+<li>约27分钟后检查熟度。</li>
+</ol>
+<ol lang="en" class="cooking-source-en" hidden>
+<li>Load the prepared chicken thighs into the oven preheated to 400°F and check after starting.</li>
+<li>Check for doneness after about 27 minutes.</li>
+</ol>
+</li>
+<li class="cooking-task-source">
+<ol lang="zh-CN" class="cooking-source-zh">
+<li>确认熟度后取出：400°F烤27分钟，中心达74°C。</li>
+<li>第1盘2块掰碎；第3、6盘各1块。</li>
+</ol>
+<ol lang="en" class="cooking-source-en" hidden>
+<li>Check doneness before removing: Roast at 400°F for 27 minutes, to 74°C in the centre.</li>
+<li>Shred 2 thighs for meal 1; place 1 thigh each in meals 3 and 6.</li>
+</ol>
+</li>
+<li class="cooking-task-source">
+<ol lang="zh-CN" class="cooking-source-zh">
+<li>将备好的排骨放入预热至400°F的烤箱，开始烹调后勾选。</li>
+<li>约20分钟后检查熟度。</li>
+</ol>
+<ol lang="en" class="cooking-source-en" hidden>
+<li>Load the prepared ribs into the oven preheated to 400°F and check after starting.</li>
+<li>Check for doneness after about 20 minutes.</li>
+</ol>
+</li>
+<li class="cooking-task-source">
+<ol lang="zh-CN" class="cooking-source-zh">
+<li>确认熟度后取出：400°F烤15–20分钟，中心达74°C；第4、7盘各¼盒。</li>
+</ol>
+<ol lang="en" class="cooking-source-en" hidden>
+<li>Check doneness before removing: Heat at 400°F for 15–20 minutes, to 74°C in the centre; put ¼ box each in meals 4 and 7.</li>
+</ol>
 </li>
 </ol>
 <h2 id="air-fryer" data-en="Air Fryer">空气炸锅</h2>
@@ -71,19 +135,59 @@ meal_activities_script: /assets/meal-plans/plan-2/meal-activities.js
 <ol class="cooking-source-en" lang="en" hidden><li>After about 4 minutes, confirm the air fryer has reached 400°F.</li></ol>
 </li>
 <li class="cooking-task-source">
-<ol class="cooking-source-zh" lang="zh"><li>🐟 400°F烤8分钟起检查至熟透；第3、4、6、7盘各1块。</li></ol>
-<ol class="cooking-source-en" lang="en" hidden><li>Air-fry 🐟 salmon at 400°F, checking from 8 minutes until cooked through; place 1 portion each in meals 3, 4, 6 and 7.</li></ol>
+<ol lang="zh-CN" class="cooking-source-zh">
+<li>将备好的三文鱼放入预热至400°F的空气炸锅，开始烹调后勾选。</li>
+<li>约8分钟后检查熟度。</li>
+</ol>
+<ol lang="en" class="cooking-source-en" hidden>
+<li>Load the prepared salmon into the air fryer preheated to 400°F and check after starting.</li>
+<li>Check for doneness after about 8 minutes.</li>
+</ol>
+</li>
+<li class="cooking-task-source">
+<ol lang="zh-CN" class="cooking-source-zh">
+<li>确认熟度后取出：🐟 400°F烤8分钟起检查至熟透；第3、4、6、7盘各1块。</li>
+</ol>
+<ol lang="en" class="cooking-source-en" hidden>
+<li>Check doneness before removing: Air-fry 🐟 salmon at 400°F, checking from 8 minutes until cooked through; place 1 portion each in meals 3, 4, 6 and 7.</li>
+</ol>
 </li>
 </ol>
 <h2 id="pot-one" data-en="Pot 1">煮锅一</h2>
 <ol>
 <li class="cooking-task-source">
-<ol class="cooking-source-zh" lang="zh"><li>煮锅一加💧 水烧开。</li></ol>
-<ol class="cooking-source-en" lang="en" hidden><li>Bring 💧 water to a boil in pot 1.</li></ol>
+<ol lang="zh-CN" class="cooking-source-zh">
+<li>煮锅一加入💧 水，开火烧水；开火后即可勾选这一步。</li>
+</ol>
+<ol lang="en" class="cooking-source-en" hidden>
+<li>Add 💧 water to Pot 1 and turn on the heat. Check this step once heating has started.</li>
+</ol>
 </li>
 <li class="cooking-task-source">
-<ol class="cooking-source-zh" lang="zh"><li>放入🥚 鸡蛋6个，煮约8分钟至蛋白蛋黄凝固，捞出冷却。</li></ol>
-<ol class="cooking-source-en" lang="en" hidden><li>Add 6 🥚 eggs, boil for about 8 minutes until set, then remove and cool.</li></ol>
+<ol lang="zh-CN" class="cooking-source-zh">
+<li>看到💧 水持续沸腾后再勾选，随后放入食材；烧水不设固定时长。</li>
+</ol>
+<ol lang="en" class="cooking-source-en" hidden>
+<li>Check only when the 💧 water reaches a steady boil, then add the food. No fixed boiling time.</li>
+</ol>
+</li>
+<li class="cooking-task-source">
+<ol lang="zh-CN" class="cooking-source-zh">
+<li>轻轻放入🥚 鸡蛋6个，开始煮蛋。</li>
+<li>放入后勾选这一步；留意沸溢，等待时可穿插其他任务。</li>
+</ol>
+<ol lang="en" class="cooking-source-en" hidden>
+<li>Gently add 6 🥚 eggs and start cooking.</li>
+<li>Check after adding the food. Watch for boil-over while doing other tasks.</li>
+</ol>
+</li>
+<li class="cooking-task-source">
+<ol lang="zh-CN" class="cooking-source-zh">
+<li>约8分钟后，确认🥚 蛋白蛋黄凝固，捞出放💧 冷水冷却，保留锅内热水。</li>
+</ol>
+<ol lang="en" class="cooking-source-en" hidden>
+<li>After about 8 minutes, confirm the 🥚 eggs are set; lift into cold 💧 water to cool and keep the hot water in the pot.</li>
+</ol>
 </li>
 <li class="cooking-task-source">
 <ol class="cooking-source-zh" lang="zh"><li>🥚 剥壳，第1、2、5盘各2个；第1盘的蛋掰碎。</li></ol>
@@ -93,12 +197,38 @@ meal_activities_script: /assets/meal-plans/plan-2/meal-activities.js
 <h2 id="pot-two" data-en="Pot 2">煮锅二</h2>
 <ol>
 <li class="cooking-task-source">
-<ol class="cooking-source-zh" lang="zh"><li>煮锅二加💧 水烧开。</li></ol>
-<ol class="cooking-source-en" lang="en" hidden><li>Bring 💧 water to a boil in pot 2.</li></ol>
+<ol lang="zh-CN" class="cooking-source-zh">
+<li>煮锅二加入💧 水，开火烧水；开火后即可勾选这一步。</li>
+</ol>
+<ol lang="en" class="cooking-source-en" hidden>
+<li>Add 💧 water to Pot 2 and turn on the heat. Check this step once heating has started.</li>
+</ol>
 </li>
 <li class="cooking-task-source">
-<ol class="cooking-source-zh" lang="zh"><li>🍝 干意面100 g煮约8分钟后沥干。</li></ol>
-<ol class="cooking-source-en" lang="en" hidden><li>Cook 100 g dry 🍝 spaghetti for about 8 minutes, then drain.</li></ol>
+<ol lang="zh-CN" class="cooking-source-zh">
+<li>看到💧 水持续沸腾后再勾选，随后放入食材；烧水不设固定时长。</li>
+</ol>
+<ol lang="en" class="cooking-source-en" hidden>
+<li>Check only when the 💧 water reaches a steady boil, then add the food. No fixed boiling time.</li>
+</ol>
+</li>
+<li class="cooking-task-source">
+<ol lang="zh-CN" class="cooking-source-zh">
+<li>放入🍝 干意面100 g，轻轻搅散。</li>
+<li>放入后勾选这一步；留意沸溢，等待时可穿插其他任务。</li>
+</ol>
+<ol lang="en" class="cooking-source-en" hidden>
+<li>Add 100 g dry 🍝 spaghetti and gently separate the strands.</li>
+<li>Check after adding the food. Watch for boil-over while doing other tasks.</li>
+</ol>
+</li>
+<li class="cooking-task-source">
+<ol lang="zh-CN" class="cooking-source-zh">
+<li>约8分钟后按包装说明检查🍝 意面熟度，再取出沥干。</li>
+</ol>
+<ol lang="en" class="cooking-source-en" hidden>
+<li>After about 8 minutes, check the 🍝 spaghetti for doneness according to the package, then drain.</li>
+</ol>
 </li>
 </ol>
 <h2 id="small-wok" data-en="Saucepan">小锅</h2>

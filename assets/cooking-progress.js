@@ -13,7 +13,14 @@
       for (const id of done) if (!satisfied(byId.get(id))) { done.delete(id); changed = true; }
     } while (changed);
     const pending = active.filter(n => !done.has(n.id));
-    const available = pending.filter(satisfied);
+    // A checked loading step reserves its appliance until removal is confirmed.
+    const occupied = new Map(active.filter(n => n.holdsResource && done.has(n.id) && !done.has(n.releasesAt)).map(n => [n.holdsResource, n.id]));
+    const resourceFor = n => n.holdsResource || n.resource || (n.group === 'small-wok' ? 'small-wok' : null);
+    const free = n => {
+      const owner = occupied.get(resourceFor(n));
+      return !owner || n.waitFor === owner;
+    };
+    const available = pending.filter(n => satisfied(n) && free(n));
     const next = new Map(active.map(n => [n.id, active.filter(x => x.before.includes(n.id))]));
     const memo = new Map();
     const length = id => {
@@ -23,10 +30,9 @@
       memo.set(id, score); return score;
     };
     // Use already-heated appliances promptly; otherwise prioritize the longest remaining chain.
-    const urgent = n => n.id === 'salmon' && done.has('air-heat') ? 3
-      : n.id === 'haddock' && done.has('air-heat') ? 2
-      : ['eggs', 'pasta', 'dumplings', 'noodles'].includes(n.id) && n.before.some(id => id.endsWith('-water') && done.has(id)) ? 1 : 0;
-    available.sort((a,b) => urgent(b) - urgent(a) || Number(!!a.confirmation) - Number(!!b.confirmation) || length(b.id) - length(a.id));
+    const urgent = n => ['salmon-start', 'haddock-start'].includes(n.id) && done.has('air-heat') ? 2
+      : ['eggs-start', 'pasta-start', 'dumplings-start', 'noodles-start'].includes(n.id) ? 1 : 0;
+    available.sort((a,b) => Number(!!a.confirmation) - Number(!!b.confirmation) || urgent(b) - urgent(a) || length(b.id) - length(a.id));
     return { done: [...done], active, available, recommended: available[0]?.id || null, ready: true, total: active.length };
   }
   function toggle(nodes, saved, half, id, checked) {
@@ -43,7 +49,7 @@
     // Both halves now have identical tasks. Keep the previously selected batch,
     // rather than merging marks from separate cooking sessions.
     const legacyHalf = parsed?.half === 'second' ? 'second' : 'first';
-    const done = strings([2, 3, 4].includes(parsed?.version) ? parsed.done : parsed?.[legacyHalf]);
+    const done = strings([2, 3, 4, 5].includes(parsed?.version) ? parsed.done : parsed?.[legacyHalf]);
     for (const id of ['oven-heat', 'air-heat']) if (done.includes(id) && !done.includes(id + '-start')) done.push(id + '-start');
     // A completed legacy finish task included all three newly separated tasks.
     if (done.includes('finish')) {
@@ -53,15 +59,23 @@
     // Previously, laying out bread was part of assembling either meal.
     if (done.some(id => ['wrap', 'sandwich'].includes(id)) && !done.includes('prep-bread')) done.push('prep-bread');
     // Older tasks included these preparation steps; migrate only old records.
-    if (parsed?.version !== 4) {
+    if (![4, 5].includes(parsed?.version)) {
       const split = { eggs: ['peel-eggs'], ground: ['prep-zucchini'],
         'season-noodles': ['prep-noodle-sauce'], wrap: ['prep-wrap'], sandwich: ['prep-sandwich'] };
       for (const [id, children] of Object.entries(split)) if (done.includes(id)) {
         for (const child of children) if (!done.includes(child)) done.push(child);
       }
     }
+    if (parsed?.version !== 5) {
+      // Old completion meant both loading and removal had already happened.
+      for (const id of ['egg-water', 'pasta-water', 'rice', 'potato', 'chicken', 'ribs', 'shrimp', 'salmon', 'haddock', 'eggs', 'pasta', 'noodles', 'dumplings', 'curry']) {
+        if (done.includes(id) && !done.includes(id + '-start')) done.push(id + '-start');
+      }
+      if (done.includes('haddock') && !done.includes('prep-haddock')) done.push('prep-haddock');
+      if (done.includes('potato') && !done.includes('potato-turn')) done.push('potato-turn');
+    }
     // Legacy running tasks return to unchecked; only completion is persisted.
-    return { version: 4, done };
+    return { version: 5, done };
   }
   const api = { derive, toggle, readState };
   if (typeof module !== 'undefined' && module.exports) module.exports = api;
@@ -132,7 +146,7 @@
       c.row.classList.toggle('is-blocked', !checked && !available.has(id));
       c.row.classList.toggle('is-available', available.has(id));
       c.row.classList.toggle('is-recommended', id === view.recommended);
-      c.badge.textContent = checked ? t('已完成', 'Done') : id === view.recommended ? t('推荐下一步', 'Recommended') : available.has(id) ? (plan.nodes.find(n => n.id === id).confirmation ? t('待确认预热完成', 'Confirm When Preheated') : t('现在可做', 'Ready')) : t('等待前置任务', 'Waiting');
+      c.badge.textContent = checked ? t('已完成', 'Done') : id === view.recommended ? t('推荐下一步', 'Recommended') : available.has(id) ? (plan.nodes.find(n => n.id === id).confirmation ? t('达到条件后确认', 'Confirm When Ready') : t('现在可做', 'Ready')) : t('等待前置步骤或厨具空出', 'Waiting for Prerequisites or Cookware');
     }
     progress.max = view.total; progress.value = done.size;
     status.textContent = t(`已完成 ${done.size} / ${view.total}`, `${done.size} / ${view.total} Completed`);
@@ -145,8 +159,8 @@
     if (view.recommended) {
       suggestion.append(create('strong', '', t('推荐下一步', 'Recommended Next')), action(view.available[0], true));
       const next = view.available[0];
-      const reason = ['salmon','haddock','eggs','pasta','dumplings','noodles'].includes(next.id) ? t('加热已就绪，优先接着烹调。', 'The appliance is ready; continue cooking promptly.') : t('优先启动耗时较长的后续流程。', 'Start the longer remaining chain first.');
-      suggestion.append(create('span', 'cooking-progress-reason', next.confirmation ? t('达到预热温度后再确认。', 'Confirm once the target temperature is reached.') : reason));
+      const reason = ['salmon-start','haddock-start','eggs-start','pasta-start','dumplings-start','noodles-start'].includes(next.id) ? t('加热已就绪，优先接着烹调。', 'The appliance is ready; continue cooking promptly.') : t('优先启动耗时较长的后续流程。', 'Start the longer remaining chain first.');
+      suggestion.append(create('span', 'cooking-progress-reason', next.confirmation ? (next.waitKind === 'boil' ? t('水持续沸腾后再确认。', 'Confirm once the water is boiling steadily.') : next.waitKind === 'food' ? t('按步骤检查熟度或时间，再确认；等待期间可做其他任务。', 'Check doneness or the stated time before confirming; other tasks can be done while waiting.') : t('达到预热温度后再确认。', 'Confirm once the target temperature is reached.')) : reason));
       const others = view.available.slice(1);
       if (others.length) { readyList.append(create('strong', '', t('现在也可以做', 'Also Ready'))); const list = create('div', 'cooking-flow-chip-list'); others.forEach(n => list.append(action(n, false))); readyList.append(list); }
     } else suggestion.append(create('strong', '', done.size === view.total ? t('本次做饭已全部完成', 'This Batch Is Complete') : t('勾选已完成的前置任务，解锁下一步。', 'Check off completed prerequisites to unlock the next steps.')));

@@ -85,58 +85,144 @@
       "confirmation": true
     },
     {
-      "id": "potato",
+      "id": "potato-start",
       "label": [
-        "烤土豆",
-        "Roast Potatoes"
+        "放入土豆",
+        "Load Potatoes"
       ],
       "note": [
-        "",
-        ""
+        "放好并启动后勾选",
+        "Check after loading and starting"
       ],
       "group": "oven",
       "before": [
         "oven-heat",
         "prep-potato"
       ],
-      "link": "#cook-potato",
-      "minutes": 40
+      "link": "#cook-potato-start",
+      "minutes": 1,
+      "instant": true,
+      "durationHint": 40
     },
     {
-      "id": "chicken",
+      "id": "potato-turn",
       "label": [
-        "鸡大腿肉",
-        "Chicken Thighs"
+        "土豆中途翻面",
+        "Turn Potatoes Halfway"
       ],
       "note": [
-        "",
-        ""
+        "烤约20分钟后翻面",
+        "Turn after about 20 minutes"
+      ],
+      "group": "oven",
+      "before": [
+        "potato-start"
+      ],
+      "link": "#cook-potato-turn",
+      "minutes": 1,
+      "confirmation": true,
+      "waitKind": "food",
+      "waitFor": "potato-start"
+    },
+    {
+      "id": "potato",
+      "label": [
+        "确认土豆熟透、取出",
+        "Check and Remove Potatoes"
+      ],
+      "note": [
+        "按熟度确认；等待期间可做其他任务",
+        "Confirm doneness; other tasks can be done while waiting"
+      ],
+      "group": "oven",
+      "before": [
+        "potato-turn"
+      ],
+      "link": "#cook-potato",
+      "minutes": 40,
+      "confirmation": true,
+      "waitFor": "potato-start",
+      "waitKind": "food"
+    },
+    {
+      "id": "chicken-start",
+      "label": [
+        "放入鸡大腿肉",
+        "Load Chicken Thighs"
+      ],
+      "note": [
+        "放好并启动后勾选",
+        "Check after loading and starting"
       ],
       "group": "oven",
       "before": [
         "oven-heat",
         "prep-chicken"
       ],
-      "link": "#cook-chicken",
-      "minutes": 27
+      "link": "#cook-chicken-start",
+      "minutes": 1,
+      "instant": true,
+      "durationHint": 27
     },
     {
-      "id": "ribs",
+      "id": "chicken",
       "label": [
-        "BBQ排骨",
-        "BBQ Ribs"
+        "确认鸡大腿肉熟透、取出",
+        "Check and Remove Chicken Thighs"
       ],
       "note": [
-        "",
-        ""
+        "按熟度确认；等待期间可做其他任务",
+        "Confirm doneness; other tasks can be done while waiting"
+      ],
+      "group": "oven",
+      "before": [
+        "chicken-start"
+      ],
+      "link": "#cook-chicken",
+      "minutes": 27,
+      "confirmation": true,
+      "waitFor": "chicken-start",
+      "waitKind": "food"
+    },
+    {
+      "id": "ribs-start",
+      "label": [
+        "放入排骨",
+        "Load Ribs"
+      ],
+      "note": [
+        "放好并启动后勾选",
+        "Check after loading and starting"
       ],
       "group": "oven",
       "before": [
         "oven-heat",
         "prep-ribs"
       ],
+      "link": "#cook-ribs-start",
+      "minutes": 1,
+      "instant": true,
+      "durationHint": 20
+    },
+    {
+      "id": "ribs",
+      "label": [
+        "确认排骨熟透、取出",
+        "Check and Remove Ribs"
+      ],
+      "note": [
+        "按熟度确认；等待期间可做其他任务",
+        "Confirm doneness; other tasks can be done while waiting"
+      ],
+      "group": "oven",
+      "before": [
+        "ribs-start"
+      ],
       "link": "#cook-ribs",
-      "minutes": 20
+      "minutes": 20,
+      "confirmation": true,
+      "waitFor": "ribs-start",
+      "waitKind": "food"
     },
     {
       "id": "prep-rice",
@@ -155,91 +241,207 @@
       "displayGroup": "rice"
     },
     {
-      "id": "rice",
+      "id": "rice-start",
       "label": [
-        "白米饭",
-        "White Rice"
+        "启动煮饭",
+        "Start Rice Cooker"
       ],
       "note": [
-        "",
-        ""
+        "放好并启动后勾选",
+        "Check after loading and starting"
       ],
       "group": "rice",
       "before": [
         "prep-rice"
       ],
+      "link": "#cook-rice-start",
+      "minutes": 1,
+      "instant": true,
+      "durationHint": 50
+    },
+    {
+      "id": "rice",
+      "label": [
+        "确认米饭煮好、盛出",
+        "Check and Serve Rice"
+      ],
+      "note": [
+        "按熟度确认；等待期间可做其他任务",
+        "Confirm doneness; other tasks can be done while waiting"
+      ],
+      "group": "rice",
+      "before": [
+        "rice-start"
+      ],
       "link": "#cook-rice",
-      "minutes": 50
+      "minutes": 50,
+      "confirmation": true,
+      "waitFor": "rice-start",
+      "waitKind": "food"
+    },
+    {
+      "id": "egg-water-start",
+      "label": [
+        "煮锅一开始烧水",
+        "Start Heating Water in Pot 1"
+      ],
+      "note": [
+        "开火后勾选；水开另行确认",
+        "Check after turning on the heat; confirm boiling separately"
+      ],
+      "group": "pots",
+      "before": [],
+      "link": "#cook-egg-water-start",
+      "resource": "pot-1",
+      "minutes": 1,
+      "instant": true
     },
     {
       "id": "egg-water",
       "label": [
-        "煮锅一烧水",
-        "Boil Water in Pot 1"
+        "确认煮锅一水开",
+        "Confirm Pot 1 Is Boiling"
       ],
       "note": [
         "",
         ""
       ],
       "group": "pots",
-      "before": [],
+      "before": [
+        "egg-water-start"
+      ],
       "link": "#cook-egg-water",
       "manual": true,
       "resource": "pot-1",
-      "minutes": 1
+      "minutes": 1,
+      "confirmation": true,
+      "waitFor": "egg-water-start",
+      "waitKind": "boil"
+    },
+    {
+      "id": "pasta-water-start",
+      "label": [
+        "煮锅二开始烧水",
+        "Start Heating Water in Pot 2"
+      ],
+      "note": [
+        "开火后勾选；水开另行确认",
+        "Check after turning on the heat; confirm boiling separately"
+      ],
+      "group": "pots",
+      "before": [],
+      "link": "#cook-pasta-water-start",
+      "resource": "pot-2",
+      "minutes": 1,
+      "instant": true
     },
     {
       "id": "pasta-water",
       "label": [
-        "煮锅二烧水",
-        "Boil Water in Pot 2"
+        "确认煮锅二水开",
+        "Confirm Pot 2 Is Boiling"
       ],
       "note": [
         "",
         ""
       ],
       "group": "pots",
-      "before": [],
+      "before": [
+        "pasta-water-start"
+      ],
       "link": "#cook-pasta-water",
       "manual": true,
       "resource": "pot-2",
-      "minutes": 1
+      "minutes": 1,
+      "confirmation": true,
+      "waitFor": "pasta-water-start",
+      "waitKind": "boil"
     },
     {
-      "id": "eggs",
+      "id": "eggs-start",
       "label": [
-        "煮蛋、捞出冷却",
-        "Boil Eggs and Set Aside to Cool"
+        "放入鸡蛋",
+        "Load Eggs"
       ],
       "note": [
-        "",
-        ""
+        "放好并启动后勾选",
+        "Check after loading and starting"
       ],
       "group": "pots",
       "before": [
         "egg-water"
       ],
-      "link": "#cook-eggs",
+      "link": "#cook-eggs-start",
       "resource": "pot-1",
-      "minutes": 9
+      "minutes": 1,
+      "instant": true,
+      "durationHint": 9,
+      "holdsResource": "pot-1",
+      "releasesAt": "eggs"
     },
     {
-      "id": "pasta",
+      "id": "eggs",
       "label": [
-        "意面",
-        "Spaghetti"
+        "确认鸡蛋熟透、取出",
+        "Check and Remove Eggs"
       ],
       "note": [
-        "",
-        ""
+        "按熟度确认；等待期间可做其他任务",
+        "Confirm doneness; other tasks can be done while waiting"
+      ],
+      "group": "pots",
+      "before": [
+        "eggs-start"
+      ],
+      "link": "#cook-eggs",
+      "resource": "pot-1",
+      "minutes": 9,
+      "confirmation": true,
+      "waitFor": "eggs-start",
+      "waitKind": "food"
+    },
+    {
+      "id": "pasta-start",
+      "label": [
+        "放入意面",
+        "Load Spaghetti"
+      ],
+      "note": [
+        "放好并启动后勾选",
+        "Check after loading and starting"
       ],
       "group": "pots",
       "before": [
         "pasta-water"
       ],
+      "link": "#cook-pasta-start",
+      "resource": "pot-2",
+      "minutes": 1,
+      "instant": true,
+      "durationHint": 8,
+      "holdsResource": "pot-2",
+      "releasesAt": "pasta"
+    },
+    {
+      "id": "pasta",
+      "label": [
+        "确认意面熟透、取出",
+        "Check and Remove Spaghetti"
+      ],
+      "note": [
+        "按熟度确认；等待期间可做其他任务",
+        "Confirm doneness; other tasks can be done while waiting"
+      ],
+      "group": "pots",
+      "before": [
+        "pasta-start"
+      ],
       "link": "#cook-pasta",
       "resource": "pot-2",
-      "minutes": 8
+      "minutes": 8,
+      "confirmation": true,
+      "waitFor": "pasta-start",
+      "waitKind": "food"
     },
     {
       "id": "peel-eggs",
@@ -310,22 +512,46 @@
       "confirmation": true
     },
     {
-      "id": "salmon",
+      "id": "salmon-start",
       "label": [
-        "三文鱼",
-        "Salmon"
+        "放入三文鱼",
+        "Load Salmon"
       ],
       "note": [
-        "",
-        ""
+        "放好并启动后勾选",
+        "Check after loading and starting"
       ],
       "group": "air",
       "before": [
         "air-heat",
         "prep-salmon"
       ],
+      "link": "#cook-salmon-start",
+      "minutes": 1,
+      "instant": true,
+      "durationHint": 8,
+      "holdsResource": "air",
+      "releasesAt": "salmon"
+    },
+    {
+      "id": "salmon",
+      "label": [
+        "确认三文鱼熟透、取出",
+        "Check and Remove Salmon"
+      ],
+      "note": [
+        "按熟度确认；等待期间可做其他任务",
+        "Confirm doneness; other tasks can be done while waiting"
+      ],
+      "group": "air",
+      "before": [
+        "salmon-start"
+      ],
       "link": "#cook-salmon",
-      "minutes": 8
+      "minutes": 8,
+      "confirmation": true,
+      "waitFor": "salmon-start",
+      "waitKind": "food"
     },
     {
       "id": "spinach",
@@ -474,6 +700,7 @@
       "rice",
       [
         "prep-rice",
+        "rice-start",
         "rice"
       ]
     ],
@@ -486,8 +713,12 @@
         "prep-chicken",
         "prep-ribs",
         "oven-heat",
+        "potato-start",
+        "potato-turn",
         "potato",
+        "chicken-start",
         "chicken",
+        "ribs-start",
         "ribs"
       ]
     ],
@@ -498,6 +729,7 @@
         "prep-salmon",
         "air-heat-start",
         "air-heat",
+        "salmon-start",
         "salmon"
       ]
     ],
@@ -505,7 +737,9 @@
       "pot-one",
       "pots",
       [
+        "egg-water-start",
         "egg-water",
+        "eggs-start",
         "eggs",
         "peel-eggs"
       ]
@@ -514,7 +748,9 @@
       "pot-two",
       "pots",
       [
+        "pasta-water-start",
         "pasta-water",
+        "pasta-start",
         "pasta"
       ]
     ],

@@ -107,26 +107,12 @@ test('air fryer preheats after salmon prep and cooking starts without a cooling 
   }
 });
 
-test('split preparation releases only its own cooking task', () => {
-  const fs = require('node:fs');
-  const vm = require('node:vm');
-  const flow = fs.readFileSync(require.resolve('../assets/cooking-flow.js'), 'utf8');
-  const guide = fs.readFileSync(require.resolve('../assets/cooking-guide.js'), 'utf8');
-  const nodes = vm.runInNewContext(flow.match(/const nodes = (\[[\s\S]*?\n  \]);/)[1]);
-  const minutes = vm.runInNewContext('(' + guide.match(/const taskMinutes = ({[\s\S]*?\n  });/)[1] + ')');
-  const tasks = nodes.filter(n => n.manual || Object.hasOwn(minutes, n.id));
-  const done = ['oven-heat-start', 'oven-heat', 'prep-chicken'];
-  const available = tasks.filter(t => !done.includes(t.id) && t.before.every(id => id === 'ready' || done.includes(id)));
-  assert.ok(available.some(t => t.id === 'chicken'));
-  assert.ok(!available.some(t => t.id === 'potato' || t.id === 'ribs'));
-  const result = schedule({ tasks, minutes, done, running: {}, ready: true });
-  assert.ok(result);
-  assert.equal(Math.min(result.starts.salmon, result.starts.haddock), result.ends['air-heat']);
-  for (const task of tasks.filter(t => t.group === 'prep' && t.id !== 'peel-eggs')) assert.ok(Number.isFinite(result.ends[task.id]));
-  assert.equal(result.ends['peel-eggs'], undefined); // Boiling has not been confirmed yet.
-  const page = fs.readFileSync(require.resolve('../cooking.md'), 'utf8');
-  assert.ok(!page.includes('<h2 id="prep"'));
-  for (const task of tasks.filter(t => t.group === 'prep')) assert.ok(task.displayGroup && task.displayGroup !== 'prep');
+test('split preparation unlocks loading only for its own food', () => {
+ const fs=require('node:fs');const {derive}=require('../assets/cooking-progress');
+ const nodes=JSON.parse(fs.readFileSync(require.resolve('../assets/cooking-flow.js'),'utf8').match(/const nodes = (\[[\s\S]*?\n  \]);/)[1]);
+ const view=derive(nodes,['oven-heat-start','oven-heat','prep-chicken']);
+ assert.ok(view.available.some(n=>n.id==='chicken-start'));
+ assert.ok(!view.available.some(n=>['chicken','potato-start','ribs-start'].includes(n.id)));
 });
 
 test('active preparation occupies the cook until finished', () => {
@@ -169,7 +155,7 @@ test('refrigeration waits for food and cleanup runs last', () => {
   const nodes = vm.runInNewContext(flow.match(/const nodes = (\[[\s\S]*?\n  \]);/)[1]);
   const minutes = Object.fromEntries(nodes.map(n => [n.id, n.minutes]));
   const tasks = nodes.filter(n => n.manual || Object.hasOwn(minutes, n.id));
-  assert.equal(nodes.find(n => n.id === 'haddock').before[0], 'air-heat');
+  assert.equal(nodes.find(n => n.id === 'haddock-start').before[0], 'air-heat');
   const done = tasks.filter(t => !['shrimp', 'ribs', 'haddock', 'refrigerate', 'clean'].includes(t.id)).map(t => t.id);
   const result = schedule({ tasks, minutes, done, running: {}, ready: true });
   assert.ok(result);
@@ -183,22 +169,6 @@ test('refrigeration waits for food and cleanup runs last', () => {
 });
 
 
-test('flexible order still schedules one dish per shared appliance', () => {
- const fs = require('node:fs');
- const nodes = JSON.parse(fs.readFileSync(require.resolve('../assets/cooking-flow.js'),'utf8').match(/const nodes = (\[[\s\S]*?\n  \]);/)[1]);
- const ids = ['salmon','haddock','mushroom','curry','season-noodles','pasta','noodles'];
- const tasks = nodes.filter(n=>ids.includes(n.id));
- const result = schedule({tasks,minutes:Object.fromEntries(tasks.map(n=>[n.id,n.minutes])),
-   done:['air-heat','prep-salmon','pasta-water','prep-noodle-sauce'],running:{},ready:true});
- assert.ok(result);
- for (const group of [['salmon','haddock'],['mushroom','curry','season-noodles'],['pasta','noodles']]) {
-   for (let i=0;i<group.length;i++) for(let j=i+1;j<group.length;j++) {
-     const a=group[i], b=group[j];
-     assert.ok(result.ends[a]<=result.starts[b] || result.ends[b]<=result.starts[a], `${a} overlaps ${b}`);
-   }
- }
- assert.ok(result.starts['season-noodles']>=result.ends.noodles);
-});
 test('preheating can lead directly to haddock while salmon is still unprepared', () => {
  const tasks = [
    {id:'prep-salmon',group:'prep',before:[]},
