@@ -419,6 +419,18 @@
       83.33333333333334,
       43.85964912280702,
       0.131
+    ],
+    "sesame": [
+      600,
+      20,
+      20,
+      60,
+      10,
+      20,
+      0,
+      0,
+      0,
+      0
     ]
   },
   "recipes": [
@@ -439,7 +451,8 @@
       "egg": 1,
       "pc": 1.3,
       "oil": 0.875,
-      "noodleSauce": 1
+      "noodleSauce": 1,
+      "sesame": 0.05
     },
     {
       "dumpling": 2,
@@ -464,7 +477,8 @@
       "pc": 1.3,
       "curry": 1,
       "oil": 0.5,
-      "plainHaddock": 2.5
+      "plainHaddock": 2.5,
+      "sesame": 0.05
     },
     {
       "potato": 1.7,
@@ -512,7 +526,8 @@
     "2026-11-14 meal balance: transfer half a thigh from sandwich to ribs/potatoes and its whole boiled egg to the sandwich. Per half-week, distribute four thighs 3:2:2:1 between meals 4,1,2,6 (1.5,1,1,0.5 thighs). Transfer 10 g dry-grain allowance from rice to noodles: rice60 g, noodles63 g. Weekly totals remain twelve whole eggs and eight thighs (930 g); rice120 g and noodles126 g.",
     "2026-11-14: halve only the four salty liquid noodle sauces; garlic powder, paprika, basil, water and separate olive oil stay unchanged. Sodium450 mg is half the previous generic900 mg liquid-sauce allowance, not a measured brand-label total. To preserve herbs/spices rather than halve them, use their approximate unchanged proxy of5 kcal, P0.3/C0.9/F0.1 g, fibre0.3 g and sugar0.1 g; halve the remainder of the previous20 kcal composite. No replacement calories added.",
     "2026-11-14: move another half chicken thigh from wrap (meal4) to ribs/potatoes (meal6). Meals1,2,4,6 now each receive one thigh (116.25 g raw equivalent); four equal portions per cooking session. Weekly thigh total remains930 g. All other recipe quantities unchanged.",
-    "2026-11-14: all chickpeas now go to the two wraps only, half the drained can per wrap (2.16 label units per meal). Remove chickpeas from dumpling and ribs/potato meals. Weekly amount remains one540 mL can; no purchase or seasoning changes."
+    "2026-11-14: all chickpeas now go to the two wraps only, half the drained can per wrap (2.16 label units per meal). Remove chickpeas from dumpling and ribs/potato meals. Weekly amount remains one540 mL can; no purchase or seasoning changes.",
+    "2026-11-14: add5 g Heiwa roasted white sesame seeds to meals2 and5, four servings/20 g per week. Per5 g verified retailer label:30 kcal, protein1 g, carbs1 g, fat3 g, saturated0.5 g, fibre1 g, sugar0 g, sodium0 mg, cholesterol0 mg. Array scaled to100 g; label rounding retained. EPA/DHA assumed zero for sesame. Other recipe portions unchanged."
   ],
   "sources": {
     "shrimp": "https://www.walmart.ca/en/ip/Great-Value-Wild-Argentinian-Large-Raw-Shrimp/6000202999819",
@@ -530,7 +545,9 @@
     "chickpeas_label": "https://i5.walmartimages.ca/asr/370f0918-c48f-4d88-8977-543b148667d9.313a5c461508f29f6820143dc0554de7.jpeg",
     "plainHaddock": "https://www.walmart.ca/en/ip/Great-Value-Wild-Caught-Haddock-Portions-500-g/58GIEH44XUOY",
     "plainHaddockLabel": "https://i5.walmartimages.ca/asr/2003afba-e739-42db-953b-88508c2c052e.6f55f9fc30bab167d22f3a5e59500fbb.jpeg",
-    "plainHaddockUSDA": "https://www.ars.usda.gov/ARSUserFiles/80400535/Data/SR/SR28/reports/sr28fg15.pdf"
+    "plainHaddockUSDA": "https://www.ars.usda.gov/ARSUserFiles/80400535/Data/SR/SR28/reports/sr28fg15.pdf",
+    "sesame": "https://www.walmart.ca/en/ip/Roasted-Sesame-Seed/6000196393577",
+    "sesameLabel": "https://i5.walmartimages.com/asr/0b2c094b-4e32-4c6d-b6f0-b821376953e4.f96a952ecdf1c02a9b126dc0a6e0ab02.jpeg"
   },
   "breakfastBase": {
     "fruit_breakfast": {

@@ -230,12 +230,13 @@ visual: true
 <tr data-price-id="49" data-purchase-group="restock"><td data-en="Fish Sauce">鱼露</td><td><a href="https://www.walmart.ca/en/ip/SQUID-BRAND-FISH-SAUCE/77U7DWXUO6G9">Squid Brand Fish Sauce</a><br>725 mL</td><td data-en="As Needed">按需补</td><td><a href="https://www.walmart.ca/en/ip/SQUID-BRAND-FISH-SAUCE/77U7DWXUO6G9">$2.88</a></td></tr>
 <tr data-price-id="50" data-purchase-group="restock"><td data-en="Dark Soy Sauce">老抽</td><td><a href="https://www.walmart.ca/en/ip/Pearl-River-Bridge-PRB-Dark-Soy-Sauce-500-ml/10278824">Pearl River Bridge Dark Soy Sauce</a><br>500 mL</td><td data-en="As Needed">按需补</td><td><a href="https://www.walmart.ca/en/ip/Pearl-River-Bridge-PRB-Dark-Soy-Sauce-500-ml/10278824">$2.97</a></td></tr>
 <tr data-price-id="51" data-purchase-group="restock"><td data-en="Oyster Sauce">蚝油</td><td><a href="https://www.walmart.ca/en/ip/LKK-PANDA-BRAND-OYSTER-FLAVOURED-SAUCE-510G/10285991">Lee Kum Kee Panda Oyster Flavoured Sauce</a><br>510 g</td><td data-en="As Needed">按需补</td><td><a href="https://www.walmart.ca/en/ip/LKK-PANDA-BRAND-OYSTER-FLAVOURED-SAUCE-510G/10285991">$4.27</a></td></tr>
+<tr data-price-id="59" data-weekly-cost="0.44" data-purchase-group="restock"><td data-en="Toasted White Sesame Seeds">熟白芝麻</td><td><a href="https://www.walmart.ca/en/ip/Roasted-Sesame-Seed/6000196393577">Heiwa Roasted White Sesame Seed</a><br>227 g</td><td data-en="20 g / Week; 1 Bottle / About 11 Weeks">每周20 g；1瓶 / 约11周</td><td><a href="https://www.walmart.ca/en/ip/Roasted-Sesame-Seed/6000196393577">$4.97</a></td></tr>
 <tr data-price-id="53" data-purchase-group="restock"><td data-en="Fresh Basil">罗勒叶</td><td><a href="https://www.walmart.ca/en/ip/fresh-basil-your-fresh-market/6000207633451">Your Fresh Market Fresh Basil</a><br>28 g</td><td data-en="As Needed">按需补</td><td><a href="https://www.walmart.ca/en/ip/fresh-basil-your-fresh-market/6000207633451">$1.67</a></td></tr>
 <tr>
 <td>每周合计</td>
 <td>—</td>
 <td style="text-align: right;">—</td>
-<td style="text-align: right;">$154.40</td>
+<td style="text-align: right;">$154.84</td>
 </tr>
 </tbody>
 </table>

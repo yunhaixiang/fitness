@@ -2,7 +2,7 @@
   "checked_on": "2026-10-31",
   "currency": "CAD",
   "scope": "Walmart Canada public prices and user-provided Metro fruit price; individual checked_on retained. Chicken thigh and salmon prices supplied by user. Weekly subtotal averages routine purchase cycles. Bread assumes three slices total 105 g; weighed produce billed by actual weight. Excludes as-needed seasonings, tax and delivery. Not a London store live stock guarantee.",
-  "weekly_total_cad": "154.40",
+  "weekly_total_cad": "154.84",
   "items": [
     {
       "item": "去骨去皮鸡大腿肉",
@@ -584,6 +584,23 @@
       "weekly_cost_cad": "0.17",
       "purchase_frequency_zh": "1瓶 / 500天",
       "purchase_frequency_en": "1 Bottle / 500 Days"
+    },
+    {
+      "item": "熟白芝麻",
+      "product": "Heiwa Roasted White Sesame Seed",
+      "price_cad": "4.97",
+      "basis": "bottle",
+      "package_g": 227,
+      "weekly_g": 20,
+      "weekly_quantity": "0.0881057268722467",
+      "weekly_cost_cad": "0.44",
+      "source_url": "https://www.walmart.ca/en/ip/Roasted-Sesame-Seed/6000196393577",
+      "product_url": "https://www.walmart.ca/en/ip/Roasted-Sesame-Seed/6000196393577",
+      "source_type": "walmart_public",
+      "checked_on": "2026-11-14",
+      "purchase_frequency_zh": "1瓶 / 约11周",
+      "purchase_frequency_en": "1 Bottle / About 11 Weeks",
+      "availability_note": "Walmart indexed public price4.97 CAD. Product page snapshot shows out of stock; London store stock not verified."
     }
   ],
   "updated_on": "2026-11-14"

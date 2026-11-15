@@ -33,7 +33,10 @@
     "jamiesonVitaminDLabel": "https://www.jamiesonvitamins.com/products/vitamin-d",
     "chickpeasLabel": "https://i5.walmartimages.ca/asr/370f0918-c48f-4d88-8977-543b148667d9.313a5c461508f29f6820143dc0554de7.jpeg",
     "plainHaddockLabel": "https://i5.walmartimages.ca/asr/2003afba-e739-42db-953b-88508c2c052e.6f55f9fc30bab167d22f3a5e59500fbb.jpeg",
-    "plainHaddockUSDA": "https://www.ars.usda.gov/ARSUserFiles/80400535/Data/SR/SR28/reports/sr28fg15.pdf"
+    "plainHaddockUSDA": "https://www.ars.usda.gov/ARSUserFiles/80400535/Data/SR/SR28/reports/sr28fg15.pdf",
+    "sesameLabel": "https://i5.walmartimages.com/asr/0b2c094b-4e32-4c6d-b6f0-b821376953e4.f96a952ecdf1c02a9b126dc0a6e0ab02.jpeg",
+    "sesameUSDA": "https://www.ars.usda.gov/ARSUserFiles/80400535/Data/SR/SR28/reports/sr28fg12.pdf",
+    "legacyCanadianDV": "https://epe.lac-bac.gc.ca/100/206/301/cfia-acia/2011-09-21/www.inspection.gc.ca/english/fssa/labeti/guide/ch6e.shtml?nodisclaimer=1"
   },
   "notes": [
     "Micronutrient planning estimates for the current plan, not a measurement or product-label audit. Units match nutrition_basis.json; breakfast inputs are per 100 g. Numeric coverage is explicit; a missing field causes recalculation to fail.",
@@ -598,6 +601,23 @@
         "iodineUSDA"
       ],
       "basis": "Per100 g raw: label calcium10/1.14 mg, iron0 mg (rounded), potassium350/1.14 mg. USDA SR28 NDB15033 generic vitamin D0.5 mcg and B121.83 mcg. Iodine250 mcg/110 g from USDA/FDA/ODS release4 raw haddock; substantial natural variation, not a brand measurement. Recipe250 g per meal."
+    },
+    "sesame": {
+      "values": {
+        "calcium": 1320,
+        "iron": 5.6,
+        "potassium": 475,
+        "vitaminD": 0,
+        "vitaminB12": 0,
+        "iodine": 0
+      },
+      "sources": [
+        "sesameLabel",
+        "legacyCanadianDV",
+        "sesameUSDA",
+        "assumptions"
+      ],
+      "basis": "Per100 g. Heiwa old-format Canadian label per5 g has calcium6% and iron2%: approximate66 mg and0.28 mg from old DV1100 mg/14 mg, subject to percentage rounding. Potassium475 mg/100 g is USDA whole roasted sesame NDB12024 proxy, not verified product value. D/B12 zero for unfortified seeds; iodine not measured, omitted contribution modeled as zero."
     }
   },
   "extraRecipes": {

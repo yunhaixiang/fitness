@@ -268,11 +268,13 @@ cooking: true
 <li>💧 水150 mL烧热后关小火，溶入🍛 Golden Curry咖喱块18 g（90 g整包的1/5）。</li>
 <li>再煮约5分钟至顺滑。</li>
 <li>盛入第5盘，分盘时淋在🍚 米饭上。</li>
+<li>食用前撒上🌾 熟芝麻5 g。</li>
 </ol>
 <ol lang="en" class="cooking-source-en" hidden>
 <li>Heat 150 mL 💧 water, lower the heat and dissolve 18 g of 🍛 Golden Curry roux (1/5 of a 90 g pack).</li>
 <li>Simmer for about 5 minutes until smooth.</li>
 <li>Transfer to meal 5 and serve over the rice.</li>
+<li>Sprinkle with 5 g 🌾 toasted sesame seeds just before eating.</li>
 </ol>
 </li>
 <li class="cooking-task-source">
@@ -280,12 +282,14 @@ cooking: true
 <li>小锅冲洗擦干，加🫒 橄榄油¼茶匙，中小火加热。</li>
 <li>倒入酱汁和沥干🍜 米粉，拌热1–2分钟，粘锅时补少量💧 水。</li>
 <li>关火拌入罗勒，放第2盘。</li>
+<li>食用前撒上🌾 熟芝麻5 g。</li>
 </ol>
 <ol lang="en" class="cooking-source-en" hidden>
 <li>Rinse and dry the saucepan.</li>
 <li>Add ¼ tsp 🫒 olive oil and heat over medium-low heat.</li>
 <li>Add the sauce and drained 🍜 noodles, tossing for 1–2 minutes; add a splash of 💧 water if they start to stick.</li>
 <li>Turn off the heat, stir in basil and place in meal 2.</li>
+<li>Sprinkle with 5 g 🌾 toasted sesame seeds just before eating.</li>
 </ol>
 </li>
 </ol>
