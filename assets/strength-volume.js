@@ -229,12 +229,17 @@
         badge.type = 'button';
         badge.style[edge] = 'var(--volume-label-offset)';
         badge.append(text('span', 'volume-photo-name', tr(zh, english)));
+        const rating = dose.assess(item);
+        const ratingText = tr(...ratings[rating.status]);
+        const ratingLabel = text('span', `volume-rating volume-photo-rating is-${rating.status}`, ratingText);
+        ratingLabel.title = reference.title;
+        badge.append(ratingLabel);
         for (const [short, value, kind] of [[tr('主要', 'Primary'), item.primary, 'primary'], [tr('辅助', 'Secondary'), item.secondary, 'secondary'], [tr('合计', 'Total'), item.primary + item.secondary, 'total']]) {
           const line = text('span', `volume-photo-value is-${kind}`, '');
           line.append(text('span', '', short), text('strong', '', format(value)));
           badge.append(line);
         }
-        badge.setAttribute('aria-label', `${tr(zh, english)}: ${tr('主要', 'Primary')} ${format(item.primary)}, ${tr('辅助', 'Secondary')} ${format(item.secondary)}, ${tr('合计', 'Total')} ${format(item.primary + item.secondary)}. ${tr('查看明细', 'View Details')}`);
+        badge.setAttribute('aria-label', `${tr(zh, english)}: ${ratingText}. ${tr('主要', 'Primary')} ${format(item.primary)}, ${tr('辅助', 'Secondary')} ${format(item.secondary)}, ${tr('合计', 'Total')} ${format(item.primary + item.secondary)}. ${tr('查看明细', 'View Details')}`);
         badge.addEventListener('click', () => {
           const card = cards.get(key);
           card.scrollIntoView({ behavior: 'smooth', block: 'center' });

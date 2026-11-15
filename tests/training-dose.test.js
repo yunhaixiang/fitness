@@ -43,7 +43,7 @@ function render(language,withWeight=false){
   const warnings=[];
   vm.runInNewContext(fs.readFileSync('assets/strength-volume.js','utf8'),{window,document,Intl,URL,location:{origin:'https://example.test'},requestAnimationFrame(){},console:{warn:m=>warnings.push(m)}});
   function all(node){return [node,...node.children.flatMap(all)];}
-  return {buttons,cards:()=>all(root).filter(n=>n.className==='visual-card visual-volume-card'),all,warnings};
+  return {buttons,mapBadges:()=>all(root).filter(n=>n.className?.startsWith('volume-photo-badge ')),cards:()=>all(root).filter(n=>n.className==='visual-card visual-volume-card'),all,warnings};
 }
 test('all muscles render ratings in both modes without requiring private body weight',()=>{
   const r=render('zh');assert.deepEqual(r.warnings,[]);assert.equal(r.cards().length,16);
@@ -63,4 +63,16 @@ test('English ratings match Chinese classifications and remain independent of bo
   const badges=r=>r.cards().map(c=>r.all(c).find(n=>n.className?.startsWith('volume-rating is-')).className);
   assert.deepEqual(badges(zh),badges(en));
   assert.ok(en.cards().every(c=>en.all(c).some(n=>n.className==='volume-rating-sets'&&/Sets \/ Week/.test(n.textContent))));
+  for (const r of [zh,en]) for (const mode of [0,1]) {
+    r.buttons[mode].events.click();
+    assert.equal(r.mapBadges().length,16);
+    for (const badge of r.mapBadges()) {
+      const name=badge.children.find(n=>n.className==='volume-photo-name').textContent;
+      const card=r.cards().find(c=>r.all(c).some(n=>n.tagName==='H4'&&n.textContent===name));
+      const detailRating=r.all(card).find(n=>n.className?.startsWith('volume-rating is-'));
+      const mapRating=badge.children.find(n=>n.className?.startsWith('volume-rating volume-photo-rating'));
+      assert.equal(mapRating.textContent,detailRating.textContent);
+      assert.ok(badge.attrs['aria-label'].includes(mapRating.textContent));
+    }
+  }
 });
