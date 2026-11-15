@@ -16,14 +16,14 @@ test('repository controls cardio even with stale stored or explicit URL choices'
 test('current 200 kcal budget and hypothetical 300 kcal budget do not double count', () => {
  const current = energy(baseline, catalog.plans[1], catalog.sessionsPerWeek, {weeklyKcal:474});
  const other = energy(baseline, {...catalog.plans[0], netKcal:300}, catalog.sessionsPerWeek, {weeklyKcal:474});
- assert.equal(current.weeklyCardio, 800);
- assert.equal(other.weeklyCardio, 1200);
+ assert.equal(current.weeklyCardio, 400);
+ assert.equal(other.weeklyCardio, 600);
  assert.equal(current.weeklyBurn, baseline.weekly_burn);
  assert.equal(current.weeklyDeficit, baseline.weekly_deficit_precise);
  assert.ok(Math.abs(current.dailyDeficit - (baseline.weekly_burn / 7 - baseline.intake_daily)) < 0.001);
- assert.ok(Math.abs(other.dailyDeficit - (current.dailyDeficit + 400 / 7)) < 1e-8);
+ assert.ok(Math.abs(other.dailyDeficit - (current.dailyDeficit + 200 / 7)) < 1e-8);
  assert.ok(Math.abs(current.fatEquivalent - current.weeklyDeficit / 7700) < 1e-8);
- assert.ok(Math.abs(other.weeklyDeficit - current.weeklyDeficit - 400) < 1e-8);
+ assert.ok(Math.abs(other.weeklyDeficit - current.weeklyDeficit - 200) < 1e-8);
 });
 test('each plan has its own HIIT and three matching alternatives', () => {
  assert.deepEqual(catalog.plans.map(p=>p.netKcal), [200,200]);
@@ -80,10 +80,10 @@ test('alternatives preserve weight-independent MET models and displayed duration
 test('step energy replaces the old walking allowance in both meal plans', () => {
  for (const intake of [1810.14286,1731]) {
   const b={...baseline,intake_daily:intake,weekly_deficit_precise:baseline.weekly_burn-intake*7};
-  const result=energy(b,catalog.plans[1],4,{weeklyKcal:140});
+  const result=energy(b,catalog.plans[1],catalog.sessionsPerWeek,{weeklyKcal:140});
   assert.ok(Math.abs(result.weeklyBurn-(b.weekly_burn-474+140))<1e-8);
   assert.ok(Math.abs(result.dailyDeficit-(result.weeklyBurn/7-intake))<1e-8);
-  assert.equal(energy(b,catalog.plans[1],4,{}).dailyDeficit,null);
-  assert.ok(Number.isFinite(energy(b,catalog.plans[1],4,{weeklyKcal:0}).dailyDeficit));
+  assert.equal(energy(b,catalog.plans[1],catalog.sessionsPerWeek,{}).dailyDeficit,null);
+  assert.ok(Number.isFinite(energy(b,catalog.plans[1],catalog.sessionsPerWeek,{weeklyKcal:0}).dailyDeficit));
  }
 });

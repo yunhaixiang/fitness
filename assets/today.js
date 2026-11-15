@@ -63,8 +63,21 @@
     trainingRoot.replaceChildren();
     const cardioRow = cardioTable.tBodies[0].rows[day === 0 ? 6 : day - 1];
     const cardioActive = cardioRow?.dataset.cardio === 'active';
-    if (!trainingDays.includes(day)) {
-      trainingRoot.append(element('p', 'today-rest', label('今天休息', 'Rest Day')));
+    const strengthActive = trainingDays.includes(day);
+    if (strengthActive || cardioActive) trainingRoot.append(element('p', 'today-training-time', label('下午 · 晚饭前', 'Afternoon · Before Dinner')));
+    if (cardioActive) {
+      const cardioLine = element('p', 'today-cardio');
+      const plan = window.fitnessCardioPlan;
+      cardioLine.append(element('strong', '', plan
+        ? plan.name[en ? 'en' : 'zh']
+        : label('有氧', 'Cardio')));
+      const cardioLink = element('a', '', label('查看选项', 'View Options'));
+      cardioLink.href = document.querySelector('.main-nav a[href$="/cardio/"]')?.href || 'cardio/';
+      cardioLine.append(cardioLink);
+      trainingRoot.append(cardioLine);
+    }
+    if (!strengthActive) {
+      if (!cardioActive) trainingRoot.append(element('p', 'today-rest', label('今天休息', 'Rest Day')));
       return;
     }
 
@@ -105,16 +118,7 @@
       exercises.append(item);
     }
     trainingRoot.append(exercises);
-    if (!cardioActive) return;
-    const cardioLine = element('p', 'today-cardio');
-    const plan = window.fitnessCardioPlan;
-    cardioLine.append(element('strong', '', plan
-      ? `${plan.name[en ? 'en' : 'zh']} · ≈${plan.netKcal} kcal`
-      : label('有氧', 'Cardio')));
-    const cardioLink = element('a', '', label('查看选项', 'View Options'));
-    cardioLink.href = document.querySelector('.main-nav a[href$="/cardio/"]')?.href || 'cardio/';
-    cardioLine.append(cardioLink);
-    trainingRoot.append(cardioLine);
+
   }
 
   const localDate = (date) => `${date.getFullYear()}-${String(date.getMonth() + 1).padStart(2, '0')}-${String(date.getDate()).padStart(2, '0')}`;

@@ -1,6 +1,6 @@
 {
   "default": "cardio-2",
-  "sessionsPerWeek": 4,
+  "sessionsPerWeek": 2,
   "plans": [
     {
       "id": "cardio-1",

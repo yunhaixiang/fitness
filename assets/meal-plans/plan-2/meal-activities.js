@@ -8,8 +8,11 @@
     { day: 3, after: 'dinner', kind: 'cooking', time: ['晚餐后', 'After Dinner'], detail: ['准备下1–下7', 'Prepare Meals 1–7 for the Second Half of the Week'] },
     { day: 6, after: 'lunch', kind: 'shopping', time: ['下午', 'Afternoon'], detail: ['购买整周食材', 'Buy Groceries for the Week'] }
   ];
-  const names = { thawing: ['解冻', 'Thaw Ingredients'], cooking: ['做饭', 'Cooking'], shopping: ['购物', 'Shopping'] };
+  for (const day of [0, 1, 2, 3, 4, 5]) activities.push({ day, after: 'lunch', kind: [0, 3].includes(day) ? 'cardio' : 'strength', time: ['下午 · 晚饭前', 'Afternoon · Before Dinner'], detail: [0, 3].includes(day) ? ['有氧训练，按当前有氧计划选择一项。', 'Cardio: choose one option from the current plan.'] : ['完成当天力量训练。', 'Complete today’s strength workout.'] });
+  const names = { cardio: ['有氧', 'Cardio'], strength: ['力量', 'Strength'], thawing: ['解冻', 'Thaw Ingredients'], cooking: ['做饭', 'Cooking'], shopping: ['购物', 'Shopping'] };
   const paths = {
+    cardio: 'M3 12h4l3-8 4 16 3-8h4',
+    strength: 'M3 8v8m4-10v12m10-12v12m4-10v8M7 12h10',
     thawing: 'M12 2v20M4.9 4.9l14.2 14.2M2 12h20M4.9 19.1 19.1 4.9M9 5l3 3 3-3M9 19l3-3 3 3',
     cooking: 'M5 10h14v7a3 3 0 0 1-3 3H8a3 3 0 0 1-3-3v-7Zm-3 2h3m14 0h3M4 7h16M10 4h4',
     shopping: 'M3 9h18l-2 11H5L3 9Zm4 0 3-6m7 6-3-6M9 12v5m6-5v5'
@@ -43,9 +46,9 @@
       if (!compact) card.append(make('div', 'diet-meal-when', time));
       card.append(heading, make('p', 'meal-activity-detail', `${compact ? time + ' · ' : ''}${event.detail[language]}`));
       if (event.kind !== 'thawing') {
-        const link = make('a', 'meal-activity-link', event.kind === 'cooking'
+        const link = make('a', 'meal-activity-link', event.kind === 'cardio' ? ['查看有氧选项', 'View Cardio Options'][language] : event.kind === 'strength' ? ['查看力量计划', 'View Strength Plan'][language] : event.kind === 'cooking'
           ? ['开始做饭', 'Start Cooking'][language] : ['查看购物清单', 'View Shopping List'][language]);
-        link.href = window.fitnessMealPlan?.urlFor(event.kind) || document.querySelector(`.main-nav a[href$="/${event.kind}/"]`)?.href
+        link.href = (!['cardio', 'strength'].includes(event.kind) && window.fitnessMealPlan?.urlFor(event.kind)) || document.querySelector(`.main-nav a[href$="/${event.kind}/"]`)?.href
           || new URL(`${event.kind}/`, new URL(`${document.body.dataset.baseurl || ''}/`, location.origin).href).href;
         card.append(link);
       }
