@@ -13,20 +13,20 @@ test('repository controls cardio even with stale stored or explicit URL choices'
  assert.equal(resolve(catalog, 'cardio-1', 'cardio-2').id, 'cardio-2');
  assert.equal(resolve(catalog, 'removed').id, 'cardio-2');
 });
-test('200 and 300 kcal budgets update deficits without double counting', () => {
+test('current 200 kcal budget and hypothetical 300 kcal budget do not double count', () => {
  const current = energy(baseline, catalog.plans[1], catalog.sessionsPerWeek, {weeklyKcal:474});
- const other = energy(baseline, catalog.plans[0], catalog.sessionsPerWeek, {weeklyKcal:474});
- assert.equal(current.weeklyCardio, 1200);
- assert.equal(other.weeklyCardio, 800);
+ const other = energy(baseline, {...catalog.plans[0], netKcal:300}, catalog.sessionsPerWeek, {weeklyKcal:474});
+ assert.equal(current.weeklyCardio, 800);
+ assert.equal(other.weeklyCardio, 1200);
  assert.equal(current.weeklyBurn, baseline.weekly_burn);
  assert.equal(current.weeklyDeficit, baseline.weekly_deficit_precise);
  assert.ok(Math.abs(current.dailyDeficit - (baseline.weekly_burn / 7 - baseline.intake_daily)) < 0.001);
- assert.ok(Math.abs(other.dailyDeficit - (current.dailyDeficit - 400 / 7)) < 1e-8);
+ assert.ok(Math.abs(other.dailyDeficit - (current.dailyDeficit + 400 / 7)) < 1e-8);
  assert.ok(Math.abs(current.fatEquivalent - current.weeklyDeficit / 7700) < 1e-8);
- assert.ok(Math.abs(current.weeklyDeficit - other.weeklyDeficit - 400) < 1e-8);
+ assert.ok(Math.abs(other.weeklyDeficit - current.weeklyDeficit - 400) < 1e-8);
 });
 test('each plan has its own HIIT and three matching alternatives', () => {
- assert.deepEqual(catalog.plans.map(p=>p.netKcal), [200,300]);
+ assert.deepEqual(catalog.plans.map(p=>p.netKcal), [200,200]);
  assert.deepEqual(catalog.plans.map(p=>p.options[0].video), ['M0uO8X3_tEA','tgm_QjUiwlk']);
  for(const plan of catalog.plans) {
   assert.deepEqual(plan.options.map(o=>o.id), ['hiit','swim','treadmill','bike']);

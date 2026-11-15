@@ -46,7 +46,7 @@
 
 ## 计划维护
 
-`_data/meal_plans.json` 的 `default` 决定当前饮食计划。`scripts/create-meal-plan.py` 可以创建独立计划副本，网页可切换查看完整计划，购物和做饭勾选按计划独立保存。计划2来自 `40e269d^`（多样化后3餐之前）的历史版本，内容位于 `plans/plan-2/`、`_data/meal_plan_content/plan-2/` 与对应 includes。计划2保留历史营养估算，来源记录在 `provenance.json`。`_data/cardio_plans.json` 的 `default` 决定有氧计划；当前为约 300 kcal 的计划 2。修改计划时同步核对 `_data/plan_metrics.yml` 的参考消耗。切换饮食计划时，营养、赤字、餐单、购物和做饭随之切换；训练及身体记录共用。
+`_data/meal_plans.json` 的 `default` 决定当前饮食计划。`scripts/create-meal-plan.py` 可以创建独立计划副本，网页可切换查看完整计划，购物和做饭勾选按计划独立保存。计划2来自 `40e269d^`（多样化后3餐之前）的历史版本，内容位于 `plans/plan-2/`、`_data/meal_plan_content/plan-2/` 与对应 includes。计划2保留历史营养估算，来源记录在 `provenance.json`。`_data/cardio_plans.json` 的 `default` 决定有氧计划；当前为约 200 kcal 的计划 2。修改计划时同步核对 `_data/plan_metrics.yml` 的参考消耗。切换饮食计划时，营养、赤字、餐单、购物和做饭随之切换；训练及身体记录共用。
 
 `_data/nutrition_basis.json` 保存食材系数、标签参考和假设，`_data/meal_nutrition.json` 保存每餐数值。用 `scripts/recalculate-nutrition.py` 重算，核对餐单、购物、流程和营养一致后发布。购买费用按周期折算，生重、干重与含骨包装重量不混用。
 

@@ -11,7 +11,7 @@ visual: true
 
 <figure class="nutrition-overview" aria-label="每日能量与每周赤字">
   <div class="nutrition-overview-main">
-    <div class="nutrition-ring" style="--intake-share:77.6%" aria-label="每日摄入与消耗">
+    <div class="nutrition-ring" style="--intake-share:79.5%" aria-label="每日摄入与消耗">
       <div class="nutrition-ring-center">
         <span>日均赤字</span>
         <strong data-energy="dailyDeficit">— <small>kcal／天</small></strong>
@@ -67,8 +67,8 @@ visual: true
 </tr>
 <tr data-energy-row="cardio">
 <td>有氧：HIIT、游泳、跑步机或健身馆自行车，4次／周（净增加）</td>
-<td style="text-align: right;">1,200.00</td>
-<td style="text-align: right;">171.43</td>
+<td style="text-align: right;">800.00</td>
+<td style="text-align: right;">114.29</td>
 </tr>
 <tr data-energy-row="walking">
 <td>步行（按同步步数）</td>
@@ -77,8 +77,8 @@ visual: true
 </tr>
 <tr data-energy-row="total">
 <td>合计</td>
-<td style="text-align: right;">16,635.96</td>
-<td style="text-align: right;">2,376.57</td>
+<td style="text-align: right;">16,235.96</td>
+<td style="text-align: right;">2,319.42</td>
 </tr>
 </tbody>
 </table>
