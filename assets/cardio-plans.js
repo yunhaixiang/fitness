@@ -85,7 +85,8 @@
     }
     choices.value = plan.id;
     const summary = el('p', 'meal-plan-summary', `${tr('每周', 'Weekly')} ${catalog.sessionsPerWeek} ${tr('次', 'Sessions')}`);
-    control.append(label, choices);
+    if (catalog.plans.length > 1) control.append(label, choices);
+    else control.append(el('strong', '', plan.name[lang]));
     switcher.append(control, summary);
     const main = document.getElementById('main');
     const heading = main?.querySelector(':scope > .page-heading');

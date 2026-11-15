@@ -3,124 +3,10 @@
   "sessionsPerWeek": 2,
   "plans": [
     {
-      "id": "cardio-1",
-      "name": {
-        "zh": "有氧计划 1 · 约 200 kcal",
-        "en": "Cardio Plan 1 · ≈200 kcal"
-      },
-      "netKcal": 200,
-      "options": [
-        {
-          "id": "hiit",
-          "name": {
-            "zh": "HIIT",
-            "en": "HIIT"
-          },
-          "duration": {
-            "zh": "20 分钟",
-            "en": "20 min"
-          },
-          "description": {
-            "zh": "完整跟练，含热身与放松；主训练 20 × 50 秒，短休息加中场休息。视频总长 29:03。",
-            "en": "Follow the full warm-up, workout and cool-down: 20 × 50 seconds of work, with short rests and a mid-workout break. Full video: 29:03."
-          },
-          "steps": [],
-          "video": "M0uO8X3_tEA"
-        },
-        {
-          "id": "swim",
-          "name": {
-            "zh": "游泳",
-            "en": "Swimming"
-          },
-          "duration": {
-            "zh": "36 分钟",
-            "en": "36 min"
-          },
-          "description": {
-            "zh": "自由泳去、蛙泳回；25 m 泳池，22 个来回，共 1,100 m；实际游动约 34 分钟。",
-            "en": "Freestyle out, breaststroke back; 22 round trips in a 25 m pool, 1,100 m total. Aim for about 34 min of swimming."
-          },
-          "steps": [
-            {
-              "zh": "热身：3 个来回，轻松游。",
-              "en": "Warm-up: 3 easy round trips."
-            },
-            {
-              "zh": "主训练：2 组 × 8 个来回，组间休息 2 分钟。",
-              "en": "Main set: 2 × 8 round trips, with 2 min of rest between sets."
-            },
-            {
-              "zh": "放松：3 个来回，轻松游。",
-              "en": "Cool-down: 3 easy round trips."
-            }
-          ]
-        },
-        {
-          "id": "treadmill",
-          "name": {
-            "zh": "跑步机",
-            "en": "Treadmill"
-          },
-          "duration": {
-            "zh": "27 分钟",
-            "en": "27 min"
-          },
-          "description": {
-            "zh": "坡度 0%。",
-            "en": "Incline: 0%."
-          },
-          "steps": [
-            {
-              "zh": "热身：5 分钟，4–5 km/h 走路。",
-              "en": "Warm-up: walk for 5 min at 4–5 km/h."
-            },
-            {
-              "zh": "主训练：17 分钟，8 km/h 慢跑。",
-              "en": "Main set: jog for 17 min at 8 km/h."
-            },
-            {
-              "zh": "放松：5 分钟，3–4 km/h 走路。",
-              "en": "Cool-down: walk for 5 min at 3–4 km/h."
-            }
-          ]
-        },
-        {
-          "id": "bike",
-          "name": {
-            "zh": "健身馆自行车",
-            "en": "Stationary Bike"
-          },
-          "duration": {
-            "zh": "34 分钟",
-            "en": "34 min"
-          },
-          "description": {
-            "zh": "固定自行车；以功率为准。",
-            "en": "Use a stationary bike and follow the wattage targets."
-          },
-          "steps": [
-            {
-              "zh": "热身：5 分钟，50 W。",
-              "en": "Warm-up: 5 min at 50 W."
-            },
-            {
-              "zh": "主训练：24 分钟，90–100 W。",
-              "en": "Main set: 24 min at 90–100 W."
-            },
-            {
-              "zh": "放松：5 分钟，50 W。",
-              "en": "Cool-down: 5 min at 50 W."
-            }
-          ]
-        }
-      ]
-    },
-    {
       "id": "cardio-2",
       "name": {
-        "zh": "有氧计划 2 · 约 200 kcal",
-        "en": "Cardio Plan 2 · ≈200 kcal"
+        "zh": "有氧计划 · 约 200 kcal",
+        "en": "Cardio Plan · ≈200 kcal"
       },
       "netKcal": 200,
       "options": [
@@ -771,5 +657,5 @@
       "note": "Plan 2 now uses a rounded 200 net kcal planning budget following review of its segmented HIIT model, replacing the former 300 kcal presenter-based assumption. This is not an individual measurement. Plan 1 retains its existing 200 kcal budget. Matching alternatives use the same duration and MET models in both plans. Audited video segments and uncertainty scenarios are preserved."
     }
   },
-  "selectionRevision": "two-plans-200-200"
+  "selectionRevision": "single-30-minute-plan"
 }

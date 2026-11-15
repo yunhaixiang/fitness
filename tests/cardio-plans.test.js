@@ -6,15 +6,15 @@ const fs = require('node:fs');
 const path = require('node:path');
 const baseline = Object.fromEntries(fs.readFileSync(path.join(__dirname, '../_data/plan_metrics.yml'), 'utf8').split('\n').filter(line => /^[a-z_]+: [\d.]+$/.test(line)).map(line => { const [k,v] = line.split(': '); return [k, Number(v)]; }));
 test('repository controls cardio even with stale stored or explicit URL choices', () => {
- assert.equal(catalog.plans.length, 2);
+ assert.equal(catalog.plans.length, 1);
  assert.equal(resolve(catalog).id, 'cardio-2');
  assert.equal(resolve(catalog, 'cardio-1', 'cardio-1').id, 'cardio-2');
- assert.equal(resolve({...catalog, default: 'cardio-1'}, 'cardio-2', 'cardio-2').id, 'cardio-1');
+ assert.equal(resolve({...catalog, default: 'removed'}, 'cardio-2', 'cardio-2').id, 'cardio-2');
  assert.equal(resolve(catalog, 'cardio-1', 'cardio-2').id, 'cardio-2');
  assert.equal(resolve(catalog, 'removed').id, 'cardio-2');
 });
 test('current 200 kcal budget and hypothetical 300 kcal budget do not double count', () => {
- const current = energy(baseline, catalog.plans[1], catalog.sessionsPerWeek, {weeklyKcal:474});
+ const current = energy(baseline, catalog.plans[0], catalog.sessionsPerWeek, {weeklyKcal:474});
  const other = energy(baseline, {...catalog.plans[0], netKcal:300}, catalog.sessionsPerWeek, {weeklyKcal:474});
  assert.equal(current.weeklyCardio, 400);
  assert.equal(other.weeklyCardio, 600);
@@ -26,8 +26,8 @@ test('current 200 kcal budget and hypothetical 300 kcal budget do not double cou
  assert.ok(Math.abs(other.weeklyDeficit - current.weeklyDeficit - 200) < 1e-8);
 });
 test('each plan has its own HIIT and three matching alternatives', () => {
- assert.deepEqual(catalog.plans.map(p=>p.netKcal), [200,200]);
- assert.deepEqual(catalog.plans.map(p=>p.options[0].video), ['M0uO8X3_tEA','tgm_QjUiwlk']);
+ assert.deepEqual(catalog.plans.map(p=>p.netKcal), [200]);
+ assert.deepEqual(catalog.plans.map(p=>p.options[0].video), ['tgm_QjUiwlk']);
  for(const plan of catalog.plans) {
   assert.deepEqual(plan.options.map(o=>o.id), ['hiit','swim','treadmill','bike']);
   for(const lang of ['zh','en']) assert.ok(plan.name[lang].includes(String(plan.netKcal)));
@@ -66,8 +66,8 @@ test('original video audit counts 20 work bouts and one midpoint break', () => {
  assert.ok(Math.abs(h.centralGrossKcalPerKg-computed-seconds/60*3.5/200)<1e-6);
 });
 test('alternatives preserve weight-independent MET models and displayed duration', () => {
- for(const [index, audits] of [catalog.estimation.alternatives, catalog.estimation.plan2Alternatives].entries()) {
-  const plan = catalog.plans[index];
+ for(const audits of [catalog.estimation.plan2Alternatives]) {
+  const plan = catalog.plans[0];
   for(const [id,audit] of Object.entries(audits)) {
    const kcal=net(audit.segments);
    assert.ok(Math.abs(kcal-audit.netKcalPerKg)<1e-6);
@@ -80,10 +80,10 @@ test('alternatives preserve weight-independent MET models and displayed duration
 test('step energy replaces the old walking allowance in both meal plans', () => {
  for (const intake of [1810.14286,1731]) {
   const b={...baseline,intake_daily:intake,weekly_deficit_precise:baseline.weekly_burn-intake*7};
-  const result=energy(b,catalog.plans[1],catalog.sessionsPerWeek,{weeklyKcal:140});
+  const result=energy(b,catalog.plans[0],catalog.sessionsPerWeek,{weeklyKcal:140});
   assert.ok(Math.abs(result.weeklyBurn-(b.weekly_burn-474+140))<1e-8);
   assert.ok(Math.abs(result.dailyDeficit-(result.weeklyBurn/7-intake))<1e-8);
-  assert.equal(energy(b,catalog.plans[1],catalog.sessionsPerWeek,{}).dailyDeficit,null);
-  assert.ok(Number.isFinite(energy(b,catalog.plans[1],catalog.sessionsPerWeek,{weeklyKcal:0}).dailyDeficit));
+  assert.equal(energy(b,catalog.plans[0],catalog.sessionsPerWeek,{}).dailyDeficit,null);
+  assert.ok(Number.isFinite(energy(b,catalog.plans[0],catalog.sessionsPerWeek,{weeklyKcal:0}).dailyDeficit));
  }
 });

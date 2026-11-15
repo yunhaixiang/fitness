@@ -12,7 +12,7 @@ for (const language of ['zh','en']) test(`cardio on cooking days renders indepen
  assert.deepEqual(rows.filter(r=>r.dataset.cardio==='active').map(r=>r.day),['周三','周日']);
  for(let day=0;day<7;day++) {
   const root=node('main');
-  vm.runInNewContext(render+'\nrenderTraining(day);',{day,trainingRoot:root,cardioTable:{tBodies:[{rows}]},trainingDays:[1,2,4,5],strengthTables:[{tBodies:Array.from({length:4},()=>({rows:[]}))}],element:node,label:(a,b)=>language==='en'?b:a,en:language==='en',mode:'home',window:{fitnessCardioPlan:catalog.plans[1]},document:{querySelector:()=>({href:'/fitness/cardio/'})}});
+  vm.runInNewContext(render+'\nrenderTraining(day);',{day,trainingRoot:root,cardioTable:{tBodies:[{rows}]},trainingDays:[1,2,4,5],strengthTables:[{tBodies:Array.from({length:4},()=>({rows:[]}))}],element:node,label:(a,b)=>language==='en'?b:a,en:language==='en',mode:'home',window:{fitnessCardioPlan:catalog.plans[0]},document:{querySelector:()=>({href:'/fitness/cardio/'})}});
   assert.equal(root.children.some(n=>n.className==='today-cardio'),[0,3].includes(day));
   assert.equal(root.children.some(n=>n.className==='today-rest'),day===6);
   assert.equal(root.children.some(n=>n.className==='today-exercise-list'),[1,2,4,5].includes(day));
