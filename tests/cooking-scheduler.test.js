@@ -155,13 +155,13 @@ test('refrigeration waits for food and cleanup runs last', () => {
   const nodes = vm.runInNewContext(flow.match(/const nodes = (\[[\s\S]*?\n  \]);/)[1]);
   const minutes = Object.fromEntries(nodes.map(n => [n.id, n.minutes]));
   const tasks = nodes.filter(n => n.manual || Object.hasOwn(minutes, n.id));
-  assert.equal(nodes.find(n => n.id === 'haddock-start').before[0], 'air-heat');
-  const done = tasks.filter(t => !['shrimp', 'ribs', 'haddock', 'refrigerate', 'clean'].includes(t.id)).map(t => t.id);
+  assert.equal(nodes.find(n => n.id === 'fish-start').before[0], 'air-heat');
+  const done = tasks.filter(t => !['shrimp', 'ribs', 'fish', 'refrigerate', 'clean'].includes(t.id)).map(t => t.id);
   const result = schedule({ tasks, minutes, done, running: {}, ready: true });
   assert.ok(result);
   assert.ok(result.starts.refrigerate >= result.ends.shrimp);
   assert.ok(result.starts.refrigerate >= result.ends.ribs);
-  assert.ok(result.starts.refrigerate >= result.ends.haddock);
+  assert.ok(result.starts.refrigerate >= result.ends.fish);
   assert.equal(nodes.find(n=>n.id==='clean').before[0], 'refrigerate');
   assert.ok(result.starts.clean >= result.ends.refrigerate);
   for (const id of ['dumplings', 'eggs']) assert.equal(nodes.find(n=>n.id===id).resource, 'pot-1');

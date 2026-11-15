@@ -201,37 +201,6 @@ cooking: true
 </li>
 <li class="cooking-task-source">
 <ol lang="zh-CN" class="cooking-source-zh">
-<li>启动400°F预热4分钟，可与🐟 三文鱼备料并行。</li>
-<li>期间可做其他短任务。</li>
-</ol>
-<ol lang="en" class="cooking-source-en" hidden>
-<li>Start preheating at 400°F for 4 minutes; prepare the 🐟 salmon meanwhile.</li>
-<li>Work on other short tasks meanwhile.</li>
-</ol>
-</li>
-<li class="cooking-task-source"><p data-en="Confirm preheating is complete, then load the prepared 🐟 salmon or haddock promptly.">确认空气炸锅预热完成，放入备好的🐟 三文鱼或黑线鳕。</p></li>
-<li class="cooking-task-source">
-<ol lang="zh-CN" class="cooking-source-zh">
-<li>将备好的三文鱼放入预热至400°F的空气炸锅，开始烹调后勾选。</li>
-<li>约8分钟后检查熟度。</li>
-</ol>
-<ol lang="en" class="cooking-source-en" hidden>
-<li>Load the prepared salmon into the air fryer preheated to 400°F and check after starting.</li>
-<li>Check for doneness after about 8 minutes.</li>
-</ol>
-</li>
-<li class="cooking-task-source">
-<ol lang="zh-CN" class="cooking-source-zh">
-<li>确认熟度后取出：空气炸锅空出且达到400°F时，烤约8–10分钟至中心70°C。</li>
-<li>整块放第3盘。</li>
-</ol>
-<ol lang="en" class="cooking-source-en" hidden>
-<li>Check doneness before removing: When the air fryer is empty and at 400°F, cook for about 8–10 minutes, to 70°C in the centre.</li>
-<li>Place the whole fillet in meal 3.</li>
-</ol>
-</li>
-<li class="cooking-task-source">
-<ol lang="zh-CN" class="cooking-source-zh">
 <li>🐟 原味黑线鳕每次用½袋（250 g）。先拆除内层真空包装，在冷藏中解冻，再擦干表面、检查小刺。</li>
 <li>两面薄抹🫒 橄榄油½茶匙，再撒🧄 蒜粉¼茶匙、🌶️ paprika¼茶匙和🧂 黑胡椒⅛茶匙，不另加盐。</li>
 <li>只解冻本次要用的半袋，剩余半袋继续冷冻保存，留到后半周。</li>
@@ -244,20 +213,33 @@ cooking: true
 </li>
 <li class="cooking-task-source">
 <ol lang="zh-CN" class="cooking-source-zh">
-<li>空气炸锅空出且达到400°F时，将🐟 黑线鳕单层放入，启动后勾选。</li>
-<li>第8分钟起检查，通常8–12分钟；放不下时分批烤，不叠放。</li>
+<li>启动400°F预热4分钟，可与🐟 三文鱼备料并行。</li>
+<li>期间可做其他短任务。</li>
 </ol>
 <ol lang="en" class="cooking-source-en" hidden>
-<li>When the air fryer is free and at 400°F, load the 🐟 haddock in a single layer and check after starting.</li>
-<li>Start checking at 8 minutes, usually 8–12 minutes; cook in batches if needed without stacking.</li>
+<li>Start preheating at 400°F for 4 minutes; prepare the 🐟 salmon meanwhile.</li>
+<li>Work on other short tasks meanwhile.</li>
+</ol>
+</li>
+<li class="cooking-task-source"><p data-en="Confirm the air fryer has reached 400°F; load both prepared 🐟 fish together in the next step.">确认空气炸锅达到400°F；下一步一起放入备好的🐟 三文鱼和黑线鳕。</p></li>
+<li class="cooking-task-source">
+<ol lang="zh-CN" class="cooking-source-zh">
+<li>将备好的🐟 三文鱼158 g和黑线鳕250 g一起单层放入预热至400°F的空气炸锅，留出空隙、不叠放。</li>
+<li>统一设为10分钟，启动后勾选；等待期间可做其他任务。</li>
+</ol>
+<ol lang="en" class="cooking-source-en" hidden>
+<li>Place the prepared 🐟 salmon (158 g) and haddock (250 g) together in the air fryer preheated to 400°F, in a single layer with space between pieces.</li>
+<li>Set one 10-minute cycle and check this step after starting; work on other tasks meanwhile.</li>
 </ol>
 </li>
 <li class="cooking-task-source">
 <ol lang="zh-CN" class="cooking-source-zh">
-<li>从8分钟起检查，厚处中心达到70°C后取出，全部放第2盘。</li>
+<li>10分钟后检查两种🐟 鱼的最厚处，均达到70°C后一起取出；若未达到，继续加热后复查。</li>
+<li>三文鱼整块放第3盘，黑线鳕全部放第2盘。</li>
 </ol>
 <ol lang="en" class="cooking-source-en" hidden>
-<li>Check from 8 minutes; once the thickest part reaches 70°C, remove and place all the fish in meal 2.</li>
+<li>After 10 minutes, check the thickest part of both 🐟 fish. Remove together once both reach 70°C; continue cooking and recheck if needed.</li>
+<li>Place the whole salmon fillet in meal 3 and all the haddock in meal 2.</li>
 </ol>
 </li>
 </ol>

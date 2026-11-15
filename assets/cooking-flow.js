@@ -18,7 +18,7 @@
   };
   const svg = (name) => `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${icons[name]}</svg>`;
 
-  // Keep the existing haddock task ID so existing cooking checkmarks remain compatible.
+  // The current plan cooks both fish in one air-fryer batch.
   const nodes = [
     {"id": "oven-heat-start", "label": ["开始预热烤箱", "Start Preheating Oven"], "note": ["", ""], "group": "oven", "before": [], "link": "#cook-oven-heat-start", "minutes": 1, "instant": true},
     {"id": "prep-potato", "label": ["备土豆", "Prepare Potatoes"], "note": ["", ""], "group": "prep", "before": [], "link": "#cook-prep-potato", "minutes": 3, "displayGroup": "oven"},
@@ -54,11 +54,9 @@
     {"id": "prep-salmon", "label": ["备三文鱼", "Prepare Salmon"], "note": ["", ""], "group": "prep", "before": [], "link": "#cook-prep-salmon", "minutes": 3, "displayGroup": "air"},
     {"id": "air-heat-start", "label": ["开始预热空气炸锅", "Start Preheating Air Fryer"], "note": ["", ""], "group": "air", "before": [], "link": "#cook-air-heat-start", "minutes": 1, "instant": true},
     {"id": "air-heat", "label": ["确认空气炸锅预热完成", "Confirm Air Fryer Is Preheated"], "note": ["预热期间可继续其他任务", "Continue Other Tasks While Heating"], "group": "air", "before": ["air-heat-start"], "link": "#cook-air-heat", "minutes": 4, "confirmation": true},
-    {"id": "salmon-start", "label": ["放入三文鱼", "Load Salmon"], "note": ["放好并启动后勾选", "Check after loading and starting"], "group": "air", "before": ["air-heat", "prep-salmon"], "link": "#cook-salmon-start", "minutes": 1, "instant": true, "durationHint": 8, "holdsResource": "air", "releasesAt": "salmon"},
-    {"id": "salmon", "label": ["确认三文鱼熟透、取出", "Check and Remove Salmon"], "note": ["按熟度确认；等待期间可做其他任务", "Confirm doneness; other tasks can be done while waiting"], "group": "air", "before": ["salmon-start"], "link": "#cook-salmon", "minutes": 8, "confirmation": true, "waitFor": "salmon-start", "waitKind": "food"},
     {"id": "prep-haddock", "label": ["备黑线鳕", "Prepare Haddock"], "note": ["", ""], "group": "prep", "displayGroup": "air", "before": [], "link": "#cook-prep-haddock", "minutes": 3},
-    {"id": "haddock-start", "label": ["放入黑线鳕", "Load Haddock"], "note": ["放好并启动后勾选", "Check after loading and starting"], "group": "air", "before": ["air-heat", "prep-haddock"], "link": "#cook-haddock-start", "minutes": 1, "instant": true, "durationHint": 12, "holdsResource": "air", "releasesAt": "haddock"},
-    {"id": "haddock", "label": ["确认黑线鳕熟透、取出", "Check and Remove Haddock"], "note": ["按熟度确认；等待期间可做其他任务", "Confirm doneness; other tasks can be done while waiting"], "group": "air", "before": ["haddock-start"], "link": "#cook-haddock", "minutes": 12, "confirmation": true, "waitFor": "haddock-start", "waitKind": "food"},
+    {"id": "fish-start", "label": ["同时放入三文鱼和黑线鳕", "Load Salmon and Haddock Together"], "note": ["放好并启动后勾选", "Check after loading and starting"], "group": "air", "before": ["air-heat", "prep-salmon", "prep-haddock"], "link": "#cook-fish-start", "minutes": 1, "instant": true, "durationHint": 10, "holdsResource": "air", "releasesAt": "fish"},
+    {"id": "fish", "label": ["确认两种鱼熟透、一起取出", "Check and Remove Both Fish"], "note": ["按熟度确认；等待期间可做其他任务", "Confirm doneness; other tasks can be done while waiting"], "group": "air", "before": ["fish-start"], "link": "#cook-fish", "minutes": 10, "confirmation": true, "waitFor": "fish-start", "waitKind": "food"},
     {"id": "prep-zucchini", "label": ["备西葫芦", "Prepare Zucchini"], "note": ["", ""], "group": "prep", "before": [], "link": "#cook-prep-zucchini", "minutes": 2, "displayGroup": "large-wok"},
     {"id": "spinach", "label": ["菠菜", "Spinach"], "note": ["", ""], "group": "large-wok", "before": [], "link": "#cook-spinach", "minutes": 5},
     {"id": "ground", "label": ["鸡肉末、西葫芦", "Ground Chicken and Zucchini"], "note": ["", ""], "group": "large-wok", "before": ["prep-zucchini"], "link": "#cook-ground", "minutes": 8},
@@ -75,7 +73,7 @@
     {"id": "peas-carrots", "label": ["豌豆胡萝卜", "Peas and Carrots"], "note": ["", ""], "group": "finish", "before": [], "link": "#cook-peas-carrots", "minutes": 3},
     {"id": "wrap", "label": ["卷饼", "Wrap"], "note": ["", ""], "group": "finish", "before": ["prep-wrap", "prep-chickpeas", "chicken", "peel-eggs"], "link": "#cook-wrap", "minutes": 1},
     {"id": "sandwich", "label": ["三明治", "Sandwich"], "note": ["", ""], "group": "finish", "before": ["prep-sandwich", "chicken", "peel-eggs"], "link": "#cook-sandwich", "minutes": 1},
-    {"id": "refrigerate", "label": ["入冰箱", "Refrigerate"], "note": ["", ""], "group": "finish", "before": ["rice", "potato", "ribs", "shrimp", "salmon", "dumplings", "curry", "season-noodles", "tomato", "wrap", "sandwich", "mushroom", "spinach", "haddock", "peas-carrots", "prep-chickpeas"], "link": "#cook-refrigerate", "minutes": 5},
+    {"id": "refrigerate", "label": ["入冰箱", "Refrigerate"], "note": ["", ""], "group": "finish", "before": ["rice", "potato", "ribs", "shrimp", "dumplings", "curry", "season-noodles", "tomato", "wrap", "sandwich", "mushroom", "spinach", "fish", "peas-carrots", "prep-chickpeas"], "link": "#cook-refrigerate", "minutes": 5},
     {"id": "clean", "label": ["清洗", "Clean Up"], "note": ["", ""], "group": "finish", "before": ["refrigerate"], "link": "#cook-clean", "minutes": 7}
   ];
   const stepEmoji = {
@@ -85,7 +83,7 @@
     'prep-potato': '🥔', potato: '🥔',
     'prep-ribs': '🍖', ribs: '🍖',
     'prep-shrimp': '🦐', shrimp: '🦐',
-    'prep-haddock': '🐟', 'prep-salmon': '🐟', salmon: '🐟', haddock: '🐟',
+    fish: '🐟', 'prep-haddock': '🐟', 'prep-salmon': '🐟', salmon: '🐟', haddock: '🐟',
     'air-heat-start': '🔥', 'air-heat': '🌡️',
     'egg-water': '💧', 'pasta-water': '💧',
     eggs: '🥚', dumplings: '🥟', pasta: '🍝', noodles: '🍜',
@@ -103,7 +101,7 @@
     {"id": "finish", "icon": "finish", "title": ["收尾", "Finish"], "hint": ["备好配菜与餐点、入冰箱、清洗", "Assemble Meals, Refrigerate and Clean"]}
   ];
 
-  const instructionSections = [["rice", "rice", ["prep-rice", "rice-start", "rice"]], ["oven", "oven", ["oven-heat-start", "prep-potato", "prep-chicken", "prep-ribs", "prep-shrimp", "oven-heat", "potato-start", "potato-turn", "potato", "chicken-start", "chicken", "ribs-start", "ribs", "shrimp-start", "shrimp"]], ["air-fryer", "air", ["prep-salmon", "air-heat-start", "air-heat", "salmon-start", "salmon", "prep-haddock", "haddock-start", "haddock"]], ["pot-one", "pots", ["egg-water-start", "egg-water", "eggs-start", "eggs", "dumplings-start", "dumplings", "peel-eggs"]], ["pot-two", "pots", ["pasta-water-start", "pasta-water", "pasta-start", "pasta", "noodles-start", "noodles"]], ["small-wok", "small-wok", ["prep-noodle-sauce", "mushroom", "curry-start", "curry", "season-noodles"]], ["large-wok", "large-wok", ["prep-zucchini", "spinach", "ground", "tomato"]], ["finish", "finish", ["prep-chickpeas", "prep-bread", "prep-wrap", "prep-sandwich", "peas-carrots", "wrap", "sandwich", "refrigerate", "clean"]]];
+  const instructionSections = [["rice", "rice", ["prep-rice", "rice-start", "rice"]], ["oven", "oven", ["oven-heat-start", "prep-potato", "prep-chicken", "prep-ribs", "prep-shrimp", "oven-heat", "potato-start", "potato-turn", "potato", "chicken-start", "chicken", "ribs-start", "ribs", "shrimp-start", "shrimp"]], ["air-fryer", "air", ["prep-salmon", "prep-haddock", "air-heat-start", "air-heat", "fish-start", "fish"]], ["pot-one", "pots", ["egg-water-start", "egg-water", "eggs-start", "eggs", "dumplings-start", "dumplings", "peel-eggs"]], ["pot-two", "pots", ["pasta-water-start", "pasta-water", "pasta-start", "pasta", "noodles-start", "noodles"]], ["small-wok", "small-wok", ["prep-noodle-sauce", "mushroom", "curry-start", "curry", "season-noodles"]], ["large-wok", "large-wok", ["prep-zucchini", "spinach", "ground", "tomato"]], ["finish", "finish", ["prep-chickpeas", "prep-bread", "prep-wrap", "prep-sandwich", "peas-carrots", "wrap", "sandwich", "refrigerate", "clean"]]];
   if (window.fitnessCookingDefinition) {
     nodes.splice(0, nodes.length, ...window.fitnessCookingDefinition.nodes);
     instructionSections.splice(0, instructionSections.length, ...window.fitnessCookingDefinition.instructionSections);

@@ -58,7 +58,7 @@ for(const [plan,nodes] of [['current',current],['historical',historical]]) {
  });
  test(`${plan}: legacy completed tasks migrate and remain complete after reload`,()=>{
   const newIds=nodes.filter(n=>n.id.endsWith('-start')||['potato-turn','prep-haddock'].includes(n.id)).map(n=>n.id);
-  const oldDone=nodes.map(n=>n.id).filter(id=>!newIds.includes(id));
+  const oldDone=nodes.flatMap(n=>n.id==='fish'?['salmon','haddock']:n.id).filter(id=>!newIds.includes(id));
   const state=readState(JSON.stringify({version:4,done:oldDone}));
   assert.equal(state.version,5);assert.equal(derive(nodes,state.done).done.length,nodes.length);
   assert.deepEqual(readState(JSON.stringify(state)),state);
@@ -80,14 +80,26 @@ test('same-pot noodles can cook in either order, but only one batch occupies the
   assert.ok(!done.includes(second));
  }
 });
-test('either fish can go first; a loaded air fryer blocks the other until removal',()=>{
- for(const [first,second] of [['salmon','haddock'],['haddock','salmon']]) {
-  let done=['air-heat-start','air-heat','prep-salmon','prep-haddock'];
-  assert.ok(['salmon-start','haddock-start'].includes(derive(current,done).recommended));
-  done=complete(current,done,first+'-start');
-  assert.ok(!derive(current,done).available.some(n=>n.id===second+'-start'));
-  done=complete(current,done,first);done=complete(current,done,second+'-start');
- }
+test('both fish share loading and removal after both preparations',()=>{
+ let done=['air-heat-start','air-heat','prep-salmon'];
+ assert.ok(!derive(current,done).available.some(n=>n.id==='fish-start'));
+ done=complete(current,done,'prep-haddock');
+ assert.equal(derive(current,done).recommended,'fish-start');
+ done=complete(current,done,'fish-start');
+ assert.ok(!done.includes('fish'));
+ assert.ok(derive(current,done).available.some(n=>n.id==='fish'));
+ assert.ok(derive(current,done).available.some(n=>n.id==='prep-bread'));
+ done=complete(current,done,'fish');
+ assert.ok(done.includes('fish'));
+});
+test('old fish marks merge only when both fish are complete',()=>{
+ const prep=['air-heat-start','air-heat','prep-salmon','prep-haddock'];
+ const one=[...prep,'salmon-start','salmon'];
+ assert.ok(!derive(current,one).done.includes('fish'));
+ const both=[...one,'haddock-start','haddock'];
+ assert.ok(derive(current,both).done.includes('fish'));
+ assert.ok(derive(current,both).done.includes('fish-start'));
+ assert.deepEqual(derive(current,derive(current,both).done).done,derive(current,both).done);
 });
 test('simmering curry reserves only the saucepan, not the wok or preparation',()=>{
  let done=complete(current,[],'curry-start');
