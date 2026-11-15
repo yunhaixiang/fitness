@@ -5,6 +5,7 @@ const catalog = require('../_data/cardio_plans.json');
 const fs = require('node:fs');
 const path = require('node:path');
 const baseline = Object.fromEntries(fs.readFileSync(path.join(__dirname, '../_data/plan_metrics.yml'), 'utf8').split('\n').filter(line => /^[a-z_]+: [\d.]+$/.test(line)).map(line => { const [k,v] = line.split(': '); return [k, Number(v)]; }));
+const metabolism = {dailyResting:1600, dailyActivity:320, exerciseWeightRatio:1}; // Synthetic fixture.
 test('repository controls cardio even with stale stored or explicit URL choices', () => {
  assert.equal(catalog.plans.length, 1);
  assert.equal(resolve(catalog).id, 'cardio-2');
@@ -14,13 +15,13 @@ test('repository controls cardio even with stale stored or explicit URL choices'
  assert.equal(resolve(catalog, 'removed').id, 'cardio-2');
 });
 test('current 200 kcal budget and hypothetical 300 kcal budget do not double count', () => {
- const current = energy(baseline, catalog.plans[0], catalog.sessionsPerWeek, {weeklyKcal:474});
- const other = energy(baseline, {...catalog.plans[0], netKcal:300}, catalog.sessionsPerWeek, {weeklyKcal:474});
+ const current = energy(baseline, catalog.plans[0], catalog.sessionsPerWeek, {weeklyKcal:474}, metabolism);
+ const other = energy(baseline, {...catalog.plans[0], netKcal:300}, catalog.sessionsPerWeek, {weeklyKcal:474}, metabolism);
  assert.equal(current.weeklyCardio, 400);
  assert.equal(other.weeklyCardio, 600);
- assert.equal(current.weeklyBurn, baseline.weekly_burn);
- assert.equal(current.weeklyDeficit, baseline.weekly_deficit_precise);
- assert.ok(Math.abs(current.dailyDeficit - (baseline.weekly_burn / 7 - baseline.intake_daily)) < 0.001);
+ assert.equal(current.weeklyBurn, 1920*7 + baseline.reference_strength_weekly + 400 + 474);
+ assert.equal(current.weeklyDeficit, current.weeklyBurn - baseline.intake_daily*7);
+ assert.ok(Math.abs(current.dailyDeficit - (current.weeklyBurn / 7 - baseline.intake_daily)) < 0.001);
  assert.ok(Math.abs(other.dailyDeficit - (current.dailyDeficit + 200 / 7)) < 1e-8);
  assert.ok(Math.abs(current.fatEquivalent - current.weeklyDeficit / 7700) < 1e-8);
  assert.ok(Math.abs(other.weeklyDeficit - current.weeklyDeficit - 200) < 1e-8);
@@ -80,10 +81,10 @@ test('alternatives preserve weight-independent MET models and displayed duration
 test('step energy replaces the old walking allowance in both meal plans', () => {
  for (const intake of [1810.14286,1731]) {
   const b={...baseline,intake_daily:intake,weekly_deficit_precise:baseline.weekly_burn-intake*7};
-  const result=energy(b,catalog.plans[0],catalog.sessionsPerWeek,{weeklyKcal:140});
-  assert.ok(Math.abs(result.weeklyBurn-(b.weekly_burn-474+140))<1e-8);
+  const result=energy(b,catalog.plans[0],catalog.sessionsPerWeek,{weeklyKcal:140}, metabolism);
+  assert.ok(Math.abs(result.weeklyBurn-(1920*7+baseline.reference_strength_weekly+400+140))<1e-8);
   assert.ok(Math.abs(result.dailyDeficit-(result.weeklyBurn/7-intake))<1e-8);
-  assert.equal(energy(b,catalog.plans[0],catalog.sessionsPerWeek,{}).dailyDeficit,null);
-  assert.ok(Number.isFinite(energy(b,catalog.plans[0],catalog.sessionsPerWeek,{weeklyKcal:0}).dailyDeficit));
+  assert.equal(energy(b,catalog.plans[0],catalog.sessionsPerWeek,{}, metabolism).dailyDeficit,null);
+  assert.ok(Number.isFinite(energy(b,catalog.plans[0],catalog.sessionsPerWeek,{weeklyKcal:0}, metabolism).dailyDeficit));
  }
 });

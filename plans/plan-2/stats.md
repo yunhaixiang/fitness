@@ -50,25 +50,25 @@ visual: true
 </tr>
 </thead>
 <tbody>
-<tr>
+<tr data-energy-row="resting">
 <td>基础代谢</td>
-<td style="text-align: right;">12,092.50</td>
-<td style="text-align: right;">1,727.50</td>
+<td style="text-align: right;">—</td>
+<td style="text-align: right;">—</td>
 </tr>
-<tr>
+<tr data-energy-row="activity">
 <td>日常活动等（久坐系数加成）</td>
-<td style="text-align: right;">2,418.50</td>
-<td style="text-align: right;">345.50</td>
+<td style="text-align: right;">—</td>
+<td style="text-align: right;">—</td>
 </tr>
-<tr>
+<tr data-energy-row="strength">
 <td>力量训练（净增加）</td>
-<td style="text-align: right;">450.96</td>
-<td style="text-align: right;">64.42</td>
+<td style="text-align: right;">—</td>
+<td style="text-align: right;">—</td>
 </tr>
 <tr data-energy-row="cardio">
 <td>有氧：HIIT、游泳、跑步机或健身馆自行车，2次／周（净增加）</td>
-<td style="text-align: right;">400.00</td>
-<td style="text-align: right;">57.14</td>
+<td style="text-align: right;">—</td>
+<td style="text-align: right;">—</td>
 </tr>
 <tr data-energy-row="walking">
 <td>步行（按同步步数）</td>
@@ -77,8 +77,8 @@ visual: true
 </tr>
 <tr data-energy-row="total">
 <td>合计</td>
-<td style="text-align: right;">15,835.96</td>
-<td style="text-align: right;">2,262.28</td>
+<td style="text-align: right;">—</td>
+<td style="text-align: right;">—</td>
 </tr>
 </tbody>
 </table>

@@ -2,8 +2,8 @@
 // 0.1 mL O2/kg/metre × ~5 kcal/L = 0.5 kcal/kg/km (ACSM).
 // https://journals.physiology.org/doi/10.1152/japplphysiol.00504.2017
 // Step length 0.70 m is an explicit provisional assumption, not measured gait.
-// Sedentary allowance and planned exercise remain unchanged; overlapping exercise
-// steps cannot be separated with daily step totals alone.
+// Resting expenditure and planned exercise are updated separately from the same
+// current weight. Overlapping exercise steps cannot be separated from daily totals.
 const day = date => new Intl.DateTimeFormat('en-CA', {timeZone:'America/Toronto',year:'numeric',month:'2-digit',day:'2-digit'}).format(date);
 export function walkingEnergy(records, now = new Date()) {
   const today = day(now);

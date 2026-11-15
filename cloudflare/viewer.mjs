@@ -1,5 +1,6 @@
 import {json, tokenHash, readRecords} from './measurements.mjs';
 import {walkingEnergy} from './walking.mjs';
+import {metabolicEnergy} from './metabolism.mjs';
 
 export async function authorizedEmail(env, ctx) {
   // ctx.access is supplied by Cloudflare after Access validation, not request headers.
@@ -65,6 +66,7 @@ export default {
         const records = await readRecords(env.DB);
         return new HTMLRewriter()
           .on('#tracking-records', trackingHandler(records))
+          .on('#metabolic-energy', {element(el) { el.setInnerContent(JSON.stringify(metabolicEnergy(records)), {html:true}); }})
           .on('#walking-energy', {element(el) { el.setInnerContent(JSON.stringify(walkingEnergy(records)), {html:true}); }})
           .on('[data-body-value]', {element(el) { el.setInnerContent(String(records.currentBody[el.getAttribute('data-body-value')] ?? '—')); }})
           .on('#latest-metrics', {element(el) { el.setInnerContent(''); }})

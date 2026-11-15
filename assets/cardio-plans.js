@@ -4,17 +4,21 @@
   function resolve(catalog) {
     return catalog.plans.find((p) => p.id === catalog.default) || catalog.plans[0];
   }
-  function energy(baseline, plan, sessions, walking) {
-    const weeklyCardio = plan.netKcal * sessions;
-    const available = walking && Number.isFinite(walking.weeklyKcal);
-    const walkingDelta = available ? walking.weeklyKcal - baseline.reference_walking_weekly : 0;
-    const delta = weeklyCardio - baseline.reference_cardio_weekly + walkingDelta;
-    if (!available) return {weeklyCardio, weeklyBurn:null, weeklyDeficit:null, dailyBurn:null, dailyDeficit:null, fatEquivalent:null, intakeShare:null};
-    const weeklyBurn = baseline.weekly_burn + delta;
-    const weeklyDeficit = baseline.weekly_deficit_precise + delta;
-    return { weeklyCardio, weeklyBurn, weeklyDeficit, dailyBurn: weeklyBurn / 7,
-      dailyDeficit: weeklyDeficit / 7, fatEquivalent: weeklyDeficit / 7700,
-      intakeShare: baseline.intake_daily / (weeklyBurn / 7) * 100 };
+  function energy(baseline, plan, sessions, walking, metabolism = {}) {
+    const valid = value => Number.isFinite(value) && value >= 0;
+    const ratio = metabolism.exerciseWeightRatio;
+    const weeklyCardio = valid(ratio) && ratio > 0 ? plan.netKcal * sessions * ratio : null;
+    const weeklyStrength = valid(ratio) && ratio > 0 && valid(baseline.reference_strength_weekly) ? baseline.reference_strength_weekly * ratio : null;
+    const weeklyResting = valid(metabolism.dailyResting) && metabolism.dailyResting > 0 ? metabolism.dailyResting * 7 : null;
+    const weeklyActivity = valid(metabolism.dailyActivity) ? metabolism.dailyActivity * 7 : null;
+    const parts = [weeklyResting, weeklyActivity, weeklyStrength, weeklyCardio, walking?.weeklyKcal];
+    const weeklyBurn = parts.every(valid) ? parts.reduce((sum, value) => sum + value, 0) : null;
+    const weeklyDeficit = weeklyBurn !== null && valid(baseline.intake_daily) ? weeklyBurn - baseline.intake_daily * 7 : null;
+    return {weeklyResting, weeklyActivity, weeklyStrength, weeklyCardio, weeklyBurn, weeklyDeficit,
+      dailyBurn: weeklyBurn === null ? null : weeklyBurn / 7,
+      dailyDeficit: weeklyDeficit === null ? null : weeklyDeficit / 7,
+      fatEquivalent: weeklyDeficit === null ? null : weeklyDeficit / 7700,
+      intakeShare: weeklyBurn > 0 && valid(baseline.intake_daily) ? baseline.intake_daily / (weeklyBurn / 7) * 100 : null};
   }
   if (typeof module !== 'undefined' && module.exports) { module.exports = { resolve, energy }; return; }
   const source = document.getElementById('cardio-plan-catalog');
@@ -22,7 +26,12 @@
   const catalog = JSON.parse(source.textContent);
   const plan = resolve(catalog);
   if (!plan) return;
-  window.fitnessCardioPlan = plan;
+  const metabolism = JSON.parse(document.getElementById('metabolic-energy')?.textContent || '{}');
+  const ratio = metabolism.exerciseWeightRatio;
+  const planName = entry => Number.isFinite(ratio) && ratio > 0
+    ? {zh: `有氧计划 · 约 ${Math.round(entry.netKcal * ratio)} kcal`, en: `Cardio Plan · ≈${Math.round(entry.netKcal * ratio)} kcal`}
+    : {zh: '有氧计划', en: 'Cardio Plan'};
+  window.fitnessCardioPlan = {...plan, name: planName(plan), netKcal: Number.isFinite(ratio) && ratio > 0 ? plan.netKcal * ratio : null};
   const en = window.fitnessI18n?.language === 'en';
   const lang = en ? 'en' : 'zh';
   const tr = (zh, english) => en ? english : zh;
@@ -39,7 +48,7 @@
   if (budgetNode) {
     const baseline = JSON.parse(budgetNode.textContent);
     const walking = JSON.parse(document.getElementById('walking-energy')?.textContent || '{}');
-    const budget = energy(baseline, plan, catalog.sessionsPerWeek, walking);
+    const budget = energy(baseline, plan, catalog.sessionsPerWeek, walking, metabolism);
     window.fitnessEnergyBudget = budget;
     const walkingRow = document.querySelector('[data-energy-row="walking"]');
     const walkingLabel = walking.days ? tr(`步行（日均 ${format(walking.averageSteps)} 步；近7天已同步 ${walking.days}/7 天）`, `Walking (${format(walking.averageSteps)} Steps/Day; ${walking.days}/7 Days Synced)`) : tr('步行（等待完整日步数）', 'Walking (Awaiting Full-Day Steps)');
@@ -58,7 +67,7 @@
       ring.style.setProperty('--intake-share', `${Math.max(0, Math.min(100, budget.intakeShare ?? 0))}%`);
       ring.setAttribute('aria-label', budget.intakeShare == null ? tr('等待步数', 'Awaiting Steps') : tr(`日均摄入占消耗${Math.round(budget.intakeShare)}%`, `Daily intake is ${Math.round(budget.intakeShare)}% of calories burned`));
     }
-    for (const [type, weekly] of [['cardio', budget.weeklyCardio], ['total', budget.weeklyBurn]]) {
+    for (const [type, weekly] of [['resting', budget.weeklyResting], ['activity', budget.weeklyActivity], ['strength', budget.weeklyStrength], ['cardio', budget.weeklyCardio], ['total', budget.weeklyBurn]]) {
       const row = document.querySelector(`[data-energy-row="${type}"]`);
       if (!row) continue;
       row.cells[1].textContent = format(weekly, 2);
@@ -79,14 +88,14 @@
     // The configured current plan always comes first; additional plans remain browsable.
     const ordered = [plan, ...catalog.plans.filter(entry => entry.id !== plan.id)];
     for (const entry of ordered) {
-      const option = el('option', '', entry.name[lang] + (entry.id === plan.id ? tr(' · 当前', ' · Current') : ''));
+      const option = el('option', '', planName(entry)[lang] + (entry.id === plan.id ? tr(' · 当前', ' · Current') : ''));
       option.value = entry.id;
       choices.append(option);
     }
     choices.value = plan.id;
     const summary = el('p', 'meal-plan-summary', `${tr('每周', 'Weekly')} ${catalog.sessionsPerWeek} ${tr('次', 'Sessions')}`);
     if (catalog.plans.length > 1) control.append(label, choices);
-    else control.append(el('strong', '', plan.name[lang]));
+    else control.append(el('strong', '', planName(plan)[lang]));
     switcher.append(control, summary);
     const main = document.getElementById('main');
     const heading = main?.querySelector(':scope > .page-heading');

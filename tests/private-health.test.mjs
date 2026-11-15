@@ -16,6 +16,7 @@ function database() {
   sql.exec(readFileSync(new URL('../cloudflare/migrations/0001_measurements.sql', import.meta.url), 'utf8'));
   sql.exec(readFileSync(new URL('../cloudflare/migrations/0002_daily_steps.sql', import.meta.url), 'utf8'));
   sql.exec(readFileSync(new URL('../cloudflare/migrations/0003_private_profile.sql', import.meta.url), 'utf8'));
+  sql.exec(readFileSync(new URL('../cloudflare/migrations/0004_energy_profile.sql', import.meta.url), 'utf8'));
   return {sql, async batch(statements) {
     sql.exec('BEGIN');
     try { const results = []; for (const statement of statements) results.push(await statement.run()); sql.exec('COMMIT'); return results; }
@@ -199,4 +200,34 @@ test('profile is database-only and shares the authenticated records boundary', a
   assert.equal((await viewer.fetch(request(), e, ctx('stranger@example.com'))).status, 403);
   const response = await viewer.fetch(request(), e, ctx(owner));
   assert.deepEqual((await response.json()).profile, {heightCm:182});
+});
+
+test('authenticated HTML receives recalculated metabolism from the latest database record', async () => {
+  const e=env();
+  e.DB.sql.exec("INSERT INTO private_profile (id,height_cm,age_years,sex,exercise_reference_weight_kg) VALUES (1,182,35,'male',80)");
+  await put(e.DB);
+  const handlers=new Map();
+  const original=globalThis.HTMLRewriter;
+  globalThis.HTMLRewriter=class {
+    on(selector,handler){handlers.set(selector,handler);return this;}
+    transform(response){return response;}
+  };
+  e.ASSETS={async fetch(){return new Response('<html></html>',{headers:{'Content-Type':'text/html'}});}};
+  try {
+    const req=()=>new Request('https://viewer.example/fitness/stats/');
+    assert.equal((await viewer.fetch(req(),e,{})).status,403);
+    assert.equal(handlers.size,0);
+    const response=await viewer.fetch(req(),e,ctx(owner));
+    assert.equal(response.status,200);
+    assert.equal(response.headers.get('Cache-Control'),'private, no-store');
+    let value;
+    handlers.get('#metabolic-energy').element({setInnerContent(text){value=JSON.parse(text);}});
+    assert.equal(value.dailyResting,10*sample.weight_kg+6.25*182-5*35+5);
+    assert.equal(value.exerciseWeightRatio,sample.weight_kg/80);
+    await put(e.DB,{weight_kg:63,measured_at:'2026-11-09T09:00:00-05:00',body_fat_measured_at:'2026-11-09T09:00:00-05:00'});
+    await viewer.fetch(req(),e,ctx(owner));
+    handlers.get('#metabolic-energy').element({setInnerContent(text){value=JSON.parse(text);}});
+    assert.equal(value.dailyResting,10*63+6.25*182-5*35+5);
+    assert.equal(value.exerciseWeightRatio,63/80);
+  } finally {globalThis.HTMLRewriter=original;}
 });
