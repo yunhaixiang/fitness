@@ -565,14 +565,14 @@
       "epaDha": 0.0
     },
     "late_fruit_breakfast": {
-      "kcal": 225.75396774193547,
-      "protein": 11.350161935483872,
-      "carbs": 43.54756064516129,
-      "fat": 5.455495483870968,
-      "saturatedFat": 0.6673740967741936,
-      "fibre": 16.11125806451613,
-      "sugar": 12.882905483870966,
-      "sodium": 206.73480645161294,
+      "kcal": 218.78096774193546,
+      "protein": 11.48114193548387,
+      "carbs": 41.85718064516129,
+      "fat": 5.633135483870968,
+      "saturatedFat": 0.6383770967741935,
+      "fibre": 17.01225806451613,
+      "sugar": 9.388835483870967,
+      "sodium": 203.15580645161293,
       "cholesterol": 0.0,
       "epaDha": 0.0
     }
@@ -625,25 +625,24 @@
       "epaDha": 0.0
     },
     "late_fruit_snack": {
-      "kcal": 195.12600000000003,
-      "protein": 9.91124,
-      "carbs": 27.91156,
-      "fat": 5.162319999999999,
-      "saturatedFat": 0.5980139999999999,
-      "fibre": 4.438000000000001,
-      "sugar": 20.494339999999994,
-      "sodium": 108.298,
+      "kcal": 181.18,
+      "protein": 10.1732,
+      "carbs": 24.5308,
+      "fat": 5.5176,
+      "saturatedFat": 0.54002,
+      "fibre": 6.24,
+      "sugar": 13.506199999999994,
+      "sodium": 101.14,
       "cholesterol": 0.0,
       "epaDha": 0.0
     }
   },
   "fruitAllocation": {
-    "mixedFruitWeeklyGrams": 2800,
+    "mixedFruitWeeklyGrams": 1400,
     "packageGrams": 1400,
-    "packagesPerWeek": 2,
+    "packagesPerWeek": 1,
     "purchaseDays": [
-      "Saturday",
-      "Wednesday"
+      "Saturday"
     ],
     "earlyFruitDays": 3,
     "lateFruitDays": 4,
@@ -662,7 +661,24 @@
       "epaDha": 0.0
     },
     "source": "https://www.metro.ca/en/online-grocery/aisles/fruits-vegetables/fresh-cut-fruits-vegetables/fresh-fruit-carousel/p/204900",
-    "basis": "Two Metro Fresh Fruit Carousel trays per week. Saturday purchase supplies Sunday–Tuesday; Wednesday purchase supplies Wednesday–Saturday. Existing mixed-fruit composition proxy retained; actual Metro fruit mix and nutritional label unavailable. Serving grams are edible fruit; display rounded to nearest gram."
+    "basis": "One Metro 1.4 kg fruit tray supplies Sunday–Tuesday, breakfast one third and bedtime snack two thirds. Wednesday–Saturday: one kiwi at breakfast and two at bedtime, twelve per week. Restored generic raw kiwi composition proxy and 69 g edible weight per fruit; not a measured fruit weight or a SunGold-specific label. Mixed-fruit composition remains an estimate.",
+    "kiwisPerWeek": 12,
+    "kiwiDays": 4,
+    "breakfastKiwis": 1,
+    "snackKiwis": 2,
+    "kiwiEdibleGramsEach": 69,
+    "kiwiPer100g": {
+      "kcal": 61,
+      "protein": 1.14,
+      "carbs": 14.66,
+      "fat": 0.52,
+      "saturatedFat": 0.029,
+      "fibre": 3,
+      "sugar": 8.99,
+      "sodium": 3,
+      "cholesterol": 0,
+      "epaDha": 0
+    }
   },
   "weeklyDrinkNutrition": {
     "sodium": 10,

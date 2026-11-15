@@ -22,7 +22,7 @@ for (const language of ['zh','en']) test(`Tuesday lunch thaw reminder appears in
  assert.equal(other.children.length,0);
 });
 
-for (const language of ['zh','en']) test(`Metro fruit shopping appears twice per week (${language})`, () => {
+for (const language of ['zh','en']) test(`Metro fruit shopping appears once per week (${language})`, () => {
  const window={fitnessI18n:{language},fitnessMealPlan:{urlFor:()=>'/fitness/shopping/'}};
  const document={createElement:node,createElementNS:(_,tag)=>node(tag),querySelector:()=>({href:'/fitness/strength/'})};
  vm.runInNewContext(source,{window,document});
@@ -32,10 +32,10 @@ for (const language of ['zh','en']) test(`Metro fruit shopping appears twice per
    const root=node('main');window.fitnessMealActivities.append(root,day,slot,compact);
    for(const card of root.children.filter(n=>n.dataset.activity==='shopping')) {
     shopping++;
-    assert.ok((day===3 && slot==='before-breakfast') || (day===6 && slot==='lunch'));
+    assert.ok(day===6 && slot==='lunch');
     assert.ok(card.children.some(n=>n.className==='meal-activity-detail' && /Metro/.test(n.textContent)));
    }
   }
-  assert.equal(shopping,2);
+  assert.equal(shopping,1);
  }
 });

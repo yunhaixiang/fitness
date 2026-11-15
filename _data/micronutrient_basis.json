@@ -618,6 +618,21 @@
         "assumptions"
       ],
       "basis": "Per100 g. Heiwa old-format Canadian label per5 g has calcium6% and iron2%: approximate66 mg and0.28 mg from old DV1100 mg/14 mg, subject to percentage rounding. Potassium475 mg/100 g is USDA whole roasted sesame NDB12024 proxy, not verified product value. D/B12 zero for unfortified seeds; iodine not measured, omitted contribution modeled as zero."
+    },
+    "kiwi": {
+      "values": {
+        "calcium": 34.0,
+        "iron": 0.31,
+        "potassium": 312.0,
+        "vitaminD": 0.0,
+        "vitaminB12": 0.0,
+        "iodine": 0.3
+      },
+      "sources": [
+        "cnf2026",
+        "assumptions"
+      ],
+      "basis": "CNF 1585: Kiwi fruit, raw; 100 g per recipe unit. Generic composition proxy, not the selected product label. Iodine is an explicit trace-composition allowance, not a laboratory result."
     }
   },
   "extraRecipes": {
@@ -635,13 +650,13 @@
     "late_fruit_breakfast": {
       "soy": 2.7,
       "cereal": 0.29,
-      "fruit": 1.1666666666666665,
       "flax": 0.38461538461538464,
-      "vitaminDSupplement": 1
+      "vitaminDSupplement": 1,
+      "kiwi": 0.69
     },
     "late_fruit_snack": {
       "soy": 2.7,
-      "fruit": 2.333333333333333
+      "kiwi": 1.38
     }
   }
 }

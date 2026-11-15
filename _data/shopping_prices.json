@@ -2,7 +2,7 @@
   "checked_on": "2026-10-31",
   "currency": "CAD",
   "scope": "Walmart Canada public prices and user-provided Metro fruit price; individual checked_on retained. Chicken thigh and salmon prices supplied by user. Weekly subtotal averages routine purchase cycles. Bread assumes three slices total 105 g; weighed produce billed by actual weight. Excludes as-needed seasonings, tax and delivery. Not a London store live stock guarantee.",
-  "weekly_total_cad": "155.33",
+  "weekly_total_cad": "152.08",
   "items": [
     {
       "item": "去骨去皮鸡大腿肉",
@@ -166,15 +166,26 @@
       "basis": "package",
       "source_url": "https://www.metro.ca/en/online-grocery/aisles/fruits-vegetables/fresh-cut-fruits-vegetables/fresh-fruit-carousel/p/204900",
       "source_type": "user_provided",
-      "weekly_quantity": "2",
-      "weekly_cost_cad": "29.78",
+      "weekly_quantity": "1",
+      "weekly_cost_cad": "14.89",
       "product_url": "https://www.metro.ca/en/online-grocery/aisles/fruits-vegetables/fresh-cut-fruits-vegetables/fresh-fruit-carousel/p/204900",
       "checked_on": "2026-11-14",
       "package_grams": 1400,
       "purchase_days": [
-        "Saturday",
-        "Wednesday"
+        "Saturday"
       ]
+    },
+    {
+      "item": "完整奇异果",
+      "price_cad": "0.97",
+      "basis": "each",
+      "source_url": "https://www.walmart.ca/en/ip/kiwi/6000196794990",
+      "source_type": "walmart_public",
+      "weekly_quantity": "12",
+      "weekly_cost_cad": "11.64",
+      "product_url": "https://www.walmart.ca/en/ip/kiwi/6000196794990",
+      "checked_on": "2026-11-15",
+      "availability_note": "Official public listing checked; page default location is Mississauga, not confirmation of London store stock."
     },
     {
       "item": "意面",
