@@ -90,12 +90,12 @@ cooking: true
 <li class="cooking-task-source">
 <ol lang="zh-CN" class="cooking-source-zh">
 <li>400°F烤27分钟，中心达74°C。</li>
-<li>熟肉按3:2:2:1分给第4、1、2、6盘，相当于1½、1、1、½块。</li>
+<li>熟肉均分到第1、2、4、6盘，每盘相当于1块🍗 鸡腿肉。</li>
 <li>卷饼与三明治的肉掰碎。</li>
 </ol>
 <ol lang="en" class="cooking-source-en" hidden>
 <li>Roast at 400°F for 27 minutes, to 74°C in the centre.</li>
-<li>Divide the cooked meat 3:2:2:1 between meals 4, 1, 2 and 6, equivalent to 1½, 1, 1 and ½ 🍗 thighs.</li>
+<li>Divide the cooked meat equally between meals 1, 2, 4 and 6, equivalent to 1 🍗 chicken thigh each.</li>
 <li>Shred the wrap and sandwich portions.</li>
 </ol>
 </li>

@@ -67,7 +67,7 @@ test('all cooking prerequisites are valid, acyclic, and have matching instructio
  assert.equal(recipes.noodles.egg,1);
  assert.equal(recipes.potato.egg,0);
  assert.equal(recipes.bread.egg,2);
- assert.equal(recipes.potato.thigh,.58125);
+ assert.equal(recipes.potato.thigh,1.1625);
  assert.equal(recipes.bread.thigh,1.1625);
  assert.equal(recipes.rice.egg,1);
  assert.equal(recipes.noodles.cornstarch,undefined);

@@ -12,7 +12,7 @@
 {% case key %}
 {% when 'wrap' %}
 <th scope="row"><span class="meal-summary-number">{{ forloop.index }}</span><span data-en="🌯 Wrap">🌯 卷饼</span></th>
-<td><div data-en="🍗 1½ Chicken Thighs ({{ portion.thigh | times: 100 | round: 0 }} g)">🍗 鸡大腿肉1½块（{{ portion.thigh | times: 100 | round: 0 }} g）</div><div data-en="🥚 {{ egg_display }} Boiled Eggs">🥚 水煮蛋{{ egg_display }}个</div><div data-en="🫘 3/10 Can No Salt Added Chickpeas">🫘 无添加盐鹰嘴豆3/10罐</div></td>
+<td><div data-en="🍗 1 Chicken Thigh ({{ portion.thigh | times: 100 | round: 0 }} g)">🍗 鸡大腿肉1块（{{ portion.thigh | times: 100 | round: 0 }} g）</div><div data-en="🥚 {{ egg_display }} Boiled Eggs">🥚 水煮蛋{{ egg_display }}个</div><div data-en="🫘 3/10 Can No Salt Added Chickpeas">🫘 无添加盐鹰嘴豆3/10罐</div></td>
 <td><div data-en="🫑 1 Orange Bell Pepper ({{ portion.pepper | times: 100 | round: 0 }} g)">🫑 橙甜椒1个（{{ portion.pepper | times: 100 | round: 0 }} g）</div></td>
 <td><div data-en="🌯 {{ portion.tortilla | times: 1 | round: 0 }} Large Whole-Wheat Tortilla">🌯 大号全麦卷饼皮{{ portion.tortilla | times: 1 | round: 0 }}片</div><div data-en="🥣 {{ portion.mayo | times: 1 | round: 1 }} tsp Chipotle Mayonnaise">🥣 Chipotle蛋黄酱{{ portion.mayo | times: 1 | round: 1 }}茶匙</div></td>
 {% when 'dumpling' %}
@@ -27,7 +27,7 @@
 <td><div data-en="🍜 Rice Noodles {{ portion.noodle | times: 100 | round: 0 }} g">🍜 扁米粉{{ portion.noodle | times: 100 | round: 0 }} g</div><div data-en="🌿 1 Serving Basil Sauce">🌿 罗勒酱汁1份</div></td>
 {% when 'potato' %}
 <th scope="row"><span class="meal-summary-number">{{ forloop.index }}</span><span data-en="🍖 Ribs and Potatoes">🍖 排骨土豆</span></th>
-<td><div data-en="🍖 ½ Box BBQ Ribs (300 g Including Bones and Sauce)">🍖 BBQ排骨½盒（含骨带酱300 g）</div><div data-en="🍗 ½ Chicken Thigh ({{ portion.thigh | times: 100 | round: 0 }} g)">🍗 鸡大腿肉½块（{{ portion.thigh | times: 100 | round: 0 }} g）</div></td>
+<td><div data-en="🍖 ½ Box BBQ Ribs (300 g Including Bones and Sauce)">🍖 BBQ排骨½盒（含骨带酱300 g）</div><div data-en="🍗 1 Chicken Thigh ({{ portion.thigh | times: 100 | round: 0 }} g)">🍗 鸡大腿肉1块（{{ portion.thigh | times: 100 | round: 0 }} g）</div></td>
 <td><div data-en="🥬 Spinach {{ portion.spinach | times: 100 | round: 0 }} g">🥬 菠菜{{ portion.spinach | times: 100 | round: 0 }} g</div><div data-en="🍄 Mushrooms {{ portion.mushroom | times: 100 | round: 1 }} g">🍄 蘑菇{{ portion.mushroom | times: 100 | round: 1 }} g</div></td>
 <td><div data-en="🥔 Potatoes {{ portion.potato | times: 100 | round: 0 }} g">🥔 土豆块{{ portion.potato | times: 100 | round: 0 }} g</div><div data-en="🫘 1/10 Can No Salt Added Chickpeas">🫘 无添加盐鹰嘴豆1/10罐</div></td>
 {% when 'bread' %}

@@ -144,7 +144,7 @@ visual: true
 </tr>
 <tr>
 <td>膳食胆固醇</td>
-<td style="text-align: right;">655 mg</td>
+<td style="text-align: right;">654 mg</td>
 <td>尽量少；优先控制饱和脂肪</td>
 </tr>
 <tr>
