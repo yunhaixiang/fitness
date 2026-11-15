@@ -15,12 +15,12 @@ cooking: true
 <ol>
 <li class="cooking-task-source">
 <ol lang="zh-CN" class="cooking-source-zh">
-<li>🍚 干米70 g淘洗沥干。</li>
-<li>米和💧 水按体积1:1，加💧 水约88 mL，放入电饭煲。</li>
+<li>🍚 干米60 g淘洗沥干。</li>
+<li>米和💧 水按体积1:1，加💧 水约75 mL，放入电饭煲。</li>
 </ol>
 <ol lang="en" class="cooking-source-en" hidden>
-<li>Rinse and drain 70 g 🍚 dry rice.</li>
-<li>Use equal volumes of rice and 💧 water: about 88 mL 💧 water.</li>
+<li>Rinse and drain 60 g 🍚 dry rice.</li>
+<li>Use equal volumes of rice and 💧 water: about 75 mL 💧 water.</li>
 <li>Place in the rice cooker.</li>
 </ol>
 </li>
@@ -90,12 +90,12 @@ cooking: true
 <li class="cooking-task-source">
 <ol lang="zh-CN" class="cooking-source-zh">
 <li>400°F烤27分钟，中心达74°C。</li>
-<li>熟肉按3:3:2分给第4、1、2盘，相当于1½、1½、1块。</li>
+<li>熟肉按3:2:2:1分给第4、1、2、6盘，相当于1½、1、1、½块。</li>
 <li>卷饼与三明治的肉掰碎。</li>
 </ol>
 <ol lang="en" class="cooking-source-en" hidden>
 <li>Roast at 400°F for 27 minutes, to 74°C in the centre.</li>
-<li>Divide the cooked meat 3:3:2 between meals 4, 1 and 2, equivalent to 1½, 1½ and 1 🍗 thigh.</li>
+<li>Divide the cooked meat 3:2:2:1 between meals 4, 1, 2 and 6, equivalent to 1½, 1, 1 and ½ 🍗 thighs.</li>
 <li>Shred the wrap and sandwich portions.</li>
 </ol>
 </li>
@@ -200,13 +200,13 @@ cooking: true
 <li class="cooking-task-source">
 <ol lang="zh-CN" class="cooking-source-zh">
 <li>冷却后剥壳。</li>
-<li>第1、2、4、5、6、7盘各1个，第3盘不放鸡蛋。</li>
+<li>第1盘放2个，第2、4、5、7盘各1个，第3、6盘不放鸡蛋。</li>
 <li>第4盘的掰碎，第1盘的切片。</li>
 </ol>
 <ol lang="en" class="cooking-source-en" hidden>
 <li>Cool and peel the eggs.</li>
-<li>Put 1 whole 🥚 egg each in meals 1, 2, 4, 5, 6 and 7; no egg in meal 3.</li>
-<li>Crumble the eggs for meal 4 and slice the egg for meal 1.</li>
+<li>Put 2 whole 🥚 eggs in meal 1 and 1 each in meals 2, 4, 5 and 7; no eggs in meals 3 or 6.</li>
+<li>Crumble the eggs for meal 4 and slice the eggs for meal 1.</li>
 </ol>
 </li>
 </ol>
@@ -227,12 +227,12 @@ cooking: true
 <li class="cooking-task-source">
 <ol lang="zh-CN" class="cooking-source-zh">
 <li>锅空且💧 水沸后即可下米粉；可沿用锅内💧 热水，不足时补💧 热水。</li>
-<li>下🍜 干扁米粉53 g煮6–8分钟。</li>
+<li>下🍜 干扁米粉63 g煮6–8分钟。</li>
 <li>第6分钟检查，无硬芯且仍有弹性时捞出沥干，保留锅内💧 热水，交给小锅拌🌿 罗勒酱汁。</li>
 </ol>
 <ol lang="en" class="cooking-source-en" hidden>
 <li>Use the free pot once the 💧 water boils; reuse the hot 💧 water and top up if needed.</li>
-<li>Add 53 g 🍜 dry rice noodles and cook for 6–8 minutes.</li>
+<li>Add 63 g 🍜 dry rice noodles and cook for 6–8 minutes.</li>
 <li>Check at 6 minutes; lift out and drain once there is no hard centre and the noodles are still springy, keeping the hot 💧 water in the pot.</li>
 <li>Transfer to the saucepan for the 🌿 basil sauce.</li>
 </ol>
@@ -412,7 +412,7 @@ cooking: true
 <li>直接在面包上分层加入第1盘的🍗 鸡腿肉、切片🥚 水煮蛋、🍅 番茄和菠菜，在盘内叠好。</li>
 </ol>
 <ol lang="en" class="cooking-source-en" hidden>
-<li>Layer meal 1’s 🍗 chicken, sliced 🥚 boiled egg, 🍅 tomato and spinach directly onto the bread, then stack the sandwich on the plate.</li>
+<li>Layer meal 1’s 🍗 chicken, sliced 🥚 boiled eggs, 🍅 tomato and spinach directly onto the bread, then stack the sandwich on the plate.</li>
 </ol>
 </li>
 <li class="cooking-task-source"><p data-en="Check that all seven meals are portioned, then put the meal containers in the 🧊 refrigerator.">确认七餐均已分好，将餐盒放入🧊 冰箱。</p></li>

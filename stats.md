@@ -129,7 +129,7 @@ visual: true
 </tr>
 <tr>
 <td>膳食纤维</td>
-<td style="text-align: right;">36.8 g</td>
+<td style="text-align: right;">36.9 g</td>
 <td>30–38 g</td>
 </tr>
 <tr>
@@ -149,12 +149,12 @@ visual: true
 </tr>
 <tr>
 <td>钠</td>
-<td style="text-align: right;">2,419 mg</td>
+<td style="text-align: right;">2,424 mg</td>
 <td>≤2,300 mg</td>
 </tr>
 <tr>
 <td>钙</td>
-<td>1,104 mg</td>
+<td>1,103 mg</td>
 <td>1,000 mg</td>
 </tr>
 <tr>
@@ -164,7 +164,7 @@ visual: true
 </tr>
 <tr>
 <td>钾</td>
-<td>4,593 mg</td>
+<td>4,591 mg</td>
 <td>≥3,400 mg</td>
 </tr>
 <tr>

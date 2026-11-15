@@ -2,7 +2,7 @@
   "checked_on": "2026-10-31",
   "currency": "CAD",
   "scope": "Walmart Canada public prices and user-provided Metro fruit price; individual checked_on retained. Chicken thigh and salmon prices supplied by user. Weekly subtotal averages routine purchase cycles. Bread assumes three slices total 105 g; weighed produce billed by actual weight. Excludes as-needed seasonings, tax and delivery. Not a London store live stock guarantee.",
-  "weekly_total_cad": "154.39",
+  "weekly_total_cad": "154.40",
   "items": [
     {
       "item": "去骨去皮鸡大腿肉",
@@ -215,10 +215,10 @@
       "source_url": "https://www.walmart.ca/en/ip/Great-Value-Long-Grain-White-Rice/4UD9P76BEQB4",
       "source_type": "walmart_public",
       "product_url": "https://www.walmart.ca/en/ip/Great-Value-Long-Grain-White-Rice/4UD9P76BEQB4",
-      "purchase_frequency_zh": "1袋 / 约6.4周",
-      "purchase_frequency_en": "1 Bag / About 6.4 Weeks",
-      "weekly_cost_cad": "0.54",
-      "weekly_quantity": "0.15555555555555556"
+      "purchase_frequency_zh": "1袋 / 约7.5周",
+      "purchase_frequency_en": "1 Bag / About 7.5 Weeks",
+      "weekly_cost_cad": "0.46",
+      "weekly_quantity": "0.13333333333333333"
     },
     {
       "item": "高纤维谷物早餐",
@@ -403,14 +403,14 @@
       "item": "扁米粉",
       "price_cad": "1.97",
       "basis": "package",
-      "weekly_quantity": "0.23348017621145375",
-      "weekly_cost_cad": "0.46",
+      "weekly_quantity": "0.2775330396475771",
+      "weekly_cost_cad": "0.55",
       "source_type": "walmart_public",
       "source_url": "https://www.walmart.ca/en/ip/Erawan-Rice-Stick/6000199121439",
       "product_url": "https://www.walmart.ca/en/ip/Erawan-Rice-Stick/6000199121439",
       "checked_on": "2026-11-07",
-      "purchase_frequency_zh": "1包 / 约4.3周",
-      "purchase_frequency_en": "1 Pack / About 4.3 Weeks"
+      "purchase_frequency_zh": "1包 / 约3.6周",
+      "purchase_frequency_en": "1 Pack / About 3.6 Weeks"
     },
     {
       "item": "咖喱块",

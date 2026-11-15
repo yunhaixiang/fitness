@@ -31,8 +31,8 @@ test('weekly meat, eggs, grains and portions match whole-package purchase cycles
  close(weekly('egg'),12);
  assert.equal(basis.shrimpEggWash,undefined); close(weekly('potato')*100,340);
  close(weekly('sweetpotato'),0);
- close(weekly('rice')*100,140); close(weekly('pasta')*85,104);
- close(weekly('noodle')*100,106); close(weekly('sauce')*125,156);
+ close(weekly('rice')*100,120); close(weekly('pasta')*85,104);
+ close(weekly('noodle')*100,126); close(weekly('sauce')*125,156);
  const recipes=Object.fromEntries(basis.mealKeys.map((k,i)=>[k,basis.recipes[i]]));
  assert.equal(recipes.wrap.tuna,undefined); close(recipes.bread.tuna,1); close(recipes.bread.bread,1.5);
  close(recipes.noodles.shrimp,1.7); assert.equal(recipes.noodles.panko,undefined);
@@ -59,13 +59,16 @@ test('all cooking prerequisites are valid, acyclic, and have matching instructio
  for(const [id,group,steps] of sections){const fragment=page.split('<h2 id="'+id+'"')[1].split('<h2 ')[0];assert.equal((fragment.match(/<li class="cooking-task-source"/g)||[]).length,steps.length,id);steps.forEach(s=>instructionIds.add('cook-'+s));}
  for(const n of flow)assert.ok(instructionIds.has(n.link.slice(1))||['cook-finish'].includes(n.link.slice(1)),n.link);
  assert.ok(page.includes('原味黑线鳕')); assert.ok(!page.includes('裹粉黑线鳕'));
- assert.match(page,/第1、2、4、5、6、7盘各1个，第3盘不放鸡蛋/);
+ assert.match(page,/第1盘放2个，第2、4、5、7盘各1个，第3、6盘不放鸡蛋/);
  assert.match(page,/鸡蛋6个/);
- assert.match(page,/1 whole 🥚 egg each in meals 1, 2, 4, 5, 6 and 7/);
+ assert.match(page,/2 whole 🥚 eggs in meal 1 and 1 each in meals 2, 4, 5 and 7/);
  const recipes=Object.fromEntries(basis.mealKeys.map((k,i)=>[k,basis.recipes[i]]));
  assert.equal(recipes.wrap.egg,1);
  assert.equal(recipes.noodles.egg,1);
- assert.equal(recipes.potato.egg,1);
+ assert.equal(recipes.potato.egg,0);
+ assert.equal(recipes.bread.egg,2);
+ assert.equal(recipes.potato.thigh,.58125);
+ assert.equal(recipes.bread.thigh,1.1625);
  assert.equal(recipes.rice.egg,1);
  assert.equal(recipes.noodles.cornstarch,undefined);
 });
