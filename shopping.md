@@ -98,11 +98,11 @@ visual: true
 <td data-en="1 Tray / Week · Saturday">1盒 / 周 · 周六购买</td>
 <td><a href="https://www.metro.ca/en/online-grocery/aisles/fruits-vegetables/fresh-cut-fruits-vegetables/fresh-fruit-carousel/p/204900">$14.89</a></td>
 </tr>
-<tr data-price-id="15" data-weekly-cost="11.64" data-purchase-group="weekly">
+<tr data-price-id="15" data-weekly-cost="10.87" data-purchase-group="weekly">
 <td data-en="Whole Kiwis">完整奇异果</td>
-<td><a href="https://www.walmart.ca/en/ip/kiwi/6000196794990">Zespri Kiwi</a><br><span data-en="Sold Individually">单颗售卖</span></td>
-<td data-en="12 Kiwis / Week">12个 / 周</td>
-<td><a href="https://www.walmart.ca/en/ip/kiwi/6000196794990">$0.97</a></td>
+<td><a href="https://www.walmart.ca/en/ip/Kiwi-Gold-2-lb/6000201891262">Zespri SunGold Kiwi</a><br><span data-en="907 g per Box">907 g / 盒</span></td>
+<td data-en="1 Box / Week · Plan for 8 Kiwis">1盒 / 周 · 按8个安排</td>
+<td><a href="https://www.walmart.ca/en/ip/Kiwi-Gold-2-lb/6000201891262">$10.87</a></td>
 </tr>
 <tr data-weekly-cost="0.29" data-price-id="16" data-purchase-group="restock">
 <td>意面</td>
@@ -242,7 +242,7 @@ visual: true
 <td>每周合计</td>
 <td>—</td>
 <td style="text-align: right;">—</td>
-<td style="text-align: right;">$152.08</td>
+<td style="text-align: right;">$151.31</td>
 </tr>
 </tbody>
 </table>

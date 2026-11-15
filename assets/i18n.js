@@ -283,6 +283,7 @@
     '每周 kcal': 'Weekly kcal', '日均 kcal': 'Daily kcal',
     '周日—周二早餐（混合水果盘）': 'Sunday–Tuesday breakfast (mixed fruit)',
     '周三—周六早餐（奇异果1个）': 'Wednesday–Saturday breakfast (1 kiwi)',
+    '周三—周六睡前加餐（奇异果1个）': 'Wednesday–Saturday bedtime snack (1 kiwi)',
     '周三—周六睡前加餐（奇异果2个）': 'Wednesday–Saturday bedtime snack (2 kiwis)',
     '周三—周六早餐（奇异果2个）': 'Wednesday–Saturday breakfast (2 kiwis)',
     '周二午／周三晚／周五晚／周日午': 'Tue lunch / Wed dinner / Fri dinner / Sun lunch',

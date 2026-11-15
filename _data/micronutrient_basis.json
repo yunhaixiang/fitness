@@ -36,7 +36,8 @@
     "plainHaddockUSDA": "https://www.ars.usda.gov/ARSUserFiles/80400535/Data/SR/SR28/reports/sr28fg15.pdf",
     "sesameLabel": "https://i5.walmartimages.com/asr/0b2c094b-4e32-4c6d-b6f0-b821376953e4.f96a952ecdf1c02a9b126dc0a6e0ab02.jpeg",
     "sesameUSDA": "https://www.ars.usda.gov/ARSUserFiles/80400535/Data/SR/SR28/reports/sr28fg12.pdf",
-    "legacyCanadianDV": "https://epe.lac-bac.gc.ca/100/206/301/cfia-acia/2011-09-21/www.inspection.gc.ca/english/fssa/labeti/guide/ch6e.shtml?nodisclaimer=1"
+    "legacyCanadianDV": "https://epe.lac-bac.gc.ca/100/206/301/cfia-acia/2011-09-21/www.inspection.gc.ca/english/fssa/labeti/guide/ch6e.shtml?nodisclaimer=1",
+    "sunGoldUSDA": "https://www.ars.usda.gov/ARSUserFiles/80400535/Data/SR/SR28/reports/sr28fg09.pdf"
   },
   "notes": [
     "Micronutrient planning estimates for the current plan, not a measurement or product-label audit. Units match nutrition_basis.json; breakfast inputs are per 100 g. Numeric coverage is explicit; a missing field causes recalculation to fail.",
@@ -621,18 +622,18 @@
     },
     "kiwi": {
       "values": {
-        "calcium": 34.0,
-        "iron": 0.31,
-        "potassium": 312.0,
+        "calcium": 17,
+        "iron": 0.21,
+        "potassium": 315,
         "vitaminD": 0.0,
         "vitaminB12": 0.0,
         "iodine": 0.3
       },
       "sources": [
-        "cnf2026",
+        "sunGoldUSDA",
         "assumptions"
       ],
-      "basis": "CNF 1585: Kiwi fruit, raw; 100 g per recipe unit. Generic composition proxy, not the selected product label. Iodine is an explicit trace-composition allowance, not a laboratory result."
+      "basis": "USDA SR28 NDB09520 SunGold raw, per 100 g edible portion. Vitamin D and B12 zero per USDA. Iodine retains the explicit trace allowance 0.3 mcg/100 g; not measured for this product."
     }
   },
   "extraRecipes": {
@@ -652,11 +653,11 @@
       "cereal": 0.29,
       "flax": 0.38461538461538464,
       "vitaminDSupplement": 1,
-      "kiwi": 0.69
+      "kiwi": 0.8162999999999999
     },
     "late_fruit_snack": {
       "soy": 2.7,
-      "kiwi": 1.38
+      "kiwi": 0.8162999999999999
     }
   }
 }

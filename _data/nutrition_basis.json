@@ -565,14 +565,14 @@
       "epaDha": 0.0
     },
     "late_fruit_breakfast": {
-      "kcal": 218.78096774193546,
-      "protein": 11.48114193548387,
-      "carbs": 41.85718064516129,
-      "fat": 5.633135483870968,
-      "saturatedFat": 0.6383770967741935,
-      "fibre": 17.01225806451613,
-      "sugar": 9.388835483870967,
-      "sodium": 203.15580645161293,
+      "kcal": 228.11786774193547,
+      "protein": 11.52716793548387,
+      "carbs": 44.631157645161295,
+      "fat": 5.502899483870968,
+      "saturatedFat": 0.6714265967741935,
+      "fibre": 16.08507806451613,
+      "sugar": 13.226225483870966,
+      "sodium": 203.53470645161292,
       "cholesterol": 0.0,
       "epaDha": 0.0
     }
@@ -625,14 +625,14 @@
       "epaDha": 0.0
     },
     "late_fruit_snack": {
-      "kcal": 181.18,
-      "protein": 10.1732,
-      "carbs": 24.5308,
-      "fat": 5.5176,
-      "saturatedFat": 0.54002,
-      "fibre": 6.24,
-      "sugar": 13.506199999999994,
-      "sodium": 101.14,
+      "kcal": 148.42690000000002,
+      "protein": 9.432625999999999,
+      "carbs": 17.189377,
+      "fat": 5.028563999999999,
+      "saturatedFat": 0.5530594999999999,
+      "fibre": 3.24282,
+      "sugar": 11.140489999999994,
+      "sodium": 99.4489,
       "cholesterol": 0.0,
       "epaDha": 0.0
     }
@@ -661,24 +661,28 @@
       "epaDha": 0.0
     },
     "source": "https://www.metro.ca/en/online-grocery/aisles/fruits-vegetables/fresh-cut-fruits-vegetables/fresh-fruit-carousel/p/204900",
-    "basis": "One Metro 1.4 kg fruit tray supplies Sunday–Tuesday, breakfast one third and bedtime snack two thirds. Wednesday–Saturday: one kiwi at breakfast and two at bedtime, twelve per week. Restored generic raw kiwi composition proxy and 69 g edible weight per fruit; not a measured fruit weight or a SunGold-specific label. Mixed-fruit composition remains an estimate.",
-    "kiwisPerWeek": 12,
+    "basis": "One Metro 1.4 kg fruit tray supplies Sunday–Tuesday, breakfast one third and bedtime snack two thirds. Wednesday–Saturday: one SunGold kiwi at breakfast and one at bedtime. One 907 g box per week, modeled as eight fruit per user. USDA SR28 NDB09520 SunGold raw composition and 28% skin/refuse allowance: 653.04 g edible per box, 81.63 g per fruit. Fruit count and peeled yield are planning assumptions, not measured contents. Mixed-fruit composition remains an estimate.",
+    "kiwisPerWeek": 8,
     "kiwiDays": 4,
     "breakfastKiwis": 1,
-    "snackKiwis": 2,
-    "kiwiEdibleGramsEach": 69,
+    "snackKiwis": 1,
+    "kiwiEdibleGramsEach": 81.63,
     "kiwiPer100g": {
-      "kcal": 61,
-      "protein": 1.14,
-      "carbs": 14.66,
-      "fat": 0.52,
-      "saturatedFat": 0.029,
-      "fibre": 3,
-      "sugar": 8.99,
+      "kcal": 63,
+      "protein": 1.02,
+      "carbs": 15.79,
+      "fat": 0.28,
+      "saturatedFat": 0.065,
+      "fibre": 1.4,
+      "sugar": 12.3,
       "sodium": 3,
       "cholesterol": 0,
       "epaDha": 0
-    }
+    },
+    "kiwiPackageGrams": 907,
+    "kiwiPackagesPerWeek": 1,
+    "kiwiEdibleFraction": 0.72,
+    "kiwiSource": "https://www.ars.usda.gov/ARSUserFiles/80400535/Data/SR/SR28/reports/sr28fg09.pdf"
   },
   "weeklyDrinkNutrition": {
     "sodium": 10,

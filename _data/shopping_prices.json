@@ -2,7 +2,7 @@
   "checked_on": "2026-10-31",
   "currency": "CAD",
   "scope": "Walmart Canada public prices and user-provided Metro fruit price; individual checked_on retained. Chicken thigh and salmon prices supplied by user. Weekly subtotal averages routine purchase cycles. Bread assumes three slices total 105 g; weighed produce billed by actual weight. Excludes as-needed seasonings, tax and delivery. Not a London store live stock guarantee.",
-  "weekly_total_cad": "152.08",
+  "weekly_total_cad": "151.31",
   "items": [
     {
       "item": "去骨去皮鸡大腿肉",
@@ -177,15 +177,17 @@
     },
     {
       "item": "完整奇异果",
-      "price_cad": "0.97",
-      "basis": "each",
-      "source_url": "https://www.walmart.ca/en/ip/kiwi/6000196794990",
-      "source_type": "walmart_public",
-      "weekly_quantity": "12",
-      "weekly_cost_cad": "11.64",
-      "product_url": "https://www.walmart.ca/en/ip/kiwi/6000196794990",
+      "price_cad": "10.87",
+      "basis": "package",
+      "source_url": "https://www.walmart.ca/en/ip/Kiwi-Gold-2-lb/6000201891262",
+      "source_type": "user_provided",
+      "weekly_quantity": "1",
+      "weekly_cost_cad": "10.87",
+      "product_url": "https://www.walmart.ca/en/ip/Kiwi-Gold-2-lb/6000201891262",
       "checked_on": "2026-11-15",
-      "availability_note": "Official public listing checked; page default location is Mississauga, not confirmation of London store stock."
+      "availability_note": "907 g SunGold box; eight fruit is the user planning count, not a pack guarantee. Price retains user-provided CAD10.87; official public listing at default Mississauga location shows CAD10.97, not London checkout.",
+      "package_grams": 907,
+      "planned_fruit_count": 8
     },
     {
       "item": "意面",

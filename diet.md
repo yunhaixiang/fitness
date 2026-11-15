@@ -10,7 +10,7 @@ diet: true
 
 
 <noscript>
-<p>周日午餐后做饭，准备上1–上7；周三晚餐后做饭，准备下1–下7；周六下午购买整周食材及1盒 Metro 水果盘；周三—周六早餐各1个奇异果，睡前加餐各2个。</p>
+<p>周日午餐后做饭，准备上1–上7；周三晚餐后做饭，准备下1–下7；周六下午购买整周食材及1盒 Metro 水果盘；周三—周六早餐各1个奇异果，睡前加餐各1个。</p>
 <p>周日—周二早餐：{{ site.data.meal_nutrition.meals.fruit_breakfast.foodZh }}。</p>
 <p>周三—周六早餐：{{ site.data.meal_nutrition.meals.late_fruit_breakfast.foodZh }}。</p>
 <p>周日—周二睡前加餐：{{ site.data.meal_nutrition.meals.fruit_snack.foodZh }}。</p>
