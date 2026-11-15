@@ -740,3 +740,20 @@ html[data-theme=light] .cooking-guide-primary{color:#fff}
 .today-exercise-list li{flex-wrap:wrap}
 .today-exercise-list span{white-space:normal}
 .today-exercise-list .today-exercise-load{flex-basis:100%}
+
+/* Entries: one calendar week per row, with seven stable weekday columns. */
+.record-weeks{display:flex;flex-direction:column;gap:20px;margin-top:16px;min-width:0}
+.record-week{min-width:0}
+.record-week-title{font-size:13px!important;color:var(--muted);margin:0 0 9px!important;font-variant-numeric:tabular-nums}
+.record-week-scroll{overflow-x:auto;padding-bottom:6px;overscroll-behavior-x:contain}
+.record-week-scroll:focus-visible{outline:2px solid var(--accent);outline-offset:2px;border-radius:8px}
+.record-week-grid{display:grid;grid-template-columns:repeat(7,minmax(135px,1fr));gap:8px;align-items:start}
+.record-day{min-width:0}
+.record-day-heading{display:flex;justify-content:space-between;gap:5px;padding:7px 8px;margin-bottom:6px;border-bottom:1px solid var(--line);font-size:11px;color:var(--muted)}
+.record-day-heading strong{color:var(--text)}
+.record-day-heading time{font-variant-numeric:tabular-nums}
+.record-day .record-card{padding:10px 8px;margin-bottom:7px;box-shadow:none}
+.record-day .record-card-fields{grid-template-columns:minmax(0,1fr);gap:2px;font-size:12px}
+.record-day .record-card-fields dd{text-align:left;margin-bottom:7px}
+.record-day .record-card-fields dd:last-child{margin-bottom:0}
+.record-day-empty{display:block;text-align:center;padding:15px 8px;color:var(--muted)}

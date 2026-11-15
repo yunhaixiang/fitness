@@ -1,5 +1,26 @@
 (() => {
   'use strict';
+  // Calendar-only arithmetic avoids DST shifts. Keep the existing rolling 56-day window.
+  function groupWeeks(rows) {
+    const weeks = new Map();
+    for (const row of rows) {
+      if (!/^\d{4}-\d{2}-\d{2}$/.test(row.date)) continue;
+      const date = new Date(`${row.date}T12:00:00Z`);
+      if (!Number.isFinite(date.getTime()) || date.toISOString().slice(0, 10) !== row.date) continue;
+      date.setUTCDate(date.getUTCDate() - (date.getUTCDay() + 6) % 7);
+      const start = date.toISOString().slice(0, 10);
+      if (!weeks.has(start)) {
+        const days = Array.from({length: 7}, (_, index) => {
+          const day = new Date(date); day.setUTCDate(day.getUTCDate() + index);
+          return {date: day.toISOString().slice(0, 10), rows: []};
+        });
+        weeks.set(start, {start, end: days[6].date, days});
+      }
+      weeks.get(start).days.find(day => day.date === row.date).rows.push(row);
+    }
+    return [...weeks.values()].sort((a, b) => b.start.localeCompare(a.start));
+  }
+  if (typeof module !== 'undefined' && module.exports) { module.exports = {groupWeeks}; return; }
   const KEY = 'yunhai-fitness-records-v1';
   const DAYS = 56;
   const types = {
@@ -71,11 +92,13 @@
       rows.unshift({ ...publishedCurrent, date: '当前数据' });
     }
     if (!rows.length) { const empty = document.createElement('p'); empty.className = 'empty-state'; empty.textContent = '还没有最近 8 周的记录。'; host.append(empty); return; }
-    const list = document.createElement('div'); list.className = 'record-card-grid';
-    for (const row of rows) { const card = document.createElement('article'); card.className = 'record-card';
-      const head = document.createElement('div'); head.className = 'record-card-head';
-      const date = document.createElement('strong'); date.textContent = row.date;
-      head.append(date); card.append(head);
+    function recordCard(row, heading) {
+      const card = document.createElement('article'); card.className = 'record-card';
+      if (heading) {
+        const head = document.createElement('div'); head.className = 'record-card-head';
+        const date = document.createElement('strong'); date.textContent = heading;
+        head.append(date); card.append(head);
+      }
       const fields = document.createElement('dl'); fields.className = 'record-card-fields';
       for (const [key, label] of types[name].fields.slice(1)) {
         if (row[key] === '' || row[key] == null) continue;
@@ -83,9 +106,35 @@
         const value = document.createElement('dd'); value.textContent = row[key];
         fields.append(term, value);
       }
-      card.append(fields); list.append(card); }
+      card.append(fields); return card;
+    }
+    // An undated current reading is separate; never assign it to a made-up calendar day.
+    for (const row of rows.filter(row => row.date === '当前数据')) host.append(recordCard(row, row.date));
+    const list = document.createElement('div'); list.className = 'record-weeks';
+    const weekdays = ['周一', '周二', '周三', '周四', '周五', '周六', '周日'];
+    for (const week of groupWeeks(rows)) {
+      const section = document.createElement('section'); section.className = 'record-week';
+      const title = document.createElement('h3'); title.className = 'record-week-title';
+      title.id = `${name}-week-${week.start}`;
+      title.textContent = `${week.start} — ${week.end}`;
+      const scroll = document.createElement('div'); scroll.className = 'record-week-scroll';
+      scroll.tabIndex = 0; scroll.setAttribute('role', 'region'); scroll.setAttribute('aria-labelledby', title.id);
+      const grid = document.createElement('div'); grid.className = 'record-week-grid';
+      week.days.forEach((day, index) => {
+        const cell = document.createElement('div'); cell.className = 'record-day';
+        const head = document.createElement('div'); head.className = 'record-day-heading';
+        const label = document.createElement('strong'); label.textContent = weekdays[index];
+        const date = document.createElement('time'); date.dateTime = day.date; date.textContent = day.date.slice(5);
+        head.append(label, date); cell.append(head);
+        if (day.rows.length) day.rows.forEach(row => cell.append(recordCard(row)));
+        else { const empty = document.createElement('span'); empty.className = 'record-day-empty'; empty.textContent = '—'; cell.append(empty); }
+        grid.append(cell);
+      });
+      scroll.append(grid); section.append(title, scroll); list.append(section);
+    }
     host.append(list);
   }
+
   function renderChart(name) {
     const host = document.querySelector(`[data-chart="${name}"]`); if (!host) return;
     const key = host.previousElementSibling.value;
