@@ -2,7 +2,7 @@
   "checked_on": "2026-10-31",
   "currency": "CAD",
   "scope": "Walmart Canada public prices and user-provided Metro fruit price; individual checked_on retained. Chicken thigh and salmon prices supplied by user. Weekly subtotal averages routine purchase cycles. Bread assumes three slices total 105 g; weighed produce billed by actual weight. Excludes as-needed seasonings, tax and delivery. Not a London store live stock guarantee.",
-  "weekly_total_cad": "154.82",
+  "weekly_total_cad": "154.40",
   "items": [
     {
       "item": "去骨去皮鸡大腿肉",
@@ -584,23 +584,6 @@
       "weekly_cost_cad": "0.17",
       "purchase_frequency_zh": "1瓶 / 500天",
       "purchase_frequency_en": "1 Bottle / 500 Days"
-    },
-    {
-      "item": "无盐烤腰果",
-      "product": "Great Value Roasted Cashews Unsalted",
-      "price_cad": "5.98",
-      "basis": "tub",
-      "package_g": 200,
-      "weekly_g": 14,
-      "weekly_quantity": "0.07",
-      "weekly_cost_cad": "0.42",
-      "purchase_frequency_zh": "1盒 / 约14周",
-      "purchase_frequency_en": "1 Tub / About 14 Weeks",
-      "source_url": "https://www.walmart.ca/en/ip/Great-Value-Roasted-Cashews-Unsalted-200g/6000202116328",
-      "product_url": "https://www.walmart.ca/en/ip/Great-Value-Roasted-Cashews-Unsalted-200g/6000202116328",
-      "source_type": "walmart_public",
-      "checked_on": "2026-11-14",
-      "usage_note": "7 g on each of two curry-rice meals weekly. Exact cycle200/14=14.29 weeks. Opened: store airtight in refrigerator; sprinkle on after reheating. Public online price; London stock and checkout price not verified."
     }
   ],
   "updated_on": "2026-11-14"

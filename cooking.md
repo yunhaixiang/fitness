@@ -268,13 +268,11 @@ cooking: true
 <li>💧 水150 mL烧热后关小火，溶入🍛 Golden Curry咖喱块18 g（90 g整包的1/5）。</li>
 <li>再煮约5分钟至顺滑。</li>
 <li>盛入第5盘，分盘时淋在🍚 米饭上。</li>
-<li>另取🥜 无盐烤腰果7 g，单独密封保存；第5餐复热后再掰碎撒上。开封腰果盒密封冷藏。</li>
 </ol>
 <ol lang="en" class="cooking-source-en" hidden>
 <li>Heat 150 mL 💧 water, lower the heat and dissolve 18 g of 🍛 Golden Curry roux (1/5 of a 90 g pack).</li>
 <li>Simmer for about 5 minutes until smooth.</li>
 <li>Transfer to meal 5 and serve over the rice.</li>
-<li>Set aside 7 g 🥜 unsalted roasted cashews in a separate airtight container. Break up and sprinkle over meal 5 after reheating. Refrigerate the opened cashew tub in an airtight container.</li>
 </ol>
 </li>
 <li class="cooking-task-source">
