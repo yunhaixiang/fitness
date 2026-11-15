@@ -99,9 +99,11 @@
     element.setAttribute('class', className);
     return element;
   };
+  const dose = window.fitnessTrainingDose;
+  if (!dose) return;
   const data = {};
   for (const [index, mode] of ['home', 'gym'].entries()) {
-    const entries = Object.fromEntries(muscles.map(([key]) => [key, { primary: 0, secondary: 0, primaryMoves: new Map(), secondaryMoves: new Map() }]));
+    const entries = Object.fromEntries(muscles.map(([key]) => [key, { primary: 0, secondary: 0, primaryMoves: new Map(), secondaryMoves: new Map(), ...dose.create() }]));
     for (const body of tables[index].tBodies) {
       for (const row of body.rows) {
         const offset = row === body.rows[0] ? 2 : 0;
@@ -126,6 +128,12 @@
           for (const muscle of assignment[category]) {
             const item = entries[muscle];
             item[category] += volume;
+            // Holding the trunk or grip steady does not imply a full dynamic set.
+            const stabilizing = category === 'secondary' && (
+              ['forearms', 'lower-back'].includes(muscle) ||
+              (muscle === 'abs' && ['哑铃高脚杯深蹲', '史密斯机深蹲', '史密斯机罗马尼亚硬拉'].includes(name))
+            );
+            dose.add(item, category, sets, stabilizing);
             const previous = item[`${category}Moves`].get(name) ?? 0;
             item[`${category}Moves`].set(name, previous + volume);
           }
@@ -146,6 +154,19 @@
   root.prepend(toolbar, section);
   root.append(detailsSection);
 
+  const reference = text('p', 'volume-rating-note', tr(
+    '增肌组数参考：主要1组，辅助½组；需结合动作难度与恢复。',
+    'Hypertrophy reference: primary sets + ½ secondary sets; consider effort and recovery.'
+  ));
+  reference.title = tr('折算组数/周：少于5偏低，5至不足10适中，10–20充足，超过20偏高。仅为计划分档；低组数也可能有效，偏高不等于过度训练。稳定参与另列。',
+    'Weekly fractional sets: below 5 Low; 5 to under 10 Moderate; 10–20 Substantial; above 20 High. Planning bands only: fewer sets can work; High does not mean overtraining. Stabilization is listed separately.');
+  detailsSection.insertBefore(reference, details);
+  const setFormat = new Intl.NumberFormat(en ? 'en-CA' : 'zh-CN', { maximumFractionDigits: 1 });
+  const ratings = {
+    none: ['未安排', 'Not Scheduled'], low: ['偏低', 'Low'], moderate: ['适中', 'Moderate'],
+    adequate: ['充足', 'Substantial'], high: ['偏高', 'High'],
+    stabilizing: ['以稳定参与为主', 'Stabilization Only'], unknown: ['待评估', 'Not Assessed']
+  };
   const siteRoot = new URL(`${document.body.dataset.baseurl || ''}/`, location.origin).href;
   let leaderObserver;
   let updateLeaders = () => {};
@@ -161,7 +182,18 @@
       const card = text('article', 'visual-card visual-volume-card', '');
       card.id = `volume-${mode}-${key}`;
       card.tabIndex = -1;
-      card.append(text('h4', '', tr(zh, english)));
+      const rating = dose.assess(item);
+      const heading = text('div', 'volume-card-heading', '');
+      const badge = text('span', `volume-rating is-${rating.status}`, tr(...ratings[rating.status]));
+      badge.title = reference.title;
+      heading.append(text('h4', '', tr(zh, english)), badge);
+      const setSummary = rating.status === 'stabilizing'
+        ? tr(`稳定参与 ${setFormat.format(item.stabilizingSets)} 组/周`, `${setFormat.format(item.stabilizingSets)} Stabilizing Sets / Week`)
+        : tr(`折算 ${rating.sets === null ? '—' : setFormat.format(rating.sets)} 组/周`, `${rating.sets === null ? '—' : setFormat.format(rating.sets)} Fractional Sets / Week`);
+      card.append(heading, text('p', 'volume-rating-sets', setSummary));
+      const countDetail = tr(`主要 ${item.primarySets} 组 · 辅助 ${item.secondarySets} 组`,
+        `Primary ${item.primarySets} Sets · Secondary ${item.secondarySets} Sets`);
+      card.append(text('p', 'volume-rating-breakdown', countDetail));
       const metrics = text('div', 'muscle-volume-metrics', '');
       for (const [label, value] of [[tr('主要', 'Primary'), item.primary], [tr('辅助', 'Secondary'), item.secondary], [tr('合计', 'Total'), item.primary + item.secondary]]) {
         const metric = text('div', 'muscle-volume-metric', '');

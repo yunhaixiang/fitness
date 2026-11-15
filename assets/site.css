@@ -721,3 +721,15 @@ html[data-theme=light] .cooking-guide-primary{color:#fff}
 .shopping-cost-line small{display:block;font-size:12px;opacity:.75;margin-top:4px}
 .shopping-cost-note{font-size:12px;opacity:.75;margin:10px 0 16px!important}
 @media(max-width:600px){.shopping-cost-breakdown{grid-template-columns:1fr}}
+
+/* Muscle dose assessment: wrap naturally in both languages and color themes. */
+.volume-card-heading{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;margin-bottom:8px}
+.visual-volume-card .volume-card-heading h4{margin:0;min-width:0}
+.volume-rating{display:inline-block;max-width:100%;padding:4px 9px;border:1px solid currentColor;border-radius:999px;font-size:12px;font-weight:700;line-height:1.4;overflow-wrap:anywhere;background:var(--soft);color:var(--muted)}
+.volume-rating.is-low{color:var(--gold)}
+.volume-rating.is-moderate{color:var(--accent)}
+.volume-rating.is-adequate{color:var(--green);background:var(--accent-soft)}
+.volume-rating.is-high{color:var(--peach)}
+.visual-volume-card .volume-rating-sets{margin:0 0 4px;color:var(--text);font-size:14px;font-weight:700}
+.visual-volume-card .volume-rating-breakdown{margin:0 0 12px;color:var(--muted);font-size:12px}
+.volume-rating-note{margin:0 0 14px;color:var(--muted);font-size:12px;line-height:1.6}
