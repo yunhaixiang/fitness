@@ -33,7 +33,8 @@
     "jamiesonVitaminDLabel": "https://www.jamiesonvitamins.com/products/vitamin-d",
     "chickpeasLabel": "https://i5.walmartimages.ca/asr/370f0918-c48f-4d88-8977-543b148667d9.313a5c461508f29f6820143dc0554de7.jpeg",
     "plainHaddockLabel": "https://i5.walmartimages.ca/asr/2003afba-e739-42db-953b-88508c2c052e.6f55f9fc30bab167d22f3a5e59500fbb.jpeg",
-    "plainHaddockUSDA": "https://www.ars.usda.gov/ARSUserFiles/80400535/Data/SR/SR28/reports/sr28fg15.pdf"
+    "plainHaddockUSDA": "https://www.ars.usda.gov/ARSUserFiles/80400535/Data/SR/SR28/reports/sr28fg15.pdf",
+    "cashewsLabel": "https://i5.walmartimages.ca/asr/21301bab-3088-43a1-8bd0-710027260959.7e732e9a0128522bb100837a395cb41b.png"
   },
   "notes": [
     "Micronutrient planning estimates for the current plan, not a measurement or product-label audit. Units match nutrition_basis.json; breakfast inputs are per 100 g. Numeric coverage is explicit; a missing field causes recalculation to fail.",
@@ -598,6 +599,20 @@
         "iodineUSDA"
       ],
       "basis": "Per100 g raw: label calcium10/1.14 mg, iron0 mg (rounded), potassium350/1.14 mg. USDA SR28 NDB15033 generic vitamin D0.5 mcg and B121.83 mcg. Iodine250 mcg/110 g from USDA/FDA/ODS release4 raw haddock; substantial natural variation, not a brand measurement. Recipe250 g per meal."
+    },
+    "cashews": {
+      "values": {
+        "calcium": 40,
+        "iron": 6,
+        "potassium": 700,
+        "vitaminD": 0,
+        "vitaminB12": 0,
+        "iodine": 0
+      },
+      "sources": [
+        "cashewsLabel"
+      ],
+      "basis": "Per100 g, scaled from verified Great Value Unsalted Roasted Cashews label per50 g. Vitamin D and B12 assumed zero for unfortified nuts; iodine unquantified and omitted (zero in model, not measured absence)."
     }
   },
   "extraRecipes": {
