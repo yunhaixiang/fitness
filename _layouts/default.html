@@ -47,6 +47,11 @@
   <script type="application/json" id="meal-plan-catalog">{{ site.data.meal_plans | jsonify }}</script>
   <script src="{{ '/assets/meal-plans.js' | relative_url }}?v={{ site.time | date: '%s' }}" defer></script>
   <script src="{{ '/assets/i18n.js' | relative_url }}?v={{ site.time | date: '%s' }}" defer></script>
+  {% if page.strength or page.tracker or page.overview or page.url == '/' %}
+  <script type="application/json" id="tracking-records">{{ site.data.tracking_records | jsonify | replace: '<', '\u003c' }}</script>
+  <script src="{{ '/assets/body-metrics.js' | relative_url }}?v={{ site.time | date: '%s' }}" defer></script>
+  {% endif %}
+  <script src="{{ '/assets/exercise-load.js' | relative_url }}?v={{ site.time | date: '%s' }}" defer></script>
   <script type="application/json" id="walking-energy">{}</script>
   <script type="application/json" id="metabolic-energy">{}</script>
   <script type="application/json" id="cardio-plan-catalog">{{ site.data.cardio_plans | jsonify }}</script>
@@ -61,10 +66,6 @@
   {% if page.cooking_definition_script %}<script src="{{ page.cooking_definition_script | relative_url }}?v={{ site.time | date: '%s' }}" defer></script>{% endif %}
   {% if page.cooking %}<script src="{{ page.cooking_flow_script | default: '/assets/cooking-flow.js' | relative_url }}?v={{ site.time | date: '%s' }}" defer></script>
   <script src="{{ '/assets/cooking-progress.js' | relative_url }}?v={{ site.time | date: '%s' }}" defer></script>
-  {% endif %}
-  {% if page.strength or page.tracker or page.overview or page.url == '/' %}
-  <script type="application/json" id="tracking-records">{{ site.data.tracking_records | jsonify | replace: '<', '\u003c' }}</script>
-  <script src="{{ '/assets/body-metrics.js' | relative_url }}?v={{ site.time | date: '%s' }}" defer></script>
   {% endif %}
   {% if page.strength %}<script src="{{ '/assets/training-dose.js' | relative_url }}?v={{ site.time | date: '%s' }}" defer></script><script src="{{ '/assets/strength-volume.js' | relative_url }}?v={{ site.time | date: '%s' }}" defer></script>{% endif %}
   {% if page.tracker %}<script src="{{ '/assets/tracker.js' | relative_url }}?v={{ site.time | date: '%s' }}" defer></script>{% endif %}

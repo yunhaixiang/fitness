@@ -3,6 +3,7 @@ const assert = require('node:assert/strict');
 const fs = require('node:fs');
 const vm = require('node:vm');
 const dose = require('../assets/training-dose');
+const loads = require('../assets/exercise-load');
 
 test('dose bands keep fractional boundaries and distinguish stabilization from no work', () => {
   for (const [sets,status] of [[0,'none'],[4.5,'low'],[5,'moderate'],[9.5,'moderate'],[10,'adequate'],[20,'adequate'],[20.5,'high']]) {
@@ -30,7 +31,7 @@ class Element {
 function table(mode){
   const html=fs.readFileSync(`_includes/strength-${mode}-table.html`,'utf8');
   return {tBodies:[...html.matchAll(/<tbody>([\s\S]*?)<\/tbody>/g)].map(([,body])=>({rows:[...body.matchAll(/<tr>([\s\S]*?)<\/tr>/g)].map(([,row])=>({cells:[...row.matchAll(/<(?:td|th)\b[^>]*>([\s\S]*?)<\/(?:td|th)>/g)].map(([,cell])=>{
-    const plain=cell.replace(/<[^>]*>/g,''); const link=cell.match(/<a\b([^>]*)>([^<]*)<\/a>/);const action=link?{firstChild:{textContent:link[2]},dataset:{weight:link[1].match(/data-weight="([^"]+)"/)?.[1],weightKind:link[1].match(/data-weight-kind="([^"]+)"/)?.[1]}}:null;
+    const plain=cell.replace(/<[^>]*>/g,''); const link=cell.match(/<a\b([^>]*)>([^<]*)<\/a>/);const action=link?{firstChild:{textContent:link[2]},dataset:{weight:link[1].match(/data-weight="([^"]+)"/)?.[1],weightKind:link[1].match(/data-weight-kind="([^"]+)"/)?.[1],bodyFactor:link[1].match(/data-body-factor="([^"]+)"/)?.[1],loadRole:link[1].match(/data-load-role="([^"]+)"/)?.[1]}}:null;
     return {firstChild:{textContent:plain},textContent:plain,querySelector:()=>action};
   })}))}))};
 }
@@ -38,8 +39,8 @@ function render(language,withWeight=false){
   const root=new Element(),toolbar=new Element(),buttons=[new Element('button'),new Element('button')];
   toolbar.querySelectorAll=()=>buttons;root.querySelector=()=>toolbar;
   const document={querySelector:()=>root,querySelectorAll:()=>[table('home'),table('gym')],createElement:tag=>new Element(tag),createElementNS:(_,tag)=>new Element(tag),body:{dataset:{}}};
-  const window={fitnessTrainingDose:dose,fitnessI18n:{language,original:n=>n.textContent,translate:n=>n},addEventListener(){}};
-  if(withWeight)window.fitnessBodyMetrics={weight:80}; // Synthetic fixture, not a personal record.
+  const window={fitnessTrainingDose:dose,fitnessExerciseLoad:loads,fitnessI18n:{language,original:n=>n.textContent,translate:n=>n},addEventListener(){}};
+  if(withWeight)window.fitnessBodyMetrics={weight: typeof withWeight === 'number' ? withWeight : 80}; // Synthetic fixture, not a personal record.
   const warnings=[];
   vm.runInNewContext(fs.readFileSync('assets/strength-volume.js','utf8'),{window,document,Intl,URL,location:{origin:'https://example.test'},requestAnimationFrame(){},console:{warn:m=>warnings.push(m)}});
   function all(node){return [node,...node.children.flatMap(all)];}
@@ -75,4 +76,22 @@ test('English ratings match Chinese classifications and remain independent of bo
       assert.ok(badge.attrs['aria-label'].includes(mapRating.textContent));
     }
   }
+});
+
+test('latest weight updates primary/secondary totals and diagram badges without changing set ratings',()=>{
+ const heavy=render('zh',80),light=render('zh',70);
+ for(const mode of [0,1]) {
+  heavy.buttons[mode].events.click();light.buttons[mode].events.click();
+  const totals=r=>Object.fromEntries(r.cards().map(c=>[c.id,r.all(c).filter(n=>n.className==='muscle-volume-metric').map(n=>Number(n.children[1].textContent.replace(/[^\d]/g,'')))]));
+  const h=totals(heavy),l=totals(light),prefix=mode?'volume-gym-':'volume-home-';
+  for(const muscle of ['quads','glutes','hamstrings','calves','abs']) assert.ok(h[prefix+muscle][2]>l[prefix+muscle][2],muscle);
+  assert.deepEqual(h[prefix+'chest'],l[prefix+'chest']);
+  assert.deepEqual(heavy.cards().map(c=>heavy.all(c).find(n=>n.className==='volume-rating-sets').textContent),light.cards().map(c=>light.all(c).find(n=>n.className==='volume-rating-sets').textContent));
+  for(const r of [heavy,light]) for(const badge of r.mapBadges()) {
+   const name=badge.children.find(n=>n.className==='volume-photo-name').textContent;
+   const card=r.cards().find(c=>r.all(c).some(n=>n.tagName==='H4'&&n.textContent===name));
+   const values=r.all(card).filter(n=>n.className==='muscle-volume-metric').map(n=>n.children[1].textContent);
+   for(const value of values) assert.ok(r.all(badge).some(n=>n.textContent===value || n.textContent.includes(value)),name+' '+value);
+  }
+ }
 });

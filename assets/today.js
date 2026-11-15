@@ -113,8 +113,14 @@
       const suffix = kind === 'bodyweight' ? label('（自重）', ' (bodyweight)')
         : kind === 'each' ? label('／只', ' per dumbbell')
         : kind === 'plates' ? label('（加片总重）', ' (total plates)') : '';
-      const weight = `${label('配重：', 'Weight: ')}${action?.dataset.weight} lbs${suffix}`;
+      const weight = kind === 'bodyweight' ? label('自重', 'Bodyweight') : `${label('配重：', 'Weight: ')}${action?.dataset.weight} lbs${suffix}${action?.dataset.loadRole === 'support' ? label('（支撑用）', ' (Support Only)') : ''}`;
       item.append(name, element('span', '', `${translated(cell(row, offset + 1))} · ${weight}`));
+      if (Number(action?.dataset.bodyFactor) > 0) {
+        const load = window.fitnessExerciseLoad.label(action.dataset, window.fitnessBodyMetrics?.weight, en);
+        const loadLine = element('span', 'today-exercise-load', load.text);
+        loadLine.title = load.detail;
+        item.append(loadLine);
+      }
       exercises.append(item);
     }
     trainingRoot.append(exercises);

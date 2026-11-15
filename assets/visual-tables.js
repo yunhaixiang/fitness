@@ -254,13 +254,19 @@
           const suffix = kind === 'bodyweight' ? tr('（自重）', ' (bodyweight)')
             : kind === 'each' ? tr('／只', ' per dumbbell')
             : kind === 'plates' ? tr('（加片总重）', ' (total plates)') : '';
-          const weightLine = el('span', 'visual-exercise-weight', `${tr('配重：', 'Weight: ')}${weight} lbs${suffix}`);
+          const weightLine = el('span', 'visual-exercise-weight', kind === 'bodyweight' ? tr('自重', 'Bodyweight') : `${tr('配重：', 'Weight: ')}${weight} lbs${suffix}${action?.dataset.loadRole === 'support' ? tr('（支撑用）', ' (Support Only)') : ''}`);
           const sets = el('div', 'visual-set-list');
           for (const setLabel of [...row.cells[offset + 2].querySelectorAll('label')]) {
             boxes.push(setLabel.querySelector('input'));
             sets.append(setLabel);
           }
           content.append(name, dose, weightLine, el('p', 'visual-exercise-muscles', titleCase(val(row, offset + 3))), sets);
+          if (Number(action?.dataset.bodyFactor) > 0) {
+            const load = window.fitnessExerciseLoad.label(action.dataset, window.fitnessBodyMetrics?.weight, en);
+            const loadLine = el('span', 'visual-exercise-weight', load.text);
+            loadLine.title = load.detail;
+            content.insertBefore(loadLine, sets);
+          }
           card.append(media, content);
           list.append(card);
         }

@@ -11,7 +11,7 @@
   // Only authenticated database data may supply a personal body weight.
   const bodyWeightKg = Number(window.fitnessBodyMetrics?.weight) > 0
     ? Number(window.fitnessBodyMetrics.weight) : NaN;
-  const bodyWeightLb = bodyWeightKg * 2.20462;
+
   const muscles = [
     ['chest', '胸肌', 'Chest'], ['front-delts', '肩前侧', 'Front Delts'],
     ['side-delts', '肩外侧', 'Side Delts'], ['rear-delts', '肩后侧', 'Rear Delts'],
@@ -50,13 +50,13 @@
   // These per-muscle totals are not additive across muscle groups.
   const movements = {
     '中立握哑铃地板卧推': { primary: ['chest'], secondary: ['front-delts', 'triceps'] },
-    '卷腹': { primary: ['abs'], secondary: ['obliques'], bodyFactor: .30 },
-    '反向卷腹': { primary: ['abs'], secondary: ['obliques'], bodyFactor: .30 },
+    '卷腹': { primary: ['abs'], secondary: ['obliques'] },
+    '反向卷腹': { primary: ['abs'], secondary: ['obliques'] },
     '站姿哑铃肩推': { primary: ['front-delts'], secondary: ['side-delts', 'triceps', 'traps'] },
     '双哑铃俯身划船': { primary: ['lats', 'traps'], secondary: ['rear-delts', 'biceps', 'forearms', 'lower-back'] },
     '哑铃侧平举': { primary: ['side-delts'], secondary: ['traps'] },
     '哑铃反向飞鸟': { primary: ['rear-delts'], secondary: ['traps'] },
-    '臀桥脚跟走步': { primary: ['hamstrings'], secondary: ['glutes'], bodyFactor: .50 },
+    '臀桥脚跟走步': { primary: ['hamstrings'], secondary: ['glutes'] },
     '哑铃高脚杯深蹲': { primary: ['quads', 'glutes'], secondary: ['abs', 'lower-back'] },
     '哑铃反向弓步': { primary: ['quads', 'glutes'], secondary: [] },
     '哑铃罗马尼亚硬拉': { primary: ['hamstrings', 'glutes'], secondary: ['lower-back', 'forearms'] },
@@ -117,12 +117,7 @@
         const reps = Number((prescription.match(/(?:最少|at least)\s*(\d+)/i) || [])[1]);
         if (!sets || !reps) { console.warn(`Training volume: unreadable sets or reps for ${name}`); continue; }
         const sides = /[／/]\s*(?:腿|侧|leg|side)/i.test(prescription) ? 2 : 1;
-        const listedWeight = Number(action.dataset.weight) || 0;
-        const kind = action.dataset.weightKind;
-        // Reverse-crunch dumbbell is held for balance, so use a bodyweight proxy instead.
-        const weight = assignment.bodyFactor ? bodyWeightLb * assignment.bodyFactor
-          : kind === 'plates' ? listedWeight + 20
-          : kind === 'each' ? listedWeight * 2 : listedWeight;
+        const weight = window.fitnessExerciseLoad.calculate(action.dataset, bodyWeightKg).total;
         const volume = sets * reps * sides * weight;
         for (const category of ['primary', 'secondary']) {
           for (const muscle of assignment[category]) {
