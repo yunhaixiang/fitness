@@ -2,7 +2,7 @@
   "checked_on": "2026-10-31",
   "currency": "CAD",
   "scope": "Walmart Canada public prices and user-provided Metro fruit price; individual checked_on retained. Chicken thigh and salmon prices supplied by user. Weekly subtotal averages routine purchase cycles. Bread assumes three slices total 105 g; weighed produce billed by actual weight. Excludes as-needed seasonings, tax and delivery. Not a London store live stock guarantee.",
-  "weekly_total_cad": "151.31",
+  "weekly_total_cad": "155.75",
   "items": [
     {
       "item": "去骨去皮鸡大腿肉",
@@ -125,28 +125,16 @@
       "product_url": "https://www.walmart.ca/en/ip/Great-Value-Peas-and-Carrots-398-mL/5YDQIJZT1APQ"
     },
     {
-      "item": "蘑菇",
-      "price_cad": "2.44",
-      "basis": "package",
-      "source_url": "https://www.walmart.ca/en/browse/grocery/fruits-vegetables/fresh-vegetables/mushrooms/10019_6000194327370_6000194327412_6000202948249",
-      "source_type": "walmart_public",
-      "weekly_quantity": "1.0",
-      "weekly_cost_cad": "2.44",
-      "product_url": "https://www.walmart.ca/en/ip/mushrooms-sliced-cremini-your-fresh-market/6000196148725",
-      "purchase_frequency_zh": "1盒 / 周",
-      "purchase_frequency_en": "1 Pack / Week"
-    },
-    {
       "item": "嫩菠菜",
       "price_cad": "3.44",
       "basis": "package",
       "source_url": "https://www.walmart.ca/en/ip/Your-Fresh-Market-Baby-Spinach-142g/1Z471AOSG7GL",
       "source_type": "walmart_public",
-      "weekly_quantity": "2",
-      "weekly_cost_cad": "6.88",
+      "weekly_quantity": "4",
+      "weekly_cost_cad": "13.76",
       "product_url": "https://www.walmart.ca/en/ip/Your-Fresh-Market-Baby-Spinach-142g/1Z471AOSG7GL",
-      "purchase_frequency_zh": "2袋 / 周",
-      "purchase_frequency_en": "2 Bags / Week",
+      "purchase_frequency_zh": "4袋 / 周",
+      "purchase_frequency_en": "4 Bags / Week",
       "checked_on": "2026-11-14",
       "package_grams": 142
     },

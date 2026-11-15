@@ -18,7 +18,7 @@
 {% when 'dumpling' %}
 <th scope="row"><span class="meal-summary-number">{{ forloop.index }}</span><span data-en="🥟 Dumplings">🥟 水饺</span></th>
 <td><div data-en="🐟 1 Salmon Fillet ({{ portion.salmon | times: 100 | round: 0 }} g)">🐟 三文鱼1块（{{ portion.salmon | times: 100 | round: 0 }} g）</div></td>
-<td><div data-en="🥬 Spinach {{ portion.spinach | times: 100 | round: 0 }} g">🥬 菠菜{{ portion.spinach | times: 100 | round: 0 }} g</div><div data-en="🍄 Mushrooms {{ portion.mushroom | times: 100 | round: 1 }} g">🍄 蘑菇{{ portion.mushroom | times: 100 | round: 1 }} g</div></td>
+<td><div data-en="🥬 Spinach {{ portion.spinach | times: 100 | round: 0 }} g">🥬 菠菜{{ portion.spinach | times: 100 | round: 0 }} g</div></td>
 <td><div data-en="🥟 {{ portion.dumpling | times: 4 | round: 0 }} Dumplings ({{ portion.dumpling | times: 96 | round: 0 }} g)">🥟 水饺{{ portion.dumpling | times: 4 | round: 0 }}个（{{ portion.dumpling | times: 96 | round: 0 }} g）</div></td>
 {% when 'noodles' %}
 <th scope="row"><span class="meal-summary-number">{{ forloop.index }}</span><span data-en="🍜 Rice Noodles">🍜 米粉</span></th>
@@ -28,7 +28,7 @@
 {% when 'potato' %}
 <th scope="row"><span class="meal-summary-number">{{ forloop.index }}</span><span data-en="🍖 Ribs and Potatoes">🍖 排骨土豆</span></th>
 <td><div data-en="🍖 ½ Box BBQ Ribs (300 g Including Bones and Sauce)">🍖 BBQ排骨½盒（含骨带酱300 g）</div><div data-en="🍗 1 Chicken Thigh ({{ portion.thigh | times: 100 | round: 0 }} g)">🍗 鸡大腿肉1块（{{ portion.thigh | times: 100 | round: 0 }} g）</div></td>
-<td><div data-en="🥬 Spinach {{ portion.spinach | times: 100 | round: 0 }} g">🥬 菠菜{{ portion.spinach | times: 100 | round: 0 }} g</div><div data-en="🍄 Mushrooms {{ portion.mushroom | times: 100 | round: 1 }} g">🍄 蘑菇{{ portion.mushroom | times: 100 | round: 1 }} g</div></td>
+<td><div data-en="🥬 Spinach {{ portion.spinach | times: 100 | round: 0 }} g">🥬 菠菜{{ portion.spinach | times: 100 | round: 0 }} g</div></td>
 <td><div data-en="🥔 Potatoes {{ portion.potato | times: 100 | round: 0 }} g">🥔 土豆块{{ portion.potato | times: 100 | round: 0 }} g</div></td>
 {% when 'bread' %}
 <th scope="row"><span class="meal-summary-number">{{ forloop.index }}</span><span data-en="🥪 Sandwich">🥪 三明治</span></th>

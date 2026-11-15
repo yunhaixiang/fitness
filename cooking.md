@@ -393,17 +393,6 @@ cooking: true
 </li>
 <li class="cooking-task-source">
 <ol lang="zh-CN" class="cooking-source-zh">
-<li>加🫒 橄榄油¼茶匙，下🍄 蘑菇半盒113.5 g、🧂 黑胡椒⅛茶匙、🧄 蒜粉¼茶匙和🧅 洋葱粉¼茶匙。</li>
-<li>炒约5–7分钟，均分到第3、6盘。</li>
-</ol>
-<ol lang="en" class="cooking-source-en" hidden>
-<li>Heat ¼ tsp 🫒 olive oil, then add half a pack of 🍄 mushrooms (113.5 g), ⅛ tsp 🧂 black pepper, ¼ tsp 🧄 garlic powder and ¼ tsp 🧅 onion powder.</li>
-<li>Cook for 5–7 minutes.</li>
-<li>Split equally between meals 3 and 6.</li>
-</ol>
-</li>
-<li class="cooking-task-source">
-<ol lang="zh-CN" class="cooking-source-zh">
 <li>💧 水150 mL烧热后关小火，溶入🍛 Golden Curry咖喱块18 g（90 g整包的1/5）。</li>
 <li>开始小火煨煮后勾选；期间偶尔搅拌。</li>
 </ol>
@@ -454,14 +443,14 @@ cooking: true
 </li>
 <li class="cooking-task-source">
 <ol lang="zh-CN" class="cooking-source-zh">
-<li>🥬 Your Fresh Market 嫩菠菜1袋142 g先留出10 g给三明治。</li>
-<li>锅空出后按需清理，剩余132 g加🫒 橄榄油½茶匙、🧄 蒜粉⅛茶匙和🧅 洋葱粉⅛茶匙，炒约3–5分钟。</li>
-<li>均分到第3、6盘。</li>
+<li>🥬 Your Fresh Market 嫩菠菜2袋，每袋142 g，共284 g；先留出10 g给三明治。</li>
+<li>锅空出后按需清理，剩余274 g加🫒 橄榄油¾茶匙、🧄 蒜粉⅛茶匙和🧅 洋葱粉⅛茶匙，炒约3–5分钟。</li>
+<li>均分到第3、6盘，每盘相当于生菠菜137 g。</li>
 </ol>
 <ol lang="en" class="cooking-source-en" hidden>
-<li>Set aside 10 g from one full 142 g bag of 🥬 Your Fresh Market Baby Spinach for the sandwich.</li>
-<li>Once the wok is free, clean it as needed and cook the remaining 132 g with ½ tsp 🫒 olive oil, ⅛ tsp 🧄 garlic powder and ⅛ tsp 🧅 onion powder for 3–5 minutes.</li>
-<li>Split equally between meals 3 and 6.</li>
+<li>Use two 142 g bags of 🥬 Your Fresh Market Baby Spinach (284 g total); set aside 10 g for the sandwich.</li>
+<li>Once the wok is free, clean it as needed and cook the remaining 274 g with ¾ tsp 🫒 olive oil, ⅛ tsp 🧄 garlic powder and ⅛ tsp 🧅 onion powder for 3–5 minutes.</li>
+<li>Split equally between meals 3 and 6, equivalent to 137 g raw spinach per meal.</li>
 </ol>
 </li>
 <li class="cooking-task-source">

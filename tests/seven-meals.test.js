@@ -39,8 +39,8 @@ test('weekly meat, eggs, grains and portions match whole-package purchase cycles
  assert.equal(recipes.rice.shrimp,undefined); assert.equal(recipes.rice.panko,undefined);
  close(recipes.rice.curry*18,18); assert.equal(recipes.noodles.curry,undefined); close(recipes.noodles.noodleSauce,1);
  close(recipes.wrap.chickpeas,2.16); assert.equal(recipes.potato.chickpeas,undefined); assert.equal(recipes.dumpling.chickpeas,undefined); close(weekly('refriedBeans'),0);
- close(weekly('chickpeas')*125,540); close(weekly('tuna'),2); close(weekly('mayo'),2); close(weekly('lightMayo'),7); close(weekly('spinach')*100,284);
- close(weekly('pepper')*100,300); close(weekly('mushroom')*100,227); close(weekly('pc')*100,520);
+ close(weekly('chickpeas')*125,540); close(weekly('tuna'),2); close(weekly('mayo'),2); close(weekly('lightMayo'),7); close(weekly('spinach')*100,568);
+ close(weekly('pepper')*100,300); close(weekly('mushroom')*100,0); close(weekly('pc')*100,520);
  close(weekly('oil'),8); // 4 tsp each half-week, including 0.5 tsp each for shrimp and tilapia
 });
 test('daily intake and deficit use the same meal data as the cards',()=>{

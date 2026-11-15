@@ -102,12 +102,12 @@ test('old fish marks merge only when both fish are complete',()=>{
  assert.deepEqual(derive(current,derive(current,both).done).done,derive(current,both).done);
 });
 test('simmering curry reserves only the saucepan, not the wok or preparation',()=>{
- let done=complete(current,[],'curry-start');
+ let done=complete(current,prerequisites(current,'season-noodles'),'curry-start');
  const view=derive(current,done);
- assert.ok(!view.available.some(n=>n.id==='mushroom'));
+ assert.ok(!view.available.some(n=>n.id==='season-noodles'));
  assert.ok(view.available.some(n=>n.id==='spinach'));
- assert.ok(view.available.some(n=>n.id==='prep-noodle-sauce'));
- done=complete(current,done,'curry');assert.ok(derive(current,done).available.some(n=>n.id==='mushroom'));
+ assert.ok(view.available.some(n=>n.id==='prep-bread'));
+ done=complete(current,done,'curry');assert.ok(derive(current,done).available.some(n=>n.id==='season-noodles'));
 });
 test('potato turning is separate from loading and final doneness',()=>{
  let done=prerequisites(current,'potato-start');done=complete(current,done,'potato-start');
