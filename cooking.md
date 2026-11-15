@@ -90,12 +90,12 @@ cooking: true
 <li class="cooking-task-source">
 <ol lang="zh-CN" class="cooking-source-zh">
 <li>400°F烤27分钟，中心达74°C。</li>
-<li>熟肉均分到第1、2、4、6盘，每盘相当于1块🍗 鸡腿肉。</li>
+<li>熟肉均分到第1、4、5、6盘，每盘相当于1块🍗 鸡腿肉。</li>
 <li>卷饼与三明治的肉掰碎。</li>
 </ol>
 <ol lang="en" class="cooking-source-en" hidden>
 <li>Roast at 400°F for 27 minutes, to 74°C in the centre.</li>
-<li>Divide the cooked meat equally between meals 1, 2, 4 and 6, equivalent to 1 🍗 chicken thigh each.</li>
+<li>Divide the cooked meat equally between meals 1, 4, 5 and 6, equivalent to 1 🍗 chicken thigh each.</li>
 <li>Shred the wrap and sandwich portions.</li>
 </ol>
 </li>
@@ -112,11 +112,11 @@ cooking: true
 <li class="cooking-task-source">
 <ol lang="zh-CN" class="cooking-source-zh">
 <li>单层铺开，400°F烤约10–12分钟至🦐 虾肉不透明、熟透。</li>
-<li>全部放第2盘。</li>
+<li>全部放第4盘。</li>
 </ol>
 <ol lang="en" class="cooking-source-en" hidden>
 <li>Bake in a single layer at 400°F for about 10–12 minutes until the 🦐 shrimp are opaque and cooked through.</li>
-<li>Place all the shrimp in meal 2.</li>
+<li>Place all the shrimp in meal 4.</li>
 </ol>
 </li>
 </ol>
@@ -161,13 +161,13 @@ cooking: true
 <ol lang="zh-CN" class="cooking-source-zh">
 <li>🐟 原味黑线鳕每次用½袋（250 g）。先拆除内层真空包装，在冷藏中解冻，再擦干表面、检查小刺。</li>
 <li>两面薄抹🫒 橄榄油½茶匙，再撒🧄 蒜粉¼茶匙、🌶️ paprika¼茶匙和🧂 黑胡椒⅛茶匙，不另加盐。</li>
-<li>空气炸锅空出且达到400°F时单层放入，第8分钟开始检查，通常8–12分钟；厚处中心达到70°C后取出，全部放第5盘。放不下时分批烤，不叠放。</li>
+<li>空气炸锅空出且达到400°F时单层放入，第8分钟开始检查，通常8–12分钟；厚处中心达到70°C后取出，全部放第2盘。放不下时分批烤，不叠放。</li>
 <li>只解冻本次要用的半袋，剩余半袋继续冷冻保存，留到后半周。</li>
 </ol>
 <ol lang="en" class="cooking-source-en" hidden>
 <li>Use half a bag of 🐟 plain haddock (250 g). Remove the inner vacuum packaging before thawing in the refrigerator, then pat dry and check for small bones.</li>
 <li>Coat both sides with ½ tsp 🫒 olive oil, then season with ¼ tsp 🧄 garlic powder, ¼ tsp 🌶️ paprika and ⅛ tsp 🧂 black pepper, without extra salt.</li>
-<li>When the air fryer is free and at 400°F, arrange in one layer. Start checking at 8 minutes; typically cook 8–12 minutes until the thickest part reaches 70°C. Place all the fish in meal 5. Cook in batches if needed; do not stack.</li>
+<li>When the air fryer is free and at 400°F, arrange in one layer. Start checking at 8 minutes; typically cook 8–12 minutes until the thickest part reaches 70°C. Place all the fish in meal 2. Cook in batches if needed; do not stack.</li>
 <li>Thaw only the half-bag needed for this session; keep the remaining half frozen for the second session.</li>
 </ol>
 </li>
@@ -201,12 +201,12 @@ cooking: true
 <ol lang="zh-CN" class="cooking-source-zh">
 <li>冷却后剥壳。</li>
 <li>第1盘放2个，第2、4、5、7盘各1个，第3、6盘不放鸡蛋。</li>
-<li>第4盘的掰碎，第1盘的切片。</li>
+<li>第5盘的掰碎，第1盘的切片。</li>
 </ol>
 <ol lang="en" class="cooking-source-en" hidden>
 <li>Cool and peel the eggs.</li>
 <li>Put 2 whole 🥚 eggs in meal 1 and 1 each in meals 2, 4, 5 and 7; no eggs in meals 3 or 6.</li>
-<li>Crumble the eggs for meal 4 and slice the eggs for meal 1.</li>
+<li>Crumble the eggs for meal 5 and slice the eggs for meal 1.</li>
 </ol>
 </li>
 </ol>
@@ -267,13 +267,13 @@ cooking: true
 <ol lang="zh-CN" class="cooking-source-zh">
 <li>💧 水150 mL烧热后关小火，溶入🍛 Golden Curry咖喱块18 g（90 g整包的1/5）。</li>
 <li>再煮约5分钟至顺滑。</li>
-<li>盛入第5盘，分盘时淋在🍚 米饭上。</li>
+<li>盛入第2盘，分盘时淋在🍚 米饭上。</li>
 <li>食用前撒上🌾 熟芝麻5 g。</li>
 </ol>
 <ol lang="en" class="cooking-source-en" hidden>
 <li>Heat 150 mL 💧 water, lower the heat and dissolve 18 g of 🍛 Golden Curry roux (1/5 of a 90 g pack).</li>
 <li>Simmer for about 5 minutes until smooth.</li>
-<li>Transfer to meal 5 and serve over the rice.</li>
+<li>Transfer to meal 2 and serve over the rice.</li>
 <li>Sprinkle with 5 g 🌾 toasted sesame seeds just before eating.</li>
 </ol>
 </li>
@@ -281,14 +281,14 @@ cooking: true
 <ol lang="zh-CN" class="cooking-source-zh">
 <li>小锅冲洗擦干，加🫒 橄榄油¼茶匙，中小火加热。</li>
 <li>倒入酱汁和沥干🍜 米粉，拌热1–2分钟，粘锅时补少量💧 水。</li>
-<li>关火拌入罗勒，放第2盘。</li>
+<li>关火拌入罗勒，放第4盘。</li>
 <li>食用前撒上🌾 熟芝麻5 g。</li>
 </ol>
 <ol lang="en" class="cooking-source-en" hidden>
 <li>Rinse and dry the saucepan.</li>
 <li>Add ¼ tsp 🫒 olive oil and heat over medium-low heat.</li>
 <li>Add the sauce and drained 🍜 noodles, tossing for 1–2 minutes; add a splash of 💧 water if they start to stick.</li>
-<li>Turn off the heat, stir in basil and place in meal 2.</li>
+<li>Turn off the heat, stir in basil and place in meal 4.</li>
 <li>Sprinkle with 5 g 🌾 toasted sesame seeds just before eating.</li>
 </ol>
 </li>
@@ -354,34 +354,34 @@ cooking: true
 <li class="cooking-task-source">
 <ol lang="zh-CN" class="cooking-source-zh">
 <li>前半周：🫘 无添加盐鹰嘴豆整罐沥干、用💧 清水冲洗，再分成两等份；后半周那份密封冷藏，按包装开罐保存期限使用。后半周做饭时直接取预留的那份。</li>
-<li>本次半罐全部留给第4盘卷饼。</li>
+<li>本次半罐全部留给第5盘卷饼。</li>
 <li>加少量💧 水，用叉子压碎，按口味拌少量🧄 蒜粉、🌶️ paprika，不另加盐或油。</li>
 </ol>
 <ol lang="en" class="cooking-source-en" hidden>
 <li>First session: drain and rinse the whole can of 🫘 no salt added chickpeas with 💧 water, then split into two equal batches. Refrigerate the second batch in a sealed container and follow the package storage instructions. For the second session, use the reserved batch.</li>
-<li>Reserve this entire half-can batch for the wrap in meal 4.</li>
+<li>Reserve this entire half-can batch for the wrap in meal 5.</li>
 <li>Mash with a fork and a little 💧 water. Season to taste with a little 🧄 garlic powder and 🌶️ paprika, without extra salt or oil.</li>
 </ol>
 </li>
 
 <li class="cooking-task-source">
 <ol lang="zh-CN" class="cooking-source-zh">
-<li>🌯 大号卷饼皮1片铺在第4盘。</li>
+<li>🌯 大号卷饼皮1片铺在第5盘。</li>
 <li>🍞 全麦面包3片放在第1盘。</li>
 </ol>
 <ol lang="en" class="cooking-source-en" hidden>
-<li>Lay 1 🌯 large tortilla on plate 4.</li>
+<li>Lay 1 🌯 large tortilla on plate 5.</li>
 <li>Place 3 slices of 🍞 whole-wheat bread on plate 1.</li>
 </ol>
 </li>
 <li class="cooking-task-source">
 <ol lang="zh-CN" class="cooking-source-zh">
-<li>在第4盘的🌯 卷饼皮上抹上🥣 Chipotle蛋黄酱1茶匙（5 mL；酱条直径约0.8 cm时，挤约10 cm长）。</li>
+<li>在第5盘的🌯 卷饼皮上抹上🥣 Chipotle蛋黄酱1茶匙（5 mL；酱条直径约0.8 cm时，挤约10 cm长）。</li>
 <li>1个🫑 橙甜椒洗净去籽切细条，放到卷饼皮上。</li>
 <li>多余卷饼皮冷冻。</li>
 </ol>
 <ol lang="en" class="cooking-source-en" hidden>
-<li>Spread the 🌯 tortilla on plate 4 with 1 tsp 🥣 Chipotle mayonnaise (5 mL; about 10 cm squeezed length at a strand diameter of 0.8 cm).</li>
+<li>Spread the 🌯 tortilla on plate 5 with 1 tsp 🥣 Chipotle mayonnaise (5 mL; about 10 cm squeezed length at a strand diameter of 0.8 cm).</li>
 <li>Wash, deseed and slice one 🫑 orange bell pepper, then add to the tortilla.</li>
 <li>Freeze spare tortillas.</li>
 </ol>
@@ -402,13 +402,13 @@ cooking: true
 <li>Freeze spare 🍞 bread.</li>
 </ol>
 </li>
-<li class="cooking-task-source"><p data-en="Drain 1 can of 🫛🥕 peas and carrots (about 260 g) and divide equally between meals 2 and 5.">🫛🥕 豌豆胡萝卜1罐沥干（约260 g），直接均分到第2、5盘。</p></li>
+<li class="cooking-task-source"><p data-en="Drain 1 can of 🫛🥕 peas and carrots (about 260 g) and divide equally between meals 2 and 4.">🫛🥕 豌豆胡萝卜1罐沥干（约260 g），直接均分到第2、4盘。</p></li>
 <li class="cooking-task-source">
 <ol lang="zh-CN" class="cooking-source-zh">
-<li>先抹上预留的🫘 鹰嘴豆泥（½罐），加入第4盘的🍗 鸡腿肉和掰碎🥚 水煮蛋，在盘内卷好。</li>
+<li>先抹上预留的🫘 鹰嘴豆泥（½罐），加入第5盘的🍗 鸡腿肉和掰碎🥚 水煮蛋，在盘内卷好。</li>
 </ol>
 <ol lang="en" class="cooking-source-en" hidden>
-<li>Spread the reserved mashed 🫘 chickpeas (½ can) on the tortilla, add meal 4’s shredded 🍗 chicken and crumbled 🥚 boiled egg, then roll it up on the plate.</li>
+<li>Spread the reserved mashed 🫘 chickpeas (½ can) on the tortilla, add meal 5’s shredded 🍗 chicken and crumbled 🥚 boiled egg, then roll it up on the plate.</li>
 </ol>
 </li>
 <li class="cooking-task-source">

@@ -12,7 +12,7 @@ test('seven distinct meals repeat symmetrically, retaining all 14 meal slots and
  const source=read('_includes/diet-schedule.html');
  const rows=[...source.matchAll(/<tr data-nutrition-key="([^"]+)"([^>]*)>([\s\S]*?)<\/tr>/g)];
  assert.equal(rows.length,14);
- assert.deepEqual(basis.mealKeys,['bread','noodles','dumpling','wrap','rice','potato','pasta']);
+ assert.deepEqual(basis.mealKeys,['bread','rice','dumpling','noodles','wrap','potato','pasta']);
  assert.deepEqual(rows.slice(0,7).map(m=>m[1]),basis.mealKeys);
  assert.deepEqual(rows.slice(7).map(m=>m[1]),basis.mealKeys);
  const sparklingRows=rows.filter(m=>m[2].includes('sparkling-ice'));
