@@ -488,7 +488,8 @@
       "salmon": 1.58,
       "spinach": 1.37,
       "oil": 0.625,
-      "egg": 0
+      "egg": 0,
+      "salt": 0.03125
     },
     {
       "tortilla": 1,
@@ -514,7 +515,8 @@
       "spinach": 1.37,
       "oil": 0.625,
       "egg": 0,
-      "thigh": 1.1625
+      "thigh": 1.1625,
+      "salt": 0.03125
     }
   ],
   "mealKeys": [
@@ -563,7 +565,8 @@
     "2026-11-16: reduce sandwich Hellmann’s Light ½ Fat mayonnaise from 3½ tsp to 3 tsp (15 mL) per meal; 30 mL weekly. Other ingredients unchanged.",
     "2026-11-16: reduce sandwich Hellmann’s Light ½ Fat mayonnaise from 3 tsp to 2 tsp (10 mL) per meal; 20 mL weekly. Other ingredients unchanged.",
     "2026-11-16: reduce dry rice from 75 g to 70 g per fish-and-shrimp rice meal, 140 g weekly. Use approximately 90 mL water, retaining the existing equal-volume rice-to-water method. All other ingredients unchanged.",
-    "2026-11-16: increase sandwich Light mayonnaise from 2 to 3 tsp (15 mL), and wrap Chipotle mayonnaise from 1 to 2 tsp (10 mL), bringing both meals to approximately 680 kcal. Weekly usage: Light 30 mL; Chipotle 20 mL. Keep dry rice at 70 g per rice meal and all other ingredients unchanged."
+    "2026-11-16: increase sandwich Light mayonnaise from 2 to 3 tsp (15 mL), and wrap Chipotle mayonnaise from 1 to 2 tsp (10 mL), bringing both meals to approximately 680 kcal. Weekly usage: Light 30 mL; Chipotle 20 mL. Keep dry rice at 70 g per rice meal and all other ingredients unchanged.",
+    "2026-11-16: Add 1/16 tsp iodized table salt to the cooked spinach per half-week batch, after cooking, then split equally between meals 4 and 7 (1/32 tsp each). Two batches use 1/8 tsp per week. Existing salt references: 2360 mg sodium and 458.7 mcg iodine per teaspoon (6 g assumption); daily additions are approximately 42 mg sodium and 8.2 mcg iodine. No extra salt on the raw sandwich spinach."
   ],
   "sources": {
     "shrimp": "https://www.walmart.ca/en/ip/Great-Value-Wild-Argentinian-Large-Raw-Shrimp/6000202999819",

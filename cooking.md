@@ -373,12 +373,12 @@ cooking: true
 <ol lang="zh-CN" class="cooking-source-zh">
 <li>🥬 Your Fresh Market 嫩菠菜2袋，每袋142 g，共284 g；先留出10 g给三明治。</li>
 <li>锅空出后按需清理，剩余274 g加🫒 橄榄油¾茶匙、🧄 蒜粉⅛茶匙和🧅 洋葱粉⅛茶匙，炒约3–5分钟。</li>
-<li>均分到第4、7盘，每盘相当于生菠菜137 g。</li>
+<li>炒好后拌入🧂 加碘盐1/16茶匙，再均分到第4、7盘，每盘相当于生菠菜137 g。</li>
 </ol>
 <ol lang="en" class="cooking-source-en" hidden>
 <li>Use two 142 g bags of 🥬 Your Fresh Market Baby Spinach (284 g total); set aside 10 g for the sandwich.</li>
 <li>Once the wok is free, clean it as needed and cook the remaining 274 g with ¾ tsp 🫒 olive oil, ⅛ tsp 🧄 garlic powder and ⅛ tsp 🧅 onion powder for 3–5 minutes.</li>
-<li>Split equally between meals 4 and 7, equivalent to 137 g raw spinach per meal.</li>
+<li>After cooking, stir in 1/16 tsp 🧂 iodized salt, then split equally between meals 4 and 7, equivalent to 137 g raw spinach per meal.</li>
 </ol>
 </li>
 

@@ -152,7 +152,7 @@ nutrition: true
 </tr>
 <tr data-nutrient="sodium">
 <td>钠</td>
-<td style="text-align: right;">2,172 mg</td>
+<td style="text-align: right;">2,214 mg</td>
 <td>—</td>
 </tr>
 <tr data-nutrient="calcium">
@@ -182,7 +182,7 @@ nutrition: true
 </tr>
 <tr data-nutrient="iodine">
 <td>碘</td>
-<td>114 µg</td>
+<td>123 µg</td>
 <td>—</td>
 </tr>
 <tr data-nutrient="ala">

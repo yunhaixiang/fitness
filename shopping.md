@@ -166,9 +166,9 @@ visual: true
 <td style="text-align: right;"><a href="https://www.walmart.ca/en/ip/Great-Value-Italian-Seasoning/10302881">$2.47</a></td>
 </tr>
 <tr data-price-id="27" data-purchase-group="restock">
-<td>盐</td>
+<td data-en="Iodized Salt">加碘盐</td>
 <td><a href="https://www.walmart.ca/en/ip/windsor-table-salt/10210128">Windsor Iodized Table Salt</a><br>1 kg / 盒</td>
-<td style="text-align: right;">按需补</td>
+<td style="text-align: right;"><span data-en="Restock as Needed · 1/8 tsp per Week">按需补；每周⅛茶匙</span></td>
 <td style="text-align: right;"><a href="https://www.walmart.ca/en/ip/windsor-table-salt/10210128">$1.63</a></td>
 </tr>
 <tr data-price-id="28" data-purchase-group="restock">
