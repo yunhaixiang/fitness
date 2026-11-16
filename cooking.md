@@ -34,10 +34,10 @@ cooking: true
 </li>
 <li class="cooking-task-source">
 <ol lang="zh-CN" class="cooking-source-zh">
-<li>约50分钟后，确认电饭煲完成煮饭，再开盖松散、分装🍚 米饭。</li>
+<li>约50分钟后，确认电饭煲完成煮饭，再开盖松散，将🍚 米饭放第2盘；食用前撒🌾 熟芝麻5 g。</li>
 </ol>
 <ol lang="en" class="cooking-source-en" hidden>
-<li>After about 50 minutes, confirm the rice cycle is complete, then fluff and portion the 🍚 rice.</li>
+<li>After about 50 minutes, confirm the rice cycle is complete, then fluff and serve the 🍚 rice in meal 2; sprinkle with 5 g 🌾 toasted sesame seeds before eating.</li>
 </ol>
 </li>
 </ol>
@@ -175,11 +175,11 @@ cooking: true
 <li class="cooking-task-source">
 <ol lang="zh-CN" class="cooking-source-zh">
 <li>确认熟度后取出：单层铺开，400°F烤约10–12分钟至🦐 虾肉不透明、熟透。</li>
-<li>虾仁全部放第2盘咖喱米饭。</li>
+<li>虾仁全部放第2盘鱼虾米饭。</li>
 </ol>
 <ol lang="en" class="cooking-source-en" hidden>
 <li>Check doneness before removing: Bake in a single layer at 400°F for about 10–12 minutes until the 🦐 shrimp are opaque and cooked through.</li>
-<li>Place all the shrimp in meal 2 with the curry rice.</li>
+<li>Place all the shrimp in meal 2 with the fish and shrimp rice.</li>
 </ol>
 </li>
 </ol>
@@ -353,28 +353,6 @@ cooking: true
 
 <li class="cooking-task-source">
 <ol lang="zh-CN" class="cooking-source-zh">
-<li>💧 水150 mL烧热后关小火，溶入🍛 Golden Curry咖喱块18 g（90 g整包的1/5）。</li>
-<li>开始小火煨煮后勾选；期间偶尔搅拌。</li>
-</ol>
-<ol lang="en" class="cooking-source-en" hidden>
-<li>Heat 150 mL 💧 water, lower the heat and dissolve 18 g of 🍛 Golden Curry roux (1/5 of a 90 g pack).</li>
-<li>Check once simmering; stir occasionally.</li>
-</ol>
-</li>
-<li class="cooking-task-source">
-<ol lang="zh-CN" class="cooking-source-zh">
-<li>约5分钟后，确认咖喱酱顺滑，再盛出。</li>
-<li>盛入第2盘，分盘时淋在🍚 米饭上。</li>
-<li>食用前撒上🌾 熟芝麻5 g。</li>
-</ol>
-<ol lang="en" class="cooking-source-en" hidden>
-<li>After about 5 minutes, check that the curry sauce is smooth and ready to serve.</li>
-<li>Transfer to meal 2 and serve over the rice.</li>
-<li>Sprinkle with 5 g 🌾 toasted sesame seeds just before eating.</li>
-</ol>
-</li>
-<li class="cooking-task-source">
-<ol lang="zh-CN" class="cooking-source-zh">
 <li>小锅空出后按需清理，加🫒 橄榄油¼茶匙，先下🥒 第4盘的1根西葫芦炒2–3分钟；偏干时加少量💧 水。</li>
 <li>加入🍅 Catelli意面酱150 mL煮至微沸；西葫芦仍偏硬时盖锅焖软，再拌入第4盘的🍝 意面，拌热1–2分钟；偏稠时补少量💧 面水，放第4盘。</li>
 </ol>
@@ -493,8 +471,8 @@ cooking: true
 </ol>
 </li>
 <li class="cooking-task-source">
-<ol lang="zh-CN" class="cooking-source-zh"><li>🫛🥕 豌豆胡萝卜每周1罐，沥干后约260 g，分成两份各130 g。</li><li>每次做饭取½罐，直接放第2盘咖喱米饭；前半周剩下的½罐装入密封容器冷藏，按包装开罐保存期限使用。</li></ol>
-<ol lang="en" class="cooking-source-en" hidden><li>Use 1 can of 🫛🥕 peas and carrots per week, about 260 g drained, divided into two 130 g portions.</li><li>Use half a can per cooking session, directly in meal 2 with curry rice. Refrigerate the other half in a sealed container after the first session, following the label's storage instructions.</li></ol>
+<ol lang="zh-CN" class="cooking-source-zh"><li>🫛🥕 豌豆胡萝卜每周1罐，沥干后约260 g，分成两份各130 g。</li><li>每次做饭取½罐，直接放第2盘鱼虾米饭；前半周剩下的½罐装入密封容器冷藏，按包装开罐保存期限使用。</li></ol>
+<ol lang="en" class="cooking-source-en" hidden><li>Use 1 can of 🫛🥕 peas and carrots per week, about 260 g drained, divided into two 130 g portions.</li><li>Use half a can per cooking session, directly in meal 2 with fish and shrimp rice. Refrigerate the other half in a sealed container after the first session, following the label's storage instructions.</li></ol>
 </li>
 <li class="cooking-task-source">
 <ol lang="zh-CN" class="cooking-source-zh">

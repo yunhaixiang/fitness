@@ -216,7 +216,6 @@ visual: true
 <tr data-price-id="37" data-weekly-cost="1.24" data-purchase-group="weekly"><td data-en="Low-Sodium Tuna in Water">低钠水浸金枪鱼</td><td><a href="https://www.walmart.ca/en/ip/Clover-LEAF-Low-Sodium-Flaked-Light-Tuna-Skipjack-in-Water/10182386">Clover Leaf Low Sodium Flaked Light Tuna in Water</a><br>170 g</td><td data-en="1 Can / Week">1罐 / 周</td><td><a href="https://www.walmart.ca/en/ip/Clover-LEAF-Low-Sodium-Flaked-Light-Tuna-Skipjack-in-Water/10182386">$1.24</a></td></tr>
 <tr data-price-id="38" data-weekly-cost="1.17" data-purchase-group="weekly"><td data-en="Orange Bell Pepper">橙甜椒</td><td><a href="https://www.walmart.ca/en/ip/SUNSET-Orange-Pepper-Single-0-12-0-24-KG/6000197381989">SUNSET Orange Pepper</a><br><span data-en="Sold Individually · About 170 g Each">单颗售卖 · 每个约170 g</span></td><td data-en="1 / Week">1个 / 周</td><td><a href="https://www.walmart.ca/en/ip/SUNSET-Orange-Pepper-Single-0-12-0-24-KG/6000197381989">$1.17 / Avg.</a></td></tr>
 <tr data-price-id="39" data-weekly-cost="2.64" data-purchase-group="weekly"><td data-en="Zucchini">西葫芦</td><td><a href="https://www.walmart.ca/en/ip/Zucchini-Green/6000191270110">Green Zucchini</a><br><span data-en="Sold Individually">单颗售卖</span></td><td data-en="4 / Week">4根 / 周</td><td><a href="https://www.walmart.ca/en/ip/Zucchini-Green/6000191270110">$0.66 / Avg.</a></td></tr>
-<tr data-price-id="43" data-weekly-cost="1.59" data-purchase-group="restock"><td data-en="Curry Roux">咖喱块</td><td><a href="https://www.walmart.ca/en/ip/S-B-Golden-curry-sauce-mix-medium-hot/6000198034558">S&amp;B Golden Curry Sauce Mix Medium Hot</a><br><span data-en="90 g">90 g</span></td><td data-en="1 Box / 2.5 Weeks">1盒 / 2.5周</td><td><a href="https://www.walmart.ca/en/ip/S-B-Golden-curry-sauce-mix-medium-hot/6000198034558">$3.97</a></td></tr>
 <tr data-price-id="45" data-weekly-cost="1.48" data-purchase-group="weekly"><td data-en="No Salt Added Chickpeas">无添加盐鹰嘴豆</td><td><a href="https://www.walmart.ca/en/ip/Great-Value-No-Salt-Chick-Peas/10275066">Great Value No Salt Chick Peas</a><br>540 mL</td><td data-en="1 Can / Week">1罐 / 周</td><td><a href="https://www.walmart.ca/en/ip/Great-Value-No-Salt-Chick-Peas/10275066">$1.48</a></td></tr>
 
 <tr data-price-id="59" data-weekly-cost="0.22" data-purchase-group="restock"><td data-en="Toasted White Sesame Seeds">熟白芝麻</td><td><a href="https://www.walmart.ca/en/ip/Roasted-Sesame-Seed/6000196393577">Heiwa Roasted White Sesame Seed</a><br>227 g</td><td data-en="10 g / Week; 1 Bottle / About 23 Weeks">每周10 g；1瓶 / 约23周</td><td><a href="https://www.walmart.ca/en/ip/Roasted-Sesame-Seed/6000196393577">$4.97</a></td></tr>
@@ -225,7 +224,7 @@ visual: true
 <td>每周合计</td>
 <td>—</td>
 <td style="text-align: right;">—</td>
-<td style="text-align: right;">$159.40</td>
+<td style="text-align: right;">$157.81</td>
 </tr>
 </tbody>
 </table>
