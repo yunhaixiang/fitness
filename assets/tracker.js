@@ -20,7 +20,38 @@
     }
     return [...weeks.values()].sort((a, b) => b.start.localeCompare(a.start));
   }
-  if (typeof module !== 'undefined' && module.exports) { module.exports = {groupWeeks}; return; }
+  const dayMs = 86400000;
+  function calendarDay(value) {
+    if (typeof value !== 'string' || !/^\d{4}-\d{2}-\d{2}$/.test(value)) return NaN;
+    const time = Date.parse(`${value}T00:00:00Z`);
+    return Number.isFinite(time) && new Date(time).toISOString().slice(0, 10) === value ? time : NaN;
+  }
+  // A day contributes once, even if it has multiple measurements or sync snapshots.
+  function buildTrend(rows, key, through, days = 56) {
+    const end = calendarDay(through);
+    if (!Number.isFinite(end)) return {daily: [], rolling: [], average: null, count: 0};
+    const start = end - (days - 1) * dayMs;
+    const byDay = new Map();
+    for (const row of rows) {
+      const time = calendarDay(row.date), value = Number(row[key]);
+      if (!Number.isFinite(time) || time > end || time < start - 6 * dayMs || row[key] == null || row[key] === '' || !Number.isFinite(value)) continue;
+      if (key === 'steps' ? value < 0 : value <= 0 || (key === 'bf' && value > 100)) continue;
+      const stamp = Date.parse(row.collectedAt || row.measuredAt || '');
+      const rank = Number.isFinite(stamp) ? stamp : time;
+      if (!byDay.has(time) || rank >= byDay.get(time).rank) byDay.set(time, {date: row.date, time, value, rank});
+    }
+    const rolling = Array.from({length: days}, (_, i) => {
+      const time = start + i * dayMs;
+      const window = [...byDay.values()].filter(point => point.time >= time - 6 * dayMs && point.time <= time);
+      return {date: new Date(time).toISOString().slice(0, 10), time, count: window.length,
+        value: window.length ? window.reduce((sum, point) => sum + point.value, 0) / window.length : null};
+    });
+    const last = rolling.at(-1);
+    return {daily: [...byDay.values()].filter(point => point.time >= start).sort((a,b) => a.time-b.time),
+      rolling, average: last.value, count: last.count,
+      from: new Date(end - 6 * dayMs).toISOString().slice(0,10), through};
+  }
+  if (typeof module !== 'undefined' && module.exports) { module.exports = {groupWeeks, buildTrend}; return; }
   const KEY = 'yunhai-fitness-records-v1';
   const DAYS = 56;
   const types = {
@@ -138,19 +169,67 @@
   function renderChart(name) {
     const host = document.querySelector(`[data-chart="${name}"]`); if (!host) return;
     const key = host.previousElementSibling.value;
-    const points = recent(name).filter((row) => row[key] !== '' && Number.isFinite(Number(row[key]))).reverse();
+    const en = window.fitnessI18n?.language === 'en';
+    const t = (zh, english) => en ? english : zh;
+    const trend = buildTrend(records[name], key, today(), DAYS);
+    const unit = key === 'weight' ? ' kg' : key === 'bf' ? '%' : t(' 步', ' steps');
+    const format = value => value == null ? '—' : new Intl.NumberFormat(en ? 'en-CA' : 'zh-CN', {maximumFractionDigits: key === 'steps' ? 0 : 2}).format(value);
+    const label = key === 'weight' ? t('体重', 'Weight') : key === 'bf' ? t('体脂率', 'Body Fat') : t('步数', 'Steps');
     host.replaceChildren();
-    if (points.length < 2) { const empty = document.createElement('p'); empty.className = 'empty-state'; empty.textContent = '至少记录两个日期才能显示趋势。'; host.append(empty); return; }
-    const values = points.map((row) => Number(row[key])); const low = Math.min(...values), high = Math.max(...values), pad = Math.max((high - low) * .15, 1);
-    const min = low - pad, max = high + pad, width = 760, height = 235, left = 50, right = 18, top = 18, bottom = 35;
-    const x = (i) => left + i * (width - left - right) / (points.length - 1);
-    const y = (value) => top + (max - value) * (height - top - bottom) / (max - min);
-    const ns = 'http://www.w3.org/2000/svg'; const svg = document.createElementNS(ns, 'svg'); svg.setAttribute('viewBox', `0 0 ${width} ${height}`); svg.setAttribute('class', 'trend-svg'); svg.setAttribute('role', 'img');
-    svg.setAttribute('aria-label', `${types[name].name}最近八周${key}变化，首值${values[0]}，末值${values.at(-1)}`);
-    for (let i = 0; i < 4; i++) { const yy = top + i * (height - top - bottom) / 3; const line = document.createElementNS(ns, 'line'); line.setAttribute('x1', left); line.setAttribute('x2', width - right); line.setAttribute('y1', yy); line.setAttribute('y2', yy); line.setAttribute('stroke', 'var(--line-strong)'); svg.append(line); const text = document.createElementNS(ns, 'text'); text.setAttribute('x', 4); text.setAttribute('y', yy + 4); text.setAttribute('fill', 'var(--muted)'); text.setAttribute('font-size', 11); text.textContent = (max - i * (max - min) / 3).toFixed(1); svg.append(text); }
-    const path = document.createElementNS(ns, 'polyline'); path.setAttribute('points', values.map((value, i) => `${x(i)},${y(value)}`).join(' ')); path.setAttribute('fill', 'none'); path.setAttribute('stroke', 'var(--accent)'); path.setAttribute('stroke-width', 3); path.setAttribute('stroke-linejoin', 'round'); svg.append(path);
-    values.forEach((value, i) => { const dot = document.createElementNS(ns, 'circle'); dot.setAttribute('cx', x(i)); dot.setAttribute('cy', y(value)); dot.setAttribute('r', 4); dot.setAttribute('fill', 'var(--accent)'); const tip = document.createElementNS(ns, 'title'); tip.textContent = `${points[i].date}: ${value}`; dot.append(tip); svg.append(dot); });
-    for (const i of [0, points.length - 1]) { const label = document.createElementNS(ns, 'text'); label.setAttribute('x', x(i)); label.setAttribute('y', height - 6); label.setAttribute('text-anchor', i ? 'end' : 'start'); label.setAttribute('fill', 'var(--muted)'); label.setAttribute('font-size', 11); label.textContent = points[i].date.slice(5); svg.append(label); }
+    const summary = document.createElement('div'); summary.className = 'trend-summary'; summary.setAttribute('aria-live', 'polite');
+    const heading = document.createElement('span'); heading.textContent = t('最近7天平均', 'Last 7 Days Average');
+    const value = document.createElement('strong'); value.textContent = format(trend.average) + (trend.average == null ? '' : unit);
+    const coverage = document.createElement('small'); coverage.textContent = `${trend.from} — ${trend.through} · ${t(`已记录 ${trend.count}/7 天`, `${trend.count}/7 days recorded`)}`;
+    summary.append(heading, value, coverage); host.append(summary);
+    const legend = document.createElement('div'); legend.className = 'trend-legend';
+    for (const [className, text] of [['trend-key-raw', t('每日记录', 'Daily Reading')], ['trend-key-average', t('7天移动平均', '7-Day Moving Average')]]) {
+      const item = document.createElement('span'); item.className = className; item.textContent = text; legend.append(item);
+    }
+    host.append(legend);
+    const points = trend.daily;
+    if (!points.length) { const empty = document.createElement('p'); empty.className = 'empty-state'; empty.textContent = t('还没有最近8周的有效记录。', 'No valid records in the last 8 weeks.'); host.append(empty); return; }
+    const averages = trend.rolling.filter(point => point.time >= points[0].time);
+    const values = [...points, ...averages].filter(point => point.value != null).map(point => point.value);
+    const low = Math.min(...values), high = Math.max(...values), pad = Math.max((high-low)*.15, key === 'steps' ? 100 : 1);
+    const min = key === 'steps' ? Math.max(0, low-pad) : low-pad, max = high+pad;
+    const width = 760, height = 235, left = key === 'steps' ? 62 : 50, right = 18, top = 18, bottom = 35;
+    const first = points[0].time, last = calendarDay(today());
+    const x = time => first === last ? (left+width-right)/2 : left + (time-first)*(width-left-right)/(last-first);
+    const y = value => top + (max-value)*(height-top-bottom)/(max-min);
+    const ns = 'http://www.w3.org/2000/svg';
+    const node = (tag, attrs = {}, text) => {
+      const element = document.createElementNS(ns, tag);
+      for (const [key, value] of Object.entries(attrs)) element.setAttribute(key, value);
+      if (text !== undefined) element.textContent = text;
+      return element;
+    };
+    const svg = node('svg', {viewBox: `0 0 ${width} ${height}`, class: 'trend-svg', role: 'img',
+      'aria-label': `${label} · ${t('每日记录与7天移动平均；最近7天平均', 'Daily readings and 7-day moving average; last 7 days average')}: ${format(trend.average)}${trend.average == null ? '' : unit}`});
+    for (let i=0; i<4; i++) {
+      const yy=top+i*(height-top-bottom)/3;
+      svg.append(node('line', {x1:left,x2:width-right,y1:yy,y2:yy,stroke:'var(--line-strong)'}));
+      svg.append(node('text', {x:4,y:yy+4,fill:'var(--muted)','font-size':11}, key==='steps' ? Math.round(max-i*(max-min)/3).toLocaleString(en?'en-CA':'zh-CN') : (max-i*(max-min)/3).toFixed(1)));
+    }
+    function draw(series, color, dashed) {
+      let segments = [], segment = [];
+      for (const point of series) {
+        if (point.value == null) { if (segment.length) segments.push(segment); segment=[]; }
+        else segment.push(point);
+      }
+      if (segment.length) segments.push(segment);
+      for (const part of segments) {
+        svg.append(node('polyline', {points:part.map(point=>`${x(point.time)},${y(point.value)}`).join(' '),fill:'none',stroke:color,'stroke-width':dashed?3:2,'stroke-dasharray':dashed?'7 5':'none','stroke-linejoin':'round'}));
+        for (const point of part) {
+          const dot=node('circle',{cx:x(point.time),cy:y(point.value),r:dashed?2.5:3.5,fill:color});
+          dot.append(node('title',{}, `${point.date} · ${dashed?t('7天平均','7-day average'):label}: ${format(point.value)}${unit}${dashed?` · ${point.count}/7 ${t('天','days')}`:''}`));
+          svg.append(dot);
+        }
+      }
+    }
+    draw(points, 'var(--accent)', false);
+    draw(averages, 'var(--gold)', true);
+    const endpoints=first===last?[points[0]]:[points[0],{time:last,date:today()}];
+    endpoints.forEach((point,i)=>svg.append(node('text',{x:x(point.time),y:height-6,'text-anchor':first===last?'middle':i?'end':'start',fill:'var(--muted)','font-size':11},point.date.slice(5))));
     host.append(svg);
   }
   function renderAll() { renderMetrics(); for (const name of names) { renderList(name); renderChart(name); } window.fitnessI18n?.apply(); }
