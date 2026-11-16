@@ -30,7 +30,6 @@
     item.append(node('span', title), node('strong', value));
     summary.append(item);
   }
-  summary.after(node('p', en ? 'Time in bed is not the same as actual time asleep.' : '预留时间不等于实际睡着的时长。', 'sleep-caption'));
   document.getElementById('sleep-empty').hidden = true;
   const timeline = document.getElementById('sleep-timeline');
   const weekdays = document.getElementById('daily-weekdays');
