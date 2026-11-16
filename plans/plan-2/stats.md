@@ -33,6 +33,12 @@ nutrition: true
 
 <h2 id="half-week-meals" data-en="Meal Plan">饮食计划</h2>
 
+{% assign summary_daily_meals = site.data.meal_plan_content['plan-2'].nutrition.meals %}
+<div class="nutrition-routine-grid">
+{% include nutrition-daily-meals.html meals=summary_daily_meals keys="fruit_breakfast,kiwi_breakfast" title="🥣 早餐" title_en="🥣 Breakfast" %}
+{% include nutrition-daily-meals.html meals=summary_daily_meals keys="outside_drink" title="🥛 餐外饮品" title_en="🥛 Between-Meal Drink" %}
+</div>
+
 {% include meal-plans/plan-2/nutrition-meal-summary.html %}
 
 <h2 id="calorie-intake" data-en="Calorie Intake Breakdown">摄入构成</h2>

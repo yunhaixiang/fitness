@@ -1,21 +1,23 @@
+<article class="nutrition-routine-card">
+<h3 data-en="{{ include.title_en }}">{{ include.title }}</h3>
 {% assign daily_keys = include.keys | split: ',' %}
 {% for daily_key in daily_keys %}
 {% assign daily_meal = include.meals[daily_key] %}
 {% if daily_meal %}
-<tr class="meal-summary-daily">
-<th scope="row">
-{% if daily_key contains 'breakfast' %}<span data-en="🥣 Breakfast">🥣 早餐</span>
-{% elsif daily_key contains 'snack' %}<span data-en="🌙 Bedtime Snack">🌙 睡前加餐</span>
-{% else %}<span data-en="🥛 Between-Meal Drink">🥛 餐外饮品</span>{% endif %}
-{% if daily_key == 'outside_drink' %}<div data-en="Daily">每天</div>
-{% elsif daily_key == 'fruit_breakfast' or daily_key == 'fruit_snack' %}<div data-en="Sun–Tue">周日—周二</div>
-{% else %}<div data-en="Wed–Sat">周三—周六</div>{% endif %}
-</th>
-<td colspan="3" data-en="{{ daily_meal.foodEn | escape }}">{{ daily_meal.foodZh }}</td>
-<td class="meal-summary-calories">{{ daily_meal.kcal }}</td>
-<td class="meal-summary-numeric">{{ daily_meal.protein }}</td>
-<td class="meal-summary-numeric">{{ daily_meal.carbs }}</td>
-<td class="meal-summary-numeric">{{ daily_meal.fat }}</td>
-</tr>
+<div class="nutrition-routine-variant">
+<div class="nutrition-routine-heading">
+{% if daily_key == 'outside_drink' %}<strong data-en="Daily">每天</strong>
+{% elsif daily_key == 'fruit_breakfast' or daily_key == 'fruit_snack' %}<strong data-en="Sun–Tue">周日—周二</strong>
+{% else %}<strong data-en="Wed–Sat">周三—周六</strong>{% endif %}
+<span class="nutrition-routine-calories">{{ daily_meal.kcal }} kcal</span>
+</div>
+<p data-en="{{ daily_meal.foodEn | escape }}">{{ daily_meal.foodZh }}</p>
+<dl class="nutrition-routine-macros">
+<div><dt data-en="Protein">蛋白质</dt><dd>{{ daily_meal.protein }} g</dd></div>
+<div><dt data-en="Carbs">碳水</dt><dd>{{ daily_meal.carbs }} g</dd></div>
+<div><dt data-en="Fat">脂肪</dt><dd>{{ daily_meal.fat }} g</dd></div>
+</dl>
+</div>
 {% endif %}
 {% endfor %}
+</article>

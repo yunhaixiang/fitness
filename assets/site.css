@@ -781,3 +781,17 @@ html[data-theme=light] .cooking-guide-primary{color:#fff}
 .nutrient-proxy-value{font-size:11px;color:var(--text)}
 html[lang="en"] .nutrient-tier-line{grid-template-columns:72px minmax(0,1fr)}
 .nutrient-tier-track.is-pending{background:var(--track-dark);opacity:.5}
+
+/* Breakfast and snacks have their own format beside the seven-meal table. */
+.nutrition-routine-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;margin-bottom:24px;align-items:start}
+.nutrition-routine-card{padding:20px;border:1px solid var(--line);border-radius:16px;background:var(--surface);min-width:0}
+.nutrition-routine-card h3{margin:0 0 16px;font-size:18px}
+.nutrition-routine-variant+.nutrition-routine-variant{margin-top:20px;padding-top:16px;border-top:1px solid var(--line)}
+.nutrition-routine-heading{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:8px}
+.nutrition-routine-calories{color:var(--accent);font-weight:700;font-variant-numeric:tabular-nums}
+.nutrition-routine-variant p{margin:10px 0 12px;font-size:14px;line-height:1.8;overflow-wrap:anywhere}
+.nutrition-routine-macros{display:flex;flex-wrap:wrap;gap:12px 24px;margin:0;font-size:13px}
+.nutrition-routine-macros div{display:flex;gap:6px}
+.nutrition-routine-macros dt{color:var(--muted)}
+.nutrition-routine-macros dd{margin:0;font-weight:600;font-variant-numeric:tabular-nums}
+@media(max-width:640px){.nutrition-routine-grid{grid-template-columns:1fr}.nutrition-routine-card{padding:16px}}
