@@ -47,7 +47,7 @@
   <script type="application/json" id="meal-plan-catalog">{{ site.data.meal_plans | jsonify }}</script>
   <script src="{{ '/assets/meal-plans.js' | relative_url }}?v={{ site.time | date: '%s' }}" defer></script>
   <script src="{{ '/assets/i18n.js' | relative_url }}?v={{ site.time | date: '%s' }}" defer></script>
-  {% if page.strength or page.tracker or page.overview or page.url == '/' %}
+  {% if page.nutrition or page.strength or page.tracker or page.overview or page.url == '/' %}
   <script type="application/json" id="tracking-records">{{ site.data.tracking_records | jsonify | replace: '<', '\u003c' }}</script>
   <script src="{{ '/assets/body-metrics.js' | relative_url }}?v={{ site.time | date: '%s' }}" defer></script>
   {% endif %}
@@ -62,6 +62,7 @@
   {% if page.diet %}<script src="{{ '/assets/diet-view.js' | relative_url }}?v={{ site.time | date: '%s' }}" defer></script>{% endif %}
   {% if page.overview or page.url == '/' %}<script src="{{ '/assets/today.js' | relative_url }}?v={{ site.time | date: '%s' }}" defer></script>{% endif %}
   <script src="{{ '/assets/shopping-costs.js' | relative_url }}?v={{ site.time | date: '%s' }}" defer></script>
+  {% if page.visual %}<script src="{{ '/assets/nutrition-targets.js' | relative_url }}?v={{ site.time | date: '%s' }}" defer></script>{% endif %}
   {% if page.visual %}<script src="{{ '/assets/visual-tables.js' | relative_url }}?v={{ site.time | date: '%s' }}" defer></script>{% endif %}
   {% if page.cooking_definition_script %}<script src="{{ page.cooking_definition_script | relative_url }}?v={{ site.time | date: '%s' }}" defer></script>{% endif %}
   {% if page.cooking %}<script src="{{ page.cooking_flow_script | default: '/assets/cooking-flow.js' | relative_url }}?v={{ site.time | date: '%s' }}" defer></script>

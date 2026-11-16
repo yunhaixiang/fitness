@@ -57,3 +57,5 @@
 ## 私人 Hume 同步
 
 Cloudflare D1 与受 Access 保护的网站入口的部署及手机配置见 [Hume 同步设置](docs/hume-sync.md)。新的自动同步记录不提交到本仓库。页面直接部署到 Cloudflare；私人入口读取数据库中的身体记录和步数。
+
+营养三档及克数／供能比由 `assets/nutrition-targets.js` 统一计算；私人年龄、性别、最新体重体脂由已有受保护数据注入，不能写成公开常量。修改范围前参见 `docs/nutrition-targets.md`，包含来源、规划边界及总糖／胆固醇的关联评价例外。

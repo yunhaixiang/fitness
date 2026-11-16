@@ -92,16 +92,12 @@ test('wrap and sandwich are maximally separated in the repeating seven-meal cycl
  assert.equal(Math.min(gap,7-gap),3);
 });
 
-test('both nutrition plans show macro shares of total food calories',()=>{
+test('both nutrition plans have one source row per nutrient and no duplicate percentage rows',()=>{
+ const expected=['energy','protein','fat','saturatedFat','carbs','fibre','sugar','addedSugar','cholesterol','sodium','calcium','iron','potassium','vitaminD','vitaminB12','iodine','ala','epaDha'];
  for(const file of ['stats.md','plans/plan-2/stats.md']){
   const page=read(file);
-  const calories=Number(page.match(/<td>热量<\/td>\s*<td[^>]*>([\d,]+)/)[1].replaceAll(',',''));
-  for(const [key,factor] of [['protein',4],['fat',9],['carbs',4]]){
-   const row=attribute=>page.match(new RegExp('<tr '+attribute+'="'+key+'">([\\s\\S]*?)<\\/tr>'))[1];
-   const value=text=>Number(text.match(/<td[^>]*>([\d.]+)[ g%]*<\/td>/)[1]);
-   const actual=value(row('data-macro-share'));
-   const expected=value(row('data-macro'))*factor/calories*100;
-   assert.ok(Math.abs(actual-expected)<.11,`${file}: ${key} uses total food calories`);
-  }
+  assert.deepEqual([...page.matchAll(/data-nutrient="([^"]+)"/g)].map(m=>m[1]),expected);
+  assert.doesNotMatch(page,/data-macro-share|<td>饱和脂肪占总热量<\/td>/);
+  assert.match(page,/nutrition: true/);
  }
 });

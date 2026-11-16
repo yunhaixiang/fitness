@@ -349,21 +349,6 @@
   }
 
   if (page === 'stats' && tables.length === 2) {
-    const metric = (text) => {
-      const values = [...text.matchAll(/[\d,]+(?:\.\d+)?/g)].map(([value]) => Number(value.replaceAll(',', '')));
-      const unit = text.includes('%') ? '%' : (text.match(/µg|mg|kcal|g/) || [''])[0];
-      const factor = { '%': 1, kcal: 1, g: 1, mg: 0.001, 'µg': 0.000001 }[unit] || 1;
-      return { low: values[0] * factor, high: (values[1] ?? values[0]) * factor, unit, factor };
-    };
-    const amount = (value, daily) => {
-      const n = value / daily.factor;
-      return new Intl.NumberFormat(en ? 'en-CA' : 'zh-CN', { maximumFractionDigits: 2 }).format(n);
-    };
-    const difference = (low, high, daily) => {
-      const first = amount(low, daily);
-      const last = amount(high, daily);
-      return `${first === last ? first : `${first}–${last}`}${daily.unit === '%' ? '' : ' '}${daily.unit}`;
-    };
     const energyRows = [...tables[0].tBodies[0].rows];
     const breakdown = energyRows.slice(0, -1);
     const totalRow = energyRows.at(-1);
@@ -409,8 +394,8 @@
 
     const intakeHost = document.querySelector('[data-intake-chart]');
     if (intakeHost) {
-      // Normalize the 4/4/9 macro energy estimates, rather than divide by label
-      // calories: fibre and label rounding can make those totals differ.
+      // Normalize arc geometry only. Percentage labels use total food calories,
+      // exactly like the merged nutrient cards; fibre/rounding can change the sum.
       const macros = [
         { key: 'protein', name: tr('蛋白质', 'Protein'), factor: 4 },
         { key: 'carbs', name: tr('碳水', 'Carbohydrates'), factor: 4 },
@@ -420,6 +405,7 @@
         const grams = number(row ? val(row, 1) : '0');
         return { ...macro, grams, kcal: grams * macro.factor };
       });
+      const foodEnergy = number(val(tables[1].querySelector('[data-nutrient="energy"]'), 1));
       const macroEnergy = macros.reduce((sum, macro) => sum + macro.kcal, 0);
       const intake = el('figure', 'visual-expenditure visual-intake');
       const intakePlot = el('div', 'visual-expenditure-plot');
@@ -435,7 +421,7 @@
         const color = colors[index];
         intakeStops.push(`${color} ${start.toFixed(3)}% ${end.toFixed(3)}%`);
         start = end;
-        const percent = `${share.toFixed(1)}%`;
+        const percent = `${(foodEnergy ? macro.kcal / foodEnergy * 100 : 0).toFixed(1)}%`;
         intakeDescriptions.push(`${macro.name}: ${macro.grams} g, ${percent}`);
         const item = el('li', 'visual-expenditure-item');
         const nameLine = el('div', 'visual-expenditure-name');
@@ -451,95 +437,13 @@
       intakePie.style.background = `conic-gradient(${intakeStops.join(', ')})`;
       intakePie.setAttribute('aria-label', intakeDescriptions.join('; '));
       const intakeLabel = el('div', 'visual-expenditure-total');
-      intakeLabel.append(el('strong', '', tr('三大营养供能占比', 'Share of Macro Calories')), el('small', '', tr('蛋白质、碳水 4 kcal/g · 脂肪 9 kcal/g', 'Protein & Carbs 4 kcal/g · Fat 9 kcal/g')));
+      intakeLabel.append(el('strong', '', tr('占总热量比例', 'Share of Total Calories')), el('small', '', tr('按4/4/9折算；纤维及标签取整可能使合计偏离100%', '4/4/9 estimates; fibre and label rounding can shift the total from 100%')));
       intakePlot.append(intakePie, intakeLabel);
       intake.append(intakePlot, intakeLegend);
       intakeHost.replaceWith(intake);
     }
 
-    const nutrients = el('div', 'visual-card-grid visual-nutrient-grid');
-    for (const row of tables[1].tBodies[0].rows) {
-      const card = el('article', 'visual-card visual-nutrient-card');
-      const current = val(row, 1);
-      const recommendation = val(row, 2);
-      const daily = metric(current);
-      card.append(el('h3', '', val(row, 0)), el('strong', 'visual-metric-large', current));
-      const bottom = el('div', 'visual-nutrient-bottom');
-      bottom.append(el('span', 'visual-nutrient-recommendation', `${tr('推荐', 'Recommended')}: ${recommendation === '–' ? tr('未设定', 'Not set') : recommendation}`));
-      const track = el('div', 'visual-nutrient-track');
-      track.setAttribute('aria-hidden', 'true');
-      const comparison = el('span', 'visual-nutrient-comparison');
-      const hasNumericGoal = /\d/.test(recommendation);
-      if (!/\d/.test(current)) {
-        card.classList.add('is-unset');
-        comparison.textContent = tr('待核对', 'Pending Verification');
-      } else if (recommendation === '–') {
-        card.classList.add('is-unset');
-        comparison.textContent = tr('无可比较的每日目标', 'No daily goal to compare');
-      } else if (!hasNumericGoal) {
-        card.classList.add('is-unset');
-      } else {
-        const goal = metric(recommendation);
-        const kind = recommendation.startsWith('≤') ? 'maximum' : recommendation.startsWith('≥') ? 'minimum' : goal.low !== goal.high ? 'range' : 'reference';
-        const upper = Math.max(goal.high, daily.high) * 1.18;
-        const percent = (value) => Math.max(0, Math.min(100, value / upper * 100));
-        const zone = el('span', 'visual-nutrient-zone');
-        const zoneStart = kind === 'maximum' ? 0 : percent(goal.low);
-        const zoneEnd = kind === 'minimum' ? 100 : percent(goal.high);
-        zone.style.left = `${zoneStart}%`;
-        zone.style.width = kind === 'reference' ? '2px' : `${zoneEnd - zoneStart}%`;
-        const fill = el('span', 'visual-nutrient-fill');
-        fill.style.width = `${percent(daily.low)}%`;
-        track.append(zone, fill);
-        if (daily.high !== daily.low) {
-          const span = el('span', 'visual-nutrient-value-range');
-          span.style.left = `${percent(daily.low)}%`;
-          span.style.width = `${Math.max(2, percent(daily.high) - percent(daily.low))}%`;
-          track.append(span);
-        } else {
-          const marker = el('span', 'visual-nutrient-marker');
-          marker.style.left = `${percent(daily.low)}%`;
-          track.append(marker);
-        }
-        if (kind === 'maximum') {
-          if (daily.low > goal.high) {
-            card.classList.add('is-high');
-            comparison.textContent = `${tr('高于上限', 'Above limit')} ${difference(daily.low - goal.high, daily.high - goal.high, daily)}`;
-          } else if (daily.high <= goal.high) {
-            card.classList.add('is-ok');
-            comparison.textContent = `${tr('低于上限', 'Below limit')} ${difference(goal.high - daily.high, goal.high - daily.low, daily)}`;
-          } else {
-            card.classList.add('is-low');
-            comparison.textContent = tr('横跨建议上限', 'Spans the recommended limit');
-          }
-        } else if (daily.high < goal.low) {
-          card.classList.add('is-low');
-          const label = kind === 'range' ? tr('低于建议范围', 'Below range') : kind === 'reference' ? tr('低于参考值', 'Below reference') : tr('低于下限', 'Below minimum');
-          comparison.textContent = `${label} ${difference(goal.low - daily.high, goal.low - daily.low, daily)}`;
-        } else if (kind === 'range' && daily.low > goal.high) {
-          card.classList.add('is-high');
-          comparison.textContent = `${tr('高于建议范围', 'Above range')} ${difference(daily.low - goal.high, daily.high - goal.high, daily)}`;
-        } else if (kind === 'reference' && daily.low === goal.low && daily.high === goal.high) {
-          card.classList.add('is-ok');
-          comparison.textContent = tr('等于参考值', 'At reference');
-        } else if (kind === 'reference' && daily.low >= goal.low) {
-          card.classList.add('is-ok');
-          comparison.textContent = `${tr('高于参考值', 'Above reference')} ${difference(daily.low - goal.low, daily.high - goal.low, daily)}`;
-        } else if (kind === 'minimum' && daily.low >= goal.low) {
-          card.classList.add('is-ok');
-          comparison.textContent = `${tr('高于下限', 'Above minimum')} ${difference(daily.low - goal.low, daily.high - goal.low, daily)}`;
-        } else if (kind === 'range' && daily.low >= goal.low && daily.high <= goal.high) {
-          card.classList.add('is-ok');
-          comparison.textContent = tr('在建议范围内', 'Within range');
-        } else {
-          card.classList.add('is-low');
-          comparison.textContent = tr(kind === 'reference' ? '包含参考值' : '与建议范围重叠', kind === 'reference' ? 'Includes reference' : 'Overlaps recommended range');
-        }
-      }
-      if (recommendation === '–' || hasNumericGoal) bottom.append(track, comparison);
-      card.append(bottom);
-      nutrients.append(card);
-    }
+    const nutrients = window.fitnessNutritionTargets.render(tables[1], {el, tr, en, val});
     mount(tables[1], nutrients);
   }
 

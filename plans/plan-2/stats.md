@@ -4,6 +4,7 @@ title: 营养
 description: 每日营养与消耗构成
 permalink: /plans/plan-2/stats/
 visual: true
+nutrition: true
 ---
 
 
@@ -98,115 +99,95 @@ visual: true
 </tr>
 </thead>
 <tbody>
-<tr>
+<tr data-nutrient="energy">
 <td>热量</td>
 <td style="text-align: right;">1,767 kcal</td>
-<td>1,800–2,000 kcal</td>
+<td>—</td>
 </tr>
-<tr data-macro="protein">
+<tr data-macro="protein" data-nutrient="protein">
 <td>蛋白质</td>
 <td style="text-align: right;">143.8 g</td>
-<td>120–140 g</td>
+<td>—</td>
 </tr>
-<tr data-macro-share="protein">
-<td>蛋白质占总热量</td>
-<td style="text-align: right;">32.6%</td>
-<td>10–35%</td>
-</tr>
-<tr data-macro="fat">
+<tr data-macro="fat" data-nutrient="fat">
 <td>总脂肪</td>
 <td style="text-align: right;">64.7 g</td>
-<td>45–65 g</td>
+<td>—</td>
 </tr>
-<tr data-macro-share="fat">
-<td>脂肪占总热量</td>
-<td style="text-align: right;">33.0%</td>
-<td>20–35%</td>
-</tr>
-<tr>
+<tr data-nutrient="saturatedFat">
 <td>饱和脂肪</td>
 <td style="text-align: right;">16.0 g</td>
-<td>≤11.8 g</td>
+<td>—</td>
 </tr>
-<tr>
-<td>饱和脂肪占总热量</td>
-<td style="text-align: right;">8.2%</td>
-<td>≤6%</td>
-</tr>
-<tr data-macro="carbs">
+<tr data-macro="carbs" data-nutrient="carbs">
 <td>碳水化合物</td>
 <td style="text-align: right;">167.4 g</td>
-<td>180–240 g</td>
+<td>—</td>
 </tr>
-<tr data-macro-share="carbs">
-<td>碳水占总热量</td>
-<td style="text-align: right;">37.9%</td>
-<td>45–65%</td>
-</tr>
-<tr>
+<tr data-nutrient="fibre">
 <td>膳食纤维</td>
 <td style="text-align: right;">36.7 g</td>
-<td>30–38 g</td>
+<td>—</td>
 </tr>
-<tr>
+<tr data-nutrient="sugar">
 <td>总糖</td>
 <td style="text-align: right;">37.3 g</td>
-<td>无单独上限；重点控制添加糖</td>
+<td>—</td>
 </tr>
-<tr>
+<tr data-nutrient="addedSugar">
 <td>添加糖</td>
 <td style="text-align: right;">4–9 g</td>
-<td>≤25 g</td>
+<td>—</td>
 </tr>
-<tr>
+<tr data-nutrient="cholesterol">
 <td>膳食胆固醇</td>
 <td style="text-align: right;">695 mg</td>
-<td>尽量少；优先控制饱和脂肪</td>
+<td>—</td>
 </tr>
-<tr>
+<tr data-nutrient="sodium">
 <td>钠</td>
 <td style="text-align: right;">1,928 mg</td>
-<td>≤2,300 mg</td>
+<td>—</td>
 </tr>
-<tr>
+<tr data-nutrient="calcium">
 <td>钙</td>
 <td style="text-align: right;">1,121 mg</td>
-<td>1,000 mg</td>
+<td>—</td>
 </tr>
-<tr>
+<tr data-nutrient="iron">
 <td>铁</td>
 <td style="text-align: right;">17.9 mg</td>
-<td>8 mg</td>
+<td>—</td>
 </tr>
-<tr>
+<tr data-nutrient="potassium">
 <td>钾</td>
 <td style="text-align: right;">4,798 mg</td>
-<td>≥3,400 mg</td>
+<td>—</td>
 </tr>
-<tr>
+<tr data-nutrient="vitaminD">
 <td>维生素D</td>
 <td style="text-align: right;">23 µg</td>
-<td>15 µg</td>
+<td>—</td>
 </tr>
-<tr>
+<tr data-nutrient="vitaminB12">
 <td>维生素B12</td>
 <td style="text-align: right;">7.0 µg</td>
-<td>2.4 µg</td>
+<td>—</td>
 </tr>
-<tr>
+<tr data-nutrient="iodine">
 <td>碘</td>
 <td style="text-align: right;">114–129 µg</td>
-<td>150 µg</td>
+<td>—</td>
 </tr>
-<tr>
+<tr data-nutrient="ala">
 <td>Omega-3：ALA</td>
 <td style="text-align: right;">1.1–1.3 g</td>
-<td>1.6 g</td>
+<td>—</td>
 </tr>
-<tr>
+<tr data-nutrient="epaDha">
 <td>Omega-3：EPA，DHA（合计）</td>
 <td style="text-align: right;">2.2 g</td>
-<td>250 mg</td>
+<td>—</td>
 </tr>
 </tbody>
 </table>

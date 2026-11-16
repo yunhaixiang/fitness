@@ -757,3 +757,27 @@ html[data-theme=light] .cooking-guide-primary{color:#fff}
 .record-day .record-card-fields dd{text-align:left;margin-bottom:7px}
 .record-day .record-card-fields dd:last-child{margin-bottom:0}
 .record-day-empty{display:block;text-align:center;padding:15px 8px;color:var(--muted)}
+
+/* One nutrient, one amount/energy-share pair and one three-band assessment. */
+.nutrient-card-heading{display:flex;align-items:flex-start;justify-content:space-between;gap:8px;flex-wrap:wrap}
+.nutrient-card-heading h3{margin:0;flex:1;min-width:90px}
+.nutrient-tier-badge{font-size:11px;font-weight:700;padding:3px 8px;border-radius:99px;white-space:nowrap;background:color-mix(in srgb,var(--tier-color,var(--muted)) 13%,var(--surface));color:var(--tier-color,var(--muted));border:1px solid color-mix(in srgb,var(--tier-color,var(--muted)) 40%,transparent)}
+.tier-best{--tier-color:var(--accent)}
+.tier-acceptable{--tier-color:var(--gold)}
+.tier-adjust{--tier-color:var(--peach)}
+.nutrient-energy-share{display:block;font-size:13px;color:var(--muted);margin-top:2px}
+.nutrient-tier-ranges{display:grid;gap:8px;margin:0}
+.nutrient-tier-line{display:grid;grid-template-columns:48px minmax(0,1fr);gap:8px;padding:5px 0;border-left:3px solid transparent;padding-left:6px}
+.nutrient-tier-line dt{color:var(--tier-color);font-weight:700}
+.nutrient-tier-line dd{margin:0;overflow-wrap:anywhere;line-height:1.6}
+.nutrient-tier-line.is-current{border-left-color:var(--tier-color);background:color-mix(in srgb,var(--tier-color) 8%,transparent);border-radius:3px}
+.nutrient-rule-note,.nutrition-targets-note{font-size:11px;line-height:1.6;color:var(--muted);margin:0}
+.nutrition-targets-note{margin-bottom:14px}
+@media(max-width:560px){.visual-card-grid.visual-nutrient-grid{grid-template-columns:1fr}.nutrient-tier-line{grid-template-columns:62px minmax(0,1fr)}}
+.nutrient-tier-track{height:14px;background:color-mix(in srgb,var(--peach) 28%,var(--surface));margin:3px 0 5px}
+.nutrient-band{position:absolute;inset-block:0;background:color-mix(in srgb,var(--tier-color) 48%,var(--surface));border-inline:1px solid color-mix(in srgb,var(--tier-color) 75%,transparent)}
+.nutrient-tier-track .visual-nutrient-marker{width:3px;background:var(--text);box-shadow:0 0 0 1px var(--surface)}
+.nutrient-tier-track .visual-nutrient-value-range{background:color-mix(in srgb,var(--text) 60%,transparent)}
+.nutrient-proxy-value{font-size:11px;color:var(--text)}
+html[lang="en"] .nutrient-tier-line{grid-template-columns:72px minmax(0,1fr)}
+.nutrient-tier-track.is-pending{background:var(--track-dark);opacity:.5}
