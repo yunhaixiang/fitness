@@ -31,3 +31,19 @@ test('first visible average includes the six preceding days and is stable across
  assert.equal(result.rolling[0].value,78); assert.equal(result.average,78);
  assert.equal(result.rolling[2].time-result.rolling[0].time,2*86400000);
 });
+
+test('trend direction compares adjacent non-overlapping calendar weeks',()=>{
+ const rows=[{date:'2026-11-02',weight:99},{date:'2026-11-03',weight:82},{date:'2026-11-09',weight:80},{date:'2026-11-10',weight:78},{date:'2026-11-16',weight:80}];
+ const result=buildTrend(rows,'weight','2026-11-16',3);
+ assert.equal(result.previousAverage,81); assert.equal(result.previousCount,2);
+ assert.equal(result.average,79); assert.equal(result.change,-2); assert.equal(result.direction,'down');
+ assert.equal(result.previousFrom,'2026-11-03'); assert.equal(result.previousThrough,'2026-11-09');
+});
+test('trend arrows handle increases, ties, missing periods and zero steps',()=>{
+ const prior={date:'2026-11-09',steps:0};
+ assert.equal(buildTrend([prior,{date:'2026-11-16',steps:100}],'steps','2026-11-16').direction,'up');
+ assert.equal(buildTrend([prior,{date:'2026-11-16',steps:0}],'steps','2026-11-16').direction,'flat');
+ assert.equal(buildTrend([prior],'steps','2026-11-16').direction,null);
+ assert.equal(buildTrend([{date:'2026-11-16',steps:100}],'steps','2026-11-16').direction,null);
+ assert.equal(buildTrend([{date:'2026-11-09',bf:25},{date:'2026-11-16',bf:25.001}],'bf','2026-11-16').direction,'flat');
+});

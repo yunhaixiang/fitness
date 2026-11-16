@@ -34,7 +34,7 @@
     const byDay = new Map();
     for (const row of rows) {
       const time = calendarDay(row.date), value = Number(row[key]);
-      if (!Number.isFinite(time) || time > end || time < start - 6 * dayMs || row[key] == null || row[key] === '' || !Number.isFinite(value)) continue;
+      if (!Number.isFinite(time) || time > end || time < Math.min(start - 6 * dayMs, end - 13 * dayMs) || row[key] == null || row[key] === '' || !Number.isFinite(value)) continue;
       if (key === 'steps' ? value < 0 : value <= 0 || (key === 'bf' && value > 100)) continue;
       const stamp = Date.parse(row.collectedAt || row.measuredAt || '');
       const rank = Number.isFinite(stamp) ? stamp : time;
@@ -47,8 +47,15 @@
         value: window.length ? window.reduce((sum, point) => sum + point.value, 0) / window.length : null};
     });
     const last = rolling.at(-1);
+    const previous = [...byDay.values()].filter(point => point.time >= end - 13 * dayMs && point.time <= end - 7 * dayMs);
+    const previousAverage = previous.length ? previous.reduce((sum, point) => sum + point.value, 0) / previous.length : null;
+    const change = last.value == null || previousAverage == null ? null : Number((last.value - previousAverage).toFixed(key === 'steps' ? 0 : 2));
+    const direction = change == null ? null : change > 0 ? 'up' : change < 0 ? 'down' : 'flat';
     return {daily: [...byDay.values()].filter(point => point.time >= start).sort((a,b) => a.time-b.time),
       rolling, average: last.value, count: last.count,
+      previousAverage, previousCount: previous.length, change, direction,
+      previousFrom: new Date(end - 13 * dayMs).toISOString().slice(0,10),
+      previousThrough: new Date(end - 7 * dayMs).toISOString().slice(0,10),
       from: new Date(end - 6 * dayMs).toISOString().slice(0,10), through};
   }
   if (typeof module !== 'undefined' && module.exports) { module.exports = {groupWeeks, buildTrend}; return; }
@@ -180,7 +187,14 @@
     const heading = document.createElement('span'); heading.textContent = t('最近7天平均', 'Last 7 Days Average');
     const value = document.createElement('strong'); value.textContent = format(trend.average) + (trend.average == null ? '' : unit);
     const coverage = document.createElement('small'); coverage.textContent = `${trend.from} — ${trend.through} · ${t(`已记录 ${trend.count}/7 天`, `${trend.count}/7 days recorded`)}`;
-    summary.append(heading, value, coverage); host.append(summary);
+    const movement = document.createElement('span'); movement.className = 'trend-movement';
+    const changeUnit = key === 'bf' ? t(' 个百分点', ' percentage points') : unit;
+    const arrow = {up:'↑', down:'↓', flat:'→'};
+    const directionLabel = {up:t('上升','Up'), down:t('下降','Down'), flat:t('持平','Unchanged')};
+    movement.textContent = trend.direction == null ? t('— 暂无可比数据','— No comparison data')
+      : `${arrow[trend.direction]} ${directionLabel[trend.direction]}${trend.direction === 'flat' ? '' : ' ' + format(Math.abs(trend.change)) + changeUnit} · ${t('较前7天','vs previous 7 days')}`;
+    if (trend.previousFrom) movement.title = `${trend.previousFrom} — ${trend.previousThrough} · ${t('平均','Average')} ${format(trend.previousAverage)}${trend.previousAverage == null ? '' : unit} · ${trend.previousCount}/7 ${t('天已记录','days recorded')}`;
+    summary.append(heading, value, movement, coverage); host.append(summary);
     const legend = document.createElement('div'); legend.className = 'trend-legend';
     for (const [className, text] of [['trend-key-raw', t('每日记录', 'Daily Reading')], ['trend-key-average', t('7天移动平均', '7-Day Moving Average')]]) {
       const item = document.createElement('span'); item.className = className; item.textContent = text; legend.append(item);

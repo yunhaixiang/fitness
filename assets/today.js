@@ -64,7 +64,7 @@
     const cardioRow = cardioTable.tBodies[0].rows[day === 0 ? 6 : day - 1];
     const cardioActive = cardioRow?.dataset.cardio === 'active';
     const strengthActive = trainingDays.includes(day);
-    if (strengthActive || cardioActive) trainingRoot.append(element('p', 'today-training-time', label('18:00 · 晚饭前', '18:00 · Before Dinner')));
+    if (strengthActive || cardioActive) trainingRoot.append(element('p', 'today-training-time', label('17:30 · 晚饭前', '17:30 · Before Dinner')));
     if (cardioActive) {
       const cardioLine = element('p', 'today-cardio');
       const plan = window.fitnessCardioPlan;

@@ -22,7 +22,7 @@
     '4、7各1块': '4 and 7: 1 Portion Each',
     '3、6各1片': '3 and 6: 1 Fillet Each',
     '总览': 'Overview', '饮食': 'Diet', '购物': 'Shopping', '做饭': 'Cooking', '力量': 'Strength',
-    '有氧 · 18:00，晚饭前': 'Cardio · 18:00, Before Dinner',
+    '有氧 · 17:30，晚饭前': 'Cardio · 17:30, Before Dinner',
     '有氧 · 下午，晚饭前': 'Cardio · Afternoon, Before Dinner', '有氧': 'Cardio', '统计': 'Statistics', '营养统计': 'Nutrition', '营养': 'Nutrition', '训练量': 'Training Volume', '记录': 'Log',
     '跳到内容': 'Skip to content', '我的健身计划': 'My fitness plan', '主导航': 'Main navigation',
     '快速打开计划、备餐和记录。': 'Quick access to my plan, meal prep and records.',

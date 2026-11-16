@@ -826,3 +826,5 @@ html[lang="en"] .nutrient-tier-line{grid-template-columns:72px minmax(0,1fr)}
 @media(max-width:560px){.sleep-summary{gap:10px}.sleep-summary strong{font-size:21px}.sleep-timeline li{grid-template-columns:75px minmax(0,1fr);gap:12px}}
 
 .meditation-steps li{padding-left:4px;margin-bottom:18px}.meditation-steps p{margin:5px 0 0;color:var(--muted)}
+
+.trend-movement{color:var(--accent);font-size:13px;font-weight:600;font-variant-numeric:tabular-nums}
