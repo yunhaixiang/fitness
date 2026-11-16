@@ -252,88 +252,63 @@ cooking: true
 </li>
 </ol>
 
-<h2 id="pot-one" data-en="Pot 1">煮锅一线程</h2>
+<h2 id="pot-one" data-en="Pot 1 · Eggs, Then Dumplings">煮锅一线程 · 鸡蛋→水饺</h2>
 <ol>
 <li class="cooking-task-source">
-<ol lang="zh-CN" class="cooking-source-zh">
-<li>煮锅一加入💧 水，开火烧水；开火后即可勾选这一步。</li>
-</ol>
-<ol lang="en" class="cooking-source-en" hidden>
-<li>Add 💧 water to Pot 1 and turn on the heat. Check this step once heating has started.</li>
-</ol>
+<ol lang="zh-CN" class="cooking-source-zh"><li>煮锅一加入💧 水，开火烧水；开火后即可勾选。</li></ol>
+<ol lang="en" class="cooking-source-en" hidden><li>Add 💧 water to Pot 1 and turn on the heat; check after starting.</li></ol>
 </li>
 <li class="cooking-task-source">
-<ol lang="zh-CN" class="cooking-source-zh">
-<li>看到💧 水持续沸腾后再勾选，随后放入食材；烧水不设固定时长。</li>
-</ol>
-<ol lang="en" class="cooking-source-en" hidden>
-<li>Check only when the 💧 water reaches a steady boil, then add the food. No fixed boiling time.</li>
-</ol>
+<ol lang="zh-CN" class="cooking-source-zh"><li>确认💧 水持续沸腾后勾选；烧水不设固定时长。</li></ol>
+<ol lang="en" class="cooking-source-en" hidden><li>Confirm a steady 💧 boil before checking; heating has no fixed duration.</li></ol>
 </li>
 <li class="cooking-task-source">
-<ol lang="zh-CN" class="cooking-source-zh"><li>💧 水开后轻放🥚 鸡蛋6个，同时下🍝 两餐合计干意面100 g，轻轻搅散；锅内留足空间。</li><li>两种食材一起开始计时，8分钟后检查；放好后勾选，期间可做其他任务。</li></ol>
-<ol lang="en" class="cooking-source-en" hidden><li>Once the 💧 water boils, gently add 6 🥚 eggs and all 100 g dry 🍝 spaghetti together; separate the strands gently and leave enough space.</li><li>Start one 8-minute timer for the first check. Mark this step after loading; work on other tasks meanwhile.</li></ol>
+<ol lang="zh-CN" class="cooking-source-zh"><li>用勺子轻放🥚 鸡蛋6个，放好后勾选。</li><li>等💧 水恢复沸腾后保持温和滚煮，约8分钟后首次检查；等待时可做其他任务。</li></ol>
+<ol lang="en" class="cooking-source-en" hidden><li>Gently lower 6 🥚 eggs with a spoon; check after loading.</li><li>Once the 💧 water returns to a boil, maintain a gentle boil and first check after about 8 minutes; work on other tasks while waiting.</li></ol>
 </li>
 <li class="cooking-task-source">
-<ol lang="zh-CN" class="cooking-source-zh"><li>8分钟后按包装要求检查🍝 意面，熟了先用夹子捞出，留少量💧 面水。全部意面留待同锅拌酱后再均分，第3、6盘各相当于干面50 g。</li><li>🥚 鸡蛋未熟时可继续留在锅里煮，不必等鸡蛋才捞面。</li></ol>
-<ol lang="en" class="cooking-source-en" hidden><li>At 8 minutes, check the 🍝 spaghetti according to its package; lift out with tongs when done and reserve a little 💧 pasta water. Keep all the spaghetti together for tossing with sauce, then divide equally between meals 3 and 6, each equivalent to 50 g dry pasta.</li><li>Leave the 🥚 eggs in the pot if they need longer; do not overcook the pasta while waiting.</li></ol>
+<ol lang="zh-CN" class="cooking-source-zh"><li>确认🥚 鸡蛋蛋白、蛋黄凝固后捞出，放入另一容器的💧 冷水中冷却；未熟则继续煮。</li><li>保留原锅💧 水，接下来用来煮饺子。</li></ol>
+<ol lang="en" class="cooking-source-en" hidden><li>Remove the 🥚 eggs once whites and yolks are set, then cool in cold 💧 water in a separate container; cook longer if needed.</li><li>Keep the 💧 water in Pot 1 for the dumplings.</li></ol>
 </li>
 <li class="cooking-task-source">
-<ol lang="zh-CN" class="cooking-source-zh"><li>8分钟后检查🥚 鸡蛋，蛋白、蛋黄都凝固后取出，放💧 冷水冷却；未熟则继续煮。</li><li>8分钟是首次检查时间，不保证不同大小、起始温度的鸡蛋都已全熟。</li></ol>
-<ol lang="en" class="cooking-source-en" hidden><li>Check the 🥚 eggs at 8 minutes. Remove once whites and yolks are set, then cool in cold 💧 water; continue cooking if needed.</li><li>Eight minutes is the first check, not a guarantee of doneness for every egg size and starting temperature.</li></ol>
+<ol lang="zh-CN" class="cooking-source-zh"><li>调大火，让原锅💧 水重新烧开；开始回烧后即可勾选。</li><li>不必等鸡蛋剥壳；回烧期间可剥蛋或做其他任务。</li></ol>
+<ol lang="en" class="cooking-source-en" hidden><li>Increase the heat to bring the existing 💧 water back to a boil; check once heating starts.</li><li>Do not wait for peeling; peel the eggs or do other tasks while the water heats.</li></ol>
 </li>
 <li class="cooking-task-source">
-<ol lang="zh-CN" class="cooking-source-zh">
-<li>冷却后剥壳。</li>
-<li>第1盘放2个，第2、3、5、6盘各1个，第4、7盘不放鸡蛋。</li>
-<li>第5盘的掰碎，第1盘的切片。</li>
-</ol>
-<ol lang="en" class="cooking-source-en" hidden>
-<li>Cool and peel the eggs.</li>
-<li>Put 2 whole 🥚 eggs in meal 1 and 1 each in meals 2, 3, 5 and 6; no eggs in meals 4 or 7.</li>
-<li>Crumble the eggs for meal 5 and slice the eggs for meal 1.</li>
-</ol>
+<ol lang="zh-CN" class="cooking-source-zh"><li>看到原锅💧 水再次持续沸腾后再勾选，随后可以下🥟 水饺。</li></ol>
+<ol lang="en" class="cooking-source-en" hidden><li>Check only once the retained 💧 water boils steadily again; the 🥟 dumplings can then be added.</li></ol>
+</li>
+<li class="cooking-task-source">
+<ol lang="zh-CN" class="cooking-source-zh"><li>原锅水沸腾后下冷冻🥟 水饺9个（216 g），轻推防粘；下好后勾选。</li><li>等💧 水恢复沸腾后保持温和滚煮，不需要反复加冷水；等待时可穿插其他任务。</li></ol>
+<ol lang="en" class="cooking-source-en" hidden><li>Add 9 frozen 🥟 dumplings (216 g) to the reboiled water and gently stir to prevent sticking; check after loading.</li><li>Once the 💧 water returns to a boil, maintain a gentle boil without repeatedly adding cold water; other tasks can be done while waiting.</li></ol>
+</li>
+<li class="cooking-task-source">
+<ol lang="zh-CN" class="cooking-source-zh"><li>优先按包装要求检查熟度；复沸后约6–8分钟作为检查参考，确认中心热透至74°C后捞出。</li><li>沥干放第4盘。</li></ol>
+<ol lang="en" class="cooking-source-en" hidden><li>Follow package instructions first; about 6–8 minutes after returning to a boil is a check point, not a verified package time. Remove once the centre reaches 74°C.</li><li>Drain into meal 4.</li></ol>
+</li>
+<li class="cooking-task-source">
+<ol lang="zh-CN" class="cooking-source-zh"><li>🥚 鸡蛋冷却后剥壳，可在原锅回烧或煮饺子时完成。</li><li>第1盘放2个，第2、3、5、6盘各1个，第4、7盘不放鸡蛋。</li><li>第5盘的掰碎，第1盘的切片。</li></ol>
+<ol lang="en" class="cooking-source-en" hidden><li>Peel the cooled 🥚 eggs while the pot reheats or the dumplings cook.</li><li>Put 2 whole 🥚 eggs in meal 1 and 1 each in meals 2, 3, 5 and 6; no eggs in meals 4 or 7.</li><li>Crumble the eggs for meal 5 and slice the eggs for meal 1.</li></ol>
 </li>
 </ol>
 
-<h2 id="pot-two" data-en="Pot 2">煮锅二线程</h2>
+<h2 id="pot-two" data-en="Pot 2 · Spaghetti">煮锅二线程 · 意面</h2>
 <ol>
 <li class="cooking-task-source">
-<ol lang="zh-CN" class="cooking-source-zh">
-<li>煮锅二加入💧 水，开火烧水；开火后即可勾选这一步。</li>
-</ol>
-<ol lang="en" class="cooking-source-en" hidden>
-<li>Add 💧 water to Pot 2 and turn on the heat. Check this step once heating has started.</li>
-</ol>
+<ol lang="zh-CN" class="cooking-source-zh"><li>煮锅二加入💧 水，开火烧水；可与煮锅一并行。</li></ol>
+<ol lang="en" class="cooking-source-en" hidden><li>Add 💧 water to Pot 2 and turn on the heat; this pot can run alongside Pot 1.</li></ol>
 </li>
 <li class="cooking-task-source">
-<ol lang="zh-CN" class="cooking-source-zh">
-<li>看到💧 水持续沸腾后再勾选，随后放入食材；烧水不设固定时长。</li>
-</ol>
-<ol lang="en" class="cooking-source-en" hidden>
-<li>Check only when the 💧 water reaches a steady boil, then add the food. No fixed boiling time.</li>
-</ol>
+<ol lang="zh-CN" class="cooking-source-zh"><li>确认💧 水持续沸腾后勾选；不必等待鸡蛋或饺子。</li></ol>
+<ol lang="en" class="cooking-source-en" hidden><li>Confirm a steady 💧 boil; there is no need to wait for eggs or dumplings.</li></ol>
 </li>
 <li class="cooking-task-source">
-<ol lang="zh-CN" class="cooking-source-zh">
-<li>冷冻🥟 水饺9个（216 g）下💧 沸水，按包装煮至中心74°C，约6–8分钟。</li>
-<li>放入后勾选这一步；留意沸溢，等待时可穿插其他任务。</li>
-</ol>
-<ol lang="en" class="cooking-source-en" hidden>
-<li>Add 9 frozen 🥟 dumplings (216 g) to boiling 💧 water.</li>
-<li>Check after adding the food. Watch for boil-over while doing other tasks.</li>
-</ol>
+<ol lang="zh-CN" class="cooking-source-zh"><li>放入🍝 两餐合计干意面100 g，轻轻搅散，放好后勾选。</li><li>恢复沸腾后按包装时间煮，约8分钟检查；等待时可做其他任务。</li></ol>
+<ol lang="en" class="cooking-source-en" hidden><li>Add all 100 g dry 🍝 spaghetti for both meals, gently separate the strands and check after loading.</li><li>Once boiling resumes, cook according to the package and check at about 8 minutes; work on other tasks while waiting.</li></ol>
 </li>
 <li class="cooking-task-source">
-<ol lang="zh-CN" class="cooking-source-zh">
-<li>按包装时间检查水饺熟度，再取出。</li>
-<li>沥干放第4盘。</li>
-</ol>
-<ol lang="en" class="cooking-source-en" hidden>
-<li>Check the dumplings for doneness at the package time before removing.</li>
-<li>Follow the pack, checking for a 74°C centre after about 6–8 minutes.</li>
-<li>Drain into meal 4.</li>
-</ol>
+<ol lang="zh-CN" class="cooking-source-zh"><li>按包装时间和口感确认🍝 意面熟度后捞出，留少量💧 面水。</li><li>全部意面留待同锅拌酱后再均分，第3、6盘各相当于干面50 g。</li></ol>
+<ol lang="en" class="cooking-source-en" hidden><li>Check the 🍝 spaghetti for doneness according to the package, then drain, reserving a little 💧 pasta water.</li><li>Keep all spaghetti together for mixing with sauce, then divide equally between meals 3 and 6, each equivalent to 50 g dry pasta.</li></ol>
 </li>
 </ol>
 

@@ -165,8 +165,8 @@ test('refrigeration waits for food and cleanup runs last', () => {
   assert.equal(nodes.find(n=>n.id==='clean').before[0], 'refrigerate');
   assert.ok(result.starts.clean >= result.ends.refrigerate);
   assert.equal(nodes.find(n=>n.id==='eggs').resource, 'pot-1');
-  assert.equal(nodes.find(n=>n.id==='dumplings').resource, 'pot-2');
-  assert.equal(nodes.find(n=>n.id==='pasta').resource, 'pot-1');
+  assert.equal(nodes.find(n=>n.id==='dumplings').resource, 'pot-1');
+  assert.equal(nodes.find(n=>n.id==='pasta').resource, 'pot-2');
   assert.ok(!nodes.some(n=>n.id==='noodles'));
 });
 

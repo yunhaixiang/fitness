@@ -17,7 +17,7 @@ function prerequisites(nodes,id) {
 }
 for(const [plan,nodes] of [['current',current],['historical',historical]]) {
  test(`${plan}: water heating, boiling confirmation, loading and removal are independent checkpoints`,()=>{
-  const loading=plan==='current'?'eggs-pasta-start':'eggs-start';
+  const loading='eggs-start';
   let done=complete(nodes,[],'egg-water-start');
   let view=derive(nodes,done);
   assert.ok(view.available.some(n=>n.id==='egg-water'));
@@ -75,22 +75,39 @@ for(const [plan,nodes] of [['current',current],['historical',historical]]) {
   assert.ok(!after.includes('chicken'));assert.ok(after.includes('rice'));
  });
 }
-test('all spaghetti cooks with eggs in Pot1 and each can be removed independently',()=>{
- let done=['egg-water-start','egg-water'];
- done=complete(current,done,'eggs-pasta-start');
- assert.ok(!current.some(n=>['noodles-start','noodles','pasta-start'].includes(n.id)));
+test('all spaghetti cooks independently in Pot2 while eggs use Pot1',()=>{
+ let done=['egg-water-start','egg-water','pasta-water-start','pasta-water'];
+ done=complete(current,done,'eggs-start');
+ done=complete(current,done,'pasta-start');
  assert.ok(derive(current,done).available.some(n=>n.id==='eggs'));
  done=complete(current,done,'pasta');
  assert.ok(!done.includes('eggs'));
  assert.ok(derive(current,done).available.some(n=>n.id==='eggs'));
- done=complete(current,done,'prep-noodle-sauce');
- done=complete(current,done,'prep-zucchini');
- assert.ok(derive(current,done).available.some(n=>n.id==='ground'));
+ assert.ok(!current.some(n=>n.id==='eggs-pasta-start'));
 });
-test('dumplings cook independently in Pot2 while eggs and all pasta use Pot1',()=>{
- let done=['egg-water-start','egg-water','pasta-water-start','pasta-water'];
- done=complete(current,done,'eggs-pasta-start');done=complete(current,done,'dumplings-start');
+test('dumplings wait for egg removal and a separately confirmed reboil; peeling is independent',()=>{
+ let done=['egg-water-start','egg-water'];
+ done=complete(current,done,'eggs-start');
+ assert.ok(!derive(current,done).available.some(n=>n.id==='dumpling-water-start'));
+ done=complete(current,done,'eggs');
+ assert.ok(derive(current,done).available.some(n=>n.id==='peel-eggs'));
+ done=complete(current,done,'dumpling-water-start');
+ assert.ok(!derive(current,done).available.some(n=>n.id==='dumplings-start'));
+ done=complete(current,done,'dumpling-water');
+ done=complete(current,done,'dumplings-start');
  assert.ok(derive(current,done).available.some(n=>n.id==='dumplings'));
+ assert.ok(derive(current,done).available.some(n=>n.id==='peel-eggs'));
+ const undone=toggle(current,done,'first','dumpling-water',false);
+ assert.ok(!undone.includes('dumplings-start'));
+ assert.ok(undone.includes('eggs'));
+});
+test('old combined-pot completion migrates once and does not undo new edits',()=>{
+ const state=readState(JSON.stringify({version:5,done:['egg-water-start','egg-water','eggs-pasta-start','eggs','pasta','dumplings-start','dumplings']}));
+ const done=derive(current,state.done).done;
+ for(const id of ['eggs','pasta','dumplings']) assert.ok(done.includes(id));
+ assert.ok(!state.done.includes('eggs-pasta-start'));
+ const undone=toggle(current,done,'first','dumpling-water',false);
+ assert.ok(!readState(JSON.stringify({version:5,done:undone})).done.includes('dumpling-water'));
 });
 test('both fish share loading and removal after both preparations',()=>{
  let done=['air-heat-start','air-heat','prep-salmon'];

@@ -57,6 +57,17 @@
     // rather than merging marks from separate cooking sessions.
     const legacyHalf = parsed?.half === 'second' ? 'second' : 'first';
     const done = strings([2, 3, 4, 5].includes(parsed?.version) ? parsed.done : parsed?.[legacyHalf]);
+    // Retire the former combined loading step once when reading saved progress.
+    const combinedEggPasta = done.includes('eggs-pasta-start');
+    if (combinedEggPasta) {
+      done.splice(done.indexOf('eggs-pasta-start'), 1);
+      if (!done.includes('eggs-start')) done.push('eggs-start');
+      // Preserve finished pasta; do not pretend an unfinished batch moved pots.
+      if (done.includes('pasta')) for (const id of ['pasta-water-start', 'pasta-water', 'pasta-start']) if (!done.includes(id)) done.push(id);
+    }
+    if ((combinedEggPasta || parsed?.version !== 5) && done.includes('eggs') && done.includes('dumplings')) {
+      for (const id of ['dumpling-water-start', 'dumpling-water']) if (!done.includes(id)) done.push(id);
+    }
     for (const id of ['oven-heat', 'air-heat']) if (done.includes(id) && !done.includes(id + '-start')) done.push(id + '-start');
     // A completed legacy finish task included all three newly separated tasks.
     if (done.includes('finish')) {
