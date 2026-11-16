@@ -1,8 +1,9 @@
 <p class="meal-summary-note" data-en="Meat and vegetables: raw weight. Grains: dry weight. Canned foods: drained weight. Calories include sauces and cooking oil.">肉类、蔬菜按生重，谷物按干重，罐头按沥干重；热量含酱料和烹调用油。</p>
-<div class="table-wrap meal-summary-scroll" tabindex="0" role="region" aria-label="半周七餐计划">
+<div class="table-wrap meal-summary-scroll" tabindex="0" role="region" aria-label="饮食计划">
 <table class="meal-summary-table">
 <thead><tr><th scope="col" data-en="Meal">餐次</th><th scope="col" data-en="Protein Foods">蛋白质食材</th><th scope="col" data-en="Vegetables">蔬菜</th><th scope="col" data-en="Carbs and Sauces">碳水与酱料</th><th scope="col" class="meal-summary-numeric" data-en="Calories (kcal)">热量（kcal）</th><th scope="col" class="meal-summary-numeric" data-en="Protein (g)">蛋白质（g）</th><th scope="col" class="meal-summary-numeric" data-en="Carbs (g)">碳水（g）</th><th scope="col" class="meal-summary-numeric" data-en="Fat (g)">脂肪（g）</th></tr></thead>
 <tbody>
+{% include nutrition-daily-meals.html meals=site.data.meal_nutrition.meals keys="fruit_breakfast,late_fruit_breakfast" %}
 {% for key in site.data.nutrition_basis.mealKeys %}
 {% assign portion = site.data.nutrition_basis.recipes[forloop.index0] %}
 {% assign egg_whole = portion.egg | floor %}
@@ -52,5 +53,6 @@
 <td class="meal-summary-numeric">{{ site.data.meal_nutrition.meals[key].fat }}</td>
 </tr>
 {% endfor %}
+{% include nutrition-daily-meals.html meals=site.data.meal_nutrition.meals keys="fruit_snack,late_fruit_snack" %}
 </tbody></table>
 </div>

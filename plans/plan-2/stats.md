@@ -31,7 +31,7 @@ nutrition: true
 
 
 
-<h2 id="half-week-meals" data-en="Seven-Meal Plan">半周七餐计划</h2>
+<h2 id="half-week-meals" data-en="Meal Plan">饮食计划</h2>
 
 {% include meal-plans/plan-2/nutrition-meal-summary.html %}
 
