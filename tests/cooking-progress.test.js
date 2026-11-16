@@ -17,14 +17,15 @@ function prerequisites(nodes,id) {
 }
 for(const [plan,nodes] of [['current',current],['historical',historical]]) {
  test(`${plan}: water heating, boiling confirmation, loading and removal are independent checkpoints`,()=>{
+  const loading=plan==='current'?'eggs-pasta-start':'eggs-start';
   let done=complete(nodes,[],'egg-water-start');
   let view=derive(nodes,done);
   assert.ok(view.available.some(n=>n.id==='egg-water'));
   assert.ok(view.available.some(n=>n.id==='prep-rice'));
-  assert.ok(!view.available.some(n=>n.id==='eggs-start'));
+  assert.ok(!view.available.some(n=>n.id===loading));
   assert.notEqual(view.recommended,'egg-water');
   done=complete(nodes,done,'egg-water');
-  done=complete(nodes,done,'eggs-start');
+  done=complete(nodes,done,loading);
   assert.ok(derive(nodes,done).available.some(n=>n.id==='eggs'));
   assert.ok(!derive(nodes,done).available.some(n=>n.id==='peel-eggs'));
   done=complete(nodes,done,'eggs');
@@ -69,16 +70,21 @@ for(const [plan,nodes] of [['current',current],['historical',historical]]) {
   assert.ok(!after.includes('chicken'));assert.ok(after.includes('rice'));
  });
 }
-test('same-pot noodles can cook in either order, but only one batch occupies the pot',()=>{
- for(const [first,second] of [['pasta','noodles'],['noodles','pasta']]) {
-  let done=['pasta-water-start','pasta-water'];
-  done=complete(current,done,first+'-start');
-  assert.ok(!derive(current,done).available.some(n=>n.id===second+'-start'));
-  assert.deepEqual(toggle(current,done,'first',second+'-start',true),done);
-  assert.ok(derive(current,done).available.some(n=>n.id==='prep-bread'));
-  done=complete(current,done,first);done=complete(current,done,second+'-start');
-  assert.ok(!done.includes(second));
- }
+test('eggs and one pasta portion load together; pasta can be removed before eggs',()=>{
+ let done=['egg-water-start','egg-water'];
+ done=complete(current,done,'eggs-pasta-start');
+ assert.ok(derive(current,done).available.some(n=>n.id==='eggs'));
+ assert.ok(derive(current,done).available.some(n=>n.id==='pasta'));
+ assert.ok(!derive(current,done).available.some(n=>n.id==='dumplings-start'));
+ done=complete(current,done,'pasta');
+ assert.ok(!derive(current,done).available.some(n=>n.id==='dumplings-start'));
+ done=complete(current,done,'eggs');
+ assert.ok(derive(current,done).available.some(n=>n.id==='dumplings-start'));
+});
+test('the other pasta portion can cook simultaneously in Pot2',()=>{
+ let done=['egg-water-start','egg-water','pasta-water-start','pasta-water'];
+ done=complete(current,done,'eggs-pasta-start');done=complete(current,done,'noodles-start');
+ assert.ok(derive(current,done).available.some(n=>n.id==='noodles'));
 });
 test('both fish share loading and removal after both preparations',()=>{
  let done=['air-heat-start','air-heat','prep-salmon'];

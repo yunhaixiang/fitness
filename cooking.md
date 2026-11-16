@@ -263,22 +263,16 @@ cooking: true
 </ol>
 </li>
 <li class="cooking-task-source">
-<ol lang="zh-CN" class="cooking-source-zh">
-<li>下🥚 鸡蛋6个，💧 水开后煮约9分钟至蛋白蛋黄凝固。</li>
-<li>放入后勾选这一步；留意沸溢，等待时可穿插其他任务。</li>
-</ol>
-<ol lang="en" class="cooking-source-en" hidden>
-<li>Add 6 🥚 eggs and boil for about 9 minutes until firm.</li>
-<li>Check after adding the food. Watch for boil-over while doing other tasks.</li>
-</ol>
+<ol lang="zh-CN" class="cooking-source-zh"><li>💧 水开后轻放🥚 鸡蛋6个，同时下🍝 干意面50 g，轻轻搅散；锅内留足空间。</li><li>两种食材一起开始计时，8分钟后检查；放好后勾选，期间可做其他任务。</li></ol>
+<ol lang="en" class="cooking-source-en" hidden><li>Once the 💧 water boils, gently add 6 🥚 eggs and 50 g dry 🍝 spaghetti together; separate the strands gently and leave enough space.</li><li>Start one 8-minute timer for the first check. Mark this step after loading; work on other tasks meanwhile.</li></ol>
 </li>
 <li class="cooking-task-source">
-<ol lang="zh-CN" class="cooking-source-zh">
-<li>约9分钟后，确认🥚 蛋白蛋黄凝固，捞出放💧 冷水冷却，保留锅内热水。</li>
-</ol>
-<ol lang="en" class="cooking-source-en" hidden>
-<li>After about 9 minutes, confirm the 🥚 eggs are set; lift into cold 💧 water to cool and keep the hot water in the pot.</li>
-</ol>
+<ol lang="zh-CN" class="cooking-source-zh"><li>8分钟后按包装要求检查🍝 意面，熟了先用夹子捞出，留少量💧 面水；意面给第7盘。</li><li>🥚 鸡蛋未熟时可继续留在锅里煮，不必等鸡蛋才捞面。</li></ol>
+<ol lang="en" class="cooking-source-en" hidden><li>At 8 minutes, check the 🍝 spaghetti according to its package; lift out with tongs when done and reserve a little 💧 pasta water for meal 7.</li><li>Leave the 🥚 eggs in the pot if they need longer; do not overcook the pasta while waiting.</li></ol>
+</li>
+<li class="cooking-task-source">
+<ol lang="zh-CN" class="cooking-source-zh"><li>8分钟后检查🥚 鸡蛋，蛋白、蛋黄都凝固后取出，放💧 冷水冷却；未熟则继续煮。</li><li>8分钟是首次检查时间，不保证不同大小、起始温度的鸡蛋都已全熟。</li></ol>
+<ol lang="en" class="cooking-source-en" hidden><li>Check the 🥚 eggs at 8 minutes. Remove once whites and yolks are set, then cool in cold 💧 water; continue cooking if needed.</li><li>Eight minutes is the first check, not a guarantee of doneness for every egg size and starting temperature.</li></ol>
 </li>
 <li class="cooking-task-source">
 <ol lang="zh-CN" class="cooking-source-zh">
@@ -331,26 +325,6 @@ cooking: true
 </ol>
 <ol lang="en" class="cooking-source-en" hidden>
 <li>Check only when the 💧 water reaches a steady boil, then add the food. No fixed boiling time.</li>
-</ol>
-</li>
-<li class="cooking-task-source">
-<ol lang="zh-CN" class="cooking-source-zh">
-<li>锅空且💧 水沸后，下🍝 干意面50 g，按包装时间煮约8分钟。</li>
-<li>放入后勾选这一步；留意沸溢，等待时可穿插其他任务。</li>
-</ol>
-<ol lang="en" class="cooking-source-en" hidden>
-<li>When the pot is free and the 💧 water is boiling, add 50 g dry 🍝 spaghetti and cook for about 8 minutes, following the pack.</li>
-<li>Check after adding the food. Watch for boil-over while doing other tasks.</li>
-</ol>
-</li>
-<li class="cooking-task-source">
-<ol lang="zh-CN" class="cooking-source-zh">
-<li>按包装时间检查意面熟度，再取出。</li>
-<li>用夹子或漏勺捞出，保留锅内💧 热水，另留少量💧 面水用于拌酱。</li>
-</ol>
-<ol lang="en" class="cooking-source-en" hidden>
-<li>Check the spaghetti for doneness at the package time before removing.</li>
-<li>Lift out with tongs or a strainer, keeping the hot 💧 water in the pot and reserving a little for the sauce.</li>
 </ol>
 </li>
 <li class="cooking-task-source">

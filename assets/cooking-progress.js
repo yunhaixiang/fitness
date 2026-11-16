@@ -9,6 +9,7 @@
       if (['salmon-start', 'haddock-start'].every(id => previous.includes(id))) previous.push('fish-start');
       if (['salmon', 'haddock'].every(id => previous.includes(id))) previous.push('fish');
     }
+    if (byId.has('eggs-pasta-start') && ['eggs-start', 'pasta-start'].every(id => previous.includes(id))) previous.push('eggs-pasta-start');
     const done = new Set(previous.filter(id => byId.has(id)));
     const complete = id => done.has(id);
     const satisfied = n => n.before.every(complete);
@@ -37,7 +38,7 @@
     };
     // Use already-heated appliances promptly; otherwise prioritize the longest remaining chain.
     const urgent = n => ['fish-start', 'salmon-start', 'haddock-start'].includes(n.id) && done.has('air-heat') ? 2
-      : ['eggs-start', 'pasta-start', 'dumplings-start', 'noodles-start'].includes(n.id) ? 1 : 0;
+      : ['eggs-pasta-start', 'eggs-start', 'pasta-start', 'dumplings-start', 'noodles-start'].includes(n.id) ? 1 : 0;
     available.sort((a,b) => Number(!!a.confirmation) - Number(!!b.confirmation) || urgent(b) - urgent(a) || length(b.id) - length(a.id));
     return { done: [...done], active, available, recommended: available[0]?.id || null, ready: true, total: active.length };
   }
@@ -165,7 +166,7 @@
     if (view.recommended) {
       suggestion.append(create('strong', '', t('推荐下一步', 'Recommended Next')), action(view.available[0], true));
       const next = view.available[0];
-      const reason = ['fish-start','salmon-start','haddock-start','eggs-start','pasta-start','dumplings-start','noodles-start'].includes(next.id) ? t('加热已就绪，优先接着烹调。', 'The appliance is ready; continue cooking promptly.') : t('优先启动耗时较长的后续流程。', 'Start the longer remaining chain first.');
+      const reason = ['fish-start','salmon-start','haddock-start','eggs-pasta-start','eggs-start','pasta-start','dumplings-start','noodles-start'].includes(next.id) ? t('加热已就绪，优先接着烹调。', 'The appliance is ready; continue cooking promptly.') : t('优先启动耗时较长的后续流程。', 'Start the longer remaining chain first.');
       suggestion.append(create('span', 'cooking-progress-reason', next.confirmation ? (next.waitKind === 'boil' ? t('水持续沸腾后再确认。', 'Confirm once the water is boiling steadily.') : next.waitKind === 'food' ? t('按步骤检查熟度或时间，再确认；等待期间可做其他任务。', 'Check doneness or the stated time before confirming; other tasks can be done while waiting.') : t('达到预热温度后再确认。', 'Confirm once the target temperature is reached.')) : reason));
       const others = view.available.slice(1);
       if (others.length) { readyList.append(create('strong', '', t('现在也可以做', 'Also Ready'))); const list = create('div', 'cooking-flow-chip-list'); others.forEach(n => list.append(action(n, false))); readyList.append(list); }
