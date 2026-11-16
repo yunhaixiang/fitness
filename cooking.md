@@ -34,10 +34,10 @@ cooking: true
 </li>
 <li class="cooking-task-source">
 <ol lang="zh-CN" class="cooking-source-zh">
-<li>约50分钟后，确认电饭煲完成煮饭，再开盖松散，将🍚 米饭放第2盘；食用前撒🌾 熟芝麻5 g。</li>
+<li>约50分钟后，确认电饭煲完成煮饭，再开盖松散，将🍚 米饭放第2盘。</li>
 </ol>
 <ol lang="en" class="cooking-source-en" hidden>
-<li>After about 50 minutes, confirm the rice cycle is complete, then fluff and serve the 🍚 rice in meal 2; sprinkle with 5 g 🌾 toasted sesame seeds before eating.</li>
+<li>After about 50 minutes, confirm the rice cycle is complete, then fluff and serve the 🍚 rice in meal 2.</li>
 </ol>
 </li>
 </ol>

@@ -218,13 +218,12 @@ visual: true
 <tr data-price-id="39" data-weekly-cost="2.64" data-purchase-group="weekly"><td data-en="Zucchini">西葫芦</td><td><a href="https://www.walmart.ca/en/ip/Zucchini-Green/6000191270110">Green Zucchini</a><br><span data-en="Sold Individually">单颗售卖</span></td><td data-en="4 / Week">4根 / 周</td><td><a href="https://www.walmart.ca/en/ip/Zucchini-Green/6000191270110">$0.66 / Avg.</a></td></tr>
 <tr data-price-id="45" data-weekly-cost="1.48" data-purchase-group="weekly"><td data-en="No Salt Added Chickpeas">无添加盐鹰嘴豆</td><td><a href="https://www.walmart.ca/en/ip/Great-Value-No-Salt-Chick-Peas/10275066">Great Value No Salt Chick Peas</a><br>540 mL</td><td data-en="1 Can / Week">1罐 / 周</td><td><a href="https://www.walmart.ca/en/ip/Great-Value-No-Salt-Chick-Peas/10275066">$1.48</a></td></tr>
 
-<tr data-price-id="59" data-weekly-cost="0.22" data-purchase-group="restock"><td data-en="Toasted White Sesame Seeds">熟白芝麻</td><td><a href="https://www.walmart.ca/en/ip/Roasted-Sesame-Seed/6000196393577">Heiwa Roasted White Sesame Seed</a><br>227 g</td><td data-en="10 g / Week; 1 Bottle / About 23 Weeks">每周10 g；1瓶 / 约23周</td><td><a href="https://www.walmart.ca/en/ip/Roasted-Sesame-Seed/6000196393577">$4.97</a></td></tr>
 <tr data-price-id="60" data-weekly-cost="5.10" data-purchase-group="restock"><td data-en="Crispy Breaded Haddock">裹粉黑线鳕</td><td><a href="https://www.walmart.ca/en/ip/High-Liner-Signature-Cuts-Crispy-Breaded-Haddock-425-g/6000199850269">High Liner Signature Cuts Crispy Breaded Haddock</a><br><span data-en="425 g · 5 Fillets">425 g · 5块</span></td><td data-en="1 Box / 2.5 Weeks · 2 Fillets / Week">1盒 / 2.5周 · 每周2块</td><td><a href="https://www.walmart.ca/en/ip/High-Liner-Signature-Cuts-Crispy-Breaded-Haddock-425-g/6000199850269">$12.74</a></td></tr>
 <tr>
 <td>每周合计</td>
 <td>—</td>
 <td style="text-align: right;">—</td>
-<td style="text-align: right;">$157.81</td>
+<td style="text-align: right;">$157.59</td>
 </tr>
 </tbody>
 </table>
