@@ -106,7 +106,7 @@
       card.dataset.nutrient = key;
       if (state) card.dataset.tier = state;
       const head = el('div', 'nutrient-card-heading');
-      head.append(el('h3', '', val(row, 0)), el('span', `nutrient-tier-badge tier-${state || 'pending'}`, state ? (proxy ? tr('关联：', 'Linked: ') : '') + names[state] : tr('待同步', 'Awaiting data')));
+      head.append(el('h3', '', val(row, 0)), el('span', `nutrient-tier-badge tier-${state || 'pending'}`, state ? (proxy ? (key === 'sugar' ? tr('参考添加糖：', 'Added sugar: ') : tr('参考饱和脂肪：', 'Saturated fat: ')) : '') + names[state] : tr('待同步', 'Awaiting data')));
       card.append(head, el('strong', 'visual-metric-large', val(row, 1)));
       if (current && own.factor) {
         const [low, high] = current.values.map(v => fmt(v * own.factor / kcal * 100));

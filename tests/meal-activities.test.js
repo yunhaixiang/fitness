@@ -39,3 +39,17 @@ for (const language of ['zh','en']) test(`Metro fruit shopping appears once per 
   assert.equal(shopping,1);
  }
 });
+
+for (const language of ['zh','en']) test(`cooking precedes the first meal of each batch (${language})`, () => {
+ const window={fitnessI18n:{language},fitnessMealPlan:{urlFor:()=>'/fitness/cooking/'}};
+ const document={createElement:node,createElementNS:(_,tag)=>node(tag),querySelector:()=>({href:'/fitness/strength/'})};
+ vm.runInNewContext(source,{window,document});
+ for (const compact of [false,true]) {
+  const cooking=[];
+  for(let day=0;day<7;day++) for(const slot of ['before-breakfast','before-lunch','lunch','before-dinner','dinner']) {
+   const root=node('main');window.fitnessMealActivities.append(root,day,slot,compact);
+   for(const card of root.children.filter(n=>n.dataset.activity==='cooking')) cooking.push([day,slot]);
+  }
+  assert.deepEqual(cooking,[[0,'before-lunch'],[3,'before-dinner']]);
+ }
+});

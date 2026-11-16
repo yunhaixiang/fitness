@@ -145,8 +145,9 @@
         ]);
         const meal = nutrition[row.dataset.nutritionKey];
         if (meal) addNutrition(card, meal);
-        list.append(card);
         const mealKind = value(row, 2) === label('午餐', 'Lunch') ? 'lunch' : 'dinner';
+        window.fitnessMealActivities.append(list, dayIndex, `before-${mealKind}`);
+        list.append(card);
         window.fitnessMealActivities.append(list, dayIndex, mealKind);
       }
       list.append(dailyCard(dayIndex, true));
