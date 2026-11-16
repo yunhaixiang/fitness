@@ -473,7 +473,7 @@
       "tortilla": 1,
       "thigh": 1.1625,
       "egg": 1,
-      "pepper": 1.5,
+      "pepper": 0.75,
       "mayo": 1,
       "oil": 0.1875,
       "chickpeas": 2.16
@@ -525,7 +525,8 @@
     "2026-11-14: reorder the repeating half-week to bread, rice, dumpling, noodles, wrap, potato, pasta. Preserve every food quantity and weekly nutrition. Practical freshness/variety constraints: sandwich first; all fish/shrimp dishes within first4 slots; wrap maximally separated from sandwich; avoid adjacent rice/noodles, potato/dumpling, pasta/noodles and wrap/bread. Among the4 feasible permutations, minimize the sum of squared coefficients of variation of full-day kcal, protein, carbs, fat and sodium, using the actual Sunday-to-Saturday lunch/dinner pairs plus existing breakfast/snack portions. This is a planning tradeoff, not a validated clinical optimum or a food-safety guarantee. No new freezing requirement at user request; existing storage instructions remain.",
     "2026-11-15: User reports two Coho salmon portions total316 g per weekly pack; model one fillet per dumpling meal as158 g. Existing per100 g composition retained.",
     "Spinach: four 142 g Your Fresh Market Baby Spinach bags weekly replace the previous two bags plus 227 g mushrooms. Each half-week uses two bags, reserves 10 g raw for the sandwich, and cooks the remaining 274 g with 3/4 tsp oil, split equally between meals 3 and 6 (137 g raw each). Total cooking oil unchanged.",
-    "2026-11-15: meal4 replaces rice noodles and the mixed salty sauce with 60 g dry Primo spaghetti and 150 mL Catelli Garden Select Tomato & Basil; omit its sesame topping, retain protein, vegetables and cooking oil. Meal7 uses 50 g dry spaghetti and 150 mL of the same sauce, replacing tomato paste. One 600 mL jar and 220 g dry spaghetti weekly. Sauce unit125 mL: official label50 kcal, P1/C9/F1.5/SFA0.2 g, sugar5 g, Na330 mg; fibre2 g from retailer label because official text omits fibre. https://www.kraftheinz.com/en-CA/catelli/products/00064200010122-garden-select-tomato-basil-pasta-sauce ; https://voila.ca/products/catelli-garden-select-pasta-sauce-tomato-basil-600-ml/1296172EA . Older retail labels show380 mg sodium; current manufacturer330 mg used, actual package takes precedence. Rice remains60 g, curry18 g and rice sesame5 g per serving."
+    "2026-11-15: meal4 replaces rice noodles and the mixed salty sauce with 60 g dry Primo spaghetti and 150 mL Catelli Garden Select Tomato & Basil; omit its sesame topping, retain protein, vegetables and cooking oil. Meal7 uses 50 g dry spaghetti and 150 mL of the same sauce, replacing tomato paste. One 600 mL jar and 220 g dry spaghetti weekly. Sauce unit125 mL: official label50 kcal, P1/C9/F1.5/SFA0.2 g, sugar5 g, Na330 mg; fibre2 g from retailer label because official text omits fibre. https://www.kraftheinz.com/en-CA/catelli/products/00064200010122-garden-select-tomato-basil-pasta-sauce ; https://voila.ca/products/catelli-garden-select-pasta-sauce-tomato-basil-600-ml/1296172EA . Older retail labels show380 mg sodium; current manufacturer330 mg used, actual package takes precedence. Rice remains60 g, curry18 g and rice sesame5 g per serving.",
+    "2026-11-15: halve orange bell pepper in each wrap to half a pepper, 75 g edible. One whole pepper (about170 g before trimming) weekly. Other ingredients unchanged."
   ],
   "sources": {
     "shrimp": "https://www.walmart.ca/en/ip/Great-Value-Wild-Argentinian-Large-Raw-Shrimp/6000202999819",

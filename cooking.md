@@ -457,12 +457,12 @@ cooking: true
 <li class="cooking-task-source">
 <ol lang="zh-CN" class="cooking-source-zh">
 <li>在第5盘的🌯 卷饼皮上抹上🥣 Chipotle蛋黄酱1茶匙（5 mL；酱条直径约0.8 cm时，挤约10 cm长）。</li>
-<li>1个🫑 橙甜椒洗净去籽切细条，放到卷饼皮上。</li>
+<li>½个🫑 橙甜椒（可食部分75 g）洗净去籽切细条，放到卷饼皮上。</li>
 <li>多余卷饼皮冷冻。</li>
 </ol>
 <ol lang="en" class="cooking-source-en" hidden>
 <li>Spread the 🌯 tortilla on plate 5 with 1 tsp 🥣 Chipotle mayonnaise (5 mL; about 10 cm squeezed length at a strand diameter of 0.8 cm).</li>
-<li>Wash, deseed and slice one 🫑 orange bell pepper, then add to the tortilla.</li>
+<li>Wash, deseed and slice ½ 🫑 orange bell pepper (75 g edible portion), then add to the tortilla.</li>
 <li>Freeze spare tortillas.</li>
 </ol>
 </li>
