@@ -35,15 +35,4 @@
     row.append(node('span', event.time, 'sleep-time'), details);
     timeline.append(row);
   }
-  if (plan.medicationNotes?.length) {
-    document.getElementById('sleep-medications').hidden = false;
-    const notes = document.getElementById('sleep-medication-notes');
-    for (const note of plan.medicationNotes) notes.append(node('li', label(note)));
-    for (const source of plan.sources || []) {
-      if (!source.url?.startsWith('https://')) continue;
-      const link = node('a', label(source));
-      link.href = source.url;
-      document.getElementById('sleep-medication-sources').append(link);
-    }
-  }
 })();

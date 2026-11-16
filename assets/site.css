@@ -824,3 +824,5 @@ html[lang="en"] .nutrient-tier-line{grid-template-columns:72px minmax(0,1fr)}
 .sleep-advice li{margin:0 0 12px}
 .sleep-sources{display:flex;flex-wrap:wrap;gap:10px 20px;font-size:13px;margin-top:18px}
 @media(max-width:560px){.sleep-summary{gap:10px}.sleep-summary strong{font-size:21px}.sleep-timeline li{grid-template-columns:75px minmax(0,1fr);gap:12px}}
+
+.meditation-steps li{padding-left:4px;margin-bottom:18px}.meditation-steps p{margin:5px 0 0;color:var(--muted)}
