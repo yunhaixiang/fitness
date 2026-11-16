@@ -70,21 +70,21 @@ for(const [plan,nodes] of [['current',current],['historical',historical]]) {
   assert.ok(!after.includes('chicken'));assert.ok(after.includes('rice'));
  });
 }
-test('eggs and one pasta portion load together; pasta can be removed before eggs',()=>{
+test('all spaghetti cooks with eggs in Pot1 and each can be removed independently',()=>{
  let done=['egg-water-start','egg-water'];
  done=complete(current,done,'eggs-pasta-start');
+ assert.ok(!current.some(n=>['noodles-start','noodles','pasta-start'].includes(n.id)));
  assert.ok(derive(current,done).available.some(n=>n.id==='eggs'));
- assert.ok(derive(current,done).available.some(n=>n.id==='pasta'));
- assert.ok(!derive(current,done).available.some(n=>n.id==='dumplings-start'));
  done=complete(current,done,'pasta');
- assert.ok(!derive(current,done).available.some(n=>n.id==='dumplings-start'));
- done=complete(current,done,'eggs');
- assert.ok(derive(current,done).available.some(n=>n.id==='dumplings-start'));
+ assert.ok(!done.includes('eggs'));
+ assert.ok(derive(current,done).available.some(n=>n.id==='eggs'));
+ done=complete(current,done,'prep-noodle-sauce');
+ assert.ok(derive(current,done).available.some(n=>n.id==='season-noodles'));
 });
-test('the other pasta portion can cook simultaneously in Pot2',()=>{
+test('dumplings cook independently in Pot2 while eggs and all pasta use Pot1',()=>{
  let done=['egg-water-start','egg-water','pasta-water-start','pasta-water'];
- done=complete(current,done,'eggs-pasta-start');done=complete(current,done,'noodles-start');
- assert.ok(derive(current,done).available.some(n=>n.id==='noodles'));
+ done=complete(current,done,'eggs-pasta-start');done=complete(current,done,'dumplings-start');
+ assert.ok(derive(current,done).available.some(n=>n.id==='dumplings'));
 });
 test('both fish share loading and removal after both preparations',()=>{
  let done=['air-heat-start','air-heat','prep-salmon'];
