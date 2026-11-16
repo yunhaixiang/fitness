@@ -44,7 +44,7 @@
     for (const event of eventsForDay(plan.events, day)) {
       const row = node('li');
       const details = node('div');
-      details.append(node('strong', label(event.title)), node('p', label(event.description)));
+      details.append(node('strong', label(event.title)));
       row.append(node('span', en ? (event.timeEn || event.time) : event.time, 'sleep-time'), details);
       timeline.append(row);
     }
