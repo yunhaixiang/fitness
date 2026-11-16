@@ -91,3 +91,17 @@ test('wrap and sandwich are maximally separated in the repeating seven-meal cycl
  const gap=Math.abs(basis.mealKeys.indexOf('wrap')-basis.mealKeys.indexOf('bread'));
  assert.equal(Math.min(gap,7-gap),3);
 });
+
+test('both nutrition plans show macro shares of total food calories',()=>{
+ for(const file of ['stats.md','plans/plan-2/stats.md']){
+  const page=read(file);
+  const calories=Number(page.match(/<td>热量<\/td>\s*<td[^>]*>([\d,]+)/)[1].replaceAll(',',''));
+  for(const [key,factor] of [['protein',4],['fat',9],['carbs',4]]){
+   const row=attribute=>page.match(new RegExp('<tr '+attribute+'="'+key+'">([\\s\\S]*?)<\\/tr>'))[1];
+   const value=text=>Number(text.match(/<td[^>]*>([\d.]+)[ g%]*<\/td>/)[1]);
+   const actual=value(row('data-macro-share'));
+   const expected=value(row('data-macro'))*factor/calories*100;
+   assert.ok(Math.abs(actual-expected)<.11,`${file}: ${key} uses total food calories`);
+  }
+ }
+});

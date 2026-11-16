@@ -108,10 +108,20 @@ visual: true
 <td style="text-align: right;">143.8 g</td>
 <td>120–140 g</td>
 </tr>
+<tr data-macro-share="protein">
+<td>蛋白质占总热量</td>
+<td style="text-align: right;">32.6%</td>
+<td>10–35%</td>
+</tr>
 <tr data-macro="fat">
 <td>总脂肪</td>
 <td style="text-align: right;">64.7 g</td>
 <td>45–65 g</td>
+</tr>
+<tr data-macro-share="fat">
+<td>脂肪占总热量</td>
+<td style="text-align: right;">33.0%</td>
+<td>20–35%</td>
 </tr>
 <tr>
 <td>饱和脂肪</td>
@@ -127,6 +137,11 @@ visual: true
 <td>碳水化合物</td>
 <td style="text-align: right;">167.4 g</td>
 <td>180–240 g</td>
+</tr>
+<tr data-macro-share="carbs">
+<td>碳水占总热量</td>
+<td style="text-align: right;">37.9%</td>
+<td>45–65%</td>
 </tr>
 <tr>
 <td>膳食纤维</td>

@@ -36,6 +36,10 @@ def recalculate(root):
  file.write_text(metrics)
  file=root/'stats.md';page=file.read_text()
  values={'热量':f'{round(daily["kcal"]):,} kcal','蛋白质':f'{daily["protein"]:.1f} g','总脂肪':f'{daily["fat"]:.1f} g','饱和脂肪':f'{daily["saturatedFat"]:.1f} g','饱和脂肪占总热量':f'{daily["saturatedFat"]*900/daily["kcal"]:.1f}%','碳水化合物':f'{daily["carbs"]:.1f} g','膳食纤维':f'{daily["fibre"]:.1f} g','总糖':f'{daily["sugar"]:.1f} g','膳食胆固醇':f'{round(daily["cholesterol"])} mg','钠':f'{round(daily["sodium"]):,} mg','Omega-3：EPA，DHA（合计）':f'{daily["epaDha"]:.1f} g'}
+ # Shares use the plan's total food calories, matching the saturated-fat ratio.
+ # The intake pie separately normalizes macro calories to draw a complete circle.
+ for label,field,factor in [('蛋白质占总热量','protein',4),('脂肪占总热量','fat',9),('碳水占总热量','carbs',4)]:
+  values[label]=f'{daily[field]*factor*100/daily["kcal"]:.1f}%'
  for label,field,unit,decimals in [('钙','calcium','mg',0),('铁','iron','mg',1),('钾','potassium','mg',0),('维生素D','vitaminD','µg',1),('维生素B12','vitaminB12','µg',1),('碘','iodine','µg',0)]:
   values[label]=f'{daily[field]:,.{decimals}f} {unit}'
  page=page.replace(' data-en="Pending Verification"','')
