@@ -1,6 +1,6 @@
 ---
 layout: default
-title: 睡眠
+title: 每日
 permalink: /sleep/
 sleep: true
 ---
@@ -9,19 +9,11 @@ sleep: true
     <h2 id="sleep-schedule-title" data-en="Daily Schedule">每日安排</h2>
     <div id="sleep-summary" class="sleep-summary"></div>
     <p id="sleep-empty" data-en="Your personal schedule is available on the private website after signing in.">登录私人网站后显示个人作息。</p>
+    <div id="daily-weekdays" class="weekday-tabs" role="group" aria-label="选择星期" hidden></div>
+    <h3 id="daily-selected-day" aria-live="polite"></h3>
     <ol id="sleep-timeline" class="sleep-timeline"></ol>
-    <noscript>请启用 JavaScript 查看个人睡眠计划。</noscript>
+    <noscript>请启用 JavaScript 查看个人每日安排。</noscript>
   </section>
-  <section class="content-section-card" aria-labelledby="meditation-title">
-    <h2 id="meditation-title" data-en="Meditation Routine">冥想流程</h2>
-    <p data-en="🧘 10 minutes of body scanning or guided meditation. Use a quiet, comfortable place; there is no need to fall asleep during the exercise.">🧘 10分钟身体扫描或引导冥想。找一个安静、舒适的位置，不要求练习中睡着。</p>
-    <ol class="sleep-advice meditation-steps">
-      <li><strong data-en="Settle In · 1 Minute">🪑 安顿下来 · 1分钟</strong><p data-en="Sit with support or lie comfortably. Dim the lights, put your phone on silent, and close your eyes or soften your gaze.">坐稳靠好或舒适躺下，调暗灯光，手机静音；闭眼或轻轻垂下视线。</p></li>
-      <li><strong data-en="Notice Your Breathing · 2 Minutes">🌬️ 关注呼吸 · 2分钟</strong><p data-en="Notice the air entering and leaving, or your abdomen rising and falling. Breathe naturally without forcing deep breaths or holding your breath.">感受空气进出鼻腔，或腹部轻轻起伏。自然呼吸，不刻意深呼吸，也不用憋气。</p></li>
-      <li><strong data-en="Scan Your Body · 5 Minutes">🦶 扫描身体 · 5分钟</strong><p data-en="Move your attention slowly from feet to legs, abdomen, chest, hands, shoulders, jaw and face. Notice each area and let it soften. When your mind wanders, gently return to the area you were noticing.">从脚、腿、腹部、胸口、双手、肩膀，到下颌和脸部，慢慢移动注意力。感受各处并轻轻放松；走神时，把注意力温和地带回来。</p></li>
-      <li><strong data-en="Rest and Finish · 2 Minutes">🌙 安静收尾 · 2分钟</strong><p data-en="Notice your whole body and natural breathing. Finish gently, then continue quiet activities until bedtime. A guided recording can replace these steps; use low volume and automatic stop.">感受整个身体和自然呼吸，平静结束，之后继续安静活动直到上床。也可用10分钟引导音频代替这些步骤，音量调低并设置自动停止。</p></li>
-    </ol>
-    <p class="sleep-caption" data-en="The aim is relaxation, not forcing sleep. If the practice makes you more tense, stop and choose quiet reading or music instead.">目标是放松，不是强迫自己睡着。如果越做越紧张，就停止，换成安静阅读或音乐。</p>
-  </section>
+
 </div>
 <script type="application/json" id="sleep-plan">{}</script>

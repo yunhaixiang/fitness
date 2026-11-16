@@ -6,7 +6,7 @@
 
   // Longer entries take precedence. This keeps the plan's numbers and product links intact.
   const translations = {
-    '睡眠': 'Sleep',
+    '睡眠': 'Sleep', '每日': 'Daily', '选择星期': 'Choose a day',
     '当前体重': 'Current Weight', '当前体脂率': 'Current Body Fat', '当前数据': 'Current Metrics',
     '体重、体脂率和放纵餐记录': 'Weight, body fat and cheat meal records',
     '份量': 'Portion',
