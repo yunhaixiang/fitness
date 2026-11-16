@@ -376,19 +376,44 @@ cooking: true
 </ol>
 </li>
 
+<li class="cooking-task-source">
+<ol lang="zh-CN" class="cooking-source-zh">
+<li>🥒 西葫芦1根洗净，切成约3–5 mm薄片。</li>
+</ol>
+<ol lang="en" class="cooking-source-en" hidden>
+<li>Wash 1 🥒 zucchini and cut into thin slices, about 3–5 mm thick.</li>
+</ol>
+</li>
+<li class="cooking-task-source">
+<ol lang="zh-CN" class="cooking-source-zh">
+<li>小锅空出后按需清理擦干，中火加🫒 橄榄油1茶匙，先下🥒 西葫芦炒2–3分钟。</li>
+<li>直接加入🐔 鸡肉末半盒227 g和🧂 黑胡椒⅛茶匙，打散后与西葫芦同锅炒至鸡肉熟透，中心达74°C。</li>
+<li>食材留在小锅里，接着加酱拌意面。</li>
+<li>前半周取用鸡肉末后，将剩余🐔 生肉末分装冷冻。</li>
+</ol>
+<ol lang="en" class="cooking-source-en" hidden>
+<li>Once the saucepan is free, clean and dry it as needed. Heat 1 tsp 🫒 olive oil over medium heat and cook the 🥒 zucchini first for 2–3 minutes.</li>
+<li>Add half a pack of 🐔 ground chicken (227 g) and ⅛ tsp 🧂 black pepper directly to the same pan. Break up the chicken and cook together until it reaches 74°C.</li>
+<li>Keep everything in the saucepan for the sauce and spaghetti.</li>
+<li>During the first cooking session, freeze the remaining raw ground chicken after taking this portion.</li>
+</ol>
+</li>
+<li class="cooking-task-source">
+<ol lang="zh-CN" class="cooking-source-zh">
+<li>向同一小锅加入🍅 Catelli番茄罗勒意面酱150 mL，煮至微沸；🥒 西葫芦仍偏硬时，加少量💧 水，盖锅焖至喜欢的软度。</li>
+<li>拌入第7盘的🍝 意面，拌热1–2分钟，偏稠时补少量💧 面水，放第7盘。</li>
+</ol>
+<ol lang="en" class="cooking-source-en" hidden>
+<li>Add 150 mL 🍅 Catelli Tomato & Basil sauce to the same saucepan and bring to a simmer. If the 🥒 zucchini is still firm, add a little 💧 water, cover and simmer until as tender as you like.</li>
+<li>Toss with the 🍝 spaghetti for meal 7 for 1–2 minutes, adding a little 💧 pasta water if needed, then place in meal 7.</li>
+</ol>
+</li>
+
 </ol>
 
 <h2 id="large-wok" data-en="Wok">大锅线程</h2>
 <p data-en="Measure Guide: About 30 Short Oil Sprays = 1 tsp; About 30 Shakes of Powder = 1 tsp">用量换算：橄榄油短喷约30喷＝1茶匙；粉状调味料约30下＝1茶匙</p>
 <ol>
-<li class="cooking-task-source">
-<ol lang="zh-CN" class="cooking-source-zh">
-<li>🥒 西葫芦1根洗净切片。</li>
-</ol>
-<ol lang="en" class="cooking-source-en" hidden>
-<li>Wash and slice 1 🥒 zucchini.</li>
-</ol>
-</li>
 <li class="cooking-task-source">
 <ol lang="zh-CN" class="cooking-source-zh">
 <li>🥬 Your Fresh Market 嫩菠菜2袋，每袋142 g，共284 g；先留出10 g给三明治。</li>
@@ -399,29 +424,6 @@ cooking: true
 <li>Use two 142 g bags of 🥬 Your Fresh Market Baby Spinach (284 g total); set aside 10 g for the sandwich.</li>
 <li>Once the wok is free, clean it as needed and cook the remaining 274 g with ¾ tsp 🫒 olive oil, ⅛ tsp 🧄 garlic powder and ⅛ tsp 🧅 onion powder for 3–5 minutes.</li>
 <li>Split equally between meals 3 and 6, equivalent to 137 g raw spinach per meal.</li>
-</ol>
-</li>
-<li class="cooking-task-source">
-<ol lang="zh-CN" class="cooking-source-zh">
-<li>锅空出后按需清理擦干，中火加🫒 橄榄油1茶匙，下🐔 鸡肉末半盒227 g，稍定型后炒散。</li>
-<li>加入西葫芦和🧂 黑胡椒⅛茶匙炒软，鸡肉中心达74°C。</li>
-<li>前半周取用鸡肉末后，将剩余🐔 生肉末分装冷冻。</li>
-</ol>
-<ol lang="en" class="cooking-source-en" hidden>
-<li>Once the wok is free, clean and dry it as needed, then add 1 tsp 🫒 olive oil over medium heat.</li>
-<li>Add half a pack of 🐔 ground chicken (227 g), let it set briefly, then break it up.</li>
-<li>Add the zucchini and ⅛ tsp 🧂 black pepper; cook until tender, with the chicken reaching 74°C.</li>
-<li>During the first cooking session, freeze the remaining raw ground chicken after taking this portion.</li>
-</ol>
-</li>
-<li class="cooking-task-source">
-<ol lang="zh-CN" class="cooking-source-zh">
-<li>鸡肉末和西葫芦做好后，加入🍅 Catelli番茄罗勒意面酱150 mL，煮至微沸。</li>
-<li>拌入第7盘的🍝 意面，拌热1–2分钟，偏稠时补少量💧 面水，放第7盘。</li>
-</ol>
-<ol lang="en" class="cooking-source-en" hidden>
-<li>Once the ground chicken and zucchini are cooked, add 150 mL 🍅 Catelli Tomato & Basil sauce and bring to a simmer.</li>
-<li>Toss with the 🍝 spaghetti for meal 7 for 1–2 minutes, adding a little 💧 pasta water if needed, then place in meal 7.</li>
 </ol>
 </li>
 
