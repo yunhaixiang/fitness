@@ -8,7 +8,7 @@
     { day: 3, after: 'before-dinner', kind: 'cooking', time: ['晚餐前', 'Before Dinner'], detail: ['准备下1–下7', 'Prepare Meals 1–7 for the Second Half of the Week'] },
     { day: 6, after: 'lunch', kind: 'shopping', time: ['下午', 'Afternoon'], detail: ['购买整周食材，并在 Metro 购买1盒 Fresh Fruit Carousel（1.4 kg）', 'Buy Groceries for the Week and 1 Metro Fresh Fruit Carousel (1.4 kg)'] }
   ];
-  for (const day of [0, 1, 2, 3, 4, 5]) activities.push({ day, after: 'lunch', kind: [0, 3].includes(day) ? 'cardio' : 'strength', time: ['下午 · 晚饭前', 'Afternoon · Before Dinner'], detail: [0, 3].includes(day) ? ['有氧训练，按当前有氧计划选择一项。', 'Cardio: choose one option from the current plan.'] : ['完成当天力量训练。', 'Complete today’s strength workout.'] });
+  for (const day of [0, 1, 2, 4, 5, 6]) activities.push({ day, after: 'lunch', kind: [0, 6].includes(day) ? 'cardio' : 'strength', time: ['18:00 · 晚饭前', '18:00 · Before Dinner'], detail: [0, 6].includes(day) ? ['有氧训练，按当前有氧计划选择一项。', 'Cardio: choose one option from the current plan.'] : ['完成当天力量训练。', 'Complete today’s strength workout.'] });
   const names = { cardio: ['有氧', 'Cardio'], strength: ['力量', 'Strength'], thawing: ['解冻', 'Thaw Ingredients'], cooking: ['做饭', 'Cooking'], shopping: ['购物', 'Shopping'] };
   const paths = {
     cardio: 'M3 12h4l3-8 4 16 3-8h4',
