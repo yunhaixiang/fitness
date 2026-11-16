@@ -15,12 +15,12 @@ cooking: true
 <ol>
 <li class="cooking-task-source">
 <ol lang="zh-CN" class="cooking-source-zh">
-<li>🍚 干米75 g淘洗沥干。</li>
-<li>米和💧 水按体积1:1，加💧 水约95 mL，放入电饭煲。</li>
+<li>🍚 干米70 g淘洗沥干。</li>
+<li>米和💧 水按体积1:1，加💧 水约90 mL，放入电饭煲。</li>
 </ol>
 <ol lang="en" class="cooking-source-en" hidden>
-<li>Rinse and drain 75 g 🍚 dry rice.</li>
-<li>Use equal volumes of rice and 💧 water: about 95 mL 💧 water.</li>
+<li>Rinse and drain 70 g 🍚 dry rice.</li>
+<li>Use equal volumes of rice and 💧 water: about 90 mL 💧 water.</li>
 <li>Place in the rice cooker.</li>
 </ol>
 </li>

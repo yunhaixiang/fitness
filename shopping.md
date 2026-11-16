@@ -117,10 +117,10 @@ visual: true
 <td style="text-align: right;">按需补</td>
 <td style="text-align: right;"><a href="https://www.walmart.ca/en/ip/Hellmann-s-Light-Half-Fat-Mayonnaise-Type-Dressing-with-Canadian-Cage-Free-Eggs-750-mL-squeeze-bottle/206910">$6.47</a></td>
 </tr>
-<tr data-weekly-cost="0.58" data-price-id="19" data-purchase-group="restock">
+<tr data-weekly-cost="0.54" data-price-id="19" data-purchase-group="restock">
 <td>白米</td>
 <td><a href="https://www.walmart.ca/en/ip/Great-Value-Long-Grain-White-Rice/4UD9P76BEQB4">Great Value Long Grain White Rice</a><br>900 g / 袋</td>
-<td data-en="1 Bag / 6 Weeks">1袋 / 6周</td>
+<td data-en="1 Bag / About 6.4 Weeks">1袋 / 约6.4周</td>
 <td style="text-align: right;"><a href="https://www.walmart.ca/en/ip/Great-Value-Long-Grain-White-Rice/4UD9P76BEQB4">$3.47</a></td>
 </tr>
 <tr data-weekly-cost="1.89" data-price-id="20" data-purchase-group="restock">
@@ -223,7 +223,7 @@ visual: true
 <td>每周合计</td>
 <td>—</td>
 <td style="text-align: right;">—</td>
-<td style="text-align: right;">$157.65</td>
+<td style="text-align: right;">$157.61</td>
 </tr>
 </tbody>
 </table>

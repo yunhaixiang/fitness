@@ -2,7 +2,7 @@
   "checked_on": "2026-10-31",
   "currency": "CAD",
   "scope": "Walmart Canada public prices and user-provided Metro fruit price; individual checked_on retained. Chicken thigh and salmon prices supplied by user. Weekly subtotal averages routine purchase cycles. Bread assumes three slices total 105 g; weighed produce billed by actual weight. Excludes as-needed seasonings, tax and delivery. Not a London store live stock guarantee.",
-  "weekly_total_cad": "157.65",
+  "weekly_total_cad": "157.61",
   "items": [
     {
       "item": "去骨去皮鸡大腿肉",
@@ -219,10 +219,10 @@
       "source_url": "https://www.walmart.ca/en/ip/Great-Value-Long-Grain-White-Rice/4UD9P76BEQB4",
       "source_type": "walmart_public",
       "product_url": "https://www.walmart.ca/en/ip/Great-Value-Long-Grain-White-Rice/4UD9P76BEQB4",
-      "purchase_frequency_zh": "1袋 / 6周",
-      "purchase_frequency_en": "1 Bag / 6 Weeks",
-      "weekly_cost_cad": "0.58",
-      "weekly_quantity": "0.16666666666666666"
+      "purchase_frequency_zh": "1袋 / 约6.4周",
+      "purchase_frequency_en": "1 Bag / About 6.4 Weeks",
+      "weekly_cost_cad": "0.54",
+      "weekly_quantity": "0.15555555555555556"
     },
     {
       "item": "高纤维谷物早餐",
