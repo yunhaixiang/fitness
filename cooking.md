@@ -367,32 +367,32 @@ cooking: true
 </li>
 <li class="cooking-task-source">
 <ol lang="zh-CN" class="cooking-source-zh">
-<li>小锅加🫒 橄榄油¼茶匙和🍅 Catelli意面酱150 mL，小火加热至微沸。</li>
-<li>拌入第4盘的🍝 意面，拌热1–2分钟；偏稠时补少量💧 面水，放第4盘。</li>
+<li>小锅空出后按需清理，加🫒 橄榄油¼茶匙，先下🥒 第4盘的1根西葫芦炒2–3分钟；偏干时加少量💧 水。</li>
+<li>加入🍅 Catelli意面酱150 mL煮至微沸；西葫芦仍偏硬时盖锅焖软，再拌入第4盘的🍝 意面，拌热1–2分钟；偏稠时补少量💧 面水，放第4盘。</li>
 </ol>
 <ol lang="en" class="cooking-source-en" hidden>
-<li>Heat ¼ tsp 🫒 olive oil and 150 mL 🍅 Catelli sauce in the saucepan until gently simmering.</li>
-<li>Toss with the 🍝 spaghetti for meal 4 for 1–2 minutes; loosen with a little 💧 pasta water if needed, then place in meal 4.</li>
+<li>Once the saucepan is free, clean it as needed. Heat ¼ tsp 🫒 olive oil and cook the 🥒 zucchini reserved for meal 4 for 2–3 minutes; add a little 💧 water if dry.</li>
+<li>Add 150 mL 🍅 Catelli sauce and bring to a simmer; cover until the zucchini is tender if needed. Toss with the 🍝 spaghetti for meal 4 for 1–2 minutes, loosening with a little 💧 pasta water if needed, then place in meal 4.</li>
 </ol>
 </li>
 
 <li class="cooking-task-source">
 <ol lang="zh-CN" class="cooking-source-zh">
-<li>🥒 西葫芦1根洗净，切成约3–5 mm薄片。</li>
+<li>🥒 西葫芦2根洗净，切成约3–5 mm薄片；分成两份各1根，分别给第4、7盘意面。</li>
 </ol>
 <ol lang="en" class="cooking-source-en" hidden>
-<li>Wash 1 🥒 zucchini and cut into thin slices, about 3–5 mm thick.</li>
+<li>Wash 2 🥒 zucchini and cut into thin slices, about 3–5 mm thick. Divide into two equal portions, one zucchini each for meals 4 and 7.</li>
 </ol>
 </li>
 <li class="cooking-task-source">
 <ol lang="zh-CN" class="cooking-source-zh">
-<li>小锅空出后按需清理擦干，中火加🫒 橄榄油1茶匙，先下🥒 西葫芦炒2–3分钟。</li>
+<li>小锅空出后按需清理擦干，中火加🫒 橄榄油1茶匙，先下🥒 第7盘的1根西葫芦炒2–3分钟。</li>
 <li>直接加入🐔 鸡肉末半盒227 g和🧂 黑胡椒⅛茶匙，打散后与西葫芦同锅炒至鸡肉熟透，中心达74°C。</li>
 <li>食材留在小锅里，接着加酱拌意面。</li>
 <li>前半周取用鸡肉末后，将剩余🐔 生肉末分装冷冻。</li>
 </ol>
 <ol lang="en" class="cooking-source-en" hidden>
-<li>Once the saucepan is free, clean and dry it as needed. Heat 1 tsp 🫒 olive oil over medium heat and cook the 🥒 zucchini first for 2–3 minutes.</li>
+<li>Once the saucepan is free, clean and dry it as needed. Heat 1 tsp 🫒 olive oil over medium heat and cook the 🥒 zucchini reserved for meal 7 first for 2–3 minutes.</li>
 <li>Add half a pack of 🐔 ground chicken (227 g) and ⅛ tsp 🧂 black pepper directly to the same pan. Break up the chicken and cook together until it reaches 74°C.</li>
 <li>Keep everything in the saucepan for the sauce and spaghetti.</li>
 <li>During the first cooking session, freeze the remaining raw ground chicken after taking this portion.</li>
@@ -484,7 +484,10 @@ cooking: true
 <li>Freeze spare 🍞 bread.</li>
 </ol>
 </li>
-<li class="cooking-task-source"><p data-en="Drain 1 can of 🫛🥕 peas and carrots (about 260 g) and divide equally between meals 2 and 4.">🫛🥕 豌豆胡萝卜1罐沥干（约260 g），直接均分到第2、4盘。</p></li>
+<li class="cooking-task-source">
+<ol lang="zh-CN" class="cooking-source-zh"><li>🫛🥕 豌豆胡萝卜每周1罐，沥干后约260 g，分成两份各130 g。</li><li>每次做饭取½罐，直接放第2盘咖喱米饭；前半周剩下的½罐装入密封容器冷藏，按包装开罐保存期限使用。</li></ol>
+<ol lang="en" class="cooking-source-en" hidden><li>Use 1 can of 🫛🥕 peas and carrots per week, about 260 g drained, divided into two 130 g portions.</li><li>Use half a can per cooking session, directly in meal 2 with curry rice. Refrigerate the other half in a sealed container after the first session, following the label's storage instructions.</li></ol>
+</li>
 <li class="cooking-task-source">
 <ol lang="zh-CN" class="cooking-source-zh">
 <li>先抹上预留的🫘 鹰嘴豆泥（½罐），加入第5盘的🍗 鸡腿肉和掰碎🥚 水煮蛋，在盘内卷好。</li>

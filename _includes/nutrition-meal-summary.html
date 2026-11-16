@@ -23,7 +23,7 @@
 {% when 'noodles' %}
 <th scope="row"><span class="meal-summary-number">{{ forloop.index }}</span><span data-en="🍝 Shrimp Spaghetti with Tomato Sauce">🍝 虾仁番茄意面</span></th>
 <td><div data-en="🍤 Baked Shrimp {{ portion.shrimp | times: 100 | round: 0 }} g">🍤 烤虾{{ portion.shrimp | times: 100 | round: 0 }} g</div><div data-en="🍗 1 Chicken Thigh ({{ portion.thigh | times: 100 | round: 0 }} g)">🍗 鸡大腿肉1块（{{ portion.thigh | times: 100 | round: 0 }} g）</div><div data-en="🥚 {{ egg_display }} Boiled Eggs">🥚 水煮蛋{{ egg_display }}个</div></td>
-<td><div data-en="🫛🥕 Peas and Carrots {{ portion.pc | times: 100 | round: 0 }} g Total">🫛🥕 豌豆，胡萝卜共{{ portion.pc | times: 100 | round: 0 }} g</div></td>
+<td><div data-en="🥒 1 Zucchini ({{ portion.zucchini | times: 100 | round: 0 }} g)">🥒 西葫芦1根（{{ portion.zucchini | times: 100 | round: 0 }} g）</div></td>
 <td><div data-en="🍝 Dry Spaghetti {{ portion.pasta | times: 85 | round: 0 }} g">🍝 干意面{{ portion.pasta | times: 85 | round: 0 }} g</div><div data-en="🍅 Catelli Tomato &amp; Basil Sauce 150 mL">🍅 Catelli番茄罗勒酱150 mL</div></td>
 {% when 'potato' %}
 <th scope="row"><span class="meal-summary-number">{{ forloop.index }}</span><span data-en="🍖 Ribs and Potatoes">🍖 排骨土豆</span></th>

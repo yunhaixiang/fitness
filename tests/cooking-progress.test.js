@@ -79,6 +79,7 @@ test('all spaghetti cooks with eggs in Pot1 and each can be removed independentl
  assert.ok(!done.includes('eggs'));
  assert.ok(derive(current,done).available.some(n=>n.id==='eggs'));
  done=complete(current,done,'prep-noodle-sauce');
+ done=complete(current,done,'prep-zucchini');
  assert.ok(derive(current,done).available.some(n=>n.id==='season-noodles'));
 });
 test('dumplings cook independently in Pot2 while eggs and all pasta use Pot1',()=>{

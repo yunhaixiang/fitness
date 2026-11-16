@@ -68,10 +68,10 @@ visual: true
 <td style="text-align: right;"><a href="https://www.walmart.ca/en/ip/Sparkling-Ice-Orange-Mango-503ml/6000190578527">$1.27</a></td>
 </tr>
 <tr data-price-id="9" data-weekly-cost="1.49" data-purchase-group="fortnightly"><td>土豆</td><td><a href="https://www.walmart.ca/en/ip/The-Little-Potato-Company-Fresh-Little-Potatoes-1-5lb-Little-Yellows-Fresh-yellow-potatoes/6000201597418">The Little Potato Company Little Yellows</a><br>680 g</td><td data-en="1 Bag / 2 Weeks">1袋 / 2周</td><td><a href="https://www.walmart.ca/en/ip/The-Little-Potato-Company-Fresh-Little-Potatoes-1-5lb-Little-Yellows-Fresh-yellow-potatoes/6000201597418">$2.98</a></td></tr>
-<tr data-price-id="10" data-weekly-cost="2.74" data-purchase-group="weekly">
+<tr data-price-id="10" data-weekly-cost="1.37" data-purchase-group="weekly">
 <td>豌豆，胡萝卜</td>
 <td><a href="https://www.walmart.ca/en/ip/Great-Value-Peas-and-Carrots-398-mL/5YDQIJZT1APQ">Great Value Peas and Carrots</a><br>398 mL / 罐</td>
-<td style="text-align: right;">2罐 / 周</td>
+<td style="text-align: right;">1罐 / 周</td>
 <td style="text-align: right;"><a href="https://www.walmart.ca/en/ip/Great-Value-Peas-and-Carrots-398-mL/5YDQIJZT1APQ">$1.37</a></td>
 </tr>
 <tr data-weekly-cost="13.76" data-price-id="12" data-purchase-group="weekly">
@@ -215,7 +215,7 @@ visual: true
 <tr data-price-id="36" data-weekly-cost="0.83" data-purchase-group="restock"><td data-en="Whole-Wheat Bread">全麦面包</td><td><a href="https://www.walmart.ca/en/ip/Dempster-s-100-Whole-Wheat-Bread-675-g/6000191268657">Dempster’s 100% Whole Wheat Bread</a><br><span data-en="675 g">675 g</span></td><td data-en="6 Slices / Week; Freeze the Rest">每周6片；剩余冷冻</td><td><a href="https://www.walmart.ca/en/ip/Dempster-s-100-Whole-Wheat-Bread-675-g/6000191268657">$2.68</a></td></tr>
 <tr data-price-id="37" data-weekly-cost="1.24" data-purchase-group="weekly"><td data-en="Low-Sodium Tuna in Water">低钠水浸金枪鱼</td><td><a href="https://www.walmart.ca/en/ip/Clover-LEAF-Low-Sodium-Flaked-Light-Tuna-Skipjack-in-Water/10182386">Clover Leaf Low Sodium Flaked Light Tuna in Water</a><br>170 g</td><td data-en="1 Can / Week">1罐 / 周</td><td><a href="https://www.walmart.ca/en/ip/Clover-LEAF-Low-Sodium-Flaked-Light-Tuna-Skipjack-in-Water/10182386">$1.24</a></td></tr>
 <tr data-price-id="38" data-weekly-cost="1.17" data-purchase-group="weekly"><td data-en="Orange Bell Pepper">橙甜椒</td><td><a href="https://www.walmart.ca/en/ip/SUNSET-Orange-Pepper-Single-0-12-0-24-KG/6000197381989">SUNSET Orange Pepper</a><br><span data-en="Sold Individually · About 170 g Each">单颗售卖 · 每个约170 g</span></td><td data-en="1 / Week">1个 / 周</td><td><a href="https://www.walmart.ca/en/ip/SUNSET-Orange-Pepper-Single-0-12-0-24-KG/6000197381989">$1.17 / Avg.</a></td></tr>
-<tr data-price-id="39" data-weekly-cost="1.32" data-purchase-group="weekly"><td data-en="Zucchini">西葫芦</td><td><a href="https://www.walmart.ca/en/ip/Zucchini-Green/6000191270110">Green Zucchini</a><br><span data-en="Sold Individually">单颗售卖</span></td><td data-en="2 / Week">2根 / 周</td><td><a href="https://www.walmart.ca/en/ip/Zucchini-Green/6000191270110">$0.66 / Avg.</a></td></tr>
+<tr data-price-id="39" data-weekly-cost="2.64" data-purchase-group="weekly"><td data-en="Zucchini">西葫芦</td><td><a href="https://www.walmart.ca/en/ip/Zucchini-Green/6000191270110">Green Zucchini</a><br><span data-en="Sold Individually">单颗售卖</span></td><td data-en="4 / Week">4根 / 周</td><td><a href="https://www.walmart.ca/en/ip/Zucchini-Green/6000191270110">$0.66 / Avg.</a></td></tr>
 <tr data-price-id="40" data-weekly-cost="1.04" data-purchase-group="weekly"><td data-en="Roma Tomato">罗马番茄</td><td><a href="https://www.walmart.ca/en/ip/Tomato-Roma-Sold-in-singles-0-10-0-14-KG/6000191272055">Roma Tomato</a><br><span data-en="Sold Individually">单颗售卖</span></td><td data-en="2 / Week">2个 / 周</td><td><a href="https://www.walmart.ca/en/ip/Tomato-Roma-Sold-in-singles-0-10-0-14-KG/6000191272055">$0.52 / Avg.</a></td></tr>
 <tr data-price-id="43" data-weekly-cost="1.59" data-purchase-group="restock"><td data-en="Curry Roux">咖喱块</td><td><a href="https://www.walmart.ca/en/ip/S-B-Golden-curry-sauce-mix-medium-hot/6000198034558">S&amp;B Golden Curry Sauce Mix Medium Hot</a><br><span data-en="90 g">90 g</span></td><td data-en="1 Box / 2.5 Weeks">1盒 / 2.5周</td><td><a href="https://www.walmart.ca/en/ip/S-B-Golden-curry-sauce-mix-medium-hot/6000198034558">$3.97</a></td></tr>
 <tr data-price-id="45" data-weekly-cost="1.48" data-purchase-group="weekly"><td data-en="No Salt Added Chickpeas">无添加盐鹰嘴豆</td><td><a href="https://www.walmart.ca/en/ip/Great-Value-No-Salt-Chick-Peas/10275066">Great Value No Salt Chick Peas</a><br>540 mL</td><td data-en="1 Can / Week">1罐 / 周</td><td><a href="https://www.walmart.ca/en/ip/Great-Value-No-Salt-Chick-Peas/10275066">$1.48</a></td></tr>
@@ -225,7 +225,7 @@ visual: true
 <td>每周合计</td>
 <td>—</td>
 <td style="text-align: right;">—</td>
-<td style="text-align: right;">$155.57</td>
+<td style="text-align: right;">$155.52</td>
 </tr>
 </tbody>
 </table>

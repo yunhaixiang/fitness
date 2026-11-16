@@ -2,7 +2,7 @@
   "checked_on": "2026-10-31",
   "currency": "CAD",
   "scope": "Walmart Canada public prices and user-provided Metro fruit price; individual checked_on retained. Chicken thigh and salmon prices supplied by user. Weekly subtotal averages routine purchase cycles. Bread assumes three slices total 105 g; weighed produce billed by actual weight. Excludes as-needed seasonings, tax and delivery. Not a London store live stock guarantee.",
-  "weekly_total_cad": "155.57",
+  "weekly_total_cad": "155.52",
   "items": [
     {
       "item": "去骨去皮鸡大腿肉",
@@ -120,8 +120,8 @@
       "basis": "package",
       "source_url": "https://www.walmart.ca/en/ip/Great-Value-Peas-and-Carrots-398-mL/5YDQIJZT1APQ",
       "source_type": "walmart_public",
-      "weekly_quantity": "2",
-      "weekly_cost_cad": "2.74",
+      "weekly_quantity": "1",
+      "weekly_cost_cad": "1.37",
       "product_url": "https://www.walmart.ca/en/ip/Great-Value-Peas-and-Carrots-398-mL/5YDQIJZT1APQ"
     },
     {
@@ -381,14 +381,14 @@
       "item": "西葫芦",
       "price_cad": "0.66",
       "basis": "each_average",
-      "weekly_quantity": "2",
-      "weekly_cost_cad": "1.32",
+      "weekly_quantity": "4",
+      "weekly_cost_cad": "2.64",
       "source_type": "walmart_public",
       "source_url": "https://www.walmart.ca/en/ip/Zucchini-Green/6000191270110",
       "product_url": "https://www.walmart.ca/en/ip/Zucchini-Green/6000191270110",
       "checked_on": "2026-11-07",
-      "purchase_frequency_zh": "2根 / 周",
-      "purchase_frequency_en": "2 / Week"
+      "purchase_frequency_zh": "4根 / 周",
+      "purchase_frequency_en": "4 / Week"
     },
     {
       "item": "罗马番茄",

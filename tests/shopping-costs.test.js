@@ -12,7 +12,7 @@ function rows(file) {
 }
 test('shopping budgets follow each plan without taxing basic food or voluntary tips', () => {
   assert.deepEqual(calculateShoppingCosts(rows('shopping.md'), config), {
-    goods: 15557, tip: 1000, delivery: 500, service: 1500, tax: 598, total: 19155
+    goods: 15552, tip: 1000, delivery: 500, service: 1500, tax: 598, total: 19150
   });
   assert.deepEqual(calculateShoppingCosts(rows('plans/plan-2/shopping.md'), config), {
     goods: 14969, tip: 1000, delivery: 500, service: 1500, tax: 386, total: 18355
