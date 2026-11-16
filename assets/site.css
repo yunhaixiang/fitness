@@ -809,3 +809,18 @@ html[lang="en"] .nutrient-tier-line{grid-template-columns:72px minmax(0,1fr)}
 .nutrition-routine-foods{list-style:none;padding:0;margin:12px 0 16px;display:grid;gap:8px;font-size:14px;line-height:1.6}
 .nutrition-routine-foods li{display:flex;align-items:baseline;gap:9px;margin:0;overflow-wrap:anywhere}
 .nutrition-routine-emoji{flex:0 0 1.4em;text-align:center}
+
+/* Sleep schedule: one card per section, with a compact daily timeline. */
+.sleep-page [hidden]{display:none!important}
+.sleep-page h2{margin-top:0}
+.sleep-summary{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+.sleep-summary span{display:block;color:var(--muted);font-size:13px}
+.sleep-summary strong{display:block;color:var(--accent);font-size:26px;line-height:1.5}
+.sleep-caption{color:var(--muted);font-size:13px}
+.prose .sleep-timeline{list-style:none;padding:0;margin:22px 0 0}
+.sleep-timeline li{display:grid;grid-template-columns:110px minmax(0,1fr);gap:18px;padding:17px 0;border-top:1px solid var(--line);margin:0}
+.sleep-time{font-variant-numeric:tabular-nums;color:var(--gold);font-weight:700}
+.sleep-timeline p{margin:4px 0 0;color:var(--muted)}
+.sleep-advice li{margin:0 0 12px}
+.sleep-sources{display:flex;flex-wrap:wrap;gap:10px 20px;font-size:13px;margin-top:18px}
+@media(max-width:560px){.sleep-summary{gap:10px}.sleep-summary strong{font-size:21px}.sleep-timeline li{grid-template-columns:75px minmax(0,1fr);gap:12px}}

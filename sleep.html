@@ -1,0 +1,32 @@
+---
+layout: default
+title: 睡眠
+permalink: /sleep/
+sleep: true
+---
+<div class="section-card-stack sleep-page">
+  <section class="content-section-card" aria-labelledby="sleep-schedule-title">
+    <h2 id="sleep-schedule-title" data-en="Daily Schedule">每日安排</h2>
+    <div id="sleep-summary" class="sleep-summary"></div>
+    <p id="sleep-empty" data-en="Your personal schedule is available on the private website after signing in.">登录私人网站后显示个人作息。</p>
+    <ol id="sleep-timeline" class="sleep-timeline"></ol>
+    <noscript>请启用 JavaScript 查看个人睡眠计划。</noscript>
+  </section>
+  <section id="sleep-medications" class="content-section-card" hidden>
+    <h2 data-en="Medication Notes">用药说明</h2>
+    <p data-en="This records your existing prescription schedule. Dose changes require your prescriber.">这里记录现有处方安排；剂量调整由开药医生决定。</p>
+    <ul id="sleep-medication-notes" class="sleep-advice"></ul>
+    <div id="sleep-medication-sources" class="sleep-sources"></div>
+  </section>
+  <section class="content-section-card">
+    <h2 data-en="What Else Helps">其他助眠方法</h2>
+    <ul class="sleep-advice">
+      <li data-en="🌤️ Keep a consistent wake time, including weekends. Get outdoor daylight in the morning and dim lights during the last hour before bed.">🌤️ 周末也保持固定起床时间；早晨接触户外自然光，睡前一小时调暗灯光。</li>
+      <li data-en="🛏️ Keep the bedroom dark, quiet and comfortably cool. An eye mask or earplugs may help if light or noise is a problem.">🛏️ 卧室保持遮光、安静、凉爽舒适；有光线或噪音干扰时可用眼罩、耳塞。</li>
+      <li data-en="🧠 For persistent insomnia, prioritize CBT-I with a clinician or qualified therapist. It is a first-line treatment, usually over 6–8 weeks.">🧠 持续失眠优先咨询失眠认知行为治疗 CBT-I，这是慢性失眠的一线治疗，通常持续6–8周。</li>
+      <li data-en="💊 Magnesium has limited and inconsistent evidence for insomnia. Melatonin is more relevant to some body-clock problems; it is not a routine add-on for chronic insomnia. Check with a pharmacist before combining sleep supplements with prescription treatment.">💊 镁改善失眠的证据有限且不一致；褪黑素更适合部分生物钟问题，不作为慢性失眠的常规叠加补剂。与处方药合用前先让药师核对。</li>
+    </ul>
+    <div class="sleep-sources"><a href="https://www.nhlbi.nih.gov/health/insomnia/treatment" data-en="NHLBI: Insomnia Treatment">NHLBI：失眠治疗</a><a href="https://www.nccih.nih.gov/health/sleep-disorders-and-complementary-health-approaches" data-en="NCCIH: Sleep Supplements">NCCIH：助眠补剂证据</a></div>
+  </section>
+</div>
+<script type="application/json" id="sleep-plan">{}</script>

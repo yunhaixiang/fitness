@@ -77,3 +77,9 @@
 - [Apple 快捷指令 App 触发器](https://support.apple.com/en-euro/guide/shortcuts/apde31e9638b/9.0/ios/26)
 
 个人身高存放在 D1 的 private_profile 表；体重、体脂和步数保存在同一私人数据库。不要把个人测量值、数据库导出或带个人值的初始化 SQL 提交到仓库。公开构建中的健康记录保持为空。
+
+## 私人睡眠计划
+
+`private_sleep_plan` 保存一个 JSON 作息计划，仅在通过 Access 白名单验证后的 `/fitness/sleep/` 页面注入。公开 HTML 的 `sleep-plan` 保持 `{}`；个人药物、剂量和时间不得写入仓库、测试或日志。数据库更新从仓库外的临时 SQL 执行并清理；发布流程不导出此表。迁移 `0005_private_sleep_plan.sql` 必须先在 D1 执行，再发布页面。
+
+字段为 `wakeTime`、`bedTime`、`events`（time、title、description），以及 `medicationNotes`、`sources`。文案使用 zh/en 双语；sources 另含 https URL。未来只更新 D1 中的计划即可，不需要改公开代码。

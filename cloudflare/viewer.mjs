@@ -1,6 +1,7 @@
 import {json, tokenHash, readRecords} from './measurements.mjs';
 import {walkingEnergy} from './walking.mjs';
 import {metabolicEnergy} from './metabolism.mjs';
+import {readSleepPlan, sleepPlanHandler} from './sleep.mjs';
 
 export async function authorizedEmail(env, ctx) {
   // ctx.access is supplied by Cloudflare after Access validation, not request headers.
@@ -64,7 +65,9 @@ export default {
       response.headers.delete('Last-Modified');
       if (request.method !== 'HEAD' && response.headers.get('Content-Type')?.includes('text/html')) {
         const records = await readRecords(env.DB);
+        const sleepPlan = url.pathname === '/fitness/sleep/' ? await readSleepPlan(env.DB) : {};
         return new HTMLRewriter()
+          .on('#sleep-plan', sleepPlanHandler(sleepPlan))
           .on('#tracking-records', trackingHandler(records))
           .on('#metabolic-energy', {element(el) { el.setInnerContent(JSON.stringify(metabolicEnergy(records)), {html:true}); }})
           .on('#walking-energy', {element(el) { el.setInnerContent(JSON.stringify(walkingEnergy(records)), {html:true}); }})

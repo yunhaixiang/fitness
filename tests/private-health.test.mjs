@@ -5,6 +5,7 @@ import {DatabaseSync} from 'node:sqlite';
 import {readFileSync} from 'node:fs';
 import {measurement, tokenHash, saveSQL, readRecords, dailySteps} from '../cloudflare/measurements.mjs';
 import ingest from '../cloudflare/ingest.mjs';
+import {readSleepPlan, sleepPlanHandler} from '../cloudflare/sleep.mjs';
 import viewer, {trackingHandler} from '../cloudflare/viewer.mjs';
 
 const now = new Date('2026-11-09T20:00:00Z');
@@ -17,6 +18,7 @@ function database() {
   sql.exec(readFileSync(new URL('../cloudflare/migrations/0002_daily_steps.sql', import.meta.url), 'utf8'));
   sql.exec(readFileSync(new URL('../cloudflare/migrations/0003_private_profile.sql', import.meta.url), 'utf8'));
   sql.exec(readFileSync(new URL('../cloudflare/migrations/0004_energy_profile.sql', import.meta.url), 'utf8'));
+  sql.exec(readFileSync(new URL('../cloudflare/migrations/0005_private_sleep_plan.sql', import.meta.url), 'utf8'));
   return {sql, async batch(statements) {
     sql.exec('BEGIN');
     try { const results = []; for (const statement of statements) results.push(await statement.run()); sql.exec('COMMIT'); return results; }
@@ -230,4 +232,41 @@ test('authenticated HTML receives recalculated metabolism from the latest databa
     assert.equal(value.dailyResting,10*63+6.25*182-5*35+5);
     assert.equal(value.exerciseWeightRatio,63/80);
   } finally {globalThis.HTMLRewriter=original;}
+});
+
+
+test('sleep schedules remain private and escape embedded script delimiters', async () => {
+  const e = env();
+  assert.deepEqual(await readSleepPlan(e.DB), {});
+  const plan = {wakeTime:'07:00', bedTime:'22:00', events:[], medicationNotes:[{zh:'</script><script>test</script>',en:'Synthetic note'}]};
+  e.DB.sql.prepare('INSERT INTO private_sleep_plan VALUES (1, ?)').run(JSON.stringify(plan));
+  assert.deepEqual(await readSleepPlan(e.DB), plan);
+  let output;
+  sleepPlanHandler(plan).element({setInnerContent(value) {output = value;}});
+  assert.equal(output.includes('<'), false);
+  assert.deepEqual(JSON.parse(output), plan);
+  const request = new Request('https://viewer.example/fitness/sleep/');
+  for (const context of [{}, ctx('stranger@example.com')]) {
+    assert.equal((await viewer.fetch(request, e, context)).status, 403);
+  }
+  assert.match(readFileSync(new URL('../sleep.html',import.meta.url),'utf8'), /id="sleep-plan">\{\}<\/script>/);
+});
+
+test('private sleep page injects its D1 plan after authentication and disables caching', async () => {
+  const e = env();
+  const plan = {wakeTime:'07:00',bedTime:'22:00',events:[]};
+  e.DB.sql.prepare('INSERT INTO private_sleep_plan VALUES (1, ?)').run(JSON.stringify(plan));
+  e.ASSETS = {async fetch() {return new Response('<script id="sleep-plan">{}</script>', {headers:{'Content-Type':'text/html'}});}};
+  const previous = globalThis.HTMLRewriter;
+  let injected;
+  globalThis.HTMLRewriter = class {
+    on(selector, handler) {if(selector === '#sleep-plan') handler.element({setInnerContent(value) {injected = JSON.parse(value);}}); return this;}
+    transform(response) {return response;}
+  };
+  try {
+    const response = await viewer.fetch(new Request('https://viewer.example/fitness/sleep/'),e,ctx(owner));
+    assert.equal(response.status,200);
+    assert.equal(response.headers.get('Cache-Control'),'private, no-store');
+    assert.deepEqual(injected,plan);
+  } finally {globalThis.HTMLRewriter = previous;}
 });
