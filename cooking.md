@@ -133,12 +133,12 @@ cooking: true
 <li class="cooking-task-source">
 <ol lang="zh-CN" class="cooking-source-zh">
 <li>确认熟度后取出：400°F烤27分钟，中心达74°C。</li>
-<li>熟肉分到第4、5、6盘：第4、5盘各1½块，第6盘1块🍗 鸡腿肉；第1盘三明治不放鸡腿。</li>
+<li>熟肉分到第4、5、6盘：第4盘2块，第5、6盘各1块🍗 鸡腿肉；第1盘三明治不放鸡腿。</li>
 <li>卷饼的鸡腿肉掰碎。</li>
 </ol>
 <ol lang="en" class="cooking-source-en" hidden>
 <li>Check doneness before removing: Roast at 400°F for 27 minutes, to 74°C in the centre.</li>
-<li>Divide the cooked 🍗 chicken between meals 4, 5 and 6: 1½ thighs each for meals 4 and 5, and 1 thigh for meal 6. No thigh goes into meal 1.</li>
+<li>Divide the cooked 🍗 chicken between meals 4, 5 and 6: 2 thighs for meal 4, and 1 thigh each for meals 5 and 6. No thigh goes into meal 1.</li>
 <li>Shred the wrap portion.</li>
 </ol>
 </li>
@@ -175,11 +175,11 @@ cooking: true
 <li class="cooking-task-source">
 <ol lang="zh-CN" class="cooking-source-zh">
 <li>确认熟度后取出：单层铺开，400°F烤约10–12分钟至🦐 虾肉不透明、熟透。</li>
-<li>全部放第4盘。</li>
+<li>虾仁全部放第2盘咖喱米饭。</li>
 </ol>
 <ol lang="en" class="cooking-source-en" hidden>
 <li>Check doneness before removing: Bake in a single layer at 400°F for about 10–12 minutes until the 🦐 shrimp are opaque and cooked through.</li>
-<li>Place all the shrimp in meal 4.</li>
+<li>Place all the shrimp in meal 2 with the curry rice.</li>
 </ol>
 </li>
 </ol>

@@ -471,9 +471,10 @@
       "egg": 1,
       "pc": 1.3,
       "curry": 1,
-      "oil": 0.5,
+      "oil": 1.0,
       "sesame": 0.05,
-      "tilapia": 1.75
+      "tilapia": 1.75,
+      "shrimp": 1.7
     },
     {
       "dumpling": 2.25,
@@ -483,21 +484,20 @@
       "egg": 0
     },
     {
-      "shrimp": 1.7,
-      "thigh": 1.7437500000000001,
+      "thigh": 2.325,
       "egg": 1,
-      "oil": 0.96875,
+      "oil": 0.5625,
       "pasta": 0.6470588235294118,
       "sauce": 1.2,
       "zucchini": 2
     },
     {
       "tortilla": 1,
-      "thigh": 1.7437500000000001,
+      "thigh": 1.1625,
       "egg": 1,
       "pepper": 0.75,
       "mayo": 1,
-      "oil": 0.28125,
+      "oil": 0.1875,
       "chickpeas": 2.16
     },
     {
@@ -553,7 +553,8 @@
     "2026-11-16: both spaghetti meals use one 200 g zucchini each. Replace meal4 peas/carrots130 g with zucchini200 g, keeping all other ingredients. Four zucchini weekly. Peas/carrots now only accompany curry rice:130 g per meal, one398 mL can (about260 g drained) weekly, half per cooking session.",
     "2026-11-16: sandwich replaces its one chicken thigh and allocated roasting oil with one High Liner Signature Cuts Crispy Breaded Haddock fillet; split that thigh and oil equally between shrimp spaghetti and wrap (each now1.5 thighs). Other ingredients unchanged. Per1 fillet87 g label:190 kcal P9/C17/F10/SFA1/fibre1/sugar0 g Na330/chol25 mg. Box425 g contains5 fillets; use2 weekly, buy1 box every2.5 weeks. Total omega3 label0.9 g includes vegetable oils and is NOT EPA+DHA. EPA+DHA and unlabelled micronutrients estimated from plain raw haddock equivalent providing9 g protein (~49 g fish); not measured fish content. https://www.highliner.com/products/signature-cuts/signature-cuts-crispy-breaded-haddock-fillets",
     "2026-11-16: remove the120 g Roma tomato from each sandwich; no replacement and all other ingredients unchanged. Stop purchasing two Roma tomatoes weekly.",
-    "2026-11-16: curry rice uses one whole Your Fresh Market tilapia fillet instead of250 g plain haddock. One tray of2 fillets (300–400 g total) weekly. Model175 g raw per fillet /350 g weekly, actual package and fillet weights vary. Keep oil1/2 tsp and all other meal ingredients unchanged. Raw tilapia generic USDA SR28 values per100 g, not a retailer label. Air fryer400 F, check from8 minutes, continue until70 C; remove each fish when done. Sandwich Crispy Breaded haddock is unchanged."
+    "2026-11-16: curry rice uses one whole Your Fresh Market tilapia fillet instead of250 g plain haddock. One tray of2 fillets (300–400 g total) weekly. Model175 g raw per fillet /350 g weekly, actual package and fillet weights vary. Keep oil1/2 tsp and all other meal ingredients unchanged. Raw tilapia generic USDA SR28 values per100 g, not a retailer label. Air fryer400 F, check from8 minutes, continue until70 C; remove each fish when done. Sandwich Crispy Breaded haddock is unchanged.",
+    "2026-11-16: move all170 g shrimp and its1/2 tsp roasting oil from meal4 spaghetti to meal2 curry rice. Transfer half a thigh plus its allocated3/32 tsp roasting oil from wrap to meal4. Per half-week chicken allocation: meal4 two thighs, meal5 one, meal6 one. Weekly foods, shopping quantities and unrounded nutrition unchanged."
   ],
   "sources": {
     "shrimp": "https://www.walmart.ca/en/ip/Great-Value-Wild-Argentinian-Large-Raw-Shrimp/6000202999819",

@@ -149,7 +149,7 @@ visual: true
 </tr>
 <tr>
 <td>钠</td>
-<td style="text-align: right;">2,395 mg</td>
+<td style="text-align: right;">2,396 mg</td>
 <td>≤2,300 mg</td>
 </tr>
 <tr>

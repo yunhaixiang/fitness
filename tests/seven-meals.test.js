@@ -35,8 +35,8 @@ test('weekly meat, eggs, grains and portions match whole-package purchase cycles
  close(weekly('noodle')*100,0); close(weekly('sauce')*125,600);
  const recipes=Object.fromEntries(basis.mealKeys.map((k,i)=>[k,basis.recipes[i]]));
  assert.equal(recipes.wrap.tuna,undefined); close(recipes.bread.tuna,1); close(recipes.bread.bread,1.5);
- close(recipes.noodles.shrimp,1.7); assert.equal(recipes.noodles.panko,undefined);
- assert.equal(recipes.rice.shrimp,undefined); assert.equal(recipes.rice.panko,undefined);
+ assert.equal(recipes.noodles.shrimp,undefined); assert.equal(recipes.noodles.panko,undefined);
+ close(recipes.rice.shrimp,1.7); assert.equal(recipes.rice.panko,undefined);
  close(recipes.rice.curry*18,18); assert.equal(recipes.noodles.curry,undefined); assert.equal(recipes.noodles.noodleSauce,undefined); close(recipes.noodles.sauce,1.2); close(recipes.pasta.sauce,1.2); close(weekly('sesame')*100,10);
  close(recipes.wrap.chickpeas,2.16); assert.equal(recipes.potato.chickpeas,undefined); assert.equal(recipes.dumpling.chickpeas,undefined); close(weekly('refriedBeans'),0);
  close(weekly('chickpeas')*125,540); close(weekly('tuna'),2); close(weekly('mayo'),2); close(weekly('lightMayo'),7); close(weekly('spinach')*100,568);
@@ -68,7 +68,7 @@ test('all cooking prerequisites are valid, acyclic, and have matching instructio
  assert.equal(recipes.potato.egg,0);
  assert.equal(recipes.bread.egg,2);
  assert.equal(recipes.potato.thigh,1.1625);
- assert.equal(recipes.bread.thigh,undefined); assert.equal(recipes.bread.breadedHaddock,1); assert.equal(recipes.wrap.thigh,1.7437500000000001); assert.equal(recipes.noodles.thigh,1.7437500000000001);
+ assert.equal(recipes.bread.thigh,undefined); assert.equal(recipes.bread.breadedHaddock,1); assert.equal(recipes.wrap.thigh,1.1625); assert.equal(recipes.noodles.thigh,2.325);
  assert.equal(recipes.rice.egg,1);
  assert.equal(recipes.noodles.cornstarch,undefined);
 });
