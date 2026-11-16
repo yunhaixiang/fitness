@@ -467,7 +467,7 @@
       "breadedHaddock": 1
     },
     {
-      "rice": 0.6,
+      "rice": 0.75,
       "egg": 1,
       "pc": 1.3,
       "oil": 1.0,
@@ -558,7 +558,8 @@
     "2026-11-16: remove18 g Golden Curry roux from the fish-and-shrimp rice meal, without replacement. Retain rice60 g, toasted sesame5 g, tilapia1 fillet, shrimp170 g, egg1, peas/carrots130 g and existing fish/shrimp oils. Remove curry shopping item and simmering tasks.",
     "2026-11-16: remove5 g toasted sesame seeds from each fish-and-shrimp rice meal without replacement; remove10 g weekly sesame purchase. All other ingredients unchanged.",
     "2026-11-16: reduce both spaghetti meals from 55 g to 50 g dry pasta to bring each meal close to 700 kcal. Cook 100 g together per half-week and divide equally; weekly dry pasta is 200 g. All other ingredients unchanged.",
-    "2026-11-16: evenly share the spaghetti meals' combined chicken and oil. Each meal has one thigh (116.25 g raw average), 113.5 g raw ground chicken, 50 g dry spaghetti, one zucchini, 150 mL Catelli sauce and one egg. Cook 227 g ground chicken with both zucchini and 1¼ tsp oil, then combine with all pasta and 300 mL sauce; divide equally and give each plate one roasted thigh. Weekly ingredient totals unchanged."
+    "2026-11-16: evenly share the spaghetti meals' combined chicken and oil. Each meal has one thigh (116.25 g raw average), 113.5 g raw ground chicken, 50 g dry spaghetti, one zucchini, 150 mL Catelli sauce and one egg. Cook 227 g ground chicken with both zucchini and 1¼ tsp oil, then combine with all pasta and 300 mL sauce; divide equally and give each plate one roasted thigh. Weekly ingredient totals unchanged.",
+    "2026-11-16: increase dry rice from 60 g to 75 g per fish-and-shrimp rice meal, 150 g weekly, to bring the meal to about 700 kcal. Other ingredients and the existing shrimp nutrition reference remain unchanged."
   ],
   "sources": {
     "shrimp": "https://www.walmart.ca/en/ip/Great-Value-Wild-Argentinian-Large-Raw-Shrimp/6000202999819",

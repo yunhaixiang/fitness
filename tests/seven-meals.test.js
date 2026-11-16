@@ -31,7 +31,7 @@ test('weekly meat, eggs, grains and portions match whole-package purchase cycles
  close(weekly('egg'),12);
  assert.equal(basis.shrimpEggWash,undefined); close(weekly('potato')*100,340);
  close(weekly('sweetpotato'),0);
- close(weekly('rice')*100,120); close(weekly('pasta')*85,200);
+ close(weekly('rice')*100,150); close(weekly('pasta')*85,200);
  close(weekly('noodle')*100,0); close(weekly('sauce')*125,600);
  const recipes=Object.fromEntries(basis.mealKeys.map((k,i)=>[k,basis.recipes[i]]));
  assert.equal(recipes.wrap.tuna,undefined); close(recipes.bread.tuna,1); close(recipes.bread.bread,1.5);
