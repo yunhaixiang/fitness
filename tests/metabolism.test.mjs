@@ -76,8 +76,13 @@ test('browser updates every breakdown row and deficit before charts render',asyn
  for(const [row,key] of [['resting','weeklyResting'],['activity','weeklyActivity'],['strength','weeklyStrength'],['cardio','weeklyCardio'],['total','weeklyBurn']]) {
   assert.equal(rows[row].cells[1].textContent,new Intl.NumberFormat('en-CA',{minimumFractionDigits:2,maximumFractionDigits:2}).format(expected[key]));
  }
- assert.equal(summary.value,Math.round(expected.dailyDeficit)+' ');
+ assert.equal(summary.value,new Intl.NumberFormat('en-CA',{maximumFractionDigits:0,signDisplay:'exceptZero'}).format(-expected.dailyDeficit)+' ');
+ assert.equal(summary.dataset.energyBalance,'deficit');
  assert.equal(window.fitnessCardioPlan.netKcal,200);
+ values['cardio-energy-baseline']={...baseline,intake_daily:5000};
+ runInNewContext(readFileSync('assets/cardio-plans.js','utf8'),{window,document,Intl});
+ assert.equal(summary.dataset.energyBalance,'surplus');
+ assert.match(summary.value,/^\+/);
  assert.ok(readFileSync('_layouts/default.html','utf8').includes('id="metabolic-energy">{}</script>'));
  for(const file of ['stats.md','plans/plan-2/stats.md']) for(const type of ['resting','activity','strength']) assert.ok(readFileSync(file,'utf8').includes(`data-energy-row="${type}"`));
 });

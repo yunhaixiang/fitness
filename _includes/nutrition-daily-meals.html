@@ -6,9 +6,8 @@
 {% if daily_meal %}
 <div class="nutrition-routine-variant">
 <div class="nutrition-routine-heading">
-{% if daily_key == 'outside_drink' %}<strong data-en="Daily">每天</strong>
-{% elsif daily_key == 'fruit_breakfast' or daily_key == 'fruit_snack' %}<strong data-en="Sun–Tue">周日—周二</strong>
-{% else %}<strong data-en="Wed–Sat">周三—周六</strong>{% endif %}
+{% if daily_key contains 'breakfast' %}<strong data-en="🥣 Breakfast">🥣 早餐</strong>
+{% else %}<strong data-en="🌙 Evening Snack">🌙 晚上加餐</strong>{% endif %}
 <span class="nutrition-routine-calories">{{ daily_meal.kcal }} kcal</span>
 </div>
 {% if daily_meal.foodItems %}

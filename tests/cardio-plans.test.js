@@ -100,3 +100,12 @@ test('higher-energy video audit and alternatives support the new planning tier',
   assert.ok(Math.abs(other/current-1.5)<0.03);
  }
 });
+
+test('display balances use negative deficits, positive surpluses and neutral zero without changing the budget',()=>{
+ const {balance}=require('../assets/cardio-plans');
+ assert.deepEqual(balance(500),{value:-500,state:'deficit'});
+ assert.deepEqual(balance(-100),{value:100,state:'surplus'});
+ assert.deepEqual(balance(0.1),{value:0,state:'balanced'});
+ assert.deepEqual(balance(0.25,2),{value:-0.25,state:'deficit'});
+ for(const value of [null,NaN,Infinity,undefined]) assert.deepEqual(balance(value),{value:null,state:'unavailable'});
+});

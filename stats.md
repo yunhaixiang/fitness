@@ -10,21 +10,22 @@ nutrition: true
 
 ## 每日营养
 
-<figure class="nutrition-overview" aria-label="每日能量与每周赤字">
+<figure class="nutrition-overview" aria-label="每日能量与每周赤字或盈余">
   <div class="nutrition-overview-main">
     <div class="nutrition-ring" style="--intake-share:83.7%" aria-label="每日摄入与消耗">
       <div class="nutrition-ring-center">
-        <span>日均赤字</span>
+        <span>日均赤字或盈余</span>
         <strong data-energy="dailyDeficit">— <small>kcal／天</small></strong>
       </div>
     </div>
     <div class="nutrition-overview-key">
       <p class="nutrition-overview-eyebrow">能量概览 · 不含放纵餐</p>
+      <p class="energy-sign-legend" data-en="− Deficit · + Surplus · 0 Balanced">− 赤字 · + 盈余 · 0 收支平衡</p>
       <div class="nutrition-key-row nutrition-key-intake"><span>日均摄入</span><strong>1,893 <small>kcal／天</small></strong></div>
       <div class="nutrition-key-row nutrition-key-burn"><span>日均消耗</span><strong data-energy="dailyBurn">— <small>kcal／天</small></strong></div>
-      <div class="nutrition-key-row nutrition-key-deficit"><span>日均赤字</span><strong data-energy="dailyDeficit">— <small>kcal／天</small></strong></div>
-      <div class="nutrition-key-row"><span>每周赤字</span><strong data-energy="weeklyDeficit">— <small>kcal</small></strong></div>
-      <div class="nutrition-key-row"><span>每周赤字等价脂肪</span><strong data-energy="fatEquivalent">— <small>kg／周</small></strong></div>
+      <div class="nutrition-key-row nutrition-key-deficit"><span>日均赤字或盈余</span><strong data-energy="dailyDeficit">— <small>kcal／天</small></strong></div>
+      <div class="nutrition-key-row"><span>每周赤字或盈余</span><strong data-energy="weeklyDeficit">— <small>kcal</small></strong></div>
+      <div class="nutrition-key-row"><span>每周能量差等价脂肪</span><strong data-energy="fatEquivalent">— <small>kg／周</small></strong></div>
     </div>
   </div>
 </figure>
@@ -35,8 +36,8 @@ nutrition: true
 
 {% assign summary_daily_meals = site.data.meal_nutrition.meals %}
 <div class="nutrition-routine-grid">
-{% include nutrition-daily-meals.html meals=summary_daily_meals keys="fruit_breakfast,late_fruit_breakfast" title="🥣 早餐" title_en="🥣 Breakfast" %}
-{% include nutrition-daily-meals.html meals=summary_daily_meals keys="fruit_snack,late_fruit_snack" title="🌙 睡前加餐" title_en="🌙 Bedtime Snack" %}
+{% include nutrition-daily-meals.html meals=summary_daily_meals keys="fruit_breakfast,fruit_snack" title="周日—周二" title_en="Sun–Tue" %}
+{% include nutrition-daily-meals.html meals=summary_daily_meals keys="late_fruit_breakfast,late_fruit_snack" title="周三—周六" title_en="Wed–Sat" %}
 </div>
 
 {% include nutrition-meal-summary.html %}

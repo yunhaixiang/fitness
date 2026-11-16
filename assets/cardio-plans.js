@@ -20,7 +20,14 @@
       fatEquivalent: weeklyDeficit === null ? null : weeklyDeficit / 7700,
       intakeShare: weeklyBurn > 0 && valid(baseline.intake_daily) ? baseline.intake_daily / (weeklyBurn / 7) * 100 : null};
   }
-  if (typeof module !== 'undefined' && module.exports) { module.exports = { resolve, energy }; return; }
+  // Internal deficits stay positive; display net intake minus expenditure.
+  function balance(deficit, digits = 0) {
+    if (deficit == null || !Number.isFinite(deficit)) return {value:null,state:'unavailable'};
+    const rounded = Number((-deficit).toFixed(digits));
+    const value = rounded === 0 ? 0 : rounded;
+    return {value,state:value < 0 ? 'deficit' : value > 0 ? 'surplus' : 'balanced'};
+  }
+  if (typeof module !== 'undefined' && module.exports) { module.exports = { resolve, energy, balance }; return; }
   const source = document.getElementById('cardio-plan-catalog');
   if (!source) return;
   const catalog = JSON.parse(source.textContent);
@@ -43,6 +50,11 @@
   const format = (value, digits = 0) => value == null || !Number.isFinite(value) ? '—' : new Intl.NumberFormat('en-CA', {
     minimumFractionDigits: digits, maximumFractionDigits: digits
   }).format(value);
+  const formatBalance = (deficit, digits = 0) => {
+    const result = balance(deficit, digits);
+    return result.value == null ? '—' : new Intl.NumberFormat(en ? 'en-CA' : 'zh-CN', {minimumFractionDigits:digits,maximumFractionDigits:digits,signDisplay:'exceptZero'}).format(result.value);
+  };
+  window.fitnessEnergyDisplay = {balance, formatBalance};
   const budgetNode = document.getElementById('cardio-energy-baseline');
   if (budgetNode) {
     const baseline = JSON.parse(budgetNode.textContent);
@@ -58,7 +70,14 @@
     }
     for (const node of document.querySelectorAll('[data-energy]')) {
       const unit = node.querySelector('small');
-      node.replaceChildren(document.createTextNode(format(budget[node.dataset.energy], node.dataset.energy === 'fatEquivalent' ? 2 : 0) + ' '));
+      const key = node.dataset.energy, digits = key === 'fatEquivalent' ? 2 : 0;
+      const isBalance = ['dailyDeficit','weeklyDeficit','fatEquivalent'].includes(key);
+      if (isBalance) {
+        const result = balance(budget[key], digits);
+        node.dataset.energyBalance = result.state;
+        node.title = result.state === 'deficit' ? tr('赤字：摄入少于消耗','Deficit: intake below expenditure') : result.state === 'surplus' ? tr('盈余：摄入多于消耗','Surplus: intake above expenditure') : result.state === 'balanced' ? tr('收支平衡','Balanced') : tr('等待数据','Awaiting data');
+      }
+      node.replaceChildren(document.createTextNode((isBalance ? formatBalance(budget[key], digits) : format(budget[key], digits)) + ' '));
       if (unit) node.append(unit);
     }
     const ring = document.querySelector('.nutrition-ring');

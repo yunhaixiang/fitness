@@ -1,6 +1,31 @@
 (() => {
   'use strict';
 
+  function splitFoods(text) {
+    const parts = []; let depth = 0, part = '';
+    for (let i = 0; i < text.length; i++) {
+      const c = text[i];
+      if ('(（'.includes(c)) depth++;
+      if (')）'.includes(c)) depth = Math.max(0, depth - 1);
+      const thousands = c === ',' && /[0-9]/.test(text[i-1] || '') && /[0-9]/.test(text[i+1] || '');
+      if (!depth && !thousands && '，、,·'.includes(c)) { if (part.trim()) parts.push(part.trim()); part = ''; }
+      else part += c;
+    }
+    if (part.trim()) parts.push(part.trim());
+    return parts;
+  }
+  function foodEmoji(text) {
+    for (const [pattern, emoji] of [
+      [/意面|spaghetti|pasta/i,'🍝'], [/虾|shrimp/i,'🦐'], [/三文鱼|黑线鳕|罗非鱼|金枪鱼|salmon|haddock|tilapia|tuna/i,'🐟'],
+      [/蛋黄酱|mayonnaise|chipotle|sauce/i,'🥄'], [/鸡蛋|水煮蛋|boiled egg|eggs?/i,'🥚'], [/鸡|chicken/i,'🍗'], [/排骨|ribs|pork/i,'🍖'],
+      [/饺|dumpling/i,'🥟'], [/卷饼|wrap|tortilla/i,'🌯'], [/面包|bread/i,'🍞'], [/米饭|rice/i,'🍚'], [/土豆|potato/i,'🥔'],
+      [/西葫芦|zucchini/i,'🥒'], [/菠菜|spinach/i,'🥬'], [/胡萝卜|carrot/i,'🥕'], [/豌豆|peas/i,'🫛'], [/鹰嘴豆|chickpea/i,'🫘'],
+      [/豆奶|soy milk/i,'🥛'], [/kiwi|奇异果/i,'🥝'], [/水果|fruit/i,'🍇'], [/核桃|walnut/i,'🌰'], [/谷物|cereal/i,'🥣'],
+      [/Fresca|Sparkling Ice|Fuze|气泡水|冰茶/i,'🥤'], [/肌酸|维生素|镁|creatine|vitamin|magnesium|omega/i,'💊']
+    ]) if (pattern.test(text)) return emoji;
+    return '🍽️';
+  }
+  if (typeof module !== 'undefined' && module.exports) { module.exports = {splitFoods, foodEmoji}; return; }
   const mealsRoot = document.getElementById('today-meals');
   const trainingRoot = document.getElementById('today-training');
   const dateNode = document.getElementById('today-date');
@@ -31,7 +56,18 @@
     card.dataset.meal = kind;
     const top = element('div', 'today-meal-top');
     top.append(element('span', '', title), element('strong', '', `${kcal} kcal`));
-    card.append(top, element('p', '', food));
+    const list = element('ul', 'today-food-list');
+    const entries = Array.isArray(food) ? food : splitFoods(food).map(text => ({text,emoji:foodEmoji(text)}));
+    for (const entry of entries) {
+      const text = entry.text ?? (en ? entry.en : entry.zh);
+      if (!text) continue;
+      const item = element('li');
+      const icon = element('span','today-food-emoji',entry.emoji || foodEmoji(text));
+      icon.setAttribute('aria-hidden','true');
+      item.append(icon,element('span','today-food-text',text));
+      list.append(item);
+    }
+    card.append(top, list);
     mealsRoot.append(card);
   }
 
@@ -42,7 +78,7 @@
     const snack = nutrition[`${fruit}_snack`];
     const drink = snack || nutrition.outside_drink;
     window.fitnessMealActivities.append(mealsRoot, day, 'before-breakfast', true);
-    addMeal('breakfast', label('早餐', 'Breakfast'), en ? breakfast.foodEn : breakfast.foodZh, breakfast.kcal);
+    addMeal('breakfast', label('🥣 早餐', '🥣 Breakfast'), breakfast.foodItems || (en ? breakfast.foodEn : breakfast.foodZh), breakfast.kcal);
     const rows = [...dietTable.tBodies[0].rows].filter((row) => cell(row, 1) === weekdays[day]);
     for (const [kind, zh, english] of [['lunch', '午餐', 'Lunch'], ['dinner', '晚餐', 'Dinner']]) {
       const row = rows.find((item) => cell(item, 2) === zh);
@@ -51,12 +87,12 @@
             ? label('Sparkling Ice 橙芒果味气泡水 251.5 mL', '251.5 mL Sparkling Ice Orange Mango')
             : row.dataset.drink === 'fuze' ? label('Fuze Tea 无糖冰茶 250 mL', '250 mL Fuze Tea Zero Sugar')
         : label('Fresca 1罐（355 mL）', '1 can of Fresca (355 mL)');
-      const food = [...[3, 4, 5].map((index) => (en && row.cells[index]?.dataset.en ? row.cells[index].dataset.en : translated(cell(row, index)))).filter(Boolean), drink].join(' · ');
+      const food = [...[3, 4, 5].map((index) => (en && row.cells[index]?.dataset.en ? row.cells[index].dataset.en : translated(cell(row, index)))).filter(Boolean), drink].flatMap(text => splitFoods(text).map(text => ({text,emoji:foodEmoji(text)})));
       window.fitnessMealActivities.append(mealsRoot, day, `before-${kind}`, true);
-      addMeal(kind, label(zh, english), food, cell(row, 6));
+      addMeal(kind, `${kind === 'lunch' ? '🍱' : '🍽️'} ${label(zh, english)}`, food, cell(row, 6));
       window.fitnessMealActivities.append(mealsRoot, day, kind, true);
     }
-    addMeal('beverage', snack ? label('睡前加餐', 'Bedtime Snack') : label('餐外饮品', 'Between-Meal Drinks'), en ? drink.foodEn : drink.foodZh, drink.kcal);
+    addMeal('beverage', snack ? label('🌙 睡前加餐', '🌙 Bedtime Snack') : label('🥛 餐外饮品', '🥛 Between-Meal Drinks'), drink.foodItems || (en ? drink.foodEn : drink.foodZh), drink.kcal);
   }
 
   function renderTraining(day) {

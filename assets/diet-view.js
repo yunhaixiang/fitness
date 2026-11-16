@@ -246,11 +246,26 @@
       card.append(track);
       const remaining = make('div', 'diet-treat-remaining');
       for (const [zh, english, lowValue, highValue, suffix] of [
-        ['剩余每周赤字', 'Weekly deficit left', weeklyDeficit - high, weeklyDeficit - low, ' kcal'],
-        ['剩余日均赤字', 'Average daily deficit left', Math.round((weeklyDeficit - high) / 7), Math.round((weeklyDeficit - low) / 7), ' kcal']
+        ['加餐后每周赤字或盈余', 'Weekly deficit or surplus after extra food', weeklyDeficit - high, weeklyDeficit - low, ' kcal'],
+        ['加餐后日均赤字或盈余', 'Daily deficit or surplus after extra food', Math.round((weeklyDeficit - high) / 7), Math.round((weeklyDeficit - low) / 7), ' kcal']
       ]) {
         const metric = make('div', 'diet-treat-metric');
-        metric.append(make('span', '', label(zh, english)), make('strong', '', range(lowValue, highValue, suffix)));
+        const output = make('strong', 'energy-balance-range');
+        const display = window.fitnessEnergyDisplay;
+        if (!display || !Number.isFinite(lowValue) || !Number.isFinite(highValue)) output.textContent = '—';
+        else {
+          const start = make('span','',display.formatBalance(highValue));
+          start.dataset.energyBalance = display.balance(highValue).state;
+          output.append(start);
+          if (lowValue !== highValue) {
+            output.append(make('span','',label(' 至 ',' to ')));
+            const end = make('span','',display.formatBalance(lowValue));
+            end.dataset.energyBalance = display.balance(lowValue).state;
+            output.append(end);
+          }
+          output.append(make('span','',suffix));
+        }
+        metric.append(make('span', '', label(zh, english)), output);
         remaining.append(metric);
       }
       card.append(remaining);

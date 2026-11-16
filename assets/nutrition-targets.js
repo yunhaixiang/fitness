@@ -160,7 +160,7 @@
           lean: tr('按最新去脂体重估算，取整至5 g；计划目标，非精确生理需求。', 'Estimated from latest fat-free mass, rounded to 5 g; a planning target.'),
           weight: tr('暂缺体脂率，按最新体重估算。', 'Body fat unavailable; based on latest weight.'),
           remainder: tr('先满足蛋白质，再按脂肪预算分配剩余热量。', 'Remaining calories after the protein and fat budgets.'),
-          deficit: tr('最佳：日均赤字300–500 kcal；可接受：150–650 kcal。', 'Best: 300–500 kcal daily deficit; acceptable: 150–650 kcal.'),
+          deficit: tr('日均能量差：最佳 −500至−300 kcal；可接受 −650至−150 kcal。', 'Daily energy balance: best −500 to −300 kcal; acceptable −650 to −150 kcal.'),
           added: tr('按添加糖估算；不含完整水果中的天然糖。', 'Added-sugar estimate; excludes natural sugar in whole fruit.')
         };
         if (!proxy && notes[policy.basis]) bottom.append(el('small', 'nutrient-rule-note', notes[policy.basis]));
