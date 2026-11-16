@@ -15,23 +15,23 @@
   "meals": {
     "fruit_breakfast": {
       "label": "周日—周二早餐（混合水果盘）",
-      "foodZh": "高纤维谷物早餐 29 g、原味核桃仁6瓣（约12 g），无糖豆奶 270 g，一水肌酸 5 g、Webber Naturals Omega-3 鱼油 1粒、甘氨酸镁 200 mg、Jamieson 维生素D3 1片（1,000 IU），Metro 混合水果盘 156 g",
-      "foodEn": "29 g high-fibre cereal with 6 plain walnut halves (about 12 g), 270 g unsweetened soy milk, 5 g creatine monohydrate and 1 Webber Naturals Omega-3 softgel and magnesium bisglycinate 200 mg and 1 Jamieson vitamin D3 tablet (1000 IU), 156 g Metro mixed fruit",
-      "kcal": "336",
-      "protein": "13.3",
-      "fat": "14.6",
-      "saturatedFat": "1.3",
-      "carbs": "49.2",
-      "fibre": "17.3",
-      "sugar": "16.5",
+      "foodZh": "高纤维谷物早餐 29 g、原味核桃仁6瓣（约12 g），无糖豆奶 270 g，一水肌酸 5 g、Webber Naturals Omega-3 鱼油 1粒、甘氨酸镁 200 mg、Jamieson 维生素D3 1片（1,000 IU），Metro 混合水果盘 467 g",
+      "foodEn": "29 g high-fibre cereal with 6 plain walnut halves (about 12 g), 270 g unsweetened soy milk, 5 g creatine monohydrate and 1 Webber Naturals Omega-3 softgel and magnesium bisglycinate 200 mg and 1 Jamieson vitamin D3 tablet (1000 IU), 467 g Metro mixed fruit",
+      "kcal": "466",
+      "protein": "15.0",
+      "fat": "15.0",
+      "saturatedFat": "1.4",
+      "carbs": "80.7",
+      "fibre": "20.5",
+      "sugar": "42.4",
       "cholesterol": "0",
-      "sodium": "209",
-      "calcium": "469.501",
-      "iron": "5.571",
-      "potassium": "773.543",
+      "sodium": "224",
+      "calcium": "501.234",
+      "iron": "6.393",
+      "potassium": "1314.254",
       "vitaminD": "27.160",
       "vitaminB12": "1.080",
-      "iodine": "4.022",
+      "iodine": "4.956",
       "epaDha": "0.90",
       "foodItems": [
         {
@@ -71,8 +71,8 @@
         },
         {
           "emoji": "🍓",
-          "zh": "Metro 混合水果盘 156 g",
-          "en": "Metro mixed fruit 156 g"
+          "zh": "Metro 混合水果盘 467 g",
+          "en": "Metro mixed fruit 467 g"
         }
       ]
     },
@@ -210,57 +210,53 @@
       "iodine": "36.057"
     },
     "fruit_snack": {
-      "label": "周日—周二睡前加餐（混合水果盘）",
-      "foodZh": "无糖豆奶 270 g，Metro 混合水果盘 311 g",
-      "foodEn": "270 g unsweetened soy milk, 311 g Metro mixed fruit",
-      "kcal": "228",
-      "protein": "10.3",
-      "carbs": "35.8",
-      "fat": "5.3",
-      "saturatedFat": "0.6",
-      "fibre": "5.2",
-      "sugar": "27.0",
-      "sodium": "112",
+      "label": "餐外饮品",
+      "foodZh": "无糖豆奶 270 g",
+      "foodEn": "270 g unsweetened soy milk",
+      "kcal": "97",
+      "protein": "8.6",
+      "carbs": "4.3",
+      "fat": "4.8",
+      "saturatedFat": "0.5",
+      "fibre": "2.1",
+      "sugar": "1.1",
+      "sodium": "97",
       "cholesterol": "0",
       "epaDha": "0.00",
-      "calcium": "355.733",
-      "iron": "1.901",
-      "potassium": "918.711",
+      "calcium": "324.000",
+      "iron": "1.080",
+      "potassium": "378.000",
       "vitaminD": "2.160",
       "vitaminB12": "1.080",
-      "iodine": "4.489",
+      "iodine": "3.556",
       "foodItems": [
         {
           "emoji": "🥛",
           "zh": "无糖豆奶 270 g",
           "en": "Unsweetened soy milk 270 g"
-        },
-        {
-          "emoji": "🍓",
-          "zh": "Metro 混合水果盘 311 g",
-          "en": "Metro mixed fruit 311 g"
         }
-      ]
+      ],
+      "kind": "drink"
     },
     "late_fruit_breakfast": {
-      "label": "周三—周六早餐（奇异果1个）",
-      "foodZh": "高纤维谷物早餐 29 g、原味核桃仁6瓣（约12 g），无糖豆奶 270 g，一水肌酸 5 g、Webber Naturals Omega-3 鱼油 1粒、甘氨酸镁 200 mg、Jamieson 维生素D3 1片（1,000 IU），SunGold 奇异果 1个",
-      "foodEn": "29 g high-fibre cereal with 6 plain walnut halves (about 12 g), 270 g unsweetened soy milk, 5 g creatine monohydrate and 1 Webber Naturals Omega-3 softgel and magnesium bisglycinate 200 mg and 1 Jamieson vitamin D3 tablet (1000 IU), 1 SunGold kiwi",
-      "kcal": "322",
-      "protein": "13.2",
-      "fat": "14.5",
-      "saturatedFat": "1.3",
-      "carbs": "46.3",
-      "fibre": "16.9",
-      "sugar": "13.6",
+      "label": "周三—周六早餐（奇异果2个）",
+      "foodZh": "高纤维谷物早餐 29 g、原味核桃仁6瓣（约12 g），无糖豆奶 270 g，一水肌酸 5 g、Webber Naturals Omega-3 鱼油 1粒、甘氨酸镁 200 mg、Jamieson 维生素D3 1片（1,000 IU），SunGold 奇异果 2个",
+      "foodEn": "29 g high-fibre cereal with 6 plain walnut halves (about 12 g), 270 g unsweetened soy milk, 5 g creatine monohydrate and 1 Webber Naturals Omega-3 softgel and magnesium bisglycinate 200 mg and 1 Jamieson vitamin D3 tablet (1000 IU), 2 SunGold kiwis",
+      "kcal": "373",
+      "protein": "14.1",
+      "fat": "14.8",
+      "saturatedFat": "1.4",
+      "carbs": "59.2",
+      "fibre": "18.1",
+      "sugar": "23.7",
       "cholesterol": "0",
-      "sodium": "204",
-      "calcium": "467.511",
-      "iron": "5.332",
-      "potassium": "760.322",
+      "sodium": "206",
+      "calcium": "481.388",
+      "iron": "5.503",
+      "potassium": "1017.457",
       "vitaminD": "27.160",
       "vitaminB12": "1.080",
-      "iodine": "3.800",
+      "iodine": "4.045",
       "epaDha": "0.90",
       "foodItems": [
         {
@@ -300,43 +296,39 @@
         },
         {
           "emoji": "🥝",
-          "zh": "SunGold 奇异果 1个",
-          "en": "1 SunGold kiwi"
+          "zh": "SunGold 奇异果 2个",
+          "en": "2 SunGold kiwis"
         }
       ]
     },
     "late_fruit_snack": {
-      "label": "周三—周六睡前加餐（奇异果1个）",
-      "foodZh": "无糖豆奶 270 g，SunGold 奇异果 1个",
-      "foodEn": "270 g unsweetened soy milk, 1 SunGold kiwi",
-      "kcal": "148",
-      "protein": "9.4",
-      "carbs": "17.2",
-      "fat": "5.0",
-      "saturatedFat": "0.6",
-      "fibre": "3.2",
-      "sugar": "11.1",
-      "sodium": "99",
+      "label": "餐外饮品",
+      "foodZh": "无糖豆奶 270 g",
+      "foodEn": "270 g unsweetened soy milk",
+      "kcal": "97",
+      "protein": "8.6",
+      "carbs": "4.3",
+      "fat": "4.8",
+      "saturatedFat": "0.5",
+      "fibre": "2.1",
+      "sugar": "1.1",
+      "sodium": "97",
       "cholesterol": "0",
       "epaDha": "0.00",
-      "calcium": "337.877",
-      "iron": "1.251",
-      "potassium": "635.134",
+      "calcium": "324.000",
+      "iron": "1.080",
+      "potassium": "378.000",
       "vitaminD": "2.160",
       "vitaminB12": "1.080",
-      "iodine": "3.800",
+      "iodine": "3.556",
       "foodItems": [
         {
           "emoji": "🥛",
           "zh": "无糖豆奶 270 g",
           "en": "Unsweetened soy milk 270 g"
-        },
-        {
-          "emoji": "🥝",
-          "zh": "SunGold 奇异果 1个",
-          "en": "1 SunGold kiwi"
         }
-      ]
+      ],
+      "kind": "drink"
     }
   }
 }

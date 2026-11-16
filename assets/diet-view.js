@@ -81,8 +81,8 @@
     const dailyCard = (dayIndex, beverage) => {
       const fruitKey = dayIndex < 3 ? 'fruit' : (nutrition.late_fruit_breakfast ? 'late_fruit' : 'kiwi');
       const snackKey = `${fruitKey}_snack`;
-      const hasSnack = Boolean(nutrition[snackKey]);
-      const key = beverage ? (hasSnack ? snackKey : 'outside_drink') : `${fruitKey}_breakfast`;
+      const hasSnack = Boolean(nutrition[snackKey] && nutrition[snackKey].kind !== 'drink');
+      const key = beverage ? (nutrition[snackKey] ? snackKey : 'outside_drink') : `${fruitKey}_breakfast`;
       const meal = nutrition[key];
       const card = make('article', `diet-meal-card diet-kind-${beverage ? 'beverage' : 'breakfast'}`);
       const top = make('div', 'diet-meal-top');

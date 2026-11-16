@@ -677,24 +677,22 @@
     "fruit_breakfast": {
       "soy": 2.7,
       "cereal": 0.29,
-      "fruit": 1.5555555555555554,
+      "fruit": 4.666666666666666,
       "vitaminDSupplement": 1,
       "walnut": 0.42328042328042326
     },
     "fruit_snack": {
-      "soy": 2.7,
-      "fruit": 3.1111111111111107
+      "soy": 2.7
     },
     "late_fruit_breakfast": {
       "soy": 2.7,
       "cereal": 0.29,
       "vitaminDSupplement": 1,
-      "kiwi": 0.8162999999999999,
+      "kiwi": 1.6325999999999998,
       "walnut": 0.42328042328042326
     },
     "late_fruit_snack": {
-      "soy": 2.7,
-      "kiwi": 0.8162999999999999
+      "soy": 2.7
     }
   }
 }

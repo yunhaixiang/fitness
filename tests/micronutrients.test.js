@@ -26,6 +26,7 @@ test('Canadian soy fortification and current seafood servings use their stated u
  assert.equal(micro.foods.soy.values.vitaminD, .8); // 2 mcg per 250 mL, not US formula
  assert.equal(micro.foods.cereal.values.vitaminB12,0);
  assert.equal(meals.fruit_snack.vitaminD,'2.160');
+ assert.equal(meals.fruit_breakfast.vitaminD,'27.160');
  assert.equal(micro.foods.tuna.values.vitaminD,4); // one 55 g drained half-can
  assert.equal(micro.foods.plainHaddock.values.potassium,350/1.14); // label per114 g converted to100 g
  const weeklySalt=macro.recipes.reduce((s,r)=>s+2*(r.salt||0),0);
@@ -48,14 +49,15 @@ test('recalculation is repeatable and refuses missing micronutrients instead of 
  } finally {fs.rmSync(tmp,{recursive:true,force:true});}
 });
 
-test('breakfast and bedtime fruit use one Metro tray and eight late-week SunGold kiwis without OLLY', () => {
+test('breakfast fruit uses one Metro tray and eight late-week SunGold kiwis without OLLY', () => {
  const recipes=micro.extraRecipes;
  const sumFood=food=>3*((recipes.fruit_breakfast[food]||0)+(recipes.fruit_snack[food]||0))+4*((recipes.late_fruit_breakfast[food]||0)+(recipes.late_fruit_snack[food]||0));
  assert.ok(Math.abs(sumFood('fruit')*100-1400)<.001);
  assert.ok(Math.abs(sumFood('kiwi')*100/macro.fruitAllocation.kiwiEdibleGramsEach-8)<.001);
  assert.ok(Math.abs(sumFood('soy')*100-3780)<.001);
- assert.ok(Math.abs(recipes.late_fruit_breakfast.kiwi-.8163)<.001);
- assert.ok(Math.abs(recipes.late_fruit_snack.kiwi-.8163)<.001);
+ assert.ok(Math.abs(recipes.late_fruit_breakfast.kiwi-1.6326)<.001);
+ assert.deepEqual(recipes.late_fruit_snack,{soy:2.7});
+ assert.equal(meals.late_fruit_snack.kind,'drink');
  assert.ok(Math.abs(sumFood('kiwi')*100-907*.72)<.001);
  assert.ok(!micro.foods.olly);
  assert.equal(macro.breakfastExtras.length,0);

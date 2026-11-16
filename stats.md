@@ -131,12 +131,12 @@ nutrition: true
 </tr>
 <tr data-nutrient="fibre">
 <td>膳食纤维</td>
-<td style="text-align: right;">36.0 g</td>
+<td style="text-align: right;">36.1 g</td>
 <td>—</td>
 </tr>
 <tr data-nutrient="sugar">
 <td>总糖</td>
-<td style="text-align: right;">50.0 g</td>
+<td style="text-align: right;">50.1 g</td>
 <td>—</td>
 </tr>
 <tr data-nutrient="addedSugar">

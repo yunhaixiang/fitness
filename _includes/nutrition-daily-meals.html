@@ -7,6 +7,7 @@
 <div class="nutrition-routine-variant">
 <div class="nutrition-routine-heading">
 {% if daily_key contains 'breakfast' %}<strong data-en="🥣 Breakfast">🥣 早餐</strong>
+{% elsif daily_meal.kind == "drink" %}<strong data-en="🥛 Between-Meal Drinks">🥛 餐外饮品</strong>
 {% else %}<strong data-en="🌙 Evening Snack">🌙 晚上加餐</strong>{% endif %}
 <span class="nutrition-routine-calories">{{ daily_meal.kcal }} kcal</span>
 </div>

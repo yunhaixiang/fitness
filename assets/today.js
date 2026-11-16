@@ -75,8 +75,9 @@
     mealsRoot.replaceChildren();
     const fruit = day <= 2 ? 'fruit' : (nutrition.late_fruit_breakfast ? 'late_fruit' : 'kiwi');
     const breakfast = nutrition[`${fruit}_breakfast`];
-    const snack = nutrition[`${fruit}_snack`];
-    const drink = snack || nutrition.outside_drink;
+    const extra = nutrition[`${fruit}_snack`];
+    const snack = extra && extra.kind !== 'drink';
+    const drink = extra || nutrition.outside_drink;
     window.fitnessMealActivities.append(mealsRoot, day, 'before-breakfast', true);
     addMeal('breakfast', label('🥣 早餐', '🥣 Breakfast'), breakfast.foodItems || (en ? breakfast.foodEn : breakfast.foodZh), breakfast.kcal);
     const rows = [...dietTable.tBodies[0].rows].filter((row) => cell(row, 1) === weekdays[day]);
@@ -92,7 +93,7 @@
       addMeal(kind, `${kind === 'lunch' ? '🍱' : '🍽️'} ${label(zh, english)}`, food, cell(row, 6));
       window.fitnessMealActivities.append(mealsRoot, day, kind, true);
     }
-    addMeal('beverage', snack ? label('🌙 睡前加餐', '🌙 Bedtime Snack') : label('🥛 餐外饮品', '🥛 Between-Meal Drinks'), drink.foodItems || (en ? drink.foodEn : drink.foodZh), drink.kcal);
+    if (drink) addMeal('beverage', snack ? label('🌙 睡前加餐', '🌙 Bedtime Snack') : label('🥛 餐外饮品', '🥛 Between-Meal Drinks'), drink.foodItems || (en ? drink.foodEn : drink.foodZh), drink.kcal);
   }
 
   function renderTraining(day) {
