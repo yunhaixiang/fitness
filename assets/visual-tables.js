@@ -263,13 +263,16 @@
             boxes.push(setLabel.querySelector('input'));
             sets.append(setLabel);
           }
-          content.append(name, dose, weightLine, el('p', 'visual-exercise-muscles', titleCase(val(row, offset + 3))), sets);
+          const details = el('div', 'visual-exercise-details');
+          details.append(weightLine);
           if (Number(action?.dataset.bodyFactor) > 0) {
             const load = window.fitnessExerciseLoad.label(action.dataset, window.fitnessBodyMetrics?.weight, en);
-            const loadLine = el('span', 'visual-exercise-weight', load.text);
+            const loadLine = el('span', 'visual-exercise-load', load.text);
             loadLine.title = load.detail;
-            content.insertBefore(loadLine, sets);
+            details.append(loadLine);
           }
+          details.append(el('span', 'visual-exercise-muscles', titleCase(val(row, offset + 3))));
+          content.append(name, dose, details, sets);
           card.append(media, content);
           list.append(card);
         }
