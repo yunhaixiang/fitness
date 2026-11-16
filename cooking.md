@@ -271,12 +271,12 @@ cooking: true
 </ol>
 </li>
 <li class="cooking-task-source">
-<ol lang="zh-CN" class="cooking-source-zh"><li>💧 水开后轻放🥚 鸡蛋6个，同时下🍝 两餐合计干意面110 g，轻轻搅散；锅内留足空间。</li><li>两种食材一起开始计时，8分钟后检查；放好后勾选，期间可做其他任务。</li></ol>
-<ol lang="en" class="cooking-source-en" hidden><li>Once the 💧 water boils, gently add 6 🥚 eggs and all 110 g dry 🍝 spaghetti together; separate the strands gently and leave enough space.</li><li>Start one 8-minute timer for the first check. Mark this step after loading; work on other tasks meanwhile.</li></ol>
+<ol lang="zh-CN" class="cooking-source-zh"><li>💧 水开后轻放🥚 鸡蛋6个，同时下🍝 两餐合计干意面100 g，轻轻搅散；锅内留足空间。</li><li>两种食材一起开始计时，8分钟后检查；放好后勾选，期间可做其他任务。</li></ol>
+<ol lang="en" class="cooking-source-en" hidden><li>Once the 💧 water boils, gently add 6 🥚 eggs and all 100 g dry 🍝 spaghetti together; separate the strands gently and leave enough space.</li><li>Start one 8-minute timer for the first check. Mark this step after loading; work on other tasks meanwhile.</li></ol>
 </li>
 <li class="cooking-task-source">
-<ol lang="zh-CN" class="cooking-source-zh"><li>8分钟后按包装要求检查🍝 意面，熟了先用夹子捞出，留少量💧 面水。沥干后的意面均分到第4、7盘，每份相当于干面55 g。</li><li>🥚 鸡蛋未熟时可继续留在锅里煮，不必等鸡蛋才捞面。</li></ol>
-<ol lang="en" class="cooking-source-en" hidden><li>At 8 minutes, check the 🍝 spaghetti according to its package; lift out with tongs when done and reserve a little 💧 pasta water. Divide the drained spaghetti equally between meals 4 and 7, each equivalent to 55 g dry pasta.</li><li>Leave the 🥚 eggs in the pot if they need longer; do not overcook the pasta while waiting.</li></ol>
+<ol lang="zh-CN" class="cooking-source-zh"><li>8分钟后按包装要求检查🍝 意面，熟了先用夹子捞出，留少量💧 面水。沥干后的意面均分到第4、7盘，每份相当于干面50 g。</li><li>🥚 鸡蛋未熟时可继续留在锅里煮，不必等鸡蛋才捞面。</li></ol>
+<ol lang="en" class="cooking-source-en" hidden><li>At 8 minutes, check the 🍝 spaghetti according to its package; lift out with tongs when done and reserve a little 💧 pasta water. Divide the drained spaghetti equally between meals 4 and 7, each equivalent to 50 g dry pasta.</li><li>Leave the 🥚 eggs in the pot if they need longer; do not overcook the pasta while waiting.</li></ol>
 </li>
 <li class="cooking-task-source">
 <ol lang="zh-CN" class="cooking-source-zh"><li>8分钟后检查🥚 鸡蛋，蛋白、蛋黄都凝固后取出，放💧 冷水冷却；未熟则继续煮。</li><li>8分钟是首次检查时间，不保证不同大小、起始温度的鸡蛋都已全熟。</li></ol>

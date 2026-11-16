@@ -2,7 +2,7 @@
   "checked_on": "2026-10-31",
   "currency": "CAD",
   "scope": "Walmart Canada public prices and user-provided Metro fruit price; individual checked_on retained. Chicken thigh and salmon prices supplied by user. Weekly subtotal averages routine purchase cycles. Bread assumes three slices total 105 g; weighed produce billed by actual weight. Excludes as-needed seasonings, tax and delivery. Not a London store live stock guarantee.",
-  "weekly_total_cad": "157.59",
+  "weekly_total_cad": "157.53",
   "items": [
     {
       "item": "去骨去皮鸡大腿肉",
@@ -187,10 +187,10 @@
       "source_url": "https://www.walmart.ca/en/ip/PRIMO-SPAGHETTI/1YCQ0A4KHLLW",
       "source_type": "walmart_public",
       "product_url": "https://www.walmart.ca/en/ip/PRIMO-SPAGHETTI/1YCQ0A4KHLLW",
-      "purchase_frequency_zh": "1包 / 约2.1周",
-      "purchase_frequency_en": "1 Pack / About 2.1 Weeks",
-      "weekly_cost_cad": "0.62",
-      "weekly_quantity": "0.4845814977973568"
+      "purchase_frequency_zh": "1包 / 约2.3周",
+      "purchase_frequency_en": "1 Pack / About 2.3 Weeks",
+      "weekly_cost_cad": "0.56",
+      "weekly_quantity": "0.44052863436123346"
     },
     {
       "item": "全麦卷饼皮",

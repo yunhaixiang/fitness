@@ -93,10 +93,10 @@ visual: true
 <td data-en="1 Box / Week · Plan for 8 Kiwis">1盒 / 周 · 按8个安排</td>
 <td><a href="https://www.walmart.ca/en/ip/Kiwi-Gold-2-lb/6000201891262">$10.87</a></td>
 </tr>
-<tr data-weekly-cost="0.62" data-price-id="16" data-purchase-group="restock">
+<tr data-weekly-cost="0.56" data-price-id="16" data-purchase-group="restock">
 <td>意面</td>
 <td><a href="https://www.walmart.ca/en/ip/PRIMO-SPAGHETTI/1YCQ0A4KHLLW">Primo Spaghetti</a><br>454 g / 包</td>
-<td data-en="1 Pack / About 2.1 Weeks">1包 / 约2.1周</td>
+<td data-en="1 Pack / About 2.3 Weeks">1包 / 约2.3周</td>
 <td style="text-align: right;"><a href="https://www.walmart.ca/en/ip/PRIMO-SPAGHETTI/1YCQ0A4KHLLW">$1.27</a></td>
 </tr>
 <tr data-weekly-cost="0.86" data-price-id="17" data-purchase-group="restock">
@@ -223,7 +223,7 @@ visual: true
 <td>每周合计</td>
 <td>—</td>
 <td style="text-align: right;">—</td>
-<td style="text-align: right;">$157.59</td>
+<td style="text-align: right;">$157.53</td>
 </tr>
 </tbody>
 </table>
