@@ -85,7 +85,7 @@ test('all spaghetti cooks with eggs in Pot1 and each can be removed independentl
  assert.ok(derive(current,done).available.some(n=>n.id==='eggs'));
  done=complete(current,done,'prep-noodle-sauce');
  done=complete(current,done,'prep-zucchini');
- assert.ok(derive(current,done).available.some(n=>n.id==='season-noodles'));
+ assert.ok(derive(current,done).available.some(n=>n.id==='ground'));
 });
 test('dumplings cook independently in Pot2 while eggs and all pasta use Pot1',()=>{
  let done=['egg-water-start','egg-water','pasta-water-start','pasta-water'];
@@ -114,7 +114,7 @@ test('old fish marks merge only when both fish are complete',()=>{
  assert.deepEqual(derive(current,derive(current,both).done).done,derive(current,both).done);
 });
 test('cooking chicken before finishing pasta reserves only the saucepan, not the wok or preparation',()=>{
- let done=complete(current,prerequisites(current,'season-noodles'),'ground');
+ let done=complete(current,[...prerequisites(current,'tomato'),...prerequisites(current,'chicken')],'chicken');
  const view=derive(current,done);
  assert.ok(!view.available.some(n=>n.id==='season-noodles'));
  assert.ok(view.available.some(n=>n.id==='spinach'));

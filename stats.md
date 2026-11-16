@@ -119,7 +119,7 @@ visual: true
 </tr>
 <tr>
 <td>饱和脂肪占总热量</td>
-<td style="text-align: right;">7.0%</td>
+<td style="text-align: right;">7.1%</td>
 <td>≤6%</td>
 </tr>
 <tr data-macro="carbs">

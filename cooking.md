@@ -133,12 +133,12 @@ cooking: true
 <li class="cooking-task-source">
 <ol lang="zh-CN" class="cooking-source-zh">
 <li>确认熟度后取出：400°F烤27分钟，中心达74°C。</li>
-<li>熟肉分到第4、5、6盘：第4盘2块，第5、6盘各1块🍗 鸡腿肉；第1盘三明治不放鸡腿。</li>
+<li>熟肉分到第4、5、6、7盘，各1块🍗 鸡腿肉；两顿意面各1块。</li>
 <li>卷饼的鸡腿肉掰碎。</li>
 </ol>
 <ol lang="en" class="cooking-source-en" hidden>
 <li>Check doneness before removing: Roast at 400°F for 27 minutes, to 74°C in the centre.</li>
-<li>Divide the cooked 🍗 chicken between meals 4, 5 and 6: 2 thighs for meal 4, and 1 thigh each for meals 5 and 6. No thigh goes into meal 1.</li>
+<li>Give meals 4, 5, 6 and 7 one cooked 🍗 thigh each; each spaghetti meal gets one thigh.</li>
 <li>Shred the wrap portion.</li>
 </ol>
 </li>
@@ -275,8 +275,8 @@ cooking: true
 <ol lang="en" class="cooking-source-en" hidden><li>Once the 💧 water boils, gently add 6 🥚 eggs and all 100 g dry 🍝 spaghetti together; separate the strands gently and leave enough space.</li><li>Start one 8-minute timer for the first check. Mark this step after loading; work on other tasks meanwhile.</li></ol>
 </li>
 <li class="cooking-task-source">
-<ol lang="zh-CN" class="cooking-source-zh"><li>8分钟后按包装要求检查🍝 意面，熟了先用夹子捞出，留少量💧 面水。沥干后的意面均分到第4、7盘，每份相当于干面50 g。</li><li>🥚 鸡蛋未熟时可继续留在锅里煮，不必等鸡蛋才捞面。</li></ol>
-<ol lang="en" class="cooking-source-en" hidden><li>At 8 minutes, check the 🍝 spaghetti according to its package; lift out with tongs when done and reserve a little 💧 pasta water. Divide the drained spaghetti equally between meals 4 and 7, each equivalent to 50 g dry pasta.</li><li>Leave the 🥚 eggs in the pot if they need longer; do not overcook the pasta while waiting.</li></ol>
+<ol lang="zh-CN" class="cooking-source-zh"><li>8分钟后按包装要求检查🍝 意面，熟了先用夹子捞出，留少量💧 面水。全部意面留待同锅拌酱后再均分，第4、7盘各相当于干面50 g。</li><li>🥚 鸡蛋未熟时可继续留在锅里煮，不必等鸡蛋才捞面。</li></ol>
+<ol lang="en" class="cooking-source-en" hidden><li>At 8 minutes, check the 🍝 spaghetti according to its package; lift out with tongs when done and reserve a little 💧 pasta water. Keep all the spaghetti together for tossing with sauce, then divide equally between meals 4 and 7, each equivalent to 50 g dry pasta.</li><li>Leave the 🥚 eggs in the pot if they need longer; do not overcook the pasta while waiting.</li></ol>
 </li>
 <li class="cooking-task-source">
 <ol lang="zh-CN" class="cooking-source-zh"><li>8分钟后检查🥚 鸡蛋，蛋白、蛋黄都凝固后取出，放💧 冷水冷却；未熟则继续煮。</li><li>8分钟是首次检查时间，不保证不同大小、起始温度的鸡蛋都已全熟。</li></ol>
@@ -342,43 +342,32 @@ cooking: true
 <ol>
 <li class="cooking-task-source">
 <ol lang="zh-CN" class="cooking-source-zh">
-<li>🍅 Catelli番茄罗勒意面酱每次用半瓶300 mL，分成两份各150 mL，分别给第4、7盘。</li>
+<li>🍅 Catelli番茄罗勒意面酱每次用半瓶300 mL，全部用于两份意面，拌好后均分。</li>
 <li>前半周用后将剩余半瓶盖紧冷藏，按包装开封保存说明使用。</li>
 </ol>
 <ol lang="en" class="cooking-source-en" hidden>
-<li>Use half a jar (300 mL) of 🍅 Catelli Tomato & Basil sauce per cooking session; portion 150 mL each for meals 4 and 7.</li>
+<li>Use half a jar (300 mL) of 🍅 Catelli Tomato & Basil sauce per cooking session; use it together for both spaghetti portions and divide after mixing.</li>
 <li>Refrigerate the remaining half-jar after the first session, following the label storage instructions.</li>
 </ol>
 </li>
 
 <li class="cooking-task-source">
 <ol lang="zh-CN" class="cooking-source-zh">
-<li>小锅空出后按需清理，加🫒 橄榄油¼茶匙，先下🥒 第4盘的1根西葫芦炒2–3分钟；偏干时加少量💧 水。</li>
-<li>加入🍅 Catelli意面酱150 mL煮至微沸；西葫芦仍偏硬时盖锅焖软，再拌入第4盘的🍝 意面，拌热1–2分钟；偏稠时补少量💧 面水，放第4盘。</li>
+<li>🥒 西葫芦2根洗净，切成约3–5 mm薄片；两根一起炒，最后随意面均分。</li>
 </ol>
 <ol lang="en" class="cooking-source-en" hidden>
-<li>Once the saucepan is free, clean it as needed. Heat ¼ tsp 🫒 olive oil and cook the 🥒 zucchini reserved for meal 4 for 2–3 minutes; add a little 💧 water if dry.</li>
-<li>Add 150 mL 🍅 Catelli sauce and bring to a simmer; cover until the zucchini is tender if needed. Toss with the 🍝 spaghetti for meal 4 for 1–2 minutes, loosening with a little 💧 pasta water if needed, then place in meal 4.</li>
-</ol>
-</li>
-
-<li class="cooking-task-source">
-<ol lang="zh-CN" class="cooking-source-zh">
-<li>🥒 西葫芦2根洗净，切成约3–5 mm薄片；分成两份各1根，分别给第4、7盘意面。</li>
-</ol>
-<ol lang="en" class="cooking-source-en" hidden>
-<li>Wash 2 🥒 zucchini and cut into thin slices, about 3–5 mm thick. Divide into two equal portions, one zucchini each for meals 4 and 7.</li>
+<li>Wash 2 🥒 zucchini and cut into thin slices, about 3–5 mm thick. Cook both together and divide with the finished spaghetti.</li>
 </ol>
 </li>
 <li class="cooking-task-source">
 <ol lang="zh-CN" class="cooking-source-zh">
-<li>小锅空出后按需清理擦干，中火加🫒 橄榄油1茶匙，先下🥒 第7盘的1根西葫芦炒2–3分钟。</li>
+<li>小锅空出后按需清理擦干，中火加🫒 橄榄油1¼茶匙，先下🥒 两根西葫芦炒2–3分钟；偏干时加少量💧 水。</li>
 <li>直接加入🐔 鸡肉末半盒227 g和🧂 黑胡椒⅛茶匙，打散后与西葫芦同锅炒至鸡肉熟透，中心达74°C。</li>
 <li>食材留在小锅里，接着加酱拌意面。</li>
 <li>前半周取用鸡肉末后，将剩余🐔 生肉末分装冷冻。</li>
 </ol>
 <ol lang="en" class="cooking-source-en" hidden>
-<li>Once the saucepan is free, clean and dry it as needed. Heat 1 tsp 🫒 olive oil over medium heat and cook the 🥒 zucchini reserved for meal 7 first for 2–3 minutes.</li>
+<li>Once the saucepan is free, clean and dry it as needed. Heat 1¼ tsp 🫒 olive oil over medium heat and cook both 🥒 zucchini first for 2–3 minutes; add a little 💧 water if dry.</li>
 <li>Add half a pack of 🐔 ground chicken (227 g) and ⅛ tsp 🧂 black pepper directly to the same pan. Break up the chicken and cook together until it reaches 74°C.</li>
 <li>Keep everything in the saucepan for the sauce and spaghetti.</li>
 <li>During the first cooking session, freeze the remaining raw ground chicken after taking this portion.</li>
@@ -386,14 +375,19 @@ cooking: true
 </li>
 <li class="cooking-task-source">
 <ol lang="zh-CN" class="cooking-source-zh">
-<li>向同一小锅加入🍅 Catelli番茄罗勒意面酱150 mL，煮至微沸；🥒 西葫芦仍偏硬时，加少量💧 水，盖锅焖至喜欢的软度。</li>
-<li>拌入第7盘的🍝 意面，拌热1–2分钟，偏稠时补少量💧 面水，放第7盘。</li>
+<li>向同一小锅加入🍅 Catelli番茄罗勒意面酱300 mL，煮至微沸；🥒 西葫芦仍偏硬时，加少量💧 水，盖锅焖至喜欢的软度。</li>
+<li>拌入全部🍝 意面，拌热1–2分钟，偏稠时补少量💧 面水；拌匀后进行两餐分盘。</li>
 </ol>
 <ol lang="en" class="cooking-source-en" hidden>
-<li>Add 150 mL 🍅 Catelli Tomato & Basil sauce to the same saucepan and bring to a simmer. If the 🥒 zucchini is still firm, add a little 💧 water, cover and simmer until as tender as you like.</li>
-<li>Toss with the 🍝 spaghetti for meal 7 for 1–2 minutes, adding a little 💧 pasta water if needed, then place in meal 7.</li>
+<li>Add 300 mL 🍅 Catelli Tomato & Basil sauce to the same saucepan and bring to a simmer. If the 🥒 zucchini is still firm, add a little 💧 water, cover and simmer until as tender as you like.</li>
+<li>Toss with all the 🍝 spaghetti for 1–2 minutes, adding a little 💧 pasta water if needed, then divide into two meals.</li>
 </ol>
 </li>
+<li class="cooking-task-source">
+<ol lang="zh-CN" class="cooking-source-zh"><li>将拌好的🍝 意面、🐔 鸡肉末和🥒 西葫芦均分到第4、7盘，不用挑出肉末。</li><li>两盘各配🍗 烤鸡腿1块；🥚 水煮蛋按剥蛋任务分配，两盘各1个。</li></ol>
+<ol lang="en" class="cooking-source-en" hidden><li>Divide the mixed 🍝 spaghetti, 🐔 ground chicken and 🥒 zucchini equally between meals 4 and 7; no need to separate the mince.</li><li>Give each plate one 🍗 roasted thigh. Allocate one 🥚 boiled egg to each via the egg-peeling task.</li></ol>
+</li>
+
 
 </ol>
 

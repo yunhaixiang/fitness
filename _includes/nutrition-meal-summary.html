@@ -21,8 +21,8 @@
 <td><div data-en="🥬 Spinach {{ portion.spinach | times: 100 | round: 0 }} g">🥬 菠菜{{ portion.spinach | times: 100 | round: 0 }} g</div></td>
 <td><div data-en="🥟 {{ portion.dumpling | times: 4 | round: 0 }} Dumplings ({{ portion.dumpling | times: 96 | round: 0 }} g)">🥟 水饺{{ portion.dumpling | times: 4 | round: 0 }}个（{{ portion.dumpling | times: 96 | round: 0 }} g）</div></td>
 {% when 'noodles' %}
-<th scope="row"><span class="meal-summary-number">{{ forloop.index }}</span><span data-en="🍝 Chicken Thigh Spaghetti with Tomato Sauce">🍝 鸡腿番茄意面</span></th>
-<td><div data-en="🍗 2 Chicken Thighs ({{ portion.thigh | times: 100 | round: 0 }} g)">🍗 鸡大腿肉2块（{{ portion.thigh | times: 100 | round: 0 }} g）</div><div data-en="🥚 {{ egg_display }} Boiled Eggs">🥚 水煮蛋{{ egg_display }}个</div></td>
+<th scope="row"><span class="meal-summary-number">{{ forloop.index }}</span><span data-en="🍝 Chicken Spaghetti with Tomato Sauce">🍝 鸡肉番茄意面</span></th>
+<td><div data-en="🍗 1 Chicken Thigh ({{ portion.thigh | times: 100 | round: 0 }} g)">🍗 鸡大腿肉1块（{{ portion.thigh | times: 100 | round: 0 }} g）</div><div data-en="🐔 Ground Chicken 113.5 g">🐔 鸡肉末113.5 g</div><div data-en="🥚 {{ egg_display }} Boiled Eggs">🥚 水煮蛋{{ egg_display }}个</div></td>
 <td><div data-en="🥒 1 Zucchini ({{ portion.zucchini | times: 100 | round: 0 }} g)">🥒 西葫芦1根（{{ portion.zucchini | times: 100 | round: 0 }} g）</div></td>
 <td><div data-en="🍝 Dry Spaghetti {{ portion.pasta | times: 85 | round: 0 }} g">🍝 干意面{{ portion.pasta | times: 85 | round: 0 }} g</div><div data-en="🍅 Catelli Tomato &amp; Basil Sauce 150 mL">🍅 Catelli番茄罗勒酱150 mL</div></td>
 {% when 'potato' %}
@@ -41,8 +41,8 @@
 <td><div data-en="🫛🥕 Peas and Carrots {{ portion.pc | times: 100 | round: 0 }} g Total">🫛🥕 豌豆，胡萝卜共{{ portion.pc | times: 100 | round: 0 }} g</div></td>
 <td><div data-en="🍚 White Rice {{ portion.rice | times: 100 | round: 0 }} g">🍚 白米{{ portion.rice | times: 100 | round: 0 }} g</div></td>
 {% when 'pasta' %}
-<th scope="row"><span class="meal-summary-number">{{ forloop.index }}</span><span data-en="🍝 Ground Chicken Spaghetti with Tomato Sauce">🍝 鸡肉末番茄意面</span></th>
-<td><div data-en="🐔 Ground Chicken {{ portion.ground | times: 100 | round: 0 }} g">🐔 鸡肉末{{ portion.ground | times: 100 | round: 0 }} g</div><div data-en="🥚 {{ egg_display }} Boiled Eggs">🥚 水煮蛋{{ egg_display }}个</div></td>
+<th scope="row"><span class="meal-summary-number">{{ forloop.index }}</span><span data-en="🍝 Chicken Spaghetti with Tomato Sauce">🍝 鸡肉番茄意面</span></th>
+<td><div data-en="🍗 1 Chicken Thigh (≈116 g)">🍗 鸡大腿肉1块（≈116 g）</div><div data-en="🐔 Ground Chicken {{ portion.ground | times: 100 | round: 1 }} g">🐔 鸡肉末{{ portion.ground | times: 100 | round: 1 }} g</div><div data-en="🥚 {{ egg_display }} Boiled Eggs">🥚 水煮蛋{{ egg_display }}个</div></td>
 <td><div data-en="🥒 1 Zucchini ({{ portion.zucchini | times: 100 | round: 0 }} g)">🥒 西葫芦1根（{{ portion.zucchini | times: 100 | round: 0 }} g）</div></td>
 <td><div data-en="🍝 Dry Spaghetti {{ portion.pasta | times: 85 | round: 0 }} g">🍝 干意面{{ portion.pasta | times: 85 | round: 0 }} g</div><div data-en="🍅 Catelli Tomato &amp; Basil Sauce 150 mL">🍅 Catelli番茄罗勒酱150 mL</div></td>
 {% endcase %}
