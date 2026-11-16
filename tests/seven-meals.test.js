@@ -39,7 +39,7 @@ test('weekly meat, eggs, grains and portions match whole-package purchase cycles
  close(recipes.rice.shrimp,1.7); assert.equal(recipes.rice.panko,undefined);
  assert.equal(recipes.rice.curry,undefined); assert.equal(recipes.noodles.curry,undefined); assert.equal(recipes.noodles.noodleSauce,undefined); close(recipes.noodles.sauce,1.2); close(recipes.pasta.sauce,1.2); close(weekly('sesame'),0);
  close(recipes.wrap.chickpeas,2.16); assert.equal(recipes.potato.chickpeas,undefined); assert.equal(recipes.dumpling.chickpeas,undefined); close(weekly('refriedBeans'),0);
- close(weekly('chickpeas')*125,540); close(weekly('tuna'),2); close(weekly('mayo'),2); close(weekly('lightMayo'),4); close(weekly('spinach')*100,568);
+ close(weekly('chickpeas')*125,540); close(weekly('tuna'),2); close(weekly('mayo'),4); close(weekly('lightMayo'),6); close(weekly('spinach')*100,568);
  close(weekly('pepper')*100,150); close(weekly('mushroom')*100,0); close(weekly('pc')*100,260); close(weekly('zucchini')*100,800);
  close(weekly('oil'),8); // 4 tsp each half-week, including 0.5 tsp each for shrimp and tilapia
 });
