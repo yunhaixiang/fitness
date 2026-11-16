@@ -18,7 +18,7 @@
   };
   const svg = (name) => `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${icons[name]}</svg>`;
 
-  // The current plan cooks both fish in one air-fryer batch.
+  // Start all three fish together; remove the plain fish before finishing the breaded fillet.
   const nodes = [
     {"id": "oven-heat-start", "label": ["开始预热烤箱", "Start Preheating Oven"], "note": ["", ""], "group": "oven", "before": [], "link": "#cook-oven-heat-start", "minutes": 1, "instant": true},
     {"id": "prep-potato", "label": ["备土豆", "Prepare Potatoes"], "note": ["", ""], "group": "prep", "before": [], "link": "#cook-prep-potato", "minutes": 3, "displayGroup": "oven"},
@@ -55,10 +55,10 @@
     {"id": "air-heat-start", "label": ["开始预热空气炸锅", "Start Preheating Air Fryer"], "note": ["", ""], "group": "air", "before": [], "link": "#cook-air-heat-start", "minutes": 1, "instant": true},
     {"id": "air-heat", "label": ["确认空气炸锅预热完成", "Confirm Air Fryer Is Preheated"], "note": ["预热期间可继续其他任务", "Continue Other Tasks While Heating"], "group": "air", "before": ["air-heat-start"], "link": "#cook-air-heat", "minutes": 4, "confirmation": true},
     {"id": "prep-haddock", "label": ["备罗非鱼", "Prepare Tilapia"], "note": ["", ""], "group": "prep", "displayGroup": "air", "before": [], "link": "#cook-prep-haddock", "minutes": 3},
-    {"id": "fish-start", "label": ["同时放入三文鱼和罗非鱼", "Load Salmon and Tilapia Together"], "note": ["放好并启动后勾选", "Check after loading and starting"], "group": "air", "before": ["air-heat", "prep-salmon", "prep-haddock"], "link": "#cook-fish-start", "minutes": 1, "instant": true, "durationHint": 8, "holdsResource": "air", "releasesAt": "fish"},
-    {"id": "fish", "label": ["确认两种鱼熟透、取出", "Check and Remove Both Fish"], "note": ["按熟度确认；等待期间可做其他任务", "Confirm doneness; other tasks can be done while waiting"], "group": "air", "before": ["fish-start"], "link": "#cook-fish", "minutes": 8, "confirmation": true, "waitFor": "fish-start", "waitKind": "food"},
-    {"id": "breaded-fish-start", "label": ["放入裹粉黑线鳕", "Load Crispy Breaded Haddock"], "note": ["启动后勾选", "Check after starting"], "group": "air", "before": ["air-heat"], "link": "#cook-breaded-fish-start", "minutes": 1, "instant": true, "durationHint": 16, "holdsResource": "air", "releasesAt": "breaded-fish"},
-    {"id": "breaded-fish", "label": ["确认裹粉鱼熟透、取出", "Check and Remove Breaded Haddock"], "note": ["14–16分钟，按包装确认熟度", "14–16 minutes; check package directions"], "group": "air", "before": ["breaded-fish-start"], "link": "#cook-breaded-fish", "minutes": 16, "confirmation": true, "waitFor": "breaded-fish-start", "waitKind": "food"},
+    {"id": "fish-start", "label": ["同时放入三种鱼", "Load All Three Fish Together"], "note": ["放好并启动后勾选", "Check after loading and starting"], "group": "air", "before": ["air-heat", "prep-salmon", "prep-haddock"], "link": "#cook-fish-start", "minutes": 1, "instant": true, "durationHint": 9, "holdsResource": "air", "releasesAt": "fish"},
+    {"id": "fish", "label": ["9分钟后检查、取出三文鱼和罗非鱼", "Check and Remove Salmon and Tilapia at 9 Minutes"], "note": ["熟透后取出；裹粉黑线鳕留在炸篮内", "Remove once cooked through; leave breaded haddock in the basket"], "group": "air", "before": ["fish-start"], "link": "#cook-fish", "minutes": 9, "confirmation": true, "waitFor": "fish-start", "waitKind": "food"},
+    {"id": "breaded-fish-start", "label": ["推回炸篮，继续炸黑线鳕", "Return Basket and Continue Cooking Haddock"], "note": ["通常再炸5–7分钟；按已烹调时间调整", "Usually another 5–7 minutes; adjust for time already cooked"], "group": "air", "before": ["fish"], "link": "#cook-breaded-fish-start", "minutes": 1, "instant": true, "durationHint": 7, "holdsResource": "air", "releasesAt": "breaded-fish"},
+    {"id": "breaded-fish", "label": ["确认裹粉鱼熟透、取出", "Check and Remove Breaded Haddock"], "note": ["累计约14–16分钟后按包装确认熟度", "Check package doneness after about 14–16 minutes total"], "group": "air", "before": ["breaded-fish-start"], "link": "#cook-breaded-fish", "minutes": 7, "confirmation": true, "waitFor": "breaded-fish-start", "waitKind": "food"},
     {"id": "prep-zucchini", "label": ["备西葫芦", "Prepare Zucchini"], "note": ["", ""], "group": "prep", "before": [], "link": "#cook-prep-zucchini", "minutes": 2, "displayGroup": "small-wok"},
     {"id": "spinach", "label": ["菠菜", "Spinach"], "note": ["", ""], "group": "large-wok", "before": [], "link": "#cook-spinach", "minutes": 5},
     {"id": "ground", "label": ["先炒西葫芦，再加鸡肉末", "Cook Zucchini, Then Add Ground Chicken"], "note": ["", ""], "group": "small-wok", "before": ["prep-zucchini"], "link": "#cook-ground", "minutes": 8, "holdsResource": "small-wok", "releasesAt": "tomato"},
@@ -94,7 +94,7 @@
     {"id": "oven", "icon": "oven", "title": ["烤箱", "Oven"], "hint": ["按烤盘空间安排", "Schedule According to Tray Space"]},
     {"id": "rice", "icon": "rice", "title": ["电饭煲", "Rice Cooker"], "hint": ["先启动", "Start Early"]},
     {"id": "pots", "icon": "pot", "title": ["煮锅一、煮锅二", "Pots 1 and 2"], "hint": ["两锅并行", "Two Parallel Pots"]},
-    {"id": "air", "icon": "air", "title": ["空气炸锅", "Air Fryer"], "hint": ["原味鱼与裹粉鱼分批，先后可选", "Separate Plain and Breaded Fish Batches; Either First"]},
+    {"id": "air", "icon": "air", "title": ["空气炸锅", "Air Fryer"], "hint": ["三种鱼同下，原味鱼先取出", "Start All Three Together; Remove Plain Fish First"]},
     {"id": "large-wok", "icon": "wok", "title": ["大锅", "Wok"], "hint": ["炒菠菜", "Cook Spinach"]},
     {"id": "small-wok", "icon": "pot", "title": ["小锅", "Saucepan"], "hint": ["锅空时任选，换菜按需清理", "Choose Any Ready Task; Clean Between Dishes as Needed"]},
     {"id": "finish", "icon": "finish", "title": ["收尾", "Finish"], "hint": ["备好配菜与餐点、入冰箱、清洗", "Assemble Meals, Refrigerate and Clean"]}

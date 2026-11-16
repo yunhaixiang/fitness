@@ -164,3 +164,19 @@ test('assembly waits for cooked chicken and peeled eggs, while bread can be laid
  const beforeRemoval=done.filter(id=>!['chicken','eggs','peel-eggs'].includes(id));
  assert.ok(!derive(current,beforeRemoval).available.some(n=>n.id==='wrap'));
 });
+
+test('shared fish batch removes plain fish before resuming breaded fish',()=>{
+ let done=prerequisites(current,'fish-start');
+ assert.equal(current.find(n=>n.id==='fish-start').durationHint,9);
+ assert.ok(!derive(current,done).available.some(n=>n.id==='breaded-fish-start'));
+ done=complete(current,done,'fish-start');
+ assert.ok(!derive(current,done).available.some(n=>n.id==='breaded-fish-start'));
+ done=complete(current,done,'fish');
+ done=complete(current,done,'breaded-fish-start');
+ assert.ok(derive(current,done).available.some(n=>n.id==='breaded-fish'));
+ assert.equal(current.find(n=>n.id==='breaded-fish-start').durationHint,7);
+ done=complete(current,done,'breaded-fish');
+ const undone=toggle(current,done,'first','fish',false);
+ assert.ok(!undone.includes('breaded-fish-start'));
+ assert.ok(!undone.includes('breaded-fish'));
+});
