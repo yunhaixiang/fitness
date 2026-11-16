@@ -12,7 +12,7 @@ test('seven distinct meals repeat symmetrically, retaining all 14 meal slots and
  const source=read('_includes/diet-schedule.html');
  const rows=[...source.matchAll(/<tr data-nutrition-key="([^"]+)"([^>]*)>([\s\S]*?)<\/tr>/g)];
  assert.equal(rows.length,14);
- assert.deepEqual(basis.mealKeys,['bread','rice','dumpling','noodles','wrap','potato','pasta']);
+ assert.deepEqual(basis.mealKeys,['bread','rice','noodles','dumpling','wrap','pasta','potato']);
  assert.deepEqual(rows.slice(0,7).map(m=>m[1]),basis.mealKeys);
  assert.deepEqual(rows.slice(7).map(m=>m[1]),basis.mealKeys);
  const sparklingRows=rows.filter(m=>m[2].includes('sparkling-ice'));
@@ -59,9 +59,9 @@ test('all cooking prerequisites are valid, acyclic, and have matching instructio
  for(const [id,group,steps] of sections){const fragment=page.split('<h2 id="'+id+'"')[1].split('<h2 ')[0];assert.equal((fragment.match(/<li class="cooking-task-source"/g)||[]).length,steps.length,id);steps.forEach(s=>instructionIds.add('cook-'+s));}
  for(const n of flow)assert.ok(instructionIds.has(n.link.slice(1))||['cook-finish'].includes(n.link.slice(1)),n.link);
  assert.ok(page.includes('罗非鱼')); assert.ok(page.includes('Signature Cuts Crispy Breaded'));
- assert.match(page,/第1盘放2个，第2、4、5、7盘各1个，第3、6盘不放鸡蛋/);
+ assert.match(page,/第1盘放2个，第2、3、5、6盘各1个，第4、7盘不放鸡蛋/);
  assert.match(page,/鸡蛋6个/);
- assert.match(page,/2 whole 🥚 eggs in meal 1 and 1 each in meals 2, 4, 5 and 7/);
+ assert.match(page,/2 whole 🥚 eggs in meal 1 and 1 each in meals 2, 3, 5 and 6/);
  const recipes=Object.fromEntries(basis.mealKeys.map((k,i)=>[k,basis.recipes[i]]));
  assert.equal(recipes.wrap.egg,1);
  assert.equal(recipes.noodles.egg,1);
@@ -80,7 +80,7 @@ test('routine shopping subtotal agrees with both stored prices and all shopping 
 });
 
 test('repeated main ingredients stay separated across the half-week boundary',()=>{
- const avoidAdjacent=[['rice','noodles'],['potato','dumpling'],['pasta','noodles'],['wrap','bread']];
+ const avoidAdjacent=[['rice','dumpling'],['pasta','noodles'],['wrap','bread']];
  for(let i=0;i<basis.mealKeys.length;i++){
   const a=basis.mealKeys[i],b=basis.mealKeys[(i+1)%basis.mealKeys.length];
   for(const group of avoidAdjacent)assert.ok(!(group.includes(a)&&group.includes(b)),`${a} next to ${b}`);
@@ -100,4 +100,23 @@ test('both nutrition plans have one source row per nutrient and no duplicate per
   assert.doesNotMatch(page,/data-macro-share|<td>饱和脂肪占总热量<\/td>/);
   assert.match(page,/nutrition: true/);
  }
+});
+
+test('meal order prioritizes cold-storage quality and keeps daily meal energy even',()=>{
+ assert.equal(basis.mealKeys[0],'bread');
+ assert.equal(basis.mealKeys[1],'rice');
+ assert.ok(basis.mealKeys.indexOf('dumpling')<=3);
+ assert.equal(basis.mealKeys[6],'potato');
+ const pastaGap=Math.abs(basis.mealKeys.indexOf('pasta')-basis.mealKeys.indexOf('noodles'));
+ assert.equal(Math.min(pastaGap,7-pastaGap),3);
+ const calories=basis.mealKeys.map(k=>Number(nutrition[k].kcal));
+ const dailyPairs=calories.map((v,i)=>v+calories[(i+1)%7]);
+ assert.ok(Math.max(...dailyPairs)-Math.min(...dailyPairs)<=40);
+ const page=read('cooking.md');
+ assert.match(page,/三文鱼整块放第4盘，罗非鱼整块放第2盘/);
+ assert.match(page,/均分到第3、6盘/);
+ assert.match(page,/均分到第4、7盘/);
+ assert.match(page,/出锅全部放第7盘/);
+ assert.match(page,/meals 3 and 6/);
+ assert.match(page,/meal 4 and the whole tilapia fillet in meal 2/);
 });

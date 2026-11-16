@@ -475,13 +475,6 @@
       "shrimp": 1.7
     },
     {
-      "dumpling": 2.25,
-      "salmon": 1.58,
-      "spinach": 1.37,
-      "oil": 0.625,
-      "egg": 0
-    },
-    {
       "thigh": 1.1625,
       "egg": 1,
       "oil": 0.78125,
@@ -489,6 +482,13 @@
       "sauce": 1.2,
       "zucchini": 2,
       "ground": 1.135
+    },
+    {
+      "dumpling": 2.25,
+      "salmon": 1.58,
+      "spinach": 1.37,
+      "oil": 0.625,
+      "egg": 0
     },
     {
       "tortilla": 1,
@@ -500,14 +500,6 @@
       "chickpeas": 2.16
     },
     {
-      "potato": 1.7,
-      "ribs": 1.417857142857143,
-      "spinach": 1.37,
-      "oil": 0.625,
-      "egg": 0,
-      "thigh": 1.1625
-    },
-    {
       "pasta": 0.5882352941176471,
       "ground": 1.135,
       "egg": 1,
@@ -515,16 +507,24 @@
       "sauce": 1.2,
       "oil": 0.78125,
       "thigh": 1.1625
+    },
+    {
+      "potato": 1.7,
+      "ribs": 1.417857142857143,
+      "spinach": 1.37,
+      "oil": 0.625,
+      "egg": 0,
+      "thigh": 1.1625
     }
   ],
   "mealKeys": [
     "bread",
     "rice",
-    "dumpling",
     "noodles",
+    "dumpling",
     "wrap",
-    "potato",
-    "pasta"
+    "pasta",
+    "potato"
   ],
   "notes": [
     "Planning estimates, not measurements. Ingredient units: 100 g unless specified below; raw meat weights and dry grains. Ribs use 397 g edible meat and sauce per 600 g bone-in package; this yield is an assumption.",

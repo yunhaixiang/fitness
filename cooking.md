@@ -113,11 +113,11 @@ cooking: true
 <li class="cooking-task-source">
 <ol lang="zh-CN" class="cooking-source-zh">
 <li>确认熟度后取出：400°F烤约35–40分钟至内部软、表面金黄，中途翻面。</li>
-<li>出锅全部放第6盘。</li>
+<li>出锅全部放第7盘。</li>
 </ol>
 <ol lang="en" class="cooking-source-en" hidden>
 <li>Check doneness before removing: Roast at 400°F for 35–40 minutes until tender and golden, turning halfway.</li>
-<li>Place all the cooked 🥔 potatoes in meal 6.</li>
+<li>Place all the cooked 🥔 potatoes in meal 7.</li>
 </ol>
 </li>
 <li class="cooking-task-source">
@@ -133,12 +133,12 @@ cooking: true
 <li class="cooking-task-source">
 <ol lang="zh-CN" class="cooking-source-zh">
 <li>确认熟度后取出：400°F烤27分钟，中心达74°C。</li>
-<li>熟肉分到第4、5、6、7盘，各1块🍗 鸡腿肉；两顿意面各1块。</li>
+<li>熟肉分到第3、5、6、7盘，各1块🍗 鸡腿肉；两顿意面各1块。</li>
 <li>卷饼的鸡腿肉掰碎。</li>
 </ol>
 <ol lang="en" class="cooking-source-en" hidden>
 <li>Check doneness before removing: Roast at 400°F for 27 minutes, to 74°C in the centre.</li>
-<li>Give meals 4, 5, 6 and 7 one cooked 🍗 thigh each; each spaghetti meal gets one thigh.</li>
+<li>Give meals 3, 5, 6 and 7 one cooked 🍗 thigh each; each spaghetti meal gets one thigh.</li>
 <li>Shred the wrap portion.</li>
 </ol>
 </li>
@@ -155,11 +155,11 @@ cooking: true
 <li class="cooking-task-source">
 <ol lang="zh-CN" class="cooking-source-zh">
 <li>确认熟度后取出：锡纸包好的🍖 排骨400°F烤15–20分钟至中心74°C。</li>
-<li>全部放第6盘。</li>
+<li>全部放第7盘。</li>
 </ol>
 <ol lang="en" class="cooking-source-en" hidden>
 <li>Check doneness before removing: Heat foil-wrapped 🍖 ribs at 400°F for 15–20 minutes, to 74°C in the centre.</li>
-<li>Place in meal 6.</li>
+<li>Place in meal 7.</li>
 </ol>
 </li>
 <li class="cooking-task-source">
@@ -235,11 +235,11 @@ cooking: true
 <li class="cooking-task-source">
 <ol lang="zh-CN" class="cooking-source-zh">
 <li>8分钟后检查两种🐟 鱼的最厚处；哪块达到70°C就先取出，未达到的每次加1–2分钟后复查。两种鱼都取出后勾选。</li>
-<li>三文鱼整块放第3盘，罗非鱼整块放第2盘。</li>
+<li>三文鱼整块放第4盘，罗非鱼整块放第2盘。</li>
 </ol>
 <ol lang="en" class="cooking-source-en" hidden>
 <li>After 8 minutes, check the thickest part of both 🐟 fish. Remove each fillet when it reaches 70°C; give any unfinished fish another 1–2 minutes and recheck. Check off once both are removed.</li>
-<li>Place the whole salmon fillet in meal 3 and the whole tilapia fillet in meal 2.</li>
+<li>Place the whole salmon fillet in meal 4 and the whole tilapia fillet in meal 2.</li>
 </ol>
 </li>
 <li class="cooking-task-source">
@@ -275,8 +275,8 @@ cooking: true
 <ol lang="en" class="cooking-source-en" hidden><li>Once the 💧 water boils, gently add 6 🥚 eggs and all 100 g dry 🍝 spaghetti together; separate the strands gently and leave enough space.</li><li>Start one 8-minute timer for the first check. Mark this step after loading; work on other tasks meanwhile.</li></ol>
 </li>
 <li class="cooking-task-source">
-<ol lang="zh-CN" class="cooking-source-zh"><li>8分钟后按包装要求检查🍝 意面，熟了先用夹子捞出，留少量💧 面水。全部意面留待同锅拌酱后再均分，第4、7盘各相当于干面50 g。</li><li>🥚 鸡蛋未熟时可继续留在锅里煮，不必等鸡蛋才捞面。</li></ol>
-<ol lang="en" class="cooking-source-en" hidden><li>At 8 minutes, check the 🍝 spaghetti according to its package; lift out with tongs when done and reserve a little 💧 pasta water. Keep all the spaghetti together for tossing with sauce, then divide equally between meals 4 and 7, each equivalent to 50 g dry pasta.</li><li>Leave the 🥚 eggs in the pot if they need longer; do not overcook the pasta while waiting.</li></ol>
+<ol lang="zh-CN" class="cooking-source-zh"><li>8分钟后按包装要求检查🍝 意面，熟了先用夹子捞出，留少量💧 面水。全部意面留待同锅拌酱后再均分，第3、6盘各相当于干面50 g。</li><li>🥚 鸡蛋未熟时可继续留在锅里煮，不必等鸡蛋才捞面。</li></ol>
+<ol lang="en" class="cooking-source-en" hidden><li>At 8 minutes, check the 🍝 spaghetti according to its package; lift out with tongs when done and reserve a little 💧 pasta water. Keep all the spaghetti together for tossing with sauce, then divide equally between meals 3 and 6, each equivalent to 50 g dry pasta.</li><li>Leave the 🥚 eggs in the pot if they need longer; do not overcook the pasta while waiting.</li></ol>
 </li>
 <li class="cooking-task-source">
 <ol lang="zh-CN" class="cooking-source-zh"><li>8分钟后检查🥚 鸡蛋，蛋白、蛋黄都凝固后取出，放💧 冷水冷却；未熟则继续煮。</li><li>8分钟是首次检查时间，不保证不同大小、起始温度的鸡蛋都已全熟。</li></ol>
@@ -285,12 +285,12 @@ cooking: true
 <li class="cooking-task-source">
 <ol lang="zh-CN" class="cooking-source-zh">
 <li>冷却后剥壳。</li>
-<li>第1盘放2个，第2、4、5、7盘各1个，第3、6盘不放鸡蛋。</li>
+<li>第1盘放2个，第2、3、5、6盘各1个，第4、7盘不放鸡蛋。</li>
 <li>第5盘的掰碎，第1盘的切片。</li>
 </ol>
 <ol lang="en" class="cooking-source-en" hidden>
 <li>Cool and peel the eggs.</li>
-<li>Put 2 whole 🥚 eggs in meal 1 and 1 each in meals 2, 4, 5 and 7; no eggs in meals 3 or 6.</li>
+<li>Put 2 whole 🥚 eggs in meal 1 and 1 each in meals 2, 3, 5 and 6; no eggs in meals 4 or 7.</li>
 <li>Crumble the eggs for meal 5 and slice the eggs for meal 1.</li>
 </ol>
 </li>
@@ -327,12 +327,12 @@ cooking: true
 <li class="cooking-task-source">
 <ol lang="zh-CN" class="cooking-source-zh">
 <li>按包装时间检查水饺熟度，再取出。</li>
-<li>沥干放第3盘。</li>
+<li>沥干放第4盘。</li>
 </ol>
 <ol lang="en" class="cooking-source-en" hidden>
 <li>Check the dumplings for doneness at the package time before removing.</li>
 <li>Follow the pack, checking for a 74°C centre after about 6–8 minutes.</li>
-<li>Drain into meal 3.</li>
+<li>Drain into meal 4.</li>
 </ol>
 </li>
 </ol>
@@ -384,8 +384,8 @@ cooking: true
 </ol>
 </li>
 <li class="cooking-task-source">
-<ol lang="zh-CN" class="cooking-source-zh"><li>将拌好的🍝 意面、🐔 鸡肉末和🥒 西葫芦均分到第4、7盘，不用挑出肉末。</li><li>两盘各配🍗 烤鸡腿1块；🥚 水煮蛋按剥蛋任务分配，两盘各1个。</li></ol>
-<ol lang="en" class="cooking-source-en" hidden><li>Divide the mixed 🍝 spaghetti, 🐔 ground chicken and 🥒 zucchini equally between meals 4 and 7; no need to separate the mince.</li><li>Give each plate one 🍗 roasted thigh. Allocate one 🥚 boiled egg to each via the egg-peeling task.</li></ol>
+<ol lang="zh-CN" class="cooking-source-zh"><li>将拌好的🍝 意面、🐔 鸡肉末和🥒 西葫芦均分到第3、6盘，不用挑出肉末。</li><li>两盘各配🍗 烤鸡腿1块；🥚 水煮蛋按剥蛋任务分配，两盘各1个。</li></ol>
+<ol lang="en" class="cooking-source-en" hidden><li>Divide the mixed 🍝 spaghetti, 🐔 ground chicken and 🥒 zucchini equally between meals 3 and 6; no need to separate the mince.</li><li>Give each plate one 🍗 roasted thigh. Allocate one 🥚 boiled egg to each via the egg-peeling task.</li></ol>
 </li>
 
 
@@ -398,12 +398,12 @@ cooking: true
 <ol lang="zh-CN" class="cooking-source-zh">
 <li>🥬 Your Fresh Market 嫩菠菜2袋，每袋142 g，共284 g；先留出10 g给三明治。</li>
 <li>锅空出后按需清理，剩余274 g加🫒 橄榄油¾茶匙、🧄 蒜粉⅛茶匙和🧅 洋葱粉⅛茶匙，炒约3–5分钟。</li>
-<li>均分到第3、6盘，每盘相当于生菠菜137 g。</li>
+<li>均分到第4、7盘，每盘相当于生菠菜137 g。</li>
 </ol>
 <ol lang="en" class="cooking-source-en" hidden>
 <li>Use two 142 g bags of 🥬 Your Fresh Market Baby Spinach (284 g total); set aside 10 g for the sandwich.</li>
 <li>Once the wok is free, clean it as needed and cook the remaining 274 g with ¾ tsp 🫒 olive oil, ⅛ tsp 🧄 garlic powder and ⅛ tsp 🧅 onion powder for 3–5 minutes.</li>
-<li>Split equally between meals 3 and 6, equivalent to 137 g raw spinach per meal.</li>
+<li>Split equally between meals 4 and 7, equivalent to 137 g raw spinach per meal.</li>
 </ol>
 </li>
 
@@ -484,7 +484,10 @@ cooking: true
 <li>Layer 1 🐟 crispy breaded haddock fillet, sliced 🥚 boiled eggs and 🥬 spinach directly onto the bread, then stack the sandwich on the plate.</li>
 </ol>
 </li>
-<li class="cooking-task-source"><p data-en="Check that all seven meals are portioned, then put the meal containers in the 🧊 refrigerator.">确认七餐均已分好，将餐盒放入🧊 冰箱。</p></li>
+<li class="cooking-task-source">
+<ol lang="zh-CN" class="cooking-source-zh"><li>餐食分装浅盒，做好后2小时内入🧊 冷藏，不必等全部七餐。</li><li>确认冰箱≤4°C，每批3–4天内吃完。</li></ol>
+<ol lang="en" class="cooking-source-en" hidden><li>Refrigerate finished portions in shallow containers within 2 hours; do not wait for all seven meals.</li><li>Keep the 🧊 fridge at 4°C or below and eat each batch within 3–4 days.</li></ol>
+</li>
 <li class="cooking-task-source">
 <ol lang="zh-CN" class="cooking-source-zh">
 <li>🧼 所有餐盒入冰箱后，最后清洗锅具、餐具，擦净台面。</li>
