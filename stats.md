@@ -104,12 +104,12 @@ visual: true
 </tr>
 <tr data-macro="protein">
 <td>蛋白质</td>
-<td style="text-align: right;">133.2 g</td>
+<td style="text-align: right;">133.5 g</td>
 <td>120–140 g</td>
 </tr>
 <tr data-macro="fat">
 <td>总脂肪</td>
-<td style="text-align: right;">64.3 g</td>
+<td style="text-align: right;">64.5 g</td>
 <td>45–65 g</td>
 </tr>
 <tr>
@@ -124,17 +124,17 @@ visual: true
 </tr>
 <tr data-macro="carbs">
 <td>碳水化合物</td>
-<td style="text-align: right;">194.9 g</td>
+<td style="text-align: right;">194.3 g</td>
 <td>180–240 g</td>
 </tr>
 <tr>
 <td>膳食纤维</td>
-<td style="text-align: right;">37.5 g</td>
+<td style="text-align: right;">38.1 g</td>
 <td>30–38 g</td>
 </tr>
 <tr>
 <td>总糖</td>
-<td style="text-align: right;">50.5 g</td>
+<td style="text-align: right;">51.6 g</td>
 <td>无单独上限；重点控制添加糖</td>
 </tr>
 <tr>
@@ -149,22 +149,22 @@ visual: true
 </tr>
 <tr>
 <td>钠</td>
-<td style="text-align: right;">2,342 mg</td>
+<td style="text-align: right;">2,407 mg</td>
 <td>≤2,300 mg</td>
 </tr>
 <tr>
 <td>钙</td>
-<td>1,172 mg</td>
+<td>1,157 mg</td>
 <td>1,000 mg</td>
 </tr>
 <tr>
 <td>铁</td>
-<td>19.0 mg</td>
+<td>19.3 mg</td>
 <td>8 mg</td>
 </tr>
 <tr>
 <td>钾</td>
-<td>4,644 mg</td>
+<td>4,667 mg</td>
 <td>≥3,400 mg</td>
 </tr>
 <tr>
@@ -179,7 +179,7 @@ visual: true
 </tr>
 <tr>
 <td>碘</td>
-<td>243 µg</td>
+<td>244 µg</td>
 <td>150 µg</td>
 </tr>
 <tr>

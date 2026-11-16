@@ -2,7 +2,7 @@
   "checked_on": "2026-10-31",
   "currency": "CAD",
   "scope": "Walmart Canada public prices and user-provided Metro fruit price; individual checked_on retained. Chicken thigh and salmon prices supplied by user. Weekly subtotal averages routine purchase cycles. Bread assumes three slices total 105 g; weighed produce billed by actual weight. Excludes as-needed seasonings, tax and delivery. Not a London store live stock guarantee.",
-  "weekly_total_cad": "155.75",
+  "weekly_total_cad": "156.74",
   "items": [
     {
       "item": "去骨去皮鸡大腿肉",
@@ -139,17 +139,17 @@
       "package_grams": 142
     },
     {
-      "item": "浓缩番茄膏",
-      "price_cad": "1.24",
+      "item": "番茄罗勒意面酱",
+      "price_cad": "2.67",
       "basis": "package",
-      "source_url": "https://www.walmart.ca/en/ip/Unico-Tomato-Paste-156ml/6000188762632",
+      "source_url": "https://www.walmart.ca/en/ip/Catelli-Garden-Select-Tomato-Basil-Pasta-Sauce-600-mL-Jar/3B5Q7OZH5XF7",
       "source_type": "walmart_public",
       "weekly_quantity": "1",
-      "weekly_cost_cad": "1.24",
-      "product_url": "https://www.walmart.ca/en/ip/Unico-Tomato-Paste-156ml/6000188762632",
-      "purchase_frequency_zh": "1罐 / 周",
-      "purchase_frequency_en": "1 Can / Week",
-      "checked_on": "2026-11-08"
+      "weekly_cost_cad": "2.67",
+      "product_url": "https://www.walmart.ca/en/ip/Catelli-Garden-Select-Tomato-Basil-Pasta-Sauce-600-mL-Jar/3B5Q7OZH5XF7",
+      "purchase_frequency_zh": "1瓶 / 周",
+      "purchase_frequency_en": "1 Jar / Week",
+      "checked_on": "2026-11-15"
     },
     {
       "item": "新鲜混合水果盘",
@@ -187,10 +187,10 @@
       "source_url": "https://www.walmart.ca/en/ip/PRIMO-SPAGHETTI/1YCQ0A4KHLLW",
       "source_type": "walmart_public",
       "product_url": "https://www.walmart.ca/en/ip/PRIMO-SPAGHETTI/1YCQ0A4KHLLW",
-      "purchase_frequency_zh": "1包 / 约4.4周",
-      "purchase_frequency_en": "1 Pack / About 4.4 Weeks",
-      "weekly_cost_cad": "0.29",
-      "weekly_quantity": "0.2290748898678414"
+      "purchase_frequency_zh": "1包 / 约2.1周",
+      "purchase_frequency_en": "1 Pack / About 2.1 Weeks",
+      "weekly_cost_cad": "0.62",
+      "weekly_quantity": "0.4845814977973568"
     },
     {
       "item": "全麦卷饼皮",
@@ -404,19 +404,6 @@
       "purchase_frequency_en": "2 / Week"
     },
     {
-      "item": "扁米粉",
-      "price_cad": "1.97",
-      "basis": "package",
-      "weekly_quantity": "0.2775330396475771",
-      "weekly_cost_cad": "0.55",
-      "source_type": "walmart_public",
-      "source_url": "https://www.walmart.ca/en/ip/Erawan-Rice-Stick/6000199121439",
-      "product_url": "https://www.walmart.ca/en/ip/Erawan-Rice-Stick/6000199121439",
-      "checked_on": "2026-11-07",
-      "purchase_frequency_zh": "1包 / 约3.6周",
-      "purchase_frequency_en": "1 Pack / About 3.6 Weeks"
-    },
-    {
       "item": "咖喱块",
       "price_cad": "3.97",
       "basis": "package",
@@ -461,61 +448,6 @@
       "product": "Great Value No Salt Chick Peas",
       "package_ml": 540,
       "availability_note": "Walmart public price; London store stock not verified."
-    },
-    {
-      "item": "生抽",
-      "price_cad": "2.77",
-      "basis": "package",
-      "source_type": "walmart_public",
-      "source_url": "https://www.walmart.ca/en/ip/LKK-SOY-SAUCE/874990",
-      "product_url": "https://www.walmart.ca/en/ip/LKK-SOY-SAUCE/874990",
-      "checked_on": "2026-11-08",
-      "purchase_frequency_zh": "按需补",
-      "purchase_frequency_en": "As Needed"
-    },
-    {
-      "item": "鱼露",
-      "price_cad": "2.88",
-      "basis": "package",
-      "source_type": "walmart_public",
-      "source_url": "https://www.walmart.ca/en/c/kp/fish-sauce",
-      "product_url": "https://www.walmart.ca/en/ip/SQUID-BRAND-FISH-SAUCE/77U7DWXUO6G9",
-      "checked_on": "2026-11-08",
-      "purchase_frequency_zh": "按需补",
-      "purchase_frequency_en": "As Needed"
-    },
-    {
-      "item": "老抽",
-      "price_cad": "2.97",
-      "basis": "package",
-      "source_type": "walmart_public",
-      "source_url": "https://www.walmart.ca/en/ip/Pearl-River-Bridge-PRB-Dark-Soy-Sauce-500-ml/10278824",
-      "product_url": "https://www.walmart.ca/en/ip/Pearl-River-Bridge-PRB-Dark-Soy-Sauce-500-ml/10278824",
-      "checked_on": "2026-11-08",
-      "purchase_frequency_zh": "按需补",
-      "purchase_frequency_en": "As Needed"
-    },
-    {
-      "item": "蚝油",
-      "price_cad": "4.27",
-      "basis": "package",
-      "source_type": "walmart_public",
-      "source_url": "https://www.walmart.ca/en/ip/LKK-PANDA-BRAND-OYSTER-FLAVOURED-SAUCE-510G/10285991",
-      "product_url": "https://www.walmart.ca/en/ip/LKK-PANDA-BRAND-OYSTER-FLAVOURED-SAUCE-510G/10285991",
-      "checked_on": "2026-11-08",
-      "purchase_frequency_zh": "按需补",
-      "purchase_frequency_en": "As Needed"
-    },
-    {
-      "item": "罗勒叶",
-      "price_cad": "1.67",
-      "basis": "package",
-      "source_type": "walmart_public",
-      "source_url": "https://www.walmart.ca/en/ip/fresh-basil-your-fresh-market/6000207633451",
-      "product_url": "https://www.walmart.ca/en/ip/fresh-basil-your-fresh-market/6000207633451",
-      "checked_on": "2026-11-08",
-      "purchase_frequency_zh": "按需补",
-      "purchase_frequency_en": "As Needed"
     },
     {
       "item": "Light ½ Fat蛋黄酱",
@@ -595,15 +527,15 @@
       "price_cad": "4.97",
       "basis": "bottle",
       "package_g": 227,
-      "weekly_g": 20,
-      "weekly_quantity": "0.0881057268722467",
-      "weekly_cost_cad": "0.44",
+      "weekly_g": 10,
+      "weekly_quantity": "0.04405286343612335",
+      "weekly_cost_cad": "0.22",
       "source_url": "https://www.walmart.ca/en/ip/Roasted-Sesame-Seed/6000196393577",
       "product_url": "https://www.walmart.ca/en/ip/Roasted-Sesame-Seed/6000196393577",
       "source_type": "walmart_public",
       "checked_on": "2026-11-14",
-      "purchase_frequency_zh": "1瓶 / 约11周",
-      "purchase_frequency_en": "1 Bottle / About 11 Weeks",
+      "purchase_frequency_zh": "1瓶 / 约23周",
+      "purchase_frequency_en": "1 Bottle / About 23 Weeks",
       "availability_note": "Walmart indexed public price4.97 CAD. Product page snapshot shows out of stock; London store stock not verified."
     }
   ],

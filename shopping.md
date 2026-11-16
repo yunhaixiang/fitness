@@ -80,12 +80,7 @@ visual: true
 <td data-en="4 Bags / Week">4袋 / 周</td>
 <td style="text-align: right;"><a href="https://www.walmart.ca/en/ip/Your-Fresh-Market-Baby-Spinach-142g/1Z471AOSG7GL">$3.44</a></td>
 </tr>
-<tr data-weekly-cost="1.24" data-price-id="13" data-purchase-group="weekly">
-<td data-en="Tomato Paste">浓缩番茄膏</td>
-<td><a href="https://www.walmart.ca/en/ip/Unico-Tomato-Paste-156ml/6000188762632">Unico Tomato Paste</a><br>156 mL / <span data-en="Can">罐</span></td>
-<td data-en="1 Can / Week">1罐 / 周</td>
-<td style="text-align: right;"><a href="https://www.walmart.ca/en/ip/Unico-Tomato-Paste-156ml/6000188762632">$1.24</a></td>
-</tr>
+<tr data-weekly-cost="2.67" data-price-id="13" data-purchase-group="weekly"><td data-en="Tomato-Basil Pasta Sauce">番茄罗勒意面酱</td><td><a href="https://www.walmart.ca/en/ip/Catelli-Garden-Select-Tomato-Basil-Pasta-Sauce-600-mL-Jar/3B5Q7OZH5XF7">Catelli Garden Select Tomato &amp; Basil</a><br>600 mL / <span data-en="Jar">瓶</span></td><td data-en="1 Jar / Week">1瓶 / 周</td><td><a href="https://www.walmart.ca/en/ip/Catelli-Garden-Select-Tomato-Basil-Pasta-Sauce-600-mL-Jar/3B5Q7OZH5XF7">$2.67</a></td></tr>
 <tr data-price-id="14" data-weekly-cost="14.89" data-taxable="true" data-purchase-group="weekly">
 <td data-en="Fresh Fruit Tray">新鲜混合水果盘</td>
 <td><a href="https://www.metro.ca/en/online-grocery/aisles/fruits-vegetables/fresh-cut-fruits-vegetables/fresh-fruit-carousel/p/204900">Metro Fresh Fruit Carousel</a><br><span data-en="1.4 kg per Tray">1.4 kg / 盒</span></td>
@@ -98,10 +93,10 @@ visual: true
 <td data-en="1 Box / Week · Plan for 8 Kiwis">1盒 / 周 · 按8个安排</td>
 <td><a href="https://www.walmart.ca/en/ip/Kiwi-Gold-2-lb/6000201891262">$10.87</a></td>
 </tr>
-<tr data-weekly-cost="0.29" data-price-id="16" data-purchase-group="restock">
+<tr data-weekly-cost="0.62" data-price-id="16" data-purchase-group="restock">
 <td>意面</td>
 <td><a href="https://www.walmart.ca/en/ip/PRIMO-SPAGHETTI/1YCQ0A4KHLLW">Primo Spaghetti</a><br>454 g / 包</td>
-<td data-en="1 Pack / About 4.4 Weeks">1包 / 约4.4周</td>
+<td data-en="1 Pack / About 2.1 Weeks">1包 / 约2.1周</td>
 <td style="text-align: right;"><a href="https://www.walmart.ca/en/ip/PRIMO-SPAGHETTI/1YCQ0A4KHLLW">$1.27</a></td>
 </tr>
 <tr data-weekly-cost="0.86" data-price-id="17" data-purchase-group="restock">
@@ -222,21 +217,15 @@ visual: true
 <tr data-price-id="38" data-weekly-cost="2.34" data-purchase-group="weekly"><td data-en="Orange Bell Pepper">橙甜椒</td><td><a href="https://www.walmart.ca/en/ip/SUNSET-Orange-Pepper-Single-0-12-0-24-KG/6000197381989">SUNSET Orange Pepper</a><br><span data-en="Sold Individually · About 170 g Each">单颗售卖 · 每个约170 g</span></td><td data-en="2 / Week">2个 / 周</td><td><a href="https://www.walmart.ca/en/ip/SUNSET-Orange-Pepper-Single-0-12-0-24-KG/6000197381989">$1.17 / Avg.</a></td></tr>
 <tr data-price-id="39" data-weekly-cost="1.32" data-purchase-group="weekly"><td data-en="Zucchini">西葫芦</td><td><a href="https://www.walmart.ca/en/ip/Zucchini-Green/6000191270110">Green Zucchini</a><br><span data-en="Sold Individually">单颗售卖</span></td><td data-en="2 / Week">2根 / 周</td><td><a href="https://www.walmart.ca/en/ip/Zucchini-Green/6000191270110">$0.66 / Avg.</a></td></tr>
 <tr data-price-id="40" data-weekly-cost="1.04" data-purchase-group="weekly"><td data-en="Roma Tomato">罗马番茄</td><td><a href="https://www.walmart.ca/en/ip/Tomato-Roma-Sold-in-singles-0-10-0-14-KG/6000191272055">Roma Tomato</a><br><span data-en="Sold Individually">单颗售卖</span></td><td data-en="2 / Week">2个 / 周</td><td><a href="https://www.walmart.ca/en/ip/Tomato-Roma-Sold-in-singles-0-10-0-14-KG/6000191272055">$0.52 / Avg.</a></td></tr>
-<tr data-price-id="41" data-weekly-cost="0.55" data-purchase-group="restock"><td data-en="Rice Noodles">扁米粉</td><td><a href="https://www.walmart.ca/en/ip/Erawan-Rice-Stick/6000199121439">Erawan Rice Stick</a><br><span data-en="454 g">454 g</span></td><td data-en="1 Pack / About 3.6 Weeks">1包 / 约3.6周</td><td><a href="https://www.walmart.ca/en/ip/Erawan-Rice-Stick/6000199121439">$1.97</a></td></tr>
 <tr data-price-id="43" data-weekly-cost="1.59" data-purchase-group="restock"><td data-en="Curry Roux">咖喱块</td><td><a href="https://www.walmart.ca/en/ip/S-B-Golden-curry-sauce-mix-medium-hot/6000198034558">S&amp;B Golden Curry Sauce Mix Medium Hot</a><br><span data-en="90 g">90 g</span></td><td data-en="1 Box / 2.5 Weeks">1盒 / 2.5周</td><td><a href="https://www.walmart.ca/en/ip/S-B-Golden-curry-sauce-mix-medium-hot/6000198034558">$3.97</a></td></tr>
 <tr data-price-id="45" data-weekly-cost="1.48" data-purchase-group="weekly"><td data-en="No Salt Added Chickpeas">无添加盐鹰嘴豆</td><td><a href="https://www.walmart.ca/en/ip/Great-Value-No-Salt-Chick-Peas/10275066">Great Value No Salt Chick Peas</a><br>540 mL</td><td data-en="1 Can / Week">1罐 / 周</td><td><a href="https://www.walmart.ca/en/ip/Great-Value-No-Salt-Chick-Peas/10275066">$1.48</a></td></tr>
 
-<tr data-price-id="46" data-purchase-group="restock"><td data-en="Light Soy Sauce">生抽</td><td><a href="https://www.walmart.ca/en/ip/LKK-SOY-SAUCE/874990">Lee Kum Kee Soy Sauce</a><br>500 mL</td><td data-en="As Needed">按需补</td><td><a href="https://www.walmart.ca/en/ip/LKK-SOY-SAUCE/874990">$2.77</a></td></tr>
-<tr data-price-id="49" data-purchase-group="restock"><td data-en="Fish Sauce">鱼露</td><td><a href="https://www.walmart.ca/en/ip/SQUID-BRAND-FISH-SAUCE/77U7DWXUO6G9">Squid Brand Fish Sauce</a><br>725 mL</td><td data-en="As Needed">按需补</td><td><a href="https://www.walmart.ca/en/ip/SQUID-BRAND-FISH-SAUCE/77U7DWXUO6G9">$2.88</a></td></tr>
-<tr data-price-id="50" data-purchase-group="restock"><td data-en="Dark Soy Sauce">老抽</td><td><a href="https://www.walmart.ca/en/ip/Pearl-River-Bridge-PRB-Dark-Soy-Sauce-500-ml/10278824">Pearl River Bridge Dark Soy Sauce</a><br>500 mL</td><td data-en="As Needed">按需补</td><td><a href="https://www.walmart.ca/en/ip/Pearl-River-Bridge-PRB-Dark-Soy-Sauce-500-ml/10278824">$2.97</a></td></tr>
-<tr data-price-id="51" data-purchase-group="restock"><td data-en="Oyster Sauce">蚝油</td><td><a href="https://www.walmart.ca/en/ip/LKK-PANDA-BRAND-OYSTER-FLAVOURED-SAUCE-510G/10285991">Lee Kum Kee Panda Oyster Flavoured Sauce</a><br>510 g</td><td data-en="As Needed">按需补</td><td><a href="https://www.walmart.ca/en/ip/LKK-PANDA-BRAND-OYSTER-FLAVOURED-SAUCE-510G/10285991">$4.27</a></td></tr>
-<tr data-price-id="59" data-weekly-cost="0.44" data-purchase-group="restock"><td data-en="Toasted White Sesame Seeds">熟白芝麻</td><td><a href="https://www.walmart.ca/en/ip/Roasted-Sesame-Seed/6000196393577">Heiwa Roasted White Sesame Seed</a><br>227 g</td><td data-en="20 g / Week; 1 Bottle / About 11 Weeks">每周20 g；1瓶 / 约11周</td><td><a href="https://www.walmart.ca/en/ip/Roasted-Sesame-Seed/6000196393577">$4.97</a></td></tr>
-<tr data-price-id="53" data-purchase-group="restock"><td data-en="Fresh Basil">罗勒叶</td><td><a href="https://www.walmart.ca/en/ip/fresh-basil-your-fresh-market/6000207633451">Your Fresh Market Fresh Basil</a><br>28 g</td><td data-en="As Needed">按需补</td><td><a href="https://www.walmart.ca/en/ip/fresh-basil-your-fresh-market/6000207633451">$1.67</a></td></tr>
+<tr data-price-id="59" data-weekly-cost="0.22" data-purchase-group="restock"><td data-en="Toasted White Sesame Seeds">熟白芝麻</td><td><a href="https://www.walmart.ca/en/ip/Roasted-Sesame-Seed/6000196393577">Heiwa Roasted White Sesame Seed</a><br>227 g</td><td data-en="10 g / Week; 1 Bottle / About 23 Weeks">每周10 g；1瓶 / 约23周</td><td><a href="https://www.walmart.ca/en/ip/Roasted-Sesame-Seed/6000196393577">$4.97</a></td></tr>
 <tr>
 <td>每周合计</td>
 <td>—</td>
 <td style="text-align: right;">—</td>
-<td style="text-align: right;">$155.75</td>
+<td style="text-align: right;">$156.74</td>
 </tr>
 </tbody>
 </table>

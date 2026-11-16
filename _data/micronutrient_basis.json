@@ -37,7 +37,11 @@
     "sesameLabel": "https://i5.walmartimages.com/asr/0b2c094b-4e32-4c6d-b6f0-b821376953e4.f96a952ecdf1c02a9b126dc0a6e0ab02.jpeg",
     "sesameUSDA": "https://www.ars.usda.gov/ARSUserFiles/80400535/Data/SR/SR28/reports/sr28fg12.pdf",
     "legacyCanadianDV": "https://epe.lac-bac.gc.ca/100/206/301/cfia-acia/2011-09-21/www.inspection.gc.ca/english/fssa/labeti/guide/ch6e.shtml?nodisclaimer=1",
-    "sunGoldUSDA": "https://www.ars.usda.gov/ARSUserFiles/80400535/Data/SR/SR28/reports/sr28fg09.pdf"
+    "sunGoldUSDA": "https://www.ars.usda.gov/ARSUserFiles/80400535/Data/SR/SR28/reports/sr28fg09.pdf",
+    "catelliLabel": {
+      "url": "https://www.kraftheinz.com/en-CA/catelli/products/00064200010122-garden-select-tomato-basil-pasta-sauce",
+      "description": "Manufacturer per125 mL: calcium20 mg, iron0.5 mg, potassium350 mg."
+    }
   },
   "notes": [
     "Micronutrient planning estimates for the current plan, not a measurement or product-label audit. Units match nutrition_basis.json; breakfast inputs are per 100 g. Numeric coverage is explicit; a missing field causes recalculation to fail.",
@@ -244,18 +248,18 @@
     },
     "sauce": {
       "values": {
-        "calcium": 41.666666666666664,
-        "iron": 1.6666666666666667,
-        "potassium": 1250.0,
+        "calcium": 20,
+        "iron": 0.5,
+        "potassium": 350,
         "vitaminD": 0,
         "vitaminB12": 0,
         "iodine": 2.1
       },
       "sources": [
-        "unicoPasteLabel",
+        "catelliLabel",
         "iodineUSDA"
       ],
-      "basis": "Per 125 mL, scaled from Unico label per 30 mL. Vitamin D and B12 assumed zero; iodine retains generic tomato-sauce proxy 2.1 mcg, not a product measurement."
+      "basis": "Catelli Tomato & Basil per125 mL. Vitamin D/B12 assumed zero; iodine2.1 mcg retains generic tomato sauce proxy, not product measurement."
     },
     "potato": {
       "values": {

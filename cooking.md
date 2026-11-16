@@ -335,11 +335,11 @@ cooking: true
 </li>
 <li class="cooking-task-source">
 <ol lang="zh-CN" class="cooking-source-zh">
-<li>锅空且💧 水沸后，下🍝 干意面52 g，按包装时间煮约8分钟。</li>
+<li>锅空且💧 水沸后，下🍝 干意面50 g，按包装时间煮约8分钟。</li>
 <li>放入后勾选这一步；留意沸溢，等待时可穿插其他任务。</li>
 </ol>
 <ol lang="en" class="cooking-source-en" hidden>
-<li>When the pot is free and the 💧 water is boiling, add 52 g dry 🍝 spaghetti and cook for about 8 minutes, following the pack.</li>
+<li>When the pot is free and the 💧 water is boiling, add 50 g dry 🍝 spaghetti and cook for about 8 minutes, following the pack.</li>
 <li>Check after adding the food. Watch for boil-over while doing other tasks.</li>
 </ol>
 </li>
@@ -355,27 +355,24 @@ cooking: true
 </li>
 <li class="cooking-task-source">
 <ol lang="zh-CN" class="cooking-source-zh">
-<li>锅空且💧 水沸后即可下米粉；可沿用锅内💧 热水，不足时补💧 热水。</li>
-<li>下🍜 干扁米粉63 g煮6–8分钟。</li>
-<li>放入后勾选这一步；留意沸溢，等待时可穿插其他任务。</li>
+<li>锅空且💧 水沸后，下🍝 干意面60 g，按包装时间煮约8分钟；可沿用锅内热水。</li>
+<li>放入后勾选，等待期间可做其他任务。</li>
 </ol>
 <ol lang="en" class="cooking-source-en" hidden>
-<li>Use the free pot once the 💧 water boils; reuse the hot 💧 water and top up if needed.</li>
-<li>Add 63 g 🍜 dry rice noodles and cook for 6–8 minutes.</li>
-<li>Check after adding the food. Watch for boil-over while doing other tasks.</li>
+<li>When the pot is free and the 💧 water is boiling, add 60 g dry 🍝 spaghetti; cook for about 8 minutes according to the package, reusing the hot water.</li>
+<li>Check after loading; work on other tasks while it cooks.</li>
 </ol>
 </li>
+
 <li class="cooking-task-source">
 <ol lang="zh-CN" class="cooking-source-zh">
-<li>按包装时间检查米粉熟度，再取出。</li>
-<li>第6分钟检查，无硬芯且仍有弹性时捞出沥干，保留锅内💧 热水，交给小锅拌🌿 罗勒酱汁。</li>
+<li>按包装时间检查🍝 意面，无硬芯且仍有弹性时捞出沥干，留少量💧 面水，供第4盘使用。</li>
 </ol>
 <ol lang="en" class="cooking-source-en" hidden>
-<li>Check the rice noodles for doneness at the package time before removing.</li>
-<li>Check at 6 minutes; lift out and drain once there is no hard centre and the noodles are still springy, keeping the hot 💧 water in the pot.</li>
-<li>Transfer to the saucepan for the 🌿 basil sauce.</li>
+<li>Check the 🍝 spaghetti according to the package; drain when al dente, reserving a little 💧 pasta water for meal 4.</li>
 </ol>
 </li>
+
 </ol>
 
 <h2 id="small-wok" data-en="Saucepan">小锅线程</h2>
@@ -383,14 +380,15 @@ cooking: true
 <ol>
 <li class="cooking-task-source">
 <ol lang="zh-CN" class="cooking-source-zh">
-<li>🌿 罗勒叶2–3片洗净。</li>
-<li>🥣 鱼露、生抽、老抽各¼茶匙，🥣 蚝油½茶匙、🧄 蒜粉¼茶匙、🌶️ 红椒粉¼茶匙和💧 水2汤匙调匀。</li>
+<li>🍅 Catelli番茄罗勒意面酱每次用半瓶300 mL，分成两份各150 mL，分别给第4、7盘。</li>
+<li>前半周用后将剩余半瓶盖紧冷藏，按包装开封保存说明使用。</li>
 </ol>
 <ol lang="en" class="cooking-source-en" hidden>
-<li>Wash 2–3 🌿 basil leaves.</li>
-<li>Mix ¼ tsp each 🥣 fish sauce, 🥣 light soy sauce and 🥣 dark soy sauce, ½ tsp 🥣 oyster sauce, ¼ tsp 🧄 garlic powder, ¼ tsp 🌶️ paprika and 2 tbsp 💧 water.</li>
+<li>Use half a jar (300 mL) of 🍅 Catelli Tomato & Basil sauce per cooking session; portion 150 mL each for meals 4 and 7.</li>
+<li>Refrigerate the remaining half-jar after the first session, following the label storage instructions.</li>
 </ol>
 </li>
+
 <li class="cooking-task-source">
 <ol lang="zh-CN" class="cooking-source-zh">
 <li>💧 水150 mL烧热后关小火，溶入🍛 Golden Curry咖喱块18 g（90 g整包的1/5）。</li>
@@ -415,19 +413,15 @@ cooking: true
 </li>
 <li class="cooking-task-source">
 <ol lang="zh-CN" class="cooking-source-zh">
-<li>小锅冲洗擦干，加🫒 橄榄油¼茶匙，中小火加热。</li>
-<li>倒入酱汁和沥干🍜 米粉，拌热1–2分钟，粘锅时补少量💧 水。</li>
-<li>关火拌入罗勒，放第4盘。</li>
-<li>食用前撒上🌾 熟芝麻5 g。</li>
+<li>小锅加🫒 橄榄油¼茶匙和🍅 Catelli意面酱150 mL，小火加热至微沸。</li>
+<li>拌入第4盘的🍝 意面，拌热1–2分钟；偏稠时补少量💧 面水，放第4盘。</li>
 </ol>
 <ol lang="en" class="cooking-source-en" hidden>
-<li>Rinse and dry the saucepan.</li>
-<li>Add ¼ tsp 🫒 olive oil and heat over medium-low heat.</li>
-<li>Add the sauce and drained 🍜 noodles, tossing for 1–2 minutes; add a splash of 💧 water if they start to stick.</li>
-<li>Turn off the heat, stir in basil and place in meal 4.</li>
-<li>Sprinkle with 5 g 🌾 toasted sesame seeds just before eating.</li>
+<li>Heat ¼ tsp 🫒 olive oil and 150 mL 🍅 Catelli sauce in the saucepan until gently simmering.</li>
+<li>Toss with the 🍝 spaghetti for meal 4 for 1–2 minutes; loosen with a little 💧 pasta water if needed, then place in meal 4.</li>
 </ol>
 </li>
+
 </ol>
 
 <h2 id="large-wok" data-en="Wok">大锅线程</h2>
@@ -468,22 +462,18 @@ cooking: true
 </li>
 <li class="cooking-task-source">
 <ol lang="zh-CN" class="cooking-source-zh">
-<li>加入🍅 Unico浓缩番茄膏半罐（44 mL）、🧄 蒜粉¼茶匙和🌿 意式香料¼茶匙，翻炒1分钟。</li>
-<li>加💧 面水80–120 mL煮2–3分钟。</li>
-<li>拌入🍝 意面，偏稠时再补💧 面水，放第7盘。</li>
-<li>剩余半罐转入密封盒冷藏，供后半周使用。</li>
+<li>鸡肉末和西葫芦做好后，加入🍅 Catelli番茄罗勒意面酱150 mL，煮至微沸。</li>
+<li>拌入第7盘的🍝 意面，拌热1–2分钟，偏稠时补少量💧 面水，放第7盘。</li>
 </ol>
 <ol lang="en" class="cooking-source-en" hidden>
-<li>Stir in half a can of 🍅 Unico Tomato Paste (44 mL), ¼ tsp 🧄 garlic powder and ¼ tsp 🌿 Italian seasoning for 1 minute.</li>
-<li>Add 80–120 mL reserved pasta 💧 water and simmer for 2–3 minutes.</li>
-<li>Toss in the 🍝 spaghetti, adding more pasta 💧 water if needed.</li>
-<li>Place in meal 7.</li>
-<li>Transfer the remaining half-can to a sealed container and refrigerate for the second cooking session.</li>
+<li>Once the ground chicken and zucchini are cooked, add 150 mL 🍅 Catelli Tomato & Basil sauce and bring to a simmer.</li>
+<li>Toss with the 🍝 spaghetti for meal 7 for 1–2 minutes, adding a little 💧 pasta water if needed, then place in meal 7.</li>
 </ol>
 </li>
+
 </ol>
 
-<!-- Cook to the product package directions where they differ. Rice noodle method: Erawan Walmart directions, boil dry noodles directly for 6–8 minutes, https://www.walmart.ca/en/ip/Erawan-Rice-Stick/6000199121439 . The timer starts with a 6-minute check; extend as needed. Shrimp uses garlic powder, paprika, black pepper and olive oil; oven times vary with size and loading. -->
+<!-- Follow package cooking directions. Both pasta meals use Catelli Tomato & Basil sauce. -->
 
 <h2 id="finish" data-en="Finish">收尾线程</h2>
 <ol>

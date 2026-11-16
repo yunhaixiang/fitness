@@ -31,13 +31,13 @@ test('weekly meat, eggs, grains and portions match whole-package purchase cycles
  close(weekly('egg'),12);
  assert.equal(basis.shrimpEggWash,undefined); close(weekly('potato')*100,340);
  close(weekly('sweetpotato'),0);
- close(weekly('rice')*100,120); close(weekly('pasta')*85,104);
- close(weekly('noodle')*100,126); close(weekly('sauce')*125,156);
+ close(weekly('rice')*100,120); close(weekly('pasta')*85,220);
+ close(weekly('noodle')*100,0); close(weekly('sauce')*125,600);
  const recipes=Object.fromEntries(basis.mealKeys.map((k,i)=>[k,basis.recipes[i]]));
  assert.equal(recipes.wrap.tuna,undefined); close(recipes.bread.tuna,1); close(recipes.bread.bread,1.5);
  close(recipes.noodles.shrimp,1.7); assert.equal(recipes.noodles.panko,undefined);
  assert.equal(recipes.rice.shrimp,undefined); assert.equal(recipes.rice.panko,undefined);
- close(recipes.rice.curry*18,18); assert.equal(recipes.noodles.curry,undefined); close(recipes.noodles.noodleSauce,1);
+ close(recipes.rice.curry*18,18); assert.equal(recipes.noodles.curry,undefined); assert.equal(recipes.noodles.noodleSauce,undefined); close(recipes.noodles.sauce,1.2); close(recipes.pasta.sauce,1.2); close(weekly('sesame')*100,10);
  close(recipes.wrap.chickpeas,2.16); assert.equal(recipes.potato.chickpeas,undefined); assert.equal(recipes.dumpling.chickpeas,undefined); close(weekly('refriedBeans'),0);
  close(weekly('chickpeas')*125,540); close(weekly('tuna'),2); close(weekly('mayo'),2); close(weekly('lightMayo'),7); close(weekly('spinach')*100,568);
  close(weekly('pepper')*100,300); close(weekly('mushroom')*100,0); close(weekly('pc')*100,520);
