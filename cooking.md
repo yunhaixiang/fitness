@@ -450,14 +450,14 @@ cooking: true
 </li>
 <li class="cooking-task-source">
 <ol lang="zh-CN" class="cooking-source-zh">
-<li>在第1盘的🍞 面包上抹上🥣 Hellmann’s Light ½ Fat 蛋黄酱，共3½茶匙（17.5 mL）。</li>
+<li>在第1盘的🍞 面包上抹上🥣 Hellmann’s Light ½ Fat 蛋黄酱，共3茶匙（15 mL）。</li>
 <li>取沥干🐟 金枪鱼½罐（约55 g），直接铺在面包上。</li>
 <li>预留🥬 菠菜10 g，洗净擦干。</li>
 <li>前半周备料时，将剩余沥干金枪鱼密封冷冻供后半周用。</li>
 <li>多余面包冷冻。</li>
 </ol>
 <ol lang="en" class="cooking-source-en" hidden>
-<li>Spread the 🍞 bread on plate 1 with a total of 3½ tsp 🥣 Hellmann’s Light ½ Fat mayonnaise (17.5 mL).</li>
+<li>Spread the 🍞 bread on plate 1 with a total of 3 tsp 🥣 Hellmann’s Light ½ Fat mayonnaise (15 mL).</li>
 <li>Spread half a can of drained 🐟 tuna (about 55 g) directly onto the bread.</li>
 <li>Wash and thoroughly dry the reserved 10 g 🥬 spinach.</li>
 <li>During the first cooking session, freeze the remaining drained tuna for the second session.</li>
