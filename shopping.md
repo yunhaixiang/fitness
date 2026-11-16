@@ -197,11 +197,11 @@ visual: true
 <td data-en="1 Bottle / 120 Days · 1 Capsule with Breakfast Daily">1瓶 / 120天；每天早餐1粒</td>
 <td><a href="https://www.amazon.ca/dp/B08WVD2YDB">$16.49</a></td>
 </tr>
-<tr data-price-id="55" data-weekly-cost="0.30" data-purchase-group="restock">
-<td data-en="Ground Flaxseed">磨碎亚麻籽</td>
-<td><a href="https://www.walmart.ca/en/ip/JOES-TASTY-EX-GROUND-FLAX-SDS-350G/6000192737948">Joe’s Tasty Travels Milled Flax Seeds</a><br><span data-en="350 g / Bag">350 g / 袋</span></td>
-<td data-en="5 g with Breakfast Daily · 35 g / Week · Restock as Needed">每天早餐5 g；每周35 g；按需补</td>
-<td><a href="https://www.walmart.ca/en/ip/JOES-TASTY-EX-GROUND-FLAX-SDS-350G/6000192737948">$3.00</a></td>
+<tr data-price-id="55" data-weekly-cost="1.39" data-purchase-group="restock">
+<td data-en="Walnuts">核桃仁</td>
+<td><a href="https://www.walmart.ca/en/ip/JOES-TASTY-EX-WALNUT-HALVES-300G/10281141">Joe’s Tasty Travels California Walnut Halves &amp; Pieces</a><br><span data-en="300 g / Bag · No Added Salt">300 g / 袋；无添加盐</span></td>
+<td data-en="6 Halves with Breakfast Daily (≈12 g) · About 25 Days / Bag">每天早餐6瓣（约12 g）；每袋约25天</td>
+<td><a href="https://www.walmart.ca/en/ip/JOES-TASTY-EX-WALNUT-HALVES-300G/10281141">$4.97</a></td>
 </tr>
 <tr data-price-id="54" data-weekly-cost="1.77" data-purchase-group="restock">
 <td data-en="Omega-3 Fish Oil">Omega-3 鱼油</td>
@@ -223,7 +223,7 @@ visual: true
 <td>每周合计</td>
 <td>—</td>
 <td style="text-align: right;">—</td>
-<td style="text-align: right;">$157.61</td>
+<td style="text-align: right;">$158.70</td>
 </tr>
 </tbody>
 </table>

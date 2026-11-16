@@ -8,7 +8,7 @@ def recalculate(root):
   for i,field in enumerate(fields):
    value=sum(source['arr'][food][i]*amount for food,amount in recipe.items())
    meals[key][field]=str(round(value)) if field in ['kcal','sodium','cholesterol'] else f'{value:.2f}' if field=='epaDha' else f'{value:.1f}'
- # Reset breakfast from its baseline before adding supplements and flaxseed.
+ # Reset breakfast from its baseline before adding supplements and the breakfast addition.
  for key,base in source.get('breakfastBase',{}).items():
   supplement=source['breakfastSupplement']
   for field in fields:

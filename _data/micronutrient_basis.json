@@ -29,7 +29,6 @@
       "url": "https://www.unico.ca/products/unico-tomato-paste",
       "description": "Per 30 mL: calcium 10 mg, iron 0.4 mg, potassium 300 mg."
     },
-    "flaxLabel": "https://www.bobsredmill.com/product/flaxseed-meal",
     "jamiesonVitaminDLabel": "https://www.jamiesonvitamins.com/products/vitamin-d",
     "chickpeasLabel": "https://i5.walmartimages.ca/asr/370f0918-c48f-4d88-8977-543b148667d9.313a5c461508f29f6820143dc0554de7.jpeg",
     "plainHaddockLabel": "https://i5.walmartimages.ca/asr/2003afba-e739-42db-953b-88508c2c052e.6f55f9fc30bab167d22f3a5e59500fbb.jpeg",
@@ -43,7 +42,8 @@
       "description": "Manufacturer per125 mL: calcium20 mg, iron0.5 mg, potassium350 mg."
     },
     "breadedHaddockLabel": "https://www.highliner.com/products/signature-cuts/signature-cuts-crispy-breaded-haddock-fillets",
-    "tilapiaUSDA": "https://www.ars.usda.gov/ARSUserFiles/80400535/Data/SR/SR28/reports/sr28fg15.pdf"
+    "tilapiaUSDA": "https://www.ars.usda.gov/ARSUserFiles/80400535/Data/SR/SR28/reports/sr28fg15.pdf",
+    "walnutComposition": "https://walnuts.org/wp-content/uploads/2017/12/Nutrients-In-One-Ounce-of-Walnuts.pdf"
   },
   "notes": [
     "Micronutrient planning estimates for the current plan, not a measurement or product-label audit. Units match nutrition_basis.json; breakfast inputs are per 100 g. Numeric coverage is explicit; a missing field causes recalculation to fail.",
@@ -519,21 +519,6 @@
       ],
       "basis": "Per 100 g fruit tray: equal edible weights cantaloupe, honeydew, watermelon, pineapple, strawberry (CNF 1721/1605/1691/1734/1749). Actual fruit proportions unknown. Iodine 0.3 mcg/100 g trace proxy. Used as a proxy for Metro Fresh Fruit Carousel; no product-specific nutrition label or ingredient proportions verified."
     },
-    "flax": {
-      "values": {
-        "calcium": 24,
-        "iron": 1,
-        "potassium": 113,
-        "vitaminD": 0,
-        "vitaminB12": 0,
-        "iodine": 0
-      },
-      "sources": [
-        "flaxLabel",
-        "assumptions"
-      ],
-      "basis": "Per 13 g manufacturer serving: Ca24 mg, Fe1 mg, K113 mg, D0. B12 and iodine not declared, omitted contribution modeled as zero, not measured zero."
-    },
     "lightMayo": {
       "values": {
         "calcium": 0.3,
@@ -671,6 +656,21 @@
         "assumptions"
       ],
       "basis": "Per 100 g raw tilapia, USDA SR28 NDB15261: Ca10 mg, Fe0.56 mg, K302 mg, D3.1 mcg, B121.58 mcg. Generic composition estimates, not the selected product label. Iodine is not provided by SR28; 2 mcg/100 g is a provisional freshwater-fish modeling allowance, not a measured tilapia value. Recipe uses 175 g raw per meal; actual tray weight varies."
+    },
+    "walnut": {
+      "values": {
+        "calcium": 30,
+        "iron": 0.8,
+        "potassium": 130,
+        "vitaminD": 0,
+        "vitaminB12": 0,
+        "iodine": 0
+      },
+      "sources": [
+        "walnutComposition",
+        "assumptions"
+      ],
+      "basis": "Per 28.35 g generic walnuts. Calcium, iron, potassium, D and B12 from California Walnut Board USDA-based sheet. Iodine not reported; contribution omitted as zero, not a measured zero. Product-specific composition unverified."
     }
   },
   "extraRecipes": {
@@ -678,8 +678,8 @@
       "soy": 2.7,
       "cereal": 0.29,
       "fruit": 1.5555555555555554,
-      "flax": 0.38461538461538464,
-      "vitaminDSupplement": 1
+      "vitaminDSupplement": 1,
+      "walnut": 0.42328042328042326
     },
     "fruit_snack": {
       "soy": 2.7,
@@ -688,9 +688,9 @@
     "late_fruit_breakfast": {
       "soy": 2.7,
       "cereal": 0.29,
-      "flax": 0.38461538461538464,
       "vitaminDSupplement": 1,
-      "kiwi": 0.8162999999999999
+      "kiwi": 0.8162999999999999,
+      "walnut": 0.42328042328042326
     },
     "late_fruit_snack": {
       "soy": 2.7,
