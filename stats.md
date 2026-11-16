@@ -134,7 +134,7 @@ visual: true
 </tr>
 <tr>
 <td>总糖</td>
-<td style="text-align: right;">50.8 g</td>
+<td style="text-align: right;">50.7 g</td>
 <td>无单独上限；重点控制添加糖</td>
 </tr>
 <tr>

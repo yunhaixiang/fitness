@@ -267,8 +267,8 @@ cooking: true
 <ol lang="en" class="cooking-source-en" hidden><li>Once the 💧 water boils, gently add 6 🥚 eggs and all 110 g dry 🍝 spaghetti together; separate the strands gently and leave enough space.</li><li>Start one 8-minute timer for the first check. Mark this step after loading; work on other tasks meanwhile.</li></ol>
 </li>
 <li class="cooking-task-source">
-<ol lang="zh-CN" class="cooking-source-zh"><li>8分钟后按包装要求检查🍝 意面，熟了先用夹子捞出，留少量💧 面水。沥干后的意面按6:5分：第4盘取6/11，第7盘取5/11，分别相当于干面60 g和50 g。</li><li>🥚 鸡蛋未熟时可继续留在锅里煮，不必等鸡蛋才捞面。</li></ol>
-<ol lang="en" class="cooking-source-en" hidden><li>At 8 minutes, check the 🍝 spaghetti according to its package; lift out with tongs when done and reserve a little 💧 pasta water. Divide the drained spaghetti 6:5: meal 4 gets 6/11 and meal 7 gets 5/11, equivalent to 60 g and 50 g dry pasta.</li><li>Leave the 🥚 eggs in the pot if they need longer; do not overcook the pasta while waiting.</li></ol>
+<ol lang="zh-CN" class="cooking-source-zh"><li>8分钟后按包装要求检查🍝 意面，熟了先用夹子捞出，留少量💧 面水。沥干后的意面均分到第4、7盘，每份相当于干面55 g。</li><li>🥚 鸡蛋未熟时可继续留在锅里煮，不必等鸡蛋才捞面。</li></ol>
+<ol lang="en" class="cooking-source-en" hidden><li>At 8 minutes, check the 🍝 spaghetti according to its package; lift out with tongs when done and reserve a little 💧 pasta water. Divide the drained spaghetti equally between meals 4 and 7, each equivalent to 55 g dry pasta.</li><li>Leave the 🥚 eggs in the pot if they need longer; do not overcook the pasta while waiting.</li></ol>
 </li>
 <li class="cooking-task-source">
 <ol lang="zh-CN" class="cooking-source-zh"><li>8分钟后检查🥚 鸡蛋，蛋白、蛋黄都凝固后取出，放💧 冷水冷却；未熟则继续煮。</li><li>8分钟是首次检查时间，不保证不同大小、起始温度的鸡蛋都已全熟。</li></ol>
