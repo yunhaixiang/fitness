@@ -135,21 +135,22 @@
     return element;
   };
   // Highlight meaning without changing the source instructions or injecting HTML.
-  const cookingNumber = String.raw`(?:\d+(?:\.\d+)?(?:[½¼¾⅛⅜⅝⅞])?|[½¼¾⅛⅜⅝⅞]|\d+/\d+)`;
-  const cookingRange = `${cookingNumber}(?:[–—-]${cookingNumber})?`;
+  // Match fractions before integers, and keep a whole range in one highlight.
+  const cookingNumber = String.raw`(?:\d+\s+\d+/\d+|\d+/\d+|\d+(?:\.\d+)?[½¼¾⅛⅜⅝⅞]?|[½¼¾⅛⅜⅝⅞])`;
+  const cookingRange = `${cookingNumber}(?:\\s*(?:[–—-]|to|至)\\s*${cookingNumber})?`;
   const cookingIngredients = [
-    '鸡大腿肉', '生鸡腿肉', '鸡腿肉', '鸡肉末', '生肉末', '小土豆', '土豆块', '排骨', '牛肉丸',
-    '虾仁', '虾肉', '面包糠', '三文鱼', '裹粉黑线鳕', '黑线鳕', '金枪鱼', '水煮蛋', '鸡蛋', '水饺',
+    '鸡大腿肉', '生鸡腿肉', '鸡腿肉', '鸡腿', '鸡肉末', '生肉末', '小土豆', '土豆块', '土豆', '排骨', '牛肉丸',
+    '虾仁', '虾肉', '面包糠', '三文鱼', '罗非鱼', '裹粉黑线鳕', '裹粉鱼', '黑线鳕', '金枪鱼', '水煮蛋', '鸡蛋', '水饺',
     '干意面', '意面', '干扁米粉', '米粉', '干米', '米饭', '蘑菇', '菠菜', '西葫芦',
-    'Unico浓缩番茄膏', '罗马番茄', '番茄', '鹰嘴豆', '豆泥', '橙甜椒', '大号卷饼皮', '全麦面包', '豌豆胡萝卜',
-    'Hellmann’s Light ½ Fat 蛋黄酱', 'Chipotle蛋黄酱', '橄榄油', '蒜粉', '洋葱粉', '黑胡椒', '红椒粉', '红辣椒', '辣椒',
-    '意式香料', '牛至', '罗勒叶', '罗勒', '鱼露', '生抽', '老抽', '蚝油', '咖喱块', '咖喱酱', '热水', '面水', '沸水', '水'
+    'Catelli番茄罗勒意面酱', 'Unico浓缩番茄膏', '罗马番茄', '番茄', '鹰嘴豆', '豆泥', '橙甜椒', '大号卷饼皮', '卷饼皮', '全麦面包', '面包', '豌豆胡萝卜',
+    'Hellmann’s Light ½ Fat 蛋黄酱', 'Chipotle蛋黄酱', '蛋黄酱', '橄榄油', '油', '盐', '蒜粉', '洋葱粉', '黑胡椒', '红椒粉', '红辣椒', '辣椒',
+    '意式香料', '牛至', '罗勒叶', '罗勒', '鱼露', '生抽', '老抽', '蚝油', '咖喱块', '咖喱酱', '热水', '面水', '沸水', '清水', '水'
   ].sort((a, b) => b.length - a.length).join('|');
-  const cookingEnglishIngredients = String.raw`\b(?:chicken thighs?|raw thighs?|ground chicken|chicken|potatoes|potato wedges|ribs|meatballs|shrimp|panko|salmon|(?:breaded )?haddock(?: fillet)?|tuna|boiled eggs?|eggs?|dumplings|spaghetti|rice noodles|noodles|dry rice|rice|mushrooms|spinach|zucchini|Unico Tomato Paste|Roma tomato|tomato|chickpeas|refried beans|orange bell pepper|tortillas?|whole-wheat bread|bread|peas and carrots|Hellmann’s Light ½ Fat mayonnaise|Chipotle mayonnaise|olive oil|garlic powder|onion powder|black pepper|pepper|paprika|red chili|chili|Italian seasoning|oregano|basil(?: leaves)?|fish sauce|light and dark soy sauces|light soy sauce|dark soy sauce|oyster sauce|Golden Curry|water)\b`;
+  const cookingEnglishIngredients = String.raw`\b(?:Catelli Tomato & Basil sauce|chicken thighs?|raw thighs?|ground chicken|chicken|thighs?|potato wedges|potatoes|ribs|meatballs|shrimp|panko|salmon|tilapia|(?:breaded )?haddock(?: fillets?)?|breaded fish|fish|tuna|boiled eggs?|eggs?|dumplings|spaghetti|rice noodles|noodles|dry rice|rice|mushrooms|spinach|zucchini|Unico Tomato Paste|Roma tomato|tomato|chickpeas|refried beans|orange bell pepper|tortillas?|whole-wheat bread|bread|peas and carrots|Hellmann[’']s Light ½ Fat mayonnaise|Chipotle mayonnaise|mayonnaise|olive oil|oil|salt|garlic powder|onion powder|black pepper|pepper|paprika|red chili|chili|Italian seasoning|oregano|basil(?: leaves)?|fish sauce|light and dark soy sauces|light soy sauce|dark soy sauce|oyster sauce|Golden Curry|pasta water|water)\b`;
   const cookingTokens = new RegExp([
-    `(?<heat>${cookingRange}\\s*(?:°[FC]|分钟|minutes?\\b))`,
-    `(?<portion>第[0-9、，]+盘|\\bmeals?\\s+\\d+(?:(?:,\\s*|\\s+and\\s+)\\d+)*)`,
-    `(?<amount>${cookingRange}\\s*(?:茶匙|汤匙|mL\\b|kg\\b|g\\b|cm\\b|tsp\\b|tbsp\\b|个|块|颗|片|罐|袋|盒)|半(?:小块|袋|盒|罐)|half a (?:bag|pack|can)|quarter can)`,
+    `(?<heat>(?:[≤≥<>]\\s*)?${cookingRange}\\s*(?:°\\s*[FC]|℃|℉|分钟|秒钟?|小时|天|(?:(?:more|additional)\\s+)?(?:minutes?|mins?|seconds?|secs?|hours?|hrs?|days?)\\b))`,
+    `(?<portion>第[0-9、，]+盘|\\b(?:meals?|plates?)\\s+\\d+(?:(?:,\\s*(?:and\\s+)?|\\s+and\\s+)\\d+)*)`,
+    `(?<amount>${cookingRange}\\s*(?:茶匙|汤匙|mL\\b|kg\\b|g\\b|L\\b|mm\\b|cm\\b|tsp\\b|tbsp\\b|grams?\\b|cups?\\b|slices?\\b|cans?\\b|jars?\\b|packs?\\b|bags?\\b|boxes\\b|box\\b|个|块|颗|片|罐|袋|盒|瓶|根|喷|下)|半(?:小块|袋|盒|罐|瓶)|\\b(?:half|quarter)(?:\\s+(?:a|of a)|-)?\\s*(?:bag|pack|can|jar|box)\\b)`,
     `(?<ingredient>${cookingIngredients}|${cookingEnglishIngredients})`
   ].join('|'), 'gi');
   const appendCookingText = (element, text) => {
