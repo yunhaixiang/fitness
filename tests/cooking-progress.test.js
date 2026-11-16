@@ -61,7 +61,12 @@ for(const [plan,nodes] of [['current',current],['historical',historical]]) {
   const newIds=nodes.filter(n=>n.id.endsWith('-start')||['potato-turn','prep-haddock'].includes(n.id)).map(n=>n.id);
   const oldDone=nodes.flatMap(n=>n.id==='fish'?['salmon','haddock']:n.id).filter(id=>!newIds.includes(id));
   const state=readState(JSON.stringify({version:4,done:oldDone}));
-  assert.equal(state.version,5);assert.equal(derive(nodes,state.done).done.length,nodes.length);
+  assert.equal(state.version,5);
+  const migrated=derive(nodes,state.done).done;
+  const newlyRequired=nodes.some(n=>n.id==='breaded-fish') ? ['breaded-fish-start','breaded-fish','sandwich','refrigerate','clean'] : [];
+  assert.equal(migrated.length,nodes.length-newlyRequired.length);
+  newlyRequired.forEach(id=>assert.ok(!migrated.includes(id),'new fish tasks must not inherit completion'));
+
   assert.deepEqual(readState(JSON.stringify(state)),state);
  });
  test(`${plan}: undoing loading invalidates completion and dependents, preserving unrelated work`,()=>{

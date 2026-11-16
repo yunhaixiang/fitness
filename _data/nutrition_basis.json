@@ -431,18 +431,29 @@
       0,
       0,
       0
+    ],
+    "breadedHaddock": [
+      190,
+      9,
+      17,
+      10,
+      1,
+      1,
+      0,
+      330,
+      25,
+      0.06400285714285714
     ]
   },
   "recipes": [
     {
       "bread": 1.5,
-      "thigh": 1.1625,
       "egg": 2,
       "tomato": 1.2,
-      "oil": 0.18749999999999994,
       "tuna": 1,
       "spinach": 0.1,
-      "lightMayo": 3.5
+      "lightMayo": 3.5,
+      "breadedHaddock": 1
     },
     {
       "rice": 0.6,
@@ -462,20 +473,20 @@
     },
     {
       "shrimp": 1.7,
-      "thigh": 1.1625,
+      "thigh": 1.7437500000000001,
       "egg": 1,
-      "oil": 0.875,
+      "oil": 0.96875,
       "pasta": 0.6470588235294118,
       "sauce": 1.2,
       "zucchini": 2
     },
     {
       "tortilla": 1,
-      "thigh": 1.1625,
+      "thigh": 1.7437500000000001,
       "egg": 1,
       "pepper": 0.75,
       "mayo": 1,
-      "oil": 0.1875,
+      "oil": 0.28125,
       "chickpeas": 2.16
     },
     {
@@ -528,7 +539,8 @@
     "2026-11-15: meal4 replaces rice noodles and the mixed salty sauce with 60 g dry Primo spaghetti and 150 mL Catelli Garden Select Tomato & Basil; omit its sesame topping, retain protein, vegetables and cooking oil. Meal7 uses 50 g dry spaghetti and 150 mL of the same sauce, replacing tomato paste. One 600 mL jar and 220 g dry spaghetti weekly. Sauce unit125 mL: official label50 kcal, P1/C9/F1.5/SFA0.2 g, sugar5 g, Na330 mg; fibre2 g from retailer label because official text omits fibre. https://www.kraftheinz.com/en-CA/catelli/products/00064200010122-garden-select-tomato-basil-pasta-sauce ; https://voila.ca/products/catelli-garden-select-pasta-sauce-tomato-basil-600-ml/1296172EA . Older retail labels show380 mg sodium; current manufacturer330 mg used, actual package takes precedence. Rice remains60 g, curry18 g and rice sesame5 g per serving.",
     "2026-11-15: halve orange bell pepper in each wrap to half a pepper, 75 g edible. One whole pepper (about170 g before trimming) weekly. Other ingredients unchanged.",
     "2026-11-16: equalize both spaghetti meals to 55 g dry pasta each; cook 110 g together and divide equally between meals 4 and 7. Retain 150 mL Catelli sauce per meal and all other ingredients; weekly totals unchanged.",
-    "2026-11-16: both spaghetti meals use one 200 g zucchini each. Replace meal4 peas/carrots130 g with zucchini200 g, keeping all other ingredients. Four zucchini weekly. Peas/carrots now only accompany curry rice:130 g per meal, one398 mL can (about260 g drained) weekly, half per cooking session."
+    "2026-11-16: both spaghetti meals use one 200 g zucchini each. Replace meal4 peas/carrots130 g with zucchini200 g, keeping all other ingredients. Four zucchini weekly. Peas/carrots now only accompany curry rice:130 g per meal, one398 mL can (about260 g drained) weekly, half per cooking session.",
+    "2026-11-16: sandwich replaces its one chicken thigh and allocated roasting oil with one High Liner Signature Cuts Crispy Breaded Haddock fillet; split that thigh and oil equally between shrimp spaghetti and wrap (each now1.5 thighs). Other ingredients unchanged. Per1 fillet87 g label:190 kcal P9/C17/F10/SFA1/fibre1/sugar0 g Na330/chol25 mg. Box425 g contains5 fillets; use2 weekly, buy1 box every2.5 weeks. Total omega3 label0.9 g includes vegetable oils and is NOT EPA+DHA. EPA+DHA and unlabelled micronutrients estimated from plain raw haddock equivalent providing9 g protein (~49 g fish); not measured fish content. https://www.highliner.com/products/signature-cuts/signature-cuts-crispy-breaded-haddock-fillets"
   ],
   "sources": {
     "shrimp": "https://www.walmart.ca/en/ip/Great-Value-Wild-Argentinian-Large-Raw-Shrimp/6000202999819",
@@ -548,7 +560,8 @@
     "plainHaddockLabel": "https://i5.walmartimages.ca/asr/2003afba-e739-42db-953b-88508c2c052e.6f55f9fc30bab167d22f3a5e59500fbb.jpeg",
     "plainHaddockUSDA": "https://www.ars.usda.gov/ARSUserFiles/80400535/Data/SR/SR28/reports/sr28fg15.pdf",
     "sesame": "https://www.walmart.ca/en/ip/Roasted-Sesame-Seed/6000196393577",
-    "sesameLabel": "https://i5.walmartimages.com/asr/0b2c094b-4e32-4c6d-b6f0-b821376953e4.f96a952ecdf1c02a9b126dc0a6e0ab02.jpeg"
+    "sesameLabel": "https://i5.walmartimages.com/asr/0b2c094b-4e32-4c6d-b6f0-b821376953e4.f96a952ecdf1c02a9b126dc0a6e0ab02.jpeg",
+    "breadedHaddock": "https://www.highliner.com/products/signature-cuts/signature-cuts-crispy-breaded-haddock-fillets"
   },
   "breakfastBase": {
     "fruit_breakfast": {

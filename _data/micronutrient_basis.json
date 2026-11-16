@@ -41,7 +41,8 @@
     "catelliLabel": {
       "url": "https://www.kraftheinz.com/en-CA/catelli/products/00064200010122-garden-select-tomato-basil-pasta-sauce",
       "description": "Manufacturer per125 mL: calcium20 mg, iron0.5 mg, potassium350 mg."
-    }
+    },
+    "breadedHaddockLabel": "https://www.highliner.com/products/signature-cuts/signature-cuts-crispy-breaded-haddock-fillets"
   },
   "notes": [
     "Micronutrient planning estimates for the current plan, not a measurement or product-label audit. Units match nutrition_basis.json; breakfast inputs are per 100 g. Numeric coverage is explicit; a missing field causes recalculation to fail.",
@@ -638,6 +639,22 @@
         "assumptions"
       ],
       "basis": "USDA SR28 NDB09520 SunGold raw, per 100 g edible portion. Vitamin D and B12 zero per USDA. Iodine retains the explicit trace allowance 0.3 mcg/100 g; not measured for this product."
+    },
+    "breadedHaddock": {
+      "values": {
+        "calcium": 20,
+        "iron": 0.75,
+        "potassium": 150,
+        "vitaminD": 0.24428571428571427,
+        "vitaminB12": 0.8940857142857143,
+        "iodine": 111.03896103896102
+      },
+      "sources": [
+        "breadedHaddockLabel",
+        "plainHaddockUSDA",
+        "iodineUSDA"
+      ],
+      "basis": "Per one label fillet87 g. Ca20/Fe0.75/K150 mg from manufacturer. Unlabelled D/B12/iodine estimated by scaling raw haddock to9 g protein (~49 g fish equivalent); approximate proxy, not measured fillet fish content."
     }
   },
   "extraRecipes": {

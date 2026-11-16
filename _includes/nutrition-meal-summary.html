@@ -12,7 +12,7 @@
 {% case key %}
 {% when 'wrap' %}
 <th scope="row"><span class="meal-summary-number">{{ forloop.index }}</span><span data-en="🌯 Wrap">🌯 卷饼</span></th>
-<td><div data-en="🍗 1 Chicken Thigh ({{ portion.thigh | times: 100 | round: 0 }} g)">🍗 鸡大腿肉1块（{{ portion.thigh | times: 100 | round: 0 }} g）</div><div data-en="🥚 {{ egg_display }} Boiled Eggs">🥚 水煮蛋{{ egg_display }}个</div><div data-en="🫘 ½ Can No Salt Added Chickpeas">🫘 无添加盐鹰嘴豆½罐</div></td>
+<td><div data-en="🍗 1½ Chicken Thighs ({{ portion.thigh | times: 100 | round: 0 }} g)">🍗 鸡大腿肉1½块（{{ portion.thigh | times: 100 | round: 0 }} g）</div><div data-en="🥚 {{ egg_display }} Boiled Eggs">🥚 水煮蛋{{ egg_display }}个</div><div data-en="🫘 ½ Can No Salt Added Chickpeas">🫘 无添加盐鹰嘴豆½罐</div></td>
 <td><div data-en="🫑 ½ Orange Bell Pepper ({{ portion.pepper | times: 100 | round: 0 }} g)">🫑 橙甜椒½个（{{ portion.pepper | times: 100 | round: 0 }} g）</div></td>
 <td><div data-en="🌯 {{ portion.tortilla | times: 1 | round: 0 }} Large Whole-Wheat Tortilla">🌯 大号全麦卷饼皮{{ portion.tortilla | times: 1 | round: 0 }}片</div><div data-en="🥣 {{ portion.mayo | times: 1 | round: 1 }} tsp Chipotle Mayonnaise">🥣 Chipotle蛋黄酱{{ portion.mayo | times: 1 | round: 1 }}茶匙</div></td>
 {% when 'dumpling' %}
@@ -22,7 +22,7 @@
 <td><div data-en="🥟 {{ portion.dumpling | times: 4 | round: 0 }} Dumplings ({{ portion.dumpling | times: 96 | round: 0 }} g)">🥟 水饺{{ portion.dumpling | times: 4 | round: 0 }}个（{{ portion.dumpling | times: 96 | round: 0 }} g）</div></td>
 {% when 'noodles' %}
 <th scope="row"><span class="meal-summary-number">{{ forloop.index }}</span><span data-en="🍝 Shrimp Spaghetti with Tomato Sauce">🍝 虾仁番茄意面</span></th>
-<td><div data-en="🍤 Baked Shrimp {{ portion.shrimp | times: 100 | round: 0 }} g">🍤 烤虾{{ portion.shrimp | times: 100 | round: 0 }} g</div><div data-en="🍗 1 Chicken Thigh ({{ portion.thigh | times: 100 | round: 0 }} g)">🍗 鸡大腿肉1块（{{ portion.thigh | times: 100 | round: 0 }} g）</div><div data-en="🥚 {{ egg_display }} Boiled Eggs">🥚 水煮蛋{{ egg_display }}个</div></td>
+<td><div data-en="🍤 Baked Shrimp {{ portion.shrimp | times: 100 | round: 0 }} g">🍤 烤虾{{ portion.shrimp | times: 100 | round: 0 }} g</div><div data-en="🍗 1½ Chicken Thighs ({{ portion.thigh | times: 100 | round: 0 }} g)">🍗 鸡大腿肉1½块（{{ portion.thigh | times: 100 | round: 0 }} g）</div><div data-en="🥚 {{ egg_display }} Boiled Eggs">🥚 水煮蛋{{ egg_display }}个</div></td>
 <td><div data-en="🥒 1 Zucchini ({{ portion.zucchini | times: 100 | round: 0 }} g)">🥒 西葫芦1根（{{ portion.zucchini | times: 100 | round: 0 }} g）</div></td>
 <td><div data-en="🍝 Dry Spaghetti {{ portion.pasta | times: 85 | round: 0 }} g">🍝 干意面{{ portion.pasta | times: 85 | round: 0 }} g</div><div data-en="🍅 Catelli Tomato &amp; Basil Sauce 150 mL">🍅 Catelli番茄罗勒酱150 mL</div></td>
 {% when 'potato' %}
@@ -32,7 +32,7 @@
 <td><div data-en="🥔 Potatoes {{ portion.potato | times: 100 | round: 0 }} g">🥔 土豆块{{ portion.potato | times: 100 | round: 0 }} g</div></td>
 {% when 'bread' %}
 <th scope="row"><span class="meal-summary-number">{{ forloop.index }}</span><span data-en="🥪 Sandwich">🥪 三明治</span></th>
-<td><div data-en="🍗 1 Chicken Thigh ({{ portion.thigh | times: 100 | round: 0 }} g)">🍗 鸡大腿肉1块（{{ portion.thigh | times: 100 | round: 0 }} g）</div><div data-en="🥚 {{ egg_display }} Boiled Eggs">🥚 水煮蛋{{ egg_display }}个</div><div data-en="🐟 ½ Can Tuna ({{ portion.tuna | times: 55 | round: 0 }} g)">🐟 金枪鱼½罐（{{ portion.tuna | times: 55 | round: 0 }} g）</div></td>
+<td><div data-en="🐟 1 Crispy Breaded Haddock Fillet">🐟 裹粉黑线鳕1块</div><div data-en="🥚 {{ egg_display }} Boiled Eggs">🥚 水煮蛋{{ egg_display }}个</div><div data-en="🐟 ½ Can Tuna ({{ portion.tuna | times: 55 | round: 0 }} g)">🐟 金枪鱼½罐（{{ portion.tuna | times: 55 | round: 0 }} g）</div></td>
 <td><div data-en="🍅 1 Roma Tomato ({{ portion.tomato | times: 100 | round: 0 }} g)">🍅 罗马番茄1个（{{ portion.tomato | times: 100 | round: 0 }} g）</div><div data-en="🥬 Spinach {{ portion.spinach | times: 100 | round: 0 }} g">🥬 菠菜{{ portion.spinach | times: 100 | round: 0 }} g</div></td>
 <td><div data-en="🍞 {{ portion.bread | times: 2 | round: 0 }} Slices Whole-Wheat Bread">🍞 全麦面包{{ portion.bread | times: 2 | round: 0 }}片</div><div data-en="🥣 {{ portion.lightMayo | times: 1 | round: 1 }} tsp Hellmann’s Light ½ Fat Mayonnaise">🥣 Hellmann’s Light ½ Fat 蛋黄酱{{ portion.lightMayo | times: 1 | round: 1 }}茶匙</div></td>
 {% when 'rice' %}

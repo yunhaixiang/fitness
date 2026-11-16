@@ -133,13 +133,13 @@ cooking: true
 <li class="cooking-task-source">
 <ol lang="zh-CN" class="cooking-source-zh">
 <li>确认熟度后取出：400°F烤27分钟，中心达74°C。</li>
-<li>熟肉均分到第1、4、5、6盘，每盘相当于1块🍗 鸡腿肉。</li>
-<li>卷饼与三明治的肉掰碎。</li>
+<li>熟肉分到第4、5、6盘：第4、5盘各1½块，第6盘1块🍗 鸡腿肉；第1盘三明治不放鸡腿。</li>
+<li>卷饼的鸡腿肉掰碎。</li>
 </ol>
 <ol lang="en" class="cooking-source-en" hidden>
 <li>Check doneness before removing: Roast at 400°F for 27 minutes, to 74°C in the centre.</li>
-<li>Divide the cooked meat equally between meals 1, 4, 5 and 6, equivalent to 1 🍗 chicken thigh each.</li>
-<li>Shred the wrap and sandwich portions.</li>
+<li>Divide the cooked 🍗 chicken between meals 4, 5 and 6: 1½ thighs each for meals 4 and 5, and 1 thigh for meal 6. No thigh goes into meal 1.</li>
+<li>Shred the wrap portion.</li>
 </ol>
 </li>
 <li class="cooking-task-source">
@@ -221,7 +221,7 @@ cooking: true
 <li>Work on other short tasks meanwhile.</li>
 </ol>
 </li>
-<li class="cooking-task-source"><p data-en="Confirm the air fryer has reached 400°F; load both prepared 🐟 fish together in the next step.">确认空气炸锅达到400°F；下一步一起放入备好的🐟 三文鱼和黑线鳕。</p></li>
+<li class="cooking-task-source"><p data-en="Confirm the air fryer has reached 400°F; choose a ready fish batch to cook.">确认空气炸锅达到400°F，选择已备好的鱼类批次开始。</p></li>
 <li class="cooking-task-source">
 <ol lang="zh-CN" class="cooking-source-zh">
 <li>将备好的🐟 三文鱼158 g和黑线鳕250 g一起单层放入预热至400°F的空气炸锅，留出空隙、不叠放。</li>
@@ -241,6 +241,14 @@ cooking: true
 <li>After 10 minutes, check the thickest part of both 🐟 fish. Remove together once both reach 70°C; continue cooking and recheck if needed.</li>
 <li>Place the whole salmon fillet in meal 3 and all the haddock in meal 2.</li>
 </ol>
+</li>
+<li class="cooking-task-source">
+<ol lang="zh-CN" class="cooking-source-zh"><li>空气炸锅空出且达到400°F后，放入冷冻🐟 High Liner Signature Cuts Crispy Breaded黑线鳕1块，不解冻、不另加油。</li><li>这块裹粉鱼单独一批，设14–16分钟，启动后勾选；剩余鱼柳继续冷冻。</li></ol>
+<ol lang="en" class="cooking-source-en" hidden><li>When the air fryer is free and at 400°F, add 1 frozen 🐟 High Liner Signature Cuts Crispy Breaded haddock fillet without thawing or extra oil.</li><li>Cook this breaded fillet as a separate batch for 14–16 minutes. Check after starting; keep the remaining fillets frozen.</li></ol>
+</li>
+<li class="cooking-task-source">
+<ol lang="zh-CN" class="cooking-source-zh"><li>按包装要求确认🐟 裹粉黑线鳕熟透后取出，留给第1盘三明治。</li></ol>
+<ol lang="en" class="cooking-source-en" hidden><li>Check that the 🐟 crispy breaded haddock is cooked through according to the package, then remove and reserve for the sandwich in meal 1.</li></ol>
 </li>
 </ol>
 
@@ -498,10 +506,10 @@ cooking: true
 </li>
 <li class="cooking-task-source">
 <ol lang="zh-CN" class="cooking-source-zh">
-<li>直接在面包上分层加入第1盘的🍗 鸡腿肉、切片🥚 水煮蛋、🍅 番茄和菠菜，在盘内叠好。</li>
+<li>直接在面包上分层加入🐟 裹粉黑线鳕1块、切片🥚 水煮蛋、🍅 番茄和菠菜，在盘内叠好。</li>
 </ol>
 <ol lang="en" class="cooking-source-en" hidden>
-<li>Layer meal 1’s 🍗 chicken, sliced 🥚 boiled eggs, 🍅 tomato and spinach directly onto the bread, then stack the sandwich on the plate.</li>
+<li>Layer 1 🐟 crispy breaded haddock fillet, sliced 🥚 boiled eggs, 🍅 tomato and spinach directly onto the bread, then stack the sandwich on the plate.</li>
 </ol>
 </li>
 <li class="cooking-task-source"><p data-en="Check that all seven meals are portioned, then put the meal containers in the 🧊 refrigerator.">确认七餐均已分好，将餐盒放入🧊 冰箱。</p></li>
