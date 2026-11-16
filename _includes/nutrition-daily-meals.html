@@ -11,7 +11,15 @@
 {% else %}<strong data-en="Wed–Sat">周三—周六</strong>{% endif %}
 <span class="nutrition-routine-calories">{{ daily_meal.kcal }} kcal</span>
 </div>
+{% if daily_meal.foodItems %}
+<ul class="nutrition-routine-foods">
+{% for food in daily_meal.foodItems %}
+<li><span class="nutrition-routine-emoji" aria-hidden="true">{{ food.emoji }}</span><span data-en="{{ food.en | escape }}">{{ food.zh }}</span></li>
+{% endfor %}
+</ul>
+{% else %}
 <p data-en="{{ daily_meal.foodEn | escape }}">{{ daily_meal.foodZh }}</p>
+{% endif %}
 <dl class="nutrition-routine-macros">
 <div><dt data-en="Protein">蛋白质</dt><dd>{{ daily_meal.protein }} g</dd></div>
 <div><dt data-en="Carbs">碳水</dt><dd>{{ daily_meal.carbs }} g</dd></div>

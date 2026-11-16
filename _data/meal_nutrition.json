@@ -32,7 +32,49 @@
       "vitaminD": "27.160",
       "vitaminB12": "1.080",
       "iodine": "4.022",
-      "epaDha": "0.90"
+      "epaDha": "0.90",
+      "foodItems": [
+        {
+          "emoji": "🥣",
+          "zh": "高纤维谷物早餐 29 g",
+          "en": "High-fibre cereal 29 g"
+        },
+        {
+          "emoji": "🌱",
+          "zh": "磨碎亚麻籽 5 g",
+          "en": "Ground flaxseed 5 g"
+        },
+        {
+          "emoji": "🥛",
+          "zh": "无糖豆奶 270 g",
+          "en": "Unsweetened soy milk 270 g"
+        },
+        {
+          "emoji": "🥄",
+          "zh": "一水肌酸 5 g",
+          "en": "Creatine monohydrate 5 g"
+        },
+        {
+          "emoji": "🐟",
+          "zh": "Webber Naturals Omega-3 鱼油 1粒",
+          "en": "1 Webber Naturals Omega-3 softgel"
+        },
+        {
+          "emoji": "💊",
+          "zh": "甘氨酸镁 200 mg",
+          "en": "Magnesium bisglycinate 200 mg"
+        },
+        {
+          "emoji": "☀️",
+          "zh": "Jamieson 维生素D3 1片（1,000 IU）",
+          "en": "1 Jamieson vitamin D3 tablet (1,000 IU)"
+        },
+        {
+          "emoji": "🍓",
+          "zh": "Metro 混合水果盘 156 g",
+          "en": "Metro mixed fruit 156 g"
+        }
+      ]
     },
     "potato": {
       "kcal": "702",
@@ -186,7 +228,19 @@
       "potassium": "918.711",
       "vitaminD": "2.160",
       "vitaminB12": "1.080",
-      "iodine": "4.489"
+      "iodine": "4.489",
+      "foodItems": [
+        {
+          "emoji": "🥛",
+          "zh": "无糖豆奶 270 g",
+          "en": "Unsweetened soy milk 270 g"
+        },
+        {
+          "emoji": "🍓",
+          "zh": "Metro 混合水果盘 311 g",
+          "en": "Metro mixed fruit 311 g"
+        }
+      ]
     },
     "late_fruit_breakfast": {
       "label": "周三—周六早餐（奇异果1个）",
@@ -207,7 +261,49 @@
       "vitaminD": "27.160",
       "vitaminB12": "1.080",
       "iodine": "3.800",
-      "epaDha": "0.90"
+      "epaDha": "0.90",
+      "foodItems": [
+        {
+          "emoji": "🥣",
+          "zh": "高纤维谷物早餐 29 g",
+          "en": "High-fibre cereal 29 g"
+        },
+        {
+          "emoji": "🌱",
+          "zh": "磨碎亚麻籽 5 g",
+          "en": "Ground flaxseed 5 g"
+        },
+        {
+          "emoji": "🥛",
+          "zh": "无糖豆奶 270 g",
+          "en": "Unsweetened soy milk 270 g"
+        },
+        {
+          "emoji": "🥄",
+          "zh": "一水肌酸 5 g",
+          "en": "Creatine monohydrate 5 g"
+        },
+        {
+          "emoji": "🐟",
+          "zh": "Webber Naturals Omega-3 鱼油 1粒",
+          "en": "1 Webber Naturals Omega-3 softgel"
+        },
+        {
+          "emoji": "💊",
+          "zh": "甘氨酸镁 200 mg",
+          "en": "Magnesium bisglycinate 200 mg"
+        },
+        {
+          "emoji": "☀️",
+          "zh": "Jamieson 维生素D3 1片（1,000 IU）",
+          "en": "1 Jamieson vitamin D3 tablet (1,000 IU)"
+        },
+        {
+          "emoji": "🥝",
+          "zh": "SunGold 奇异果 1个",
+          "en": "1 SunGold kiwi"
+        }
+      ]
     },
     "late_fruit_snack": {
       "label": "周三—周六睡前加餐（奇异果1个）",
@@ -228,7 +324,19 @@
       "potassium": "635.134",
       "vitaminD": "2.160",
       "vitaminB12": "1.080",
-      "iodine": "3.800"
+      "iodine": "3.800",
+      "foodItems": [
+        {
+          "emoji": "🥛",
+          "zh": "无糖豆奶 270 g",
+          "en": "Unsweetened soy milk 270 g"
+        },
+        {
+          "emoji": "🥝",
+          "zh": "SunGold 奇异果 1个",
+          "en": "1 SunGold kiwi"
+        }
+      ]
     }
   }
 }
