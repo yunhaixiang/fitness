@@ -14,18 +14,17 @@ nutrition: true
   <div class="nutrition-overview-main">
     <div class="nutrition-ring" style="--intake-share:83.7%" aria-label="每日摄入与消耗">
       <div class="nutrition-ring-center">
-        <span>日均赤字或盈余</span>
+        <span data-energy-label="dailyDeficit">日均能量差</span>
         <strong data-energy="dailyDeficit">— <small>kcal／天</small></strong>
       </div>
     </div>
     <div class="nutrition-overview-key">
       <p class="nutrition-overview-eyebrow">能量概览 · 不含放纵餐</p>
-      <p class="energy-sign-legend" data-en="− Deficit · + Surplus · 0 Balanced">− 赤字 · + 盈余 · 0 收支平衡</p>
       <div class="nutrition-key-row nutrition-key-intake"><span>日均摄入</span><strong>1,893 <small>kcal／天</small></strong></div>
       <div class="nutrition-key-row nutrition-key-burn"><span>日均消耗</span><strong data-energy="dailyBurn">— <small>kcal／天</small></strong></div>
-      <div class="nutrition-key-row nutrition-key-deficit"><span>日均赤字或盈余</span><strong data-energy="dailyDeficit">— <small>kcal／天</small></strong></div>
-      <div class="nutrition-key-row"><span>每周赤字或盈余</span><strong data-energy="weeklyDeficit">— <small>kcal</small></strong></div>
-      <div class="nutrition-key-row"><span>每周能量差等价脂肪</span><strong data-energy="fatEquivalent">— <small>kg／周</small></strong></div>
+      <div class="nutrition-key-row nutrition-key-deficit"><span data-energy-label="dailyDeficit">日均能量差</span><strong data-energy="dailyDeficit">— <small>kcal／天</small></strong></div>
+      <div class="nutrition-key-row"><span data-energy-label="weeklyDeficit">每周能量差</span><strong data-energy="weeklyDeficit">— <small>kcal</small></strong></div>
+      <div class="nutrition-key-row"><span data-energy-label="fatEquivalent">每周能量差等价脂肪</span><strong data-energy="fatEquivalent">— <small>kg／周</small></strong></div>
     </div>
   </div>
 </figure>
@@ -152,7 +151,7 @@ nutrition: true
 </tr>
 <tr data-nutrient="sodium">
 <td>钠</td>
-<td style="text-align: right;">2,214 mg</td>
+<td style="text-align: right;">2,256 mg</td>
 <td>—</td>
 </tr>
 <tr data-nutrient="calcium">
@@ -182,7 +181,7 @@ nutrition: true
 </tr>
 <tr data-nutrient="iodine">
 <td>碘</td>
-<td>123 µg</td>
+<td>131 µg</td>
 <td>—</td>
 </tr>
 <tr data-nutrient="ala">

@@ -52,9 +52,10 @@
   }).format(value);
   const formatBalance = (deficit, digits = 0) => {
     const result = balance(deficit, digits);
-    return result.value == null ? '—' : new Intl.NumberFormat(en ? 'en-CA' : 'zh-CN', {minimumFractionDigits:digits,maximumFractionDigits:digits,signDisplay:'exceptZero'}).format(result.value);
+    return result.value == null ? '—' : new Intl.NumberFormat(en ? 'en-CA' : 'zh-CN', {minimumFractionDigits:digits,maximumFractionDigits:digits}).format(Math.abs(result.value));
   };
-  window.fitnessEnergyDisplay = {balance, formatBalance};
+  const stateLabel = state => ({deficit:tr('赤字','Deficit'),surplus:tr('盈余','Surplus'),balanced:tr('收支平衡','Balanced'),unavailable:tr('能量差','Energy Balance')})[state];
+  window.fitnessEnergyDisplay = {balance, formatBalance, stateLabel};
   const budgetNode = document.getElementById('cardio-energy-baseline');
   if (budgetNode) {
     const baseline = JSON.parse(budgetNode.textContent);
@@ -79,6 +80,13 @@
       }
       node.replaceChildren(document.createTextNode((isBalance ? formatBalance(budget[key], digits) : format(budget[key], digits)) + ' '));
       if (unit) node.append(unit);
+    }
+    for (const node of document.querySelectorAll('[data-energy-label]')) {
+      const key = node.dataset.energyLabel;
+      const state = balance(budget[key], key === 'fatEquivalent' ? 2 : 0).state;
+      const period = key === 'dailyDeficit' ? tr('日均','Daily ') : tr('每周','Weekly ');
+      node.textContent = period + stateLabel(state) + (key === 'fatEquivalent' ? tr('等价脂肪',' Fat Equivalent') : '');
+      node.dataset.energyBalance = state;
     }
     const ring = document.querySelector('.nutrition-ring');
     if (ring) {

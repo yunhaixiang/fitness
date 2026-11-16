@@ -252,20 +252,26 @@
         const metric = make('div', 'diet-treat-metric');
         const output = make('strong', 'energy-balance-range');
         const display = window.fitnessEnergyDisplay;
+        let heading = label(zh, english);
         if (!display || !Number.isFinite(lowValue) || !Number.isFinite(highValue)) output.textContent = '—';
         else {
-          const start = make('span','',display.formatBalance(highValue));
-          start.dataset.energyBalance = display.balance(highValue).state;
-          output.append(start);
-          if (lowValue !== highValue) {
-            output.append(make('span','',label(' 至 ',' to ')));
-            const end = make('span','',display.formatBalance(lowValue));
-            end.dataset.energyBalance = display.balance(lowValue).state;
-            output.append(end);
+          const lowState = display.balance(lowValue).state;
+          const highState = display.balance(highValue).state;
+          const sameState = lowState === highState;
+          if (sameState) heading = heading.replace(label('赤字或盈余','deficit or surplus'), display.stateLabel(lowState));
+          const endpoints = sameState ? [lowValue,highValue].sort((a,b)=>Math.abs(a)-Math.abs(b)) : [highValue,lowValue];
+          for (const [index,value] of endpoints.entries()) {
+            if (index && lowValue === highValue) break;
+            if (index) output.append(make('span','',label(' 至 ',' to ')));
+            const state = display.balance(value).state;
+            const text = (sameState ? '' : display.stateLabel(state) + ' ') + display.formatBalance(value);
+            const endpoint = make('span','',text);
+            endpoint.dataset.energyBalance = state;
+            output.append(endpoint);
           }
           output.append(make('span','',suffix));
         }
-        metric.append(make('span', '', label(zh, english)), output);
+        metric.append(make('span', '', heading), output);
         remaining.append(metric);
       }
       card.append(remaining);

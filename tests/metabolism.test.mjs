@@ -64,11 +64,12 @@ test('browser updates every breakdown row and deficit before charts render',asyn
  const values={'cardio-plan-catalog':catalog,'cardio-energy-baseline':baseline,'walking-energy':walking,'metabolic-energy':m};
  const rows=Object.fromEntries(['resting','activity','strength','cardio','walking','total'].map(key=>[key,{cells:[{},{},{}]}]));
  const summary={dataset:{energy:'dailyDeficit'},querySelector(){return null;},replaceChildren(value){this.value=value;}};
+ const heading={dataset:{energyLabel:'dailyDeficit'}};
  const window={fitnessI18n:{language:'en'}};
  const document={
   getElementById(id){return values[id]?{textContent:JSON.stringify(values[id])}:null;},
   querySelector(selector){return rows[selector.match(/data-energy-row="(\w+)"/)?.[1]]||null;},
-  querySelectorAll(selector){return selector==='[data-energy]'?[summary]:[];},
+  querySelectorAll(selector){return selector==='[data-energy]'?[summary]:selector==='[data-energy-label]'?[heading]:[];},
   createTextNode(value){return value;}
  };
  runInNewContext(readFileSync('assets/cardio-plans.js','utf8'),{window,document,Intl});
@@ -76,13 +77,16 @@ test('browser updates every breakdown row and deficit before charts render',asyn
  for(const [row,key] of [['resting','weeklyResting'],['activity','weeklyActivity'],['strength','weeklyStrength'],['cardio','weeklyCardio'],['total','weeklyBurn']]) {
   assert.equal(rows[row].cells[1].textContent,new Intl.NumberFormat('en-CA',{minimumFractionDigits:2,maximumFractionDigits:2}).format(expected[key]));
  }
- assert.equal(summary.value,new Intl.NumberFormat('en-CA',{maximumFractionDigits:0,signDisplay:'exceptZero'}).format(-expected.dailyDeficit)+' ');
+ assert.equal(summary.value,new Intl.NumberFormat('en-CA',{maximumFractionDigits:0}).format(Math.abs(expected.dailyDeficit))+' ');
  assert.equal(summary.dataset.energyBalance,'deficit');
+ assert.equal(heading.textContent,'Daily Deficit');
  assert.equal(window.fitnessCardioPlan.netKcal,200);
  values['cardio-energy-baseline']={...baseline,intake_daily:5000};
  runInNewContext(readFileSync('assets/cardio-plans.js','utf8'),{window,document,Intl});
  assert.equal(summary.dataset.energyBalance,'surplus');
- assert.match(summary.value,/^\+/);
+ assert.equal(heading.textContent,'Daily Surplus');
+ assert.match(summary.value,/^[0-9]/);
+ assert.doesNotMatch(summary.value,/[+−-]/);
  assert.ok(readFileSync('_layouts/default.html','utf8').includes('id="metabolic-energy">{}</script>'));
  for(const file of ['stats.md','plans/plan-2/stats.md']) for(const type of ['resting','activity','strength']) assert.ok(readFileSync(file,'utf8').includes(`data-energy-row="${type}"`));
 });

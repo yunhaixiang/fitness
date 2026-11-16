@@ -391,7 +391,8 @@ html[data-theme=light] .theme-icon-moon{display:block}
 .nutrition-key-row span{font-size:13px;color:var(--muted)}
 .nutrition-key-row strong{font:700 20px/1.3 ui-monospace,SFMono-Regular,Menlo,monospace;white-space:nowrap}
 .nutrition-key-row small{font-size:11px;font-weight:500;color:var(--muted)}
-.nutrition-key-intake strong{color:var(--accent)}
+.nutrition-key-intake strong,.nutrition-key-intake > span{color:var(--accent)}
+.nutrition-key-burn strong,.nutrition-key-burn > span,[data-energy="dailyBurn"]{color:var(--gold)}
 .nutrition-key-deficit strong{color:var(--gold)}
 @media(max-width:760px){.nutrition-overview-main{grid-template-columns:1fr;gap:20px}}
 @media(max-width:420px){.nutrition-overview{padding:17px}.nutrition-key-row strong{font-size:17px}}
@@ -829,10 +830,9 @@ html[lang="en"] .nutrient-tier-line{grid-template-columns:72px minmax(0,1fr)}
 
 .trend-movement{color:var(--accent);font-size:13px;font-weight:600;font-variant-numeric:tabular-nums}
 
-[data-energy-balance="deficit"]{color:var(--green)!important}
-[data-energy-balance="surplus"]{color:var(--peach)!important}
+[data-energy-balance="deficit"]{color:var(--gold)!important}
+[data-energy-balance="surplus"]{color:var(--accent)!important}
 [data-energy-balance="balanced"],[data-energy-balance="unavailable"]{color:var(--muted)!important}
-.energy-sign-legend{font-size:12px;color:var(--muted);margin:0 0 12px}
 .energy-balance-range{font-variant-numeric:tabular-nums}
 .today-food-list{list-style:none;padding:0;margin:10px 0 0;display:grid;gap:7px}
 .today-food-list li{display:flex;align-items:baseline;gap:8px;font-size:13px;line-height:1.55;min-width:0}

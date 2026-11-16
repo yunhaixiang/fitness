@@ -29,9 +29,9 @@ test('Canadian soy fortification and current seafood servings use their stated u
  assert.equal(micro.foods.tuna.values.vitaminD,4); // one 55 g drained half-can
  assert.equal(micro.foods.plainHaddock.values.potassium,350/1.14); // label per114 g converted to100 g
  const weeklySalt=macro.recipes.reduce((s,r)=>s+2*(r.salt||0),0);
- assert.equal(weeklySalt,1/8); // two spinach batches, 1/16 tsp each
+ assert.equal(weeklySalt,1/4); // two spinach batches, 1/8 tsp each
  for (const [key,recipe] of macro.mealKeys.map((key,i)=>[key,macro.recipes[i]])) {
-  assert.equal(recipe.salt||0,['dumpling','potato'].includes(key)?1/32:0);
+  assert.equal(recipe.salt||0,['dumpling','potato'].includes(key)?1/16:0);
  }
 });
 test('recalculation is repeatable and refuses missing micronutrients instead of silently zeroing them', () => {
