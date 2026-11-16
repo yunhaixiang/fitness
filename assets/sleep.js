@@ -32,7 +32,7 @@
     const row = node('li');
     const details = node('div');
     details.append(node('strong', label(event.title)), node('p', label(event.description)));
-    row.append(node('span', event.time, 'sleep-time'), details);
+    row.append(node('span', en ? (event.timeEn || event.time) : event.time, 'sleep-time'), details);
     timeline.append(row);
   }
 })();
