@@ -201,14 +201,14 @@ cooking: true
 </li>
 <li class="cooking-task-source">
 <ol lang="zh-CN" class="cooking-source-zh">
-<li>🐟 原味黑线鳕每次用½袋（250 g）。先拆除内层真空包装，在冷藏中解冻，再擦干表面、检查小刺。</li>
+<li>🐟 罗非鱼每次用1整块，按约175 g计算；擦干表面、检查小刺。</li>
 <li>两面薄抹🫒 橄榄油½茶匙，再撒🧄 蒜粉¼茶匙、🌶️ paprika¼茶匙和🧂 黑胡椒⅛茶匙，不另加盐。</li>
-<li>只解冻本次要用的半袋，剩余半袋继续冷冻保存，留到后半周。</li>
+<li>每周买1盒2块；前半周取用1块后，将另1块分装冷冻，留到后半周。</li>
 </ol>
 <ol lang="en" class="cooking-source-en" hidden>
-<li>Use half a bag of 🐟 plain haddock (250 g). Remove the inner vacuum packaging before thawing in the refrigerator, then pat dry and check for small bones.</li>
+<li>Use 1 whole 🐟 tilapia fillet, planned at about 175 g; pat dry and check for small bones.</li>
 <li>Coat both sides with ½ tsp 🫒 olive oil, then season with ¼ tsp 🧄 garlic powder, ¼ tsp 🌶️ paprika and ⅛ tsp 🧂 black pepper, without extra salt.</li>
-<li>Thaw only the half-bag needed for this session; keep the rest frozen for the second session.</li>
+<li>Buy 1 tray of 2 fillets weekly. After taking the first fillet, freeze the other for the second session.</li>
 </ol>
 </li>
 <li class="cooking-task-source">
@@ -224,22 +224,22 @@ cooking: true
 <li class="cooking-task-source"><p data-en="Confirm the air fryer has reached 400°F; choose a ready fish batch to cook.">确认空气炸锅达到400°F，选择已备好的鱼类批次开始。</p></li>
 <li class="cooking-task-source">
 <ol lang="zh-CN" class="cooking-source-zh">
-<li>将备好的🐟 三文鱼158 g和黑线鳕250 g一起单层放入预热至400°F的空气炸锅，留出空隙、不叠放。</li>
-<li>统一设为10分钟，启动后勾选；等待期间可做其他任务。</li>
+<li>将备好的🐟 三文鱼158 g和罗非鱼1块一起单层放入预热至400°F的空气炸锅，留出空隙、不叠放。</li>
+<li>先设8分钟作为首次检查，启动后勾选；等待期间可做其他任务。</li>
 </ol>
 <ol lang="en" class="cooking-source-en" hidden>
-<li>Place the prepared 🐟 salmon (158 g) and haddock (250 g) together in the air fryer preheated to 400°F, in a single layer with space between pieces.</li>
-<li>Set one 10-minute cycle and check this step after starting; work on other tasks meanwhile.</li>
+<li>Place the prepared 🐟 salmon (158 g) and 1 tilapia fillet together in the air fryer preheated to 400°F, in a single layer with space between pieces.</li>
+<li>Set 8 minutes for the first check and check this step after starting; work on other tasks meanwhile.</li>
 </ol>
 </li>
 <li class="cooking-task-source">
 <ol lang="zh-CN" class="cooking-source-zh">
-<li>10分钟后检查两种🐟 鱼的最厚处，均达到70°C后一起取出；若未达到，继续加热后复查。</li>
-<li>三文鱼整块放第3盘，黑线鳕全部放第2盘。</li>
+<li>8分钟后检查两种🐟 鱼的最厚处；哪块达到70°C就先取出，未达到的每次加1–2分钟后复查。两种鱼都取出后勾选。</li>
+<li>三文鱼整块放第3盘，罗非鱼整块放第2盘。</li>
 </ol>
 <ol lang="en" class="cooking-source-en" hidden>
-<li>After 10 minutes, check the thickest part of both 🐟 fish. Remove together once both reach 70°C; continue cooking and recheck if needed.</li>
-<li>Place the whole salmon fillet in meal 3 and all the haddock in meal 2.</li>
+<li>After 8 minutes, check the thickest part of both 🐟 fish. Remove each fillet when it reaches 70°C; give any unfinished fish another 1–2 minutes and recheck. Check off once both are removed.</li>
+<li>Place the whole salmon fillet in meal 3 and the whole tilapia fillet in meal 2.</li>
 </ol>
 </li>
 <li class="cooking-task-source">

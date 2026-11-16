@@ -11,7 +11,7 @@ visual: true
 
 <figure class="nutrition-overview" aria-label="每日能量与每周赤字">
   <div class="nutrition-overview-main">
-    <div class="nutrition-ring" style="--intake-share:83.1%" aria-label="每日摄入与消耗">
+    <div class="nutrition-ring" style="--intake-share:82.7%" aria-label="每日摄入与消耗">
       <div class="nutrition-ring-center">
         <span>日均赤字</span>
         <strong data-energy="dailyDeficit">— <small>kcal／天</small></strong>
@@ -19,7 +19,7 @@ visual: true
     </div>
     <div class="nutrition-overview-key">
       <p class="nutrition-overview-eyebrow">能量概览 · 不含放纵餐</p>
-      <div class="nutrition-key-row nutrition-key-intake"><span>日均摄入</span><strong>1,880 <small>kcal／天</small></strong></div>
+      <div class="nutrition-key-row nutrition-key-intake"><span>日均摄入</span><strong>1,872 <small>kcal／天</small></strong></div>
       <div class="nutrition-key-row nutrition-key-burn"><span>日均消耗</span><strong data-energy="dailyBurn">— <small>kcal／天</small></strong></div>
       <div class="nutrition-key-row nutrition-key-deficit"><span>日均赤字</span><strong data-energy="dailyDeficit">— <small>kcal／天</small></strong></div>
       <div class="nutrition-key-row"><span>每周赤字</span><strong data-energy="weeklyDeficit">— <small>kcal</small></strong></div>
@@ -99,27 +99,27 @@ visual: true
 <tbody>
 <tr>
 <td>热量</td>
-<td style="text-align: right;">1,880 kcal</td>
+<td style="text-align: right;">1,872 kcal</td>
 <td>1,800–2,000 kcal</td>
 </tr>
 <tr data-macro="protein">
 <td>蛋白质</td>
-<td style="text-align: right;">135.3 g</td>
+<td style="text-align: right;">132.2 g</td>
 <td>120–140 g</td>
 </tr>
 <tr data-macro="fat">
 <td>总脂肪</td>
-<td style="text-align: right;">67.3 g</td>
+<td style="text-align: right;">68.2 g</td>
 <td>45–65 g</td>
 </tr>
 <tr>
 <td>饱和脂肪</td>
-<td style="text-align: right;">15.0 g</td>
+<td style="text-align: right;">15.3 g</td>
 <td>≤12.5 g</td>
 </tr>
 <tr>
 <td>饱和脂肪占总热量</td>
-<td style="text-align: right;">7.2%</td>
+<td style="text-align: right;">7.4%</td>
 <td>≤6%</td>
 </tr>
 <tr data-macro="carbs">
@@ -144,42 +144,42 @@ visual: true
 </tr>
 <tr>
 <td>膳食胆固醇</td>
-<td style="text-align: right;">662 mg</td>
+<td style="text-align: right;">656 mg</td>
 <td>尽量少；优先控制饱和脂肪</td>
 </tr>
 <tr>
 <td>钠</td>
-<td style="text-align: right;">2,429 mg</td>
+<td style="text-align: right;">2,395 mg</td>
 <td>≤2,300 mg</td>
 </tr>
 <tr>
 <td>钙</td>
-<td>1,159 mg</td>
+<td>1,157 mg</td>
 <td>1,000 mg</td>
 </tr>
 <tr>
 <td>铁</td>
-<td>19.2 mg</td>
+<td>19.5 mg</td>
 <td>8 mg</td>
 </tr>
 <tr>
 <td>钾</td>
-<td>4,696 mg</td>
+<td>4,627 mg</td>
 <td>≥3,400 mg</td>
 </tr>
 <tr>
 <td>维生素D</td>
-<td>37.8 µg</td>
+<td>39.0 µg</td>
 <td>15 µg</td>
 </tr>
 <tr>
 <td>维生素B12</td>
-<td>8.8 µg</td>
+<td>8.3 µg</td>
 <td>2.4 µg</td>
 </tr>
 <tr>
 <td>碘</td>
-<td>276 µg</td>
+<td>114 µg</td>
 <td>150 µg</td>
 </tr>
 <tr>
@@ -189,7 +189,7 @@ visual: true
 </tr>
 <tr>
 <td>Omega-3：EPA，DHA（合计）</td>
-<td style="text-align: right;">1.9 g</td>
+<td style="text-align: right;">1.8 g</td>
 <td>250 mg</td>
 </tr>
 </tbody>

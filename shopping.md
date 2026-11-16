@@ -209,7 +209,7 @@ visual: true
 <td data-en="1 Bottle / 120 Days · 1 Softgel with Breakfast Daily">1瓶 / 120天；每天早餐1粒</td>
 <td><a href="https://www.amazon.ca/dp/B00L3WS0Y2" >$30.39</a></td>
 </tr>
-<tr data-price-id="32" data-weekly-cost="9.98" data-purchase-group="weekly"><td data-en="Plain Haddock">原味黑线鳕</td><td><a href="https://www.walmart.ca/en/ip/Great-Value-Wild-Caught-Haddock-Portions-500-g/58GIEH44XUOY">Great Value Wild Caught Haddock Portions</a><br><span data-en="500 g / Bag">500 g / 袋</span></td><td data-en="1 Bag / Week">1袋 / 周</td><td><a href="https://www.walmart.ca/en/ip/Great-Value-Wild-Caught-Haddock-Portions-500-g/58GIEH44XUOY">$9.98</a></td></tr>
+<tr data-price-id="32" data-weekly-cost="9.80" data-purchase-group="weekly"><td data-en="Tilapia">罗非鱼</td><td><a href="https://www.walmart.ca/en/ip/Your-Fresh-Market-Tilapia-Fillets-2-pieces-0-30-0-40-KG/6000203880047">Your Fresh Market Tilapia Fillets</a><br><span data-en="2 Fillets · 300–400 g / Tray">2块 · 300–400 g / 盒</span></td><td data-en="1 Tray / Week">1盒 / 周</td><td><a href="https://www.walmart.ca/en/ip/Your-Fresh-Market-Tilapia-Fillets-2-pieces-0-30-0-40-KG/6000203880047">$2.80 / 100 g</a></td></tr>
 <tr data-price-id="34" data-weekly-cost="10.98" data-purchase-group="weekly"><td data-en="Raw Shrimp">生虾仁</td><td><a href="https://www.walmart.ca/en/ip/Great-Value-Wild-Argentinian-Large-Raw-Shrimp/6000202999819">Great Value Wild Argentinian Large Raw Shrimp</a><br><span data-en="340 g">340 g</span></td><td data-en="1 Bag / Week">1袋 / 周</td><td><a href="https://www.walmart.ca/en/ip/Great-Value-Wild-Argentinian-Large-Raw-Shrimp/6000202999819">$10.98</a></td></tr>
 <tr data-price-id="35" data-weekly-cost="4.41" data-purchase-group="restock"><td data-en="Chicken and Vegetable Dumplings">鸡肉蔬菜水饺</td><td><a href="https://www.walmart.ca/en/ip/Great-Value-Frozen-Chicken-Vegetable-Potstickers/6O52P9Y77G03">Great Value Frozen Chicken &amp; Vegetable Potstickers</a><br><span data-en="1.13 kg">1.13 kg</span></td><td data-en="Restock as Needed">按需补充</td><td><a href="https://www.walmart.ca/en/ip/Great-Value-Frozen-Chicken-Vegetable-Potstickers/6O52P9Y77G03">$9.98</a></td></tr>
 <tr data-price-id="36" data-weekly-cost="0.83" data-purchase-group="restock"><td data-en="Whole-Wheat Bread">全麦面包</td><td><a href="https://www.walmart.ca/en/ip/Dempster-s-100-Whole-Wheat-Bread-675-g/6000191268657">Dempster’s 100% Whole Wheat Bread</a><br><span data-en="675 g">675 g</span></td><td data-en="6 Slices / Week; Freeze the Rest">每周6片；剩余冷冻</td><td><a href="https://www.walmart.ca/en/ip/Dempster-s-100-Whole-Wheat-Bread-675-g/6000191268657">$2.68</a></td></tr>
@@ -225,7 +225,7 @@ visual: true
 <td>每周合计</td>
 <td>—</td>
 <td style="text-align: right;">—</td>
-<td style="text-align: right;">$159.58</td>
+<td style="text-align: right;">$159.40</td>
 </tr>
 </tbody>
 </table>
