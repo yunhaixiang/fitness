@@ -63,8 +63,8 @@
   const DAYS = 56;
   const types = {
     body: { name: '身体组成', fields: [
-      ['date', '日期'], ['weight', '体重 kg'], ['bf', '体脂率 %']
-    ], chart: [['weight', '体重 kg'], ['bf', '体脂率 %']] },
+      ['date', '日期'], ['weight', '体重 kg'], ['bf', '体脂率 %'], ['fatFreeMass', '去脂体重 kg'], ['fatMass', '脂肪重量 kg'], ['ffmi', 'FFMI kg/m²']
+    ], chart: [['weight', '体重 kg'], ['bf', '体脂率 %'], ['fatFreeMass', '去脂体重 kg'], ['fatMass', '脂肪重量 kg'], ['ffmi', 'FFMI kg/m²']] },
     steps: { name: '步数', fields: [['date', '日期'], ['steps', '步数']], chart: [['steps', '步数']] },
     cheatMeals: { name: '放纵餐', fields: [
       ['date', '日期'], ['meal', '放纵餐'], ['portion', '份量'], ['kcal', '热量 kcal'], ['note', '备注']
@@ -75,6 +75,7 @@
   let records = blank();
   let legacyRecords = {};
   let publishedCurrent = {};
+  let heightCm = null;
   // Keep removed categories available in backups, without displaying or rewriting them.
   const storedRecords = () => ({ ...legacyRecords, ...records, currentBody: publishedCurrent });
   let active = 'body';
@@ -87,12 +88,16 @@
   try {
     const published = JSON.parse(document.getElementById('tracking-records')?.textContent || '{}');
     publishedCurrent = published.currentBody || {};
+    heightCm = published.profile?.heightCm;
     for (const name of names) {
       const canonical = Array.isArray(published[name]) ? published[name] : [];
       const ids = new Set(canonical.map((row) => row.id).filter(Boolean));
       records[name] = [...canonical, ...records[name].filter((row) => !ids.has(row.id))];
     }
   } catch (_) { /* Health records stay empty unless supplied by the private server. */ }
+  const derive = row => ({...row, ...window.fitnessBodyComposition(row, heightCm)});
+  records.body = records.body.map(derive);
+  publishedCurrent = derive(publishedCurrent);
   const latest = (name) => [...records[name]].sort((a, b) => b.date.localeCompare(a.date))[0];
   const recent = (name) => records[name].filter((row) => row.date >= cutoff()).sort((a, b) => b.date.localeCompare(a.date));
   const metric = (label, value) => { const box = document.createElement('div'); box.className = 'metric-box'; const s = document.createElement('span'); s.textContent = label; const strong = document.createElement('strong'); strong.textContent = value || '—'; box.append(s, strong); return box; };
@@ -100,6 +105,9 @@
     const host = document.querySelector('#latest-metrics'); host.replaceChildren();
     const body = window.fitnessBodyMetrics || latest('body');
     host.append(metric('当前体重', body?.weight ? `${body.weight} kg` : '—'), metric('当前体脂率', body?.bf ? `${body.bf}%` : '—'));
+    const paired = publishedCurrent.fatFreeMass != null ? publishedCurrent : [...records.body].sort((a,b) => b.date.localeCompare(a.date)).find(row => row.fatFreeMass != null);
+    for (const [key,label,unit] of [['fatFreeMass','去脂体重','kg'],['fatMass','脂肪重量','kg'],['ffmi','FFMI','kg/m²']])
+      host.append(metric(label, paired?.[key] != null ? `${paired[key].toFixed(2)} ${unit}` : '—'));
     if (!body?.weight && !body?.bf && names.every((name) => records[name].length === 0)) host.setAttribute('aria-label', '还没有记录');
     else host.removeAttribute('aria-label');
   }
@@ -141,7 +149,7 @@
       for (const [key, label] of types[name].fields.slice(1)) {
         if (row[key] === '' || row[key] == null) continue;
         const term = document.createElement('dt'); term.textContent = label;
-        const value = document.createElement('dd'); value.textContent = row[key];
+        const value = document.createElement('dd'); value.textContent = ['fatFreeMass','fatMass','ffmi'].includes(key) ? Number(row[key]).toFixed(2) : row[key];
         fields.append(term, value);
       }
       card.append(fields); return card;
@@ -179,9 +187,10 @@
     const en = window.fitnessI18n?.language === 'en';
     const t = (zh, english) => en ? english : zh;
     const trend = buildTrend(records[name], key, today(), DAYS);
-    const unit = key === 'weight' ? ' kg' : key === 'bf' ? '%' : t(' 步', ' steps');
+    const unit = ['weight','fatFreeMass','fatMass'].includes(key) ? ' kg' : key === 'ffmi' ? ' kg/m²' : key === 'bf' ? '%' : t(' 步', ' steps');
     const format = value => value == null ? '—' : new Intl.NumberFormat(en ? 'en-CA' : 'zh-CN', {maximumFractionDigits: key === 'steps' ? 0 : 2}).format(value);
-    const label = key === 'weight' ? t('体重', 'Weight') : key === 'bf' ? t('体脂率', 'Body Fat') : t('步数', 'Steps');
+    const labels = {weight:['体重','Weight'],bf:['体脂率','Body Fat'],fatFreeMass:['去脂体重','Fat-Free Mass'],fatMass:['脂肪重量','Fat Mass'],ffmi:['FFMI','FFMI'],steps:['步数','Steps']};
+    const label = t(...labels[key]);
     host.replaceChildren();
     const summary = document.createElement('div'); summary.className = 'trend-summary'; summary.setAttribute('aria-live', 'polite');
     const heading = document.createElement('span'); heading.textContent = t('最近7天平均', 'Last 7 Days Average');
@@ -204,7 +213,7 @@
     if (!points.length) { const empty = document.createElement('p'); empty.className = 'empty-state'; empty.textContent = t('还没有最近8周的有效记录。', 'No valid records in the last 8 weeks.'); host.append(empty); return; }
     const averages = trend.rolling.filter(point => point.time >= points[0].time);
     const values = [...points, ...averages].filter(point => point.value != null).map(point => point.value);
-    const low = Math.min(...values), high = Math.max(...values), pad = Math.max((high-low)*.15, key === 'steps' ? 100 : 1);
+    const low = Math.min(...values), high = Math.max(...values), pad = Math.max((high-low)*.15, key === 'steps' ? 100 : key === 'ffmi' ? 0.2 : 1);
     const min = key === 'steps' ? Math.max(0, low-pad) : low-pad, max = high+pad;
     const width = 760, height = 235, left = key === 'steps' ? 62 : 50, right = 18, top = 18, bottom = 35;
     const first = points[0].time, last = calendarDay(today());

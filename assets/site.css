@@ -838,3 +838,7 @@ html[lang="en"] .nutrient-tier-line{grid-template-columns:72px minmax(0,1fr)}
 .today-food-list li{display:flex;align-items:baseline;gap:8px;font-size:13px;line-height:1.55;min-width:0}
 .today-food-emoji{flex:0 0 1.4em;text-align:center}
 .today-food-text{min-width:0;overflow-wrap:anywhere}
+
+.composition-metrics{grid-template-columns:repeat(auto-fit,minmax(145px,1fr))}
+.composition-note{margin:0 0 18px;color:var(--muted);font-size:13px}
+.composition-note summary{cursor:pointer}

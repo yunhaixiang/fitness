@@ -58,3 +58,28 @@ test('strength uses private current weight without a personal fallback or legacy
   assert.ok(layout.indexOf('/assets/body-metrics.js') < layout.indexOf('/assets/strength-volume.js'));
   assert.ok(!Object.hasOwn(require('../_data/cardio_plans.json'), 'weightKg'));
 });
+
+test('derived composition uses kg and metres and does not mutate measurements', () => {
+  const {composition} = require('../assets/body-metrics.js');
+  const row = {weight:80,bf:25};
+  assert.deepEqual(composition(row,200),{fatMass:20,fatFreeMass:60,ffmi:15});
+  assert.deepEqual(row,{weight:80,bf:25});
+  assert.deepEqual(composition({weight:'80',bf:'25'},'200'),composition(row,200));
+});
+test('incomplete readings never borrow another date or invent a height', () => {
+  const {composition} = require('../assets/body-metrics.js');
+  for(const row of [{},{weight:80},{bf:25},{weight:'',bf:25},{weight:0,bf:25},{weight:80,bf:101},{weight:80,bf:NaN}])
+    assert.deepEqual(composition(row,200),{fatMass:null,fatFreeMass:null,ffmi:null});
+  for(const height of [null,'',0,Infinity,300])
+    assert.deepEqual(composition({weight:80,bf:25},height),{fatMass:20,fatFreeMass:60,ffmi:null});
+});
+test('derived trends calculate each paired record before averaging and omit missing pairs', () => {
+  const {composition} = require('../assets/body-metrics.js');
+  const {buildTrend} = require('../assets/tracker.js');
+  const rows=[{date:'2026-11-15',weight:80,bf:25},{date:'2026-11-16',weight:100,bf:30},{date:'2026-11-17',weight:90}].map(row=>({...row,...composition(row,200)}));
+  assert.equal(buildTrend(rows,'fatFreeMass','2026-11-17').average,65);
+  assert.equal(buildTrend(rows,'fatMass','2026-11-17').average,25);
+  assert.equal(buildTrend(rows,'ffmi','2026-11-17').average,16.25);
+  assert.equal(buildTrend(rows,'ffmi','2026-11-17').count,2);
+  assert.equal(buildTrend(rows.map(row=>({...row,...composition(row,null)})),'ffmi','2026-11-17').count,0);
+});

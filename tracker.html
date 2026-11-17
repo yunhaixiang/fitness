@@ -1,15 +1,21 @@
 ---
 layout: default
 title: 统计
-description: 查看体重、体脂率、步数和放纵餐记录。
+description: 查看体重、体脂率、去脂体重、脂肪重量、FFMI、步数和放纵餐记录。
 permalink: /tracker/
 wide: true
 tracker: true
 ---
-<div class="metrics-strip" id="latest-metrics" aria-live="polite">
+<div class="metrics-strip composition-metrics" id="latest-metrics" aria-live="polite">
   <div class="metric-box"><span>当前体重</span><strong>{{ site.data.tracking_records.currentBody.weight | default: '—' }} kg</strong></div>
   <div class="metric-box"><span>当前体脂率</span><strong>{{ site.data.tracking_records.currentBody.bf | default: '—' }}%</strong></div>
 </div>
+<details class="composition-note">
+<summary data-en="How these metrics are calculated">指标计算方式</summary>
+<p data-en="Fat mass = weight × body fat percentage; fat-free mass = weight − fat mass. Fat-free mass includes water, bones and organs as well as muscle.">脂肪重量＝体重×体脂率；去脂体重＝体重−脂肪重量。去脂体重包括肌肉、水分、骨骼和器官，并非肌肉重量。</p>
+<p data-en="FFMI = fat-free mass (kg) ÷ height (m)², without height adjustment. Historical values use each record’s weight and body fat, and your saved height. These estimates inherit the scale’s body-fat measurement error.">FFMI＝去脂体重（kg）÷身高（m）²，不做身高校正。历史数值使用各次记录的体重、体脂率和已保存的身高，估算误差随体脂秤读数变化。</p>
+<a href="https://pubmed.ncbi.nlm.nih.gov/2239792/" target="_blank" rel="noopener" data-en="FFMI definition">FFMI定义来源</a>
+</details>
 <div class="tracker-toolbar">
   <div class="tracker-tabs" role="tablist" aria-label="记录类型">
     <button type="button" role="tab" data-tab="body" aria-selected="true">身体组成</button>

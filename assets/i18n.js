@@ -22,6 +22,8 @@
     '2盒（4块）/ 周': '2 Boxes (4 Portions) / Week',
     '4、7各1块': '4 and 7: 1 Portion Each',
     '3、6各1片': '3 and 6: 1 Fillet Each',
+    '去脂体重': 'Fat-Free Mass', '脂肪重量': 'Fat Mass', '去脂体重 kg': 'Fat-Free Mass kg', '脂肪重量 kg': 'Fat Mass kg',
+    '查看体重、体脂率、去脂体重、脂肪重量、FFMI、步数和放纵餐记录。': 'Weight, Body Fat, Fat-Free Mass, Fat Mass, FFMI, Steps and Treat Meals.',
     '总览': 'Overview', '饮食': 'Diet', '购物': 'Shopping', '做饭': 'Cooking', '力量': 'Strength',
     '有氧 · 17:30，晚饭前': 'Cardio · 17:30, Before Dinner',
     '有氧 · 下午，晚饭前': 'Cardio · Afternoon, Before Dinner', '有氧': 'Cardio', '统计': 'Statistics', '营养统计': 'Nutrition', '营养': 'Nutrition', '训练量': 'Training Volume', '记录': 'Log',
