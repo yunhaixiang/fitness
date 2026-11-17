@@ -42,8 +42,7 @@
       "description": "Manufacturer per125 mL: calcium20 mg, iron0.5 mg, potassium350 mg."
     },
     "breadedHaddockLabel": "https://www.highliner.com/products/signature-cuts/signature-cuts-crispy-breaded-haddock-fillets",
-    "tilapiaUSDA": "https://www.ars.usda.gov/ARSUserFiles/80400535/Data/SR/SR28/reports/sr28fg15.pdf",
-    "walnutComposition": "https://walnuts.org/wp-content/uploads/2017/12/Nutrients-In-One-Ounce-of-Walnuts.pdf"
+    "tilapiaUSDA": "https://www.ars.usda.gov/ARSUserFiles/80400535/Data/SR/SR28/reports/sr28fg15.pdf"
   },
   "notes": [
     "Micronutrient planning estimates for the current plan, not a measurement or product-label audit. Units match nutrition_basis.json; breakfast inputs are per 100 g. Numeric coverage is explicit; a missing field causes recalculation to fail.",
@@ -656,21 +655,6 @@
         "assumptions"
       ],
       "basis": "Per 100 g raw tilapia, USDA SR28 NDB15261: Ca10 mg, Fe0.56 mg, K302 mg, D3.1 mcg, B121.58 mcg. Generic composition estimates, not the selected product label. Iodine is not provided by SR28; 2 mcg/100 g is a provisional freshwater-fish modeling allowance, not a measured tilapia value. Recipe uses 175 g raw per meal; actual tray weight varies."
-    },
-    "walnut": {
-      "values": {
-        "calcium": 30,
-        "iron": 0.8,
-        "potassium": 130,
-        "vitaminD": 0,
-        "vitaminB12": 0,
-        "iodine": 0
-      },
-      "sources": [
-        "walnutComposition",
-        "assumptions"
-      ],
-      "basis": "Per 28.35 g generic walnuts. Calcium, iron, potassium, D and B12 from California Walnut Board USDA-based sheet. Iodine not reported; contribution omitted as zero, not a measured zero. Product-specific composition unverified."
     }
   },
   "extraRecipes": {
@@ -678,8 +662,7 @@
       "soy": 2.7,
       "cereal": 0.29,
       "fruit": 4.666666666666666,
-      "vitaminDSupplement": 1,
-      "walnut": 0.42328042328042326
+      "vitaminDSupplement": 1
     },
     "fruit_snack": {
       "soy": 2.7
@@ -688,8 +671,7 @@
       "soy": 2.7,
       "cereal": 0.29,
       "vitaminDSupplement": 1,
-      "kiwi": 1.6325999999999998,
-      "walnut": 0.42328042328042326
+      "kiwi": 1.6325999999999998
     },
     "late_fruit_snack": {
       "soy": 2.7
