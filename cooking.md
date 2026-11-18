@@ -225,26 +225,26 @@ cooking: true
 <li class="cooking-task-source">
 <ol lang="zh-CN" class="cooking-source-zh">
 <li>将备好的🐟 三文鱼158 g、罗非鱼1块和冷冻裹粉黑线鳕1块一起放入预热至400°F的空气炸锅，单层摆放、留出空隙、不叠放。裹粉鱼不解冻、不另加油；剩余鱼柳继续冷冻。</li>
-<li>先设9分钟，启动后勾选；等待期间可做其他任务。炸篮装不下时分批，不要挤放。</li>
+<li>先设8分钟，启动后勾选；等待期间可做其他任务。炸篮装不下时分批，不要挤放。</li>
 </ol>
 <ol lang="en" class="cooking-source-en" hidden>
 <li>Load the prepared 🐟 salmon (158 g), 1 tilapia fillet and 1 frozen breaded haddock fillet together at 400°F in a single layer with gaps, without overlapping. Do not thaw or add oil to the breaded fish; keep the remaining fillets frozen.</li>
-<li>Set 9 minutes and check this step after starting; work on other tasks meanwhile. If the basket is too small, cook in batches rather than crowding.</li>
+<li>Set 8 minutes and check this step after starting; work on other tasks meanwhile. If the basket is too small, cook in batches rather than crowding.</li>
 </ol>
 </li>
 <li class="cooking-task-source">
 <ol lang="zh-CN" class="cooking-source-zh">
-<li>9分钟后拉出炸篮，检查🐟 三文鱼和罗非鱼最厚处；达到70°C后取出，未达到的每次加1–2分钟后复查。裹粉黑线鳕留在炸篮内；两种原味鱼都取出后勾选。</li>
+<li>8分钟后拉出炸篮，检查🐟 三文鱼和罗非鱼最厚处；达到70°C后取出，未达到的每次加1–2分钟后复查。裹粉黑线鳕留在炸篮内；两种原味鱼都取出后勾选。</li>
 <li>三文鱼整块放第4盘，罗非鱼整块放第2盘。</li>
 </ol>
 <ol lang="en" class="cooking-source-en" hidden>
-<li>At 9 minutes, pull out the basket and check the thickest part of the 🐟 salmon and tilapia. Remove each at 70°C; give unfinished fish another 1–2 minutes and recheck. Leave the breaded haddock in the basket; check off once both plain fillets are removed.</li>
+<li>At 8 minutes, pull out the basket and check the thickest part of the 🐟 salmon and tilapia. Remove each at 70°C; give unfinished fish another 1–2 minutes and recheck. Leave the breaded haddock in the basket; check off once both plain fillets are removed.</li>
 <li>Place the whole salmon fillet in meal 4 and the whole tilapia fillet in meal 2.</li>
 </ol>
 </li>
 <li class="cooking-task-source">
-<ol lang="zh-CN" class="cooking-source-zh"><li>把留有🐟 High Liner Signature Cuts Crispy Breaded黑线鳕的炸篮推回，保持400°F继续烹调。</li><li>前段炸了9分钟时，再炸约5–7分钟，使累计烹调时间约14–16分钟；若前段已延长，按实际已炸时间减少剩余时间。重新启动后勾选，等待期间可做其他任务。</li></ol>
-<ol lang="en" class="cooking-source-en" hidden><li>Return the basket containing the 🐟 High Liner Signature Cuts Crispy Breaded haddock and continue at 400°F.</li><li>After the initial 9 minutes, cook for about 5–7 more minutes, aiming for about 14–16 minutes total. If the initial stage took longer, reduce the remaining time accordingly. Check after restarting and work on other tasks while waiting.</li></ol>
+<ol lang="zh-CN" class="cooking-source-zh"><li>把留有🐟 High Liner Signature Cuts Crispy Breaded黑线鳕的炸篮推回，保持400°F继续烹调。</li><li>前段炸了8分钟时，再炸约6–8分钟，使累计烹调时间约14–16分钟；若前段已延长，按实际已炸时间减少剩余时间。重新启动后勾选，等待期间可做其他任务。</li></ol>
+<ol lang="en" class="cooking-source-en" hidden><li>Return the basket containing the 🐟 High Liner Signature Cuts Crispy Breaded haddock and continue at 400°F.</li><li>After the initial 8 minutes, cook for about 6–8 more minutes, aiming for about 14–16 minutes total. If the initial stage took longer, reduce the remaining time accordingly. Check after restarting and work on other tasks while waiting.</li></ol>
 </li>
 <li class="cooking-task-source">
 <ol lang="zh-CN" class="cooking-source-zh"><li>累计约14–16分钟后，按包装要求检查🐟 裹粉黑线鳕；同锅装得多时可能更久，未熟透则继续炸。熟透后取出，留给第1盘三明治。</li></ol>
