@@ -38,7 +38,7 @@ for(const language of ['zh','en']) {
   assert.equal(JSON.stringify(window.fitnessEnergyBudget),budget);
   assert.equal(window.fitnessCardioPlan.id,catalog.default);
  });
- test(`meal default stays labeled current while browsing another plan (${language})`,()=>{
+ test(`meal default is labeled current and switching preserves the other plan (${language})`,()=>{
   const main=new Node();const catalog=require('../_data/meal_plans.json');
   const location={origin:'https://example.test',pathname:'/fitness/plans/plan-2/diet/',href:'https://example.test/fitness/plans/plan-2/diet/',assign(url){this.assigned=url;}};
   const document={body:{dataset:{baseurl:'/fitness'}},getElementById:id=>id==='main'?main:id==='meal-plan-catalog'?{textContent:JSON.stringify(catalog)}:null,querySelectorAll:()=>[],createElement:t=>new Node(t)};
@@ -46,7 +46,9 @@ for(const language of ['zh','en']) {
   vm.runInNewContext(fs.readFileSync('assets/meal-plans.js','utf8'),{window:{},document,location,localStorage,URL});
   const select=main.querySelector('#meal-plan-select');
   assert.equal(select.children[0].textContent,language==='zh'?'当前':'Current');
-  assert.equal(select.children[1].selected,true);
+  assert.equal(select.children[0].value,'plan-2');
+  assert.equal(select.children[0].selected,true);
+  assert.equal(select.children[1].value,'plan-1');
   select.value='plan-1';select.fire('change');assert.match(location.assigned,/\/fitness\/diet\/\?plan=plan-1$/);
  });
  test(`strength opens at home and switches its day panels (${language})`,()=>{

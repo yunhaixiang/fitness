@@ -9,10 +9,13 @@
       .find((entry) => normalize(entry.url) === normalize(path));
     const requested = plans.find((plan) => plan.id === requestedId);
     const saved = plans.find((plan) => plan.id === savedId);
-    const active = requested || route?.plan || saved || defaultPlan;
+    // Unqualified original entry URLs open the current plan; explicit plan links
+    // keep older plans accessible. Named plan paths remain stable bookmarks.
+    const entryRoute = route && route.plan.id === plans[0].id;
+    const active = requested || (entryRoute ? defaultPlan : route?.plan) || saved || defaultPlan;
     return { active, page: route?.page, redirect: route && normalize(active.pages[route.page]) !== normalize(path) ? active.pages[route.page] : null };
   }
-  const scopedKey = (key, id, defaultId) => id === defaultId ? key : `${key}:meal-plan:${id}`;
+  const scopedKey = (key, id, defaultId) => id === 'plan-1' ? key : `${key}:meal-plan:${id}`;
   if (typeof module !== 'undefined' && module.exports) { module.exports = { resolve, scopedKey }; return; }
   const source = document.getElementById('meal-plan-catalog');
   if (!source) return;

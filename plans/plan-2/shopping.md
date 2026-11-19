@@ -90,11 +90,11 @@ visual: true
 <td style="text-align: right;">1瓶 / 周</td>
 <td style="text-align: right;"><a href="https://www.walmart.ca/en/ip/Catelli-Garden-Select-Tomato-Basil-Pasta-Sauce-600-mL-Jar/3B5Q7OZH5XF7">$2.67</a></td>
 </tr>
-<tr data-price-id="14" data-weekly-cost="11.97">
-<td>新鲜混合水果盘</td>
-<td><a href="https://www.walmart.ca/en/ip/your-fresh-market-large-party-fruit-tray/6000205351477">Your Fresh Market Large Party Fruit Tray</a><br>1 kg / 盘</td>
-<td style="text-align: right;">1盘 / 周</td>
-<td style="text-align: right;"><a href="https://www.walmart.ca/en/ip/your-fresh-market-large-party-fruit-tray/6000205351477">$11.97</a></td>
+<tr data-price-id="14" data-weekly-cost="14.89" data-purchase-group="weekly">
+<td data-en="Fresh Fruit Tray">新鲜混合水果盘</td>
+<td><a href="https://www.metro.ca/en/online-grocery/aisles/fruits-vegetables/fresh-cut-fruits-vegetables/fresh-fruit-carousel/p/204900">Metro Fresh Fruit Carousel</a><br>1.4 kg / 盒</td>
+<td data-en="1 Tray / Week; Buy Saturday; Divide Across Sunday–Tuesday Breakfasts (about 467 g Each)">每周1盒，周六购买；周日—周二早餐均分，每次约467 g</td>
+<td><a href="https://www.metro.ca/en/online-grocery/aisles/fruits-vegetables/fresh-cut-fruits-vegetables/fresh-fruit-carousel/p/204900">$14.89</a></td>
 </tr>
 <tr data-price-id="15" data-weekly-cost="7.76">
 <td>完整奇异果</td>
@@ -207,7 +207,7 @@ visual: true
 <td>每周合计</td>
 <td>—</td>
 <td style="text-align: right;">—</td>
-<td style="text-align: right;">$145.98</td>
+<td style="text-align: right;">$148.90</td>
 </tr>
 </tbody>
 </table>

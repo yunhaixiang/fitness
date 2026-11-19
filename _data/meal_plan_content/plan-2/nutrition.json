@@ -11,20 +11,20 @@
   "meals": {
     "fruit_breakfast": {
       "label": "周日—周二早餐（混合水果盘）",
-      "foodZh": "高纤维谷物早餐 35 g，无糖豆奶 270 mL，一水肌酸 5 g，混合水果盘约 333 g",
-      "foodEn": "35 g high-fibre cereal, 270 mL unsweetened soy milk, 5 g creatine monohydrate, about 333 g mixed fruit",
-      "kcal": "331",
-      "protein": "13.0",
-      "fat": "5.9",
-      "saturatedFat": "0.8",
-      "carbs": "70.5",
-      "fibre": "20.8",
-      "sugar": "31.0",
+      "foodZh": "高纤维谷物早餐 35 g，无糖豆奶 270 mL，一水肌酸 5 g，Metro混合水果盘约 467 g",
+      "foodEn": "35 g high-fibre cereal, 270 mL unsweetened soy milk, 5 g creatine monohydrate, about 467 g Metro mixed fruit",
+      "kcal": "387",
+      "protein": "13.7",
+      "fat": "6.1",
+      "saturatedFat": "0.9",
+      "carbs": "84.0",
+      "fibre": "22.1",
+      "sugar": "42.1",
       "cholesterol": "0",
-      "sodium": "238",
-      "calcium": "501",
-      "iron": "6.6",
-      "potassium": "1030",
+      "sodium": "244",
+      "calcium": "515",
+      "iron": "7.0",
+      "potassium": "1262",
       "foodItems": [
         {
           "emoji": "🥣",
@@ -43,8 +43,8 @@
         },
         {
           "emoji": "🍓",
-          "zh": "混合水果盘约 333 g",
-          "en": "Mixed fruit about 333 g"
+          "zh": "Metro混合水果盘约 467 g",
+          "en": "Metro mixed fruit about 467 g"
         }
       ]
     },
