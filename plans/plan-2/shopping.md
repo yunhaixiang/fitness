@@ -177,7 +177,7 @@ visual: true
 <tr data-price-id="28">
 <td>橄榄油</td>
 <td><a href="https://www.walmart.ca/en/ip/seort/6000203408497">Great Value Extra Virgin Olive Oil</a><br>1 L / 瓶</td>
-<td style="text-align: right;">按需补</td>
+<td style="text-align: right;">按需补；烤土豆每周用3茶匙（15 mL），另计其他菜用油</td>
 <td style="text-align: right;"><a href="https://www.walmart.ca/en/ip/seort/6000203408497">$10.97</a></td>
 </tr>
 <tr data-price-id="29">

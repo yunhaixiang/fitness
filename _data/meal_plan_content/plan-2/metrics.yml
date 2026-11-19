@@ -1,9 +1,9 @@
 # Historical meal estimates, aggregated consistently from nutrition.json.
-weekly_deficit: 3251
-weekly_deficit_display: "3,251"
+weekly_deficit: 3171
+weekly_deficit_display: "3,171"
 reference_cardio_weekly: 400
 reference_walking_weekly: 474
 weekly_burn: 15835.96000
-weekly_deficit_precise: 3250.96000
-intake_daily: 1797.85714
+weekly_deficit_precise: 3170.96000
+intake_daily: 1809.28571
 reference_strength_weekly: 450.96
