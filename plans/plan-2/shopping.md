@@ -129,7 +129,7 @@ visual: true
 <tr data-price-id="20">
 <td>高纤维谷物早餐</td>
 <td><a href="https://www.walmart.ca/en/ip/Fibre-One-Breakfast-Cereal-Crunchy-Original-High-Fibre-and-Whole-Grains-587-g/1OUNWA7P5WCS">Fibre One Crunchy Original</a><br>587 g / 盒</td>
-<td style="text-align: right;">按需补</td>
+<td style="text-align: right;">按需补；每天35 g，每周245 g；约2.4周1盒</td>
 <td style="text-align: right;"><a href="https://www.walmart.ca/en/ip/Fibre-One-Breakfast-Cereal-Crunchy-Original-High-Fibre-and-Whole-Grains-587-g/1OUNWA7P5WCS">$5.47</a></td>
 </tr>
 <tr data-price-id="21">

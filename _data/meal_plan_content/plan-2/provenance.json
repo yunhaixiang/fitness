@@ -21,7 +21,8 @@
     "2026-11-19: Plan 2 rice meals now use 45 g dry rice and 9 g Golden Curry roux each. Batch: 90 g dry rice (about 120 mL / half a standard cup; calibrate once), 18 g roux (one fifth of 90 g pack), divided into two meals. Weekly rice180 g, curry36 g; one90 g pack lasts2.5 weeks. Retain other seasoning/oil quantities. Curry is dissolved in about150 mL water with cooked ground chicken/vegetables and simmered; rice cooked separately with existing equal-volume water method. Existing curry label and rice composition used; carry forward prior recorded curry price$3.97, not newly verified. Added sugar historical estimate unchanged because curry total sugar is not a verified added-sugar amount.",
     "2026-11-19: Halve ground chicken in each Plan 2 curry rice meal from227 g to113.5 g; increase dry rice45 g to90 g. Retain9 g curry, two eggs, vegetables, oils and seasonings per meal. Batch227 g ground chicken (half454 g pack),180 g dry rice (about240 mL; calibrate cup once),18 g curry, split equally. Weekly454 g chicken/one pack,360 g rice. Reaggregate macro/mineral estimates using existing composition proxies; B12 daily estimate adjusted, D unchanged, iodine and EPA+DHA deltas below existing display precision. Cooking water retains prior equal-volume ratio. Pantry rice remains on-demand, so grocery subtotal decrease$7.98 excludes additional rice usage cost.",
     "2026-11-19: Increase curry per Plan 2 cooking batch to two fifths of90 g pack (36 g), and reduce dry rice180 g to156 g to retain about700 kcal per rice meal. Each meal78 g dry rice,18 g curry,113.5 g ground chicken; remaining ingredients/seasonings unchanged. Batch rice volume about210 mL, water retains prior equal-volume method; curry water about300 mL then adjusted to consistency. Weekly rice312 g and curry72 g (four90 g packs per five weeks); historical$3.97 pack price yields$3.18 weekly. Reaggregate macros/minerals; trace iodine change below existing precision, D/B12/EPA+DHA unchanged.",
-    "2026-11-19: User chose frozen shelled edamame60 g per batch, two servings30 g, with dry rice180 mL (~135 g per batch /67.5 g per meal). Retain36 g curry,227 g ground chicken and all other ingredients. No lentils added. Weekly edamame120 g,454 g bag lasts3.78 weeks; Walmart price$4.37 yields$1.16/week. Heat fully cooked frozen edamame in the curry pot, keep remainder frozen. Reaggregate macro/mineral estimates; retain historical ALA range because brand fatty-acid breakdown is unavailable (edamame ALA not independently quantified), no iodine increment assumed for unmeasured ingredient. Vitamins D/B12/EPA+DHA unchanged."
+    "2026-11-19: User chose frozen shelled edamame60 g per batch, two servings30 g, with dry rice180 mL (~135 g per batch /67.5 g per meal). Retain36 g curry,227 g ground chicken and all other ingredients. No lentils added. Weekly edamame120 g,454 g bag lasts3.78 weeks; Walmart price$4.37 yields$1.16/week. Heat fully cooked frozen edamame in the curry pot, keep remainder frozen. Reaggregate macro/mineral estimates; retain historical ALA range because brand fatty-acid breakdown is unavailable (edamame ALA not independently quantified), no iodine increment assumed for unmeasured ingredient. Vitamins D/B12/EPA+DHA unchanged.",
+    "2026-11-19: Reduce Plan 2 breakfast Fibre One cereal from40 g to35 g daily in both fruit and kiwi breakfasts. Apply minus5 g using the existing Canadian label per62 g and existing cereal micronutrient composition; reaggregate daily nutrition and intake/deficit reference. Weekly use245 g;587 g box lasts16.77 days (~2.4 weeks). Pantry item remains replenished as needed, outside existing recurring grocery subtotal. Plan 1 unchanged."
   ],
   "removedMushroomPerMeal": {
     "kcal": 14.985,
@@ -187,5 +188,23 @@
     "microSource": "https://www.ars.usda.gov/ARSUserFiles/80400535/Data/SR/SR28/reports/sr28fg11.pdf",
     "microNote": "Generic prepared edamame USDA SR28 NDB11212 proxy; not brand label.",
     "product": "https://www.walmart.ca/en/ip/Natures-Classic-Allen-Family-Foods-Young-Edamame-Shelled-Soybean-454g/6000197072340"
+  },
+  "breakfastCereal": {
+    "dailyGrams": 35,
+    "packageGrams": 587,
+    "referenceGrams": 62,
+    "perReference": {
+      "kcal": 140,
+      "protein": 4,
+      "carbs": 53,
+      "fat": 1,
+      "saturatedFat": 0.2,
+      "fibre": 27,
+      "sugar": 1,
+      "sodium": 220,
+      "cholesterol": 0,
+      "epaDha": 0
+    },
+    "source": "https://www.zehrs.ca/en/fibre-one-breakfast-cereal-crunchy-original-high-f/p/21411449_EA"
   }
 }
