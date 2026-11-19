@@ -19,7 +19,8 @@
     "2026-11-19: Increase each rice meal from 48 g to 58 g dry rice (+10 g). Cook 116 g dry rice per half-week batch and divide equally between meals 2 and 5; weekly use 232 g. Rice and water volumes scaled proportionally from historical 120 mL batch to about 145 mL. Add 0.1 recipe unit of the existing dry rice macro/micronutrient composition and reaggregate daily totals. Potatoes unchanged pending packaging choice.",
     "2026-11-19: Potato meals now use 340 g yellow potatoes and one tilapia fillet (175 g raw estimate) instead of 170 g little potatoes and 160 g coho salmon. Weekly potatoes: one Your Fresh Market Organic Yellow Potatoes 1.36 kg bag, $6.27 public price; retain previous potato composition as explicit planning proxy, not a verified new-product label. Weekly tilapia: four fillets / two 300–400 g trays modeled as 350 g per tray at $2.80/100 g. Salmon remains four160 g fillets in pasta meals (two packs). Existing oil and seasonings unchanged. Apply existing ingredient-composition deltas, reaggregate macros/minerals; update historical daily vitamin D/B12/iodine/EPA+DHA estimates by four meal deltas per week.",
     "2026-11-19: Plan 2 rice meals now use 45 g dry rice and 9 g Golden Curry roux each. Batch: 90 g dry rice (about 120 mL / half a standard cup; calibrate once), 18 g roux (one fifth of 90 g pack), divided into two meals. Weekly rice180 g, curry36 g; one90 g pack lasts2.5 weeks. Retain other seasoning/oil quantities. Curry is dissolved in about150 mL water with cooked ground chicken/vegetables and simmered; rice cooked separately with existing equal-volume water method. Existing curry label and rice composition used; carry forward prior recorded curry price$3.97, not newly verified. Added sugar historical estimate unchanged because curry total sugar is not a verified added-sugar amount.",
-    "2026-11-19: Halve ground chicken in each Plan 2 curry rice meal from227 g to113.5 g; increase dry rice45 g to90 g. Retain9 g curry, two eggs, vegetables, oils and seasonings per meal. Batch227 g ground chicken (half454 g pack),180 g dry rice (about240 mL; calibrate cup once),18 g curry, split equally. Weekly454 g chicken/one pack,360 g rice. Reaggregate macro/mineral estimates using existing composition proxies; B12 daily estimate adjusted, D unchanged, iodine and EPA+DHA deltas below existing display precision. Cooking water retains prior equal-volume ratio. Pantry rice remains on-demand, so grocery subtotal decrease$7.98 excludes additional rice usage cost."
+    "2026-11-19: Halve ground chicken in each Plan 2 curry rice meal from227 g to113.5 g; increase dry rice45 g to90 g. Retain9 g curry, two eggs, vegetables, oils and seasonings per meal. Batch227 g ground chicken (half454 g pack),180 g dry rice (about240 mL; calibrate cup once),18 g curry, split equally. Weekly454 g chicken/one pack,360 g rice. Reaggregate macro/mineral estimates using existing composition proxies; B12 daily estimate adjusted, D unchanged, iodine and EPA+DHA deltas below existing display precision. Cooking water retains prior equal-volume ratio. Pantry rice remains on-demand, so grocery subtotal decrease$7.98 excludes additional rice usage cost.",
+    "2026-11-19: Increase curry per Plan 2 cooking batch to two fifths of90 g pack (36 g), and reduce dry rice180 g to156 g to retain about700 kcal per rice meal. Each meal78 g dry rice,18 g curry,113.5 g ground chicken; remaining ingredients/seasonings unchanged. Batch rice volume about210 mL, water retains prior equal-volume method; curry water about300 mL then adjusted to consistency. Weekly rice312 g and curry72 g (four90 g packs per five weeks); historical$3.97 pack price yields$3.18 weekly. Reaggregate macros/minerals; trace iodine change below existing precision, D/B12/EPA+DHA unchanged."
   ],
   "removedMushroomPerMeal": {
     "kcal": 14.985,
@@ -128,5 +129,23 @@
     "vitaminD": 0.0,
     "vitaminB12": -0.6356,
     "iodine": -0.611029345
+  },
+  "increasedCurryDeltaPerMeal": {
+    "kcal": 1.2000000000000028,
+    "protein": -0.3555999999999999,
+    "carbs": -4.6,
+    "fat": 2.1708,
+    "saturatedFat": 1.4784,
+    "fibre": 0.344,
+    "sugar": 0.9856,
+    "sodium": 399.4,
+    "cholesterol": 0.0,
+    "epaDha": 0.0,
+    "calcium": 1.1400000000000001,
+    "iron": 0.404,
+    "potassium": 10.200000000000001,
+    "vitaminD": 0.0,
+    "vitaminB12": 0.0,
+    "iodine": -0.024
   }
 }
