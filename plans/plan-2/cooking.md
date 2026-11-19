@@ -260,6 +260,14 @@ meal_activities_script: /assets/meal-plans/plan-2/meal-activities.js
 <h2 id="finish" data-en="Finish">收尾</h2>
 <ol>
 <li class="cooking-task-source">
+<ol class="cooking-source-zh" lang="zh"><li>🥦 取冷冻西兰花125 g（500 g袋的¼），不用提前解冻，倒入微波炉适用的碗；剩余密封继续冷冻。</li><li>按包装说明加💧 水，盖上留排气缝的微波炉适用盖，启动微波加热；时间按包装、份量和功率调整。不连普通包装袋加热。</li></ol>
+<ol class="cooking-source-en" lang="en" hidden><li>Place 125 g frozen 🥦 broccoli (¼ of a 500 g bag) in a microwave-safe bowl without thawing; reseal and freeze the remainder.</li><li>Add 💧 water as directed on the package, cover with a vented microwave-safe lid and start cooking. Follow package directions for portion size and wattage; do not microwave the ordinary packaging bag.</li></ol>
+</li>
+<li class="cooking-task-source">
+<ol class="cooking-source-zh" lang="zh"><li>🥦 微波结束后，小心蒸汽，翻动检查西兰花是否熟透；需要时继续加热。</li><li>沥掉多余💧 水，均分到第4、7盘，每份对应冷冻重量62.5 g；不额外加油或盐。</li></ol>
+<ol class="cooking-source-en" lang="en" hidden><li>After microwaving, open carefully to avoid steam, stir and check the 🥦 broccoli is fully cooked; continue heating if needed.</li><li>Drain excess 💧 water and divide equally between meals 4 and 7 (62.5 g frozen weight each), without additional oil or salt.</li></ol>
+</li>
+<li class="cooking-task-source">
 <ol class="cooking-source-zh" lang="zh"><li>🫑 橙甜椒洗净擦干，取½个（约85 g）去籽、切细条；生切直接使用。剩余半个包好冷藏，留给下批卷饼。</li><li>第1盘铺🌯 大号全麦卷饼皮1片，抹🥣 Chipotle蛋黄酱1茶匙（5 mL）。</li></ol>
 <ol class="cooking-source-en" lang="en" hidden><li>Wash and dry 🫑 orange bell pepper; deseed and thinly slice ½ pepper (about 85 g) to use raw. Wrap and refrigerate the remaining half for the next batch.</li><li>Lay 1 large whole-wheat 🌯 tortilla in meal container 1; spread with 1 tsp (5 mL) 🥣 Chipotle mayonnaise.</li></ol>
 </li>

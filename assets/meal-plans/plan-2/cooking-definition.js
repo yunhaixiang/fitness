@@ -640,6 +640,42 @@
       "minutes": 4
     },
     {
+      "id": "broccoli-start",
+      "label": [
+        "开始微波西兰花",
+        "Start Microwaving Broccoli"
+      ],
+      "note": [
+        "",
+        ""
+      ],
+      "group": "finish",
+      "before": [],
+      "link": "#cook-broccoli-start",
+      "minutes": 1,
+      "instant": true
+    },
+    {
+      "id": "broccoli",
+      "label": [
+        "确认西兰花熟透、分盘",
+        "Check and Portion Broccoli"
+      ],
+      "note": [
+        "按包装加热并确认熟度",
+        "Follow package directions and confirm doneness"
+      ],
+      "group": "finish",
+      "before": [
+        "broccoli-start"
+      ],
+      "link": "#cook-broccoli",
+      "minutes": 1,
+      "confirmation": true,
+      "waitFor": "broccoli-start",
+      "waitKind": "food"
+    },
+    {
       "id": "prep-bread",
       "label": [
         "切甜椒、铺卷饼皮、抹酱",
@@ -694,7 +730,8 @@
         "spinach",
         "curry",
         "tomato",
-        "wrap"
+        "wrap",
+        "broccoli"
       ],
       "link": "#cook-refrigerate",
       "minutes": 5
@@ -798,6 +835,8 @@
       "finish",
       "finish",
       [
+        "broccoli-start",
+        "broccoli",
         "prep-bread",
         "wrap",
         "refrigerate",

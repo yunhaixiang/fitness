@@ -22,7 +22,8 @@
     "2026-11-19: Halve ground chicken in each Plan 2 curry rice meal from227 g to113.5 g; increase dry rice45 g to90 g. Retain9 g curry, two eggs, vegetables, oils and seasonings per meal. Batch227 g ground chicken (half454 g pack),180 g dry rice (about240 mL; calibrate cup once),18 g curry, split equally. Weekly454 g chicken/one pack,360 g rice. Reaggregate macro/mineral estimates using existing composition proxies; B12 daily estimate adjusted, D unchanged, iodine and EPA+DHA deltas below existing display precision. Cooking water retains prior equal-volume ratio. Pantry rice remains on-demand, so grocery subtotal decrease$7.98 excludes additional rice usage cost.",
     "2026-11-19: Increase curry per Plan 2 cooking batch to two fifths of90 g pack (36 g), and reduce dry rice180 g to156 g to retain about700 kcal per rice meal. Each meal78 g dry rice,18 g curry,113.5 g ground chicken; remaining ingredients/seasonings unchanged. Batch rice volume about210 mL, water retains prior equal-volume method; curry water about300 mL then adjusted to consistency. Weekly rice312 g and curry72 g (four90 g packs per five weeks); historical$3.97 pack price yields$3.18 weekly. Reaggregate macros/minerals; trace iodine change below existing precision, D/B12/EPA+DHA unchanged.",
     "2026-11-19: User chose frozen shelled edamame60 g per batch, two servings30 g, with dry rice180 mL (~135 g per batch /67.5 g per meal). Retain36 g curry,227 g ground chicken and all other ingredients. No lentils added. Weekly edamame120 g,454 g bag lasts3.78 weeks; Walmart price$4.37 yields$1.16/week. Heat fully cooked frozen edamame in the curry pot, keep remainder frozen. Reaggregate macro/mineral estimates; retain historical ALA range because brand fatty-acid breakdown is unavailable (edamame ALA not independently quantified), no iodine increment assumed for unmeasured ingredient. Vitamins D/B12/EPA+DHA unchanged.",
-    "2026-11-19: Reduce Plan 2 breakfast Fibre One cereal from40 g to35 g daily in both fruit and kiwi breakfasts. Apply minus5 g using the existing Canadian label per62 g and existing cereal micronutrient composition; reaggregate daily nutrition and intake/deficit reference. Weekly use245 g;587 g box lasts16.77 days (~2.4 weeks). Pantry item remains replenished as needed, outside existing recurring grocery subtotal. Plan 1 unchanged."
+    "2026-11-19: Reduce Plan 2 breakfast Fibre One cereal from40 g to35 g daily in both fruit and kiwi breakfasts. Apply minus5 g using the existing Canadian label per62 g and existing cereal micronutrient composition; reaggregate daily nutrition and intake/deficit reference. Weekly use245 g;587 g box lasts16.77 days (~2.4 weeks). Pantry item remains replenished as needed, outside existing recurring grocery subtotal. Plan 1 unchanged.",
+    "2026-11-19: Add Great Value frozen broccoli62.5 g (frozen weight) to each of four weekly potato meals. Batch125 g microwave in a microwave-safe bowl per package directions, split into meals4 and7; no extra oil/salt. Weekly250 g, one500 g bag per two weeks, price$3.37 ($1.69 rounded weekly). Use retailer label per85 g for macros/sodium; USDA frozen unprepared broccoli proxy for Ca/Fe/K. Reaggregate daily values. No quantified increment to iodine/ALA; historical trace uncertainty retained. Separate microwave-start and check/portion tasks; only refrigeration depends on completion."
   ],
   "removedMushroomPerMeal": {
     "kcal": 14.985,
@@ -206,5 +207,41 @@
       "epaDha": 0
     },
     "source": "https://www.zehrs.ca/en/fibre-one-breakfast-cereal-crunchy-original-high-f/p/21411449_EA"
+  },
+  "broccoliBasis": {
+    "product": "https://www.walmart.ca/en/ip/Great-Value-Frozen-Broccoli-Florets-500-g/6000198574939",
+    "per85g": {
+      "kcal": 25,
+      "protein": 2,
+      "carbs": 4,
+      "fat": 0,
+      "saturatedFat": 0,
+      "fibre": 2,
+      "sugar": 1,
+      "sodium": 20,
+      "cholesterol": 0
+    },
+    "labelImage": "https://i5.walmartimages.ca/asr/87f02eb7-b633-40d0-8599-45c7f7b7be4e.d0cbc2741d777fb90ce0f8c6c13e0c82.jpeg",
+    "microPer100g": {
+      "calcium": 56,
+      "iron": 0.81,
+      "potassium": 212
+    },
+    "microSource": "https://www.ars.usda.gov/ARSUserFiles/80400535/Data/SR/SR28/reports/sr28fg11.pdf",
+    "microNote": "USDA NDB11092 frozen chopped unprepared broccoli proxy, not brand-specific mineral label; drained cooking liquid can change retention."
+  },
+  "broccoliDeltaPerPotatoMeal": {
+    "kcal": 18.38235294117647,
+    "protein": 1.4705882352941178,
+    "carbs": 2.9411764705882355,
+    "fat": 0.0,
+    "saturatedFat": 0.0,
+    "fibre": 1.4705882352941178,
+    "sugar": 0.7352941176470589,
+    "sodium": 14.705882352941176,
+    "cholesterol": 0.0,
+    "calcium": 35.0,
+    "iron": 0.5062500000000001,
+    "potassium": 132.5
   }
 }
