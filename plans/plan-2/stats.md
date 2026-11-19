@@ -20,7 +20,7 @@ nutrition: true
     </div>
     <div class="nutrition-overview-key">
       <p class="nutrition-overview-eyebrow">能量概览 · 不含放纵餐</p>
-      <div class="nutrition-key-row nutrition-key-intake"><span>日均摄入</span><strong>1,799 <small>kcal／天</small></strong></div>
+      <div class="nutrition-key-row nutrition-key-intake"><span>日均摄入</span><strong>1,798 <small>kcal／天</small></strong></div>
       <div class="nutrition-key-row nutrition-key-burn"><span>日均消耗</span><strong data-energy="dailyBurn">— <small>kcal／天</small></strong></div>
       <div class="nutrition-key-row nutrition-key-deficit"><span data-energy-label="dailyDeficit">日均能量差</span><strong data-energy="dailyDeficit">— <small>kcal／天</small></strong></div>
       <div class="nutrition-key-row"><span data-energy-label="weeklyDeficit">每周能量差</span><strong data-energy="weeklyDeficit">— <small>kcal</small></strong></div>
@@ -107,37 +107,37 @@ nutrition: true
 <tbody>
 <tr data-nutrient="energy">
 <td>热量</td>
-<td style="text-align: right;">1,799 kcal</td>
+<td style="text-align: right;">1,798 kcal</td>
 <td>—</td>
 </tr>
 <tr data-macro="protein" data-nutrient="protein">
 <td>蛋白质</td>
-<td style="text-align: right;">145.2 g</td>
+<td style="text-align: right;">145.0 g</td>
 <td>—</td>
 </tr>
 <tr data-macro="fat" data-nutrient="fat">
 <td>总脂肪</td>
-<td style="text-align: right;">59.2 g</td>
+<td style="text-align: right;">60.5 g</td>
 <td>—</td>
 </tr>
 <tr data-nutrient="saturatedFat">
 <td>饱和脂肪</td>
-<td style="text-align: right;">15.0 g</td>
+<td style="text-align: right;">15.8 g</td>
 <td>—</td>
 </tr>
 <tr data-macro="carbs" data-nutrient="carbs">
 <td>碳水化合物</td>
-<td style="text-align: right;">184.8 g</td>
+<td style="text-align: right;">181.8 g</td>
 <td>—</td>
 </tr>
 <tr data-nutrient="fibre">
 <td>膳食纤维</td>
-<td style="text-align: right;">38.7 g</td>
+<td style="text-align: right;">38.8 g</td>
 <td>—</td>
 </tr>
 <tr data-nutrient="sugar">
 <td>总糖</td>
-<td style="text-align: right;">38.0 g</td>
+<td style="text-align: right;">38.6 g</td>
 <td>—</td>
 </tr>
 <tr data-nutrient="addedSugar">
@@ -152,7 +152,7 @@ nutrition: true
 </tr>
 <tr data-nutrient="sodium">
 <td>钠</td>
-<td style="text-align: right;">1,935 mg</td>
+<td style="text-align: right;">2,163 mg</td>
 <td>—</td>
 </tr>
 <tr data-nutrient="calcium">
@@ -162,12 +162,12 @@ nutrition: true
 </tr>
 <tr data-nutrient="iron">
 <td>铁</td>
-<td style="text-align: right;">18.8 mg</td>
+<td style="text-align: right;">19.1 mg</td>
 <td>—</td>
 </tr>
 <tr data-nutrient="potassium">
 <td>钾</td>
-<td style="text-align: right;">4,869 mg</td>
+<td style="text-align: right;">4,874 mg</td>
 <td>—</td>
 </tr>
 <tr data-nutrient="vitaminD">

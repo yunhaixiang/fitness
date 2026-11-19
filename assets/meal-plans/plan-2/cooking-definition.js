@@ -584,6 +584,45 @@
       "minutes": 8
     },
     {
+      "id": "curry-start",
+      "label": [
+        "加入咖喱、开始小火煮",
+        "Add Curry and Start Simmering"
+      ],
+      "note": [
+        "",
+        ""
+      ],
+      "group": "large-wok",
+      "before": [
+        "ground"
+      ],
+      "link": "#cook-curry-start",
+      "minutes": 2,
+      "instant": true,
+      "durationHint": 5
+    },
+    {
+      "id": "curry",
+      "label": [
+        "确认咖喱完成、分盘",
+        "Check and Portion Curry"
+      ],
+      "note": [
+        "",
+        ""
+      ],
+      "group": "large-wok",
+      "before": [
+        "curry-start"
+      ],
+      "link": "#cook-curry",
+      "minutes": 5,
+      "confirmation": true,
+      "waitFor": "curry-start",
+      "waitKind": "food"
+    },
+    {
       "id": "tomato",
       "label": [
         "拌番茄意面",
@@ -653,7 +692,7 @@
         "peel-eggs",
         "salmon",
         "spinach",
-        "ground",
+        "curry",
         "tomato",
         "wrap"
       ],
@@ -750,7 +789,9 @@
       "large-wok",
       [
         "spinach",
-        "ground"
+        "ground",
+        "curry-start",
+        "curry"
       ]
     ],
     [

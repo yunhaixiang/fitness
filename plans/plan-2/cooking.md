@@ -13,8 +13,8 @@ meal_activities_script: /assets/meal-plans/plan-2/meal-activities.js
 <h2 id="rice" data-en="Rice Cooker">电饭煲</h2>
 <ol>
 <li class="cooking-task-source">
-<ol class="cooking-source-zh" lang="zh"><li>🍚 干米116 g（约145 mL）淘洗沥干。</li><li>加💧 水约145 mL，放入电饭煲。</li></ol>
-<ol class="cooking-source-en" lang="en" hidden><li>Rinse and drain 116 g (about 145 mL) 🍚 dry rice.</li><li>Add about 145 mL 💧 water to the rice cooker.</li></ol>
+<ol class="cooking-source-zh" lang="zh"><li>🍚 干米90 g（约½标准量杯／120 mL；首次称重核对刻度）淘洗沥干。</li><li>加💧 水约120 mL，放入电饭煲。</li></ol>
+<ol class="cooking-source-en" lang="en" hidden><li>Rinse and drain 90 g (about ½ standard cup / 120 mL; calibrate the cup by weighing once) 🍚 dry rice.</li><li>Add about 120 mL 💧 water to the rice cooker.</li></ol>
 </li>
 <li class="cooking-task-source">
 <ol lang="zh-CN" class="cooking-source-zh">
@@ -26,10 +26,10 @@ meal_activities_script: /assets/meal-plans/plan-2/meal-activities.js
 </li>
 <li class="cooking-task-source">
 <ol lang="zh-CN" class="cooking-source-zh">
-<li>约50分钟后，确认电饭煲完成煮饭，再开盖松散、分装🍚 米饭。</li>
+<li>约50分钟后，确认电饭煲完成煮饭，再开盖松散，均分到第2、5盘，每份对应生米45 g。</li>
 </ol>
 <ol lang="en" class="cooking-source-en" hidden>
-<li>After about 50 minutes, confirm the rice cycle is complete, then fluff and portion the 🍚 rice.</li>
+<li>After about 50 minutes, confirm the rice cycle is complete, then fluff and divide the 🍚 rice equally between meals 2 and 5 (45 g dry rice each).</li>
 </ol>
 </li>
 </ol>
@@ -245,8 +245,16 @@ meal_activities_script: /assets/meal-plans/plan-2/meal-activities.js
 <ol class="cooking-source-en" lang="en" hidden><li>Sauté 1 bag (284 g; 2 bags per week) of 🥬 spinach with 1 tsp 🫒 oil, ¼ tsp 🧄 garlic powder and ¼ tsp 🧅 onion powder for about 7 minutes.</li><li>Divide equally between meals 4 and 7.</li></ol>
 </li>
 <li class="cooking-task-source">
-<ol class="cooking-source-zh" lang="zh"><li>🫛🥕 豌豆胡萝卜1罐沥干。</li><li>锅内加🫒 油½茶匙，中火炒🍗 鸡肉末454 g至中心74°C。</li><li>加入豌豆胡萝卜、🧄 蒜粉¼茶匙、🧅 洋葱粉¼茶匙、🥣 减盐酱油3茶匙、鸡粉⅛茶匙，炒热拌匀；均分到第2、5盘。</li><li>前半周备料时，后半周的生鸡肉末冷冻。</li></ol>
-<ol class="cooking-source-en" lang="en" hidden><li>Drain 1 can 🫛🥕 peas and carrots.</li><li>Heat ½ tsp 🫒 oil and cook 454 g 🍗 ground chicken over medium heat to 74°C.</li><li>Add the vegetables, ¼ tsp 🧄 garlic powder, ¼ tsp 🧅 onion powder, 3 tsp 🥣 reduced-sodium soy sauce and ⅛ tsp chicken stock powder; heat through and divide equally between meals 2 and 5.</li><li>Freeze the second-half raw ground chicken during the first cooking session.</li></ol>
+<ol class="cooking-source-zh" lang="zh"><li>🫛🥕 豌豆胡萝卜1罐沥干。</li><li>锅内加🫒 油½茶匙，中火炒🍗 鸡肉末454 g至中心74°C。</li><li>加入豌豆胡萝卜、🧄 蒜粉¼茶匙、🧅 洋葱粉¼茶匙、🥣 减盐酱油3茶匙、鸡粉⅛茶匙，炒热拌匀，留在锅中待加咖喱。</li><li>前半周备料时，后半周的生鸡肉末冷冻。</li></ol>
+<ol class="cooking-source-en" lang="en" hidden><li>Drain 1 can 🫛🥕 peas and carrots.</li><li>Heat ½ tsp 🫒 oil and cook 454 g 🍗 ground chicken over medium heat to 74°C.</li><li>Add the vegetables, ¼ tsp 🧄 garlic powder, ¼ tsp 🧅 onion powder, 3 tsp 🥣 reduced-sodium soy sauce and ⅛ tsp chicken stock powder; heat through and leave in the pan for the curry sauce.</li><li>Freeze the second-half raw ground chicken during the first cooking session.</li></ol>
+</li>
+<li class="cooking-task-source">
+<ol class="cooking-source-zh" lang="zh"><li>🍛 90 g装咖喱切下⅕包（18 g），切碎。</li><li>鸡肉末锅中加💧 水约150 mL，暂时关火，加入咖喱搅拌至溶解。</li><li>重新开小火，开始煮约5分钟；过稠时少量加水。</li></ol>
+<ol class="cooking-source-en" lang="en" hidden><li>Cut off ⅕ of the 90 g 🍛 curry pack (18 g) and chop it.</li><li>Add about 150 mL 💧 water to the ground chicken pan, turn off the heat, and stir in the roux until dissolved.</li><li>Return to low heat and start simmering for about 5 minutes; add a little water if too thick.</li></ol>
+</li>
+<li class="cooking-task-source">
+<ol class="cooking-source-zh" lang="zh"><li>🍛 确认咖喱已充分溶解、酱汁热透且浓稠合适；关火。</li><li>将鸡肉末、蔬菜和咖喱汁均分到第2、5盘，搭配🍚 米饭。</li></ol>
+<ol class="cooking-source-en" lang="en" hidden><li>Check that the 🍛 roux is fully dissolved and the sauce is hot with the desired consistency; turn off the heat.</li><li>Divide the chicken, vegetables and curry sauce equally between meals 2 and 5, alongside the 🍚 rice.</li></ol>
 </li>
 </ol>
 <h2 id="finish" data-en="Finish">收尾</h2>
