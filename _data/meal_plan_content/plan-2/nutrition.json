@@ -143,18 +143,18 @@
     },
     "rice": {
       "label": "周一午／周二晚／周四晚／周六午",
-      "kcal": "659",
-      "protein": "61.8",
-      "fat": "23.4",
+      "kcal": "696",
+      "protein": "62.5",
+      "fat": "23.5",
       "saturatedFat": "8.0",
-      "carbs": "51.7",
-      "fibre": "5.0",
+      "carbs": "59.7",
+      "fibre": "5.1",
       "sugar": "3.8",
       "cholesterol": "594",
-      "sodium": "685",
-      "calcium": "121",
-      "iron": "3.5",
-      "potassium": "884"
+      "sodium": "686",
+      "calcium": "124",
+      "iron": "3.6",
+      "potassium": "896"
     },
     "pasta": {
       "label": "周一晚／周三午／周五午／周六晚",

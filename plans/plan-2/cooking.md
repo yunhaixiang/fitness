@@ -13,8 +13,8 @@ meal_activities_script: /assets/meal-plans/plan-2/meal-activities.js
 <h2 id="rice" data-en="Rice Cooker">电饭煲</h2>
 <ol>
 <li class="cooking-task-source">
-<ol class="cooking-source-zh" lang="zh"><li>🍚 干米120 mL（96 g）淘洗沥干。</li><li>加💧 水120 mL，放入电饭煲。</li></ol>
-<ol class="cooking-source-en" lang="en" hidden><li>Rinse and drain 120 mL (96 g) 🍚 dry rice.</li><li>Add 120 mL 💧 water to the rice cooker.</li></ol>
+<ol class="cooking-source-zh" lang="zh"><li>🍚 干米116 g（约145 mL）淘洗沥干。</li><li>加💧 水约145 mL，放入电饭煲。</li></ol>
+<ol class="cooking-source-en" lang="en" hidden><li>Rinse and drain 116 g (about 145 mL) 🍚 dry rice.</li><li>Add about 145 mL 💧 water to the rice cooker.</li></ol>
 </li>
 <li class="cooking-task-source">
 <ol lang="zh-CN" class="cooking-source-zh">

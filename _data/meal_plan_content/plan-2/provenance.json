@@ -15,7 +15,8 @@
   "corrections": [
     "2026-11-10: User confirmed the original pasta protein is coho salmon, not haddock. Restore four 160 g salmon portions per week and their original seasonings by reversing the isolated substitution in commit 79283e9. Preserve subsequent unrelated meal edits. Weekly salmon: eight portions, four 320 g packs. Eggs: twelve consumed; two 18-count cartons per three weeks.",
     "2026-11-19: Remove mushrooms from all Plan 2 meals and their dedicated cooking task/oil. Pasta vegetables consist only of tomato in the existing 150 mL Catelli sauce per meal; no fresh tomato added. Spinach remains two 284 g bags weekly, one bag per batch, 142 g per potato meal. From each pasta/potato estimate subtract 56.75 g raw cremini mushrooms and 1/16 tsp olive oil using current nutrition_basis/micronutrient_basis composition; seasonings were not separately quantified. Reaggregate displayed daily nutrients and energy. Historical D/B12/iodine totals adjusted by the removed trace contributions; remaining historical uncertainty retained.",
-    "2026-11-19: Add half a raw orange bell pepper to each wrap, two wraps/one pepper weekly. Planned as 85 g per half using the existing generic raw sweet-pepper composition proxy; actual edible yield varies. Wash, dry, deseed and slice, no roasting or added oil. Recompute meal and daily nutrition and shopping subtotal. Trace iodine increment is about 0.12 mcg/day, below displayed precision."
+    "2026-11-19: Add half a raw orange bell pepper to each wrap, two wraps/one pepper weekly. Planned as 85 g per half using the existing generic raw sweet-pepper composition proxy; actual edible yield varies. Wash, dry, deseed and slice, no roasting or added oil. Recompute meal and daily nutrition and shopping subtotal. Trace iodine increment is about 0.12 mcg/day, below displayed precision.",
+    "2026-11-19: Increase each rice meal from 48 g to 58 g dry rice (+10 g). Cook 116 g dry rice per half-week batch and divide equally between meals 2 and 5; weekly use 232 g. Rice and water volumes scaled proportionally from historical 120 mL batch to about 145 mL. Add 0.1 recipe unit of the existing dry rice macro/micronutrient composition and reaggregate daily totals. Potatoes unchanged pending packaging choice."
   ],
   "removedMushroomPerMeal": {
     "kcal": 14.985,
@@ -52,5 +53,23 @@
     "vitaminD": 0.0,
     "vitaminB12": 0.0,
     "iodine": 0.425
+  },
+  "addedDryRicePerMeal": {
+    "kcal": 36.5,
+    "protein": 0.7130000000000001,
+    "carbs": 8.0,
+    "fat": 0.066,
+    "saturatedFat": 0.018,
+    "fibre": 0.13,
+    "sugar": 0.012,
+    "sodium": 0.5,
+    "cholesterol": 0.0,
+    "epaDha": 0.0,
+    "calcium": 2.8000000000000003,
+    "iron": 0.08000000000000002,
+    "potassium": 11.5,
+    "vitaminD": 0.0,
+    "vitaminB12": 0.0,
+    "iodine": 0.020000000000000004
   }
 }
