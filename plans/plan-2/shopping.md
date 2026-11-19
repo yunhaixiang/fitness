@@ -30,10 +30,10 @@ visual: true
 <td style="text-align: right;">1盒 / 周</td>
 <td style="text-align: right;"><a href="https://www.walmart.ca/en/ip/swiss-chalet-smoky-bbq-pork-back-ribs-600g/6000197977827">$12.97</a></td>
 </tr>
-<tr data-price-id="3" data-weekly-cost="41.88">
+<tr data-price-id="3" data-weekly-cost="20.94">
 <td>三文鱼</td>
 <td><a href="https://www.walmart.ca/en/ip/Your-Fresh-Market-Coho-Salmon-Portions/6000208252814">Your Fresh Market Coho Salmon Portions</a><br>每盒2块，按320 g / 盒计算</td>
-<td style="text-align: right;">4盒（8块）/ 周</td>
+<td style="text-align: right;">2盒（4块）/ 周</td>
 <td style="text-align: right;"><a href="https://www.walmart.ca/en/ip/Your-Fresh-Market-Coho-Salmon-Portions/6000208252814">$10.47</a></td>
 </tr>
 <tr data-price-id="4" data-weekly-cost="15.96">
@@ -66,11 +66,11 @@ visual: true
 <td style="text-align: right;">1瓶 / 周</td>
 <td style="text-align: right;"><a href="https://www.walmart.ca/en/ip/Fuze-Iced-Tea-Zero-Sugar-Lemon-Bottle/39X12Q1LJGX0">$2.77</a></td>
 </tr>
-<tr data-price-id="9" data-weekly-cost="2.98">
-<td>土豆</td>
-<td><a href="https://www.walmart.ca/en/ip/the-little-potato-company-fresh-little-potatoes-15lb-little-yellows/6000201597418">The Little Potato Company Little Yellows（Boomer Gold）</a><br>680 g / 袋</td>
-<td style="text-align: right;">1袋 / 周</td>
-<td style="text-align: right;"><a href="https://www.walmart.ca/en/ip/the-little-potato-company-fresh-little-potatoes-15lb-little-yellows/6000201597418">$2.98</a></td>
+<tr data-price-id="9" data-weekly-cost="6.27">
+<td>黄土豆</td>
+<td><a href="https://www.walmart.ca/en/ip/Your-Fresh-Market-Organic-Yellow-Potatoes-3-lb-1-36-kg/6000206454064">Your Fresh Market Organic Yellow Potatoes</a><br>1.36 kg / 袋</td>
+<td>1袋 / 周；四顿各340 g</td>
+<td>$6.27</td>
 </tr>
 <tr data-price-id="10" data-weekly-cost="2.74">
 <td>豌豆，胡萝卜</td>
@@ -199,11 +199,12 @@ visual: true
 <td style="text-align: right;"><a href="https://www.walmart.ca/fr/ip/leanfit-sport-creatine-monohydrate-en-poudre-non-aromatis-300-g-5-g-de-cratine-par-portion-certification-informed-choice-cratine-micronise-et-de-quali/6000208594600">$32.97</a></td>
 </tr>
 <tr data-price-id="38" data-weekly-cost="1.17" data-purchase-group="weekly"><td data-en="Orange Bell Pepper">橙甜椒</td><td><a href="https://www.walmart.ca/en/ip/SUNSET-Orange-Pepper-Single-0-12-0-24-KG/6000197381989">SUNSET Orange Pepper</a><br><span data-en="Sold Individually · About 170 g Each">单颗售卖 · 每个约170 g</span></td><td data-en="1 / Week">1个 / 周</td><td><a href="https://www.walmart.ca/en/ip/SUNSET-Orange-Pepper-Single-0-12-0-24-KG/6000197381989">$1.17 / Avg.</a></td></tr>
+<tr data-price-id="32" data-weekly-cost="19.60" data-purchase-group="weekly"><td data-en="Tilapia">罗非鱼</td><td><a href="https://www.walmart.ca/en/ip/Your-Fresh-Market-Tilapia-Fillets-2-pieces-0-30-0-40-KG/6000203880047">Your Fresh Market Tilapia Fillets</a><br><span data-en="2 Fillets · 300–400 g / Tray">2块 · 300–400 g / 盒</span></td><td data-en="2 Trays / Week">2盒（4块）/ 周</td><td><a href="https://www.walmart.ca/en/ip/Your-Fresh-Market-Tilapia-Fillets-2-pieces-0-30-0-40-KG/6000203880047">$2.80 / 100 g</a></td></tr>
 <tr>
 <td>每周合计</td>
 <td>—</td>
 <td style="text-align: right;">—</td>
-<td style="text-align: right;">$145.98</td>
+<td style="text-align: right;">$147.93</td>
 </tr>
 </tbody>
 </table>

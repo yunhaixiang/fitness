@@ -16,7 +16,8 @@
     "2026-11-10: User confirmed the original pasta protein is coho salmon, not haddock. Restore four 160 g salmon portions per week and their original seasonings by reversing the isolated substitution in commit 79283e9. Preserve subsequent unrelated meal edits. Weekly salmon: eight portions, four 320 g packs. Eggs: twelve consumed; two 18-count cartons per three weeks.",
     "2026-11-19: Remove mushrooms from all Plan 2 meals and their dedicated cooking task/oil. Pasta vegetables consist only of tomato in the existing 150 mL Catelli sauce per meal; no fresh tomato added. Spinach remains two 284 g bags weekly, one bag per batch, 142 g per potato meal. From each pasta/potato estimate subtract 56.75 g raw cremini mushrooms and 1/16 tsp olive oil using current nutrition_basis/micronutrient_basis composition; seasonings were not separately quantified. Reaggregate displayed daily nutrients and energy. Historical D/B12/iodine totals adjusted by the removed trace contributions; remaining historical uncertainty retained.",
     "2026-11-19: Add half a raw orange bell pepper to each wrap, two wraps/one pepper weekly. Planned as 85 g per half using the existing generic raw sweet-pepper composition proxy; actual edible yield varies. Wash, dry, deseed and slice, no roasting or added oil. Recompute meal and daily nutrition and shopping subtotal. Trace iodine increment is about 0.12 mcg/day, below displayed precision.",
-    "2026-11-19: Increase each rice meal from 48 g to 58 g dry rice (+10 g). Cook 116 g dry rice per half-week batch and divide equally between meals 2 and 5; weekly use 232 g. Rice and water volumes scaled proportionally from historical 120 mL batch to about 145 mL. Add 0.1 recipe unit of the existing dry rice macro/micronutrient composition and reaggregate daily totals. Potatoes unchanged pending packaging choice."
+    "2026-11-19: Increase each rice meal from 48 g to 58 g dry rice (+10 g). Cook 116 g dry rice per half-week batch and divide equally between meals 2 and 5; weekly use 232 g. Rice and water volumes scaled proportionally from historical 120 mL batch to about 145 mL. Add 0.1 recipe unit of the existing dry rice macro/micronutrient composition and reaggregate daily totals. Potatoes unchanged pending packaging choice.",
+    "2026-11-19: Potato meals now use 340 g yellow potatoes and one tilapia fillet (175 g raw estimate) instead of 170 g little potatoes and 160 g coho salmon. Weekly potatoes: one Your Fresh Market Organic Yellow Potatoes 1.36 kg bag, $6.27 public price; retain previous potato composition as explicit planning proxy, not a verified new-product label. Weekly tilapia: four fillets / two 300–400 g trays modeled as 350 g per tray at $2.80/100 g. Salmon remains four160 g fillets in pasta meals (two packs). Existing oil and seasonings unchanged. Apply existing ingredient-composition deltas, reaggregate macros/minerals; update historical daily vitamin D/B12/iodine/EPA+DHA estimates by four meal deltas per week."
   ],
   "removedMushroomPerMeal": {
     "kcal": 14.985,
@@ -71,5 +72,23 @@
     "vitaminD": 0.0,
     "vitaminB12": 0.0,
     "iodine": 0.020000000000000004
+  },
+  "tilapiaPotatoDeltaPerMeal": {
+    "kcal": 35.636363636363626,
+    "protein": 4.198909090909087,
+    "carbs": 24.727272727272727,
+    "fat": -9.297,
+    "saturatedFat": -1.8818500000000002,
+    "fibre": 3.090909090909091,
+    "sugar": 1.5454545454545454,
+    "sodium": 15.799999999999997,
+    "cholesterol": 5.8999999999999915,
+    "epaDha": -1.77035,
+    "calcium": 18.699999999999996,
+    "iron": 1.8130000000000002,
+    "potassium": 531.0,
+    "vitaminD": -13.311,
+    "vitaminB12": -1.5070000000000001,
+    "iodine": -11.179411200000002
   }
 }

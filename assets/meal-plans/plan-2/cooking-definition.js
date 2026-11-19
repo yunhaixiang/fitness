@@ -464,8 +464,8 @@
     {
       "id": "prep-salmon",
       "label": [
-        "备三文鱼",
-        "Prepare Salmon"
+        "备三文鱼和罗非鱼",
+        "Prepare Salmon and Tilapia"
       ],
       "note": [
         "",
@@ -514,8 +514,8 @@
     {
       "id": "salmon-start",
       "label": [
-        "放入三文鱼",
-        "Load Salmon"
+        "放入三文鱼和罗非鱼",
+        "Load Salmon and Tilapia"
       ],
       "note": [
         "放好并启动后勾选",
@@ -536,8 +536,8 @@
     {
       "id": "salmon",
       "label": [
-        "确认三文鱼熟透、取出",
-        "Check and Remove Salmon"
+        "确认两种鱼熟透、取出",
+        "Check and Remove Both Fish"
       ],
       "note": [
         "按熟度确认；等待期间可做其他任务",

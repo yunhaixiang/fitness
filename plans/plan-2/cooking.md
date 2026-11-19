@@ -40,8 +40,8 @@ meal_activities_script: /assets/meal-plans/plan-2/meal-activities.js
 <ol class="cooking-source-en" lang="en" hidden><li>Set the oven to 400°F and start preheating.</li></ol>
 </li>
 <li class="cooking-task-source">
-<ol class="cooking-source-zh" lang="zh"><li>🥔 小土豆340 g洗净。</li><li>拌🫒 油½茶匙、🧂 盐⅛茶匙、黑胡椒⅛茶匙、🧄 蒜粉¼茶匙、🧅 洋葱粉¼茶匙。</li></ol>
-<ol class="cooking-source-en" lang="en" hidden><li>Wash 340 g little 🥔 potatoes.</li><li>Toss with ½ tsp 🫒 oil, ⅛ tsp 🧂 salt, ⅛ tsp black pepper, ¼ tsp 🧄 garlic powder and ¼ tsp 🧅 onion powder.</li></ol>
+<ol class="cooking-source-zh" lang="zh"><li>🥔 黄土豆半袋（680 g）洗净，切成大小相近的薯角；烤好后均分两份，每份对应生重340 g。</li><li>拌🫒 油½茶匙、🧂 盐⅛茶匙、黑胡椒⅛茶匙、🧄 蒜粉¼茶匙、🧅 洋葱粉¼茶匙。</li></ol>
+<ol class="cooking-source-en" lang="en" hidden><li>Wash half a bag (680 g) of yellow 🥔 potatoes and cut into evenly sized wedges; divide the cooked batch equally; each portion corresponds to 340 g raw potatoes.</li><li>Toss with ½ tsp 🫒 oil, ⅛ tsp 🧂 salt, ⅛ tsp black pepper, ¼ tsp 🧄 garlic powder and ¼ tsp 🧅 onion powder.</li></ol>
 </li>
 <li class="cooking-task-source">
 <ol class="cooking-source-zh" lang="zh"><li>🍗 鸡腿4块（465 g）擦干。</li><li>拌🫒 油½茶匙、🧂 盐⅛茶匙、🧄 蒜粉½茶匙、🧅 洋葱粉½茶匙、🌶️ 红椒粉1茶匙、🌿 牛至½茶匙。</li><li>前半周备料时，后半周鸡腿分装冷冻。</li></ol>
@@ -123,8 +123,8 @@ meal_activities_script: /assets/meal-plans/plan-2/meal-activities.js
 <h2 id="air-fryer" data-en="Air Fryer">空气炸锅</h2>
 <ol>
 <li class="cooking-task-source">
-<ol class="cooking-source-zh" lang="zh"><li>🐟 三文鱼4块（640 g）擦干。</li><li>拌🫒 油½茶匙、🧂 盐⅛茶匙、黑胡椒½茶匙、🌶️ 红椒粉1茶匙。</li><li>前半周备料时，后半周三文鱼冷冻。</li></ol>
-<ol class="cooking-source-en" lang="en" hidden><li>Pat dry 4 🐟 salmon portions (640 g).</li><li>Season with ½ tsp 🫒 oil, ⅛ tsp 🧂 salt, ½ tsp black pepper and 1 tsp 🌶️ paprika.</li><li>Freeze the second-half salmon during the first cooking session.</li></ol>
+<ol class="cooking-source-zh" lang="zh"><li>🐟 三文鱼2块（320 g）和罗非鱼2块（约350 g）擦干。</li><li>拌🫒 油½茶匙、🧂 盐⅛茶匙、黑胡椒½茶匙、🌶️ 红椒粉1茶匙。</li><li>前半周备料时，后半周三文鱼和罗非鱼冷冻。</li></ol>
+<ol class="cooking-source-en" lang="en" hidden><li>Pat dry 2 🐟 salmon portions (320 g) and 2 tilapia fillets (about 350 g).</li><li>Season with ½ tsp 🫒 oil, ⅛ tsp 🧂 salt, ½ tsp black pepper and 1 tsp 🌶️ paprika.</li><li>Freeze the second-half salmon and tilapia during the first cooking session.</li></ol>
 </li>
 <li class="cooking-task-source">
 <ol class="cooking-source-zh" lang="zh"><li>空气炸锅设为400°F，启动预热。</li></ol>
@@ -136,20 +136,20 @@ meal_activities_script: /assets/meal-plans/plan-2/meal-activities.js
 </li>
 <li class="cooking-task-source">
 <ol lang="zh-CN" class="cooking-source-zh">
-<li>将备好的三文鱼放入预热至400°F的空气炸锅，开始烹调后勾选。</li>
+<li>将备好的三文鱼和罗非鱼单层放入预热至400°F的空气炸锅，开始烹调后勾选。</li>
 <li>约8分钟后检查熟度。</li>
 </ol>
 <ol lang="en" class="cooking-source-en" hidden>
-<li>Load the prepared salmon into the air fryer preheated to 400°F and check after starting.</li>
+<li>Load the prepared salmon and tilapia in a single layer into the air fryer preheated to 400°F and check after starting.</li>
 <li>Check for doneness after about 8 minutes.</li>
 </ol>
 </li>
 <li class="cooking-task-source">
 <ol lang="zh-CN" class="cooking-source-zh">
-<li>确认熟度后取出：🐟 400°F烤8分钟起检查至熟透；第3、4、6、7盘各1块。</li>
+<li>确认熟度后取出：🐟 400°F烤8分钟起检查至熟透；三文鱼放第3、6盘，罗非鱼放第4、7盘，各1块；炸篮装不下时分批。</li>
 </ol>
 <ol lang="en" class="cooking-source-en" hidden>
-<li>Check doneness before removing: Air-fry 🐟 salmon at 400°F, checking from 8 minutes until cooked through; place 1 portion each in meals 3, 4, 6 and 7.</li>
+<li>Check doneness before removing: Air-fry 🐟 salmon and tilapia at 400°F, checking from 8 minutes until cooked through; place salmon in meals 3 and 6 and tilapia in meals 4 and 7, one fillet each. Cook in batches if the basket is too small.</li>
 </ol>
 </li>
 </ol>
