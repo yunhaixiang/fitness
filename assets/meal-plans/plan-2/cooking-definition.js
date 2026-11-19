@@ -584,21 +584,6 @@
       "minutes": 8
     },
     {
-      "id": "mushroom",
-      "label": [
-        "蘑菇",
-        "Mushrooms"
-      ],
-      "note": [
-        "",
-        ""
-      ],
-      "group": "small-wok",
-      "before": [],
-      "link": "#cook-mushroom",
-      "minutes": 7
-    },
-    {
       "id": "tomato",
       "label": [
         "拌番茄意面",
@@ -669,7 +654,6 @@
         "salmon",
         "spinach",
         "ground",
-        "mushroom",
         "tomato",
         "wrap"
       ],
@@ -758,7 +742,6 @@
       "small-wok",
       "small-wok",
       [
-        "mushroom",
         "tomato"
       ]
     ],

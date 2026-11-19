@@ -72,6 +72,6 @@ test('Plan 2 uses eight salmon portions, no haddock, and twelve eggs weekly',()=
  assert.match(cooking,/三文鱼4块（640 g）/);
  assert.match(cooking,/第3、4、6、7盘各1块/);
  assert.ok(!definition.nodes.some(n=>n.id==='haddock'));
- assert.equal(+data.meals.pasta.kcal,718);
- assert.equal(+data.meals.pasta.protein,65.5);
+ assert.equal(+data.meals.pasta.kcal,703);
+ assert.equal(+data.meals.pasta.protein,64.1);
 });

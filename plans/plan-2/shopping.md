@@ -78,12 +78,6 @@ visual: true
 <td style="text-align: right;">2罐 / 周</td>
 <td style="text-align: right;"><a href="https://www.walmart.ca/en/ip/Great-Value-Peas-and-Carrots-398-mL/5YDQIJZT1APQ">$1.37</a></td>
 </tr>
-<tr data-price-id="11" data-weekly-cost="4.88">
-<td>蘑菇</td>
-<td><a href="https://www.walmart.ca/en/ip/mushrooms-sliced-cremini-your-fresh-market/6000196148725">Your Fresh Market Sliced Cremini Mushrooms</a><br>227 g / 盒</td>
-<td style="text-align: right;">2盒 / 周</td>
-<td style="text-align: right;"><a href="https://www.walmart.ca/en/ip/mushrooms-sliced-cremini-your-fresh-market/6000196148725">$2.44</a></td>
-</tr>
 <tr data-price-id="12" data-weekly-cost="7.22">
 <td>菠菜</td>
 <td><a href="https://www.instacart.ca/store/products/347630-popeye-spinach-10-oz">Popeye Superfood Spinach</a><br>284 g / 袋</td>
@@ -208,7 +202,7 @@ visual: true
 <td>每周合计</td>
 <td>—</td>
 <td style="text-align: right;">—</td>
-<td style="text-align: right;">$149.69</td>
+<td style="text-align: right;">$144.81</td>
 </tr>
 </tbody>
 </table>

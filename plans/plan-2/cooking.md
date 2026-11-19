@@ -234,10 +234,6 @@ meal_activities_script: /assets/meal-plans/plan-2/meal-activities.js
 <h2 id="small-wok" data-en="Saucepan">小锅</h2>
 <ol>
 <li class="cooking-task-source">
-<ol class="cooking-source-zh" lang="zh"><li>🍄 蘑菇227 g，加🫒 油¼茶匙、黑胡椒¼茶匙、🧄 蒜粉½茶匙、🧅 洋葱粉½茶匙。</li><li>炒约7分钟；均分到第3、4、6、7盘。</li></ol>
-<ol class="cooking-source-en" lang="en" hidden><li>Season 227 g 🍄 mushrooms with ¼ tsp 🫒 oil, ¼ tsp black pepper, ½ tsp 🧄 garlic powder and ½ tsp 🧅 onion powder.</li><li>Sauté for about 7 minutes; divide equally between meals 3, 4, 6 and 7.</li></ol>
-</li>
-<li class="cooking-task-source">
 <ol class="cooking-source-zh" lang="zh"><li>🫒 油½茶匙，加黑胡椒¼茶匙、🧄 蒜粉½茶匙、🌿 意式香料½茶匙。</li><li>倒入🍅 Catelli番茄罗勒意面酱300 mL，煮2–3分钟；拌入🍝 意面再煮3分钟。</li><li>均分到第3、6盘。</li></ol>
 <ol class="cooking-source-en" lang="en" hidden><li>Heat ½ tsp 🫒 oil with ¼ tsp black pepper, ½ tsp 🧄 garlic powder and ½ tsp 🌿 Italian seasoning.</li><li>Add 300 mL 🍅 Catelli Tomato &amp; Basil Pasta Sauce; simmer for 2–3 minutes, then toss with the 🍝 spaghetti for 3 minutes.</li><li>Divide equally between meals 3 and 6.</li></ol>
 </li>
@@ -245,8 +241,8 @@ meal_activities_script: /assets/meal-plans/plan-2/meal-activities.js
 <h2 id="large-wok" data-en="Wok">大锅</h2>
 <ol>
 <li class="cooking-task-source">
-<ol class="cooking-source-zh" lang="zh"><li>🥬 菠菜284 g，加🫒 油1茶匙、🧄 蒜粉¼茶匙、🧅 洋葱粉¼茶匙。</li><li>炒约7分钟；均分到第4、7盘。</li></ol>
-<ol class="cooking-source-en" lang="en" hidden><li>Sauté 284 g 🥬 spinach with 1 tsp 🫒 oil, ¼ tsp 🧄 garlic powder and ¼ tsp 🧅 onion powder for about 7 minutes.</li><li>Divide equally between meals 4 and 7.</li></ol>
+<ol class="cooking-source-zh" lang="zh"><li>🥬 菠菜1袋（284 g，每周2袋），加🫒 油1茶匙、🧄 蒜粉¼茶匙、🧅 洋葱粉¼茶匙。</li><li>炒约7分钟；均分到第4、7盘。</li></ol>
+<ol class="cooking-source-en" lang="en" hidden><li>Sauté 1 bag (284 g; 2 bags per week) of 🥬 spinach with 1 tsp 🫒 oil, ¼ tsp 🧄 garlic powder and ¼ tsp 🧅 onion powder for about 7 minutes.</li><li>Divide equally between meals 4 and 7.</li></ol>
 </li>
 <li class="cooking-task-source">
 <ol class="cooking-source-zh" lang="zh"><li>🫛🥕 豌豆胡萝卜1罐沥干。</li><li>锅内加🫒 油½茶匙，中火炒🍗 鸡肉末454 g至中心74°C。</li><li>加入豌豆胡萝卜、🧄 蒜粉¼茶匙、🧅 洋葱粉¼茶匙、🥣 减盐酱油3茶匙、鸡粉⅛茶匙，炒热拌匀；均分到第2、5盘。</li><li>前半周备料时，后半周的生鸡肉末冷冻。</li></ol>

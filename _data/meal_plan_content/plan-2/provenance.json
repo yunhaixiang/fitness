@@ -13,6 +13,25 @@
   ],
   "aggregation": "Daily macros, reported minerals and energy are recomputed from the restored per-meal estimates to avoid historical rounding drift. Sodium adds 12 Fresca cans at 35 mg per can. Other historical micronutrient estimates are retained. The expenditure baseline is shared with Plan 1.",
   "corrections": [
-    "2026-11-10: User confirmed the original pasta protein is coho salmon, not haddock. Restore four 160 g salmon portions per week and their original seasonings by reversing the isolated substitution in commit 79283e9. Preserve subsequent unrelated meal edits. Weekly salmon: eight portions, four 320 g packs. Eggs: twelve consumed; two 18-count cartons per three weeks."
-  ]
+    "2026-11-10: User confirmed the original pasta protein is coho salmon, not haddock. Restore four 160 g salmon portions per week and their original seasonings by reversing the isolated substitution in commit 79283e9. Preserve subsequent unrelated meal edits. Weekly salmon: eight portions, four 320 g packs. Eggs: twelve consumed; two 18-count cartons per three weeks.",
+    "2026-11-19: Remove mushrooms from all Plan 2 meals and their dedicated cooking task/oil. Pasta vegetables consist only of tomato in the existing 150 mL Catelli sauce per meal; no fresh tomato added. Spinach remains two 284 g bags weekly, one bag per batch, 142 g per potato meal. From each pasta/potato estimate subtract 56.75 g raw cremini mushrooms and 1/16 tsp olive oil using current nutrition_basis/micronutrient_basis composition; seasonings were not separately quantified. Reaggregate displayed daily nutrients and energy. Historical D/B12/iodine totals adjusted by the removed trace contributions; remaining historical uncertainty retained."
+  ],
+  "removedMushroomPerMeal": {
+    "kcal": 14.985,
+    "protein": 1.41875,
+    "carbs": 2.44025,
+    "fat": 0.338,
+    "saturatedFat": 0.046695,
+    "fibre": 0.34049999999999997,
+    "sugar": 0.9761,
+    "sodium": 3.4050000000000002,
+    "cholesterol": 0.0,
+    "epaDha": 0.0,
+    "calcium": 10.215,
+    "iron": 0.227,
+    "potassium": 254.24,
+    "vitaminD": 0.05675,
+    "vitaminB12": 0.05675,
+    "iodine": 0.5675
+  }
 }
