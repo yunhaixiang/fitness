@@ -40,8 +40,8 @@ meal_activities_script: /assets/meal-plans/plan-2/meal-activities.js
 <ol class="cooking-source-en" lang="en" hidden><li>Set the oven to 400°F and start preheating.</li></ol>
 </li>
 <li class="cooking-task-source">
-<ol class="cooking-source-zh" lang="zh"><li>🥔 黄土豆半袋（680 g）洗净，切成大小相近的薯角；烤好后均分两份，每份对应生重340 g。</li><li>拌🫒 橄榄油1½茶匙、🧂 盐⅛茶匙、黑胡椒⅛茶匙、🧄 蒜粉¼茶匙、🧅 洋葱粉¼茶匙。</li></ol>
-<ol class="cooking-source-en" lang="en" hidden><li>Wash half a bag (680 g) of yellow 🥔 potatoes and cut into evenly sized wedges; divide the cooked batch equally; each portion corresponds to 340 g raw potatoes.</li><li>Toss with 1½ tsp 🫒 olive oil, ⅛ tsp 🧂 salt, ⅛ tsp black pepper, ¼ tsp 🧄 garlic powder and ¼ tsp 🧅 onion powder.</li></ol>
+<ol class="cooking-source-zh" lang="zh"><li>🥔 黄土豆半袋（680 g）洗净，切成大小相近的薯角；烤好后均分两份，每份对应生重340 g。</li><li>拌🫒 油½茶匙、🧂 盐⅛茶匙、黑胡椒⅛茶匙、🧄 蒜粉¼茶匙、🧅 洋葱粉¼茶匙。</li></ol>
+<ol class="cooking-source-en" lang="en" hidden><li>Wash half a bag (680 g) of yellow 🥔 potatoes and cut into evenly sized wedges; divide the cooked batch equally; each portion corresponds to 340 g raw potatoes.</li><li>Toss with ½ tsp 🫒 oil, ⅛ tsp 🧂 salt, ⅛ tsp black pepper, ¼ tsp 🧄 garlic powder and ¼ tsp 🧅 onion powder.</li></ol>
 </li>
 <li class="cooking-task-source">
 <ol class="cooking-source-zh" lang="zh"><li>🍗 鸡腿4块（465 g）擦干。</li><li>拌🫒 油½茶匙、🧂 盐⅛茶匙、🧄 蒜粉½茶匙、🧅 洋葱粉½茶匙、🌶️ 红椒粉1茶匙、🌿 牛至½茶匙。</li><li>前半周备料时，后半周鸡腿分装冷冻。</li></ol>

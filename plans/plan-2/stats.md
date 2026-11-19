@@ -12,7 +12,7 @@ nutrition: true
 
 <figure class="nutrition-overview" aria-label="每日能量与每周赤字或盈余">
   <div class="nutrition-overview-main">
-    <div class="nutrition-ring" style="--intake-share:80.0%" aria-label="每日摄入与消耗">
+    <div class="nutrition-ring" style="--intake-share:79.5%" aria-label="每日摄入与消耗">
       <div class="nutrition-ring-center">
         <span data-energy-label="dailyDeficit">日均能量差</span>
         <strong data-energy="dailyDeficit">— <small>kcal／天</small></strong>
@@ -20,7 +20,7 @@ nutrition: true
     </div>
     <div class="nutrition-overview-key">
       <p class="nutrition-overview-eyebrow">能量概览 · 不含放纵餐</p>
-      <div class="nutrition-key-row nutrition-key-intake"><span>日均摄入</span><strong>1,809 <small>kcal／天</small></strong></div>
+      <div class="nutrition-key-row nutrition-key-intake"><span>日均摄入</span><strong>1,798 <small>kcal／天</small></strong></div>
       <div class="nutrition-key-row nutrition-key-burn"><span>日均消耗</span><strong data-energy="dailyBurn">— <small>kcal／天</small></strong></div>
       <div class="nutrition-key-row nutrition-key-deficit"><span data-energy-label="dailyDeficit">日均能量差</span><strong data-energy="dailyDeficit">— <small>kcal／天</small></strong></div>
       <div class="nutrition-key-row"><span data-energy-label="weeklyDeficit">每周能量差</span><strong data-energy="weeklyDeficit">— <small>kcal</small></strong></div>
@@ -107,7 +107,7 @@ nutrition: true
 <tbody>
 <tr data-nutrient="energy">
 <td>热量</td>
-<td style="text-align: right;">1,809 kcal</td>
+<td style="text-align: right;">1,798 kcal</td>
 <td>—</td>
 </tr>
 <tr data-macro="protein" data-nutrient="protein">
@@ -117,12 +117,12 @@ nutrition: true
 </tr>
 <tr data-macro="fat" data-nutrient="fat">
 <td>总脂肪</td>
-<td style="text-align: right;">61.8 g</td>
+<td style="text-align: right;">60.5 g</td>
 <td>—</td>
 </tr>
 <tr data-nutrient="saturatedFat">
 <td>饱和脂肪</td>
-<td style="text-align: right;">16.0 g</td>
+<td style="text-align: right;">15.8 g</td>
 <td>—</td>
 </tr>
 <tr data-macro="carbs" data-nutrient="carbs">
