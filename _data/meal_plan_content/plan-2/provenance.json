@@ -18,7 +18,8 @@
     "2026-11-19: Add half a raw orange bell pepper to each wrap, two wraps/one pepper weekly. Planned as 85 g per half using the existing generic raw sweet-pepper composition proxy; actual edible yield varies. Wash, dry, deseed and slice, no roasting or added oil. Recompute meal and daily nutrition and shopping subtotal. Trace iodine increment is about 0.12 mcg/day, below displayed precision.",
     "2026-11-19: Increase each rice meal from 48 g to 58 g dry rice (+10 g). Cook 116 g dry rice per half-week batch and divide equally between meals 2 and 5; weekly use 232 g. Rice and water volumes scaled proportionally from historical 120 mL batch to about 145 mL. Add 0.1 recipe unit of the existing dry rice macro/micronutrient composition and reaggregate daily totals. Potatoes unchanged pending packaging choice.",
     "2026-11-19: Potato meals now use 340 g yellow potatoes and one tilapia fillet (175 g raw estimate) instead of 170 g little potatoes and 160 g coho salmon. Weekly potatoes: one Your Fresh Market Organic Yellow Potatoes 1.36 kg bag, $6.27 public price; retain previous potato composition as explicit planning proxy, not a verified new-product label. Weekly tilapia: four fillets / two 300–400 g trays modeled as 350 g per tray at $2.80/100 g. Salmon remains four160 g fillets in pasta meals (two packs). Existing oil and seasonings unchanged. Apply existing ingredient-composition deltas, reaggregate macros/minerals; update historical daily vitamin D/B12/iodine/EPA+DHA estimates by four meal deltas per week.",
-    "2026-11-19: Plan 2 rice meals now use 45 g dry rice and 9 g Golden Curry roux each. Batch: 90 g dry rice (about 120 mL / half a standard cup; calibrate once), 18 g roux (one fifth of 90 g pack), divided into two meals. Weekly rice180 g, curry36 g; one90 g pack lasts2.5 weeks. Retain other seasoning/oil quantities. Curry is dissolved in about150 mL water with cooked ground chicken/vegetables and simmered; rice cooked separately with existing equal-volume water method. Existing curry label and rice composition used; carry forward prior recorded curry price$3.97, not newly verified. Added sugar historical estimate unchanged because curry total sugar is not a verified added-sugar amount."
+    "2026-11-19: Plan 2 rice meals now use 45 g dry rice and 9 g Golden Curry roux each. Batch: 90 g dry rice (about 120 mL / half a standard cup; calibrate once), 18 g roux (one fifth of 90 g pack), divided into two meals. Weekly rice180 g, curry36 g; one90 g pack lasts2.5 weeks. Retain other seasoning/oil quantities. Curry is dissolved in about150 mL water with cooked ground chicken/vegetables and simmered; rice cooked separately with existing equal-volume water method. Existing curry label and rice composition used; carry forward prior recorded curry price$3.97, not newly verified. Added sugar historical estimate unchanged because curry total sugar is not a verified added-sugar amount.",
+    "2026-11-19: Halve ground chicken in each Plan 2 curry rice meal from227 g to113.5 g; increase dry rice45 g to90 g. Retain9 g curry, two eggs, vegetables, oils and seasonings per meal. Batch227 g ground chicken (half454 g pack),180 g dry rice (about240 mL; calibrate cup once),18 g curry, split equally. Weekly454 g chicken/one pack,360 g rice. Reaggregate macro/mineral estimates using existing composition proxies; B12 daily estimate adjusted, D unchanged, iodine and EPA+DHA deltas below existing display precision. Cooking water retains prior equal-volume ratio. Pantry rice remains on-demand, so grocery subtotal decrease$7.98 excludes additional rice usage cost."
   ],
   "removedMushroomPerMeal": {
     "kcal": 14.985,
@@ -109,5 +110,23 @@
     "vitaminD": 0.0,
     "vitaminB12": 0.0,
     "iodine": -0.026000000000000002
+  },
+  "riceChickenRebalanceDeltaPerMeal": {
+    "kcal": 5.349999999999994,
+    "protein": -17.2215,
+    "carbs": 36.0,
+    "fat": -7.648000000000001,
+    "saturatedFat": -2.189,
+    "fibre": 0.5850000000000001,
+    "sugar": 0.054,
+    "sodium": -82.875,
+    "cholesterol": -102.15,
+    "epaDha": -0.0681,
+    "calcium": 5.789999999999999,
+    "iron": -0.5707,
+    "potassium": -540.72,
+    "vitaminD": 0.0,
+    "vitaminB12": -0.6356,
+    "iodine": -0.611029345
   }
 }

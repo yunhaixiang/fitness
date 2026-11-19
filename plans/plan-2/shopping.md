@@ -36,10 +36,10 @@ visual: true
 <td style="text-align: right;">2盒（4块）/ 周</td>
 <td style="text-align: right;"><a href="https://www.walmart.ca/en/ip/Your-Fresh-Market-Coho-Salmon-Portions/6000208252814">$10.47</a></td>
 </tr>
-<tr data-price-id="4" data-weekly-cost="15.96">
+<tr data-price-id="4" data-weekly-cost="7.98">
 <td>特瘦鸡肉末</td>
 <td><a href="https://www.walmart.ca/en/ip/Prime-Extra-Lean-Ground-Chicken-Raised-Without-Antibiotics-454-g/10243782">Prime Extra Lean Ground Chicken</a><br>454 g / 盒</td>
-<td style="text-align: right;">2盒 / 周</td>
+<td style="text-align: right;">1盒 / 周</td>
 <td style="text-align: right;"><a href="https://www.walmart.ca/en/ip/Prime-Extra-Lean-Ground-Chicken-Raised-Without-Antibiotics-454-g/10243782">$7.98</a></td>
 </tr>
 <tr data-price-id="5" data-weekly-cost="4.65" data-purchase-group="restock">
@@ -123,7 +123,7 @@ visual: true
 <tr data-price-id="19">
 <td>白米</td>
 <td><a href="https://www.walmart.ca/en/ip/Great-Value-Long-Grain-White-Rice/4UD9P76BEQB4">Great Value Long Grain White Rice</a><br>900 g / 袋</td>
-<td style="text-align: right;">按需补；每周180 g</td>
+<td style="text-align: right;">按需补；每周360 g</td>
 <td style="text-align: right;"><a href="https://www.walmart.ca/en/ip/Great-Value-Long-Grain-White-Rice/4UD9P76BEQB4">$3.47</a></td>
 </tr>
 <tr data-price-id="20">
@@ -205,7 +205,7 @@ visual: true
 <td>每周合计</td>
 <td>—</td>
 <td style="text-align: right;">—</td>
-<td style="text-align: right;">$149.52</td>
+<td style="text-align: right;">$141.54</td>
 </tr>
 </tbody>
 </table>

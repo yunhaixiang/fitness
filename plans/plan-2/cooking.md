@@ -13,8 +13,8 @@ meal_activities_script: /assets/meal-plans/plan-2/meal-activities.js
 <h2 id="rice" data-en="Rice Cooker">电饭煲</h2>
 <ol>
 <li class="cooking-task-source">
-<ol class="cooking-source-zh" lang="zh"><li>🍚 干米90 g（约½标准量杯／120 mL；首次称重核对刻度）淘洗沥干。</li><li>加💧 水约120 mL，放入电饭煲。</li></ol>
-<ol class="cooking-source-en" lang="en" hidden><li>Rinse and drain 90 g (about ½ standard cup / 120 mL; calibrate the cup by weighing once) 🍚 dry rice.</li><li>Add about 120 mL 💧 water to the rice cooker.</li></ol>
+<ol class="cooking-source-zh" lang="zh"><li>🍚 干米180 g（约1标准量杯／240 mL；首次称重核对刻度）淘洗沥干。</li><li>加💧 水约240 mL，放入电饭煲。</li></ol>
+<ol class="cooking-source-en" lang="en" hidden><li>Rinse and drain 180 g (about 1 standard cup / 240 mL; calibrate the cup by weighing once) 🍚 dry rice.</li><li>Add about 240 mL 💧 water to the rice cooker.</li></ol>
 </li>
 <li class="cooking-task-source">
 <ol lang="zh-CN" class="cooking-source-zh">
@@ -26,10 +26,10 @@ meal_activities_script: /assets/meal-plans/plan-2/meal-activities.js
 </li>
 <li class="cooking-task-source">
 <ol lang="zh-CN" class="cooking-source-zh">
-<li>约50分钟后，确认电饭煲完成煮饭，再开盖松散，均分到第2、5盘，每份对应生米45 g。</li>
+<li>约50分钟后，确认电饭煲完成煮饭，再开盖松散，均分到第2、5盘，每份对应生米90 g。</li>
 </ol>
 <ol lang="en" class="cooking-source-en" hidden>
-<li>After about 50 minutes, confirm the rice cycle is complete, then fluff and divide the 🍚 rice equally between meals 2 and 5 (45 g dry rice each).</li>
+<li>After about 50 minutes, confirm the rice cycle is complete, then fluff and divide the 🍚 rice equally between meals 2 and 5 (90 g dry rice each).</li>
 </ol>
 </li>
 </ol>
@@ -245,8 +245,8 @@ meal_activities_script: /assets/meal-plans/plan-2/meal-activities.js
 <ol class="cooking-source-en" lang="en" hidden><li>Sauté 1 bag (284 g; 2 bags per week) of 🥬 spinach with 1 tsp 🫒 oil, ¼ tsp 🧄 garlic powder and ¼ tsp 🧅 onion powder for about 7 minutes.</li><li>Divide equally between meals 4 and 7.</li></ol>
 </li>
 <li class="cooking-task-source">
-<ol class="cooking-source-zh" lang="zh"><li>🫛🥕 豌豆胡萝卜1罐沥干。</li><li>锅内加🫒 油½茶匙，中火炒🍗 鸡肉末454 g至中心74°C。</li><li>加入豌豆胡萝卜、🧄 蒜粉¼茶匙、🧅 洋葱粉¼茶匙、🥣 减盐酱油3茶匙、鸡粉⅛茶匙，炒热拌匀，留在锅中待加咖喱。</li><li>前半周备料时，后半周的生鸡肉末冷冻。</li></ol>
-<ol class="cooking-source-en" lang="en" hidden><li>Drain 1 can 🫛🥕 peas and carrots.</li><li>Heat ½ tsp 🫒 oil and cook 454 g 🍗 ground chicken over medium heat to 74°C.</li><li>Add the vegetables, ¼ tsp 🧄 garlic powder, ¼ tsp 🧅 onion powder, 3 tsp 🥣 reduced-sodium soy sauce and ⅛ tsp chicken stock powder; heat through and leave in the pan for the curry sauce.</li><li>Freeze the second-half raw ground chicken during the first cooking session.</li></ol>
+<ol class="cooking-source-zh" lang="zh"><li>🫛🥕 豌豆胡萝卜1罐沥干。</li><li>锅内加🫒 油½茶匙，中火炒🍗 鸡肉末半包（227 g）至中心74°C。</li><li>加入豌豆胡萝卜、🧄 蒜粉¼茶匙、🧅 洋葱粉¼茶匙、🥣 减盐酱油3茶匙、鸡粉⅛茶匙，炒热拌匀，留在锅中待加咖喱。</li><li>前半周备料时，剩下半包（227 g）生鸡肉末冷冻，留待后半周使用。</li></ol>
+<ol class="cooking-source-en" lang="en" hidden><li>Drain 1 can 🫛🥕 peas and carrots.</li><li>Heat ½ tsp 🫒 oil and cook half a pack (227 g) of 🍗 ground chicken over medium heat to 74°C.</li><li>Add the vegetables, ¼ tsp 🧄 garlic powder, ¼ tsp 🧅 onion powder, 3 tsp 🥣 reduced-sodium soy sauce and ⅛ tsp chicken stock powder; heat through and leave in the pan for the curry sauce.</li><li>During the first session, freeze the remaining half pack (227 g) of raw ground chicken for the second half of the week.</li></ol>
 </li>
 <li class="cooking-task-source">
 <ol class="cooking-source-zh" lang="zh"><li>🍛 90 g装咖喱切下⅕包（18 g），切碎。</li><li>鸡肉末锅中加💧 水约150 mL，暂时关火，加入咖喱搅拌至溶解。</li><li>重新开小火，开始煮约5分钟；过稠时少量加水。</li></ol>
