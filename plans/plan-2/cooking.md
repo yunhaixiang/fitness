@@ -252,12 +252,12 @@ meal_activities_script: /assets/meal-plans/plan-2/meal-activities.js
 <h2 id="finish" data-en="Finish">收尾</h2>
 <ol>
 <li class="cooking-task-source">
-<ol class="cooking-source-zh" lang="zh"><li>第1盘铺🌯 大号全麦卷饼皮1片，抹🥣 Chipotle蛋黄酱1茶匙（5 mL）。</li></ol>
-<ol class="cooking-source-en" lang="en" hidden><li>Lay 1 large whole-wheat 🌯 tortilla in meal container 1; spread with 1 tsp (5 mL) 🥣 Chipotle mayonnaise.</li></ol>
+<ol class="cooking-source-zh" lang="zh"><li>🫑 橙甜椒洗净擦干，取½个（约85 g）去籽、切细条；生切直接使用。剩余半个包好冷藏，留给下批卷饼。</li><li>第1盘铺🌯 大号全麦卷饼皮1片，抹🥣 Chipotle蛋黄酱1茶匙（5 mL）。</li></ol>
+<ol class="cooking-source-en" lang="en" hidden><li>Wash and dry 🫑 orange bell pepper; deseed and thinly slice ½ pepper (about 85 g) to use raw. Wrap and refrigerate the remaining half for the next batch.</li><li>Lay 1 large whole-wheat 🌯 tortilla in meal container 1; spread with 1 tsp (5 mL) 🥣 Chipotle mayonnaise.</li></ol>
 </li>
 <li class="cooking-task-source">
-<ol class="cooking-source-zh" lang="zh"><li>将掰碎的🍗 鸡腿和🥚 水煮蛋放入卷饼皮，卷好。</li></ol>
-<ol class="cooking-source-en" lang="en" hidden><li>Add the shredded 🍗 thighs and broken-up 🥚 boiled eggs to the tortilla and roll up.</li></ol>
+<ol class="cooking-source-zh" lang="zh"><li>将掰碎的🍗 鸡腿、🥚 水煮蛋和🫑 生橙甜椒条放入卷饼皮，卷好。</li></ol>
+<ol class="cooking-source-en" lang="en" hidden><li>Add the shredded 🍗 thighs, broken-up 🥚 boiled eggs and 🫑 raw orange bell pepper strips to the tortilla and roll up.</li></ol>
 </li>
 <li class="cooking-task-source">
 <ol class="cooking-source-zh" lang="zh"><li>餐盒入冰箱；🥚 水煮蛋随本批餐冷藏。</li></ol>

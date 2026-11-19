@@ -603,8 +603,8 @@
     {
       "id": "prep-bread",
       "label": [
-        "铺卷饼皮、抹酱",
-        "Lay Out Tortilla and Spread Sauce"
+        "切甜椒、铺卷饼皮、抹酱",
+        "Slice Pepper, Lay Out Tortilla and Spread Sauce"
       ],
       "note": [
         "",

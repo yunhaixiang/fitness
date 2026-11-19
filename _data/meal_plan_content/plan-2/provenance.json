@@ -14,7 +14,8 @@
   "aggregation": "Daily macros, reported minerals and energy are recomputed from the restored per-meal estimates to avoid historical rounding drift. Sodium adds 12 Fresca cans at 35 mg per can. Other historical micronutrient estimates are retained. The expenditure baseline is shared with Plan 1.",
   "corrections": [
     "2026-11-10: User confirmed the original pasta protein is coho salmon, not haddock. Restore four 160 g salmon portions per week and their original seasonings by reversing the isolated substitution in commit 79283e9. Preserve subsequent unrelated meal edits. Weekly salmon: eight portions, four 320 g packs. Eggs: twelve consumed; two 18-count cartons per three weeks.",
-    "2026-11-19: Remove mushrooms from all Plan 2 meals and their dedicated cooking task/oil. Pasta vegetables consist only of tomato in the existing 150 mL Catelli sauce per meal; no fresh tomato added. Spinach remains two 284 g bags weekly, one bag per batch, 142 g per potato meal. From each pasta/potato estimate subtract 56.75 g raw cremini mushrooms and 1/16 tsp olive oil using current nutrition_basis/micronutrient_basis composition; seasonings were not separately quantified. Reaggregate displayed daily nutrients and energy. Historical D/B12/iodine totals adjusted by the removed trace contributions; remaining historical uncertainty retained."
+    "2026-11-19: Remove mushrooms from all Plan 2 meals and their dedicated cooking task/oil. Pasta vegetables consist only of tomato in the existing 150 mL Catelli sauce per meal; no fresh tomato added. Spinach remains two 284 g bags weekly, one bag per batch, 142 g per potato meal. From each pasta/potato estimate subtract 56.75 g raw cremini mushrooms and 1/16 tsp olive oil using current nutrition_basis/micronutrient_basis composition; seasonings were not separately quantified. Reaggregate displayed daily nutrients and energy. Historical D/B12/iodine totals adjusted by the removed trace contributions; remaining historical uncertainty retained.",
+    "2026-11-19: Add half a raw orange bell pepper to each wrap, two wraps/one pepper weekly. Planned as 85 g per half using the existing generic raw sweet-pepper composition proxy; actual edible yield varies. Wash, dry, deseed and slice, no roasting or added oil. Recompute meal and daily nutrition and shopping subtotal. Trace iodine increment is about 0.12 mcg/day, below displayed precision."
   ],
   "removedMushroomPerMeal": {
     "kcal": 14.985,
@@ -33,5 +34,23 @@
     "vitaminD": 0.05675,
     "vitaminB12": 0.05675,
     "iodine": 0.5675
+  },
+  "addedRawPepperPerWrap": {
+    "kcal": 26.349999999999998,
+    "protein": 0.8415,
+    "carbs": 5.1255,
+    "fat": 0.255,
+    "saturatedFat": 0.05014999999999999,
+    "fibre": 1.785,
+    "sugar": 3.57,
+    "sodium": 3.4,
+    "cholesterol": 0.0,
+    "epaDha": 0.0,
+    "calcium": 5.95,
+    "iron": 0.3655,
+    "potassium": 179.35,
+    "vitaminD": 0.0,
+    "vitaminB12": 0.0,
+    "iodine": 0.425
   }
 }
