@@ -13,8 +13,8 @@ meal_activities_script: /assets/meal-plans/plan-2/meal-activities.js
 <h2 id="rice" data-en="Rice Cooker">电饭煲</h2>
 <ol>
 <li class="cooking-task-source">
-<ol class="cooking-source-zh" lang="zh"><li>🍚 干米156 g（约210 mL；首次称重核对刻度）淘洗沥干。</li><li>加💧 水约210 mL，放入电饭煲。</li></ol>
-<ol class="cooking-source-en" lang="en" hidden><li>Rinse and drain 156 g (about 210 mL; calibrate the cup by weighing once) 🍚 dry rice.</li><li>Add about 210 mL 💧 water to the rice cooker.</li></ol>
+<ol class="cooking-source-zh" lang="zh"><li>🍚 干米135 g（约180 mL；首次称重核对刻度）淘洗沥干。</li><li>加💧 水约180 mL，放入电饭煲。</li></ol>
+<ol class="cooking-source-en" lang="en" hidden><li>Rinse and drain 135 g (about 180 mL; calibrate the cup by weighing once) 🍚 dry rice.</li><li>Add about 180 mL 💧 water to the rice cooker.</li></ol>
 </li>
 <li class="cooking-task-source">
 <ol lang="zh-CN" class="cooking-source-zh">
@@ -26,10 +26,10 @@ meal_activities_script: /assets/meal-plans/plan-2/meal-activities.js
 </li>
 <li class="cooking-task-source">
 <ol lang="zh-CN" class="cooking-source-zh">
-<li>约50分钟后，确认电饭煲完成煮饭，再开盖松散，均分到第2、5盘，每份对应生米78 g。</li>
+<li>约50分钟后，确认电饭煲完成煮饭，再开盖松散，均分到第2、5盘，每份对应生米67.5 g。</li>
 </ol>
 <ol lang="en" class="cooking-source-en" hidden>
-<li>After about 50 minutes, confirm the rice cycle is complete, then fluff and divide the 🍚 rice equally between meals 2 and 5 (78 g dry rice each).</li>
+<li>After about 50 minutes, confirm the rice cycle is complete, then fluff and divide the 🍚 rice equally between meals 2 and 5 (67.5 g dry rice each).</li>
 </ol>
 </li>
 </ol>
@@ -249,12 +249,12 @@ meal_activities_script: /assets/meal-plans/plan-2/meal-activities.js
 <ol class="cooking-source-en" lang="en" hidden><li>Drain 1 can 🫛🥕 peas and carrots.</li><li>Heat ½ tsp 🫒 oil and cook half a pack (227 g) of 🍗 ground chicken over medium heat to 74°C.</li><li>Add the vegetables, ¼ tsp 🧄 garlic powder, ¼ tsp 🧅 onion powder, 3 tsp 🥣 reduced-sodium soy sauce and ⅛ tsp chicken stock powder; heat through and leave in the pan for the curry sauce.</li><li>During the first session, freeze the remaining half pack (227 g) of raw ground chicken for the second half of the week.</li></ol>
 </li>
 <li class="cooking-task-source">
-<ol class="cooking-source-zh" lang="zh"><li>🍛 90 g装咖喱切下⅖包（36 g），切碎。</li><li>鸡肉末锅中加💧 水约300 mL，暂时关火，加入咖喱搅拌至溶解。</li><li>重新开小火，开始煮约5分钟；过稠时少量加水。</li></ol>
-<ol class="cooking-source-en" lang="en" hidden><li>Cut off ⅖ of the 90 g 🍛 curry pack (36 g) and chop it.</li><li>Add about 300 mL 💧 water to the ground chicken pan, turn off the heat, and stir in the roux until dissolved.</li><li>Return to low heat and start simmering for about 5 minutes; add a little water if too thick.</li></ol>
+<ol class="cooking-source-zh" lang="zh"><li>🍛 90 g装咖喱切下⅖包（36 g），切碎。</li><li>鸡肉末锅中加💧 水约300 mL和🫛 冷冻去壳毛豆60 g，煮至重新微沸；暂时关火，加入咖喱搅拌至溶解。</li><li>重新开小火，开始煮约5分钟；确认毛豆热透，包装有额外加热要求时按包装操作。过稠时少量加水；剩余毛豆密封继续冷冻。</li></ol>
+<ol class="cooking-source-en" lang="en" hidden><li>Cut off ⅖ of the 90 g 🍛 curry pack (36 g) and chop it.</li><li>Add about 300 mL 💧 water and 60 g 🫛 frozen shelled edamame to the ground chicken pan, return to a simmer, then turn off the heat, and stir in the roux until dissolved.</li><li>Return to low heat and start simmering for about 5 minutes; check the edamame is hot throughout and follow any additional package heating directions. Add water if too thick. Reseal and keep unused edamame frozen.</li></ol>
 </li>
 <li class="cooking-task-source">
-<ol class="cooking-source-zh" lang="zh"><li>🍛 确认咖喱已充分溶解、酱汁热透且浓稠合适；关火。</li><li>将鸡肉末、蔬菜和咖喱汁均分到第2、5盘，搭配🍚 米饭。</li></ol>
-<ol class="cooking-source-en" lang="en" hidden><li>Check that the 🍛 roux is fully dissolved and the sauce is hot with the desired consistency; turn off the heat.</li><li>Divide the chicken, vegetables and curry sauce equally between meals 2 and 5, alongside the 🍚 rice.</li></ol>
+<ol class="cooking-source-zh" lang="zh"><li>🍛 确认咖喱已充分溶解、酱汁热透且浓稠合适；关火。</li><li>将鸡肉末、毛豆、蔬菜和咖喱汁均分到第2、5盘，搭配🍚 米饭。</li></ol>
+<ol class="cooking-source-en" lang="en" hidden><li>Check that the 🍛 roux is fully dissolved and the sauce is hot with the desired consistency; turn off the heat.</li><li>Divide the chicken, edamame, vegetables and curry sauce equally between meals 2 and 5, alongside the 🍚 rice.</li></ol>
 </li>
 </ol>
 <h2 id="finish" data-en="Finish">收尾</h2>

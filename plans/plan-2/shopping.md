@@ -123,7 +123,7 @@ visual: true
 <tr data-price-id="19">
 <td>白米</td>
 <td><a href="https://www.walmart.ca/en/ip/Great-Value-Long-Grain-White-Rice/4UD9P76BEQB4">Great Value Long Grain White Rice</a><br>900 g / 袋</td>
-<td style="text-align: right;">按需补；每周312 g</td>
+<td style="text-align: right;">按需补；每周270 g</td>
 <td style="text-align: right;"><a href="https://www.walmart.ca/en/ip/Great-Value-Long-Grain-White-Rice/4UD9P76BEQB4">$3.47</a></td>
 </tr>
 <tr data-price-id="20">
@@ -201,11 +201,12 @@ visual: true
 <tr data-price-id="38" data-weekly-cost="1.17" data-purchase-group="weekly"><td data-en="Orange Bell Pepper">橙甜椒</td><td><a href="https://www.walmart.ca/en/ip/SUNSET-Orange-Pepper-Single-0-12-0-24-KG/6000197381989">SUNSET Orange Pepper</a><br><span data-en="Sold Individually · About 170 g Each">单颗售卖 · 每个约170 g</span></td><td data-en="1 / Week">1个 / 周</td><td><a href="https://www.walmart.ca/en/ip/SUNSET-Orange-Pepper-Single-0-12-0-24-KG/6000197381989">$1.17 / Avg.</a></td></tr>
 <tr data-price-id="32" data-weekly-cost="19.60" data-purchase-group="weekly"><td data-en="Tilapia">罗非鱼</td><td><a href="https://www.walmart.ca/en/ip/Your-Fresh-Market-Tilapia-Fillets-2-pieces-0-30-0-40-KG/6000203880047">Your Fresh Market Tilapia Fillets</a><br><span data-en="2 Fillets · 300–400 g / Tray">2块 · 300–400 g / 盒</span></td><td data-en="2 Trays / Week">2盒（4块）/ 周</td><td><a href="https://www.walmart.ca/en/ip/Your-Fresh-Market-Tilapia-Fillets-2-pieces-0-30-0-40-KG/6000203880047">$2.80 / 100 g</a></td></tr>
 <tr data-price-id="43" data-weekly-cost="3.18" data-purchase-group="restock"><td data-en="Curry Roux">咖喱块</td><td><a href="https://www.walmart.ca/en/ip/S-B-Golden-curry-sauce-mix-medium-hot/6000198034558">S&amp;B Golden Curry Sauce Mix Medium Hot</a><br><span data-en="90 g">90 g</span></td><td data-en="72 g / Week; 4 Boxes / 5 Weeks">每周72 g；5周4盒</td><td><a href="https://www.walmart.ca/en/ip/S-B-Golden-curry-sauce-mix-medium-hot/6000198034558">$3.97</a></td></tr>
+<tr data-price-id="edamame-plan2" data-weekly-cost="1.16" data-purchase-group="restock"><td data-en="Shelled Edamame">去壳毛豆</td><td><a href="https://www.walmart.ca/en/ip/Natures-Classic-Allen-Family-Foods-Young-Edamame-Shelled-Soybean-454g/6000197072340">Nature’s Classic Shelled Edamame</a><br>454 g / 袋</td><td data-en="120 g / Week; 1 Bag / About 3.8 Weeks; Keep Frozen">每周120 g；约3.8周1袋；冷冻保存</td><td>$4.37</td></tr>
 <tr>
 <td>每周合计</td>
 <td>—</td>
 <td style="text-align: right;">—</td>
-<td style="text-align: right;">$143.13</td>
+<td style="text-align: right;">$144.29</td>
 </tr>
 </tbody>
 </table>

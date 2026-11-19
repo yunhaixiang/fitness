@@ -20,7 +20,8 @@
     "2026-11-19: Potato meals now use 340 g yellow potatoes and one tilapia fillet (175 g raw estimate) instead of 170 g little potatoes and 160 g coho salmon. Weekly potatoes: one Your Fresh Market Organic Yellow Potatoes 1.36 kg bag, $6.27 public price; retain previous potato composition as explicit planning proxy, not a verified new-product label. Weekly tilapia: four fillets / two 300–400 g trays modeled as 350 g per tray at $2.80/100 g. Salmon remains four160 g fillets in pasta meals (two packs). Existing oil and seasonings unchanged. Apply existing ingredient-composition deltas, reaggregate macros/minerals; update historical daily vitamin D/B12/iodine/EPA+DHA estimates by four meal deltas per week.",
     "2026-11-19: Plan 2 rice meals now use 45 g dry rice and 9 g Golden Curry roux each. Batch: 90 g dry rice (about 120 mL / half a standard cup; calibrate once), 18 g roux (one fifth of 90 g pack), divided into two meals. Weekly rice180 g, curry36 g; one90 g pack lasts2.5 weeks. Retain other seasoning/oil quantities. Curry is dissolved in about150 mL water with cooked ground chicken/vegetables and simmered; rice cooked separately with existing equal-volume water method. Existing curry label and rice composition used; carry forward prior recorded curry price$3.97, not newly verified. Added sugar historical estimate unchanged because curry total sugar is not a verified added-sugar amount.",
     "2026-11-19: Halve ground chicken in each Plan 2 curry rice meal from227 g to113.5 g; increase dry rice45 g to90 g. Retain9 g curry, two eggs, vegetables, oils and seasonings per meal. Batch227 g ground chicken (half454 g pack),180 g dry rice (about240 mL; calibrate cup once),18 g curry, split equally. Weekly454 g chicken/one pack,360 g rice. Reaggregate macro/mineral estimates using existing composition proxies; B12 daily estimate adjusted, D unchanged, iodine and EPA+DHA deltas below existing display precision. Cooking water retains prior equal-volume ratio. Pantry rice remains on-demand, so grocery subtotal decrease$7.98 excludes additional rice usage cost.",
-    "2026-11-19: Increase curry per Plan 2 cooking batch to two fifths of90 g pack (36 g), and reduce dry rice180 g to156 g to retain about700 kcal per rice meal. Each meal78 g dry rice,18 g curry,113.5 g ground chicken; remaining ingredients/seasonings unchanged. Batch rice volume about210 mL, water retains prior equal-volume method; curry water about300 mL then adjusted to consistency. Weekly rice312 g and curry72 g (four90 g packs per five weeks); historical$3.97 pack price yields$3.18 weekly. Reaggregate macros/minerals; trace iodine change below existing precision, D/B12/EPA+DHA unchanged."
+    "2026-11-19: Increase curry per Plan 2 cooking batch to two fifths of90 g pack (36 g), and reduce dry rice180 g to156 g to retain about700 kcal per rice meal. Each meal78 g dry rice,18 g curry,113.5 g ground chicken; remaining ingredients/seasonings unchanged. Batch rice volume about210 mL, water retains prior equal-volume method; curry water about300 mL then adjusted to consistency. Weekly rice312 g and curry72 g (four90 g packs per five weeks); historical$3.97 pack price yields$3.18 weekly. Reaggregate macros/minerals; trace iodine change below existing precision, D/B12/EPA+DHA unchanged.",
+    "2026-11-19: User chose frozen shelled edamame60 g per batch, two servings30 g, with dry rice180 mL (~135 g per batch /67.5 g per meal). Retain36 g curry,227 g ground chicken and all other ingredients. No lentils added. Weekly edamame120 g,454 g bag lasts3.78 weeks; Walmart price$4.37 yields$1.16/week. Heat fully cooked frozen edamame in the curry pot, keep remainder frozen. Reaggregate macro/mineral estimates; retain historical ALA range because brand fatty-acid breakdown is unavailable (edamame ALA not independently quantified), no iodine increment assumed for unmeasured ingredient. Vitamins D/B12/EPA+DHA unchanged."
   ],
   "removedMushroomPerMeal": {
     "kcal": 14.985,
@@ -147,5 +148,44 @@
     "vitaminD": 0.0,
     "vitaminB12": 0.0,
     "iodine": -0.024
+  },
+  "edamameRiceDeltaPerMeal": {
+    "kcal": 3.6750000000000043,
+    "protein": 2.85135,
+    "carbs": -5.2,
+    "fat": 1.5307000000000002,
+    "saturatedFat": 0.1811,
+    "fibre": 1.0635000000000001,
+    "sugar": 0.7874000000000001,
+    "sodium": 1.0750000000000002,
+    "cholesterol": 0.0,
+    "epaDha": 0.0,
+    "calcium": 15.959999999999999,
+    "iron": 0.597,
+    "potassium": 118.72499999999998
+  },
+  "edamameBasis": {
+    "per75g": {
+      "kcal": 105,
+      "protein": 9,
+      "carbs": 8,
+      "fat": 4,
+      "saturatedFat": 0.5,
+      "fibre": 3,
+      "sugar": 2,
+      "sodium": 4,
+      "cholesterol": 0,
+      "epaDha": 0
+    },
+    "macroSource": "https://www.pricesmartfoods.com/product/natures-classic-edamame-soybeans-shelled-id-00627843051749",
+    "macroNote": "Retailer label transcription for matching UPC627843051749; package takes precedence. Old rounded label values, not a laboratory measurement.",
+    "microPer100g": {
+      "calcium": 63,
+      "iron": 2.27,
+      "potassium": 436
+    },
+    "microSource": "https://www.ars.usda.gov/ARSUserFiles/80400535/Data/SR/SR28/reports/sr28fg11.pdf",
+    "microNote": "Generic prepared edamame USDA SR28 NDB11212 proxy; not brand label.",
+    "product": "https://www.walmart.ca/en/ip/Natures-Classic-Allen-Family-Foods-Young-Edamame-Shelled-Soybean-454g/6000197072340"
   }
 }
