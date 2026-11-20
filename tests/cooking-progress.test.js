@@ -58,12 +58,12 @@ for(const [plan,nodes] of [['current',current],['historical',historical]]) {
   assert.equal(derive(nodes,done).recommended,null);
  });
  test(`${plan}: legacy completed tasks migrate and remain complete after reload`,()=>{
-  const newIds=nodes.filter(n=>n.id.endsWith('-start')||['potato-turn','prep-haddock','broccoli'].includes(n.id)).map(n=>n.id);
+  const newIds=nodes.filter(n=>n.id.endsWith('-start')||['potato-turn','prep-haddock','broccoli','cauliflower'].includes(n.id)).map(n=>n.id);
   const oldDone=nodes.flatMap(n=>n.id==='fish'?['salmon','haddock']:n.id).filter(id=>!newIds.includes(id));
   const state=readState(JSON.stringify({version:4,done:oldDone}));
   assert.equal(state.version,5);
   const migrated=derive(nodes,state.done).done;
-  const newlyRequired=nodes.some(n=>n.id==='breaded-fish') ? ['breaded-fish-start','breaded-fish','sandwich','refrigerate','clean'] : nodes.some(n=>n.id==='broccoli') ? ['broccoli-start','broccoli','refrigerate','clean'] : [];
+  const newlyRequired=nodes.some(n=>n.id==='breaded-fish') ? ['breaded-fish-start','breaded-fish','sandwich','refrigerate','clean'] : nodes.some(n=>n.id==='broccoli') ? ['broccoli-start','broccoli','cauliflower-start','cauliflower','curry-start','curry','refrigerate','clean'] : [];
   assert.equal(migrated.length,nodes.length-newlyRequired.length);
   newlyRequired.forEach(id=>assert.ok(!migrated.includes(id),'new food tasks must not inherit completion'));
 

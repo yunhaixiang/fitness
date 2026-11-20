@@ -249,12 +249,20 @@ meal_activities_script: /assets/meal-plans/plan-2/meal-activities.js
 <ol class="cooking-source-en" lang="en" hidden><li>Drain 1 can 🫛🥕 peas and carrots.</li><li>Heat ½ tsp 🫒 oil and cook half a pack (227 g) of 🍗 ground chicken over medium heat to 74°C.</li><li>Add the vegetables, ¼ tsp 🧄 garlic powder, ¼ tsp 🧅 onion powder, 3 tsp 🥣 reduced-sodium soy sauce and ⅛ tsp chicken stock powder; heat through and leave in the pan for the curry sauce.</li><li>During the first session, freeze the remaining half pack (227 g) of raw ground chicken for the second half of the week.</li></ol>
 </li>
 <li class="cooking-task-source">
-<ol class="cooking-source-zh" lang="zh"><li>🍛 90 g装咖喱切下⅖包（36 g），切碎。</li><li>鸡肉末锅中加💧 水约300 mL和🫛 冷冻去壳毛豆60 g，煮至重新微沸；暂时关火，加入咖喱搅拌至溶解。</li><li>重新开小火，开始煮约5分钟；确认毛豆热透，包装有额外加热要求时按包装操作。过稠时少量加水；剩余毛豆密封继续冷冻。</li></ol>
-<ol class="cooking-source-en" lang="en" hidden><li>Cut off ⅖ of the 90 g 🍛 curry pack (36 g) and chop it.</li><li>Add about 300 mL 💧 water and 60 g 🫛 frozen shelled edamame to the ground chicken pan, return to a simmer, then turn off the heat, and stir in the roux until dissolved.</li><li>Return to low heat and start simmering for about 5 minutes; check the edamame is hot throughout and follow any additional package heating directions. Add water if too thick. Reseal and keep unused edamame frozen.</li></ol>
+<ol class="cooking-source-zh" lang="zh"><li>🥦 冷冻菜花320 g不用提前解冻，加入已炒熟的🍗 鸡肉末锅，倒入💧 水约300 mL。</li><li>盖盖开火，煮开后转小火；按包装要求煮熟，留意锅底和水量。剩余菜花密封继续冷冻。</li></ol>
+<ol class="cooking-source-en" lang="en" hidden><li>Add 320 g frozen 🥦 cauliflower without thawing and about 300 mL 💧 water to the cooked 🍗 ground chicken pan.</li><li>Cover, bring to a boil and reduce to a simmer. Cook according to package directions, watching the pan and water level. Reseal and freeze unused cauliflower.</li></ol>
 </li>
 <li class="cooking-task-source">
-<ol class="cooking-source-zh" lang="zh"><li>🍛 确认咖喱已充分溶解、酱汁热透且浓稠合适；关火。</li><li>将鸡肉末、毛豆、蔬菜和咖喱汁均分到第2、5盘，搭配🍚 米饭。</li></ol>
-<ol class="cooking-source-en" lang="en" hidden><li>Check that the 🍛 roux is fully dissolved and the sauce is hot with the desired consistency; turn off the heat.</li><li>Divide the chicken, edamame, vegetables and curry sauce equally between meals 2 and 5, alongside the 🍚 rice.</li></ol>
+<ol class="cooking-source-zh" lang="zh"><li>🥦 翻动菜花，用叉子检查是否熟透、接近喜欢的软度；需要时继续煮，过干时少量加💧 水。</li><li>暂时关火，准备加入咖喱。</li></ol>
+<ol class="cooking-source-en" lang="en" hidden><li>Stir the 🥦 cauliflower and check with a fork that it is cooked through and nearly as tender as desired. Cook longer if needed; add a little 💧 water if drying out.</li><li>Temporarily turn off the heat before adding curry.</li></ol>
+</li>
+<li class="cooking-task-source">
+<ol class="cooking-source-zh" lang="zh"><li>🍛 90 g装咖喱切下⅖包（36 g），切碎。</li><li>趁关火将咖喱加入菜花鸡肉锅，搅拌至溶解。</li><li>重新开小火，开始煮约5分钟；过稠时少量加💧 水，不另外加油。</li></ol>
+<ol class="cooking-source-en" lang="en" hidden><li>Cut off ⅖ of the 90 g 🍛 curry pack (36 g) and chop it.</li><li>With the heat off, add the roux to the cauliflower and chicken pan and stir until dissolved.</li><li>Return to low heat and simmer for about 5 minutes; add a little 💧 water if too thick, without additional oil.</li></ol>
+</li>
+<li class="cooking-task-source">
+<ol class="cooking-source-zh" lang="zh"><li>🍛 确认咖喱已充分溶解、酱汁热透且浓稠合适；关火。</li><li>将鸡肉末、菜花、其他蔬菜和咖喱汁均分到第2、5盘，搭配🍚 米饭。</li></ol>
+<ol class="cooking-source-en" lang="en" hidden><li>Check that the 🍛 roux is fully dissolved and the sauce is hot with the desired consistency; turn off the heat.</li><li>Divide the chicken, cauliflower, other vegetables and curry sauce equally between meals 2 and 5, alongside the 🍚 rice.</li></ol>
 </li>
 </ol>
 <h2 id="finish" data-en="Finish">收尾</h2>

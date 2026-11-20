@@ -584,6 +584,44 @@
       "minutes": 8
     },
     {
+      "id": "cauliflower-start",
+      "label": [
+        "加入菜花、开始煮",
+        "Add Cauliflower and Start Simmering"
+      ],
+      "note": [
+        "",
+        ""
+      ],
+      "group": "large-wok",
+      "before": [
+        "ground"
+      ],
+      "link": "#cook-cauliflower-start",
+      "minutes": 1,
+      "instant": true
+    },
+    {
+      "id": "cauliflower",
+      "label": [
+        "确认菜花熟透",
+        "Check Cauliflower Doneness"
+      ],
+      "note": [
+        "按包装时间和软度确认",
+        "Follow package cooking time and check tenderness"
+      ],
+      "group": "large-wok",
+      "before": [
+        "cauliflower-start"
+      ],
+      "link": "#cook-cauliflower",
+      "minutes": 1,
+      "confirmation": true,
+      "waitFor": "cauliflower-start",
+      "waitKind": "food"
+    },
+    {
       "id": "curry-start",
       "label": [
         "加入咖喱、开始小火煮",
@@ -595,7 +633,7 @@
       ],
       "group": "large-wok",
       "before": [
-        "ground"
+        "cauliflower"
       ],
       "link": "#cook-curry-start",
       "minutes": 2,
@@ -827,6 +865,8 @@
       [
         "spinach",
         "ground",
+        "cauliflower-start",
+        "cauliflower",
         "curry-start",
         "curry"
       ]
