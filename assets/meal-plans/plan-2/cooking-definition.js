@@ -584,44 +584,6 @@
       "minutes": 8
     },
     {
-      "id": "cauliflower-start",
-      "label": [
-        "加入菜花、开始煮",
-        "Add Cauliflower and Start Simmering"
-      ],
-      "note": [
-        "",
-        ""
-      ],
-      "group": "large-wok",
-      "before": [
-        "ground"
-      ],
-      "link": "#cook-cauliflower-start",
-      "minutes": 1,
-      "instant": true
-    },
-    {
-      "id": "cauliflower",
-      "label": [
-        "确认菜花熟透",
-        "Check Cauliflower Doneness"
-      ],
-      "note": [
-        "按包装时间和软度确认",
-        "Follow package cooking time and check tenderness"
-      ],
-      "group": "large-wok",
-      "before": [
-        "cauliflower-start"
-      ],
-      "link": "#cook-cauliflower",
-      "minutes": 1,
-      "confirmation": true,
-      "waitFor": "cauliflower-start",
-      "waitKind": "food"
-    },
-    {
       "id": "curry-start",
       "label": [
         "加入咖喱、开始小火煮",
@@ -633,6 +595,7 @@
       ],
       "group": "large-wok",
       "before": [
+        "ground",
         "cauliflower"
       ],
       "link": "#cook-curry-start",
@@ -678,6 +641,45 @@
       "minutes": 4
     },
     {
+      "id": "cauliflower-start",
+      "label": [
+        "开始微波菜花",
+        "Start Microwaving Cauliflower"
+      ],
+      "note": [
+        "",
+        ""
+      ],
+      "group": "finish",
+      "before": [],
+      "link": "#cook-cauliflower-start",
+      "minutes": 1,
+      "instant": true,
+      "holdsResource": "microwave",
+      "releasesAt": "cauliflower"
+    },
+    {
+      "id": "cauliflower",
+      "label": [
+        "确认菜花熟透、取出",
+        "Check and Remove Cauliflower"
+      ],
+      "note": [
+        "按包装时间和软度确认",
+        "Follow package cooking time and check tenderness"
+      ],
+      "group": "finish",
+      "before": [
+        "cauliflower-start"
+      ],
+      "link": "#cook-cauliflower",
+      "minutes": 1,
+      "confirmation": true,
+      "waitFor": "cauliflower-start",
+      "waitKind": "food",
+      "resource": "microwave"
+    },
+    {
       "id": "broccoli-start",
       "label": [
         "开始微波西兰花",
@@ -691,7 +693,9 @@
       "before": [],
       "link": "#cook-broccoli-start",
       "minutes": 1,
-      "instant": true
+      "instant": true,
+      "holdsResource": "microwave",
+      "releasesAt": "broccoli"
     },
     {
       "id": "broccoli",
@@ -711,7 +715,8 @@
       "minutes": 1,
       "confirmation": true,
       "waitFor": "broccoli-start",
-      "waitKind": "food"
+      "waitKind": "food",
+      "resource": "microwave"
     },
     {
       "id": "prep-bread",
@@ -865,8 +870,6 @@
       [
         "spinach",
         "ground",
-        "cauliflower-start",
-        "cauliflower",
         "curry-start",
         "curry"
       ]
@@ -875,6 +878,8 @@
       "finish",
       "finish",
       [
+        "cauliflower-start",
+        "cauliflower",
         "broccoli-start",
         "broccoli",
         "prep-bread",
