@@ -300,8 +300,8 @@
     {
       "id": "rice",
       "label": [
-        "确认米饭煮好、盛出",
-        "Check and Serve Rice"
+        "确认电饭煲煮好、米饭分盘",
+        "Check Rice Cooker and Portion Rice"
       ],
       "note": [
         "按熟度确认；等待期间可做其他任务",
@@ -643,8 +643,8 @@
     {
       "id": "curry",
       "label": [
-        "确认咖喱完成、分盘",
-        "Check and Portion Curry"
+        "确认咖喱酱完成、分盘浇饭",
+        "Check and Portion Curry Sauce"
       ],
       "note": [
         "",

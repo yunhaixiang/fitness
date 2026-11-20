@@ -26,10 +26,10 @@ meal_activities_script: /assets/meal-plans/plan-2/meal-activities.js
 </li>
 <li class="cooking-task-source">
 <ol lang="zh-CN" class="cooking-source-zh">
-<li>约50分钟后，确认电饭煲完成煮饭，再开盖松散，均分到第2、5盘，每份对应生米60 g。</li>
+<li>约50分钟后，确认电饭煲完成煮饭，再开盖松散，直接均分到第2、5盘，每份对应生米60 g；留在餐盘中待浇咖喱，不放入炒锅。</li>
 </ol>
 <ol lang="en" class="cooking-source-en" hidden>
-<li>After about 50 minutes, confirm the rice cycle is complete, then fluff and divide the 🍚 rice equally between meals 2 and 5 (60 g dry rice each).</li>
+<li>After about 50 minutes, confirm the rice cycle is complete, then fluff and divide the 🍚 rice directly between meals 2 and 5 (60 g dry rice each). Leave it in the containers for the curry topping; do not transfer it to the frying pan.</li>
 </ol>
 </li>
 </ol>
@@ -261,8 +261,8 @@ meal_activities_script: /assets/meal-plans/plan-2/meal-activities.js
 <ol class="cooking-source-en" lang="en" hidden><li>Cut off ⅖ of the 90 g 🍛 curry pack (36 g) and chop it.</li><li>Add about 300 mL 💧 water to the ground chicken pan, turn off the heat, and stir in the roux until dissolved.</li><li>Return to low heat and simmer for about 5 minutes; add a little 💧 water if too thick, without additional oil.</li></ol>
 </li>
 <li class="cooking-task-source">
-<ol class="cooking-source-zh" lang="zh"><li>🍛 确认咖喱已充分溶解、酱汁热透且浓稠合适；关火。</li><li>将鸡肉末、蔬菜和咖喱汁均分到第2、5盘，搭配🍚 米饭。</li></ol>
-<ol class="cooking-source-en" lang="en" hidden><li>Check that the 🍛 roux is fully dissolved and the sauce is hot with the desired consistency; turn off the heat.</li><li>Divide the chicken, vegetables and curry sauce equally between meals 2 and 5, alongside the 🍚 rice.</li></ol>
+<ol class="cooking-source-zh" lang="zh"><li>🍛 确认咖喱已充分溶解、酱汁热透且浓稠合适；关火。</li><li>将鸡肉末、蔬菜和咖喱汁均分到第2、5盘，浇在🍚 米饭上；米饭尚未煮好时先盛在盘中，稍后加入米饭。</li></ol>
+<ol class="cooking-source-en" lang="en" hidden><li>Check that the 🍛 roux is fully dissolved and the sauce is hot with the desired consistency; turn off the heat.</li><li>Divide the chicken, vegetables and curry sauce equally between meals 2 and 5 and spoon over the 🍚 rice. If the rice is not ready, portion the sauce into the containers first and add the rice later.</li></ol>
 </li>
 </ol>
 <h2 id="finish" data-en="Finish">收尾</h2>
