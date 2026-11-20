@@ -123,7 +123,7 @@ visual: true
 <tr data-price-id="19">
 <td>白米</td>
 <td><a href="https://www.walmart.ca/en/ip/Great-Value-Long-Grain-White-Rice/4UD9P76BEQB4">Great Value Long Grain White Rice</a><br>900 g / 袋</td>
-<td style="text-align: right;">按需补；每周270 g</td>
+<td style="text-align: right;">按需补；每周240 g</td>
 <td style="text-align: right;"><a href="https://www.walmart.ca/en/ip/Great-Value-Long-Grain-White-Rice/4UD9P76BEQB4">$3.47</a></td>
 </tr>
 <tr data-price-id="20">
@@ -201,13 +201,13 @@ visual: true
 <tr data-price-id="38" data-weekly-cost="1.17" data-purchase-group="weekly"><td data-en="Orange Bell Pepper">橙甜椒</td><td><a href="https://www.walmart.ca/en/ip/SUNSET-Orange-Pepper-Single-0-12-0-24-KG/6000197381989">SUNSET Orange Pepper</a><br><span data-en="Sold Individually · About 170 g Each">单颗售卖 · 每个约170 g</span></td><td data-en="1 / Week">1个 / 周</td><td><a href="https://www.walmart.ca/en/ip/SUNSET-Orange-Pepper-Single-0-12-0-24-KG/6000197381989">$1.17 / Avg.</a></td></tr>
 <tr data-price-id="32" data-weekly-cost="19.60" data-purchase-group="weekly"><td data-en="Tilapia">罗非鱼</td><td><a href="https://www.walmart.ca/en/ip/Your-Fresh-Market-Tilapia-Fillets-2-pieces-0-30-0-40-KG/6000203880047">Your Fresh Market Tilapia Fillets</a><br><span data-en="2 Fillets · 300–400 g / Tray">2块 · 300–400 g / 盒</span></td><td data-en="2 Trays / Week">2盒（4块）/ 周</td><td><a href="https://www.walmart.ca/en/ip/Your-Fresh-Market-Tilapia-Fillets-2-pieces-0-30-0-40-KG/6000203880047">$2.80 / 100 g</a></td></tr>
 <tr data-price-id="43" data-weekly-cost="3.18" data-purchase-group="restock"><td data-en="Curry Roux">咖喱块</td><td><a href="https://www.walmart.ca/en/ip/S-B-Golden-curry-sauce-mix-medium-hot/6000198034558">S&amp;B Golden Curry Sauce Mix Medium Hot</a><br><span data-en="90 g">90 g</span></td><td data-en="72 g / Week; 4 Boxes / 5 Weeks">每周72 g；5周4盒</td><td><a href="https://www.walmart.ca/en/ip/S-B-Golden-curry-sauce-mix-medium-hot/6000198034558">$3.97</a></td></tr>
-<tr data-price-id="cauliflower-plan2" data-weekly-cost="4.31" data-purchase-group="weekly"><td data-en="Frozen Cauliflower">冷冻菜花</td><td><a href="https://www.walmart.ca/en/ip/Great-Value-Frozen-Cauliflower-Florets/6000202252631">Great Value Frozen Cauliflower Florets</a><br>500 g / 袋</td><td data-en="640 g / Week; 320 g / Batch; Buy 1–2 Bags as Needed, Carry Frozen Remainder Forward">每周640 g；每次做饭320 g；按余量买1–2袋，剩余冷冻留用</td><td>$3.37</td></tr>
+<tr data-price-id="meatballs-plan2" data-weekly-cost="3.17" data-purchase-group="restock"><td data-en="Lean Beef Meatballs">瘦牛肉丸</td><td><a href="https://www.walmart.ca/en/ip/Our-Finest-Frozen-Lean-Angus-Meatballs-Appetizers/6000200192499">Our Finest Lean Angus Meatballs</a><br>907 g / 袋，至少60颗</td><td data-en="12 / Week; 6 / Batch; About 1 Bag / 5 Weeks; Keep Frozen">每周12颗；每次做饭6颗；约5周1袋，剩余冷冻</td><td>$15.84</td></tr>
 <tr data-price-id="broccoli-plan2" data-weekly-cost="1.69" data-purchase-group="fortnightly"><td data-en="Frozen Broccoli">冷冻西兰花</td><td><a href="https://www.walmart.ca/en/ip/Great-Value-Frozen-Broccoli-Florets-500-g/6000198574939">Great Value Frozen Broccoli Florets</a><br>500 g / 袋</td><td data-en="1 Bag / 2 Weeks; 250 g / Week; 125 g / Batch; Keep Frozen">每两周1袋；每周250 g；每次做饭125 g；冷冻保存</td><td>$3.37</td></tr>
 <tr>
 <td>每周合计</td>
 <td>—</td>
 <td style="text-align: right;">—</td>
-<td style="text-align: right;">$152.05</td>
+<td style="text-align: right;">$150.91</td>
 </tr>
 </tbody>
 </table>

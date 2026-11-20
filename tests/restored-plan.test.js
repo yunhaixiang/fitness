@@ -52,7 +52,7 @@ test('restored shopping subtotal matches its own groceries, and current menu is 
  const sum=[...text.matchAll(/data-weekly-cost="([\d.]+)"/g)].reduce((s,m)=>s+ +m[1],0);
  const total=+text.split('每周合计')[1].match(/\$([\d.]+)/)[1];
  assert.ok(Math.abs(sum-total)<.01);
- assert.doesNotMatch(text,/金枪鱼|水饺|扁米粉|牛肉丸/);
+ assert.doesNotMatch(text,/金枪鱼|水饺|扁米粉/);
  assert.match(text,/2盒（4块）\/ 周/);
  assert.match(text,/18个 \/ 盒/);
  assert.match(text, /data-price-id="5" data-weekly-cost="4.65" data-purchase-group="restock"/);

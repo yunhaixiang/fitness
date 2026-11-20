@@ -13,8 +13,8 @@ meal_activities_script: /assets/meal-plans/plan-2/meal-activities.js
 <h2 id="rice" data-en="Rice Cooker">电饭煲</h2>
 <ol>
 <li class="cooking-task-source">
-<ol class="cooking-source-zh" lang="zh"><li>🍚 干米135 g（约180 mL；首次称重核对刻度）淘洗沥干。</li><li>加💧 水约180 mL，放入电饭煲。</li></ol>
-<ol class="cooking-source-en" lang="en" hidden><li>Rinse and drain 135 g (about 180 mL; calibrate the cup by weighing once) 🍚 dry rice.</li><li>Add about 180 mL 💧 water to the rice cooker.</li></ol>
+<ol class="cooking-source-zh" lang="zh"><li>🍚 干米120 g（约160 mL；首次称重核对刻度）淘洗沥干。</li><li>加💧 水约160 mL，放入电饭煲。</li></ol>
+<ol class="cooking-source-en" lang="en" hidden><li>Rinse and drain 120 g (about 160 mL; calibrate the cup by weighing once) 🍚 dry rice.</li><li>Add about 160 mL 💧 water to the rice cooker.</li></ol>
 </li>
 <li class="cooking-task-source">
 <ol lang="zh-CN" class="cooking-source-zh">
@@ -26,10 +26,10 @@ meal_activities_script: /assets/meal-plans/plan-2/meal-activities.js
 </li>
 <li class="cooking-task-source">
 <ol lang="zh-CN" class="cooking-source-zh">
-<li>约50分钟后，确认电饭煲完成煮饭，再开盖松散，均分到第2、5盘，每份对应生米67.5 g。</li>
+<li>约50分钟后，确认电饭煲完成煮饭，再开盖松散，均分到第2、5盘，每份对应生米60 g。</li>
 </ol>
 <ol lang="en" class="cooking-source-en" hidden>
-<li>After about 50 minutes, confirm the rice cycle is complete, then fluff and divide the 🍚 rice equally between meals 2 and 5 (67.5 g dry rice each).</li>
+<li>After about 50 minutes, confirm the rice cycle is complete, then fluff and divide the 🍚 rice equally between meals 2 and 5 (60 g dry rice each).</li>
 </ol>
 </li>
 </ol>
@@ -118,6 +118,14 @@ meal_activities_script: /assets/meal-plans/plan-2/meal-activities.js
 <ol lang="en" class="cooking-source-en" hidden>
 <li>Check doneness before removing: Heat at 400°F for 15–20 minutes, to 74°C in the centre; put ¼ box each in meals 4 and 7.</li>
 </ol>
+</li>
+<li class="cooking-task-source">
+<ol class="cooking-source-zh" lang="zh"><li>🧆 取冷冻牛肉丸6颗，单层放在独立烤盘或烤皿上；不额外加油或盐，剩余密封冷冻。</li><li>按包装的烤箱温度和时间入炉复热，设置计时；若包装温度与当前400°F不同，待其他烤物取出后调温再放入。</li></ol>
+<ol class="cooking-source-en" lang="en" hidden><li>Place 6 frozen 🧆 meatballs in a single layer on a separate baking tray or oven-safe dish; add no oil or salt and keep the remainder frozen.</li><li>Reheat in the oven at the temperature and time on the package and set a timer. If the package temperature differs from the current 400°F, remove the other baked foods before adjusting the temperature and loading the meatballs.</li></ol>
+</li>
+<li class="cooking-task-source">
+<ol class="cooking-source-zh" lang="zh"><li>🧆 到包装指定时间后，确认牛肉丸中心充分热透，再取出；未热透就继续烤。</li><li>第2、5盘各放3颗，搭配咖喱米饭。</li></ol>
+<ol class="cooking-source-en" lang="en" hidden><li>At the package cooking time, check that the 🧆 meatballs are thoroughly hot in the centre before removing; continue heating if needed.</li><li>Place 3 each in meals 2 and 5 with the curry rice.</li></ol>
 </li>
 </ol>
 <h2 id="air-fryer" data-en="Air Fryer">空气炸锅</h2>
@@ -249,24 +257,16 @@ meal_activities_script: /assets/meal-plans/plan-2/meal-activities.js
 <ol class="cooking-source-en" lang="en" hidden><li>Drain 1 can 🫛🥕 peas and carrots.</li><li>Heat ½ tsp 🫒 oil and cook half a pack (227 g) of 🍗 ground chicken over medium heat to 74°C.</li><li>Add the vegetables, ¼ tsp 🧄 garlic powder, ¼ tsp 🧅 onion powder, 3 tsp 🥣 reduced-sodium soy sauce and ⅛ tsp chicken stock powder; heat through and leave in the pan for the curry sauce.</li><li>During the first session, freeze the remaining half pack (227 g) of raw ground chicken for the second half of the week.</li></ol>
 </li>
 <li class="cooking-task-source">
-<ol class="cooking-source-zh" lang="zh"><li>🍛 90 g装咖喱切下⅖包（36 g），切碎。</li><li>鸡肉末锅中加入💧 水约300 mL，暂时关火，加入咖喱块搅拌至溶解。</li><li>拌入已微波熟透的🥦 菜花，重新开小火煮约5分钟；过稠时少量加💧 水，不另外加油。</li></ol>
-<ol class="cooking-source-en" lang="en" hidden><li>Cut off ⅖ of the 90 g 🍛 curry pack (36 g) and chop it.</li><li>Add about 300 mL 💧 water to the ground chicken pan, turn off the heat, and stir in the roux until dissolved.</li><li>Mix in the fully microwaved 🥦 cauliflower, return to low heat and simmer for about 5 minutes; add a little 💧 water if too thick, without additional oil.</li></ol>
+<ol class="cooking-source-zh" lang="zh"><li>🍛 90 g装咖喱切下⅖包（36 g），切碎。</li><li>鸡肉末锅中加入💧 水约300 mL，暂时关火，加入咖喱块搅拌至溶解。</li><li>重新开小火煮约5分钟；过稠时少量加💧 水，不另外加油。</li></ol>
+<ol class="cooking-source-en" lang="en" hidden><li>Cut off ⅖ of the 90 g 🍛 curry pack (36 g) and chop it.</li><li>Add about 300 mL 💧 water to the ground chicken pan, turn off the heat, and stir in the roux until dissolved.</li><li>Return to low heat and simmer for about 5 minutes; add a little 💧 water if too thick, without additional oil.</li></ol>
 </li>
 <li class="cooking-task-source">
-<ol class="cooking-source-zh" lang="zh"><li>🍛 确认咖喱已充分溶解、酱汁热透且浓稠合适；关火。</li><li>将鸡肉末、菜花、其他蔬菜和咖喱汁均分到第2、5盘，搭配🍚 米饭。</li></ol>
-<ol class="cooking-source-en" lang="en" hidden><li>Check that the 🍛 roux is fully dissolved and the sauce is hot with the desired consistency; turn off the heat.</li><li>Divide the chicken, cauliflower, other vegetables and curry sauce equally between meals 2 and 5, alongside the 🍚 rice.</li></ol>
+<ol class="cooking-source-zh" lang="zh"><li>🍛 确认咖喱已充分溶解、酱汁热透且浓稠合适；关火。</li><li>将鸡肉末、蔬菜和咖喱汁均分到第2、5盘，搭配🍚 米饭。</li></ol>
+<ol class="cooking-source-en" lang="en" hidden><li>Check that the 🍛 roux is fully dissolved and the sauce is hot with the desired consistency; turn off the heat.</li><li>Divide the chicken, vegetables and curry sauce equally between meals 2 and 5, alongside the 🍚 rice.</li></ol>
 </li>
 </ol>
 <h2 id="finish" data-en="Finish">收尾</h2>
 <ol>
-<li class="cooking-task-source">
-<ol class="cooking-source-zh" lang="zh"><li>🥦 取冷冻菜花320 g，不用提前解冻，放进微波炉适用的碗；剩余密封继续冷冻。</li><li>按包装说明加💧 水，盖上留排气缝的微波炉适用盖，启动微波加热；根据份量和功率按包装要求操作，不连普通包装袋加热。</li></ol>
-<ol class="cooking-source-en" lang="en" hidden><li>Place 320 g frozen 🥦 cauliflower in a microwave-safe bowl without thawing; reseal and freeze the remainder.</li><li>Add 💧 water as directed on the package, cover with a vented microwave-safe lid and start microwaving. Follow package directions for portion size and wattage; do not microwave the ordinary packaging bag.</li></ol>
-</li>
-<li class="cooking-task-source">
-<ol class="cooking-source-zh" lang="zh"><li>🥦 微波结束后小心蒸汽，翻动并检查菜花是否熟透；需要时继续加热。</li><li>沥掉多余💧 水，留待拌入咖喱；不额外加油或盐。</li></ol>
-<ol class="cooking-source-en" lang="en" hidden><li>After microwaving, open carefully to avoid steam, stir and check the 🥦 cauliflower is fully cooked; heat longer if needed.</li><li>Drain excess 💧 water and set aside to mix into the curry, without additional oil or salt.</li></ol>
-</li>
 <li class="cooking-task-source">
 <ol class="cooking-source-zh" lang="zh"><li>🥦 取冷冻西兰花125 g（500 g袋的¼），不用提前解冻，倒入微波炉适用的碗；剩余密封继续冷冻。</li><li>按包装说明加💧 水，盖上留排气缝的微波炉适用盖，启动微波加热；时间按包装、份量和功率调整。不连普通包装袋加热。</li></ol>
 <ol class="cooking-source-en" lang="en" hidden><li>Place 125 g frozen 🥦 broccoli (¼ of a 500 g bag) in a microwave-safe bowl without thawing; reseal and freeze the remainder.</li><li>Add 💧 water as directed on the package, cover with a vented microwave-safe lid and start cooking. Follow package directions for portion size and wattage; do not microwave the ordinary packaging bag.</li></ol>

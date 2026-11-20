@@ -225,6 +225,44 @@
       "waitKind": "food"
     },
     {
+      "id": "meatballs-start",
+      "label": [
+        "牛肉丸入烤箱",
+        "Load Meatballs into Oven"
+      ],
+      "note": [
+        "按包装温度与时间复热",
+        "Reheat at package temperature and time"
+      ],
+      "group": "oven",
+      "before": [
+        "oven-heat"
+      ],
+      "link": "#cook-meatballs-start",
+      "minutes": 2,
+      "instant": true
+    },
+    {
+      "id": "meatballs",
+      "label": [
+        "确认牛肉丸热透、取出",
+        "Check and Remove Meatballs"
+      ],
+      "note": [
+        "每份咖喱饭3颗",
+        "3 per curry meal"
+      ],
+      "group": "oven",
+      "before": [
+        "meatballs-start"
+      ],
+      "link": "#cook-meatballs",
+      "minutes": 1,
+      "confirmation": true,
+      "waitFor": "meatballs-start",
+      "waitKind": "food"
+    },
+    {
       "id": "prep-rice",
       "label": [
         "备白米",
@@ -595,8 +633,7 @@
       ],
       "group": "large-wok",
       "before": [
-        "ground",
-        "cauliflower"
+        "ground"
       ],
       "link": "#cook-curry-start",
       "minutes": 2,
@@ -639,45 +676,6 @@
       ],
       "link": "#cook-tomato",
       "minutes": 4
-    },
-    {
-      "id": "cauliflower-start",
-      "label": [
-        "开始微波菜花",
-        "Start Microwaving Cauliflower"
-      ],
-      "note": [
-        "",
-        ""
-      ],
-      "group": "finish",
-      "before": [],
-      "link": "#cook-cauliflower-start",
-      "minutes": 1,
-      "instant": true,
-      "holdsResource": "microwave",
-      "releasesAt": "cauliflower"
-    },
-    {
-      "id": "cauliflower",
-      "label": [
-        "确认菜花熟透、取出",
-        "Check and Remove Cauliflower"
-      ],
-      "note": [
-        "按包装时间和软度确认",
-        "Follow package cooking time and check tenderness"
-      ],
-      "group": "finish",
-      "before": [
-        "cauliflower-start"
-      ],
-      "link": "#cook-cauliflower",
-      "minutes": 1,
-      "confirmation": true,
-      "waitFor": "cauliflower-start",
-      "waitKind": "food",
-      "resource": "microwave"
     },
     {
       "id": "broccoli-start",
@@ -774,7 +772,8 @@
         "curry",
         "tomato",
         "wrap",
-        "broccoli"
+        "broccoli",
+        "meatballs"
       ],
       "link": "#cook-refrigerate",
       "minutes": 5
@@ -822,7 +821,9 @@
         "chicken-start",
         "chicken",
         "ribs-start",
-        "ribs"
+        "ribs",
+        "meatballs-start",
+        "meatballs"
       ]
     ],
     [
@@ -878,8 +879,6 @@
       "finish",
       "finish",
       [
-        "cauliflower-start",
-        "cauliflower",
         "broccoli-start",
         "broccoli",
         "prep-bread",
