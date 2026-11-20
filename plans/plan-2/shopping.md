@@ -180,18 +180,6 @@ visual: true
 <td style="text-align: right;">按需补</td>
 <td style="text-align: right;"><a href="https://www.walmart.ca/en/ip/seort/6000203408497">$10.97</a></td>
 </tr>
-<tr data-price-id="29">
-<td>减盐酱油</td>
-<td><a href="https://www.walmart.ca/en/ip/Great-Value-Reduced-Sodium-Soya-Sauce/6000187053934">Great Value Reduced Sodium Soya Sauce</a><br>450 mL / 瓶</td>
-<td style="text-align: right;">按需补</td>
-<td style="text-align: right;"><a href="https://www.walmart.ca/en/ip/Great-Value-Reduced-Sodium-Soya-Sauce/6000187053934">$2.23</a></td>
-</tr>
-<tr data-price-id="30">
-<td>鸡粉</td>
-<td><a href="https://www.walmart.ca/en/ip/Knorr-Chicken-Instant-Stock-Mix/10303650">Knorr Chicken Instant Stock Mix</a><br>150 g / 罐</td>
-<td style="text-align: right;">按需补</td>
-<td style="text-align: right;"><a href="https://www.walmart.ca/en/ip/Knorr-Chicken-Instant-Stock-Mix/10303650">$4.84</a></td>
-</tr>
 <tr data-price-id="31">
 <td>一水肌酸</td>
 <td><a href="https://www.walmart.ca/fr/ip/leanfit-sport-creatine-monohydrate-en-poudre-non-aromatis-300-g-5-g-de-cratine-par-portion-certification-informed-choice-cratine-micronise-et-de-quali/6000208594600">LEANFIT SPORT Creatine Monohydrate — Unflavoured（Walmart）</a><br>无味，300 g / 罐</td>

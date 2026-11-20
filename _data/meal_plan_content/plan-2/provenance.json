@@ -27,7 +27,8 @@
     "2026-11-19: Replace Plan 2 Walmart1 kg fruit tray with Metro Fresh Fruit Carousel1.4 kg, one tray weekly at the previously user-confirmed$14.89. Buy Saturday and split across Sunday–Tuesday breakfasts (~466.67 g each). Add400/3 g per early breakfast using the existing mixed-fruit composition proxy (actual proportions vary); reaggregate nutrition. Other breakfasts and Plan 1 unchanged. Iodine trace increment0.17 mcg/day below displayed precision. Plan 2 becomes catalog current/default; Plan 1 retained with stable URLs and saved checklist identities.",
     "2026-11-19: Replace30 g shelled edamame per curry meal with160 g frozen cauliflower. Batch320 g, weekly640 g; Great Value500 g bags at$3.37, buy1–2 bags weekly as stock requires, freeze carryover. Remove edamame shopping row. Keep rice67.5 g/curry18 g per meal and all other ingredients. Cook cauliflower in water with cooked chicken until tender, then dissolve curry off heat and simmer; two new modular tasks. Use Walmart cauliflower label per85 g, subtract recorded edamame contribution; no quantified iodine/ALA adjustment due to missing product values. Reaggregate daily nutrition.",
     "2026-11-19: Follow-up: microwave cauliflower320 g separately per batch, drain and mix into curry; no portion/nutrition change. Move microwave start/check into finish thread, with no chicken prerequisite; curry requires both cooked chicken and microwaved cauliflower. Share a microwave resource with broccoli to prevent simultaneous starts.",
-    "2026-11-19: Replace160 g cauliflower per curry meal with3 Our Finest Lean Angus meatballs; dry rice67.5→60 g per meal. Batch160 mL≈120 g rice and6 meatballs, weekly240 g rice and12 meatballs. Bake meatballs separately per package directions, no added oil/salt; independent load/remove tasks, no curry dependency, refrigeration waits for meatballs. Remove cauliflower microwave tasks and shopping. Use historical150 kcal/18 g protein per6 meatballs85 g; current label not independently verified, actual package takes precedence. Micronutrients use existing generic meatball/rice proxies. Daily B12 +0.24 mcg, iodine +1.55 mcg (cauliflower iodine unquantified), vitamin D +0.024 mcg below display precision. Weekly cost based on$15.84 bag/5 weeks, rounded$3.17. Reaggregate daily intake and energy balance; Plan1 unchanged."
+    "2026-11-19: Replace160 g cauliflower per curry meal with3 Our Finest Lean Angus meatballs; dry rice67.5→60 g per meal. Batch160 mL≈120 g rice and6 meatballs, weekly240 g rice and12 meatballs. Bake meatballs separately per package directions, no added oil/salt; independent load/remove tasks, no curry dependency, refrigeration waits for meatballs. Remove cauliflower microwave tasks and shopping. Use historical150 kcal/18 g protein per6 meatballs85 g; current label not independently verified, actual package takes precedence. Micronutrients use existing generic meatball/rice proxies. Daily B12 +0.24 mcg, iodine +1.55 mcg (cauliflower iodine unquantified), vitamin D +0.024 mcg below display precision. Weekly cost based on$15.84 bag/5 weeks, rounded$3.17. Reaggregate daily intake and energy balance; Plan1 unchanged.",
+    "2026-11-19: Remove reduced-sodium soya sauce15 mL and chicken stock powder1/8 tsp per cooking batch, split over2 curry rice meals. Keep curry36 g, garlic/onion powders, rice160 mL and6 oven-baked meatballs per batch. Remove unused sauce/stock pantry shopping rows; neither had amortized weekly cost. Apply explicit ingredient delta to historical meal estimates: Canadian Great Value label per15 mL10 kcal/P1/C1/sugar1/Na520/K40/Ca0/Fe0.1; Knorr official nutrition per portion5 kcal/P0.5/C1/sugar1/Na510/Ca10/Fe0.1, one-teaspoon serving basis corroborated by retailer. Historical seasoning decomposition was not retained, so subtraction is a planning estimate, not a fresh full recipe audit. No precise trace vitamin/iodine change asserted. Reaggregate displayed daily intake and energy balance; no Plan1 changes."
   ],
   "removedMushroomPerMeal": {
     "kcal": 14.985,
@@ -314,5 +315,53 @@
       "potassium": -353.4132352941176
     },
     "priceCad": 15.84
+  },
+  "removedCurrySeasoning": {
+    "perBatchSoyMl": 15,
+    "perBatchStockTsp": 0.125,
+    "soyPer15ml": {
+      "kcal": 10,
+      "protein": 1,
+      "carbs": 1,
+      "fat": 0,
+      "saturatedFat": 0,
+      "fibre": 0,
+      "sugar": 1,
+      "sodium": 520,
+      "cholesterol": 0,
+      "potassium": 40,
+      "calcium": 0,
+      "iron": 0.1
+    },
+    "stockPerTsp": {
+      "kcal": 5,
+      "protein": 0.5,
+      "carbs": 1,
+      "fat": 0,
+      "saturatedFat": 0,
+      "fibre": 0,
+      "sugar": 1,
+      "sodium": 510,
+      "potassium": 0,
+      "calcium": 10,
+      "iron": 0.1
+    },
+    "perMealDelta": {
+      "kcal": -5.3125,
+      "protein": -0.53125,
+      "carbs": -0.5625,
+      "fat": -0.0,
+      "saturatedFat": -0.0,
+      "fibre": -0.0,
+      "sugar": -0.5625,
+      "sodium": -291.875,
+      "cholesterol": -0.0,
+      "potassium": -20.0,
+      "calcium": -0.625,
+      "iron": -0.05625
+    },
+    "soyLabel": "https://i5.walmartimages.ca/asr/2dcb6e77-7a6c-4891-b643-7b7c8804ae65.ce65771f948bc4d402a2f56ef6660d38.jpeg",
+    "stockNutrition": "https://www.knorr.com/ca/en/p/chicken-instant-stock-mix.html/00066345700159",
+    "stockServingReference": "https://voila.ca/products/knorr-instant-stock-mix-chicken-for-a-great-flavour-150-g/900852EA"
   }
 }
