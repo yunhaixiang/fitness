@@ -12,7 +12,7 @@ test('restored repeating menu has fourteen meals, old quantities and independent
  const keys=[...schedule.matchAll(/data-nutrition-key="([^"]+)"/g)].map(x=>x[1]);
  const half=['wrap','rice','pasta','potato','rice','pasta','potato'];
  assert.deepEqual(keys,[...half,...half]);
- assert.equal((schedule.match(/data-drink="fuze"/g)||[]).length,2);
+ assert.equal((schedule.match(/data-drink="sparkling-ice"/g)||[]).length,2);
  for(const k of keys)assert.ok(data.meals[k]);
  const intake=(3*+data.meals.fruit_breakfast.kcal+4*+data.meals.kiwi_breakfast.kcal+7*+data.meals.outside_drink.kcal+keys.reduce((s,k)=>s+(+data.meals[k].kcal),0))/7;
  const metrics=read('_data/meal_plan_content/plan-2/metrics.yml');

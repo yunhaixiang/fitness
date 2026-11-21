@@ -152,7 +152,7 @@ nutrition: true
 </tr>
 <tr data-nutrient="sodium">
 <td>钠</td>
-<td style="text-align: right;">2,272 mg</td>
+<td style="text-align: right;">2,273 mg</td>
 <td>—</td>
 </tr>
 <tr data-nutrient="calcium">
@@ -167,7 +167,7 @@ nutrition: true
 </tr>
 <tr data-nutrient="potassium">
 <td>钾</td>
-<td style="text-align: right;">4,783 mg</td>
+<td style="text-align: right;">4,791 mg</td>
 <td>—</td>
 </tr>
 <tr data-nutrient="vitaminD">
