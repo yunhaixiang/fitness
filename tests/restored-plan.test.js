@@ -54,10 +54,15 @@ test('restored shopping subtotal matches its own groceries, and current menu is 
  assert.ok(Math.abs(sum-total)<.01);
  assert.doesNotMatch(text,/金枪鱼|水饺|扁米粉/);
  assert.match(text,/2盒（4块）\/ 周/);
- assert.match(text,/18个 \/ 盒/);
- assert.match(text, /data-price-id="5" data-weekly-cost="4.65" data-purchase-group="restock"/);
+ assert.match(text,/12个 \/ 盒/);
+ assert.match(text, /data-price-id="5" data-weekly-cost="3.93" data-purchase-group="weekly"/);
  const eggRow = text.match(/<tr[^>]*data-price-id="5"[\s\S]*?<\/tr>/)[0];
- assert.match(eggRow, /2 Cartons \/ 3 Weeks · 12 Eggs \/ Week/);
+ assert.match(eggRow, /1 Carton \/ Week/);
+ assert.match(eggRow, /Great Value Large Eggs/);
+ assert.doesNotMatch(eggRow, /18个|18-Eggs|3 Weeks/);
+ const schedule = read('_includes/meal-plans/plan-2/diet-schedule.html');
+ const weeklyEggs = [...schedule.matchAll(/水煮蛋(\d+)个/g)].reduce((sum, match) => sum + Number(match[1]), 0);
+ assert.equal(weeklyEggs, 12);
  assert.match(read('plans/plan-2/cooking.md'), /鸡蛋6个/);
 });
 
