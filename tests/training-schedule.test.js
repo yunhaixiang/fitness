@@ -33,3 +33,14 @@ for(const file of ['assets/meal-activities.js','assets/meal-plans/plan-2/meal-ac
   }
  }
 });
+
+for (const file of ['assets/meal-activities.js','assets/meal-plans/plan-2/meal-activities.js']) test(`${file}: cooking is before Sunday lunch and Wednesday dinner only`, () => {
+ const window={fitnessI18n:{language:'en'},fitnessMealPlan:{urlFor:kind=>'/fitness/'+kind+'/'}};
+ const document={createElement:node,createElementNS:(_,tag)=>node(tag),querySelector:()=>({href:'/fitness/cooking/'})};
+ vm.runInNewContext(fs.readFileSync(file,'utf8'),{window,document});
+ for (let day=0;day<7;day++) for (const slot of ['before-breakfast','before-lunch','lunch','before-dinner','dinner']) for (const compact of [false,true]) {
+  const root=node('main');window.fitnessMealActivities.append(root,day,slot,compact);
+  const cooking=root.children.filter(n=>n.dataset.activity==='cooking');
+  assert.equal(cooking.length, (day===0 && slot==='before-lunch') || (day===3 && slot==='before-dinner') ? 1 : 0);
+ }
+});

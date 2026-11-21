@@ -11,7 +11,7 @@ meal_activities_script: /assets/meal-plans/plan-2/meal-activities.js
 
 
 <noscript>
-<p>周日午餐后做饭，准备上1–上7；周三晚餐后做饭，准备下1–下7；周六下午购物。</p>
+<p>周日午餐前做饭，准备上1–上7；周三晚餐前做饭，准备下1–下7；周六下午购物。</p>
 <p>周日—周二早餐：{{ site.data.meal_plan_content['plan-2'].nutrition.meals.fruit_breakfast.foodZh }}。</p>
 <p>周三—周六早餐：{{ site.data.meal_plan_content['plan-2'].nutrition.meals.kiwi_breakfast.foodZh }}。</p>
 <p>餐外饮品：{{ site.data.meal_plan_content['plan-2'].nutrition.meals.outside_drink.foodZh }}。</p>

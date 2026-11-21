@@ -75,3 +75,20 @@ test('Plan 2 uses four salmon and four tilapia portions, no haddock, and twelve 
  assert.equal(+data.meals.pasta.kcal,703);
  assert.equal(+data.meals.pasta.protein,64.1);
 });
+
+test('Plan 2 meals begin at Sunday lunch and Wednesday dinner, matching prep cards', () => {
+ const rows=[...read('_includes/meal-plans/plan-2/diet-schedule.html').matchAll(/<tr data-nutrition-key="([^"]+)"[^>]*>([\s\S]*?)<\/tr>/g)];
+ const days=['周日','周一','周二','周三','周四','周五','周六'];
+ const labels={};
+ rows.forEach((row,index)=>{
+  const cells=[...row[2].matchAll(/<td[^>]*>(.*?)<\/td>/g)].map(m=>m[1]);
+  const day=days[Math.floor(index/2)],meal=index%2===0?'午餐':'晚餐';
+  assert.equal(cells[1],day);assert.equal(cells[2],meal);
+  (labels[row[1]]??=[]).push(day+(index%2===0?'午':'晚'));
+ });
+ assert.equal(rows.length,14);
+ assert.match(rows[0][2],/<td>上1<\/td>/);
+ assert.match(rows[7][2],/<td>下1<\/td>/);
+ for(const [key,dates] of Object.entries(labels)) assert.equal(data.meals[key].label,dates.join('／'));
+ assert.doesNotMatch(read('plans/plan-2/diet.md'),/午餐后做饭|晚餐后做饭/);
+});

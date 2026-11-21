@@ -4,8 +4,8 @@
   // Order activities relative to meals without inventing fixed clock times.
   const activities = [
     { day: 2, after: 'lunch', kind: 'thawing', time: ['中午', 'Midday'], detail: ['将后半周的鸡大腿肉、鸡肉末、三文鱼、排骨从冷冻移入冷藏解冻。', 'Move the second-half portions of chicken thighs, ground chicken, salmon, and ribs from the freezer to the fridge to thaw.'] },
-    { day: 0, after: 'lunch', kind: 'cooking', time: ['午餐后', 'After Lunch'], detail: ['准备上1–上7', 'Prepare Meals 1–7 for the First Half of the Week'] },
-    { day: 3, after: 'dinner', kind: 'cooking', time: ['晚餐后', 'After Dinner'], detail: ['准备下1–下7', 'Prepare Meals 1–7 for the Second Half of the Week'] },
+    { day: 0, after: 'before-lunch', kind: 'cooking', time: ['午餐前', 'Before Lunch'], detail: ['准备上1–上7', 'Prepare Meals 1–7 for the First Half of the Week'] },
+    { day: 3, after: 'before-dinner', kind: 'cooking', time: ['晚餐前', 'Before Dinner'], detail: ['准备下1–下7', 'Prepare Meals 1–7 for the Second Half of the Week'] },
     { day: 6, after: 'lunch', kind: 'shopping', time: ['下午', 'Afternoon'], detail: ['购买整周食材', 'Buy Groceries for the Week'] }
   ];
   for (const day of [0, 1, 2, 4, 5, 6]) activities.push({ day, after: 'lunch', kind: [0, 6].includes(day) ? 'cardio' : 'strength', time: ['17:30 · 晚饭前', '17:30 · Before Dinner'], detail: [0, 6].includes(day) ? ['有氧训练，按当前有氧计划选择一项。', 'Cardio: choose one option from the current plan.'] : ['完成当天力量训练。', 'Complete today’s strength workout.'] });
