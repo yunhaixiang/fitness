@@ -6,7 +6,7 @@
 
   // Longer entries take precedence. This keeps the plan's numbers and product links intact.
   const translations = {
-    '日均赤字或盈余': 'Daily Deficit or Surplus', '每周赤字或盈余': 'Weekly Deficit or Surplus', '每周能量差等价脂肪': 'Fat Equivalent of Weekly Energy Balance', '每日能量与每周赤字或盈余': 'Daily Energy and Weekly Deficit or Surplus',
+    '日均能量差': 'Daily Energy Balance', 'kcal／天': 'kcal/day', '日均赤字或盈余': 'Daily Deficit or Surplus', '每周赤字或盈余': 'Weekly Deficit or Surplus', '每周能量差等价脂肪': 'Fat Equivalent of Weekly Energy Balance', '每日能量与每周赤字或盈余': 'Daily Energy and Weekly Deficit or Surplus',
     '睡眠': 'Sleep', '每日': 'Daily', '选择星期': 'Choose a day',
     '当前体重': 'Current Weight', '当前体脂率': 'Current Body Fat', '当前数据': 'Current Metrics',
     '体重、体脂率和放纵餐记录': 'Weight, body fat and cheat meal records',
