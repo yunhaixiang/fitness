@@ -43,7 +43,7 @@ for(const language of ['zh','en']) {
   const location={origin:'https://example.test',pathname:'/fitness/plans/plan-2/diet/',href:'https://example.test/fitness/plans/plan-2/diet/',assign(url){this.assigned=url;}};
   const document={body:{dataset:{baseurl:'/fitness'}},getElementById:id=>id==='main'?main:id==='meal-plan-catalog'?{textContent:JSON.stringify(catalog)}:null,querySelectorAll:()=>[],createElement:t=>new Node(t)};
   const localStorage={getItem:key=>key==='yunhai-fitness-language'?language:'plan-2',setItem(){}};
-  vm.runInNewContext(fs.readFileSync('assets/meal-plans.js','utf8'),{window:{},document,location,localStorage,URL});
+  vm.runInNewContext(fs.readFileSync('assets/meal-plans.js','utf8'),{window:{addEventListener(){}},document,location,localStorage,URL});
   const select=main.querySelector('#meal-plan-select');
   assert.equal(select.children[0].textContent,language==='zh'?'当前':'Current');
   assert.equal(select.children[0].value,'plan-2');

@@ -8,11 +8,9 @@
     const route = plans.flatMap((plan) => Object.entries(plan.pages).map(([page, url]) => ({ plan, page, url })))
       .find((entry) => normalize(entry.url) === normalize(path));
     const requested = plans.find((plan) => plan.id === requestedId);
-    const saved = plans.find((plan) => plan.id === savedId);
-    // Unqualified original entry URLs open the current plan; explicit plan links
-    // keep older plans accessible. Named plan paths remain stable bookmarks.
-    const entryRoute = route && route.plan.id === plans[0].id;
-    const active = requested || (entryRoute ? defaultPlan : route?.plan) || saved || defaultPlan;
+    // Automatic entry always uses the configured current plan. Only an explicit
+    // selection on a food page previews an alternative; overview is always current.
+    const active = route && route.page !== 'overview' && requested ? requested : defaultPlan;
     return { active, page: route?.page, redirect: route && normalize(active.pages[route.page]) !== normalize(path) ? active.pages[route.page] : null };
   }
   const scopedKey = (key, id, defaultId) => id === 'plan-1' ? key : `${key}:meal-plan:${id}`;
@@ -25,16 +23,15 @@
   const storageKey = 'fitness-meal-plan-view';
   const base = document.body.dataset.baseurl || '';
   const path = location.pathname.startsWith(base + '/') ? location.pathname.slice(base.length) : location.pathname;
-  let saved;
-  try { saved = localStorage.getItem(storageKey); } catch (_) { /* storage unavailable */ }
-  const result = resolve(catalog, path, saved, new URL(location.href).searchParams.get('plan'));
+  const result = resolve(catalog, path, null, new URL(location.href).searchParams.get('plan'));
   const active = result.active;
   const urlFor = (page, plan = active) => {
+    if (page === 'overview') plan = catalog.plans.find(p => p.id === catalog.default) || catalog.plans[0];
     const url = new URL(base + plan.pages[page], location.origin);
-    url.searchParams.set('plan', plan.id);
+    if (plan.id !== catalog.default) url.searchParams.set('plan', plan.id);
     return url;
   };
-  try { localStorage.setItem(storageKey, active.id); } catch (_) { /* the URL also preserves selection */ }
+  try { localStorage.removeItem(storageKey); } catch (_) { /* ignore legacy view preferences */ }
   window.fitnessMealPlan = { id: active.id, urlFor: (page) => urlFor(page).href, storageKey: (key) => scopedKey(key, active.id, catalog.default) };
   if (result.redirect) { location.replace(urlFor(result.page).href); return; }
 
@@ -73,10 +70,11 @@
     option.selected = plan.id === active.id;
     choices.append(option);
   }
+  choices.value = active.id;
+  window.addEventListener('pageshow', () => { choices.value = active.id; });
   choices.addEventListener('change', () => {
     const plan = catalog.plans.find((entry) => entry.id === choices.value);
     if (!plan || plan.id === active.id) return;
-    try { localStorage.setItem(storageKey, plan.id); } catch (_) {}
     location.assign(urlFor(result.page, plan).href);
   });
   control.append(label, choices);

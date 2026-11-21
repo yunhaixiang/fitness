@@ -13,12 +13,12 @@ test('Current plan opens at entry URLs and explicit routes keep both plans indep
   assert.equal(resolve(catalog, url).active.id, 'plan-2');
   assert.equal(resolve(catalog, url, 'plan-1').active.id, 'plan-2');
   assert.equal(resolve(catalog, url).redirect, second.pages[page]);
-  assert.equal(resolve(catalog, url, null, 'plan-1').active.id, 'plan-1');
-  assert.equal(resolve(catalog, url, null, 'plan-1').redirect, null);
+  assert.equal(resolve(catalog, url, null, 'plan-1').active.id, page === 'overview' ? 'plan-2' : 'plan-1');
+  assert.equal(resolve(catalog, url, null, 'plan-1').redirect, page === 'overview' ? second.pages[page] : null);
   assert.equal(resolve(catalog, second.pages[page]).active.id, 'plan-2');
   assert.equal(resolve(catalog, second.pages[page]).redirect, null);
   assert.equal(resolve(catalog, url, null, 'plan-2').redirect, second.pages[page]);
-  assert.equal(resolve(catalog, second.pages[page], null, 'plan-1').redirect, url);
+  assert.equal(resolve(catalog, second.pages[page], null, 'plan-1').redirect, page === 'overview' ? null : url);
  }
  assert.equal(resolve(catalog, '/strength/', 'plan-2').active.id,'plan-2');
  assert.equal(resolve(catalog, '/strength/', 'missing').active.id,'plan-2');
@@ -54,4 +54,14 @@ test('new plan has independent source data, activities and cooking tasks', () =>
   assert.notEqual(read('_data/meal_nutrition.json'),'{}');
   assert.throws(()=>execFileSync('python3',args,{stdio:'pipe'}));
  } finally {fs.rmSync(temp,{recursive:true,force:true});}
+});
+
+test('stale browsing preferences never replace current on automatic entry or shared pages', () => {
+ for (const path of ['/','/diet/','/stats/','/shopping/','/cooking/','/strength/','/tracker/','/sleep/']) {
+  assert.equal(resolve(catalog,path,'plan-1').active.id,catalog.default);
+ }
+ assert.equal(resolve(catalog,'/strength/','plan-1','plan-1').active.id,catalog.default);
+ const future={...catalog,default:'plan-3',plans:[...catalog.plans,{id:'plan-3',pages:Object.fromEntries(Object.keys(second.pages).map(k=>[k,`/plans/plan-3/${k}/`]))}]};
+ assert.equal(resolve(future,'/plans/plan-2/diet/','plan-2').active.id,'plan-3');
+ assert.equal(resolve(future,'/plans/plan-2/diet/',null,'plan-2').active.id,'plan-2');
 });
