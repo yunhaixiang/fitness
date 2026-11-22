@@ -273,12 +273,12 @@ meal_activities_script: /assets/meal-plans/plan-2/meal-activities.js
 <ol class="cooking-source-en" lang="en" hidden><li>After 1½ minutes, remove carefully and watch for steam. Check that the 🧆 centres are thoroughly hot; if needed, continue in short intervals and check again.</li><li>Place 3 each in meals 1 and 5 with the curry rice.</li></ol>
 </li>
 <li class="cooking-task-source">
-<ol class="cooking-source-zh" lang="zh"><li>🥦 取冷冻西兰花125 g（500 g袋的¼），不用提前解冻，倒入微波炉适用的碗；剩余密封继续冷冻。</li><li>按包装说明加💧 水，盖上留排气缝的微波炉适用盖，启动微波加热；时间按包装、份量和功率调整。不连普通包装袋加热。</li></ol>
-<ol class="cooking-source-en" lang="en" hidden><li>Place 125 g frozen 🥦 broccoli (¼ of a 500 g bag) in a microwave-safe bowl without thawing; reseal and freeze the remainder.</li><li>Add 💧 water as directed on the package, cover with a vented microwave-safe lid and start cooking. Follow package directions for portion size and wattage; do not microwave the ordinary packaging bag.</li></ol>
+<ol class="cooking-source-zh" lang="zh"><li>🥦 取冷冻西兰花125 g（500 g袋的¼），不用提前解冻，倒入微波炉适用的碗；剩余密封继续冷冻。</li><li>加入💧 水1汤匙（15 mL，＝3茶匙），盖上可微波盖并留排气口；高火先微波2分钟。不连普通包装袋加热；包装有明确水量和时间时以包装为准。</li></ol>
+<ol class="cooking-source-en" lang="en" hidden><li>Place 125 g frozen 🥦 broccoli (¼ of a 500 g bag) in a microwave-safe bowl without thawing; reseal and freeze the remainder.</li><li>Add 1 tbsp 💧 water (15 mL, or 3 tsp), cover with a vented microwave-safe lid and microwave on high for 2 minutes initially. Do not microwave the ordinary packaging bag; use package water and timing instructions when specified.</li></ol>
 </li>
 <li class="cooking-task-source">
-<ol class="cooking-source-zh" lang="zh"><li>🥦 微波结束后，小心蒸汽，翻动检查西兰花是否熟透；需要时继续加热。</li><li>沥掉多余💧 水，均分到第3、7盘，每份对应冷冻重量62.5 g；不额外加油或盐。</li></ol>
-<ol class="cooking-source-en" lang="en" hidden><li>After microwaving, open carefully to avoid steam, stir and check the 🥦 broccoli is fully cooked; continue heating if needed.</li><li>Drain excess 💧 water and divide equally between meals 3 and 7 (62.5 g frozen weight each), without additional oil or salt.</li></ol>
+<ol class="cooking-source-zh" lang="zh"><li>🥦 2分钟后小心蒸汽，翻动并检查中心是否热透；不够时每次追加30秒，直到热透。通常总共约2–3分钟，按微波炉功率和实际熟度调整。</li><li>沥掉多余💧 水，均分到第3、7盘，每份对应冷冻重量62.5 g；不额外加油或盐。</li></ol>
+<ol class="cooking-source-en" lang="en" hidden><li>After 2 minutes, open carefully to avoid steam, stir and check that the centre of the 🥦 broccoli is hot. If needed, heat in additional 30-second intervals until hot throughout. Usually allow about 2–3 minutes total, adjusting for microwave power and doneness.</li><li>Drain excess 💧 water and divide equally between meals 3 and 7 (62.5 g frozen weight each), without additional oil or salt.</li></ol>
 </li>
 <li class="cooking-task-source">
 <ol class="cooking-source-zh" lang="zh"><li>🫑 橙甜椒洗净擦干，取½个（约85 g）去籽、切细条；生切直接使用。剩余半个包好冷藏，留给下批卷饼。</li><li>第4盘铺🌯 大号全麦卷饼皮1片，抹🥣 Chipotle蛋黄酱1茶匙（5 mL）。</li></ol>

@@ -708,8 +708,8 @@
         "Start Microwaving Broccoli"
       ],
       "note": [
-        "",
-        ""
+        "125 g西兰花＋15 mL水，高火先2分钟",
+        "125 g broccoli + 15 mL water; high for 2 minutes initially"
       ],
       "group": "finish",
       "before": [],
@@ -717,7 +717,8 @@
       "minutes": 1,
       "instant": true,
       "holdsResource": "microwave",
-      "releasesAt": "broccoli"
+      "releasesAt": "broccoli",
+      "durationHint": 2
     },
     {
       "id": "broccoli",
@@ -726,15 +727,15 @@
         "Check and Portion Broccoli"
       ],
       "note": [
-        "按包装加热并确认熟度",
-        "Follow package directions and confirm doneness"
+        "翻动检查，不够时每次追加30秒",
+        "Stir and check; add 30 seconds at a time if needed"
       ],
       "group": "finish",
       "before": [
         "broccoli-start"
       ],
       "link": "#cook-broccoli",
-      "minutes": 1,
+      "minutes": 2,
       "confirmation": true,
       "waitFor": "broccoli-start",
       "waitKind": "food",
