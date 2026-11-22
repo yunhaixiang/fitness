@@ -113,3 +113,20 @@ test('Plan 2 microwave meatballs are independent of the oven and share the micro
  assert.match(read('plans/plan-2/cooking.md'),/Microwave for 1½ minutes/);
  assert.doesNotMatch(read('plans/plan-2/cooking.md'),/土豆翻面|牛肉丸入烤箱/);
 });
+
+test('separate curry saucepan stages do not require chicken and reserve the pan until portioning', () => {
+ const nodes=definition.nodes;
+ const available=done=>derive(nodes,done).available.map(n=>n.id);
+ const pastaReady=['pasta-water-start','pasta-water','pasta-start','pasta'];
+ assert.ok(available(pastaReady).includes('tomato'));
+ assert.ok(available([]).includes('curry-water-start'));
+ let done=[...pastaReady,'curry-water-start'];
+ for(const next of ['curry-water','curry-start','curry']) {
+  assert.ok(!available(done).includes('tomato'));
+  assert.ok(available(done).includes(next),next);
+  done.push(next);
+ }
+ assert.ok(available(done).includes('tomato'));
+ assert.ok(nodes.find(n=>n.id==='refrigerate').before.includes('ground'));
+ assert.doesNotMatch(read('plans/plan-2/cooking.md'),/鸡肉末锅中加入|water to the ground chicken pan|留在锅中待加咖喱/);
+});

@@ -64,6 +64,7 @@ for(const [plan,nodes] of [['current',current],['historical',historical]]) {
   assert.equal(state.version,5);
   const migrated=derive(nodes,state.done).done;
   const newlyRequired=nodes.some(n=>n.id==='breaded-fish') ? ['breaded-fish-start','breaded-fish','sandwich','refrigerate','clean'] : nodes.some(n=>n.id==='broccoli') ? ['broccoli-start','broccoli','meatballs-start','meatballs','refrigerate','clean'] : [];
+  if (nodes.some(n=>n.id==='curry-water-start')) newlyRequired.push('curry-water-start','curry-water','curry-start','curry');
   assert.equal(migrated.length,nodes.length-newlyRequired.length);
   newlyRequired.forEach(id=>assert.ok(!migrated.includes(id),'new food tasks must not inherit completion'));
 

@@ -604,6 +604,45 @@
       "minutes": 8
     },
     {
+      "id": "curry-water-start",
+      "label": [
+        "小锅开始烧咖喱用水",
+        "Start Heating Curry Water"
+      ],
+      "note": [
+        "水约300 mL；开火后勾选",
+        "About 300 mL water; check after starting"
+      ],
+      "group": "small-wok",
+      "before": [],
+      "link": "#cook-curry-water-start",
+      "minutes": 1,
+      "instant": true,
+      "holdsResource": "small-wok",
+      "releasesAt": "curry-start"
+    },
+    {
+      "id": "curry-water",
+      "label": [
+        "确认咖喱用水烧开",
+        "Confirm Curry Water Is Boiling"
+      ],
+      "note": [
+        "",
+        ""
+      ],
+      "group": "small-wok",
+      "before": [
+        "curry-water-start"
+      ],
+      "link": "#cook-curry-water",
+      "minutes": 1,
+      "manual": true,
+      "confirmation": true,
+      "waitFor": "curry-water-start",
+      "waitKind": "boil"
+    },
+    {
       "id": "curry-start",
       "label": [
         "加入咖喱、开始小火煮",
@@ -613,14 +652,17 @@
         "",
         ""
       ],
-      "group": "large-wok",
+      "group": "small-wok",
       "before": [
-        "ground"
+        "curry-water"
       ],
       "link": "#cook-curry-start",
       "minutes": 2,
       "instant": true,
-      "durationHint": 5
+      "durationHint": 5,
+      "holdsResource": "small-wok",
+      "releasesAt": "curry",
+      "waitFor": "curry-water-start"
     },
     {
       "id": "curry",
@@ -632,7 +674,7 @@
         "",
         ""
       ],
-      "group": "large-wok",
+      "group": "small-wok",
       "before": [
         "curry-start"
       ],
@@ -755,7 +797,8 @@
         "tomato",
         "wrap",
         "broccoli",
-        "meatballs"
+        "meatballs",
+        "ground"
       ],
       "link": "#cook-refrigerate",
       "minutes": 5
@@ -841,7 +884,11 @@
       "small-wok",
       "small-wok",
       [
-        "tomato"
+        "tomato",
+        "curry-water-start",
+        "curry-water",
+        "curry-start",
+        "curry"
       ]
     ],
     [
@@ -849,9 +896,7 @@
       "large-wok",
       [
         "spinach",
-        "ground",
-        "curry-start",
-        "curry"
+        "ground"
       ]
     ],
     [

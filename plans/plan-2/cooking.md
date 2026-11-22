@@ -232,6 +232,22 @@ meal_activities_script: /assets/meal-plans/plan-2/meal-activities.js
 <ol class="cooking-source-zh" lang="zh"><li>🫒 油½茶匙，加黑胡椒¼茶匙、🧄 蒜粉½茶匙、🌿 意式香料½茶匙。</li><li>倒入🍅 Catelli番茄罗勒意面酱300 mL，煮2–3分钟；拌入🍝 意面再煮3分钟。</li><li>均分到第2、6盘。</li></ol>
 <ol class="cooking-source-en" lang="en" hidden><li>Heat ½ tsp 🫒 oil with ¼ tsp black pepper, ½ tsp 🧄 garlic powder and ½ tsp 🌿 Italian seasoning.</li><li>Add 300 mL 🍅 Catelli Tomato &amp; Basil Pasta Sauce; simmer for 2–3 minutes, then toss with the 🍝 spaghetti for 3 minutes.</li><li>Divide equally between meals 2 and 6.</li></ol>
 </li>
+<li class="cooking-task-source">
+<ol class="cooking-source-zh" lang="zh"><li>💧 小锅加入约300 mL水，开火加热；启动后可做其他任务。</li></ol>
+<ol class="cooking-source-en" lang="en" hidden><li>Add about 300 mL 💧 water to the saucepan and start heating; other tasks can be done while waiting.</li></ol>
+</li>
+<li class="cooking-task-source">
+<ol class="cooking-source-zh" lang="zh"><li>💧 确认小锅里的水已经烧开，再进行下一步。</li></ol>
+<ol class="cooking-source-en" lang="en" hidden><li>Confirm the 💧 water in the saucepan has come to a boil before continuing.</li></ol>
+</li>
+<li class="cooking-task-source">
+<ol class="cooking-source-zh" lang="zh"><li>🍛 90 g装咖喱切下⅖包（36 g），切碎。</li><li>小锅暂时关火，将咖喱块直接加入热水，搅拌至溶解。</li><li>重新开小火煮约5分钟，期间搅拌；不另外加油。</li></ol>
+<ol class="cooking-source-en" lang="en" hidden><li>Chop ⅖ of the 90 g 🍛 curry pack (36 g).</li><li>Turn off the saucepan heat, add the roux directly to the hot water and stir until dissolved.</li><li>Return to low heat and simmer for about 5 minutes, stirring occasionally, without additional oil.</li></ol>
+</li>
+<li class="cooking-task-source">
+<ol class="cooking-source-zh" lang="zh"><li>🍛 确认咖喱块完全溶解、酱汁热透；过稠时少量补💧 水，关火。</li><li>咖喱汁均分到第1、5盘，直接浇在🍚 米饭和🍗 鸡肉蔬菜上；其他食材未完成时可先分装酱汁。</li></ol>
+<ol class="cooking-source-en" lang="en" hidden><li>Check that the 🍛 roux has dissolved and the sauce is hot; add a little 💧 water if too thick, then turn off the heat.</li><li>Divide the sauce equally between meals 1 and 5 and pour directly over the 🍚 rice and 🍗 chicken and vegetables. If other ingredients are not ready, portion the sauce first.</li></ol>
+</li>
 </ol>
 <h2 id="large-wok" data-en="Wok">大锅</h2>
 <ol>
@@ -240,17 +256,11 @@ meal_activities_script: /assets/meal-plans/plan-2/meal-activities.js
 <ol class="cooking-source-en" lang="en" hidden><li>Sauté 1 bag (284 g; 2 bags per week) of 🥬 spinach with 1 tsp 🫒 oil, ¼ tsp 🧄 garlic powder and ¼ tsp 🧅 onion powder for about 7 minutes.</li><li>Divide equally between meals 3 and 7.</li></ol>
 </li>
 <li class="cooking-task-source">
-<ol class="cooking-source-zh" lang="zh"><li>🫛🥕 豌豆胡萝卜1罐沥干。</li><li>锅内加🫒 油½茶匙，中火炒🍗 鸡肉末半包（227 g）至中心74°C。</li><li>加入豌豆胡萝卜、🧄 蒜粉¼茶匙、🧅 洋葱粉¼茶匙，炒热拌匀，留在锅中待加咖喱。</li><li>前半周备料时，剩下半包（227 g）生鸡肉末冷冻，留待后半周使用。</li></ol>
-<ol class="cooking-source-en" lang="en" hidden><li>Drain 1 can 🫛🥕 peas and carrots.</li><li>Heat ½ tsp 🫒 oil and cook half a pack (227 g) of 🍗 ground chicken over medium heat to 74°C.</li><li>Add the vegetables, ¼ tsp 🧄 garlic powder and ¼ tsp 🧅 onion powder; heat through and leave in the pan for the curry sauce.</li><li>During the first session, freeze the remaining half pack (227 g) of raw ground chicken for the second half of the week.</li></ol>
+<ol class="cooking-source-zh" lang="zh"><li>🫛🥕 豌豆胡萝卜1罐沥干。</li><li>锅内加🫒 油½茶匙，中火炒🍗 鸡肉末半包（227 g）至中心74°C。</li><li>加入豌豆胡萝卜、🧄 蒜粉¼茶匙、🧅 洋葱粉¼茶匙，炒热拌匀，均分到第1、5盘。</li><li>前半周备料时，剩下半包（227 g）生鸡肉末冷冻，留待后半周使用。</li></ol>
+<ol class="cooking-source-en" lang="en" hidden><li>Drain 1 can 🫛🥕 peas and carrots.</li><li>Heat ½ tsp 🫒 oil and cook half a pack (227 g) of 🍗 ground chicken over medium heat to 74°C.</li><li>Add the vegetables, ¼ tsp 🧄 garlic powder and ¼ tsp 🧅 onion powder; heat through, then divide equally between meals 1 and 5.</li><li>During the first session, freeze the remaining half pack (227 g) of raw ground chicken for the second half of the week.</li></ol>
 </li>
-<li class="cooking-task-source">
-<ol class="cooking-source-zh" lang="zh"><li>🍛 90 g装咖喱切下⅖包（36 g），切碎。</li><li>鸡肉末锅中加入💧 水约300 mL，暂时关火，加入咖喱块搅拌至溶解。</li><li>重新开小火煮约5分钟；过稠时少量加💧 水，不另外加油。</li></ol>
-<ol class="cooking-source-en" lang="en" hidden><li>Cut off ⅖ of the 90 g 🍛 curry pack (36 g) and chop it.</li><li>Add about 300 mL 💧 water to the ground chicken pan, turn off the heat, and stir in the roux until dissolved.</li><li>Return to low heat and simmer for about 5 minutes; add a little 💧 water if too thick, without additional oil.</li></ol>
-</li>
-<li class="cooking-task-source">
-<ol class="cooking-source-zh" lang="zh"><li>🍛 确认咖喱已充分溶解、酱汁热透且浓稠合适；关火。</li><li>将鸡肉末、蔬菜和咖喱汁均分到第1、5盘，浇在🍚 米饭上；米饭尚未煮好时先盛在盘中，稍后加入米饭。</li></ol>
-<ol class="cooking-source-en" lang="en" hidden><li>Check that the 🍛 roux is fully dissolved and the sauce is hot with the desired consistency; turn off the heat.</li><li>Divide the chicken, vegetables and curry sauce equally between meals 1 and 5 and spoon over the 🍚 rice. If the rice is not ready, portion the sauce into the containers first and add the rice later.</li></ol>
-</li>
+
+
 </ol>
 <h2 id="finish" data-en="Finish">收尾</h2>
 <ol>
