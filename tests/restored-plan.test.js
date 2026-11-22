@@ -10,7 +10,7 @@ const {derive}=require('../assets/cooking-progress');
 test('restored repeating menu has fourteen meals, old quantities and independent nutrition',()=>{
  const schedule=read('_includes/meal-plans/plan-2/diet-schedule.html');
  const keys=[...schedule.matchAll(/data-nutrition-key="([^"]+)"/g)].map(x=>x[1]);
- const half=['rice','pasta','potato','wrap','rice','pasta','potato'];
+ const half=['pasta','rice','potato','wrap','pasta','rice','potato'];
  assert.deepEqual(keys,[...half,...half]);
  assert.equal((schedule.match(/data-drink="sparkling-ice"/g)||[]).length,2);
  for(const k of keys)assert.ok(data.meals[k]);
@@ -75,7 +75,7 @@ test('Plan 2 uses four salmon and four tilapia portions, no haddock, and twelve 
  for(const text of [schedule,shopping,cooking,read('_includes/meal-plans/plan-2/nutrition-meal-summary.html')])assert.doesNotMatch(text,/haddock|黑线鳕/i);
  assert.match(shopping,/2盒（4块）\/ 周/);
  assert.match(cooking,/三文鱼2块（320 g）/);
- assert.match(cooking,/三文鱼放第2、6盘，罗非鱼放第3、7盘/);
+ assert.match(cooking,/三文鱼放第1、5盘，罗非鱼放第3、7盘/);
  assert.ok(!definition.nodes.some(n=>n.id==='haddock'));
  assert.equal(+data.meals.pasta.kcal,721);
  assert.equal(+data.meals.pasta.protein,65.6);

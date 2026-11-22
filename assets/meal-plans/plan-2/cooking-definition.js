@@ -230,8 +230,8 @@
         "Check and Remove Meatballs"
       ],
       "note": [
-        "1分半后检查热透，第1、5盘各3颗",
-        "Check after 1½ minutes; 3 each for meals 1 and 5"
+        "1分半后检查热透，第2、6盘各3颗",
+        "Check after 1½ minutes; 3 each for meals 2 and 6"
       ],
       "group": "finish",
       "before": [
