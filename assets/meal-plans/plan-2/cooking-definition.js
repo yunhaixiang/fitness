@@ -105,26 +105,6 @@
       "durationHint": 40
     },
     {
-      "id": "potato-turn",
-      "label": [
-        "土豆中途翻面",
-        "Turn Potatoes Halfway"
-      ],
-      "note": [
-        "烤约20分钟后翻面",
-        "Turn after about 20 minutes"
-      ],
-      "group": "oven",
-      "before": [
-        "potato-start"
-      ],
-      "link": "#cook-potato-turn",
-      "minutes": 1,
-      "confirmation": true,
-      "waitKind": "food",
-      "waitFor": "potato-start"
-    },
-    {
       "id": "potato",
       "label": [
         "确认土豆熟透、取出",
@@ -136,7 +116,7 @@
       ],
       "group": "oven",
       "before": [
-        "potato-turn"
+        "potato-start"
       ],
       "link": "#cook-potato",
       "minutes": 40,
@@ -227,20 +207,21 @@
     {
       "id": "meatballs-start",
       "label": [
-        "牛肉丸入烤箱",
-        "Load Meatballs into Oven"
+        "开始微波牛肉丸",
+        "Start Microwaving Meatballs"
       ],
       "note": [
-        "按包装温度与时间复热",
-        "Reheat at package temperature and time"
+        "6颗，微波1分半后检查",
+        "6 meatballs; check after 1½ minutes"
       ],
-      "group": "oven",
-      "before": [
-        "oven-heat"
-      ],
+      "group": "finish",
+      "before": [],
       "link": "#cook-meatballs-start",
-      "minutes": 2,
-      "instant": true
+      "minutes": 1,
+      "instant": true,
+      "durationHint": 1.5,
+      "holdsResource": "microwave",
+      "releasesAt": "meatballs"
     },
     {
       "id": "meatballs",
@@ -249,18 +230,19 @@
         "Check and Remove Meatballs"
       ],
       "note": [
-        "每份咖喱饭3颗",
-        "3 per curry meal"
+        "1分半后检查热透，第1、5盘各3颗",
+        "Check after 1½ minutes; 3 each for meals 1 and 5"
       ],
-      "group": "oven",
+      "group": "finish",
       "before": [
         "meatballs-start"
       ],
       "link": "#cook-meatballs",
-      "minutes": 1,
+      "minutes": 1.5,
       "confirmation": true,
       "waitFor": "meatballs-start",
-      "waitKind": "food"
+      "waitKind": "food",
+      "resource": "microwave"
     },
     {
       "id": "prep-rice",
@@ -816,14 +798,11 @@
         "prep-ribs",
         "oven-heat",
         "potato-start",
-        "potato-turn",
         "potato",
         "chicken-start",
         "chicken",
         "ribs-start",
-        "ribs",
-        "meatballs-start",
-        "meatballs"
+        "ribs"
       ]
     ],
     [
@@ -879,6 +858,8 @@
       "finish",
       "finish",
       [
+        "meatballs-start",
+        "meatballs",
         "broccoli-start",
         "broccoli",
         "prep-bread",

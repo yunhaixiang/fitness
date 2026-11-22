@@ -65,14 +65,7 @@ meal_activities_script: /assets/meal-plans/plan-2/meal-activities.js
 <li>Check for doneness after about 40 minutes.</li>
 </ol>
 </li>
-<li class="cooking-task-source">
-<ol lang="zh-CN" class="cooking-source-zh">
-<li>烤约20分钟时将🥔 土豆翻面，再放回继续烤。</li>
-</ol>
-<ol lang="en" class="cooking-source-en" hidden>
-<li>After about 20 minutes, turn the 🥔 potatoes and return them to the oven.</li>
-</ol>
-</li>
+
 <li class="cooking-task-source">
 <ol lang="zh-CN" class="cooking-source-zh">
 <li>确认熟度后取出：🥔 整颗土豆400°F烤40分钟至软；均分到第3、7盘。</li>
@@ -119,14 +112,8 @@ meal_activities_script: /assets/meal-plans/plan-2/meal-activities.js
 <li>Check doneness before removing: Heat at 400°F for 15–20 minutes, to 74°C in the centre; put ¼ box each in meals 3 and 7.</li>
 </ol>
 </li>
-<li class="cooking-task-source">
-<ol class="cooking-source-zh" lang="zh"><li>🧆 取冷冻牛肉丸6颗，单层放在独立烤盘或烤皿上；不额外加油或盐，剩余密封冷冻。</li><li>按包装的烤箱温度和时间入炉复热，设置计时；若包装温度与当前400°F不同，待其他烤物取出后调温再放入。</li></ol>
-<ol class="cooking-source-en" lang="en" hidden><li>Place 6 frozen 🧆 meatballs in a single layer on a separate baking tray or oven-safe dish; add no oil or salt and keep the remainder frozen.</li><li>Reheat in the oven at the temperature and time on the package and set a timer. If the package temperature differs from the current 400°F, remove the other baked foods before adjusting the temperature and loading the meatballs.</li></ol>
-</li>
-<li class="cooking-task-source">
-<ol class="cooking-source-zh" lang="zh"><li>🧆 到包装指定时间后，确认牛肉丸中心充分热透，再取出；未热透就继续烤。</li><li>第1、5盘各放3颗，搭配咖喱米饭。</li></ol>
-<ol class="cooking-source-en" lang="en" hidden><li>At the package cooking time, check that the 🧆 meatballs are thoroughly hot in the centre before removing; continue heating if needed.</li><li>Place 3 each in meals 1 and 5 with the curry rice.</li></ol>
-</li>
+
+
 </ol>
 <h2 id="air-fryer" data-en="Air Fryer">空气炸锅</h2>
 <ol>
@@ -267,6 +254,14 @@ meal_activities_script: /assets/meal-plans/plan-2/meal-activities.js
 </ol>
 <h2 id="finish" data-en="Finish">收尾</h2>
 <ol>
+<li class="cooking-task-source">
+<ol class="cooking-source-zh" lang="zh"><li>🧆 取冷冻熟牛肉丸6颗，单层放入可微波容器，盖可微波盖并留排气口；剩余牛肉丸密封冷冻。</li><li>放入微波炉，加热1分半；启动后可做其他任务。</li></ol>
+<ol class="cooking-source-en" lang="en" hidden><li>Place 6 frozen fully cooked 🧆 meatballs in a single layer in a microwave-safe container; cover with a vented microwave-safe lid and keep the remainder frozen.</li><li>Microwave for 1½ minutes; other tasks can be done after starting.</li></ol>
+</li>
+<li class="cooking-task-source">
+<ol class="cooking-source-zh" lang="zh"><li>🧆 1分半后取出，注意蒸汽；确认中心热透，未热透则继续短时加热并检查。</li><li>第1、5盘各放3颗，搭配咖喱米饭。</li></ol>
+<ol class="cooking-source-en" lang="en" hidden><li>After 1½ minutes, remove carefully and watch for steam. Check that the 🧆 centres are thoroughly hot; if needed, continue in short intervals and check again.</li><li>Place 3 each in meals 1 and 5 with the curry rice.</li></ol>
+</li>
 <li class="cooking-task-source">
 <ol class="cooking-source-zh" lang="zh"><li>🥦 取冷冻西兰花125 g（500 g袋的¼），不用提前解冻，倒入微波炉适用的碗；剩余密封继续冷冻。</li><li>按包装说明加💧 水，盖上留排气缝的微波炉适用盖，启动微波加热；时间按包装、份量和功率调整。不连普通包装袋加热。</li></ol>
 <ol class="cooking-source-en" lang="en" hidden><li>Place 125 g frozen 🥦 broccoli (¼ of a 500 g bag) in a microwave-safe bowl without thawing; reseal and freeze the remainder.</li><li>Add 💧 water as directed on the package, cover with a vented microwave-safe lid and start cooking. Follow package directions for portion size and wattage; do not microwave the ordinary packaging bag.</li></ol>

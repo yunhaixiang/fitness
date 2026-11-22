@@ -97,3 +97,19 @@ test('Plan 2 meals begin at Sunday lunch and Wednesday dinner, matching prep car
  for(const [key,dates] of Object.entries(labels)) assert.equal(data.meals[key].label,dates.join('／'));
  assert.doesNotMatch(read('plans/plan-2/diet.md'),/午餐后做饭|晚餐后做饭/);
 });
+
+test('Plan 2 microwave meatballs are independent of the oven and share the microwave with broccoli', () => {
+ const nodes=definition.nodes;
+ assert.ok(!nodes.some(n=>n.id==='potato-turn'));
+ assert.deepEqual(nodes.find(n=>n.id==='potato').before,['potato-start']);
+ assert.equal(nodes.find(n=>n.id==='meatballs-start').durationHint,1.5);
+ const available=done=>derive(nodes,done).available.map(n=>n.id);
+ assert.ok(available([]).includes('meatballs-start'));
+ assert.ok(!available(['meatballs-start']).includes('broccoli-start'));
+ assert.ok(available(['meatballs-start']).includes('meatballs'));
+ assert.ok(available(['meatballs-start','meatballs']).includes('broccoli-start'));
+ assert.ok(!available(['broccoli-start']).includes('meatballs-start'));
+ assert.ok(available(['broccoli-start','broccoli']).includes('meatballs-start'));
+ assert.match(read('plans/plan-2/cooking.md'),/Microwave for 1½ minutes/);
+ assert.doesNotMatch(read('plans/plan-2/cooking.md'),/土豆翻面|牛肉丸入烤箱/);
+});
