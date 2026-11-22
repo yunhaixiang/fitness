@@ -35,7 +35,8 @@
     "2026-11-21: Correct stale restored egg purchasing specification: Great Value Large Eggs, one 12-count carton weekly, using the existing Plan 1 price $3.93 (not a new live quote). Supersedes the historical two 18-count cartons per three weeks. Consumption remains 6 eggs per cooking batch, 12 per week; no nutrient changes. Weekly grocery estimate decreases $0.72.",
     "2026-11-22: Move the current Plan 2 wrap from meal 1 to the middle, meal 4, preserving relative order of all other meals: rice, pasta, potato, wrap, rice, pasta, potato. Repeat for the second batch. Update both weekly schedule and summary, nutrition date labels and all Chinese/English cooking container references. Sparkling Ice remains with the first two chronological weekly meals. Quantities, shopping, weekly nutrition and cooking times unchanged.",
     "2026-11-22: Remove the potato-turn task; potato doneness follows potato loading directly. Reheat six fully cooked frozen meatballs per batch in the microwave for the user-selected 1.5 minutes, then check centres are hot and extend as needed. Separate start/check tasks in Finish, independent of oven preheating, with shared microwave occupancy preventing overlap with broccoli. Remove oven-baked wording from menus. No ingredient or nutrient changes.",
-    "2026-11-22: Prepare curry sauce separately in the saucepan with approximately 300 mL water and 36 g roux per batch; pour onto meals 1 and 5. Ground chicken and vegetables are cooked and portioned separately, without adding curry water to the meat pan. Split heating water, confirming boil, adding roux/simmering, and checking/portioning into independent tasks. Reserve the saucepan during curry preparation to avoid concurrent spaghetti use, with no mandatory ordering between curry and spaghetti. Refrigeration explicitly waits for ground chicken as well as sauce. Ingredients and nutrition unchanged."
+    "2026-11-22: Prepare curry sauce separately in the saucepan with approximately 300 mL water and 36 g roux per batch; pour onto meals 1 and 5. Ground chicken and vegetables are cooked and portioned separately, without adding curry water to the meat pan. Split heating water, confirming boil, adding roux/simmering, and checking/portioning into independent tasks. Reserve the saucepan during curry preparation to avoid concurrent spaghetti use, with no mandatory ordering between curry and spaghetti. Refrigeration explicitly waits for ground chicken as well as sauce. Ingredients and nutrition unchanged.",
+    "2026-11-22: Transfer the existing 62.5 g broccoli portions from both potato meals to both spaghetti meals per batch (meals 2 and 6). Keep microwave method, weekly 250 g and shopping unchanged. Transfer the stored broccoli nutrient delta rounded once at each displayed precision, subtracting and adding the same value to preserve total nutrients exactly; weekly quantities, daily averages and deficit are unchanged. Historical broccoliDeltaPerPotatoMeal remains the original source calculation, superseded in allocation by broccoliAllocation."
   ],
   "removedMushroomPerMeal": {
     "kcal": 14.985,
@@ -374,5 +375,29 @@
   "weeklyDrinkNutrition": {
     "sodium": 430,
     "potassium": 60
+  },
+  "broccoliAllocation": {
+    "meal": "pasta",
+    "halfWeekMealNumbers": [
+      2,
+      6
+    ],
+    "gramsPerMeal": 62.5,
+    "gramsPerBatch": 125,
+    "gramsPerWeek": 250,
+    "roundedNutrientTransferPerMeal": {
+      "kcal": 18.0,
+      "protein": 1.5,
+      "carbs": 2.9,
+      "fat": 0.0,
+      "saturatedFat": 0.0,
+      "fibre": 1.5,
+      "sugar": 0.7,
+      "sodium": 15.0,
+      "cholesterol": 0.0,
+      "calcium": 35.0,
+      "iron": 0.5,
+      "potassium": 133.0
+    }
   }
 }

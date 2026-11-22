@@ -277,8 +277,8 @@ meal_activities_script: /assets/meal-plans/plan-2/meal-activities.js
 <ol class="cooking-source-en" lang="en" hidden><li>Place 125 g frozen 🥦 broccoli (¼ of a 500 g bag) in a microwave-safe bowl without thawing; reseal and freeze the remainder.</li><li>Add 1 tbsp 💧 water (15 mL, or 3 tsp), cover with a vented microwave-safe lid and microwave on high for 2 minutes initially. Do not microwave the ordinary packaging bag; use package water and timing instructions when specified.</li></ol>
 </li>
 <li class="cooking-task-source">
-<ol class="cooking-source-zh" lang="zh"><li>🥦 2分钟后小心蒸汽，翻动并检查中心是否热透；不够时每次追加30秒，直到热透。通常总共约2–3分钟，按微波炉功率和实际熟度调整。</li><li>沥掉多余💧 水，均分到第3、7盘，每份对应冷冻重量62.5 g；不额外加油或盐。</li></ol>
-<ol class="cooking-source-en" lang="en" hidden><li>After 2 minutes, open carefully to avoid steam, stir and check that the centre of the 🥦 broccoli is hot. If needed, heat in additional 30-second intervals until hot throughout. Usually allow about 2–3 minutes total, adjusting for microwave power and doneness.</li><li>Drain excess 💧 water and divide equally between meals 3 and 7 (62.5 g frozen weight each), without additional oil or salt.</li></ol>
+<ol class="cooking-source-zh" lang="zh"><li>🥦 2分钟后小心蒸汽，翻动并检查中心是否热透；不够时每次追加30秒，直到热透。通常总共约2–3分钟，按微波炉功率和实际熟度调整。</li><li>沥掉多余💧 水，均分到第2、6盘，搭配意面，每份对应冷冻重量62.5 g；不额外加油或盐。</li></ol>
+<ol class="cooking-source-en" lang="en" hidden><li>After 2 minutes, open carefully to avoid steam, stir and check that the centre of the 🥦 broccoli is hot. If needed, heat in additional 30-second intervals until hot throughout. Usually allow about 2–3 minutes total, adjusting for microwave power and doneness.</li><li>Drain excess 💧 water and divide equally between spaghetti meals 2 and 6 (62.5 g frozen weight each), without additional oil or salt.</li></ol>
 </li>
 <li class="cooking-task-source">
 <ol class="cooking-source-zh" lang="zh"><li>🫑 橙甜椒洗净擦干，取½个（约85 g）去籽、切细条；生切直接使用。剩余半个包好冷藏，留给下批卷饼。</li><li>第4盘铺🌯 大号全麦卷饼皮1片，抹🥣 Chipotle蛋黄酱1茶匙（5 mL）。</li></ol>

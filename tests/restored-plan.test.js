@@ -77,8 +77,8 @@ test('Plan 2 uses four salmon and four tilapia portions, no haddock, and twelve 
  assert.match(cooking,/三文鱼2块（320 g）/);
  assert.match(cooking,/三文鱼放第2、6盘，罗非鱼放第3、7盘/);
  assert.ok(!definition.nodes.some(n=>n.id==='haddock'));
- assert.equal(+data.meals.pasta.kcal,703);
- assert.equal(+data.meals.pasta.protein,64.1);
+ assert.equal(+data.meals.pasta.kcal,721);
+ assert.equal(+data.meals.pasta.protein,65.6);
 });
 
 test('Plan 2 meals begin at Sunday lunch and Wednesday dinner, matching prep cards', () => {
