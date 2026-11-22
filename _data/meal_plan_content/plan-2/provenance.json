@@ -3,10 +3,10 @@
   "boundaryCommit": "40e269d",
   "description": "Snapshot immediately before the diversified seven-meal menu replaced the repeating menu. Historical recipe portions and nutrient estimates retained; current shared UI, training and body records.",
   "halfWeekMealKeys": [
-    "wrap",
     "rice",
     "pasta",
     "potato",
+    "wrap",
     "rice",
     "pasta",
     "potato"
@@ -32,7 +32,8 @@
     "2026-11-19: Clarify rice is cooked only in the rice cooker and portioned directly; chicken/vegetable curry is prepared separately and spooned over it, with3 oven-baked meatballs per meal. Keep curry and rice independently actionable: sauce can be portioned first if rice is not ready. No frying rice, no ingredient/nutrition changes.",
     "2026-11-21: Replace Plan 2 Fuze with Plan 1 Sparkling Ice Orange Mango: one 503 mL bottle weekly, 251.5 mL per first two meals. Reuse existing Plan 1 shopping price $1.27 and manufacturer FAQ nutrition (zero kcal, 10 mg sodium, 60 mg potassium per bottle; https://sparklingice.ca/faq/). Previous Plan 2 aggregates did not separately count Fuze minerals; add the known replacement minerals to the meal/Fresca baseline, not a measured Fuze-to-Ice nutrient difference. Replace the 1.36 kg yellow-potato bag with two 680 g The Little Potato Company Little Yellows bags, using existing Plan 1 price $2.98 each (not a newly verified live quote). Each cooking batch uses one whole bag; four weekly meals remain 340 g each. Existing potato nutrition already uses the Little Yellows planning composition, so meal nutrition is unchanged.",
     "2026-11-21: Align restored Plan 2 with the existing private daily schedule: prepare before Sunday lunch and Wednesday dinner, eat each new batch immediately. Shift all fourteen meal slots one meal earlier (Sunday lunch through Saturday dinner); move cooking activity cards before those meals; update nutrition date labels and no-script instructions. Food order, portions, weekly nutrition and shopping remain unchanged.",
-    "2026-11-21: Correct stale restored egg purchasing specification: Great Value Large Eggs, one 12-count carton weekly, using the existing Plan 1 price $3.93 (not a new live quote). Supersedes the historical two 18-count cartons per three weeks. Consumption remains 6 eggs per cooking batch, 12 per week; no nutrient changes. Weekly grocery estimate decreases $0.72."
+    "2026-11-21: Correct stale restored egg purchasing specification: Great Value Large Eggs, one 12-count carton weekly, using the existing Plan 1 price $3.93 (not a new live quote). Supersedes the historical two 18-count cartons per three weeks. Consumption remains 6 eggs per cooking batch, 12 per week; no nutrient changes. Weekly grocery estimate decreases $0.72.",
+    "2026-11-22: Move the current Plan 2 wrap from meal 1 to the middle, meal 4, preserving relative order of all other meals: rice, pasta, potato, wrap, rice, pasta, potato. Repeat for the second batch. Update both weekly schedule and summary, nutrition date labels and all Chinese/English cooking container references. Sparkling Ice remains with the first two chronological weekly meals. Quantities, shopping, weekly nutrition and cooking times unchanged."
   ],
   "removedMushroomPerMeal": {
     "kcal": 14.985,

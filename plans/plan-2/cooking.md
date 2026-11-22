@@ -26,10 +26,10 @@ meal_activities_script: /assets/meal-plans/plan-2/meal-activities.js
 </li>
 <li class="cooking-task-source">
 <ol lang="zh-CN" class="cooking-source-zh">
-<li>约50分钟后，确认电饭煲完成煮饭，再开盖松散，直接均分到第2、5盘，每份对应生米60 g；留在餐盘中待浇咖喱，不放入炒锅。</li>
+<li>约50分钟后，确认电饭煲完成煮饭，再开盖松散，直接均分到第1、5盘，每份对应生米60 g；留在餐盘中待浇咖喱，不放入炒锅。</li>
 </ol>
 <ol lang="en" class="cooking-source-en" hidden>
-<li>After about 50 minutes, confirm the rice cycle is complete, then fluff and divide the 🍚 rice directly between meals 2 and 5 (60 g dry rice each). Leave it in the containers for the curry topping; do not transfer it to the frying pan.</li>
+<li>After about 50 minutes, confirm the rice cycle is complete, then fluff and divide the 🍚 rice directly between meals 1 and 5 (60 g dry rice each). Leave it in the containers for the curry topping; do not transfer it to the frying pan.</li>
 </ol>
 </li>
 </ol>
@@ -75,10 +75,10 @@ meal_activities_script: /assets/meal-plans/plan-2/meal-activities.js
 </li>
 <li class="cooking-task-source">
 <ol lang="zh-CN" class="cooking-source-zh">
-<li>确认熟度后取出：🥔 整颗土豆400°F烤40分钟至软；均分到第4、7盘。</li>
+<li>确认熟度后取出：🥔 整颗土豆400°F烤40分钟至软；均分到第3、7盘。</li>
 </ol>
 <ol lang="en" class="cooking-source-en" hidden>
-<li>Check doneness before removing: Roast whole 🥔 potatoes at 400°F for 40 minutes until tender; divide equally between meals 4 and 7.</li>
+<li>Check doneness before removing: Roast whole 🥔 potatoes at 400°F for 40 minutes until tender; divide equally between meals 3 and 7.</li>
 </ol>
 </li>
 <li class="cooking-task-source">
@@ -94,11 +94,11 @@ meal_activities_script: /assets/meal-plans/plan-2/meal-activities.js
 <li class="cooking-task-source">
 <ol lang="zh-CN" class="cooking-source-zh">
 <li>确认熟度后取出：400°F烤27分钟，中心达74°C。</li>
-<li>第1盘2块掰碎；第3、6盘各1块。</li>
+<li>第4盘2块掰碎；第2、6盘各1块。</li>
 </ol>
 <ol lang="en" class="cooking-source-en" hidden>
 <li>Check doneness before removing: Roast at 400°F for 27 minutes, to 74°C in the centre.</li>
-<li>Shred 2 thighs for meal 1; place 1 thigh each in meals 3 and 6.</li>
+<li>Shred 2 thighs for meal 4; place 1 thigh each in meals 2 and 6.</li>
 </ol>
 </li>
 <li class="cooking-task-source">
@@ -113,10 +113,10 @@ meal_activities_script: /assets/meal-plans/plan-2/meal-activities.js
 </li>
 <li class="cooking-task-source">
 <ol lang="zh-CN" class="cooking-source-zh">
-<li>确认熟度后取出：400°F烤15–20分钟，中心达74°C；第4、7盘各¼盒。</li>
+<li>确认熟度后取出：400°F烤15–20分钟，中心达74°C；第3、7盘各¼盒。</li>
 </ol>
 <ol lang="en" class="cooking-source-en" hidden>
-<li>Check doneness before removing: Heat at 400°F for 15–20 minutes, to 74°C in the centre; put ¼ box each in meals 4 and 7.</li>
+<li>Check doneness before removing: Heat at 400°F for 15–20 minutes, to 74°C in the centre; put ¼ box each in meals 3 and 7.</li>
 </ol>
 </li>
 <li class="cooking-task-source">
@@ -124,8 +124,8 @@ meal_activities_script: /assets/meal-plans/plan-2/meal-activities.js
 <ol class="cooking-source-en" lang="en" hidden><li>Place 6 frozen 🧆 meatballs in a single layer on a separate baking tray or oven-safe dish; add no oil or salt and keep the remainder frozen.</li><li>Reheat in the oven at the temperature and time on the package and set a timer. If the package temperature differs from the current 400°F, remove the other baked foods before adjusting the temperature and loading the meatballs.</li></ol>
 </li>
 <li class="cooking-task-source">
-<ol class="cooking-source-zh" lang="zh"><li>🧆 到包装指定时间后，确认牛肉丸中心充分热透，再取出；未热透就继续烤。</li><li>第2、5盘各放3颗，搭配咖喱米饭。</li></ol>
-<ol class="cooking-source-en" lang="en" hidden><li>At the package cooking time, check that the 🧆 meatballs are thoroughly hot in the centre before removing; continue heating if needed.</li><li>Place 3 each in meals 2 and 5 with the curry rice.</li></ol>
+<ol class="cooking-source-zh" lang="zh"><li>🧆 到包装指定时间后，确认牛肉丸中心充分热透，再取出；未热透就继续烤。</li><li>第1、5盘各放3颗，搭配咖喱米饭。</li></ol>
+<ol class="cooking-source-en" lang="en" hidden><li>At the package cooking time, check that the 🧆 meatballs are thoroughly hot in the centre before removing; continue heating if needed.</li><li>Place 3 each in meals 1 and 5 with the curry rice.</li></ol>
 </li>
 </ol>
 <h2 id="air-fryer" data-en="Air Fryer">空气炸锅</h2>
@@ -154,10 +154,10 @@ meal_activities_script: /assets/meal-plans/plan-2/meal-activities.js
 </li>
 <li class="cooking-task-source">
 <ol lang="zh-CN" class="cooking-source-zh">
-<li>确认熟度后取出：🐟 400°F烤8分钟起检查至熟透；三文鱼放第3、6盘，罗非鱼放第4、7盘，各1块；炸篮装不下时分批。</li>
+<li>确认熟度后取出：🐟 400°F烤8分钟起检查至熟透；三文鱼放第2、6盘，罗非鱼放第3、7盘，各1块；炸篮装不下时分批。</li>
 </ol>
 <ol lang="en" class="cooking-source-en" hidden>
-<li>Check doneness before removing: Air-fry 🐟 salmon and tilapia at 400°F, checking from 8 minutes until cooked through; place salmon in meals 3 and 6 and tilapia in meals 4 and 7, one fillet each. Cook in batches if the basket is too small.</li>
+<li>Check doneness before removing: Air-fry 🐟 salmon and tilapia at 400°F, checking from 8 minutes until cooked through; place salmon in meals 2 and 6 and tilapia in meals 3 and 7, one fillet each. Cook in batches if the basket is too small.</li>
 </ol>
 </li>
 </ol>
@@ -198,8 +198,8 @@ meal_activities_script: /assets/meal-plans/plan-2/meal-activities.js
 </ol>
 </li>
 <li class="cooking-task-source">
-<ol class="cooking-source-zh" lang="zh"><li>🥚 剥壳，第1、2、5盘各2个；第1盘的蛋掰碎。</li></ol>
-<ol class="cooking-source-en" lang="en" hidden><li>Peel the 🥚 eggs; place 2 each in meals 1, 2 and 5. Break up the eggs for meal 1.</li></ol>
+<ol class="cooking-source-zh" lang="zh"><li>🥚 剥壳，第1、4、5盘各2个；第4盘的蛋掰碎。</li></ol>
+<ol class="cooking-source-en" lang="en" hidden><li>Peel the 🥚 eggs; place 2 each in meals 1, 4 and 5. Break up the eggs for meal 4.</li></ol>
 </li>
 </ol>
 <h2 id="pot-two" data-en="Pot 2">煮锅二</h2>
@@ -242,15 +242,15 @@ meal_activities_script: /assets/meal-plans/plan-2/meal-activities.js
 <h2 id="small-wok" data-en="Saucepan">小锅</h2>
 <ol>
 <li class="cooking-task-source">
-<ol class="cooking-source-zh" lang="zh"><li>🫒 油½茶匙，加黑胡椒¼茶匙、🧄 蒜粉½茶匙、🌿 意式香料½茶匙。</li><li>倒入🍅 Catelli番茄罗勒意面酱300 mL，煮2–3分钟；拌入🍝 意面再煮3分钟。</li><li>均分到第3、6盘。</li></ol>
-<ol class="cooking-source-en" lang="en" hidden><li>Heat ½ tsp 🫒 oil with ¼ tsp black pepper, ½ tsp 🧄 garlic powder and ½ tsp 🌿 Italian seasoning.</li><li>Add 300 mL 🍅 Catelli Tomato &amp; Basil Pasta Sauce; simmer for 2–3 minutes, then toss with the 🍝 spaghetti for 3 minutes.</li><li>Divide equally between meals 3 and 6.</li></ol>
+<ol class="cooking-source-zh" lang="zh"><li>🫒 油½茶匙，加黑胡椒¼茶匙、🧄 蒜粉½茶匙、🌿 意式香料½茶匙。</li><li>倒入🍅 Catelli番茄罗勒意面酱300 mL，煮2–3分钟；拌入🍝 意面再煮3分钟。</li><li>均分到第2、6盘。</li></ol>
+<ol class="cooking-source-en" lang="en" hidden><li>Heat ½ tsp 🫒 oil with ¼ tsp black pepper, ½ tsp 🧄 garlic powder and ½ tsp 🌿 Italian seasoning.</li><li>Add 300 mL 🍅 Catelli Tomato &amp; Basil Pasta Sauce; simmer for 2–3 minutes, then toss with the 🍝 spaghetti for 3 minutes.</li><li>Divide equally between meals 2 and 6.</li></ol>
 </li>
 </ol>
 <h2 id="large-wok" data-en="Wok">大锅</h2>
 <ol>
 <li class="cooking-task-source">
-<ol class="cooking-source-zh" lang="zh"><li>🥬 菠菜1袋（284 g，每周2袋），加🫒 油1茶匙、🧄 蒜粉¼茶匙、🧅 洋葱粉¼茶匙。</li><li>炒约7分钟；均分到第4、7盘。</li></ol>
-<ol class="cooking-source-en" lang="en" hidden><li>Sauté 1 bag (284 g; 2 bags per week) of 🥬 spinach with 1 tsp 🫒 oil, ¼ tsp 🧄 garlic powder and ¼ tsp 🧅 onion powder for about 7 minutes.</li><li>Divide equally between meals 4 and 7.</li></ol>
+<ol class="cooking-source-zh" lang="zh"><li>🥬 菠菜1袋（284 g，每周2袋），加🫒 油1茶匙、🧄 蒜粉¼茶匙、🧅 洋葱粉¼茶匙。</li><li>炒约7分钟；均分到第3、7盘。</li></ol>
+<ol class="cooking-source-en" lang="en" hidden><li>Sauté 1 bag (284 g; 2 bags per week) of 🥬 spinach with 1 tsp 🫒 oil, ¼ tsp 🧄 garlic powder and ¼ tsp 🧅 onion powder for about 7 minutes.</li><li>Divide equally between meals 3 and 7.</li></ol>
 </li>
 <li class="cooking-task-source">
 <ol class="cooking-source-zh" lang="zh"><li>🫛🥕 豌豆胡萝卜1罐沥干。</li><li>锅内加🫒 油½茶匙，中火炒🍗 鸡肉末半包（227 g）至中心74°C。</li><li>加入豌豆胡萝卜、🧄 蒜粉¼茶匙、🧅 洋葱粉¼茶匙，炒热拌匀，留在锅中待加咖喱。</li><li>前半周备料时，剩下半包（227 g）生鸡肉末冷冻，留待后半周使用。</li></ol>
@@ -261,8 +261,8 @@ meal_activities_script: /assets/meal-plans/plan-2/meal-activities.js
 <ol class="cooking-source-en" lang="en" hidden><li>Cut off ⅖ of the 90 g 🍛 curry pack (36 g) and chop it.</li><li>Add about 300 mL 💧 water to the ground chicken pan, turn off the heat, and stir in the roux until dissolved.</li><li>Return to low heat and simmer for about 5 minutes; add a little 💧 water if too thick, without additional oil.</li></ol>
 </li>
 <li class="cooking-task-source">
-<ol class="cooking-source-zh" lang="zh"><li>🍛 确认咖喱已充分溶解、酱汁热透且浓稠合适；关火。</li><li>将鸡肉末、蔬菜和咖喱汁均分到第2、5盘，浇在🍚 米饭上；米饭尚未煮好时先盛在盘中，稍后加入米饭。</li></ol>
-<ol class="cooking-source-en" lang="en" hidden><li>Check that the 🍛 roux is fully dissolved and the sauce is hot with the desired consistency; turn off the heat.</li><li>Divide the chicken, vegetables and curry sauce equally between meals 2 and 5 and spoon over the 🍚 rice. If the rice is not ready, portion the sauce into the containers first and add the rice later.</li></ol>
+<ol class="cooking-source-zh" lang="zh"><li>🍛 确认咖喱已充分溶解、酱汁热透且浓稠合适；关火。</li><li>将鸡肉末、蔬菜和咖喱汁均分到第1、5盘，浇在🍚 米饭上；米饭尚未煮好时先盛在盘中，稍后加入米饭。</li></ol>
+<ol class="cooking-source-en" lang="en" hidden><li>Check that the 🍛 roux is fully dissolved and the sauce is hot with the desired consistency; turn off the heat.</li><li>Divide the chicken, vegetables and curry sauce equally between meals 1 and 5 and spoon over the 🍚 rice. If the rice is not ready, portion the sauce into the containers first and add the rice later.</li></ol>
 </li>
 </ol>
 <h2 id="finish" data-en="Finish">收尾</h2>
@@ -272,12 +272,12 @@ meal_activities_script: /assets/meal-plans/plan-2/meal-activities.js
 <ol class="cooking-source-en" lang="en" hidden><li>Place 125 g frozen 🥦 broccoli (¼ of a 500 g bag) in a microwave-safe bowl without thawing; reseal and freeze the remainder.</li><li>Add 💧 water as directed on the package, cover with a vented microwave-safe lid and start cooking. Follow package directions for portion size and wattage; do not microwave the ordinary packaging bag.</li></ol>
 </li>
 <li class="cooking-task-source">
-<ol class="cooking-source-zh" lang="zh"><li>🥦 微波结束后，小心蒸汽，翻动检查西兰花是否熟透；需要时继续加热。</li><li>沥掉多余💧 水，均分到第4、7盘，每份对应冷冻重量62.5 g；不额外加油或盐。</li></ol>
-<ol class="cooking-source-en" lang="en" hidden><li>After microwaving, open carefully to avoid steam, stir and check the 🥦 broccoli is fully cooked; continue heating if needed.</li><li>Drain excess 💧 water and divide equally between meals 4 and 7 (62.5 g frozen weight each), without additional oil or salt.</li></ol>
+<ol class="cooking-source-zh" lang="zh"><li>🥦 微波结束后，小心蒸汽，翻动检查西兰花是否熟透；需要时继续加热。</li><li>沥掉多余💧 水，均分到第3、7盘，每份对应冷冻重量62.5 g；不额外加油或盐。</li></ol>
+<ol class="cooking-source-en" lang="en" hidden><li>After microwaving, open carefully to avoid steam, stir and check the 🥦 broccoli is fully cooked; continue heating if needed.</li><li>Drain excess 💧 water and divide equally between meals 3 and 7 (62.5 g frozen weight each), without additional oil or salt.</li></ol>
 </li>
 <li class="cooking-task-source">
-<ol class="cooking-source-zh" lang="zh"><li>🫑 橙甜椒洗净擦干，取½个（约85 g）去籽、切细条；生切直接使用。剩余半个包好冷藏，留给下批卷饼。</li><li>第1盘铺🌯 大号全麦卷饼皮1片，抹🥣 Chipotle蛋黄酱1茶匙（5 mL）。</li></ol>
-<ol class="cooking-source-en" lang="en" hidden><li>Wash and dry 🫑 orange bell pepper; deseed and thinly slice ½ pepper (about 85 g) to use raw. Wrap and refrigerate the remaining half for the next batch.</li><li>Lay 1 large whole-wheat 🌯 tortilla in meal container 1; spread with 1 tsp (5 mL) 🥣 Chipotle mayonnaise.</li></ol>
+<ol class="cooking-source-zh" lang="zh"><li>🫑 橙甜椒洗净擦干，取½个（约85 g）去籽、切细条；生切直接使用。剩余半个包好冷藏，留给下批卷饼。</li><li>第4盘铺🌯 大号全麦卷饼皮1片，抹🥣 Chipotle蛋黄酱1茶匙（5 mL）。</li></ol>
+<ol class="cooking-source-en" lang="en" hidden><li>Wash and dry 🫑 orange bell pepper; deseed and thinly slice ½ pepper (about 85 g) to use raw. Wrap and refrigerate the remaining half for the next batch.</li><li>Lay 1 large whole-wheat 🌯 tortilla in meal container 4; spread with 1 tsp (5 mL) 🥣 Chipotle mayonnaise.</li></ol>
 </li>
 <li class="cooking-task-source">
 <ol class="cooking-source-zh" lang="zh"><li>将掰碎的🍗 鸡腿、🥚 水煮蛋和🫑 生橙甜椒条放入卷饼皮，卷好。</li></ol>
