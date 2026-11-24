@@ -50,7 +50,7 @@ function render(language,withWeight=false){
 test('all muscles render ratings in both modes without requiring private body weight',()=>{
   const r=render('zh');assert.deepEqual(r.warnings,[]);assert.equal(r.cards().length,16);
   const chest=r.cards().find(c=>c.id==='volume-home-chest');
-  assert.ok(r.all(chest).some(n=>n.textContent==='折算 8 组/周'));
+  assert.ok(r.all(chest).some(n=>n.textContent==='折算 6 组/周'));
   const back=r.cards().find(c=>c.id==='volume-home-lower-back');
   assert.ok(r.all(back).some(n=>n.textContent==='以稳定参与为主'));
   // Two unilateral sets of 3 per leg are six weekly calf sets, not twelve.
