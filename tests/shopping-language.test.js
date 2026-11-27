@@ -30,8 +30,8 @@ for (const file of ['shopping.md', 'plans/plan-2/shopping.md']) {
 test('Plan 2 uses whole little-potato bags and the same weekly drink as Plan 1', () => {
   const shopping = read('plans/plan-2/shopping.md');
   assert.match(shopping, /The Little Potato Company Little Yellows/);
-  assert.match(shopping, /2 Bags \/ Week \(1.36 kg\); Four Meals of 340 g/);
-  assert.match(read('plans/plan-2/cooking.md'), /Wash one 680 g bag/);
+  assert.match(shopping, /3 Bags \/ 2 Weeks; Alternate 2 Bags and 1 Bag Weekly; 510 g \/ Batch, 255 g \/ Meal/);
+  assert.match(read('plans/plan-2/cooking.md'), /Wash 510 g \(¾ of a 680 g bag\)/);
   assert.doesNotMatch(shopping + read('plans/plan-2/diet.md'), /Fuze|Organic Yellow Potatoes/);
   const row = html => html.match(/<tr data-price-id="8"[\s\S]*?<\/tr>/)[0];
   assert.equal(row(shopping), row(read('shopping.md')));

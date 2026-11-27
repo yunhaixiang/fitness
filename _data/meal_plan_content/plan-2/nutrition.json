@@ -113,18 +113,18 @@
     },
     "potato": {
       "label": "周一午／周三午／周四晚／周六晚",
-      "kcal": "767",
-      "protein": "57.5",
+      "kcal": "705",
+      "protein": "56.0",
       "fat": "26.4",
       "saturatedFat": "7.7",
-      "carbs": "68.6",
-      "fibre": "10.5",
-      "sugar": "11.6",
+      "carbs": "56.2",
+      "fibre": "9.0",
+      "sugar": "10.8",
       "cholesterol": "128",
       "sodium": "880",
-      "calcium": "223",
-      "iron": "8.2",
-      "potassium": "3312"
+      "calcium": "213",
+      "iron": "7.5",
+      "potassium": "2951"
     },
     "wrap": {
       "label": "周一晚／周五午",

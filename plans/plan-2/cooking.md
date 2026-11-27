@@ -40,8 +40,8 @@ meal_activities_script: /assets/meal-plans/plan-2/meal-activities.js
 <ol class="cooking-source-en" lang="en" hidden><li>Set the oven to 400°F and start preheating.</li></ol>
 </li>
 <li class="cooking-task-source">
-<ol class="cooking-source-zh" lang="zh"><li>🥔 The Little Potato Company小土豆1袋（680 g）洗净，切成大小相近的薯角；烤好后均分两份，每份对应生重340 g。</li><li>拌🫒 油½茶匙、🧂 盐⅛茶匙、黑胡椒⅛茶匙、🧄 蒜粉¼茶匙、🧅 洋葱粉¼茶匙。</li></ol>
-<ol class="cooking-source-en" lang="en" hidden><li>Wash one 680 g bag of The Little Potato Company 🥔 little potatoes and cut into evenly sized wedges; divide the cooked batch equally; each portion corresponds to 340 g raw potatoes.</li><li>Toss with ½ tsp 🫒 oil, ⅛ tsp 🧂 salt, ⅛ tsp black pepper, ¼ tsp 🧄 garlic powder and ¼ tsp 🧅 onion powder.</li></ol>
+<ol class="cooking-source-zh" lang="zh"><li>🥔 The Little Potato Company小土豆510 g（每袋680 g，取¾袋）洗净，切成大小相近的薯角；烤好后均分两份，每份对应生重255 g。</li><li>拌🫒 油½茶匙、🧂 盐⅛茶匙、黑胡椒⅛茶匙、🧄 蒜粉¼茶匙、🧅 洋葱粉¼茶匙。</li></ol>
+<ol class="cooking-source-en" lang="en" hidden><li>Wash 510 g (¾ of a 680 g bag) of The Little Potato Company 🥔 little potatoes and cut into evenly sized wedges; divide the cooked batch equally; each portion corresponds to 255 g raw potatoes.</li><li>Toss with ½ tsp 🫒 oil, ⅛ tsp 🧂 salt, ⅛ tsp black pepper, ¼ tsp 🧄 garlic powder and ¼ tsp 🧅 onion powder.</li></ol>
 </li>
 <li class="cooking-task-source">
 <ol class="cooking-source-zh" lang="zh"><li>🍗 鸡腿4块（465 g）擦干。</li><li>拌🫒 油½茶匙、🧂 盐⅛茶匙、🧄 蒜粉½茶匙、🧅 洋葱粉½茶匙、🌶️ 红椒粉1茶匙、🌿 牛至½茶匙。</li><li>前半周备料时，后半周鸡腿分装冷冻。</li></ol>
@@ -68,10 +68,10 @@ meal_activities_script: /assets/meal-plans/plan-2/meal-activities.js
 
 <li class="cooking-task-source">
 <ol lang="zh-CN" class="cooking-source-zh">
-<li>确认熟度后取出：🥔 整颗土豆400°F烤40分钟至软；均分到第3、7盘。</li>
+<li>确认熟度后取出：🥔 土豆400°F烤约40分钟至软；均分到第3、7盘。</li>
 </ol>
 <ol lang="en" class="cooking-source-en" hidden>
-<li>Check doneness before removing: Roast whole 🥔 potatoes at 400°F for 40 minutes until tender; divide equally between meals 3 and 7.</li>
+<li>Check doneness before removing: Roast 🥔 potatoes at 400°F for about 40 minutes until tender; divide equally between meals 3 and 7.</li>
 </ol>
 </li>
 <li class="cooking-task-source">

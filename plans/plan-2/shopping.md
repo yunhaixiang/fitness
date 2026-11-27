@@ -66,7 +66,7 @@ visual: true
 <td style="text-align: right;">1瓶 / 周</td>
 <td style="text-align: right;"><a href="https://www.walmart.ca/en/ip/Sparkling-Ice-Orange-Mango-503ml/6000190578527">$1.27</a></td>
 </tr>
-<tr data-price-id="9" data-weekly-cost="5.96" data-purchase-group="weekly"><td>土豆</td><td><a href="https://www.walmart.ca/en/ip/The-Little-Potato-Company-Fresh-Little-Potatoes-1-5lb-Little-Yellows-Fresh-yellow-potatoes/6000201597418">The Little Potato Company Little Yellows</a><br><span data-en="680 g / Bag">680 g / 袋</span></td><td data-en="2 Bags / Week (1.36 kg); Four Meals of 340 g">2袋 / 周（1.36 kg）；四顿各340 g</td><td><a href="https://www.walmart.ca/en/ip/The-Little-Potato-Company-Fresh-Little-Potatoes-1-5lb-Little-Yellows-Fresh-yellow-potatoes/6000201597418">$2.98</a></td></tr>
+<tr data-price-id="9" data-weekly-cost="4.47" data-purchase-group="weekly"><td>土豆</td><td><a href="https://www.walmart.ca/en/ip/The-Little-Potato-Company-Fresh-Little-Potatoes-1-5lb-Little-Yellows-Fresh-yellow-potatoes/6000201597418">The Little Potato Company Little Yellows</a><br><span data-en="680 g / Bag">680 g / 袋</span></td><td data-en="3 Bags / 2 Weeks; Alternate 2 Bags and 1 Bag Weekly; 510 g / Batch, 255 g / Meal">每两周3袋；每周交替买2袋、1袋；每次510 g，每餐255 g</td><td><a href="https://www.walmart.ca/en/ip/The-Little-Potato-Company-Fresh-Little-Potatoes-1-5lb-Little-Yellows-Fresh-yellow-potatoes/6000201597418">$2.98</a></td></tr>
 <tr data-price-id="10" data-weekly-cost="2.74">
 <td>豌豆，胡萝卜</td>
 <td><a href="https://www.walmart.ca/en/ip/Great-Value-Peas-and-Carrots-398-mL/5YDQIJZT1APQ">Great Value Peas and Carrots</a><br>398 mL / 罐</td>
@@ -189,7 +189,7 @@ visual: true
 <td>每周合计</td>
 <td>—</td>
 <td style="text-align: right;">—</td>
-<td style="text-align: right;">$149.72</td>
+<td style="text-align: right;">$148.23</td>
 </tr>
 </tbody>
 </table>

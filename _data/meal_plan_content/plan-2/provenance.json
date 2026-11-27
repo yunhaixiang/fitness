@@ -38,7 +38,8 @@
     "2026-11-22: Prepare curry sauce separately in the saucepan with approximately 300 mL water and 36 g roux per batch; pour onto meals 1 and 5. Ground chicken and vegetables are cooked and portioned separately, without adding curry water to the meat pan. Split heating water, confirming boil, adding roux/simmering, and checking/portioning into independent tasks. Reserve the saucepan during curry preparation to avoid concurrent spaghetti use, with no mandatory ordering between curry and spaghetti. Refrigeration explicitly waits for ground chicken as well as sauce. Ingredients and nutrition unchanged.",
     "2026-11-22: Transfer the existing 62.5 g broccoli portions from both potato meals to both spaghetti meals per batch (meals 2 and 6). Keep microwave method, weekly 250 g and shopping unchanged. Transfer the stored broccoli nutrient delta rounded once at each displayed precision, subtracting and adding the same value to preserve total nutrients exactly; weekly quantities, daily averages and deficit are unchanged. Historical broccoliDeltaPerPotatoMeal remains the original source calculation, superseded in allocation by broccoliAllocation.",
     "2026-11-22: Reorder each current-plan batch as spaghetti, curry rice, potato, wrap, spaghetti, curry rice, potato. Keep wrap in the middle. Update weekly schedule, seven-meal summary, nutrition date labels, broccoli allocation and all bilingual cooking destinations including task notes. First two weekly meals still share Sparkling Ice. Ingredients, amounts, weekly nutrition and prep schedule unchanged.",
-    "2026-11-27: Replace each175 g tilapia fillet in the four weekly potato meals with one160 g Coho salmon portion, using the existing Plan2 salmon size and nutrient composition proxies. All other food portions and seasonings retained. Salmon now8 portions /4 two-piece320 g trays weekly; remove tilapia from shopping. Existing user-confirmed salmon price$10.47/tray reused, not a new live quote. Apply fish-only delta to rounded historical potato estimates, reaggregate daily macros/minerals/energy; adjust historical D/B12/iodine/EPA+DHA totals by four fish deltas per week. Plan1 unchanged. Air fryer: four salmon portions per batch, check from8 minutes and continue until cooked through; split batches if needed."
+    "2026-11-27: Replace each175 g tilapia fillet in the four weekly potato meals with one160 g Coho salmon portion, using the existing Plan2 salmon size and nutrient composition proxies. All other food portions and seasonings retained. Salmon now8 portions /4 two-piece320 g trays weekly; remove tilapia from shopping. Existing user-confirmed salmon price$10.47/tray reused, not a new live quote. Apply fish-only delta to rounded historical potato estimates, reaggregate daily macros/minerals/energy; adjust historical D/B12/iodine/EPA+DHA totals by four fish deltas per week. Plan1 unchanged. Air fryer: four salmon portions per batch, check from8 minutes and continue until cooked through; split batches if needed.",
+    "2026-11-27: Reduce each potato meal from340 g to255 g raw potatoes. Each cooking batch510 g, four meals1020 g weekly, exactly three680 g Little Yellows bags per two weeks. Alternate purchasing two bags and one bag weekly; existing$2.98/bag gives$4.47 average weekly cost. Salmon, oil, seasonings and all other ingredients unchanged. Subtract85 g using existing potato composition proxies and reaggregate rounded meals/daily energy and nutrients. Iodine decrease~0.24 mcg/day is below the displayed whole-microgram range precision; retain existing range. Plan1 unchanged."
   ],
   "removedMushroomPerMeal": {
     "kcal": 14.985,
@@ -422,6 +423,30 @@
       "vitaminD": 13.311,
       "vitaminB12": 1.5070000000000001,
       "iodine": 12.029411200000002
+    }
+  },
+  "potatoReductionPerMeal": {
+    "previousGrams": 340,
+    "grams": 255,
+    "batchGrams": 510,
+    "bagsPerTwoWeeks": 3,
+    "nutrientDelta": {
+      "kcal": -61.81818181818181,
+      "protein": -1.5454545454545454,
+      "carbs": -12.363636363636363,
+      "fat": -0.0,
+      "saturatedFat": -0.0,
+      "fibre": -1.5454545454545454,
+      "sugar": -0.7727272727272727,
+      "sodium": -0.0,
+      "cholesterol": -0.0,
+      "epaDha": -0.0,
+      "calcium": -10.2,
+      "iron": -0.6885,
+      "potassium": -361.25,
+      "vitaminD": -0.0,
+      "vitaminB12": -0.0,
+      "iodine": -0.425
     }
   }
 }
