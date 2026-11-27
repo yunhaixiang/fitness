@@ -6,9 +6,6 @@
 
   // Longer entries take precedence. This keeps the plan's numbers and product links intact.
   const translations = {
-    "每个力量日：6个动作，每个3组，共18个正式组；单侧动作左右都完成才算1组。": "Each strength day: 6 exercises, 3 sets each, 18 working sets total. For unilateral exercises, complete both sides before marking one set.",
-    "约45分钟：热身5分钟，正式训练约35分钟，换器械与调整预留5分钟；热身组不计入3组。": "About 45 minutes: 5 minutes to warm up, about 35 minutes of working sets and rest, and 5 minutes for equipment changes and adjustments. Warm-up sets are additional to the 3 working sets.",
-    "按列表顺序做；卧推、划船、肩推、深蹲、弓步和硬拉组间休息90–120秒，其余约60秒。未恢复就适当延长，不为赶时间牺牲动作。": "Follow the listed order. Rest 90–120 seconds between sets of presses, rows, squats, lunges and deadlifts; about 60 seconds for other exercises. Extend rest when needed rather than rushing technique.",
 
     '日均能量差': 'Daily Energy Balance', 'kcal／天': 'kcal/day', '日均赤字或盈余': 'Daily Deficit or Surplus', '每周赤字或盈余': 'Weekly Deficit or Surplus', '每周能量差等价脂肪': 'Fat Equivalent of Weekly Energy Balance', '每日能量与每周赤字或盈余': 'Daily Energy and Weekly Deficit or Surplus',
     '睡眠': 'Sleep', '每日': 'Daily', '选择星期': 'Choose a day',

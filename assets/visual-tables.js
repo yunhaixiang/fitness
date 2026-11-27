@@ -201,8 +201,6 @@
     control.append(label, choices);
     toolbar.append(control);
     root.append(toolbar);
-    const sessionGuide = document.querySelector('#strength-session-guide');
-    if (sessionGuide) root.append(sessionGuide);
     const gymWeightNote = document.querySelector('#gym-weight-note');
     for (const [index, [mode]] of modes.entries()) {
       const table = tables[index];
