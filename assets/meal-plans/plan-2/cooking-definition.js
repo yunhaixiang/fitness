@@ -484,8 +484,8 @@
     {
       "id": "prep-salmon",
       "label": [
-        "备三文鱼和罗非鱼",
-        "Prepare Salmon and Tilapia"
+        "备三文鱼",
+        "Prepare Salmon"
       ],
       "note": [
         "",
@@ -534,8 +534,8 @@
     {
       "id": "salmon-start",
       "label": [
-        "放入三文鱼和罗非鱼",
-        "Load Salmon and Tilapia"
+        "放入三文鱼",
+        "Load Salmon"
       ],
       "note": [
         "放好并启动后勾选",

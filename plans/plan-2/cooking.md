@@ -118,8 +118,8 @@ meal_activities_script: /assets/meal-plans/plan-2/meal-activities.js
 <h2 id="air-fryer" data-en="Air Fryer">空气炸锅</h2>
 <ol>
 <li class="cooking-task-source">
-<ol class="cooking-source-zh" lang="zh"><li>🐟 三文鱼2块（320 g）和罗非鱼2块（约350 g）擦干。</li><li>拌🫒 油½茶匙、🧂 盐⅛茶匙、黑胡椒½茶匙、🌶️ 红椒粉1茶匙。</li><li>前半周备料时，后半周三文鱼和罗非鱼冷冻。</li></ol>
-<ol class="cooking-source-en" lang="en" hidden><li>Pat dry 2 🐟 salmon portions (320 g) and 2 tilapia fillets (about 350 g).</li><li>Season with ½ tsp 🫒 oil, ⅛ tsp 🧂 salt, ½ tsp black pepper and 1 tsp 🌶️ paprika.</li><li>Freeze the second-half salmon and tilapia during the first cooking session.</li></ol>
+<ol class="cooking-source-zh" lang="zh"><li>🐟 三文鱼4块（约640 g）擦干。</li><li>拌🫒 油½茶匙、🧂 盐⅛茶匙、黑胡椒½茶匙、🌶️ 红椒粉1茶匙。</li><li>前半周备料时，后半周三文鱼冷冻。</li></ol>
+<ol class="cooking-source-en" lang="en" hidden><li>Pat dry 4 🐟 salmon portions (about 640 g).</li><li>Season with ½ tsp 🫒 oil, ⅛ tsp 🧂 salt, ½ tsp black pepper and 1 tsp 🌶️ paprika.</li><li>Freeze the second-half salmon during the first cooking session.</li></ol>
 </li>
 <li class="cooking-task-source">
 <ol class="cooking-source-zh" lang="zh"><li>空气炸锅设为400°F，启动预热。</li></ol>
@@ -131,20 +131,20 @@ meal_activities_script: /assets/meal-plans/plan-2/meal-activities.js
 </li>
 <li class="cooking-task-source">
 <ol lang="zh-CN" class="cooking-source-zh">
-<li>将备好的三文鱼和罗非鱼单层放入预热至400°F的空气炸锅，开始烹调后勾选。</li>
+<li>将备好的三文鱼单层放入预热至400°F的空气炸锅，开始烹调后勾选。</li>
 <li>约8分钟后检查熟度。</li>
 </ol>
 <ol lang="en" class="cooking-source-en" hidden>
-<li>Load the prepared salmon and tilapia in a single layer into the air fryer preheated to 400°F and check after starting.</li>
+<li>Load the prepared salmon in a single layer into the air fryer preheated to 400°F and check after starting.</li>
 <li>Check for doneness after about 8 minutes.</li>
 </ol>
 </li>
 <li class="cooking-task-source">
 <ol lang="zh-CN" class="cooking-source-zh">
-<li>确认熟度后取出：🐟 400°F烤8分钟起检查至熟透；三文鱼放第1、5盘，罗非鱼放第3、7盘，各1块；炸篮装不下时分批。</li>
+<li>确认熟度后取出：🐟 400°F烤8分钟起检查至熟透；放第1、3、5、7盘，各1块；炸篮装不下时分批。</li>
 </ol>
 <ol lang="en" class="cooking-source-en" hidden>
-<li>Check doneness before removing: Air-fry 🐟 salmon and tilapia at 400°F, checking from 8 minutes until cooked through; place salmon in meals 1 and 5 and tilapia in meals 3 and 7, one fillet each. Cook in batches if the basket is too small.</li>
+<li>Check doneness before removing: Air-fry 🐟 salmon at 400°F, checking from 8 minutes until cooked through; place one salmon fillet each in meals 1, 3, 5 and 7. Cook in batches if the basket is too small.</li>
 </ol>
 </li>
 </ol>

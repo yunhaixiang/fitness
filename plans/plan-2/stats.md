@@ -12,7 +12,7 @@ nutrition: true
 
 <figure class="nutrition-overview" aria-label="每日能量与每周赤字或盈余">
   <div class="nutrition-overview-main">
-    <div class="nutrition-ring" style="--intake-share:80.8%" aria-label="每日摄入与消耗">
+    <div class="nutrition-ring" style="--intake-share:83.0%" aria-label="每日摄入与消耗">
       <div class="nutrition-ring-center">
         <span data-energy-label="dailyDeficit">日均能量差</span>
         <strong data-energy="dailyDeficit">— <small>kcal／天</small></strong>
@@ -20,7 +20,7 @@ nutrition: true
     </div>
     <div class="nutrition-overview-key">
       <p class="nutrition-overview-eyebrow">能量概览 · 不含放纵餐</p>
-      <div class="nutrition-key-row nutrition-key-intake"><span>日均摄入</span><strong>1,827 <small>kcal／天</small></strong></div>
+      <div class="nutrition-key-row nutrition-key-intake"><span>日均摄入</span><strong>1,878 <small>kcal／天</small></strong></div>
       <div class="nutrition-key-row nutrition-key-burn"><span>日均消耗</span><strong data-energy="dailyBurn">— <small>kcal／天</small></strong></div>
       <div class="nutrition-key-row nutrition-key-deficit"><span data-energy-label="dailyDeficit">日均能量差</span><strong data-energy="dailyDeficit">— <small>kcal／天</small></strong></div>
       <div class="nutrition-key-row"><span data-energy-label="weeklyDeficit">每周能量差</span><strong data-energy="weeklyDeficit">— <small>kcal</small></strong></div>
@@ -107,22 +107,22 @@ nutrition: true
 <tbody>
 <tr data-nutrient="energy">
 <td>热量</td>
-<td style="text-align: right;">1,827 kcal</td>
+<td style="text-align: right;">1,878 kcal</td>
 <td>—</td>
 </tr>
 <tr data-macro="protein" data-nutrient="protein">
 <td>蛋白质</td>
-<td style="text-align: right;">139.9 g</td>
+<td style="text-align: right;">139.3 g</td>
 <td>—</td>
 </tr>
 <tr data-macro="fat" data-nutrient="fat">
 <td>总脂肪</td>
-<td style="text-align: right;">59.3 g</td>
+<td style="text-align: right;">64.6 g</td>
 <td>—</td>
 </tr>
 <tr data-nutrient="saturatedFat">
 <td>饱和脂肪</td>
-<td style="text-align: right;">16.4 g</td>
+<td style="text-align: right;">17.5 g</td>
 <td>—</td>
 </tr>
 <tr data-macro="carbs" data-nutrient="carbs">
@@ -147,42 +147,42 @@ nutrition: true
 </tr>
 <tr data-nutrient="cholesterol">
 <td>膳食胆固醇</td>
-<td style="text-align: right;">656 mg</td>
+<td style="text-align: right;">652 mg</td>
 <td>—</td>
 </tr>
 <tr data-nutrient="sodium">
 <td>钠</td>
-<td style="text-align: right;">2,273 mg</td>
+<td style="text-align: right;">2,264 mg</td>
 <td>—</td>
 </tr>
 <tr data-nutrient="calcium">
 <td>钙</td>
-<td style="text-align: right;">1,150 mg</td>
+<td style="text-align: right;">1,151 mg</td>
 <td>—</td>
 </tr>
 <tr data-nutrient="iron">
 <td>铁</td>
-<td style="text-align: right;">19.1 mg</td>
+<td style="text-align: right;">18.9 mg</td>
 <td>—</td>
 </tr>
 <tr data-nutrient="potassium">
 <td>钾</td>
-<td style="text-align: right;">4,791 mg</td>
+<td style="text-align: right;">4,900 mg</td>
 <td>—</td>
 </tr>
 <tr data-nutrient="vitaminD">
 <td>维生素D</td>
-<td style="text-align: right;">15.3 µg</td>
+<td style="text-align: right;">22.9 µg</td>
 <td>—</td>
 </tr>
 <tr data-nutrient="vitaminB12">
 <td>维生素B12</td>
-<td style="text-align: right;">5.8 µg</td>
+<td style="text-align: right;">6.7 µg</td>
 <td>—</td>
 </tr>
 <tr data-nutrient="iodine">
 <td>碘</td>
-<td style="text-align: right;">109–124 µg</td>
+<td style="text-align: right;">116–131 µg</td>
 <td>—</td>
 </tr>
 <tr data-nutrient="ala">
@@ -192,7 +192,7 @@ nutrition: true
 </tr>
 <tr data-nutrient="epaDha">
 <td>Omega-3：EPA，DHA（合计）</td>
-<td style="text-align: right;">1.2 g</td>
+<td style="text-align: right;">2.2 g</td>
 <td>—</td>
 </tr>
 </tbody>
