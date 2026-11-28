@@ -881,3 +881,5 @@ html[lang="en"] .nutrient-tier-line{grid-template-columns:72px minmax(0,1fr)}
 .training-entry .training-reps-control button{min-width:0;min-height:42px;padding:0;font-size:20px}
 .training-reps-control select{width:100%;min-width:0;padding:8px 2px;text-align:center;font-size:16px}
 @media(max-width:400px){.training-set-grid{grid-template-columns:20px minmax(58px,.8fr) minmax(112px,1.6fr) 32px 32px;gap:4px}.training-reps-control{grid-template-columns:28px minmax(48px,1fr) 28px}}
+
+.training-preview-link{color:var(--accent);font-size:13px;padding:8px 0}

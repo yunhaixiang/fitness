@@ -6,7 +6,10 @@
   const en=window.fitnessI18n?.language==='en', tr=(zh,english)=>en?english:zh;
   const el=(tag,cls,text)=>{const n=document.createElement(tag);if(cls)n.className=cls;if(text!==undefined)n.textContent=text;return n;};
   const today=()=>new Intl.DateTimeFormat('en-CA',{timeZone:'America/Toronto',year:'numeric',month:'2-digit',day:'2-digit'}).format(new Date());
+  const demo=new URLSearchParams(location.search).get('training-demo')==='1';
+  const demoRecords=new Map();
   let selected=today(), serverToday=today(), writable=false, loading=true, generation=0, changingTab=false;
+  if(demo){const d=new Date(selected+'T12:00:00Z');while(![1,2,4,5].includes(d.getUTCDay()))d.setUTCDate(d.getUTCDate()-1);selected=d.toISOString().slice(0,10);}
   let states=new Map(), history=[];
   const cards=[...root.querySelectorAll('[data-exercise-id]')].filter(c=>catalog[c.dataset.exerciseId]);
   const tabs=[...root.querySelectorAll('.strength-day-tabs button')];
@@ -15,13 +18,24 @@
   label.append(date);const reload=el('button','',tr('刷新记录','Reload records'));reload.type='button';
   const status=el('span','training-log-status',tr('正在读取私人记录…','Loading private records…'));status.setAttribute('role','status');
   bar.id='training-records';
-  bar.append(label,reload,status);root.querySelector('.strength-switch').after(bar);
+  const preview=el('a','training-preview-link',demo?tr('返回真实记录','Back to real records'):tr('查看示例记录','Preview example records'));
+  const previewURL=new URL(location.href);if(demo)previewURL.searchParams.delete('training-demo');else previewURL.searchParams.set('training-demo','1');previewURL.hash='training-records';preview.href=previewURL.href;
+  bar.append(label,reload,preview,status);root.querySelector('.strength-switch').after(bar);
   const jump=el('a','training-jump',tr('记录训练 ↓','Log workout ↓'));jump.href='#training-records';root.querySelector('.strength-switch').append(jump);
   const units=x=>x.kind==='bodyweight'?tr('自重','Bodyweight'):x.support?tr('支撑用重量 · lb','Support weight · lb'):x.kind==='each'?tr('每只哑铃 · lb','Per dumbbell · lb'):x.kind==='plates'?tr('加片总重 · lb','Total added plates · lb'):tr('重量 · lb','Weight · lb');
   const historyLine=e=>e.sets.map(s=>s.state==='skip'?tr('跳过','Skipped'):s.state==='done'?`${s.weight} lb × ${s.reps}`:tr('未完成','Pending')).join(' / ');
+  // Demo records exist only in this page's memory, never in the private API.
+  if(demo){
+    for(let days=0;days<35;days++){
+      const d=new Date(today()+'T12:00:00Z');d.setUTCDate(d.getUTCDate()-days);const day=d.toISOString().slice(0,10),week=Math.floor(days/7);
+      const ids=[...new Set(cards.filter(c=>Number(c.closest('.visual-training-day').dataset.weekday)===d.getUTCDay()).map(c=>c.dataset.exerciseId))];
+      ids.forEach((id,index)=>{const x=catalog[id];const sets=Array.from({length:3},(_,i)=>({weight:x.weight,reps:Math.max(x.min,x.max-week-(index%3===1?1:0)),state:week===0&&index%3===1&&i===2?'pending':week===0&&index%3===2&&i===2?'skip':'done'}));
+        demoRecords.set(day+'|'+id,{date:day,exercise:id,plan:x.plan,sets,effort:null,version:1});});
+    }
+  }
   const dirty=()=>[...states.values()].some(s=>s.dirty||s.saving||s.error);
   const views=new Map();
-  function message(s){return (s.invalid?tr('请输入有效的重量与整数次数。','Enter a valid weight and whole-number reps.'):'')||s.error|| (s.saving?tr('保存中…','Saving…'):s.dirty?tr('待保存','Not saved yet'):s.saved?tr('已保存','Saved'):tr('尚未记录','Not recorded'));}
+  function message(s){return (s.invalid?tr('请输入有效的重量与整数次数。','Enter a valid weight and whole-number reps.'):'')||s.error|| (s.saving?tr('保存中…','Saving…'):s.dirty?tr('待保存','Not saved yet'):s.saved?(demo?tr('示例记录','Example record'):tr('已保存','Saved')):tr('尚未记录','Not recorded'));}
   function feedback(s){
     const x=catalog[s.entry.exercise], entries=history.filter(h=>h.exercise===x.id), prev=entries.find(h=>h.sets.some(set=>set.state==='done'));
     const advice={incomplete:tr('填写实际次数并勾选完成，再判断下次进度。','Enter reps and complete the sets to assess progress.'),increase:['each','dumbbell'].includes(x.kind)?tr('三组达到次数上限：动作稳定时，下次可考虑增加5 lb。','All three sets reached the upper target: if technique is controlled, consider adding 5 lb next time.'):tr('三组达到次数上限：动作稳定时，下次可考虑增加最小一档重量。','All three sets reached the upper target: if technique is controlled, consider the smallest weight increase next time.'),harder:tr('三组达到次数上限：可考虑更难的动作版本，支撑重量不作为加重目标。','All three sets reached the upper target: consider a harder variation; support weight is not a progression target.'),reps:tr('下次保持重量，争取在动作稳定的前提下多完成一次。','Keep this weight next time and aim for one more controlled rep.')};
@@ -46,6 +60,7 @@
     if(s.saving||!s.dirty||s.conflict||s.invalid)return;
     s.saving=true;s.dirty=false;s.error='';const snapshot=JSON.parse(JSON.stringify(s.entry));feedback(s);
     try{
+      if(demo){snapshot.version++;demoRecords.set(snapshot.date+'|'+snapshot.exercise,snapshot);s.entry.version=snapshot.version;s.saved=true;return;}
       const response=await fetch('/api/training',{method:'POST',credentials:'same-origin',headers:{'Content-Type':'application/json','X-Fitness-Action':'save-training'},body:JSON.stringify(snapshot)});
       if(!response.ok){s.conflict=response.status===409;throw Error(s.conflict?tr('另一设备已修改此记录。请先刷新，未保存的改动不会覆盖它。','Another device changed this record. Reload before editing; your unsaved changes have not overwritten it.'):tr('保存失败；记录仍在本页，请重试或重新登录。','Save failed. Your edits remain on this page; retry or sign in again.'));}
       const result=await response.json();if(!result.ok||!result.entry)throw Error(tr('未确认保存成功，请重试。','Save was not confirmed. Please retry.'));
@@ -87,7 +102,7 @@
     set.append(grid);
     if(x.unilateral)set.append(el('small','training-hint',tr('次数按每侧填写，两侧做完后勾选。','Enter reps per side; check done after both sides.')));
     const saveStatus=el('span','training-save-status'),retry=el('button','',tr('重试保存','Retry save'));retry.type='button';retry.hidden=true;retry.addEventListener('click',()=>save(states.get(x.id)));
-    const next=el('p','training-advice'),compare=el('p','training-comparison'),details=el('details','training-history'),summary=el('summary','',tr('最近8次记录','Last 8 recorded sessions')),historyList=el('div');details.append(summary,historyList);
+    const next=el('p','training-advice'),compare=el('p','training-comparison'),details=el('details','training-history'),summary=el('summary','',tr('最近8次记录','Last 8 recorded sessions')),historyList=el('div');details.open=demo;details.append(summary,historyList);
     controls.append(last,set,saveStatus,retry,compare,next,details);card.append(controls);card.classList.add('has-training-log');
     const plannedWeight=card.querySelector('.visual-exercise-weight');plannedWeight.textContent=tr('计划参考：','Plan reference: ')+plannedWeight.textContent;
     card.querySelector('.visual-exercise-dose').textContent=tr(`目标：3组 × ${x.min}–${x.max}次`,`Target: 3 sets × ${x.min}–${x.max} reps`)+(x.unilateral?tr('／侧',' / side'):'');
@@ -106,11 +121,13 @@
   }
   async function load(){
     const token=++generation;loading=true;status.textContent=tr('正在读取私人记录…','Loading private records…');for(const vs of views.values())for(const v of vs)v.set.disabled=true;
-    try{const r=await fetch('/api/training?date='+encodeURIComponent(selected),{credentials:'same-origin',cache:'no-store'});if(!r.ok)throw Error();const result=await r.json();if(!Array.isArray(result.entries)||!Array.isArray(result.history))throw Error();if(token!==generation)return;
+    try{let result;
+      if(demo){const records=[...demoRecords.values()];result={entries:records.filter(e=>e.date===selected),history:records.filter(e=>e.date<selected).sort((a,b)=>b.date.localeCompare(a.date)).filter((e,i,all)=>all.slice(0,i).filter(h=>h.exercise===e.exercise).length<8),canWrite:true,today:today()};}
+      else{const r=await fetch('/api/training?date='+encodeURIComponent(selected),{credentials:'same-origin',cache:'no-store'});if(!r.ok)throw Error();result=await r.json();}if(!Array.isArray(result.entries)||!Array.isArray(result.history))throw Error();if(token!==generation)return;
       history=result.history;writable=result.canWrite===true;serverToday=result.today;date.max=serverToday;states=new Map();
       for(const id of views.keys()){const found=result.entries.find(e=>e.exercise===id),prev=history.find(h=>h.exercise===id&&h.sets.some(s=>s.state==='done'));
         states.set(id,{entry:found||{date:selected,exercise:id,plan:catalog[id].plan,version:0,sets:logic.defaults(catalog[id],prev),effort:null},saved:!!found,dirty:false,saving:false,error:'',conflict:false});}
-      loading=false;hydrate();status.textContent=selected>serverToday?tr('未来日期仅供查看。','Future date — view only.'):writable?tr('私人记录 · 修改后自动保存','Private records · Changes save automatically'):tr('只读查看','Read-only');
+      loading=false;hydrate();status.textContent=demo?tr('示例预览 · 可试填和勾选；刷新后重置，不保存到真实记录。','Example preview · Try editing and checking sets. Resets on page refresh; never saved to real records.'):selected>serverToday?tr('未来日期仅供查看。','Future date — view only.'):writable?tr('私人记录 · 修改后自动保存','Private records · Changes save automatically'):tr('只读查看','Read-only');
     }catch(_){if(token!==generation)return;loading=false;status.textContent=tr('未能读取记录。请刷新或重新登录后再记录。','Could not load records. Reload or sign in before recording.');}
   }
   function showDate(value){selected=value;date.value=value;changingTab=true;tabs[new Date(value+'T12:00:00Z').getUTCDay()].click();changingTab=false;load();}
