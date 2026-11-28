@@ -54,6 +54,7 @@ test('only trusted Access owner can write; whitelist can read; CSRF, missing aut
 });
 test('target defaults remain pending; partial and skipped sessions cannot trigger weight progression',()=>{
  const x=exercise,previous=sample();assert.ok(logic.defaults(x,previous).every(s=>s.reps===x.min&&s.state==='pending'&&s.weight===20));
+ const mixed={sets:[{weight:20,state:'done'},{weight:25,state:'done'},{weight:30,state:'pending'}]};assert.ok(logic.defaults(x,mixed).every(s=>s.weight===25));
  const initial={sets:logic.defaults(x)};assert.ok(initial.sets.every(s=>s.weight===x.weight&&s.reps===x.min));assert.equal(logic.complete(initial),false);assert.equal(logic.advice(x,initial),'incomplete');
  assert.equal(logic.advice(x,previous),'increase');assert.equal(logic.advice(x,{...previous,effort:'0'}),'increase');
  assert.equal(logic.advice(x,{...previous,sets:previous.sets.map((s,i)=>i? s:{...s,state:'skip'})}),'incomplete');

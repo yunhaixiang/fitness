@@ -73,28 +73,31 @@
     const x=catalog[card.dataset.exerciseId], old=card.querySelector('.visual-set-list'), oldBoxes=[...old.querySelectorAll('input')];old.hidden=true;
     const controls=el('div','training-entry'), last=el('p','training-last'), set=el('fieldset','training-inputs');set.disabled=true;
     const legend=el('legend','',tr('实际表现','Actual performance'));set.append(legend);
-    set.append(el('small','training-weight-unit',units(x)));
-    const grid=el('div','training-set-grid');for(const title of [tr('组','Set'),x.kind==='bodyweight'?tr('自重','Bodyweight'):'lb',tr('次数','Reps'),tr('完成','Done'),tr('跳过','Skip')])grid.append(el('span','training-set-heading',title));
+    const dumbbell=['each','dumbbell'].includes(x.kind), w=el(dumbbell?'select':'input');w.className='training-weight';w.setAttribute('aria-label',units(x));
+    const option=(parent,value,text=String(value))=>{const o=el('option','',text);o.value=String(value);parent.append(o);};
+    if(dumbbell){for(let value=0;value<=150;value+=5)option(w,value);const more=el('optgroup');more.label=tr('更高重量','Higher weights');for(let value=155;value<=2000;value+=5)option(more,value);w.append(more);}
+    else{w.type='number';w.min=0;w.max=2000;w.step=.5;w.disabled=x.kind==='bodyweight';}
+    const weightLabel=el('label','training-exercise-weight',units(x));weightLabel.append(w);set.append(weightLabel);
+    const legacy=el('small','training-hint');legacy.hidden=true;set.append(legacy);
+    const grid=el('div','training-set-grid');for(const title of [tr('组','Set'),tr('次数','Reps'),tr('完成','Done'),tr('跳过','Skip')])grid.append(el('span','training-set-heading',title));
     const inputs=[];
+    function commit(weightChanged=false){const s=states.get(x.id);if(!s)return;
+      s.invalid=!w.checkValidity()||w.value===''||inputs.some(n=>!n.r.checkValidity());
+      if(s.invalid){s.dirty=true;clearTimeout(s.timer);feedback(s);return;}
+      s.entry.sets=inputs.map((n,i)=>{const reps=n.r.value===''?null:Number(n.r.value);if(reps===null)n.done.checked=false;return {weight:weightChanged?Number(w.value):s.entry.sets[i].weight,reps,state:n.skip.checked?'skip':n.done.checked?'done':'pending'};});
+      if(weightChanged)legacy.hidden=true;
+      change(s);
+    }
+    w.addEventListener(dumbbell?'change':'input',()=>commit(true));
     for(let i=0;i<3;i++){
-      const dumbbell=['each','dumbbell'].includes(x.kind), w=el(dumbbell?'select':'input'),r=el('select'),done=el('input'),skip=el('input');
-      w.className='training-weight';r.className='training-reps';
-      const option=(parent,value,text=String(value))=>{const o=el('option','',text);o.value=String(value);parent.append(o);};
-      if(dumbbell){for(let value=0;value<=150;value+=5)option(w,value);const more=el('optgroup');more.label=tr('更高重量','Higher weights');for(let value=155;value<=2000;value+=5)option(more,value);w.append(more);}
-      else{w.type='number';w.min=0;w.max=2000;w.step=.5;w.disabled=x.kind==='bodyweight';}
+      const r=el('select'),done=el('input'),skip=el('input');r.className='training-reps';
       option(r,'','—');for(let value=1;value<=30;value++)option(r,value);const higherReps=el('optgroup');higherReps.label=tr('31次以上','31+ reps');for(let value=31;value<=200;value++)option(higherReps,value);r.append(higherReps);
       const repsControl=el('div','training-reps-control'),minus=el('button','','−'),plus=el('button','','+');minus.type=plus.type='button';
       minus.setAttribute('aria-label',tr(`第${i+1}组减少一次`,`Set ${i+1} one fewer rep`));plus.setAttribute('aria-label',tr(`第${i+1}组增加一次`,`Set ${i+1} one more rep`));repsControl.append(minus,r,plus);
       done.type='checkbox';skip.type='checkbox';
-      for(const [n,what]of [[w,units(x)],[r,tr('次数','Reps')],[done,tr('完成','Done')],[skip,tr('跳过','Skip')]])n.setAttribute('aria-label',tr(`第${i+1}组 ${what}`,`Set ${i+1} ${what}`));
-      grid.append(el('span','training-set-number',String(i+1)),w,repsControl,done,skip);inputs.push({w,r,done,skip});
-      function commit(){const s=states.get(x.id);if(!s)return;
-        s.invalid=inputs.some(n=>!n.w.checkValidity()||!n.r.checkValidity()||n.w.value==='');
-        if(s.invalid){s.dirty=true;clearTimeout(s.timer);feedback(s);return;}
-        s.entry.sets=inputs.map(n=>{const reps=n.r.value===''?null:Number(n.r.value);if(reps===null)n.done.checked=false;return {weight:Number(n.w.value),reps,state:n.skip.checked?'skip':n.done.checked?'done':'pending'};});
-        change(s);
-      }
-      w.addEventListener(dumbbell?'change':'input',commit);r.addEventListener('change',commit);
+      for(const [n,what]of [[r,tr('次数','Reps')],[done,tr('完成','Done')],[skip,tr('跳过','Skip')]])n.setAttribute('aria-label',tr(`第${i+1}组 ${what}`,`Set ${i+1} ${what}`));
+      grid.append(el('span','training-set-number',String(i+1)),repsControl,done,skip);inputs.push({r,done,skip});
+      r.addEventListener('change',()=>commit());
       for(const [button,step]of [[minus,-1],[plus,1]])button.addEventListener('click',()=>{const next=r.value===''?x.min:Number(r.value)+step;r.value=next<1?'':String(Math.min(200,next));commit();});
       done.addEventListener('change',()=>{if(done.checked&&!r.value){done.checked=false;r.focus();r.reportValidity();return;}if(done.checked)skip.checked=false;commit();});
       skip.addEventListener('change',()=>{if(skip.checked)done.checked=false;commit();});
@@ -106,13 +109,16 @@
     controls.append(last,set,saveStatus,retry,compare,next,details);card.append(controls);card.classList.add('has-training-log');
     const plannedWeight=card.querySelector('.visual-exercise-weight');plannedWeight.textContent=tr('计划参考：','Plan reference: ')+plannedWeight.textContent;
     card.querySelector('.visual-exercise-dose').textContent=tr(`目标：3组 × ${x.min}–${x.max}次`,`Target: 3 sets × ${x.min}–${x.max} reps`)+(x.unilateral?tr('／侧',' / side'):'');
-    const v={card,set,last,inputs,save:saveStatus,retry,next,compare,historyList,oldBoxes};if(!views.has(x.id))views.set(x.id,[]);views.get(x.id).push(v);
+    const v={card,set,last,inputs,w,legacy,save:saveStatus,retry,next,compare,historyList,oldBoxes};if(!views.has(x.id))views.set(x.id,[]);views.get(x.id).push(v);
   }
   cards.forEach(mount);
   function hydrate(){
     for(const [id,vs]of views){const s=states.get(id);if(!s)continue;
       for(const v of vs){v.set.disabled=loading||!writable||selected>serverToday;
-        v.inputs.forEach((n,i)=>{const a=s.entry.sets[i];if(n.w.tagName==='SELECT'&&![...n.w.options].some(o=>Number(o.value)===a.weight)){const legacy=el('option','',`${a.weight} · ${tr('旧记录','Previous')}`);legacy.value=a.weight;n.w.append(legacy);}n.w.value=a.weight;n.r.value=a.reps??'';n.done.checked=a.state==='done';n.skip.checked=a.state==='skip';});
+        const weight=s.entry.sets[0].weight;
+        if(v.w.tagName==='SELECT'&&![...v.w.options].some(o=>Number(o.value)===weight)){const o=el('option','',`${weight} · ${tr('旧记录','Previous')}`);o.value=weight;v.w.append(o);}v.w.value=weight;
+        v.legacy.hidden=s.entry.sets.every(a=>a.weight===weight);v.legacy.textContent=tr('旧记录各组配重：','Previous set weights: ')+s.entry.sets.map(a=>`${a.weight} lb`).join(' / ');
+        v.inputs.forEach((n,i)=>{const a=s.entry.sets[i];n.r.value=a.reps??'';n.done.checked=a.state==='done';n.skip.checked=a.state==='skip';});
         v.historyList.replaceChildren();const records=history.filter(h=>h.exercise===id);
         if(!records.length)v.historyList.append(el('p','',tr('暂无历史记录。','No history yet.')));
         for(const entry of records){const line=el('p','');line.append(el('strong','',entry.date),el('span','',historyLine(entry)));v.historyList.append(line);}
