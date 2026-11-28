@@ -853,16 +853,12 @@ html[lang="en"] .nutrient-tier-line{grid-template-columns:72px minmax(0,1fr)}
 .training-last{color:var(--muted)}
 .training-inputs{border:0;padding:0;margin:10px 0;min-width:0}
 .training-inputs legend{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%)}
-.training-common-weight{display:flex;align-items:end;gap:10px;margin-bottom:12px}
-.training-common-weight label{display:grid;gap:4px;font-size:12px;color:var(--muted)}
-.training-common-weight input{width:100px}
 .training-entry input[type=number],.training-log-toolbar input,.training-entry select{background:var(--bg);color:var(--text);border:1px solid var(--line);border-radius:7px;padding:8px;box-sizing:border-box;min-height:40px}
 .training-set-grid{display:grid;grid-template-columns:30px minmax(65px,1fr) minmax(65px,1fr) 48px 48px;gap:8px;align-items:center;max-width:520px}
 .training-set-grid input[type=number]{width:100%}
 .training-set-grid input[type=checkbox]{width:21px;height:21px;justify-self:center;accent-color:var(--accent)}
 .training-set-heading{font-size:12px;text-align:center;color:var(--muted)}
 .training-set-number{text-align:center;font-weight:600}
-.training-effort{display:flex;align-items:center;flex-wrap:wrap;gap:8px;font-size:12px;margin-top:12px}
 .training-hint{display:block;margin-top:6px;color:var(--muted)}
 .training-save-status{font-size:12px;color:var(--accent);margin-right:10px}
 .training-save-status.is-error{color:#d58672}
@@ -877,3 +873,11 @@ html[lang="en"] .nutrient-tier-line{grid-template-columns:72px minmax(0,1fr)}
 .training-entry button,.training-log-toolbar button{border:1px solid var(--accent-border);background:var(--accent-soft);color:var(--text);border-radius:7px;padding:8px 12px;min-height:40px;cursor:pointer;font:inherit;font-size:13px}
 .training-jump{margin-left:auto;align-self:center;font-size:13px;color:var(--accent);white-space:nowrap}
 #training-records{scroll-margin-top:85px}
+
+.training-weight-unit{display:block;color:var(--muted);margin-bottom:8px}
+.training-set-grid{grid-template-columns:24px minmax(64px,.8fr) minmax(116px,1.6fr) 36px 36px;gap:6px;max-width:550px}
+.training-set-grid .training-weight{width:100%;min-width:0}
+.training-reps-control{display:grid;grid-template-columns:30px minmax(52px,1fr) 30px;gap:2px;align-items:center}
+.training-entry .training-reps-control button{min-width:0;min-height:42px;padding:0;font-size:20px}
+.training-reps-control select{width:100%;min-width:0;padding:8px 2px;text-align:center;font-size:16px}
+@media(max-width:400px){.training-set-grid{grid-template-columns:20px minmax(58px,.8fr) minmax(112px,1.6fr) 32px 32px;gap:4px}.training-reps-control{grid-template-columns:28px minmax(48px,1fr) 28px}}

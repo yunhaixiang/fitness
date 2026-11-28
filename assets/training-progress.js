@@ -8,7 +8,6 @@
   function advice(exercise, entry) {
     if(!complete(entry)) return 'incomplete';
     if(entry.sets.every(s=>s.reps>=exercise.max)) {
-      if(entry.effort==='0')return 'repeat';
       return exercise.kind==='bodyweight'||exercise.support?'harder':'increase';
     }
     return 'reps';
