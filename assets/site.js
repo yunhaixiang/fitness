@@ -2,7 +2,7 @@ const weekStart = new Date();
 weekStart.setHours(0, 0, 0, 0);
 weekStart.setDate(weekStart.getDate() - ((weekStart.getDay() + 6) % 7));
 const weekKey = `${weekStart.getFullYear()}-${String(weekStart.getMonth() + 1).padStart(2, '0')}-${String(weekStart.getDate()).padStart(2, '0')}`;
-const trainingBoxes = [...document.querySelectorAll('.training-table input[type="checkbox"][aria-label]')];
+const trainingBoxes = document.body.dataset.trainingRecording ? [] : [...document.querySelectorAll('.training-table input[type="checkbox"][aria-label]')];
 const localDay = () => {
   const date = new Date();
   return `${date.getFullYear()}-${String(date.getMonth() + 1).padStart(2, '0')}-${String(date.getDate()).padStart(2, '0')}`;

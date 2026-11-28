@@ -140,7 +140,7 @@
 
   const section = text('section', 'strength-volume', '');
   section.id = 'muscle-volume';
-  section.append(text('h2', 'volume-training-title', tr('肌群训练量', 'Training Volume by Muscle Group')));
+  section.append(text('h2', 'volume-training-title', tr('计划肌群训练量', 'Planned Training Volume by Muscle Group')));
   const maps = text('div', 'volume-photo-grid', '');
   const details = text('div', 'visual-card-grid volume-detail-grid', '');
   const detailsSection = text('section', 'strength-volume strength-volume-details', '');

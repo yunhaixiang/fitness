@@ -228,6 +228,8 @@
           const action = row.cells[offset].querySelector('a');
           const label = titleCase(action?.textContent.trim() || val(row, offset));
           const card = el('article', 'visual-card visual-exercise-card');
+          card.dataset.exerciseId = action?.dataset.exerciseId || '';
+          card.dataset.plan = mode;
           const media = el('a', 'visual-exercise-media');
           media.href = action?.href || '#';
           media.target = '_blank';
@@ -322,6 +324,7 @@
     show('home');
     let selectedDate = new Date().toDateString();
     const selectToday = () => {
+      if (document.body.dataset.trainingRecording) return;
       const today = new Date();
       selectedDate = today.toDateString();
       showDay(today.getDay());

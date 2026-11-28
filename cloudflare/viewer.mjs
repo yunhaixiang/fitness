@@ -1,4 +1,5 @@
 import {json, tokenHash, readRecords} from './measurements.mjs';
+import {trainingHandler} from './training.mjs';
 import {walkingEnergy} from './walking.mjs';
 import {metabolicEnergy} from './metabolism.mjs';
 import {readSleepPlan, sleepPlanHandler} from './sleep.mjs';
@@ -33,6 +34,7 @@ export default {
       const email = await authorizedEmail(env, ctx);
       if (!email) return json({error: 'Sign in with an approved email address.'}, 403);
       const url = new URL(request.url);
+      if (url.pathname === '/api/training') return await trainingHandler(request, env, email);
       if (url.pathname === '/api/sync-token') {
         if (request.method !== 'POST') return json({error: 'POST required'}, 405);
         if (email !== env.OWNER_EMAIL?.trim().toLowerCase()) return json({error: 'Owner only'}, 403);

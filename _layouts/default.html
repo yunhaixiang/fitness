@@ -9,7 +9,7 @@
   <title>{{ page.title | default: site.title | escape }} · {{ site.title }}</title>
   <link rel="stylesheet" href="{{ '/assets/site.css' | relative_url }}?v={{ site.time | date: '%s' }}">
 </head>
-<body data-baseurl="{{ site.baseurl }}">
+<body data-baseurl="{{ site.baseurl }}"{% if page.strength %} data-training-recording="true"{% endif %}>
   <a class="skip-link" href="#main">跳到内容</a>
   <header class="site-header">
     <div class="header-inner">
@@ -69,6 +69,9 @@
   {% if page.cooking %}<script src="{{ page.cooking_flow_script | default: '/assets/cooking-flow.js' | relative_url }}?v={{ site.time | date: '%s' }}" defer></script>
   <script src="{{ '/assets/cooking-progress.js' | relative_url }}?v={{ site.time | date: '%s' }}" defer></script>
   {% endif %}
+  {% if page.strength %}<script type="application/json" id="strength-exercise-catalog">{{ site.data.strength_exercises | jsonify }}</script>
+  <script src="{{ '/assets/training-progress.js' | relative_url }}?v={{ site.time | date: '%s' }}" defer></script>
+  <script src="{{ '/assets/training-log.js' | relative_url }}?v={{ site.time | date: '%s' }}" defer></script>{% endif %}
   {% if page.strength %}<script src="{{ '/assets/training-dose.js' | relative_url }}?v={{ site.time | date: '%s' }}" defer></script><script src="{{ '/assets/strength-volume.js' | relative_url }}?v={{ site.time | date: '%s' }}" defer></script>{% endif %}
   {% if page.tracker %}<script src="{{ '/assets/tracker.js' | relative_url }}?v={{ site.time | date: '%s' }}" defer></script>{% endif %}
   {% if page.sleep %}<script src="{{ '/assets/sleep.js' | relative_url }}?v={{ site.time | date: '%s' }}" defer></script>{% endif %}
