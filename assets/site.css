@@ -850,7 +850,7 @@ html[lang="en"] .nutrient-tier-line{grid-template-columns:72px minmax(0,1fr)}
 .visual-exercise-card.has-training-log{align-items:start}
 .training-entry{grid-column:1/-1;border-top:1px solid var(--line);padding-top:12px;min-width:0}
 .training-entry p{margin:6px 0;font-size:13px;line-height:1.6}
-.training-last{color:var(--muted)}
+.training-last{color:var(--muted);font-size:13px;margin:6px 0 14px}
 .training-inputs{border:0;padding:0;margin:10px 0;min-width:0}
 .training-inputs legend{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%)}
 .training-entry input[type=number],.training-log-toolbar input,.training-entry select{background:var(--bg);color:var(--text);border:1px solid var(--line);border-radius:7px;padding:8px;box-sizing:border-box;min-height:40px}
@@ -883,3 +883,14 @@ html[lang="en"] .nutrient-tier-line{grid-template-columns:72px minmax(0,1fr)}
 .training-hint[hidden]{display:none}
 .training-set-grid{display:grid;grid-template-columns:24px minmax(116px,1fr) 42px 42px;gap:6px;align-items:center;max-width:440px}
 @media(max-width:400px){.training-set-grid{grid-template-columns:20px minmax(112px,1fr) 36px 36px;gap:4px}.training-reps-control{grid-template-columns:28px minmax(48px,1fr) 28px}}
+
+.training-record-heading{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:baseline;gap:4px 12px;margin-bottom:8px}
+.training-record-heading strong{color:var(--text);font-weight:600}
+.training-record-weight{color:var(--accent);font-weight:600;white-space:nowrap}
+.training-record-sets{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}
+.training-record-set{display:flex;flex-direction:column;gap:3px}
+.training-record-set-label{font-size:12px;color:var(--muted)}
+.training-record-result{color:var(--muted)}
+.training-record-result.is-done{color:var(--text);font-weight:600}
+.training-record-set-weight{font-size:12px;color:var(--accent)}
+.training-history-record{border-top:1px solid var(--line);padding:12px 0}

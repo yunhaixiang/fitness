@@ -23,7 +23,20 @@
   bar.append(label,reload,preview,status);root.querySelector('.strength-switch').after(bar);
   const jump=el('a','training-jump',tr('记录训练 ↓','Log workout ↓'));jump.href='#training-records';root.querySelector('.strength-switch').append(jump);
   const units=x=>x.kind==='bodyweight'?tr('自重','Bodyweight'):x.support?tr('支撑用重量 · lb','Support weight · lb'):x.kind==='each'?tr('每只哑铃 · lb','Per dumbbell · lb'):x.kind==='plates'?tr('加片总重 · lb','Total added plates · lb'):tr('重量 · lb','Weight · lb');
-  const historyLine=e=>e.sets.map(s=>s.state==='skip'?tr('跳过','Skipped'):s.state==='done'?`${s.weight} lb × ${s.reps}`:tr('未完成','Pending')).join(' / ');
+  function renderRecord(container,entry,label=''){
+    const x=catalog[entry.exercise],shared=entry.sets.every(s=>s.weight===entry.sets[0].weight);
+    const header=el('div','training-record-heading'),dateLabel=el('strong','',label+entry.date);
+    header.append(dateLabel);
+    if(shared){const weight=x.kind==='bodyweight'?tr('自重','Bodyweight'):x.kind==='each'?tr(`${entry.sets[0].weight} lb／只`,`${entry.sets[0].weight} lb each`):`${entry.sets[0].weight} lb`;
+      header.append(el('span','training-record-weight',weight));}
+    else header.append(el('span','training-record-weight',tr('历史分组配重','Previous per-set weights')));
+    const sets=el('div','training-record-sets');
+    entry.sets.forEach((s,i)=>{const group=el('div','training-record-set');group.append(el('span','training-record-set-label',tr(`第${i+1}组`,`Set ${i+1}`)));
+      if(!shared)group.append(el('span','training-record-set-weight',`${s.weight} lb`));
+      const text=s.state==='done'?tr(`${s.reps}次`,`${s.reps} reps`):s.state==='skip'?tr('跳过','Skipped'):tr('未完成','Pending');
+      group.append(el('span','training-record-result'+(s.state==='done'?' is-done':''),text));sets.append(group);});
+    container.replaceChildren(header,sets);
+  }
   // Demo records exist only in this page's memory, never in the private API.
   if(demo){
     for(let days=0;days<35;days++){
@@ -42,9 +55,9 @@
     for(const v of views.get(x.id)||[]){
       v.set.disabled=loading||!writable||selected>serverToday||s.conflict;
       v.save.textContent=message(s);v.save.classList.toggle('is-error',!!s.error);v.retry.hidden=!s.error||s.conflict||s.invalid;
-      v.last.textContent=prev?tr('上次：','Last: ')+prev.date+' · '+historyLine(prev):tr('暂无此前记录，先建立基线。','No previous record. Start with a baseline.');
+      if(prev)renderRecord(v.last,prev,tr('上次 · ','Last · '));else v.last.textContent=tr('暂无此前记录，先建立基线。','No previous record. Start with a baseline.');
       v.next.textContent=advice[logic.advice(x,s.entry)];
-      const diff=logic.comparison(s.entry,prev);v.compare.textContent=diff===null?'':diff>0?tr(`同重量，比上次多${diff}次。`,`${diff} more reps than last time at the same weights.`):diff<0?tr(`同重量，比上次少${-diff}次。`,`${-diff} fewer reps than last time at the same weights.`):tr('同重量，次数与上次相同。','Same weights and repetitions as last time.');
+      const diff=logic.comparison(s.entry,prev);v.compare.textContent=diff===null?'':diff>0?tr(`同重量，三组总计比上次多${diff}次。`,`${diff} more total reps across three sets at the same weight.`):diff<0?tr(`同重量，三组总计比上次少${-diff}次。`,`${-diff} fewer total reps across three sets at the same weight.`):tr('同重量，次数与上次相同。','Same weights and repetitions as last time.');
       v.oldBoxes.forEach((box,i)=>{box.checked=s.entry.sets[i].state==='done';});
     }
     refreshProgress();
@@ -71,7 +84,7 @@
   function change(s){s.dirty=true;s.saved=false;clearTimeout(s.timer);s.timer=setTimeout(()=>save(s),450);feedback(s);}
   function mount(card){
     const x=catalog[card.dataset.exerciseId], old=card.querySelector('.visual-set-list'), oldBoxes=[...old.querySelectorAll('input')];old.hidden=true;
-    const controls=el('div','training-entry'), last=el('p','training-last'), set=el('fieldset','training-inputs');set.disabled=true;
+    const controls=el('div','training-entry'), last=el('div','training-last'), set=el('fieldset','training-inputs');set.disabled=true;
     const legend=el('legend','',tr('实际表现','Actual performance'));set.append(legend);
     const dumbbell=['each','dumbbell'].includes(x.kind), w=el(dumbbell?'select':'input');w.className='training-weight';w.setAttribute('aria-label',units(x));
     const option=(parent,value,text=String(value))=>{const o=el('option','',text);o.value=String(value);parent.append(o);};
@@ -121,7 +134,7 @@
         v.inputs.forEach((n,i)=>{const a=s.entry.sets[i];n.r.value=a.reps??'';n.done.checked=a.state==='done';n.skip.checked=a.state==='skip';});
         v.historyList.replaceChildren();const records=history.filter(h=>h.exercise===id);
         if(!records.length)v.historyList.append(el('p','',tr('暂无历史记录。','No history yet.')));
-        for(const entry of records){const line=el('p','');line.append(el('strong','',entry.date),el('span','',historyLine(entry)));v.historyList.append(line);}
+        for(const entry of records){const line=el('div','training-history-record');renderRecord(line,entry);v.historyList.append(line);}
       }feedback(s);
     }
   }
